@@ -1,0 +1,129 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getBlogPostSchema } from '@/components/Schema';
+
+export function getStaticPaths() {
+  return [
+    { params: { slug: 'welcome-to-our-church' } },
+    { params: { slug: 'free-korean-class-community' } },
+    { params: { slug: 'why-community-learning-matters' } },
+    { params: { slug: 'youth-growth-spiritual-education' } },
+    { params: { slug: 'how-to-join-online-bible-study' } },
+  ];
+}
+
+const { slug } = Astro.params;
+
+const posts = {
+  'welcome-to-our-church': {
+    title: 'Welcome to Our Bible Study Community in Johannesburg',
+    date: '2026-01-01',
+    excerpt: 'We are glad you are here. Johannesburg Bible Study Church is a welcoming Bible study and Christian community in Sandton, Johannesburg.',
+    tags: ['Community', 'Welcome'],
+    content: `
+      <p>We are glad you are here. Johannesburg Bible Study Church is a welcoming Bible study and Christian community in Sandton, Johannesburg. We invite you to discover what we are about.</p>
+      <h2>A Bible Study Community in Sandton</h2>
+      <p>Our church is built around Bible study. Every Wednesday evening, we gather online for a Bible study that is thoughtful, accessible, and relevant to everyday life in Johannesburg. Whether you are new to the Bible or have been studying it for years, you will find a warm welcome here.</p>
+      <h2>Beyond Bible Study</h2>
+      <p>We also offer free community classes — including our popular Sunday Korean class — and youth programs through our UseCan initiative. These are open to everyone in the Sandton and Johannesburg community.</p>
+      <h2>A Place to Belong</h2>
+      <p>Whether you are exploring faith for the first time, returning to church after a while, or looking for a new community to be part of — you are welcome here. Come as you are.</p>
+    `,
+  },
+  'free-korean-class-community': {
+    title: 'Free Korean Class for the Sandton and Johannesburg Community',
+    date: '2026-02-01',
+    excerpt: 'Our free Korean class is open to everyone in Sandton and greater Johannesburg. Sunday 2:00pm, appointment required.',
+    tags: ['Korean Class', 'Community'],
+    content: `
+      <p>Learning a new language opens doors — to new cultures, new friendships, and new opportunities. That is why Johannesburg Bible Study Church offers a free Korean class to the Sandton and Johannesburg community.</p>
+      <h2>Who Can Join?</h2>
+      <p>Anyone. You do not need to be a church member. You do not need any previous experience. Whether you are a complete beginner or already know some Korean, you are welcome.</p>
+      <h2>What You Will Learn</h2>
+      <p>We start with the Korean alphabet (Hangul) on day one. From there, we build everyday conversation skills — greetings, introductions, shopping, ordering food, and more. We also explore Korean culture and customs.</p>
+      <h2>Class Details</h2>
+      <p>The Korean class runs every Sunday at 2:00pm at our venue in Parkmore, Sandton. It is completely free. Appointments are required — please call to register before attending.</p>
+      <p>Contact: Mr. Sim (+27 77 487 1295) or Ms. Dora (+27 67 442 4461)</p>
+    `,
+  },
+  'why-community-learning-matters': {
+    title: 'Why Community Learning Matters in Johannesburg',
+    date: '2026-03-01',
+    excerpt: 'When a church opens its doors to serve the community through free education and skills programs, everyone benefits.',
+    tags: ['Education', 'Community'],
+    content: `
+      <p>Education changes lives. When a community comes together to learn — regardless of age, background, or income — something powerful happens.</p>
+      <h2>A Church That Serves</h2>
+      <p>At Johannesburg Bible Study Church, we believe our calling extends beyond our Wednesday Bible study. We want to be a resource for the people of Sandton and greater Johannesburg in practical ways.</p>
+      <p>That is why we offer free classes — including our Sunday Korean class. These are not programs to attract people to church. They are genuine acts of service to our neighbourhood.</p>
+      <h2>Learning Together Builds Community</h2>
+      <p>When people learn together, they grow together. Our Korean class brings together people who might never otherwise meet — different ages, backgrounds, and life situations, united by a shared goal. That is the beginning of real community.</p>
+    `,
+  },
+  'youth-growth-spiritual-education': {
+    title: 'Youth Growth and Spiritual Education in Sandton',
+    date: '2026-04-01',
+    excerpt: 'Supporting young people in their spiritual journey is one of the most important things a church community can do.',
+    tags: ['Youth', 'Spiritual Growth'],
+    content: `
+      <p>Youth is a time of discovery — discovering who you are, what you believe, and where you belong. A supportive community can make all the difference in that journey.</p>
+      <h2>Our Youth Programs</h2>
+      <p>At Johannesburg Bible Study Church, we have designed our youth programs with one question in mind: what do young people actually need? The answer is often the same across cultures and contexts: belonging, purpose, and someone who believes in them.</p>
+      <h2>UseCan — You Can</h2>
+      <p>UseCan is our youth initiative built around empowerment. We create space for young people in Sandton and Johannesburg to grow spiritually, build leadership skills, serve their community, and discover their unique gifts. We believe every young person can make a meaningful contribution.</p>
+    `,
+  },
+  'how-to-join-online-bible-study': {
+    title: 'How to Join Our Wednesday Online Bible Study in Johannesburg',
+    date: '2026-05-01',
+    excerpt: 'Thinking about joining our Wednesday online Bible study in Sandton? Here is everything you need to know to get started.',
+    tags: ['Bible Study', 'Online'],
+    content: `
+      <p>Our Wednesday online Bible study is the heart of Johannesburg Bible Study Church. Held every Wednesday at 7:30pm via Google Meet, it is open to everyone in the Johannesburg and Sandton area.</p>
+      <h2>What Is the Wednesday Bible Study?</h2>
+      <p>Each Wednesday evening, we study a passage of the Bible together. Our approach is thoughtful and accessible — we read the text carefully, discuss its meaning, and think about how it applies to our lives today. There is always space for questions.</p>
+      <h2>How to Join</h2>
+      <p>Contact us by phone and we will send you the Google Meet link. There is no cost and no commitment required — just show up and join the conversation.</p>
+      <p>Phone: +27 77 487 1295</p>
+      <h2>What to Expect</h2>
+      <p>A typical session lasts about 90 minutes. We start with a short time of fellowship, move into the Bible study discussion, and end with prayer. The atmosphere is relaxed and welcoming — perfect for both beginners and those more advanced in their faith.</p>
+    `,
+  },
+};
+
+const post = posts[slug];
+
+if (!post) {
+  return Astro.redirect('/blog');
+}
+
+const schema = getBlogPostSchema(post.title, post.excerpt, post.date, 'Johannesburg Bible Study Church');
+---
+
+<BaseLayout
+  title={post.title}
+  description={post.excerpt}
+  ogType="article"
+  publishDate={post.date}
+  schema={schema}
+>
+  <article class="section-padding">
+    <div class="container-max max-w-3xl">
+      <a href="/blog" class="text-sm text-blue-600 hover:underline mb-6 inline-block">Back to Blog</a>
+      <p class="text-sm text-gray-500 mb-2">{post.date}</p>
+      <h1 class="heading-1 mb-6">{post.title}</h1>
+      <div class="flex flex-wrap gap-2 mb-8">
+        {post.tags.map((tag) => (
+          <span class="text-xs bg-blue-50 text-blue-700 px-3 py-1 rounded-full">{tag}</span>
+        ))}
+      </div>
+      <div class="prose prose-lg max-w-none text-gray-700" set:html={post.content} />
+    </div>
+  </article>
+
+  <section class="section-padding bg-gray-50">
+    <div class="container-max max-w-3xl">
+      <a href="/blog" class="btn-secondary">Back to All Posts</a>
+    </div>
+  </section>
+</BaseLayout>

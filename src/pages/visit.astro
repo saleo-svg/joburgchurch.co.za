@@ -1,0 +1,111 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getChurchSchema } from '@/components/Schema';
+
+const schema = getChurchSchema();
+---
+
+<BaseLayout
+  title="Visit Us | Sandton Bible Study Church, Johannesburg"
+  description="Plan your visit to Johannesburg Bible Study Church in Sandton. Wednesday online Bible study, free Sunday Korean class, location, and contact details."
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max">
+      <h1 class="heading-1 mb-6">Plan Your Visit</h1>
+      <p class="text-body max-w-2xl mb-12">
+        We would love to welcome you. Here is everything you need to know before you join us for Bible study or community classes in Sandton, Johannesburg.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding bg-gray-50">
+    <div class="container-max">
+      <div class="grid gap-12 lg:grid-cols-2">
+        <div>
+          <h2 class="heading-2 mb-8">Our Gatherings</h2>
+          <div class="space-y-6">
+            <div class="card">
+              <div class="flex items-start gap-4">
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-blue-100 text-blue-700 font-bold shrink-0">BS</div>
+                <div>
+                  <h3 class="heading-3 mb-1">Wednesday Bible Study</h3>
+                  <p class="text-blue-600 font-semibold">Online, 7:30pm via Google Meet</p>
+                  <p class="text-sm text-gray-600 mt-2">Our primary weekly gathering. Online via Google Meet — join from anywhere in Johannesburg or beyond.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="flex items-start gap-4">
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-amber-100 text-amber-700 font-bold shrink-0">KC</div>
+                <div>
+                  <h3 class="heading-3 mb-1">Free Korean Class</h3>
+                  <p class="text-amber-600 font-semibold">Sunday 2:00pm, Offline, Parkmore Sandton</p>
+                  <p class="text-sm text-gray-600 mt-2">Free Korean language class for the Johannesburg community. Appointment required — please call to register.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="heading-2 mb-8">Location & Contact</h2>
+          <div class="card">
+            <h3 class="heading-3 mb-4">Address</h3>
+            <p class="text-gray-700 mb-6">
+              Parkmore, 11th Street<br />
+              Sandton, 2196<br />
+              Johannesburg, South Africa
+            </p>
+            <h3 class="heading-3 mb-4">Phone</h3>
+            <p class="text-gray-700 mb-2">
+              Mr. Sim: <a href="tel:+27774871295" class="text-blue-600 hover:underline">+27 77 487 1295</a>
+            </p>
+            <p class="text-gray-700 mb-6">
+              Ms. Dora: <a href="tel:+27674424461" class="text-blue-600 hover:underline">+27 67 442 4461</a>
+            </p>
+            <a href="/contact" class="btn-primary">Contact Page</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-max">
+      <h2 class="heading-2 mb-8 text-center">What to Expect</h2>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-700 font-bold mb-3">W</div>
+          <h3 class="font-semibold text-gray-900 mb-2">A Warm Welcome</h3>
+          <p class="text-sm text-gray-600">Everyone is welcome. You will be greeted warmly by our community.</p>
+        </div>
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-700 font-bold mb-3">B</div>
+          <h3 class="font-semibold text-gray-900 mb-2">Bible Study</h3>
+          <p class="text-sm text-gray-600">Thoughtful, practical Bible study that speaks to everyday life in Johannesburg.</p>
+        </div>
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-700 font-bold mb-3">F</div>
+          <h3 class="font-semibold text-gray-900 mb-2">Fellowship</h3>
+          <p class="text-sm text-gray-600">Time to connect with others in the community and grow together.</p>
+        </div>
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-700 font-bold mb-3">O</div>
+          <h3 class="font-semibold text-gray-900 mb-2">Open to All</h3>
+          <p class="text-sm text-gray-600">No church membership required. Our Bible study is open to the whole community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-blue-700 text-white text-center">
+    <div class="container-max">
+      <h2 class="heading-2 text-white mb-4">Have Questions?</h2>
+      <p class="text-blue-100 text-lg mb-6 max-w-xl mx-auto">
+        We are happy to answer any questions before your visit. Contact us by phone.
+      </p>
+      <a href="/contact" class="btn-warm">Contact Us</a>
+    </div>
+  </section>
+</BaseLayout>

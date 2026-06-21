@@ -1,0 +1,118 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCourseSchema } from '@/components/Schema';
+
+const schema = getCourseSchema(
+  'Free Korean Class in Sandton, Johannesburg',
+  'Learn Korean language and culture for free at Johannesburg Bible Study Church in Sandton, Johannesburg. Sunday 2:00pm offline class. Open to all community members. Appointment required.',
+  'Johannesburg Bible Study Church'
+);
+---
+
+<BaseLayout
+  title="Free Korean Class in Sandton Johannesburg"
+  description="Join a free Korean class in Sandton, Johannesburg. Sunday 2:00pm offline class. Appointment required for registration and attendance. Open to all community members."
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="max-w-3xl">
+        <p class="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-2">
+          Community Classes
+        </p>
+        <h1 class="heading-1 mb-6">Free Korean Class in Sandton, Johannesburg</h1>
+        <p class="text-body mb-8">
+          Learn Korean language and culture for free at Johannesburg Bible Study Church in Sandton. Our Sunday Korean class is open to the entire Johannesburg community — no church membership required.
+        </p>
+        <a href="/contact" class="btn-primary">Register by Phone</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-gray-50">
+    <div class="container-max">
+      <div class="grid gap-12 lg:grid-cols-2">
+        <div>
+          <h2 class="heading-2 mb-6">What You Will Learn</h2>
+          <div class="space-y-4">
+            {[
+              'Korean alphabet (Hangul) — reading and writing from day one',
+              'Everyday conversation — greetings, introductions, practical phrases',
+              'Korean culture and customs',
+              'Listening and pronunciation practice',
+              'Vocabulary for real-life situations — shopping, travel, social',
+            ].map((item) => (
+              <div class="flex gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                <p class="text-gray-700">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h2 class="heading-2 mb-6">Class Details</h2>
+          <div class="card space-y-5">
+            <div>
+              <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Schedule</p>
+              <p class="text-gray-900 font-medium">Sunday 2:00pm</p>
+              <p class="text-sm text-gray-600">Offline class in Sandton, Johannesburg</p>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Location</p>
+              <p class="text-gray-900 font-medium">Parkmore, 11th Street, Sandton, 2196</p>
+              <p class="text-sm text-gray-600">Johannesburg, South Africa</p>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Cost</p>
+              <p class="text-green-600 font-bold text-lg">Free of charge</p>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Registration</p>
+              <p class="text-gray-900 font-medium">Appointment required</p>
+              <p class="text-sm text-gray-600">Please call to register before attending</p>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">What to Bring</p>
+              <p class="text-gray-900">Nothing required — all materials provided</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration CTA -->
+  <section class="section-padding bg-amber-50">
+    <div class="container-max">
+      <div class="max-w-2xl">
+        <h2 class="heading-2 mb-4">Register for Korean Class</h2>
+        <p class="text-body mb-6">
+          Appointments are required for registration and attendance. Please contact us by phone to reserve your place.
+        </p>
+        <div class="card space-y-3 mb-6">
+          <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Hotline</p>
+          <p class="font-medium text-gray-900">
+            Mr. Sim: <a href="tel:+27774871295" class="text-blue-600 hover:underline">+27 77 487 1295</a>
+          </p>
+          <p class="font-medium text-gray-900">
+            Ms. Dora: <a href="tel:+27674424461" class="text-blue-600 hover:underline">+27 67 442 4461</a>
+          </p>
+        </div>
+        <p class="text-sm text-gray-500">
+          No church membership required. The Korean class is open to all community members in Sandton and greater Johannesburg.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Learn Korean -->
+  <section class="section-padding">
+    <div class="container-max text-center max-w-2xl">
+      <h2 class="heading-2 mb-4">Why Learn Korean?</h2>
+      <p class="text-body mb-6">
+        Korean is one of the world's most vibrant languages. Whether you are interested in Korean culture, planning to travel, connecting with Korean-speaking friends or family, or building a new skill — this class is open to you.
+      </p>
+      <a href="/community-classes" class="btn-secondary">View All Classes</a>
+    </div>
+  </section>
+</BaseLayout>

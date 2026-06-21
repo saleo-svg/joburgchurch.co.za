@@ -1,0 +1,202 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { slug: 'sandton' } },
+    { params: { slug: 'randburg' } },
+    { params: { slug: 'fourways' } },
+    { params: { slug: 'midrand' } },
+    { params: { slug: 'alberton' } },
+    { params: { slug: 'roodepoort' } },
+    { params: { slug: 'soweto' } },
+  ];
+}
+
+const { slug } = Astro.params;
+
+const locationData = {
+  sandton: {
+    name: 'Sandton',
+    tagline: 'Bible study community in the heart of Sandton, Johannesburg',
+    headline: 'Bible Study Church in Sandton, Johannesburg',
+    description: 'Our main community hub in Sandton, Johannesburg. Wednesday online Bible study and free Sunday Korean class — open to everyone in the Sandton area and beyond.',
+    programs: [
+      { title: 'Wednesday Online Bible Study', time: 'Every Wednesday, 7:30pm', type: 'Online', detail: 'Via Google Meet — join from anywhere' },
+      { title: 'Free Korean Class', time: 'Every Sunday, 2:00pm', type: 'Offline', detail: 'Parkmore, 11th Street, Sandton' },
+      { title: 'UseCan Youth Programs', time: 'Summer / Winter schedule', type: 'Offline', detail: 'Sandton, Johannesburg' },
+    ],
+    metaTitle: 'Bible Study Church in Sandton Johannesburg | Wednesday Bible Study',
+    metaDesc: 'Find a Bible study church in Sandton, Johannesburg. Wednesday online Bible study, free Korean class, and youth programs. Everyone welcome.',
+    address: 'Parkmore, 11th Street, Sandton, 2196 Johannesburg',
+    cta: 'Join Our Bible Study in Sandton',
+  },
+  randburg: {
+    name: 'Randburg',
+    tagline: 'Bible study community in Randburg, Johannesburg',
+    headline: 'Bible Study Church in Randburg, Johannesburg',
+    description: 'A Bible study and Christian community gathering in Randburg, Johannesburg. Join us as we explore the Bible together and grow in faith.',
+    programs: [
+      { title: 'Bible Study', time: 'Contact us for schedule', type: 'Offline', detail: 'Randburg, Johannesburg' },
+    ],
+    metaTitle: 'Bible Study Church in Randburg Johannesburg',
+    metaDesc: 'Find a Bible study church in Randburg, Johannesburg. A welcoming Christian community gathering in the Randburg area.',
+    address: 'Randburg, Johannesburg',
+    cta: 'Join Our Bible Study in Randburg',
+  },
+  fourways: {
+    name: 'Fourways',
+    tagline: 'Bible study community in Fourways, Johannesburg',
+    headline: 'Bible Study Church in Fourways, Johannesburg',
+    description: 'A Bible study and Christian community gathering in Fourways, Johannesburg. Explore the Bible together in a warm and welcoming environment.',
+    programs: [
+      { title: 'Bible Study', time: 'Contact us for schedule', type: 'Offline', detail: 'Fourways, Johannesburg' },
+    ],
+    metaTitle: 'Bible Study Church in Fourways Johannesburg',
+    metaDesc: 'Find a Bible study church in Fourways, Johannesburg. A welcoming Christian community gathering in the Fourways area.',
+    address: 'Fourways, Johannesburg',
+    cta: 'Join Our Bible Study in Fourways',
+  },
+  midrand: {
+    name: 'Midrand',
+    tagline: 'Bible study community in Midrand, Johannesburg',
+    headline: 'Bible Study Church in Midrand, Johannesburg',
+    description: 'A Bible study and Christian community gathering in Midrand, Johannesburg. Everyone is welcome to join our study of Scripture and fellowship.',
+    programs: [
+      { title: 'Bible Study', time: 'Contact us for schedule', type: 'Offline', detail: 'Midrand, Johannesburg' },
+    ],
+    metaTitle: 'Bible Study Church in Midrand Johannesburg',
+    metaDesc: 'Find a Bible study church in Midrand, Johannesburg. A welcoming Christian community gathering in the Midrand area.',
+    address: 'Midrand, Johannesburg',
+    cta: 'Join Our Bible Study in Midrand',
+  },
+  alberton: {
+    name: 'Alberton',
+    tagline: 'Bible study community in Alberton, Johannesburg',
+    headline: 'Bible Study Church in Alberton, Johannesburg',
+    description: 'A Bible study and Christian community gathering in Alberton, Johannesburg. Join us as we grow together in faith and understanding of the Bible.',
+    programs: [
+      { title: 'Bible Study', time: 'Contact us for schedule', type: 'Offline', detail: 'Alberton, Johannesburg' },
+    ],
+    metaTitle: 'Bible Study Church in Alberton Johannesburg',
+    metaDesc: 'Find a Bible study church in Alberton, Johannesburg. A welcoming Christian community gathering in the Alberton area.',
+    address: 'Alberton, Johannesburg',
+    cta: 'Join Our Bible Study in Alberton',
+  },
+  roodepoort: {
+    name: 'Roodepoort',
+    tagline: 'Bible study community in Roodepoort, Johannesburg',
+    headline: 'Bible Study Church in Roodepoort, Johannesburg',
+    description: 'A Bible study and Christian community gathering in Roodepoort, Johannesburg. Explore the Bible together and build lasting friendships in Christ.',
+    programs: [
+      { title: 'Bible Study', time: 'Contact us for schedule', type: 'Offline', detail: 'Roodepoort, Johannesburg' },
+    ],
+    metaTitle: 'Bible Study Church in Roodepoort Johannesburg',
+    metaDesc: 'Find a Bible study church in Roodepoort, Johannesburg. A welcoming Christian community gathering in the Roodepoort area.',
+    address: 'Roodepoort, Johannesburg',
+    cta: 'Join Our Bible Study in Roodepoort',
+  },
+  soweto: {
+    name: 'Soweto',
+    tagline: 'Bible study community in Soweto, Johannesburg',
+    headline: 'Bible Study Church in Soweto, Johannesburg',
+    description: 'A Bible study and Christian community gathering in Soweto, Johannesburg. Join our welcoming community as we study the Bible and grow together in faith.',
+    programs: [
+      { title: 'Bible Study', time: 'Contact us for schedule', type: 'Offline', detail: 'Soweto, Johannesburg' },
+    ],
+    metaTitle: 'Bible Study Church in Soweto Johannesburg',
+    metaDesc: 'Find a Bible study church in Soweto, Johannesburg. A welcoming Christian community gathering in the Soweto area.',
+    address: 'Soweto, Johannesburg',
+    cta: 'Join Our Bible Study in Soweto',
+  },
+};
+
+const loc = locationData[slug];
+---
+
+<BaseLayout
+  title={loc.metaTitle}
+  description={loc.metaDesc}
+>
+  <section class="section-padding">
+    <div class="container-max">
+      <a href="/locations" class="text-sm text-blue-600 hover:underline mb-6 inline-block">All Locations</a>
+      <p class="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-2">{loc.name}, Johannesburg</p>
+      <h1 class="heading-1 mb-6">{loc.headline}</h1>
+      <p class="text-body max-w-3xl mb-8">{loc.description}</p>
+    </div>
+  </section>
+
+  <section class="section-padding bg-gray-50">
+    <div class="container-max">
+      <h2 class="heading-2 mb-8">Programs at {loc.name}</h2>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {loc.programs.map((program) => (
+          <div class="card">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="heading-3">{program.title}</h3>
+              <span class:list={['text-xs px-2 py-1 rounded-full font-medium', program.type === 'Online' ? 'bg-blue-100 text-blue-700' : 'bg-amber-100 text-amber-700']}>
+                {program.type}
+              </span>
+            </div>
+            <p class="text-sm font-medium text-gray-900 mb-1">{program.time}</p>
+            <p class="text-xs text-gray-500">{program.detail}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {slug === 'sandton' && (
+    <section class="section-padding bg-amber-50">
+      <div class="container-max">
+        <div class="max-w-2xl">
+          <h2 class="heading-2 mb-4">Free Korean Class — Sunday 2:00pm</h2>
+          <p class="text-body mb-4">
+            Our free Korean class is held every Sunday at 2:00pm at our Sandton venue. It is open to everyone in the Johannesburg community — no church membership required.
+          </p>
+          <p class="text-sm text-gray-600 mb-6">Appointments required. Call to register.</p>
+          <div class="card space-y-2 mb-6">
+            <p class="text-sm font-semibold text-gray-500">Hotline</p>
+            <p>Mr. Sim: <a href="tel:+27774871295" class="text-blue-600 hover:underline">+27 77 487 1295</a></p>
+            <p>Ms. Dora: <a href="tel:+27674424461" class="text-blue-600 hover:underline">+27 67 442 4461</a></p>
+          </div>
+          <a href="/community-classes/korean" class="btn-primary">Korean Class Details</a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="max-w-2xl">
+        <h2 class="heading-2 mb-4">Get In Touch</h2>
+        <p class="text-body mb-6">
+          For enquiries about Bible study groups in {loc.name} or any of our programs, please contact us by phone.
+        </p>
+        <div class="card space-y-2 mb-6">
+          <p class="text-sm font-semibold text-gray-500">Phone</p>
+          <p>Mr. Sim: <a href="tel:+27774871295" class="text-blue-600 hover:underline">+27 77 487 1295</a></p>
+          <p>Ms. Dora: <a href="tel:+27674424461" class="text-blue-600 hover:underline">+27 67 442 4461</a></p>
+        </div>
+        <p class="text-sm text-gray-500">
+          You can also visit our main location in Sandton for our Wednesday online Bible study and Sunday Korean class.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-blue-50">
+    <div class="container-max text-center">
+      <h2 class="heading-2 mb-4">Other Locations in Johannesburg</h2>
+      <div class="flex flex-wrap gap-2 justify-center mb-6">
+        {['Sandton', 'Randburg', 'Fourways', 'Midrand', 'Alberton', 'Roodepoort', 'Soweto'].filter(n => n !== loc.name).map(n => (
+          <a href={`/locations/${n.toLowerCase()}`} class="text-sm bg-white border border-gray-200 px-3 py-1 rounded-full text-gray-700 hover:border-blue-300 hover:text-blue-700 transition-colors">
+            {n}
+          </a>
+        ))}
+      </div>
+      <a href="/locations" class="btn-secondary">View All Locations</a>
+    </div>
+  </section>
+</BaseLayout>

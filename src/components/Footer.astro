@@ -1,0 +1,84 @@
+---
+const currentYear = new Date().getFullYear();
+
+const footerLinks = {
+  'Learn': [
+    { href: '/spiritual-education', label: 'Bible Study' },
+    { href: '/community-classes', label: 'Community Classes' },
+    { href: '/community-classes/korean', label: 'Free Korean Class' },
+  ],
+  'Locations': [
+    { href: '/locations/sandton', label: 'Sandton (Main)' },
+    { href: '/locations/randburg', label: 'Randburg' },
+    { href: '/locations/fourways', label: 'Fourways' },
+    { href: '/locations/midrand', label: 'Midrand' },
+    { href: '/locations/alberton', label: 'Alberton' },
+    { href: '/locations/roodepoort', label: 'Roodepoort' },
+    { href: '/locations/soweto', label: 'Soweto' },
+  ],
+  'Connect': [
+    { href: '/sermons', label: 'Sermons' },
+    { href: '/events', label: 'Events' },
+    { href: '/blog', label: 'Blog' },
+  ],
+  'Visit': [
+    { href: '/visit', label: 'Visit Us' },
+    { href: '/youth-usecan', label: 'Youth Programs' },
+    { href: '/contact', label: 'Contact' },
+  ],
+  'About': [
+    { href: '/about', label: 'About Us' },
+    { href: '/privacy', label: 'Privacy Policy' },
+  ],
+};
+---
+
+<footer class="border-t border-gray-200 bg-gray-50">
+  <div class="container-max section-padding">
+    <div class="grid grid-cols-2 gap-6 lg:grid-cols-6">
+      <!-- Brand -->
+      <div class="col-span-2 lg:col-span-1">
+        <a href="/" class="flex items-center gap-2 text-xl font-bold text-gray-900">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6 text-blue-600" aria-hidden="true">
+            <path d="M12 2v20M2 12h20" />
+          </svg>
+          <span class="text-sm lg:text-base">Johannesburg Bible Study Church</span>
+        </a>
+        <p class="mt-4 text-sm text-gray-600">
+          A Bible study and welcoming Christian community in Sandton, Johannesburg.
+        </p>
+        <p class="mt-2 text-sm text-gray-500">
+          Parkmore, 11th Street, Sandton, 2196<br />
+          Johannesburg, South Africa
+        </p>
+      </div>
+
+      <!-- Links -->
+      {Object.entries(footerLinks).map(([category, links]) => (
+        <div>
+          <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide">
+            {category}
+          </h3>
+          <ul class="mt-4 space-y-2">
+            {links.map((link) => (
+              <li>
+                <a href={link.href} class="text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 border-t border-gray-200 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-gray-500">
+        &copy; {currentYear} Johannesburg Bible Study Church. All rights reserved.
+      </p>
+      <p class="text-sm text-gray-400">
+        Bible study community in Sandton, Johannesburg
+      </p>
+    </div>
+  </div>
+</footer>

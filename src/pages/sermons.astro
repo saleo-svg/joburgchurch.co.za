@@ -1,0 +1,64 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Sermons | Bible Study Church, Sandton Johannesburg"
+  description="Sermon notes and summaries from Johannesburg Bible Study Church in Sandton, Johannesburg. Bible teaching and spiritual encouragement for the community."
+>
+  <section class="section-padding">
+    <div class="container-max">
+      <p class="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-2">
+        Sermons
+      </p>
+      <h1 class="heading-1 mb-6">Sermon Notes & Summaries</h1>
+      <p class="text-body max-w-2xl mb-8">
+        We share notes and summaries from our Bible study sessions. These are a resource for those who attended and want to revisit the teaching, and for those who could not join us.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding bg-gray-50">
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-center text-gray-500 py-12">
+          Sermon posts will be added regularly. Each post will include a summary of the teaching, key Bible passages, and practical takeaways.
+        </p>
+
+        <div class="space-y-6">
+          {[
+            {
+              date: 'Wednesday, January 2026',
+              title: 'Introduction to the Gospel of John',
+              passage: 'John 1:1-18',
+              summary: 'An introduction to the Gospel of John — its purpose, audience, and the life-changing truth that "the Word became flesh."',
+            },
+            {
+              date: 'Wednesday, February 2026',
+              title: 'The Love of God in Action',
+              passage: 'John 3:16-21',
+              summary: 'Exploring what John 3:16 means for our lives today — God\'s love expressed through Jesus Christ, and the invitation to walk in the light.',
+            },
+          ].map((sermon) => (
+            <div class="card">
+              <p class="text-xs text-gray-500 mb-2">{sermon.date}</p>
+              <h3 class="heading-3 mb-1">{sermon.title}</h3>
+              <p class="text-sm text-blue-600 font-medium mb-3">{sermon.passage}</p>
+              <p class="text-sm text-gray-600">{sermon.summary}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding text-center">
+    <div class="container-max">
+      <h2 class="heading-2 mb-4">Join Our Bible Study</h2>
+      <p class="text-body max-w-xl mx-auto mb-6">
+        Our main Bible teaching happens every Wednesday at 7:30pm online. Contact us for the meeting link.
+      </p>
+      <a href="/contact" class="btn-secondary">Get Bible Study Details</a>
+    </div>
+  </section>
+</BaseLayout>

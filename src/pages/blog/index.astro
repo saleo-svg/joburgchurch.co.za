@@ -1,0 +1,87 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const posts = [
+  {
+    slug: 'welcome-to-our-church',
+    title: 'Welcome to Our Bible Study Community in Johannesburg',
+    date: '2026-01-01',
+    excerpt: 'We are glad you are here. Johannesburg Bible Study Church is a welcoming Bible study and Christian community in Sandton, Johannesburg.',
+    tags: ['Community', 'Welcome'],
+  },
+  {
+    slug: 'free-korean-class-community',
+    title: 'Free Korean Class for the Sandton and Johannesburg Community',
+    date: '2026-02-01',
+    excerpt: 'Our free Korean class is open to everyone in Sandton and greater Johannesburg. Sunday 2:00pm, appointment required. Open to all community members.',
+    tags: ['Korean Class', 'Community'],
+  },
+  {
+    slug: 'why-community-learning-matters',
+    title: 'Why Community Learning Matters in Johannesburg',
+    date: '2026-03-01',
+    excerpt: 'When a church opens its doors to serve the community through free education and skills programs, everyone benefits.',
+    tags: ['Education', 'Community'],
+  },
+  {
+    slug: 'youth-growth-spiritual-education',
+    title: 'Youth Growth and Spiritual Education in Sandton',
+    date: '2026-04-01',
+    excerpt: 'Supporting young people in their spiritual journey is one of the most important things a church community can do.',
+    tags: ['Youth', 'Spiritual Growth'],
+  },
+  {
+    slug: 'how-to-join-online-bible-study',
+    title: 'How to Join Our Wednesday Online Bible Study in Johannesburg',
+    date: '2026-05-01',
+    excerpt: 'Thinking about joining our Wednesday online Bible study in Sandton? Here is everything you need to know to get started.',
+    tags: ['Bible Study', 'Online'],
+  },
+];
+---
+
+<BaseLayout
+  title="Blog | Bible Study and Church Life in Sandton Johannesburg"
+  description="Articles on Bible study, faith, community, and church life from Johannesburg Bible Study Church in Sandton, Johannesburg."
+>
+  <section class="section-padding">
+    <div class="container-max">
+      <p class="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-2">
+        Blog & News
+      </p>
+      <h1 class="heading-1 mb-6">Articles & Updates</h1>
+      <p class="text-body max-w-2xl mb-8">
+        Articles on Bible study, faith, community life, and church activities from our community in Sandton, Johannesburg.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding bg-gray-50">
+    <div class="container-max">
+      <div class="grid gap-8 lg:grid-cols-2 max-w-5xl">
+        {posts.map((post) => (
+          <a href={`/blog/${post.slug}`} class="card group hover:border-blue-200 hover:shadow-md">
+            <p class="text-xs text-gray-500 mb-2">{post.date}</p>
+            <h3 class="heading-3 mb-3 group-hover:text-blue-700 transition-colors">{post.title}</h3>
+            <p class="text-sm text-gray-600 mb-4">{post.excerpt}</p>
+            <div class="flex flex-wrap gap-2">
+              {post.tags.map((tag) => (
+                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">{tag}</span>
+              ))}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding text-center">
+    <div class="container-max">
+      <h2 class="heading-2 mb-4">Have a Topic in Mind?</h2>
+      <p class="text-body max-w-xl mx-auto mb-6">
+        If there is a topic you would like us to write about, or if you have a story to share, contact us.
+      </p>
+      <a href="/contact" class="btn-primary">Contact Us</a>
+    </div>
+  </section>
+</BaseLayout>

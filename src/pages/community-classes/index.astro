@@ -1,0 +1,103 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const allClasses = [
+  {
+    title: 'Free Korean Class',
+    slug: 'korean',
+    description: 'Learn Korean language and culture for free. Sunday 2:00pm, offline in Sandton, Johannesburg. Appointment required.',
+    schedule: 'Sunday 2:00pm, Offline',
+    tag: 'Language',
+  },
+  {
+    title: 'Wednesday Bible Study',
+    slug: 'spiritual-education',
+    description: 'Online Bible study every Wednesday at 7:30pm via Google Meet. Open to all in the Johannesburg community.',
+    schedule: 'Wednesday 7:30pm, Online',
+    tag: 'Bible Study',
+  },
+];
+---
+
+<BaseLayout
+  title="Community Classes in Sandton Johannesburg | Free Classes"
+  description="Free community classes in Sandton, Johannesburg. Free Korean class Sunday 2:00pm and Wednesday online Bible study. Open to all community members."
+>
+  <section class="section-padding">
+    <div class="container-max">
+      <p class="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-2">
+        Community Classes
+      </p>
+      <h1 class="heading-1 mb-6">Free Classes for the Sandton Community</h1>
+      <p class="text-body max-w-3xl">
+        Our community classes are open to everyone in Sandton and greater Johannesburg. No church membership required. Join us for Bible study and free Korean language classes.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding bg-gray-50">
+    <div class="container-max">
+      <h2 class="heading-2 mb-8">Available Classes</h2>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {allClasses.map((cls) => (
+          <a href={`/${cls.slug === 'spiritual-education' ? 'spiritual-education' : 'community-classes/' + cls.slug}`} class="card group hover:border-blue-200 hover:shadow-md">
+            <div class="flex items-start justify-between mb-3">
+              <span class="text-xs font-medium bg-blue-100 text-blue-700 px-2 py-1 rounded-full">
+                {cls.tag}
+              </span>
+            </div>
+            <h3 class="heading-3 mb-2 group-hover:text-blue-700 transition-colors">{cls.title}</h3>
+            <p class="text-sm text-gray-600 mb-4">{cls.description}</p>
+            <p class="text-xs text-gray-500">
+              <span class="font-medium">Schedule:</span> {cls.schedule}
+            </p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-amber-50">
+    <div class="container-max">
+      <div class="max-w-2xl">
+        <h2 class="heading-2 mb-4">Free Korean Class — Sunday 2:00pm</h2>
+        <p class="text-body mb-4">
+          Our Korean class is held every Sunday at 2:00pm at our venue in Sandton, Johannesburg. It is completely free and open to all community members — no previous experience needed.
+        </p>
+        <p class="text-sm text-gray-600 mb-6">
+          Appointment is required. Please contact us by phone to register.
+        </p>
+        <div class="card space-y-2 mb-6">
+          <p class="text-sm font-semibold text-gray-500">Hotline</p>
+          <p>Mr. Sim: <a href="tel:+27774871295" class="text-blue-600 hover:underline">+27 77 487 1295</a></p>
+          <p>Ms. Dora: <a href="tel:+27674424461" class="text-blue-600 hover:underline">+27 67 442 4461</a></p>
+        </div>
+        <a href="/community-classes/korean" class="btn-primary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-max">
+      <h2 class="heading-2 mb-8 text-center">Frequently Asked Questions</h2>
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="card">
+          <h3 class="font-semibold text-gray-900 mb-2">Are the classes really free?</h3>
+          <p class="text-sm text-gray-600">Yes, all our classes are completely free. They are offered as a service to the Sandton and Johannesburg community.</p>
+        </div>
+        <div class="card">
+          <h3 class="font-semibold text-gray-900 mb-2">Do I need to be a church member?</h3>
+          <p class="text-sm text-gray-600">No. Our classes are open to everyone in the Johannesburg community — church membership is not required.</p>
+        </div>
+        <div class="card">
+          <h3 class="font-semibold text-gray-900 mb-2">How do I register for the Korean class?</h3>
+          <p class="text-sm text-gray-600">Please call us to register. Appointments are required before attending. See our contact page for phone numbers.</p>
+        </div>
+        <div class="card">
+          <h3 class="font-semibold text-gray-900 mb-2">Where is the Korean class held?</h3>
+          <p class="text-sm text-gray-600">The Korean class is held at our venue in Parkmore, 11th Street, Sandton, Johannesburg.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

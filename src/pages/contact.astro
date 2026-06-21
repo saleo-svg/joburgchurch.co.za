@@ -1,0 +1,90 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact Us | Sandton Bible Study Church, Johannesburg"
+  description="Contact Johannesburg Bible Study Church in Sandton, Johannesburg. Call our hotline to join Bible study, register for Korean class, or make enquiries."
+>
+  <section class="section-padding">
+    <div class="container-max">
+      <h1 class="heading-1 mb-6">Contact Us</h1>
+      <p class="text-body max-w-2xl mb-12">
+        For enquiries about our Wednesday Bible study, free Korean class, youth programs, or anything else — please reach us by phone.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding bg-gray-50">
+    <div class="container-max">
+      <div class="grid gap-12 lg:grid-cols-2">
+        <div>
+          <h2 class="heading-2 mb-8">Get In Touch</h2>
+
+          <div class="space-y-6 mb-8">
+            <div class="flex gap-4">
+              <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-blue-100 text-blue-700 font-bold shrink-0">P</div>
+              <div>
+                <p class="font-semibold text-gray-900 mb-1">Phone</p>
+                <p class="text-sm text-gray-600">Please call us for all enquiries including Bible study, Korean class registration, and youth programs.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-amber-100 text-amber-700 font-bold shrink-0">KC</div>
+              <div>
+                <p class="font-semibold text-gray-900 mb-1">Korean Class Hotline</p>
+                <p class="text-sm text-gray-600">Appointments required for Korean class. Please call to register before attending.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phone Numbers -->
+          <h3 class="heading-3 mb-4">Phone Numbers</h3>
+          <div class="card space-y-4">
+            <div>
+              <p class="text-sm font-medium text-gray-500 mb-1">Mr. Sim</p>
+              <a href="tel:+27774871295" class="text-xl font-bold text-blue-700 hover:underline">+27 77 487 1295</a>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-gray-500 mb-1">Ms. Dora</p>
+              <a href="tel:+27674424461" class="text-xl font-bold text-blue-700 hover:underline">+27 67 442 4461</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="heading-2 mb-8">Frequently Asked Questions</h2>
+          <div class="space-y-4">
+            {[
+              {
+                q: 'How do I join the Wednesday Bible study?',
+                a: 'Our Wednesday Bible study is held online at 7:30pm via Google Meet. Contact us by phone and we will send you the meeting link.',
+              },
+              {
+                q: 'How do I register for the free Korean class?',
+                a: 'Appointments are required for the Korean class. Please call Mr. Sim (+27 77 487 1295) or Ms. Dora (+27 67 442 4461) to register before attending.',
+              },
+              {
+                q: 'Do I need to be a church member to attend classes?',
+                a: 'No. Our Bible study and community classes are open to everyone in the Johannesburg and Sandton community.',
+              },
+              {
+                q: 'Is there parking available?',
+                a: 'Our venue is in Parkmore, Sandton. Parking availability varies — please contact us for specific directions.',
+              },
+              {
+                q: 'Can I speak to someone about faith or personal matters?',
+                a: 'Yes. Please call us and we will connect you with a leader who can speak with you personally.',
+              },
+            ].map((faq) => (
+              <div class="card">
+                <h3 class="font-semibold text-gray-900 mb-2">{faq.q}</h3>
+                <p class="text-sm text-gray-600">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

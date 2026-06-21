@@ -1,0 +1,116 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const locations = [
+  {
+    slug: 'sandton',
+    name: 'Sandton',
+    tagline: 'Bible study and community in the heart of Johannesburg',
+    description: 'Our main location in Sandton. Wednesday online Bible study, free Sunday Korean class, and youth programs open to the whole Johannesburg community.',
+    programs: ['Wednesday Bible Study (Online)', 'Free Korean Class', 'Youth Programs'],
+    featured: true,
+  },
+  {
+    slug: 'randburg',
+    name: 'Randburg',
+    tagline: 'Bible study community in Randburg, Johannesburg',
+    description: 'A Bible study and Christian community gathering in Randburg. Everyone is welcome.',
+    programs: ['Bible Study', 'Community Fellowship'],
+    featured: false,
+  },
+  {
+    slug: 'fourways',
+    name: 'Fourways',
+    tagline: 'Bible study community in Fourways, Johannesburg',
+    description: 'A Bible study and Christian community gathering in Fourways. Everyone is welcome.',
+    programs: ['Bible Study', 'Community Fellowship'],
+    featured: false,
+  },
+  {
+    slug: 'midrand',
+    name: 'Midrand',
+    tagline: 'Bible study community in Midrand, Johannesburg',
+    description: 'A Bible study and Christian community gathering in Midrand. Everyone is welcome.',
+    programs: ['Bible Study', 'Community Fellowship'],
+    featured: false,
+  },
+  {
+    slug: 'alberton',
+    name: 'Alberton',
+    tagline: 'Bible study community in Alberton, Johannesburg',
+    description: 'A Bible study and Christian community gathering in Alberton. Everyone is welcome.',
+    programs: ['Bible Study', 'Community Fellowship'],
+    featured: false,
+  },
+  {
+    slug: 'roodepoort',
+    name: 'Roodepoort',
+    tagline: 'Bible study community in Roodepoort, Johannesburg',
+    description: 'A Bible study and Christian community gathering in Roodepoort. Everyone is welcome.',
+    programs: ['Bible Study', 'Community Fellowship'],
+    featured: false,
+  },
+  {
+    slug: 'soweto',
+    name: 'Soweto',
+    tagline: 'Bible study community in Soweto, Johannesburg',
+    description: 'A Bible study and Christian community gathering in Soweto. Everyone is welcome.',
+    programs: ['Bible Study', 'Community Fellowship'],
+    featured: false,
+  },
+];
+---
+
+<BaseLayout
+  title="Bible Study Locations in Johannesburg | Our Community Across the City"
+  description="Find a Bible study group near you across greater Johannesburg. Sandton, Randburg, Fourways, Midrand, Alberton, Roodepoort, and Soweto."
+>
+  <section class="section-padding">
+    <div class="container-max">
+      <p class="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-2">
+        Our Locations
+      </p>
+      <h1 class="heading-1 mb-6">Bible Study Across Greater Johannesburg</h1>
+      <p class="text-body max-w-3xl mb-4">
+        Johannesburg Bible Study Church has Bible study groups and community gatherings across greater Johannesburg. Find a location near you.
+      </p>
+      <p class="text-lg text-gray-600 max-w-3xl">
+        Our main Sunday Korean class and Wednesday online Bible study are based in Sandton. We are also growing Bible study communities in Randburg, Fourways, Midrand, Alberton, Roodepoort, and Soweto.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding bg-gray-50">
+    <div class="container-max">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {locations.map((loc) => (
+          <a href={`/locations/${loc.slug}`} class:list={['card group hover:shadow-md transition-shadow', loc.featured ? 'border-blue-300 bg-blue-50' : '']}>
+            {loc.featured && (
+              <span class="inline-block text-xs bg-blue-600 text-white px-2 py-0.5 rounded-full mb-2">Main Location</span>
+            )}
+            <h3 class="heading-3 mb-2 group-hover:text-blue-700 transition-colors">{loc.name}</h3>
+            <p class="text-sm text-blue-600 font-medium mb-2">{loc.tagline}</p>
+            <p class="text-sm text-gray-600 mb-4">{loc.description}</p>
+            <div class="space-y-1">
+              {loc.programs.map((p) => (
+                <p class="text-xs text-gray-500 flex gap-1">
+                  <span class="text-green-500">+</span> {p}
+                </p>
+              ))}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-blue-700 text-white text-center">
+    <div class="container-max">
+      <h2 class="heading-2 text-white mb-4">Our Main Location: Sandton</h2>
+      <p class="text-blue-100 text-lg mb-6 max-w-xl mx-auto">
+        Our primary community is based in Sandton, Johannesburg. Join our Wednesday online Bible study or Sunday Korean class.
+      </p>
+      <a href="/locations/sandton" class="btn-warm">Visit Sandton Location</a>
+    </div>
+  </section>
+</BaseLayout>

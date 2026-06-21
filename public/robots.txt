@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://joburgchurch.co.za/sitemap.xml
