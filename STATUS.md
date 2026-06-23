@@ -60,6 +60,7 @@ Static: sitemap.xml, robots.txt, favicon.svg
 2. **Create Google Business Profile listing**
 3. **[Security] Rotate exposed Cloudflare token** — noted in DEV_LOG.
 4. Add real church photos when available.
+5. Use `npm run deploy:cloudflare` for future manual deployments.
 
 ## Git Commit
 - Commit `1999a27` on `master`: "Phase 5 content and SEO enrichment"
@@ -70,6 +71,7 @@ Static: sitemap.xml, robots.txt, favicon.svg
 ## Deployment Notes
 - No GitHub Actions, no `wrangler.toml`, no `vercel.json` in repo
 - Latest manual Cloudflare Pages deployment preview: https://6168536a.joburgchurch.pages.dev
+- Deployment automation added: `npm run deploy:cloudflare`
 - Live custom domain verified after manual deployment:
   - Homepage contains Phase 5 visitor guide
   - `sitemap.xml` includes `2026-06-23`

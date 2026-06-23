@@ -22,6 +22,7 @@
 - Create Google Business Profile
 - Rotate the exposed Cloudflare API token
 - Add real church photos when available
+- Future deploys can use `npm run deploy:cloudflare` after `.env.local` is configured
 
 ### Deployment Log (2026-06-23)
 
@@ -36,6 +37,10 @@
   - Homepage contains Phase 5 visitor guide
   - `https://joburgchurch.co.za/sitemap.xml` includes `2026-06-23`
   - `https://joburgchurch.co.za/images/og-default.jpg` returns 200 image/jpeg
+- Added local deployment automation:
+  - `.env.example` documents required Cloudflare variables
+  - `.env.local` is ignored and stores local deployment credentials
+  - `npm run deploy:cloudflare` builds and deploys `dist/` to Cloudflare Pages
 
 ## 2026-06-21 — Phase 4 Complete
 

@@ -78,6 +78,9 @@ C:\Users\Laptop\Desktop\Church-Site\
 Set-Location "C:\Users\Laptop\Desktop\Church-Site"
 npx astro build
 
+# Deploy to Cloudflare Pages
+npm run deploy:cloudflare
+
 # Preview
 npx astro preview
 ```
@@ -87,6 +90,15 @@ npx astro preview
 2. Create Google Business Profile for church.
 3. Rotate the exposed Cloudflare API token if it has not already been rotated.
 4. Add real church photos when available.
+
+## Deployment Automation
+- Local deploy command: `npm run deploy:cloudflare`
+- Required local file: `.env.local`
+- Template file: `.env.example`
+- Required variables:
+  - `CLOUDFLARE_ACCOUNT_ID`
+  - `CLOUDFLARE_API_TOKEN`
+- `.env.local` is ignored by Git and must not be committed.
 
 ## Deployment Facts
 - Commit `1999a27` on `master`: "Phase 5 content and SEO enrichment" (15 files, 230+/31-)
