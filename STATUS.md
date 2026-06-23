@@ -1,7 +1,7 @@
 # STATUS.md
 
 ## Current Phase
-**Phase 5 DEPLOYED. GitHub master updated and Cloudflare Pages live site verified.**
+**Phase 5 DEPLOYED. Sitemap submitted to Google Search Console. Cloudflare Pages live site verified.**
 
 ## Completed Work (Phase 4)
 

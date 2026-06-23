@@ -1,5 +1,45 @@
 # DEV_LOG.md
 
+## 2026-06-23 — Phase 6: Google Search Console Setup
+
+### What Changed
+
+- Submitted sitemap.xml to Google Search Console via browser automation
+- Google automatically detected the existing google-site-verification TXT record in Cloudflare DNS
+- Domain ownership verified: TXT record `google-site-verification=gew-sh9BqqGM_gAocrI4xweo0oRJivhw8hRU3pcr_lg` already present in Cloudflare DNS
+- Sitemap https://joburgchurch.co.za/sitemap.xml submitted successfully
+- Updated STATUS.md, HANDOFF.md, SEO_PLAN.md with completion status
+- All 4 checkpoint files updated
+
+### Browser Steps
+
+1. Opened Google Search Console (already logged in as leo123asante@gmail.com)
+2. Entered joburgchurch.co.za in the domain property input
+3. Google auto-detected Cloudflare TXT verification record
+4. Clicked "开始验证" (Start Verification) → ownership verified automatically
+5. Navigated to Sitemap section
+6. Entered https://joburgchurch.co.za/sitemap.xml and clicked Submit
+7. Google confirmed: "sitemap.xml 已提交" (sitemap.xml submitted successfully)
+
+### Google Search Console Details
+
+- Account: leo123asante@gmail.com
+- Property: sc-domain:joburgchurch.co.za (domain property)
+- Verification method: DNS TXT (auto-detected from Cloudflare)
+- Sitemap submitted: https://joburgchurch.co.za/sitemap.xml (25 URLs)
+
+### Cloudflare DNS Records (current)
+
+- @ → CNAME → joburgchurch.pages.dev (Proxied)
+- www → CNAME → joburgchurch.pages.dev (Proxied)
+- google-site-verification → TXT → gew-sh9BqqGM_gAocrI4xweo0oRJivhw8hRU3pcr_lg (DNS only)
+
+### Deployment Log (2026-06-23)
+
+- Sitemap submitted to Google Search Console
+- Domain ownership verified via Cloudflare DNS TXT record
+- No Git commits needed (no code changes in this session)
+
 ## 2026-06-23 — Phase 5 Content & Metadata Enrichment
 
 ### What Changed

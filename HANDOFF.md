@@ -3,9 +3,9 @@
 ## Project: Johannesburg Bible Study Church Website
 
 ## Status
-**Phase 5 DEPLOYED. GitHub master updated and Cloudflare Pages live site verified.**
+**Phase 5 DEPLOYED. Sitemap submitted to Google Search Console. Cloudflare Pages live site verified.**
 
-Build: 26 pages, 0 warnings, 0 errors. Verified and deployed on 2026-06-23.
+Build: 26 pages, 0 warnings, 0 errors. Sitemap submitted to Google Search Console on 2026-06-23.
 
 ## Church Info (REAL — DO NOT REPLACE)
 - **Brand:** Johannesburg Bible Study Church

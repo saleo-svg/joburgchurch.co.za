@@ -110,7 +110,7 @@ Each location page targets:
 
 ## To-Do (Before Launch)
 - [x] Replace `https://example.com` with real domain in `astro.config.mjs`, `sitemap.xml.ts`, Schema helpers, and metadata components
-- [ ] Submit sitemap.xml to Google Search Console
+- [x] Submit sitemap.xml to Google Search Console
 - [ ] Create Google Business Profile for church
 - [ ] Add Google Maps embed on Visit page (Parkmore, 11th Street, Sandton)
 - [x] Add default Open Graph image asset
