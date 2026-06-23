@@ -3,9 +3,9 @@
 ## Project: Johannesburg Bible Study Church Website
 
 ## Status
-**Phase 5 COMMITTED + PUSHED. GitHub master updated. Manual deployment trigger needed — no in-repo CI/CD. og-default.jpg not yet on live host (404). sitemap.xml intermittently 500.**
+**Phase 5 DEPLOYED. GitHub master updated and Cloudflare Pages live site verified.**
 
-Build: 26 pages, 0 warnings, 0 errors. Verified on 2026-06-23. Commit `1999a27` pushed.
+Build: 26 pages, 0 warnings, 0 errors. Verified and deployed on 2026-06-23.
 
 ## Church Info (REAL — DO NOT REPLACE)
 - **Brand:** Johannesburg Bible Study Church
@@ -19,6 +19,8 @@ Build: 26 pages, 0 warnings, 0 errors. Verified on 2026-06-23. Commit `1999a27` 
 - Live domain: https://joburgchurch.co.za
 - Source domain references have been updated to `https://joburgchurch.co.za`
 - Default OG image exists at `public/images/og-default.jpg`
+- Latest manual Cloudflare Pages deployment preview: https://6168536a.joburgchurch.pages.dev
+- Live verification passed for homepage Phase 5 content, sitemap `2026-06-23`, and OG image 200 response
 - No email or social links should be added unless the user provides them
 - Real church photos are still missing; use real photos later if the user provides safe images
 
@@ -81,18 +83,18 @@ npx astro preview
 ```
 
 ## Next Steps (In Order)
-1. **[Manual] Trigger deploy** from Cloudflare Pages or Vercel dashboard using the updated GitHub repo.
-2. **[After deploy] Verify live pages** — homepage, /visit/, /community-classes/korean/, /locations/randburg/, /sitemap.xml, /images/og-default.jpg.
-3. Submit sitemap to Google Search Console — https://joburgchurch.co.za/sitemap.xml
-4. Create Google Business Profile for church.
-5. Rotate the exposed Cloudflare API token if it has not already been rotated.
+1. Submit sitemap to Google Search Console — https://joburgchurch.co.za/sitemap.xml
+2. Create Google Business Profile for church.
+3. Rotate the exposed Cloudflare API token if it has not already been rotated.
+4. Add real church photos when available.
 
 ## Deployment Facts
 - Commit `1999a27` on `master`: "Phase 5 content and SEO enrichment" (15 files, 230+/31-)
+- Commit `7b90e87` on `master`: "Update STATUS.md, HANDOFF.md, DEV_LOG.md: Phase 5 deploy status"
 - Excludes: `对话记录.txt`, `开发记录.txt` (in `.gitignore`)
 - Includes: `public/images/og-default.jpg`
 - No in-repo CI/CD detected (no GitHub Actions, no `wrangler.toml`, no `vercel.json`)
-- Live site may still be on Phase 4 — manual dashboard deploy required
+- Manual Cloudflare Pages deploy completed from local `dist/`
 
 ## AI Update Prompt (For Adding New Blog Posts)
 ```

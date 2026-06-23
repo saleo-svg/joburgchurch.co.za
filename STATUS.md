@@ -1,7 +1,7 @@
 # STATUS.md
 
 ## Current Phase
-**Phase 5 COMMITTED + PUSHED. GitHub master updated. Manual deployment trigger needed from Cloudflare Pages / Vercel dashboard — no in-repo CI/CD detected. Live site content partially verified; og-default.jpg not yet live (404).**
+**Phase 5 DEPLOYED. GitHub master updated and Cloudflare Pages live site verified.**
 
 ## Completed Work (Phase 4)
 
@@ -47,6 +47,8 @@
 - Expanded Visit page guidance for Bible study, Korean class, youth programs, language, cost, and first-step expectations
 - Expanded Korean class FAQ content for beginners, students, materials, and non-member visitors
 - Expanded all location detail pages with area-specific notes so they read less like thin keyword pages
+- Manually deployed `dist/` to Cloudflare Pages
+- Verified live homepage, sitemap, and Open Graph image on `https://joburgchurch.co.za`
 
 ## Pages (26 total)
 Core pages (13): Home, About, Visit, Classes, Korean, Spiritual Ed, Youth, Sermons, Events, Blog, Blog posts (5), Contact, Privacy, 404
@@ -54,11 +56,10 @@ Location pages (8): Locations index + Sandton, Randburg, Fourways, Midrand, Albe
 Static: sitemap.xml, robots.txt, favicon.svg
 
 ## Next Steps (Remaining)
-1. **[Manual] Deploy from Cloudflare Pages or Vercel dashboard** — GitHub push does not auto-trigger deploy. Log in to the hosting dashboard and trigger a new deployment.
-2. **[After deploy] Verify live pages** — homepage, /visit/, /community-classes/korean/, /locations/randburg/, /sitemap.xml ( intermittently 500), /images/og-default.jpg (currently 404).
-3. **Submit sitemap to Google Search Console** — https://joburgchurch.co.za/sitemap.xml
-4. **Create Google Business Profile listing**
-5. **[Security] Rotate exposed Cloudflare token** — noted in DEV_LOG.
+1. **Submit sitemap to Google Search Console** — https://joburgchurch.co.za/sitemap.xml
+2. **Create Google Business Profile listing**
+3. **[Security] Rotate exposed Cloudflare token** — noted in DEV_LOG.
+4. Add real church photos when available.
 
 ## Git Commit
 - Commit `1999a27` on `master`: "Phase 5 content and SEO enrichment"
@@ -68,12 +69,15 @@ Static: sitemap.xml, robots.txt, favicon.svg
 
 ## Deployment Notes
 - No GitHub Actions, no `wrangler.toml`, no `vercel.json` in repo
-- Deployment must be triggered manually from hosting dashboard
-- `sitemap.xml` intermittently returns 500 on live host (transient or Pages routing issue)
+- Latest manual Cloudflare Pages deployment preview: https://6168536a.joburgchurch.pages.dev
+- Live custom domain verified after manual deployment:
+  - Homepage contains Phase 5 visitor guide
+  - `sitemap.xml` includes `2026-06-23`
+  - `images/og-default.jpg` returns 200 image/jpeg
 
 ## Blockers
 - No email/social (user did not provide)
 - Real church photos are not available yet; using a generated/static OG asset for now
 
 ## Context Usage
-Current session continued by Codex supervision. Build verified on 2026-06-23 after Phase 5 edits.
+Current session continued by Codex supervision. Build, deploy, and live verification completed on 2026-06-23 after Phase 5 edits.
