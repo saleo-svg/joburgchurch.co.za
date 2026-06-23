@@ -1,7 +1,7 @@
 # STATUS.md
 
 ## Current Phase
-**Phase 5 LOCAL VERIFIED. Live domain is active; enriched source is ready for deployment.**
+**Phase 5 COMMITTED + PUSHED. GitHub master updated. Manual deployment trigger needed from Cloudflare Pages / Vercel dashboard — no in-repo CI/CD detected. Live site content partially verified; og-default.jpg not yet live (404).**
 
 ## Completed Work (Phase 4)
 
@@ -53,11 +53,23 @@ Core pages (13): Home, About, Visit, Classes, Korean, Spiritual Ed, Youth, Sermo
 Location pages (8): Locations index + Sandton, Randburg, Fourways, Midrand, Alberton, Roodepoort, Soweto
 Static: sitemap.xml, robots.txt, favicon.svg
 
-## Next Step
-- Deploy updated source to GitHub + Cloudflare Pages / Vercel
-- Verify live homepage, Korean class page, Visit page, sitemap, and OG image after deployment
-- Submit sitemap to Google Search Console
-- Create Google Business Profile listing
+## Next Steps (Remaining)
+1. **[Manual] Deploy from Cloudflare Pages or Vercel dashboard** — GitHub push does not auto-trigger deploy. Log in to the hosting dashboard and trigger a new deployment.
+2. **[After deploy] Verify live pages** — homepage, /visit/, /community-classes/korean/, /locations/randburg/, /sitemap.xml ( intermittently 500), /images/og-default.jpg (currently 404).
+3. **Submit sitemap to Google Search Console** — https://joburgchurch.co.za/sitemap.xml
+4. **Create Google Business Profile listing**
+5. **[Security] Rotate exposed Cloudflare token** — noted in DEV_LOG.
+
+## Git Commit
+- Commit `1999a27` on `master`: "Phase 5 content and SEO enrichment"
+- 15 files changed, 230 insertions(+), 31 deletions(-)
+- Excludes sensitive files: `对话记录.txt`, `开发记录.txt` (in `.gitignore`)
+- Includes: `public/images/og-default.jpg`
+
+## Deployment Notes
+- No GitHub Actions, no `wrangler.toml`, no `vercel.json` in repo
+- Deployment must be triggered manually from hosting dashboard
+- `sitemap.xml` intermittently returns 500 on live host (transient or Pages routing issue)
 
 ## Blockers
 - No email/social (user did not provide)

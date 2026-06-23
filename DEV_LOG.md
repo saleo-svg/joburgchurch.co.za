@@ -18,9 +18,21 @@
 
 ### Next
 
-- Build verification completed: 26 pages, 0 errors
-- Deploy updated source to GitHub + Cloudflare Pages / Vercel
-- Verify live pages and sitemap after deployment
+- Deploy from Cloudflare Pages or Vercel dashboard (manual — no auto-trigger on GitHub push)
+- After deploy: verify /sitemap.xml (intermittently 500), /images/og-default.jpg (currently 404)
+- Submit sitemap to Google Search Console
+- Create Google Business Profile
+
+### Deployment Log (2026-06-23)
+
+- Build verified: 26 pages, 0 warnings, 0 errors
+- Sensitive files excluded: `对话记录.txt`, `开发记录.txt` (in `.gitignore`)
+- Committed: `1999a27` "Phase 5 content and SEO enrichment" — 15 files, 230+/31-
+- Pushed to: `origin/master`
+- Live site partially verified — homepage, /visit/, /community-classes/korean/, /locations/randburg/ serving Phase 5 content
+- sitemap.xml: intermittently 500 (transient or Cloudflare Pages routing)
+- og-default.jpg: 404 (file exists in `dist/` but not yet on live host)
+- Manual deploy from hosting dashboard required to complete
 
 ## 2026-06-21 — Phase 4 Complete
 

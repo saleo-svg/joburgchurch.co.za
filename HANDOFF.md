@@ -3,9 +3,9 @@
 ## Project: Johannesburg Bible Study Church Website
 
 ## Status
-**Phase 5 LOCAL VERIFIED. Live domain active; enriched source is ready for deployment.**
+**Phase 5 COMMITTED + PUSHED. GitHub master updated. Manual deployment trigger needed — no in-repo CI/CD. og-default.jpg not yet on live host (404). sitemap.xml intermittently 500.**
 
-Build: 26 pages, 0 warnings, 0 errors. Verified on 2026-06-23 after Phase 5 edits.
+Build: 26 pages, 0 warnings, 0 errors. Verified on 2026-06-23. Commit `1999a27` pushed.
 
 ## Church Info (REAL — DO NOT REPLACE)
 - **Brand:** Johannesburg Bible Study Church
@@ -81,19 +81,18 @@ npx astro preview
 ```
 
 ## Next Steps (In Order)
-1. Run `npx astro build`
-2. Push updated source to GitHub
-3. Deploy/update Cloudflare Pages and/or Vercel
-4. Verify live pages after deployment:
-   - https://joburgchurch.co.za/
-   - https://joburgchurch.co.za/visit/
-   - https://joburgchurch.co.za/community-classes/korean/
-   - https://joburgchurch.co.za/locations/randburg/
-   - https://joburgchurch.co.za/sitemap.xml
-   - https://joburgchurch.co.za/images/og-default.jpg
-5. Submit sitemap to Google Search Console
-6. Create Google Business Profile for church
-7. Rotate the exposed Cloudflare API token if it has not already been rotated
+1. **[Manual] Trigger deploy** from Cloudflare Pages or Vercel dashboard using the updated GitHub repo.
+2. **[After deploy] Verify live pages** — homepage, /visit/, /community-classes/korean/, /locations/randburg/, /sitemap.xml, /images/og-default.jpg.
+3. Submit sitemap to Google Search Console — https://joburgchurch.co.za/sitemap.xml
+4. Create Google Business Profile for church.
+5. Rotate the exposed Cloudflare API token if it has not already been rotated.
+
+## Deployment Facts
+- Commit `1999a27` on `master`: "Phase 5 content and SEO enrichment" (15 files, 230+/31-)
+- Excludes: `对话记录.txt`, `开发记录.txt` (in `.gitignore`)
+- Includes: `public/images/og-default.jpg`
+- No in-repo CI/CD detected (no GitHub Actions, no `wrangler.toml`, no `vercel.json`)
+- Live site may still be on Phase 4 — manual dashboard deploy required
 
 ## AI Update Prompt (For Adding New Blog Posts)
 ```
