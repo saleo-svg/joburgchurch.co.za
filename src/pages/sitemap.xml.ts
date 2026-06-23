@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = () => {
   const siteUrl = 'https://joburgchurch.co.za';
-  const now = '2026-06-21';
+  const now = '2026-06-23';
 
   const staticPages = [
     { url: '/', priority: '1.0', changefreq: 'weekly' },

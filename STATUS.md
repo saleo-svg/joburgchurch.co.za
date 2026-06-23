@@ -1,7 +1,7 @@
 # STATUS.md
 
 ## Current Phase
-**Phase 4 COMPLETE. Ready for deployment.**
+**Phase 5 LOCAL VERIFIED. Live domain is active; enriched source is ready for deployment.**
 
 ## Completed Work (Phase 4)
 
@@ -39,20 +39,29 @@
 - **0 warnings, 0 errors**
 - **sitemap.xml: 25 URLs**
 
+## Completed Work (Phase 5 — 2026-06-23)
+
+- Unified remaining source metadata from `https://example.com` to `https://joburgchurch.co.za`
+- Added a default Open Graph image at `public/images/og-default.jpg`
+- Added stronger first-time visitor content on the homepage
+- Expanded Visit page guidance for Bible study, Korean class, youth programs, language, cost, and first-step expectations
+- Expanded Korean class FAQ content for beginners, students, materials, and non-member visitors
+- Expanded all location detail pages with area-specific notes so they read less like thin keyword pages
+
 ## Pages (26 total)
 Core pages (13): Home, About, Visit, Classes, Korean, Spiritual Ed, Youth, Sermons, Events, Blog, Blog posts (5), Contact, Privacy, 404
 Location pages (8): Locations index + Sandton, Randburg, Fourways, Midrand, Alberton, Roodepoort, Soweto
 Static: sitemap.xml, robots.txt, favicon.svg
 
 ## Next Step
-- Deploy to GitHub + Cloudflare Pages
-- Replace `https://example.com` with real domain (MUST DO before launch)
+- Deploy updated source to GitHub + Cloudflare Pages / Vercel
+- Verify live homepage, Korean class page, Visit page, sitemap, and OG image after deployment
 - Submit sitemap to Google Search Console
 - Create Google Business Profile listing
 
 ## Blockers
-- **Domain not set**: `astro.config.mjs` and `sitemap.xml` use `https://example.com` — MUST replace before deployment
 - No email/social (user did not provide)
+- Real church photos are not available yet; using a generated/static OG asset for now
 
 ## Context Usage
-~65% context used. All 4 checkpoint files updated.
+Current session continued by Codex supervision. Build verified on 2026-06-23 after Phase 5 edits.

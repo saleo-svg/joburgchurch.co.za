@@ -24,8 +24,8 @@ const {
 } = Astro.props;
 
 const siteName = 'Johannesburg Bible Study Church';
-const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
-const siteUrl = 'https://example.com';
+const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+const siteUrl = 'https://joburgchurch.co.za';
 
 const jsonLd = schema ? JSON.stringify(schema) : null;
 ---

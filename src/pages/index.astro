@@ -41,7 +41,7 @@ const schema = getChurchSchema({
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/visit" class="btn-warm">Plan Your Visit</a>
-          <a href="/community-classes/korean" class="btn-secondary border-white/30 text-white hover:bg-white/10">
+          <a href="/community-classes/korean" class="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-blue-700">
             Free Korean Class
           </a>
         </div>
@@ -210,6 +210,40 @@ const schema = getChurchSchema({
         Articles on Bible study, community life, and faith from our church in Sandton, Johannesburg.
       </p>
       <a href="/blog" class="btn-secondary">Read Our Blog</a>
+    </div>
+  </section>
+
+  <!-- First-time visitor guide -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-max">
+      <div class="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-start">
+        <div>
+          <p class="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-2">
+            New Here?
+          </p>
+          <h2 class="heading-2 mb-4">A Simple Way to Start</h2>
+          <p class="text-body">
+            Many people find us while searching for Bible study in Johannesburg, church in Sandton, or a friendly Christian community nearby. You do not need to know everything before joining. A phone call is enough to ask questions, get the Google Meet link, or register for the Korean class.
+          </p>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-3">
+          <div class="card">
+            <p class="text-sm font-semibold text-blue-600 mb-2">1. Choose</p>
+            <h3 class="font-semibold text-gray-900 mb-2">Bible Study or Class</h3>
+            <p class="text-sm text-gray-600">Join Wednesday Bible study online, or register for the free Sunday Korean class in Sandton.</p>
+          </div>
+          <div class="card">
+            <p class="text-sm font-semibold text-blue-600 mb-2">2. Call</p>
+            <h3 class="font-semibold text-gray-900 mb-2">Ask for Details</h3>
+            <p class="text-sm text-gray-600">Call Mr. Sim or Ms. Dora for the meeting link, directions, class availability, or youth program schedule.</p>
+          </div>
+          <div class="card">
+            <p class="text-sm font-semibold text-blue-600 mb-2">3. Join</p>
+            <h3 class="font-semibold text-gray-900 mb-2">Come as You Are</h3>
+            <p class="text-sm text-gray-600">Visitors, beginners, students, families, and people exploring faith are welcome.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>

@@ -30,6 +30,10 @@ const locationData = {
     metaDesc: 'Find a Bible study church in Sandton, Johannesburg. Wednesday online Bible study, free Korean class, and youth programs. Everyone welcome.',
     address: 'Parkmore, 11th Street, Sandton, 2196 Johannesburg',
     cta: 'Join Our Bible Study in Sandton',
+    areaNotes: [
+      'Sandton is our main contact point for visitors who want clear directions, Korean class registration, and youth program information.',
+      'If you live or work around Sandton, Parkmore, Morningside, Bryanston, or nearby suburbs, this is the easiest place to start.',
+    ],
   },
   randburg: {
     name: 'Randburg',
@@ -43,6 +47,10 @@ const locationData = {
     metaDesc: 'Find a Bible study church in Randburg, Johannesburg. A welcoming Christian community gathering in the Randburg area.',
     address: 'Randburg, Johannesburg',
     cta: 'Join Our Bible Study in Randburg',
+    areaNotes: [
+      'Randburg is ideal for people searching for a Bible study group near Ferndale, Blairgowrie, Linden, Cresta, and surrounding suburbs.',
+      'Schedules may vary by season, so please call first and we will connect you with the best available Johannesburg Bible study option.',
+    ],
   },
   fourways: {
     name: 'Fourways',
@@ -56,6 +64,10 @@ const locationData = {
     metaDesc: 'Find a Bible study church in Fourways, Johannesburg. A welcoming Christian community gathering in the Fourways area.',
     address: 'Fourways, Johannesburg',
     cta: 'Join Our Bible Study in Fourways',
+    areaNotes: [
+      'Fourways connects people from northern Johannesburg who are looking for Bible study, Christian fellowship, and a welcoming community.',
+      'Contact us before visiting so we can share the current group schedule or suggest the Wednesday online Bible study if that is simpler.',
+    ],
   },
   midrand: {
     name: 'Midrand',
@@ -69,6 +81,10 @@ const locationData = {
     metaDesc: 'Find a Bible study church in Midrand, Johannesburg. A welcoming Christian community gathering in the Midrand area.',
     address: 'Midrand, Johannesburg',
     cta: 'Join Our Bible Study in Midrand',
+    areaNotes: [
+      'Midrand is a helpful connection point for people between Johannesburg and Pretoria who want Bible study during a busy week.',
+      'Our Wednesday online format is especially useful for Midrand visitors who prefer to join from home after work or study.',
+    ],
   },
   alberton: {
     name: 'Alberton',
@@ -82,6 +98,10 @@ const locationData = {
     metaDesc: 'Find a Bible study church in Alberton, Johannesburg. A welcoming Christian community gathering in the Alberton area.',
     address: 'Alberton, Johannesburg',
     cta: 'Join Our Bible Study in Alberton',
+    areaNotes: [
+      'Alberton helps us serve people south of Johannesburg who are searching for Bible study and a sincere Christian community.',
+      'Please call for current details, especially if you are joining for the first time or bringing family members.',
+    ],
   },
   roodepoort: {
     name: 'Roodepoort',
@@ -95,6 +115,10 @@ const locationData = {
     metaDesc: 'Find a Bible study church in Roodepoort, Johannesburg. A welcoming Christian community gathering in the Roodepoort area.',
     address: 'Roodepoort, Johannesburg',
     cta: 'Join Our Bible Study in Roodepoort',
+    areaNotes: [
+      'Roodepoort is part of our wider Johannesburg Bible study network for people on the west side of the city.',
+      'If travel is difficult, the Wednesday online Bible study is an easy first step before connecting in person.',
+    ],
   },
   soweto: {
     name: 'Soweto',
@@ -108,6 +132,10 @@ const locationData = {
     metaDesc: 'Find a Bible study church in Soweto, Johannesburg. A welcoming Christian community gathering in the Soweto area.',
     address: 'Soweto, Johannesburg',
     cta: 'Join Our Bible Study in Soweto',
+    areaNotes: [
+      'Soweto represents our desire to make Bible study and spiritual education accessible across greater Johannesburg.',
+      'New visitors can contact us by phone for the current schedule and to learn which study format is most suitable.',
+    ],
   },
 };
 
@@ -182,6 +210,26 @@ const loc = locationData[slug];
         <p class="text-sm text-gray-500">
           You can also visit our main location in Sandton for our Wednesday online Bible study and Sunday Korean class.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-gray-50">
+    <div class="container-max">
+      <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+        <div>
+          <h2 class="heading-2 mb-4">Bible Study Near {loc.name}</h2>
+          <p class="text-body">
+            If you are searching for Bible study near me in {loc.name}, church near me in Johannesburg, or a Christian community where you can ask questions and grow, we would be glad to help you find the right next step.
+          </p>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {loc.areaNotes.map((note) => (
+            <div class="card">
+              <p class="text-sm text-gray-600">{note}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </section>

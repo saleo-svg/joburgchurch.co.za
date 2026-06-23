@@ -109,11 +109,12 @@ Each location page targets:
 - Ads to be placed only on blog/resource pages if ever used
 
 ## To-Do (Before Launch)
-- [ ] Replace `https://example.com` with real domain in `astro.config.mjs` and `sitemap.xml.ts`
+- [x] Replace `https://example.com` with real domain in `astro.config.mjs`, `sitemap.xml.ts`, Schema helpers, and metadata components
 - [ ] Submit sitemap.xml to Google Search Console
 - [ ] Create Google Business Profile for church
 - [ ] Add Google Maps embed on Visit page (Parkmore, 11th Street, Sandton)
-- [ ] Add real church photo/image assets
+- [x] Add default Open Graph image asset
+- [ ] Add real church photo/image assets when available
 - [ ] Add email/social if/when available
 
 ## AI Update Prompt

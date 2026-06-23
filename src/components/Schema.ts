@@ -13,7 +13,7 @@ export function getChurchSchema(overrides = {}) {
     '@type': 'PlaceOfWorship',
     name: 'Johannesburg Bible Study Church',
     description: 'A welcoming Bible study and Christian community in Sandton, Johannesburg. Wednesday online Bible study, Sunday Korean class, spiritual education, and youth programs.',
-    url: 'https://example.com',
+    url: 'https://joburgchurch.co.za',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Parkmore, 11th Street',
@@ -77,7 +77,7 @@ export function getEventSchema(title, description, startDate, location) {
     organizer: {
       '@type': 'Organization',
       name: 'Johannesburg Bible Study Church',
-      url: 'https://example.com',
+      url: 'https://joburgchurch.co.za',
     },
   };
 }

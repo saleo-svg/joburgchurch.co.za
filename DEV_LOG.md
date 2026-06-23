@@ -1,5 +1,27 @@
 # DEV_LOG.md
 
+## 2026-06-23 — Phase 5 Content & Metadata Enrichment
+
+### What Changed
+
+- Replaced remaining `https://example.com` source references in Schema helpers, BaseLayout metadata, and SEOHead metadata with `https://joburgchurch.co.za`
+- Added `public/images/og-default.jpg` so Open Graph and Twitter metadata point to a real project asset
+- Expanded homepage with a first-time visitor guide: choose a program, call for details, then join
+- Expanded Visit page with practical first-visit notes for Bible study, Korean class, youth programs, language, cost, and location focus
+- Expanded Korean class page with beginner/student/materials/non-member FAQ content
+- Expanded every location detail page with area-specific notes to reduce thin-page risk and improve local SEO usefulness
+- Updated STATUS.md, HANDOFF.md, and SEO_PLAN.md so the domain-complete state is no longer shown as an open deployment blocker
+
+### Security Note
+
+- `对话记录.txt` and `开发记录.txt` contain sensitive Cloudflare token/account details from earlier deployment work. Do not commit or share those files publicly. Rotate the exposed token if it has not already been rotated.
+
+### Next
+
+- Build verification completed: 26 pages, 0 errors
+- Deploy updated source to GitHub + Cloudflare Pages / Vercel
+- Verify live pages and sitemap after deployment
+
 ## 2026-06-21 — Phase 4 Complete
 
 ### What Changed

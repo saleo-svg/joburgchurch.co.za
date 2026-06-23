@@ -20,8 +20,8 @@ const {
 } = Astro.props;
 
 const siteName = 'Johannesburg Bible Study Church';
-const fullTitle = pageTitle === siteName ? pageTitle : `${pageTitle} | ${siteName}`;
-const siteUrl = 'https://example.com';
+const fullTitle = pageTitle.includes(siteName) ? pageTitle : `${pageTitle} | ${siteName}`;
+const siteUrl = 'https://joburgchurch.co.za';
 const canonical = canonicalUrl ?? Astro.url.href;
 const ogImagePath = ogImage ? `${siteUrl}${ogImage}` : `${siteUrl}/images/og-default.jpg`;
 const jsonLd = schema ? JSON.stringify(schema) : null;

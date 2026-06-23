@@ -3,9 +3,9 @@
 ## Project: Johannesburg Bible Study Church Website
 
 ## Status
-**Phase 4 COMPLETE. Ready for deployment.**
+**Phase 5 LOCAL VERIFIED. Live domain active; enriched source is ready for deployment.**
 
-Build: 26 pages, 0 warnings, 0 errors. All checkpoint files current.
+Build: 26 pages, 0 warnings, 0 errors. Verified on 2026-06-23 after Phase 5 edits.
 
 ## Church Info (REAL — DO NOT REPLACE)
 - **Brand:** Johannesburg Bible Study Church
@@ -15,17 +15,17 @@ Build: 26 pages, 0 warnings, 0 errors. All checkpoint files current.
 - **Korean Class:** Sunday 2:00pm, Offline (Sandton), Free, Appointment required
 - **Youth:** Summer/Winter schedule
 
-## MUST DO Before Deployment
-- Replace `https://example.com` in:
-  - `astro.config.mjs` (line 5: `site: 'https://example.com'`)
-  - `src/pages/sitemap.xml.ts` (line 3: `const siteUrl = 'https://example.com'`)
-  - `public/robots.txt` (line 4: `Sitemap:` line)
-- Update `SEO_PLAN.md` domain reference
+## Current Deployment Facts
+- Live domain: https://joburgchurch.co.za
+- Source domain references have been updated to `https://joburgchurch.co.za`
+- Default OG image exists at `public/images/og-default.jpg`
+- No email or social links should be added unless the user provides them
+- Real church photos are still missing; use real photos later if the user provides safe images
 
 ## Files Structure
 ```
 C:\Users\Laptop\Desktop\Church-Site\
-├── astro.config.mjs          ← change site URL before deploy
+├── astro.config.mjs          ← site URL set to joburgchurch.co.za
 ├── package.json
 ├── tailwind.config.mjs
 ├── tsconfig.json
@@ -58,7 +58,7 @@ C:\Users\Laptop\Desktop\Church-Site\
         ├── spiritual-education.astro
         ├── visit.astro
         ├── youth-usecan.astro
-        ├── sitemap.xml.ts     ← update siteUrl before deploy
+        ├── sitemap.xml.ts     ← siteUrl set to joburgchurch.co.za
         ├── blog/
         │   ├── index.astro
         │   └── [slug].astro   ← 5 posts
@@ -81,11 +81,19 @@ npx astro preview
 ```
 
 ## Next Steps (In Order)
-1. Replace `https://example.com` with real domain in astro.config.mjs, sitemap.xml.ts, robots.txt
-2. Push to GitHub
-3. Connect to Cloudflare Pages
-4. Submit sitemap to Google Search Console
-5. Create Google Business Profile for church
+1. Run `npx astro build`
+2. Push updated source to GitHub
+3. Deploy/update Cloudflare Pages and/or Vercel
+4. Verify live pages after deployment:
+   - https://joburgchurch.co.za/
+   - https://joburgchurch.co.za/visit/
+   - https://joburgchurch.co.za/community-classes/korean/
+   - https://joburgchurch.co.za/locations/randburg/
+   - https://joburgchurch.co.za/sitemap.xml
+   - https://joburgchurch.co.za/images/og-default.jpg
+5. Submit sitemap to Google Search Console
+6. Create Google Business Profile for church
+7. Rotate the exposed Cloudflare API token if it has not already been rotated
 
 ## AI Update Prompt (For Adding New Blog Posts)
 ```
