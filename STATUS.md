@@ -1,9 +1,9 @@
 # STATUS.md
 
 ## Current Phase
-**Phase 7 DEPLOYED. Content enrichment: 4 new blog posts, FAQ page, testimonials, sermon series, event timeline, about story timeline, team, service times footer.**
+**Phase 7b DEPLOYED. SVG image assets (9 files), Gallery page, hero backgrounds, footer skyline.**
 
-Build: 30 pages, 0 warnings, 0 errors (after Phase 7).
+Build: 32 pages, 0 warnings, 0 errors (after Phase 7b).
 
 ## Completed Work (Phase 7 — 2026-06-27)
 

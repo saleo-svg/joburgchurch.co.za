@@ -3,9 +3,9 @@
 ## Project: Johannesburg Bible Study Church Website
 
 ## Status
-**Phase 7 DEPLOYED (pending git push). Content enrichment: 4 new blog posts, FAQ page, testimonials, sermon series, event timeline, about story timeline, team, service times footer.**
+**Phase 7b DEPLOYED. SVG image assets (9 files), Gallery page, hero backgrounds, footer skyline, BaseLayout og.svg update.**
 
-Build: 30 sitemap URLs, expected 30+ pages after build, 0 warnings, 0 errors (target).
+Build: 32 pages, 0 errors. Live at joburgchurch.co.za. Preview: e04c84e7.joburgchurch.pages.dev
 
 ## Church Info (REAL — DO NOT REPLACE)
 - **Brand:** Johannesburg Bible Study Church
@@ -86,12 +86,14 @@ npx astro preview
 ```
 
 ## Next Steps (In Order)
-1. Verify local `npx astro build` succeeds (30 pages, 0 errors)
-2. git commit + git push (triggers Cloudflare Pages auto-deploy via GitHub integration if configured; otherwise manual `npm run deploy:cloudflare`)
-3. Verify live at https://joburgchurch.co.za (homepage + /faq/ + new blog posts)
-4. Re-submit sitemap to Google Search Console
-5. Rotate the exposed Cloudflare API token if it has not already been rotated.
-6. Add real church photos when available.
+1. ~~Build and deploy (Phase 7b completed)~~
+2. Verify live site at https://joburgchurch.co.za (all pages 200 OK)
+3. Re-submit sitemap to Google Search Console (if not done yet)
+   - Login: leo123asante@gmail.com
+   - URL: https://search.google.com/search-console/sitemaps?resource_id=sc-domain:joburgchurch.co.za
+4. Volunteer CMS (Sveltia CMS) implementation — see DEV_LOG.md for full steps
+5. Replace SVG placeholder images with real church photos when available
+6. Rotate the exposed Cloudflare API token if not yet rotated.
 
 ## Deployment Automation
 - Local deploy command: `npm run deploy:cloudflare`
