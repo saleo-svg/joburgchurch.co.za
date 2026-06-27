@@ -50,21 +50,30 @@ const schema = getChurchSchema();
 
         <div>
           <h2 class="heading-2 mb-8">Location & Contact</h2>
-          <div class="card">
-            <h3 class="heading-3 mb-4">Address</h3>
-            <p class="text-gray-700 mb-6">
-              Parkmore, 11th Street<br />
-              Sandton, 2196<br />
-              Johannesburg, South Africa
-            </p>
-            <h3 class="heading-3 mb-4">Phone</h3>
-            <p class="text-gray-700 mb-2">
-              Mr. Sim: <a href="tel:+27774871295" class="text-blue-600 hover:underline">+27 77 487 1295</a>
-            </p>
-            <p class="text-gray-700 mb-6">
-              Ms. Dora: <a href="tel:+27674424461" class="text-blue-600 hover:underline">+27 67 442 4461</a>
-            </p>
-            <a href="/contact" class="btn-primary">Contact Page</a>
+          <div class="card overflow-hidden p-0">
+            <iframe
+              title="Parkmore Sandton Map"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=28.0400%2C-26.1150%2C28.0700%2C-26.0900&amp;layer=mapnik&amp;marker=-26.1025%2C28.0550"
+              class="w-full h-64 border-0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="p-6">
+              <h3 class="heading-3 mb-4">Address</h3>
+              <p class="text-gray-700 mb-6">
+                Parkmore, 11th Street<br />
+                Sandton, 2196<br />
+                Johannesburg, South Africa
+              </p>
+              <h3 class="heading-3 mb-4">Phone</h3>
+              <p class="text-gray-700 mb-2">
+                Mr. Sim: <a href="tel:+27774871295" class="text-blue-600 hover:underline">+27 77 487 1295</a>
+              </p>
+              <p class="text-gray-700 mb-6">
+                Ms. Dora: <a href="tel:+27674424461" class="text-blue-600 hover:underline">+27 67 442 4461</a>
+              </p>
+              <a href="/contact" class="btn-primary">Contact Page</a>
+            </div>
           </div>
         </div>
       </div>

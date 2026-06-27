@@ -6,6 +6,7 @@ const footerLinks = {
     { href: '/spiritual-education', label: 'Bible Study' },
     { href: '/community-classes', label: 'Community Classes' },
     { href: '/community-classes/korean', label: 'Free Korean Class' },
+    { href: '/sermons', label: 'Sermons & Series' },
   ],
   'Locations': [
     { href: '/locations/sandton', label: 'Sandton (Main)' },
@@ -17,17 +18,18 @@ const footerLinks = {
     { href: '/locations/soweto', label: 'Soweto' },
   ],
   'Connect': [
-    { href: '/sermons', label: 'Sermons' },
-    { href: '/events', label: 'Events' },
-    { href: '/blog', label: 'Blog' },
+    { href: '/events', label: 'Events & Calendar' },
+    { href: '/blog', label: 'Blog & Articles' },
+    { href: '/faq', label: 'FAQ' },
+    { href: '/contact', label: 'Contact Us' },
   ],
   'Visit': [
-    { href: '/visit', label: 'Visit Us' },
+    { href: '/visit', label: 'Plan Your Visit' },
     { href: '/youth-usecan', label: 'Youth Programs' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/about', label: 'About Us' },
   ],
   'About': [
-    { href: '/about', label: 'About Us' },
+    { href: '/about', label: 'Our Story' },
     { href: '/privacy', label: 'Privacy Policy' },
   ],
 };
@@ -72,7 +74,40 @@ const footerLinks = {
       ))}
     </div>
 
-    <div class="mt-12 border-t border-gray-200 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="mt-12 pt-8 grid gap-8 sm:grid-cols-3 border-t border-gray-200">
+      <div>
+        <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">
+          Weekly Bible Study
+        </h3>
+        <p class="text-sm text-gray-600">
+          Wednesday, 7:30pm<br />
+          Online via Google Meet
+        </p>
+        <p class="text-xs text-gray-500 mt-1">Open to all · Free</p>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">
+          Free Korean Class
+        </h3>
+        <p class="text-sm text-gray-600">
+          Sunday, 2:00pm<br />
+          Parkmore, Sandton
+        </p>
+        <p class="text-xs text-gray-500 mt-1">Appointment required</p>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">
+          In-Person Bible Study
+        </h3>
+        <p class="text-sm text-gray-600">
+          First Saturday of the month, 4:00pm<br />
+          Parkmore, Sandton
+        </p>
+        <p class="text-xs text-gray-500 mt-1">Same passage as Wednesday</p>
+      </div>
+    </div>
+
+    <div class="mt-8 border-t border-gray-200 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p class="text-sm text-gray-500">
         &copy; {currentYear} Johannesburg Bible Study Church. All rights reserved.
       </p>

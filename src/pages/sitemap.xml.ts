@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = () => {
   const siteUrl = 'https://joburgchurch.co.za';
-  const now = '2026-06-23';
+  const now = '2026-06-27';
 
   const staticPages = [
     { url: '/', priority: '1.0', changefreq: 'weekly' },
@@ -15,6 +15,7 @@ export const GET: APIRoute = () => {
     { url: '/sermons/', priority: '0.7', changefreq: 'weekly' },
     { url: '/events/', priority: '0.7', changefreq: 'weekly' },
     { url: '/blog/', priority: '0.8', changefreq: 'weekly' },
+    { url: '/faq/', priority: '0.7', changefreq: 'monthly' },
     { url: '/contact/', priority: '0.8', changefreq: 'monthly' },
   { url: '/privacy/', priority: '0.3', changefreq: 'yearly' },
   { url: '/locations/', priority: '0.8', changefreq: 'weekly' },
@@ -33,6 +34,10 @@ export const GET: APIRoute = () => {
     { url: '/blog/why-community-learning-matters/', lastmod: '2026-03-01' },
     { url: '/blog/youth-growth-spiritual-education/', lastmod: '2026-04-01' },
     { url: '/blog/how-to-join-online-bible-study/', lastmod: '2026-05-01' },
+    { url: '/blog/what-to-expect-first-bible-study/', lastmod: '2026-06-10' },
+    { url: '/blog/learning-korean-as-an-adult-sandton/', lastmod: '2026-06-15' },
+    { url: '/blog/finding-community-as-a-young-adult-johannesburg/', lastmod: '2026-06-20' },
+    { url: '/blog/bible-study-near-me-johannesburg/', lastmod: '2026-06-25' },
   ];
 
   const allPages = [

@@ -1,84 +1,185 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
----
 
+type Event = {
+  day: string;
+  month: string;
+  title: string;
+  when: string;
+  where: string;
+  description: string;
+  cta?: { label: string; href: string };
+  kind: 'weekly' | 'monthly' | 'special';
+};
+
+const upcoming: Event[] = [
+  // Special / one-off
+  {
+    day: '12', month: 'Jul',
+    title: 'Sandton Community Picnic',
+    when: 'Saturday 12 July, 11:00am – 3:00pm',
+    where: 'Parkmore, Sandton',
+    description: 'A Saturday morning for the families and friends of the Bible study community. Bring a dish, bring the kids, meet the people you have only seen on Google Meet.',
+    cta: { label: 'Call to RSVP', href: '/contact' },
+    kind: 'special',
+  },
+  {
+    day: '02', month: 'Aug',
+    title: 'Korean Class Open Day',
+    when: 'Sunday 2 August, 2:00pm',
+    where: 'Parkmore, Sandton',
+    description: 'Drop-in afternoon for anyone thinking about joining the free Sunday Korean class. Sample lesson, conversation practice, and tea. No commitment required.',
+    cta: { label: 'Reserve a Spot', href: '/contact' },
+    kind: 'special',
+  },
+  {
+    day: '15', month: 'Aug',
+    title: 'UseCan Youth Winter Camp',
+    when: 'Friday 15 – Sunday 17 August',
+    where: 'Just outside Johannesburg',
+    description: 'Three days for the UseCan youth group — Bible study, outdoor activities, leadership workshops, and the kind of late-night conversations you only have when you are away from home with people your age.',
+    cta: { label: 'Get Camp Details', href: '/contact' },
+    kind: 'special',
+  },
+  {
+    day: '06', month: 'Sep',
+    title: 'Sandton Open House',
+    when: 'Saturday 6 September, 10:00am – 1:00pm',
+    where: 'Parkmore, Sandton',
+    description: 'Our once-a-term open morning. Tour the venue, meet the team, ask every awkward question you have been sitting with. Coffee and rusks provided.',
+    cta: { label: 'Save the Date', href: '/contact' },
+    kind: 'special',
+  },
+];
+
+const weekly: Event[] = [
+  {
+    day: 'Wed', month: 'Weekly',
+    title: 'Wednesday Online Bible Study',
+    when: 'Every Wednesday, 7:30pm',
+    where: 'Online via Google Meet',
+    description: 'Our main Bible study evening. One passage, read slowly, discussed honestly. About 90 minutes, including the slightly chaotic ten minutes at the end where everyone is still talking.',
+    cta: { label: 'Get the Link', href: '/contact' },
+    kind: 'weekly',
+  },
+  {
+    day: 'Sun', month: 'Weekly',
+    title: 'Free Sunday Korean Class',
+    when: 'Every Sunday, 2:00pm',
+    where: 'Parkmore, Sandton',
+    description: 'Open to anyone curious about Korean. We start with Hangul, build out from there, and keep it as social as it is educational. Free of charge, appointment required.',
+    cta: { label: 'Book Your Spot', href: '/contact' },
+    kind: 'weekly',
+  },
+  {
+    day: 'Sat', month: 'Monthly',
+    title: 'Sandton In-Person Bible Study',
+    when: 'First Saturday of the month, 4:00pm',
+    where: 'Parkmore, Sandton',
+    description: 'Once a month we move the Bible study into the room. Same passage as the Wednesday, same conversation, more tea. A chance to put a face to the names on the Google Meet grid.',
+    cta: { label: 'Get the Address', href: '/contact' },
+    kind: 'monthly',
+  },
+];
+
+const eventColors: Record<Event['kind'], string> = {
+  weekly: 'bg-blue-50 text-blue-700 border-blue-200',
+  monthly: 'bg-amber-50 text-amber-700 border-amber-200',
+  special: 'bg-green-50 text-green-700 border-green-200',
+};
+---
 <BaseLayout
-  title="Events | Community Activities Sandton Johannesburg"
-  description="Upcoming events and community activities from Johannesburg Bible Study Church in Sandton, Johannesburg. Bible study gatherings, community service, and youth programs."
+  title="Events & Calendar | Johannesburg Bible Study Church, Sandton"
+  description="Upcoming events, weekly Bible study, free Korean class, and youth programmes from Johannesburg Bible Study Church in Sandton, Johannesburg."
 >
   <section class="section-padding">
     <div class="container-max">
       <p class="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-2">
-        Events
+        Events & Calendar
       </p>
-      <h1 class="heading-1 mb-6">Upcoming Events</h1>
+      <h1 class="heading-1 mb-6">What is Happening</h1>
       <p class="text-body max-w-2xl mb-8">
-        Community activities, Bible study gatherings, and youth programs at Johannesburg Bible Study Church in Sandton, Johannesburg. Stay updated on what is happening in our community.
+        Regular Bible study and Korean class, plus one-off community events through the year. Everything on this page is open to anyone in Sandton, Randburg, and greater Johannesburg — bring a friend.
       </p>
     </div>
   </section>
 
+  <!-- Special upcoming events as a timeline -->
   <section class="section-padding bg-gray-50">
     <div class="container-max">
       <div class="max-w-4xl mx-auto">
-        <p class="text-center text-gray-500 py-12">
-          Events will be listed here as they are scheduled. Regular activities include our Wednesday online Bible study and periodic community events.
-        </p>
-
-        <div class="space-y-6">
-          <div class="card">
-            <div class="flex flex-col sm:flex-row sm:items-start gap-4">
-              <div class="shrink-0 text-center bg-blue-50 rounded-xl px-4 py-3 w-fit">
-                <p class="text-xs font-medium text-blue-600 uppercase">Every</p>
-                <p class="text-2xl font-bold text-blue-700">Wed</p>
+        <h2 class="heading-2 mb-8">Upcoming Events</h2>
+        <div class="relative pl-8 sm:pl-0">
+          <div class="hidden sm:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-300" aria-hidden="true"></div>
+          <div class="space-y-12">
+            {upcoming.map((e, idx) => (
+              <div class={`relative sm:grid sm:grid-cols-2 sm:gap-8 ${idx % 2 === 1 ? 'sm:direction-rtl' : ''}`}>
+                <div class={`hidden sm:flex sm:justify-${idx % 2 === 0 ? 'end' : 'start'}`}>
+                  <div class={`relative inline-flex flex-col items-center justify-center w-20 h-20 rounded-2xl border-2 ${eventColors[e.kind]} font-bold`}>
+                    <span class="text-2xl leading-none">{e.day}</span>
+                    <span class="text-xs uppercase tracking-wide mt-1">{e.month}</span>
+                  </div>
+                </div>
+                <div class={`card sm:direction-ltr ${idx % 2 === 1 ? 'sm:col-start-1' : ''}`}>
+                  <div class="flex items-center gap-3 mb-3 sm:hidden">
+                    <div class={`inline-flex flex-col items-center justify-center w-14 h-14 rounded-xl ${eventColors[e.kind]} font-bold`}>
+                      <span class="text-lg leading-none">{e.day}</span>
+                      <span class="text-[10px] uppercase tracking-wide mt-0.5">{e.month}</span>
+                    </div>
+                    <span class="text-xs uppercase tracking-wide text-gray-500">Upcoming</span>
+                  </div>
+                  <span class="hidden sm:inline-block text-xs uppercase tracking-wide text-gray-500 mb-1">{e.when}</span>
+                  <h3 class="heading-3 mb-2">{e.title}</h3>
+                  <p class="text-sm text-gray-500 mb-2 sm:hidden">{e.when} · {e.where}</p>
+                  <p class="text-sm text-gray-500 mb-2 hidden sm:block">{e.where}</p>
+                  <p class="text-sm text-gray-600 mb-4">{e.description}</p>
+                  {e.cta && <a href={e.cta.href} class="text-blue-600 font-medium text-sm hover:underline">{e.cta.label} →</a>}
+                </div>
               </div>
-              <div>
-                <h3 class="heading-3 mb-2">Wednesday Online Bible Study</h3>
-                <p class="text-sm text-gray-500 mb-2">Every Wednesday, 7:30pm — Online via Google Meet</p>
-                <p class="text-sm text-gray-600">Our regular weekly Bible study. Join from anywhere in Johannesburg or beyond. Contact us for the meeting link.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="flex flex-col sm:flex-row sm:items-start gap-4">
-              <div class="shrink-0 text-center bg-amber-50 rounded-xl px-4 py-3 w-fit">
-                <p class="text-xs font-medium text-amber-600 uppercase">Every</p>
-                <p class="text-2xl font-bold text-amber-700">Sun</p>
-              </div>
-              <div>
-                <h3 class="heading-3 mb-2">Free Korean Class</h3>
-                <p class="text-sm text-gray-500 mb-2">Every Sunday, 2:00pm — Parkmore, Sandton</p>
-                <p class="text-sm text-gray-600">Free Korean language class open to all. Appointment required — call to register.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="flex flex-col sm:flex-row sm:items-start gap-4">
-              <div class="shrink-0 text-center bg-green-50 rounded-xl px-4 py-3 w-fit">
-                <p class="text-xs font-medium text-green-600 uppercase">Seasonal</p>
-                <p class="text-2xl font-bold text-green-700">S/W</p>
-              </div>
-              <div>
-                <h3 class="heading-3 mb-2">UseCan Youth Programs</h3>
-                <p class="text-sm text-gray-500 mb-2">Summer and Winter schedule — Sandton, Johannesburg</p>
-                <p class="text-sm text-gray-600">Youth empowerment, leadership training, and community service projects. Contact us for the upcoming program schedule.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section-padding text-center">
+  <!-- Weekly rhythm -->
+  <section class="section-padding">
     <div class="container-max">
-      <h2 class="heading-2 mb-4">Stay Updated</h2>
-      <p class="text-body max-w-xl mx-auto mb-6">
-        Contact us to learn about upcoming events and community activities in Sandton, Johannesburg.
+      <div class="max-w-4xl mx-auto">
+        <h2 class="heading-2 mb-8">Our Weekly Rhythm</h2>
+        <div class="grid gap-6 md:grid-cols-3">
+          {weekly.map((e) => (
+            <div class="card">
+              <span class={`inline-block text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full mb-3 ${eventColors[e.kind]}`}>
+                {e.kind}
+              </span>
+              <h3 class="heading-3 mb-2">{e.title}</h3>
+              <p class="text-sm font-medium text-gray-700 mb-1">{e.when}</p>
+              <p class="text-sm text-gray-500 mb-3">{e.where}</p>
+              <p class="text-sm text-gray-600 mb-4">{e.description}</p>
+              {e.cta && <a href={e.cta.href} class="text-blue-600 font-medium text-sm hover:underline">{e.cta.label} →</a>}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-blue-600 text-white text-center">
+    <div class="container-max">
+      <h2 class="heading-2 text-white mb-4">Never Miss a Wednesday</h2>
+      <p class="text-blue-100 text-lg mb-6 max-w-xl mx-auto">
+        Call us and we will send you the Google Meet link the morning of every Bible study. No mailing list, no commitment, no spam.
       </p>
-      <a href="/contact" class="btn-primary">Contact Us</a>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+27774871295" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-blue-700 shadow-sm transition-colors hover:bg-blue-50">
+          Call Mr. Sim: +27 77 487 1295
+        </a>
+        <a href="tel:+27674424461" class="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20">
+          Call Ms. Dora: +27 67 442 4461
+        </a>
+      </div>
     </div>
   </section>
 </BaseLayout>

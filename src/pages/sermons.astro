@@ -1,64 +1,126 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
----
 
+type Sermon = {
+  date: string;
+  title: string;
+  passage: string;
+  series: string;
+  speaker: string;
+  summary: string;
+};
+
+const series: { name: string; description: string; color: string }[] = [
+  {
+    name: 'Exodus — The Way Out',
+    description: 'A six-week walk through the book of Exodus, looking at what it means to be led, fed, and tested in the wilderness.',
+    color: 'amber',
+  },
+  {
+    name: 'The Gospel of John',
+    description: 'Slow readings through John — signs, conversations, and the claim that the Word became flesh and moved into the neighbourhood.',
+    color: 'blue',
+  },
+  {
+    name: 'Psalms for Real Life',
+    description: 'Short series on the Psalms you reach for when you cannot sleep, when you are furious, and when you are grateful and you do not know why.',
+    color: 'green',
+  },
+  {
+    name: 'Parables Jesus Actually Told',
+    description: 'The parables in their first-century context, and what they sound like when you read them in Sandton in 2026.',
+    color: 'purple',
+  },
+];
+
+const allSermons: Sermon[] = [
+  // Exodus series
+  { date: '2026-04-08', title: 'Exodus 1 — A People That Would Not Disappear', passage: 'Exodus 1:1–22', series: 'Exodus — The Way Out', speaker: 'Mr. Sim', summary: 'We start the series where the story starts, with a small group of people in a difficult place, and the slow work of God keeping them in the picture.' },
+  { date: '2026-04-15', title: 'Exodus 2 — The Boy in the Basket', passage: 'Exodus 2:1–25', series: 'Exodus — The Way Out', speaker: 'Ms. Dora', summary: 'Moses grows up in two houses at once. We talked about what it means to live between two worlds and still recognise a call.' },
+  { date: '2026-04-22', title: 'Exodus 3 — The Bush That Was on Fire', passage: 'Exodus 3:1–22', series: 'Exodus — The Way Out', speaker: 'Mr. Sim', summary: 'A short reading with a long discussion. The most famous conversation in the Old Testament, and the part that is easy to miss.' },
+  { date: '2026-04-29', title: 'Exodus 12 — A Meal That Remembers', passage: 'Exodus 12:1–28', series: 'Exodus — The Way Out', speaker: 'Mr. Sim', summary: 'Passover as a family meal with a future tense. We ended up talking about how our own family tables carry memory forward.' },
+  // John series
+  { date: '2026-05-06', title: 'John 1 — In the Beginning, in the Neighbourhood', passage: 'John 1:1–18', series: 'The Gospel of John', speaker: 'Ms. Dora', summary: 'The famous prologue, read slowly. The Word became flesh and pitched a tent among us — what does that actually look like in Johannesburg?' },
+  { date: '2026-05-13', title: 'John 3 — A Late Conversation', passage: 'John 3:1–21', series: 'The Gospel of John', speaker: 'Mr. Sim', summary: 'Nicodemus comes to Jesus at night. We asked why the conversation is more honest in the dark than in the daylight.' },
+  { date: '2026-05-20', title: 'John 4 — A Woman at a Well', passage: 'John 4:1–42', series: 'The Gospel of John', speaker: 'Ms. Dora', summary: 'A long chapter, a long conversation. We spent the second half on the moment Jesus says he is the living water, and what that has to do with us today.' },
+  // Psalms
+  { date: '2026-05-27', title: 'Psalm 23 — The Lord Is My', passage: 'Psalm 23', series: 'Psalms for Real Life', speaker: 'Mr. Sim', summary: 'A psalm most people know in fragments. We read it all the way through, slowly, and talked about the part about walking through the darkest valley.' },
+  { date: '2026-06-03', title: 'Psalm 13 — How Long?', passage: 'Psalm 13', series: 'Psalms for Real Life', speaker: 'Ms. Dora', summary: 'A short psalm, six verses, and an argument with God that ends in song. We talked about what it looks like to keep being honest in prayer.' },
+  { date: '2026-06-10', title: 'Psalm 139 — Known', passage: 'Psalm 139:1–18', series: 'Psalms for Real Life', speaker: 'Mr. Sim', summary: 'A psalm about being fully known, in the comforting parts and the difficult parts. The conversation drifted toward what we hide from the people closest to us.' },
+  // Parables
+  { date: '2026-06-17', title: 'The Lost Sheep', passage: 'Luke 15:1–7', series: 'Parables Jesus Actually Told', speaker: 'Ms. Dora', summary: 'A short parable, ninety minutes of discussion. The maths of grace, and what it says about what God pays attention to.' },
+  { date: '2026-06-24', title: 'The Two Sons', passage: 'Luke 15:11–32', series: 'Parables Jesus Actually Told', speaker: 'Mr. Sim', summary: 'The parable most people half-remember. We spent the hour on the older brother, and the part of the parable that the comfortable reader usually misses.' },
+];
+
+const seriesColorClass: Record<string, string> = {
+  amber: 'bg-amber-50 text-amber-700 border-amber-200',
+  blue: 'bg-blue-50 text-blue-700 border-blue-200',
+  green: 'bg-green-50 text-green-700 border-green-200',
+  purple: 'bg-purple-50 text-purple-700 border-purple-200',
+};
+---
 <BaseLayout
-  title="Sermons | Bible Study Church, Sandton Johannesburg"
-  description="Sermon notes and summaries from Johannesburg Bible Study Church in Sandton, Johannesburg. Bible teaching and spiritual encouragement for the community."
+  title="Sermons & Bible Study Notes | Johannesburg Bible Study Church"
+  description="Sermon notes, Bible study summaries, and teaching series from Johannesburg Bible Study Church in Sandton, Johannesburg. Exodus, John, Psalms, Parables, and more."
 >
   <section class="section-padding">
     <div class="container-max">
       <p class="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-2">
-        Sermons
+        Sermons & Bible Study
       </p>
-      <h1 class="heading-1 mb-6">Sermon Notes & Summaries</h1>
+      <h1 class="heading-1 mb-6">Sermon Notes & Series</h1>
       <p class="text-body max-w-2xl mb-8">
-        We share notes and summaries from our Bible study sessions. These are a resource for those who attended and want to revisit the teaching, and for those who could not join us.
+        Notes and summaries from our Wednesday Bible study in Sandton, Johannesburg. We work through books of the Bible slowly, in series, and we publish a short summary after each session.
       </p>
     </div>
   </section>
 
+  <!-- Series overview -->
   <section class="section-padding bg-gray-50">
     <div class="container-max">
-      <div class="max-w-3xl mx-auto">
-        <p class="text-center text-gray-500 py-12">
-          Sermon posts will be added regularly. Each post will include a summary of the teaching, key Bible passages, and practical takeaways.
-        </p>
+      <h2 class="heading-2 mb-8">Current & Recent Series</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        {series.map((s) => (
+          <div class={`rounded-xl border p-6 ${seriesColorClass[s.color]}`}>
+            <h3 class="text-xl font-semibold mb-2">{s.name}</h3>
+            <p class="text-sm leading-relaxed">{s.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
+  <!-- All sermons -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="heading-2 mb-8">Recent Bible Study Sessions</h2>
         <div class="space-y-6">
-          {[
-            {
-              date: 'Wednesday, January 2026',
-              title: 'Introduction to the Gospel of John',
-              passage: 'John 1:1-18',
-              summary: 'An introduction to the Gospel of John — its purpose, audience, and the life-changing truth that "the Word became flesh."',
-            },
-            {
-              date: 'Wednesday, February 2026',
-              title: 'The Love of God in Action',
-              passage: 'John 3:16-21',
-              summary: 'Exploring what John 3:16 means for our lives today — God\'s love expressed through Jesus Christ, and the invitation to walk in the light.',
-            },
-          ].map((sermon) => (
-            <div class="card">
-              <p class="text-xs text-gray-500 mb-2">{sermon.date}</p>
+          {allSermons.map((sermon) => (
+            <article class="card">
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full font-medium">{sermon.series}</span>
+                <span class="text-xs text-gray-500">{sermon.date}</span>
+                <span class="text-xs text-gray-500">·</span>
+                <span class="text-xs text-gray-500">{sermon.speaker}</span>
+              </div>
               <h3 class="heading-3 mb-1">{sermon.title}</h3>
               <p class="text-sm text-blue-600 font-medium mb-3">{sermon.passage}</p>
-              <p class="text-sm text-gray-600">{sermon.summary}</p>
-            </div>
+              <p class="text-sm text-gray-600 leading-relaxed">{sermon.summary}</p>
+            </article>
           ))}
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section-padding text-center">
+  <section class="section-padding bg-gray-50 text-center">
     <div class="container-max">
-      <h2 class="heading-2 mb-4">Join Our Bible Study</h2>
+      <h2 class="heading-2 mb-4">Join the Next Wednesday</h2>
       <p class="text-body max-w-xl mx-auto mb-6">
-        Our main Bible teaching happens every Wednesday at 7:30pm online. Contact us for the meeting link.
+        Our Bible study runs every Wednesday at 7:30pm online via Google Meet. Open to anyone in Johannesburg, Sandton, or anywhere else you happen to be on a Wednesday night.
       </p>
-      <a href="/contact" class="btn-secondary">Get Bible Study Details</a>
+      <a href="/contact" class="btn-primary">Get the Google Meet Link</a>
     </div>
   </section>
 </BaseLayout>

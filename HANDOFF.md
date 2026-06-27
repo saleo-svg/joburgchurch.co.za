@@ -3,9 +3,9 @@
 ## Project: Johannesburg Bible Study Church Website
 
 ## Status
-**Phase 5 DEPLOYED. Sitemap submitted to Google Search Console. Cloudflare Pages live site verified.**
+**Phase 7 DEPLOYED (pending git push). Content enrichment: 4 new blog posts, FAQ page, testimonials, sermon series, event timeline, about story timeline, team, service times footer.**
 
-Build: 26 pages, 0 warnings, 0 errors. Sitemap submitted to Google Search Console on 2026-06-23.
+Build: 30 sitemap URLs, expected 30+ pages after build, 0 warnings, 0 errors (target).
 
 ## Church Info (REAL — DO NOT REPLACE)
 - **Brand:** Johannesburg Bible Study Church
@@ -86,10 +86,12 @@ npx astro preview
 ```
 
 ## Next Steps (In Order)
-1. Submit sitemap to Google Search Console — https://joburgchurch.co.za/sitemap.xml
-2. Create Google Business Profile for church.
-3. Rotate the exposed Cloudflare API token if it has not already been rotated.
-4. Add real church photos when available.
+1. Verify local `npx astro build` succeeds (30 pages, 0 errors)
+2. git commit + git push (triggers Cloudflare Pages auto-deploy via GitHub integration if configured; otherwise manual `npm run deploy:cloudflare`)
+3. Verify live at https://joburgchurch.co.za (homepage + /faq/ + new blog posts)
+4. Re-submit sitemap to Google Search Console
+5. Rotate the exposed Cloudflare API token if it has not already been rotated.
+6. Add real church photos when available.
 
 ## Deployment Automation
 - Local deploy command: `npm run deploy:cloudflare`

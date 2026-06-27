@@ -1,0 +1,187 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+type FaqItem = { q: string; a: string };
+
+const general: FaqItem[] = [
+  {
+    q: 'Where is the Bible study held in Johannesburg?',
+    a: 'Our main Bible study runs every Wednesday at 7:30pm online via Google Meet, so most people join from home anywhere in Johannesburg, Sandton, Randburg, Midrand, Fourways, or further afield. We also meet in person in Parkmore, Sandton, on the first Saturday of every month at 4:00pm.',
+  },
+  {
+    q: 'Do I need to be a Christian to come to the Bible study?',
+    a: 'No. The Wednesday Bible study is open to anyone curious about the Bible — whether you have been a Christian for years, you are exploring faith for the first time, or you are just here because a friend asked you to come. We have had first-timers sit quietly for the first twenty minutes and then stay for two years.',
+  },
+  {
+    q: 'Is the Bible study really free?',
+    a: 'Yes. The Wednesday Bible study, the Sunday Korean class, and the youth programmes are all free. There is no membership fee, no registration fee, and no collection plate on the way in.',
+  },
+  {
+    q: 'How do I join the Wednesday Bible study?',
+    a: 'Call or WhatsApp Mr. Sim on +27 77 487 1295 or Ms. Dora on +27 67 442 4461, any weekday. We will send you the Google Meet link the morning of the next Wednesday.',
+  },
+];
+
+const korean: FaqItem[] = [
+  {
+    q: 'Is the Korean class really free?',
+    a: 'Yes. The class has been free since it started in 2019. The only thing we ask is that you book in advance, so we know how many seats to set up and we have materials ready for you on the day.',
+  },
+  {
+    q: 'I have never studied Korean before. Can I still come?',
+    a: 'Absolutely. Most of the people in the Sunday class are complete beginners. We start with Hangul (the Korean alphabet) on day one, and most students can read simple words on a Korean menu by the end of the first session.',
+  },
+  {
+    q: 'Do I need to bring a textbook or laptop?',
+    a: 'No textbook to buy and no laptop required. We provide all the materials. Bring a pen if you want to take notes — that is the only thing we ask.',
+  },
+  {
+    q: 'When and where is the Korean class?',
+    a: 'Every Sunday at 2:00pm in Parkmore, Sandton, Johannesburg. The full address is sent when you book. There is parking on site.',
+  },
+  {
+    q: 'Do I need to be a member of the church to come to the Korean class?',
+    a: 'No. The class is a community service open to anyone in Johannesburg. Most people who come are not members of the church, and many are not Christian. The class is a space for language and culture, full stop.',
+  },
+];
+
+const youth: FaqItem[] = [
+  {
+    q: 'What age range is UseCan for?',
+    a: 'UseCan is our youth programme for anyone roughly between 18 and 35. The room tends to include university students, young professionals, and people who are new to Johannesburg and looking for a soft place to land.',
+  },
+  {
+    q: 'When does the UseCan programme run?',
+    a: 'UseCan activities follow a summer and winter schedule. The Wednesday evening Bible study runs all year. The bigger in-person events — the camp, the open days, the community projects — happen in summer and winter blocks.',
+  },
+  {
+    q: 'My teenager is between 13 and 17. Is there something for them?',
+    a: 'Yes. We run a parallel youth track for teenagers, also through UseCan, with its own schedule. Call us and we will send you the upcoming dates.',
+  },
+];
+
+const practical: FaqItem[] = [
+  {
+    q: 'What language is the Bible study in?',
+    a: 'English. Mr. Sim and Ms. Dora are both comfortable slowing down for second-language speakers, and we have had regulars join whose first language is Zulu, Afrikaans, Sotho, French, Korean, Mandarin, and Portuguese.',
+  },
+  {
+    q: 'Is the Bible study open to people who do not live in Sandton?',
+    a: 'Yes. Because it is online, we have regulars from all over Johannesburg (Sandton, Randburg, Roodepoort, Midrand, Soweto, Fourways, Alberton) and from other cities entirely. Several people who moved away still join on a Wednesday night.',
+  },
+  {
+    q: 'Can my friend and I come together?',
+    a: 'Please do. Coming with a friend is the easiest way to start, and most of the people in the room first heard about the Bible study from someone they already knew.',
+  },
+  {
+    q: 'I have a question I do not want to ask in the group. What do I do?',
+    a: 'Call or message Mr. Sim on +27 77 487 1295 any weekday. Most "embarrassing" questions have been asked before, and they are usually the ones that start the best conversation the following week.',
+  },
+];
+
+const allFaqs = [...general, ...korean, ...youth, ...practical];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: allFaqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+---
+<BaseLayout
+  title="FAQ | Bible Study & Korean Class in Sandton, Johannesburg"
+  description="Frequently asked questions about our Bible study, free Korean class, and youth programmes in Sandton, Johannesburg. Times, costs, language, who can come."
+  schema={faqSchema}
+>
+  <section class="section-padding">
+    <div class="container-max">
+      <p class="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-2">
+        Frequently Asked Questions
+      </p>
+      <h1 class="heading-1 mb-6">Honest Answers, Before You Come</h1>
+      <p class="text-body max-w-2xl mb-8">
+        The questions people ask before their first Bible study, first Korean class, or first youth event. If yours is not here, call us — Mr. Sim on +27 77 487 1295 or Ms. Dora on +27 67 442 4461.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding bg-gray-50">
+    <div class="container-max max-w-4xl space-y-12">
+      <div>
+        <h2 class="heading-2 mb-6">About the Bible Study</h2>
+        <div class="space-y-4">
+          {general.map((f) => (
+            <details class="card group">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <h3 class="font-semibold text-gray-900 pr-4">{f.q}</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="text-sm text-gray-600 leading-relaxed mt-4">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 class="heading-2 mb-6">About the Free Korean Class</h2>
+        <div class="space-y-4">
+          {korean.map((f) => (
+            <details class="card group">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <h3 class="font-semibold text-gray-900 pr-4">{f.q}</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="text-sm text-gray-600 leading-relaxed mt-4">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 class="heading-2 mb-6">About UseCan Youth</h2>
+        <div class="space-y-4">
+          {youth.map((f) => (
+            <details class="card group">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <h3 class="font-semibold text-gray-900 pr-4">{f.q}</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="text-sm text-gray-600 leading-relaxed mt-4">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 class="heading-2 mb-6">Practical Questions</h2>
+        <div class="space-y-4">
+          {practical.map((f) => (
+            <details class="card group">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <h3 class="font-semibold text-gray-900 pr-4">{f.q}</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="text-sm text-gray-600 leading-relaxed mt-4">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding text-center">
+    <div class="container-max">
+      <h2 class="heading-2 mb-4">Still Have Questions?</h2>
+      <p class="text-body max-w-xl mx-auto mb-6">
+        Call us on a weekday. We would rather you ask the awkward question now than turn up to a Wednesday evening worrying about it.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+27774871295" class="btn-primary">Call Mr. Sim</a>
+        <a href="tel:+27674424461" class="btn-secondary">Call Ms. Dora</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

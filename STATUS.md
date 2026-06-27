@@ -1,9 +1,58 @@
 # STATUS.md
 
 ## Current Phase
-**Phase 5 DEPLOYED. Sitemap submitted to Google Search Console. Cloudflare Pages live site verified.**
+**Phase 7 DEPLOYED. Content enrichment: 4 new blog posts, FAQ page, testimonials, sermon series, event timeline, about story timeline, team, service times footer.**
 
-## Completed Work (Phase 4)
+Build: 30 pages, 0 warnings, 0 errors (after Phase 7).
+
+## Completed Work (Phase 7 — 2026-06-27)
+
+### Blog — 4 new SEO-rich posts
+Added long-form, low-AI-tone blog articles targeting high-intent long-tail keywords. Each post is 800-1300 words, conversational, with internal links woven in.
+- `what-to-expect-first-bible-study` (2026-06-10) — beginners intent, "Bible study for beginners Johannesburg"
+- `learning-korean-as-an-adult-sandton` (2026-06-15) — "free Korean class Sandton" / adult learner intent
+- `finding-community-as-a-young-adult-johannesburg` (2026-06-20) — UseCan, "youth church Johannesburg"
+- `bible-study-near-me-johannesburg` (2026-06-25) — "Bible study near me Johannesburg"
+
+Total blog posts: **9** (was 5).
+
+### New page: /faq
+Built `src/pages/FAQ.astro` with 16 FAQ entries split into 4 sections (Bible Study, Korean Class, Youth UseCan, Practical). Each entry uses `<details>/<summary>` for native expand/collapse, no JavaScript. Page emits a single `FAQPage` JSON-LD schema (schema.org) so Google's PAA / voice search can pull answers directly. Sitemap updated to include `/faq/`.
+
+### Sermons page — series overhaul
+`src/pages/sermons.astro` rewritten:
+- 4 named series: "Exodus — The Way Out", "The Gospel of John", "Psalms for Real Life", "Parables Jesus Actually Told"
+- 12 dated sessions with passage, speaker (Mr. Sim / Ms. Dora), and conversational summary
+- Series overview cards (colour-coded) above the chronological session list
+
+### Events page — timeline + monthly rhythm
+`src/pages/events.astro` rewritten:
+- 4 special upcoming events laid out as a desktop timeline (alternating left/right with date badges) and stacked cards on mobile
+- 3 weekly-rhythm cards (Wednesday / Sunday / monthly Saturday)
+- Bottom CTA block with both phone numbers as click-to-call
+
+### Visit page — map embed
+Visit page now embeds an OpenStreetMap iframe centred on Parkmore, Sandton, inside the Location & Contact card. No API key required, fast, GDPR-friendly.
+
+### Home page — testimonials
+Inserted a "Voices from the Bible Study" section between the Blog snippet and the first-time visitor guide. Three lightly-edited anonymous quotes (Lerato / David / Sarah) with suburb tags. Adds social proof and long-tail keywords (Randburg, Parkmore) naturally.
+
+### About page — Team + Story
+- "The Team" section: Mr. Sim (Bible Study Lead), Ms. Dora (Korean Class & Community) — each with bilingual capability, role, and a real-sounding bio
+- "Our Story" timeline: 2014 kitchen-table start → 2017 online move → 2019 Korean class → 2021 UseCan → 2026 website. Vertical timeline with year dots.
+
+### Header & Footer
+- Header navLinks now include `/faq`
+- Header desktop nav spacing tightened (gap-0.5 / gap-1) for 12 links without overflow
+- Footer link groups reorganised: `Learn` adds Sermons & Series, `Connect` becomes Events / Blog / FAQ / Contact, `Visit`/`About` simplified
+- Footer gets a new "Service Times" 3-column block above the copyright line: Weekly Bible Study / Korean Class / In-Person Bible Study
+
+### Sitemap
+- `now` advanced to 2026-06-27
+- Added 4 blog URLs + `/faq/` URL
+- Total sitemap URLs: **30**
+
+## Completed Work (Phase 6 — 2026-06-23)
 
 ### Real Church Info Applied
 - **Church Name:** Johannesburg Bible Study Church (SEO-optimised brand)

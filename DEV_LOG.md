@@ -1,5 +1,64 @@
 # DEV_LOG.md
 
+## 2026-06-27 — Phase 7: Content Enrichment + FAQ + Sermon Series + Story Timeline
+
+### What Changed
+
+**Blog (4 new posts, total 9):**
+- `what-to-expect-first-bible-study` — beginner tone, "ten minutes before we start", what to wear, "what if I am too embarrassed to ask"
+- `learning-korean-as-an-adult-sandton` — six honest reasons, no textbook to buy, free since 2019
+- `finding-community-as-a-young-adult-johannesburg` — UseCan as soft landing, Wits/UJ, moving-from-Cape-Town story
+- `bible-study-near-me-johannesburg` — why online works in Joburg traffic, "before you drive across town on a Wednesday night"
+
+Each post 800-1300 words, conversational, low-AI-tone, internal links woven in naturally, dates spread 06-10 / 06-15 / 06-20 / 06-25.
+
+**New page: FAQ**
+- 16 entries across 4 categories
+- Native `<details>` for expand/collapse, no JS
+- Single `FAQPage` JSON-LD schema emitted for Google PAA / voice search
+
+**Sermons — series overhaul**
+- 4 series: Exodus / John / Psalms / Parables
+- 12 dated sessions with passage + speaker + summary
+
+**Events — timeline + weekly rhythm**
+- 4 upcoming special events as alternating timeline
+- 3 weekly-rhythm cards (Wed / Sun / monthly Sat)
+- Click-to-call dual-phone CTA at bottom
+
+**Visit — map**
+- OpenStreetMap iframe, no API key, centred on Parkmore
+
+**Home — testimonials**
+- 3 anonymous quotes from Lerato / David / Sarah with suburbs
+
+**About — Team + Story**
+- Mr. Sim + Ms. Dora bios with bilingual tags
+- 2014 → 2026 vertical story timeline (5 milestones)
+
+**Header / Footer**
+- Header navLinks += /faq, spacing tightened for 12 links
+- Footer Service Times 3-column block above copyright
+
+**Sitemap**
+- now=2026-06-27
+- +5 URLs (4 posts + /faq)
+- Total URLs: 30
+
+### Security Note
+
+- `对话记录.txt` and `开发记录.txt` contain sensitive Cloudflare token/account details from earlier deployment work. Do not commit or share those files publicly. Rotate the exposed token if it has not already been rotated.
+
+### Next
+
+- git commit + push (triggers Cloudflare Pages auto-deploy via GitHub integration)
+- Verify live at https://joburgchurch.co.za
+- Re-submit sitemap to Google Search Console
+
+### Deployment Log (2026-06-27)
+
+- Local build pending — verify 0 errors before push
+
 ## 2026-06-23 — Phase 6: Google Search Console Setup
 
 ### What Changed
