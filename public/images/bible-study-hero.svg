@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img">
+  <title>Bible Study Community Gathering</title>
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <filter id="glow1"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#g1)"/>
+  <!-- Stars -->
+  <g fill="#ffffff" opacity="0.15"><circle cx="50" cy="40" r="1.5"/><circle cx="150" cy="20" r="1"/><circle cx="280" cy="60" r="1.5"/><circle cx="400" cy="30" r="1"/><circle cx="520" cy="50" r="1.5"/><circle cx="100" cy="80" r="1"/><circle cx="350" cy="90" r="1.5"/><circle cx="480" cy="20" r="1"/><circle cx="200" cy="50" r="1"/></g>
+  <!-- People silhouettes -->
+  <g fill="#ffffff" opacity="0.2" transform="translate(0, -10)">
+    <ellipse cx="100" cy="300" rx="22" ry="22"/><path d="M78,322 Q100,310 122,322 L118,380 Q100,388 82,380 Z"/>
+    <ellipse cx="170" cy="290" rx="22" ry="22"/><path d="M148,312 Q170,300 192,312 L188,380 Q170,388 152,380 Z"/>
+    <ellipse cx="240" cy="300" rx="22" ry="22"/><path d="M218,322 Q240,310 262,322 L258,380 Q240,388 222,380 Z"/>
+    <ellipse cx="310" cy="290" rx="22" ry="22"/><path d="M288,312 Q310,300 332,312 L328,380 Q310,388 292,380 Z"/>
+    <ellipse cx="380" cy="300" rx="22" ry="22"/><path d="M358,322 Q380,310 402,322 L398,380 Q380,388 362,380 Z"/>
+    <ellipse cx="450" cy="290" rx="22" ry="22"/><path d="M428,312 Q450,300 472,312 L468,380 Q450,388 432,380 Z"/>
+    <ellipse cx="520" cy="295" rx="22" ry="22"/><path d="M498,317 Q520,305 542,317 L538,380 Q520,388 502,380 Z"/>
+  </g>
+  <!-- Bible / book -->
+  <g transform="translate(240, 120)" filter="url(#glow1)">
+    <rect x="0" y="0" width="120" height="160" rx="10" fill="#1d4ed8" opacity="0.6"/>
+    <rect x="8" y="8" width="104" height="144" rx="6" fill="#1e40af" opacity="0.5"/>
+    <line x1="60" y1="50" x2="60" y2="105" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    <line x1="40" y1="68" x2="80" y2="68" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    <line x1="20" y1="125" x2="100" y2="125" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    <line x1="20" y1="138" x2="80" y2="138" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  </g>
+  <!-- Light beam -->
+  <polygon points="300,0 200,400 400,400" fill="#60a5fa" opacity="0.04"/>
+</svg>

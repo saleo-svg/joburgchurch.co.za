@@ -19,6 +19,7 @@ const footerLinks = {
   ],
   'Connect': [
     { href: '/events', label: 'Events & Calendar' },
+    { href: '/gallery', label: 'Photo Gallery' },
     { href: '/blog', label: 'Blog & Articles' },
     { href: '/faq', label: 'FAQ' },
     { href: '/contact', label: 'Contact Us' },
@@ -36,7 +37,17 @@ const footerLinks = {
 ---
 
 <footer class="border-t border-gray-200 bg-gray-50">
-  <div class="container-max section-padding">
+  <!-- Decorative skyline banner -->
+  <div class="w-full overflow-hidden" style="height: 80px;">
+    <img
+      src="/images/footer-skyline.svg"
+      alt=""
+      aria-hidden="true"
+      class="w-full h-full object-cover"
+      loading="lazy"
+    />
+  </div>
+  <div class="container-max section-padding pt-8">
     <div class="grid grid-cols-2 gap-6 lg:grid-cols-6">
       <!-- Brand -->
       <div class="col-span-2 lg:col-span-1">

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img">
+  <title>Youth Community in Johannesburg  UseCan Programme</title>
+  <defs>
+    <linearGradient id="yg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="yg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#064e3b" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#yg1)"/>
+  <rect width="600" height="400" fill="url(#yg2)"/>
+  <!-- City skyline silhouette -->
+  <g fill="#ffffff" opacity="0.1">
+    <rect x="20" y="280" width="40" height="120"/>
+    <rect x="70" y="250" width="35" height="150"/>
+    <rect x="115" y="220" width="50" height="180"/>
+    <rect x="175" y="260" width="30" height="140"/>
+    <rect x="215" y="190" width="60" height="210"/>
+    <rect x="285" y="230" width="45" height="170"/>
+    <rect x="340" y="200" width="55" height="200"/>
+    <rect x="405" y="250" width="40" height="150"/>
+    <rect x="455" y="180" width="65" height="220"/>
+    <rect x="530" y="240" width="50" height="160"/>
+    <!-- Windows -->
+    <rect x="220" y="205" width="6" height="6" fill="#fbbf24" opacity="0.4"/>
+    <rect x="232" y="205" width="6" height="6" fill="#fbbf24" opacity="0.3"/>
+    <rect x="244" y="205" width="6" height="6" fill="#fbbf24" opacity="0.5"/>
+    <rect x="220" y="220" width="6" height="6" fill="#fbbf24" opacity="0.3"/>
+    <rect x="232" y="220" width="6" height="6" fill="#fbbf24" opacity="0.4"/>
+    <rect x="244" y="220" width="6" height="6" fill="#fbbf24" opacity="0.3"/>
+    <rect x="465" y="195" width="6" height="6" fill="#fbbf24" opacity="0.4"/>
+    <rect x="477" y="195" width="6" height="6" fill="#fbbf24" opacity="0.3"/>
+    <rect x="489" y="195" width="6" height="6" fill="#fbbf24" opacity="0.5"/>
+  </g>
+  <!-- Young people silhouettes (rooftop) -->
+  <g fill="#ffffff" opacity="0.25">
+    <ellipse cx="130" cy="300" rx="18" ry="18"/><path d="M112,318 Q130,308 148,318 L145,360 Q130,366 115,360 Z"/>
+    <ellipse cx="200" cy="295" rx="18" ry="18"/><path d="M182,313 Q200,303 218,313 L215,360 Q200,366 185,360 Z"/>
+    <ellipse cx="270" cy="302" rx="18" ry="18"/><path d="M252,320 Q270,310 288,320 L285,360 Q270,366 255,360 Z"/>
+    <ellipse cx="340" cy="295" rx="18" ry="18"/><path d="M322,313 Q340,303 358,313 L355,360 Q340,366 325,360 Z"/>
+    <ellipse cx="410" cy="300" rx="18" ry="18"/><path d="M392,318 Q410,308 428,318 L425,360 Q410,366 395,360 Z"/>
+    <ellipse cx="475" cy="298" rx="18" ry="18"/><path d="M457,316 Q475,306 493,316 L490,360 Q475,366 460,360 Z"/>
+  </g>
+  <!-- Stars / evening sky -->
+  <g fill="#fbbf24" opacity="0.3"><circle cx="100" cy="50" r="2"/><circle cx="200" cy="30" r="1.5"/><circle cx="350" cy="60" r="2"/><circle cx="500" cy="40" r="1.5"/><circle cx="580" cy="70" r="2"/></g>
+  <!-- Moon -->
+  <circle cx="520" cy="80" r="25" fill="#fef3c7" opacity="0.2"/>
+  <circle cx="530" cy="75" r="25" fill="url(#yg1)" opacity="0.3"/>
+  <!-- UseCan text -->
+  <text x="300" y="130" font-family="sans-serif" font-size="42" font-weight="900" fill="#ffffff" opacity="0.12" text-anchor="middle">UseCan</text>
+  <!-- Light poles -->
+  <g stroke="#fbbf24" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.3">
+    <line x1="160" y1="310" x2="160" y2="360"/>
+    <circle cx="160" cy="308" r="6" fill="#fef3c7" opacity="0.5"/>
+    <line x1="400" y1="310" x2="400" y2="360"/>
+    <circle cx="400" cy="308" r="6" fill="#fef3c7" opacity="0.5"/>
+  </g>
+</svg>

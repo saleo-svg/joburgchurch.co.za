@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img">
+  <title>Bible Study  The Word Together</title>
+  <defs>
+    <linearGradient id="g-a2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g-a2)"/>
+  <!-- Open Bible -->
+  <g transform="translate(400, 300)" filter="url(#glow)">
+    <!-- Left page -->
+    <path d="M-100,0 Q-80,-60 0,-60 Q80,-60 100,0 L100,120 Q80,60 0,60 Q-80,60 -100,120 Z" fill="#f8fafc" opacity="0.9"/>
+    <!-- Right page -->
+    <path d="M100,0 Q120,-60 0,-60 Q-80,-60 -100,0 L-100,120 Q-80,60 0,60 Q80,60 100,120 Z" fill="#f1f5f9" opacity="0.85"/>
+    <!-- Spine -->
+    <rect x="-4" y="-60" width="8" height="180" rx="4" fill="#cbd5e1"/>
+    <!-- Text lines left -->
+    <g stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" opacity="0.5">
+      <line x1="-80" y1="-30" x2="-15" y2="-30"/>
+      <line x1="-80" y1="-15" x2="-10" y2="-15"/>
+      <line x1="-80" y1="0" x2="-20" y2="0"/>
+      <line x1="-80" y1="15" x2="-8" y2="15"/>
+      <line x1="-80" y1="30" x2="-25" y2="30"/>
+      <line x1="-80" y1="45" x2="-12" y2="45"/>
+      <line x1="-80" y1="60" x2="-18" y2="60"/>
+      <line x1="-80" y1="75" x2="-30" y2="75"/>
+      <line x1="-80" y1="90" x2="-14" y2="90"/>
+    </g>
+    <!-- Text lines right -->
+    <g stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" opacity="0.5">
+      <line x1="15" y1="-30" x2="80" y2="-30"/>
+      <line x1="10" y1="-15" x2="80" y2="-15"/>
+      <line x1="20" y1="0" x2="80" y2="0"/>
+      <line x1="8" y1="15" x2="80" y2="15"/>
+      <line x1="25" y1="30" x2="80" y2="30"/>
+      <line x1="12" y1="45" x2="80" y2="45"/>
+      <line x1="18" y1="60" x2="80" y2="60"/>
+      <line x1="30" y1="75" x2="80" y2="75"/>
+      <line x1="14" y1="90" x2="80" y2="90"/>
+    </g>
+  </g>
+  <!-- Floating cross -->
+  <g transform="translate(400, 120)" stroke="#fbbf24" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.4">
+    <line x1="0" y1="0" x2="0" y2="50"/>
+    <line x1="-18" y1="15" x2="18" y2="15"/>
+  </g>
+  <!-- Light glow behind book -->
+  <ellipse cx="400" cy="300" rx="180" ry="140" fill="#818cf8" opacity="0.08"/>
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="60" fill="none" stroke="#a5b4fc" stroke-width="1" stroke-opacity="0.1"/>
+  <circle cx="700" cy="500" r="80" fill="none" stroke="#a5b4fc" stroke-width="1" stroke-opacity="0.08"/>
+  <!-- Stars -->
+  <g fill="#ffffff" opacity="0.15"><circle cx="50" cy="50" r="2"/><circle cx="750" cy="60" r="1.5"/><circle cx="700" cy="100" r="2"/></g>
+  <rect x="20" y="20" width="760" height="560" rx="20" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2"/>
+  <text x="400" y="560" font-family="sans-serif" font-size="14" fill="#ffffff" opacity="0.25" text-anchor="middle">The Word Together · Wednesday Bible Study</text>
+</svg>

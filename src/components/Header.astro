@@ -9,6 +9,7 @@ const navLinks = [
   { href: '/youth-usecan', label: 'Youth' },
   { href: '/sermons', label: 'Sermons' },
   { href: '/events', label: 'Events' },
+  { href: '/gallery', label: 'Gallery' },
   { href: '/blog', label: 'Blog' },
   { href: '/faq', label: 'FAQ' },
   { href: '/contact', label: 'Contact' },
@@ -30,13 +31,13 @@ const currentPath = Astro.url.pathname;
       </a>
 
       <!-- Desktop Navigation -->
-      <ul class="hidden lg:flex items-center gap-0.5 xl:gap-1">
+      <ul class="hidden lg:flex items-center gap-0 xl:gap-0.5">
         {navLinks.map((link) => (
           <li>
             <a
               href={link.href}
               class:list={[
-                'px-2.5 xl:px-3 py-2 text-sm font-medium rounded-lg transition-colors whitespace-nowrap',
+                'px-2 xl:px-2.5 py-2 text-sm font-medium rounded-lg transition-colors whitespace-nowrap',
                 currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
                   ? 'bg-blue-50 text-blue-700'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100',

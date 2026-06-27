@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMax slice" role="img">
+  <title>Johannesburg Bible Study Church  Sandton</title>
+  <!-- Sky gradient -->
+  <rect width="1200" height="300" fill="#0f172a"/>
+  <rect width="1200" height="100" fill="#1e3a5f" opacity="0.5"/>
+  <!-- Stars -->
+  <g fill="#ffffff" opacity="0.3"><circle cx="100" cy="40" r="1.5"/><circle cx="300" cy="60" r="1"/><circle cx="500" cy="30" r="1.5"/><circle cx="700" cy="50" r="1"/><circle cx="900" cy="35" r="1.5"/><circle cx="1100" cy="55" r="1"/></g>
+  <g fill="#fbbf24" opacity="0.4"><circle cx="200" cy="80" r="2"/><circle cx="600" cy="70" r="1.5"/><circle cx="1000" cy="85" r="2"/></g>
+  <!-- City skyline -->
+  <g fill="#1e293b" opacity="0.8">
+    <rect x="0" y="220" width="60" height="80"/>
+    <rect x="70" y="200" width="50" height="100"/>
+    <rect x="130" y="180" width="70" height="120"/>
+    <rect x="210" y="210" width="45" height="90"/>
+    <rect x="265" y="160" width="80" height="140"/>
+    <rect x="355" y="190" width="60" height="110"/>
+    <rect x="425" y="170" width="90" height="130"/>
+    <rect x="525" y="200" width="55" height="100"/>
+    <rect x="590" y="150" width="100" height="150"/>
+    <rect x="700" y="180" width="70" height="120"/>
+    <rect x="780" y="200" width="60" height="100"/>
+    <rect x="850" y="170" width="85" height="130"/>
+    <rect x="945" y="195" width="55" height="105"/>
+    <rect x="1010" y="160" width="95" height="140"/>
+    <rect x="1115" y="200" width="85" height="100"/>
+  </g>
+  <!-- Church silhouette in foreground -->
+  <g fill="#0f172a" transform="translate(380, 180)">
+    <!-- Main building -->
+    <rect x="0" y="40" width="300" height="80"/>
+    <!-- Roof -->
+    <polygon points="0,40 150,0 300,40"/>
+    <!-- Steeple -->
+    <rect x="130" y="-40" width="40" height="80"/>
+    <polygon points="130,-40 150,-90 170,-40"/>
+    <!-- Steeple cross -->
+    <line x1="150" y1="-90" x2="150" y2="-110" stroke="#0f172a" stroke-width="4"/>
+    <line x1="140" y1="-100" x2="160" y2="-100" stroke="#0f172a" stroke-width="4"/>
+    <!-- Windows -->
+    <rect x="40" y="60" width="20" height="30" rx="10" fill="#fbbf24" opacity="0.3"/>
+    <rect x="240" y="60" width="20" height="30" rx="10" fill="#fbbf24" opacity="0.3"/>
+    <!-- Door -->
+    <rect x="130" y="80" width="40" height="40" rx="20" fill="#1e3a5f" opacity="0.5"/>
+    <!-- Side wings -->
+    <rect x="-60" y="60" width="60" height="60"/>
+    <polygon points="-60,60 -30,40 0,60"/>
+    <rect x="300" y="60" width="60" height="60"/>
+    <polygon points="300,60 330,40 360,60"/>
+  </g>
+  <!-- Ground -->
+  <rect x="0" y="270" width="1200" height="30" fill="#0f172a"/>
+  <!-- Cross glow -->
+  <circle cx="530" cy="90" r="30" fill="#fbbf24" opacity="0.05"/>
+</svg>

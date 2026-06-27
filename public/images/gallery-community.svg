@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img">
+  <title>Community Fellowship  Johannesburg Bible Study Church</title>
+  <defs>
+    <linearGradient id="g-a1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#2d6a8f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g-a1)"/>
+  <!-- Warm light rays -->
+  <polygon points="400,0 200,600 600,600" fill="#f59e0b" opacity="0.06"/>
+  <polygon points="400,0 300,600 500,600" fill="#f59e0b" opacity="0.04"/>
+  <!-- Community gathering -->
+  <g fill="#ffffff" opacity="0.18">
+    <ellipse cx="200" cy="380" rx="28" ry="28"/><path d="M172,408 Q200,395 228,408 L224,490 Q200,500 176,490 Z"/>
+    <ellipse cx="280" cy="365" rx="28" ry="28"/><path d="M252,393 Q280,380 308,393 L304,490 Q280,500 256,490 Z"/>
+    <ellipse cx="360" cy="375" rx="28" ry="28"/><path d="M332,403 Q360,390 388,403 L384,490 Q360,500 336,490 Z"/>
+    <ellipse cx="440" cy="365" rx="28" ry="28"/><path d="M412,393 Q440,380 468,393 L464,490 Q440,500 416,490 Z"/>
+    <ellipse cx="520" cy="380" rx="28" ry="28"/><path d="M492,408 Q520,395 548,408 L544,490 Q520,500 496,490 Z"/>
+    <ellipse cx="600" cy="370" rx="28" ry="28"/><path d="M572,398 Q600,385 628,398 L624,490 Q600,500 576,490 Z"/>
+  </g>
+  <!-- Central cross -->
+  <g transform="translate(400, 240)" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.6" filter="url(#shadow)">
+    <line x1="0" y1="0" x2="0" y2="80"/>
+    <line x1="-30" y1="25" x2="30" y2="25"/>
+  </g>
+  <!-- Cross glow -->
+  <circle cx="400" cy="280" r="60" fill="#fbbf24" opacity="0.05"/>
+  <!-- Stars -->
+  <g fill="#ffffff" opacity="0.15"><circle cx="100" cy="80" r="2"/><circle cx="250" cy="50" r="1.5"/><circle cx="550" cy="60" r="2"/><circle cx="700" cy="90" r="1.5"/><circle cx="680" cy="200" r="2"/></g>
+  <!-- Frame border -->
+  <rect x="20" y="20" width="760" height="560" rx="20" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2"/>
+  <text x="400" y="560" font-family="sans-serif" font-size="14" fill="#ffffff" opacity="0.25" text-anchor="middle">Community Fellowship · Johannesburg Bible Study Church</text>
+</svg>

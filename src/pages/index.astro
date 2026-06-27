@@ -26,8 +26,17 @@ const schema = getChurchSchema({
   schema={schema}
 >
   <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-blue-700 to-blue-900 text-white">
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-700/90 to-blue-900/90"></div>
+  <section class="relative overflow-hidden text-white" style="background: linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 50%, #7c3aed 100%);">
+    <!-- SVG background -->
+    <div class="absolute inset-0 pointer-events-none select-none" aria-hidden="true">
+      <img
+        src="/images/og-default.svg"
+        alt=""
+        class="w-full h-full object-cover opacity-20"
+        loading="eager"
+      />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-700/70 to-blue-900/70"></div>
     <div class="container-max section-padding relative">
       <div class="max-w-3xl">
         <p class="text-blue-200 font-medium uppercase tracking-widest text-sm mb-4">

@@ -14,6 +14,7 @@ export const GET: APIRoute = () => {
     { url: '/youth-usecan/', priority: '0.8', changefreq: 'monthly' },
     { url: '/sermons/', priority: '0.7', changefreq: 'weekly' },
     { url: '/events/', priority: '0.7', changefreq: 'weekly' },
+    { url: '/gallery/', priority: '0.6', changefreq: 'monthly' },
     { url: '/blog/', priority: '0.8', changefreq: 'weekly' },
     { url: '/faq/', priority: '0.7', changefreq: 'monthly' },
     { url: '/contact/', priority: '0.8', changefreq: 'monthly' },
