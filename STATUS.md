@@ -1,9 +1,42 @@
 # STATUS.md
 
 ## Current Phase
-**Phase 7b DEPLOYED. SVG image assets (9 files), Gallery page, hero backgrounds, footer skyline.**
+**Phase 8b DEPLOYED. SEO blitz + Sveltia CMS + Content Collections + Videos page + 3 long-tail SEO pages.**
 
-Build: 32 pages, 0 warnings, 0 errors (after Phase 7b).
+Build: 36 pages, 0 warnings, 0 errors (after Phase 8b). Live at joburgchurch.co.za.
+
+## Phase 8b (2026-07-03) — SEO + CMS Blitz
+
+### SEO Infrastructure
+- BaseLayout upgraded with global LocalBusiness schema (NAP, geo, hours, areaServed, knowsAbout)
+- BreadcrumbList schema dynamically generated per page
+- Geo meta tags (geo.region, geo.placename, geo.position, ICBM) for local SEO
+- hreflang en-za + x-default
+- og:image enhanced (width/height/alt)
+- robots.txt upgraded: allow Googlebot/Bingbot, block GPT/Claude/CCBot, /admin/ protected
+
+### New Pages (SEO long-tail targets)
+- `/videos` — Video gallery with YouTube embeds (VideoGallery schema)
+- `/free-bible-study-sandton` — Event schema, 4500+ words
+- `/online-bible-study-johannesburg` — FAQPage schema, 3800+ words
+- `/korean-language-class-for-beginners-johannesburg` — Course schema, 5200+ words
+
+### Sveltia CMS (Volunteer Login)
+- `public/admin/index.html` + `public/admin/config.yml`
+- 6 Content Collections: Blog, Sermons, Events, Gallery, Videos, Settings
+- `CMS_SETUP_GUIDE.md` — 6-step deployment guide
+- `SEO_BACKLINK_CHECKLIST.md` — Complete backlink strategy
+
+### Deploy
+- 2 wrangler deploys (d2bc5b77, d6fbf793)
+- Live verified: /admin/, /videos/, /sitemap.xml, all 3 long-tail pages
+- git commits fd9a081, b97d848 pushed to origin/master
+
+### Next Manual Steps for Owner (5-30 min each)
+1. Google Search Console: submit sitemap (5 min) — leo123asante@gmail.com
+2. Google Business Profile: create + verify (10 min + 14 day postcard wait)
+3. Sveltia CMS: GitHub OAuth App + Worker deploy (30 min) — follow CMS_SETUP_GUIDE.md
+4. Submit to 5 SA directories (15 min) — follow SEO_BACKLINK_CHECKLIST.md
 
 ## Completed Work (Phase 7 — 2026-06-27)
 

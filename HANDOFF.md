@@ -3,9 +3,9 @@
 ## Project: Johannesburg Bible Study Church Website
 
 ## Status
-**Phase 7b DEPLOYED. SVG image assets (9 files), Gallery page, hero backgrounds, footer skyline, BaseLayout og.svg update.**
+**Phase 8b DEPLOYED. SEO blitz + Sveltia CMS + Content Collections + Videos + 3 long-tail SEO pages.**
 
-Build: 32 pages, 0 errors. Live at joburgchurch.co.za. Preview: e04c84e7.joburgchurch.pages.dev
+Build: 36 pages, 0 errors. Live at joburgchurch.co.za. Preview: d6fbf793.joburgchurch.pages.dev.
 
 ## Church Info (REAL — DO NOT REPLACE)
 - **Brand:** Johannesburg Bible Study Church
@@ -86,14 +86,18 @@ npx astro preview
 ```
 
 ## Next Steps (In Order)
-1. ~~Build and deploy (Phase 7b completed)~~
-2. Verify live site at https://joburgchurch.co.za (all pages 200 OK)
-3. Re-submit sitemap to Google Search Console (if not done yet)
-   - Login: leo123asante@gmail.com
-   - URL: https://search.google.com/search-console/sitemaps?resource_id=sc-domain:joburgchurch.co.za
-4. Volunteer CMS (Sveltia CMS) implementation — see DEV_LOG.md for full steps
-5. Replace SVG placeholder images with real church photos when available
-6. Rotate the exposed Cloudflare API token if not yet rotated.
+1. ~~Build and deploy (Phase 8b completed)~~
+2. **Owner manual: Google Search Console** — submit sitemap (5 min)
+   - https://search.google.com/search-console
+   - Login leo123asante@gmail.com → add property → verify → submit sitemap
+3. **Owner manual: Google Business Profile** — create + verify (10 min + 14 day postcard)
+   - https://business.google.com
+4. **Owner manual: Sveltia CMS OAuth** — follow CMS_SETUP_GUIDE.md (30 min)
+   - GitHub OAuth App → Worker deploy → update config.yml → invite collaborators
+5. **Owner manual: SA directory submissions** — follow SEO_BACKLINK_CHECKLIST.md
+   - Submit to 5-10 directories (15 min total)
+6. Replace SVG placeholder images with real church photos when available
+7. Rotate the exposed Cloudflare API token if not yet rotated.
 
 ## Deployment Automation
 - Local deploy command: `npm run deploy:cloudflare`
