@@ -4,7 +4,7 @@ date: 2026-06-24
 series: "Exodus — The Way Out"
 speaker: "Mr. Sim"
 passage: "Exodus 14"
-youtube_id: "dQw4w9WgXcQ"
+youtube_id: ""
 duration: "24:18"
 description: "Mr. Sim walks through Exodus 14 — the moment the Israelites stand between the sea and the Egyptian army. What does it look like to hold onto hope when there is nowhere left to go?"
 ---

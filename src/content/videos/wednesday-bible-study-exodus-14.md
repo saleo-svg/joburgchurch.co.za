@@ -1,7 +1,7 @@
 ---
 title: "Wednesday Bible Study"
 date: 2026-06-24
-youtube_id: "dQw4w9WgXcQ"
+youtube_id: ""
 category: "Bible Study"
 speaker: "Mr. Sim"
 passage: "Exodus 14"

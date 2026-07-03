@@ -55,24 +55,27 @@ const schema = getChurchSchema({
               Free Korean Class
             </a>
             <a href="/videos" class="inline-flex items-center justify-center gap-2 rounded-lg border border-amber-300/60 bg-amber-400/10 px-6 py-3 text-sm font-semibold text-amber-50 backdrop-blur-sm transition-colors hover:bg-amber-400/20">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-              Watch Bible Study
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16v16H4z" opacity=".0"/><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-7l-3 3.72L9 13l-4 5h14l-5-6z"/></svg>
+              See Recent Studies
             </a>
           </div>
         </div>
-        <!-- Featured video preview -->
+        <!-- This Wednesday's Passage — replaces rickroll video -->
         <div class="hidden lg:block">
-          <div class="aspect-video rounded-2xl overflow-hidden bg-black/30 shadow-2xl ring-1 ring-white/20">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
-              title="Latest Bible Study"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              loading="lazy"
-              class="w-full h-full"
-            ></iframe>
+          <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/20 bg-gradient-to-br from-amber-300 via-amber-400 to-amber-600 p-8 flex flex-col justify-center text-amber-950">
+            <p class="text-xs font-semibold uppercase tracking-widest text-amber-900/80 mb-3">This Wednesday</p>
+            <p class="text-2xl font-bold mb-2 leading-tight">Exodus 14</p>
+            <p class="text-lg font-medium mb-5 opacity-90">The Sea That Parts</p>
+            <blockquote class="text-base font-serif italic leading-relaxed border-l-4 border-amber-900/40 pl-4 mb-5">
+              &ldquo;The LORD will fight for you; you need only to be still.&rdquo;
+            </blockquote>
+            <p class="text-sm opacity-80 mb-4">— Exodus 14:14</p>
+            <a href="/visit/" class="inline-flex items-center gap-2 self-start rounded-lg bg-amber-950/90 px-4 py-2 text-sm font-semibold text-amber-50 transition-colors hover:bg-amber-950">
+              Join us Wednesday 7:30pm
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </a>
           </div>
-          <p class="text-xs text-blue-200 mt-2 text-center">Latest: Exodus 14 — The Sea That Parts (Mr. Sim)</p>
+          <p class="text-xs text-blue-200 mt-2 text-center">Lead: Mr. Sim &middot; Wednesday online Bible study</p>
         </div>
       </div>
     </div>
