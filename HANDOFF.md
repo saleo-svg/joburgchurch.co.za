@@ -3,9 +3,9 @@
 ## Project: Johannesburg Bible Study Church Website
 
 ## Status
-**Phase 8b DEPLOYED. SEO blitz + Sveltia CMS + Content Collections + Videos + 3 long-tail SEO pages.**
+**Phase 9 DEPLOYED. SEO blitz 2 — 6 long-tail SEO landing pages + KEYWORD_MATRIX.md.**
 
-Build: 36 pages, 0 errors. Live at joburgchurch.co.za. Preview: d6fbf793.joburgchurch.pages.dev.
+Build: 42 pages, 0 errors. Live at joburgchurch.co.za. Preview: e6a9502c.joburgchurch.pages.dev.
 
 ## Church Info (REAL — DO NOT REPLACE)
 - **Brand:** Johannesburg Bible Study Church

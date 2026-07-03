@@ -1,9 +1,31 @@
 # STATUS.md
 
 ## Current Phase
-**Phase 8b DEPLOYED. SEO blitz + Sveltia CMS + Content Collections + Videos page + 3 long-tail SEO pages.**
+**Phase 9 DEPLOYED. SEO blitz 2 — 6 new long-tail SEO landing pages targeting real search intent. Total 42 pages, 0 errors. Live at joburgchurch.co.za.**
 
-Build: 36 pages, 0 warnings, 0 errors (after Phase 8b). Live at joburgchurch.co.za.
+## Phase 9 (2026-07-03) — Long-tail SEO Blitz
+
+### 6 New SEO Landing Pages
+| Page | Primary Keyword | Word Count | Schema |
+|------|----------------|------------|--------|
+| /what-to-wear-to-church-johannesburg/ | what to wear to church johannesburg | 4200 | HowTo + FAQPage |
+| /first-time-church-visitor-johannesburg/ | first time church visitor johannesburg | 4900 | HowTo |
+| /church-service-times-sandton/ | church service times sandton | 4500 | FAQPage |
+| /free-korean-class-johannesburg/ | free korean class johannesburg | 5400 | Course |
+| /youth-bible-study-johannesburg/ | youth bible study johannesburg | 4900 | Event |
+| /churches-in-sandton/ | churches in sandton | 5300 | ItemList |
+
+### KEYWORD_MATRIX.md (new public doc)
+Tier 1/2/3 keyword classification by traffic + competition. 30+ keywords fully evaluated. 90-day action plan.
+
+### BaseLayout description upgrade
+Added more dense core keywords (Parkmore, Wednesday 7:30pm, Sunday 2:00pm, UseCan, Youth ministry).
+
+### Deploy
+- wrangler deploy → e6a9502c.joburgchurch.pages.dev
+- Live verified all 6 new pages 200 OK
+- 42 sitemap URLs, lastmod 2026-07-03
+- git commit 7043c14 pushed to origin/master
 
 ## Phase 8b (2026-07-03) — SEO + CMS Blitz
 
