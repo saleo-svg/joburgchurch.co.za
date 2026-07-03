@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Content Manager — Johannesburg Bible Study Church</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: linear-gradient(135deg, #1e3a5f 0%, #7c3aed 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #1f2937;
+      }
+      .container {
+        background: white;
+        border-radius: 16px;
+        padding: 3rem 2rem;
+        max-width: 480px;
+        text-align: center;
+        box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+        margin: 1rem;
+      }
+      h1 {
+        color: #1e3a5f;
+        font-size: 1.5rem;
+        margin: 0 0 1rem;
+      }
+      p {
+        color: #6b7280;
+        line-height: 1.6;
+        margin: 0 0 1.5rem;
+        font-size: 0.95rem;
+      }
+      .cms-mount {
+        margin-top: 2rem;
+      }
+      .cross {
+        color: #fbbf24;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      .loading {
+        color: #6b7280;
+        font-size: 0.875rem;
+        margin-top: 1rem;
+      }
+      a.btn {
+        display: inline-block;
+        background: #2563eb;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 1rem;
+        transition: background 0.2s;
+      }
+      a.btn:hover { background: #1d4ed8; }
+      a.link {
+        color: #2563eb;
+        text-decoration: none;
+        font-size: 0.875rem;
+        display: inline-block;
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cross">✟</div>
+      <h1>Content Manager</h1>
+      <p>Welcome to the Johannesburg Bible Study Church content manager. Sign in with GitHub to upload photos, write blog posts, or add events.</p>
+
+      <div class="cms-mount" id="nc-root">
+        <p class="loading">Loading content manager…</p>
+      </div>
+
+      <a href="/" class="link">← Back to website</a>
+    </div>
+
+    <script type="module" src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+  </body>
+</html>
