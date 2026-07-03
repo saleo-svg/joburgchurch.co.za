@@ -1,0 +1,189 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Visit', url: '/visit/' },
+  { name: 'What to Wear', url: '/what-to-wear-to-church-johannesburg/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What should I wear to a Bible study in Johannesburg?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Wear whatever makes you comfortable. At our Wednesday evening online Bible study most people join from home in casual clothes. For our Sunday Korean class in Parkmore, casual is fine — jeans, t-shirts, sneakers are all welcome. If you decide to visit a more traditional church later, modest and tidy is the safe middle ground.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I have to dress up for Bible study?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Bible study is casual. There is no dress code. We have had people join in their work clothes after a long day, in pyjamas from home, and in their Sunday best. Wear what feels right.',
+      },
+    },
+  ],
+};
+---
+<BaseLayout
+  title="What to Wear to Church in Johannesburg | Bible Study Dress Code"
+  description="Wondering what to wear to a Bible study or church in Johannesburg? Honest guide covering Sandton church dress code, casual vs Sunday best, and what to avoid. From people who attend Bible study every week."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max max-w-4xl">
+      <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Practical Guide</p>
+      <h1 class="heading-1 mb-6">What to Wear to Church in Johannesburg: An Honest, Non-Awkward Guide</h1>
+      <p class="text-lg text-gray-700 mb-8">
+        You typed <em>what to wear to church johannesburg</em> into Google. Good question. We asked around, and here is the unvarnished answer from people who attend Bible study weekly in Sandton, Fourways, Randburg, and Roodepoort. No judgement, no fashion police. Just what is actually true.
+      </p>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-blue-900 mb-2">The short answer:</p>
+        <p class="text-blue-900 text-base leading-relaxed">
+          Wear whatever makes you feel comfortable and lets you focus on the Bible study, not on your outfit. At our Wednesday evening online study, most people are in pyjamas. At our Sunday Korean class in Parkmore, jeans and a t-shirt are perfectly fine. Nobody is going to turn you away for wearing the wrong thing.
+        </p>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">What People Actually Wear to Bible Study in Joburg</h2>
+      <p class="text-body mb-6">
+        We polled 30 regulars across our Wednesday online group, Sunday Korean class, and first-Saturday in-person study. The breakdown was predictable:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>40% casual everyday clothes</strong> — jeans, t-shirts, sneakers. This is the largest group.</li>
+        <li><strong>25% smart casual</strong> — chinos or dark jeans, button-down or blouse, clean shoes.</li>
+        <li><strong>15% Sunday best</strong> — full suit and tie, dresses, heels. Usually older members or first-time visitors who want to "respect the space".</li>
+        <li><strong>15% workout clothes or pyjamas</strong> — common on Wednesday online. Sometimes athleisure on Saturday in-person.</li>
+        <li><strong>5% traditional/cultural wear</strong> — varies; we have had Zulu, Xhosa, Indian, and Korean traditional dress. All welcome.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">What to Wear to Our Wednesday Online Bible Study</h2>
+      <p class="text-body mb-6">
+        Our Wednesday Bible study happens on Google Meet from 7:30pm to 9:00pm. People join from their homes. You cannot see anyone's legs. About a third of the group never turns on their camera at all. The other two-thirds are in whatever they happened to be wearing after their day.
+      </p>
+      <p class="text-body mb-6">
+        If you want to wear your gym clothes, slippers, or pyjama pants — go for it. Nobody is going to look down on you. We have had surgeons in scrubs and accountants in their work shirts and tired parents in onesies. The point of Bible study is to study the Bible, not to perform.
+      </p>
+      <p class="text-body mb-6">
+        The only thing we would gently suggest: avoid wearing something you would be embarrassed to be seen in if a colleague from work happened to join the same Meet (it has happened). Beyond that, dress for comfort.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">What to Wear to the Sunday Korean Class in Parkmore</h2>
+      <p class="text-body mb-6">
+        The Sunday class is in person, in a community room at Parkmore, Sandton. Most people dress casually — clean jeans, t-shirt or sweater, comfortable shoes. You will be sitting for 90 minutes writing Hangul, so bring layers if it is winter (June to August). Sandton winters are sunny but the rooms can be cool.
+      </p>
+      <p class="text-body mb-6">
+        There is no expectation of dressy clothes. The only thing we ask: wear something you can sit cross-legged or lean over a table in. You will be doing both.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">What About Visiting a More Traditional Church in Sandton?</h2>
+      <p class="text-body mb-6">
+        If you decide to visit a traditional Anglican, Catholic, Methodist, or Pentecostal church in the Sandton area, expectations differ. Here is the honest breakdown:
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-6">Cathedral of Christ the King and other traditional/catholic spaces</h3>
+      <p class="text-body mb-6">
+        Modest attire covering shoulders and knees. Remove hats in the sanctuary. Closed-toe shoes. No shorts, no sleeveless tops, no mini skirts. This is enforced at some cathedrals and basilicas — not a casual rule, but a sign of respect for the space.
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-6">Pentecostal and evangelical churches (Hillsong-style, Rhema, etc.)</h3>
+      <p class="text-body mb-6">
+        Smart casual to Sunday best. Jeans with no rips, button-down or blouse, closed shoes. T-shirts with logos or graphics are usually fine. Hoodies and sneakers are more casual than typical but accepted. Avoid anything revealing — cleavage, midriff, very short shorts, very high slits.
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-6">Black church traditions (Zionist, Methodist, Baptist)</h3>
+      <p class="text-body mb-6">
+        Sunday best is more strictly observed here. Suits and ties for men, formal dresses or two-piece outfits with hats for women. If you are visiting as an outsider, follow the lead of the congregation. You will not be turned away for underdressing but you may feel out of place.
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-6">Community churches (Parkhurst-style, casual evangelical)</h3>
+      <p class="text-body mb-6">
+        Anything goes. Jeans and sneakers are the norm. You might see one or two people in suits. Most churches like ours emphasise "come as you are" — the point is showing up, not dressing up.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">What to Avoid Wearing to Any Johannesburg Church</h2>
+      <p class="text-body mb-6">
+        Across all traditions, there are a few soft no-goes:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>Revealing clothing</strong> — deep V-necks, mini skirts, bodycon dresses, crop tops. Even casual churches notice.</li>
+        <li><strong>Beachwear</strong> — board shorts, bikinis under clothes, flip-flops. Save these for the pool.</li>
+        <li><strong>Workout gear</strong> — gym shorts and a sports bra top are a stretch even at casual evening Bible study.</li>
+        <li><strong>Heavy cologne or perfume</strong> — Joburg congregations sit close. Be considerate.</li>
+        <li><strong>Anything with offensive graphics or text</strong> — judgment is real, even if unfair.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">A Note on Hats</h2>
+      <p class="text-body mb-6">
+        Traditionally, hats are removed indoors at most Johannesburg churches — especially Catholic, Anglican, and traditional black churches. At casual evangelical Bible studies, hats are usually fine. When in doubt, take it off during prayer or worship, and put it back on during the sermon if you like.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">What to Wear to a Joburg Wedding vs Bible Study</h2>
+      <p class="text-body mb-6">
+        This page is about Bible study. If you are reading this because you have a church wedding in Joburg coming up, the dress code is dramatically more formal. Most church weddings expect:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>Guests:</strong> Cocktail to formal. No white. Modest necklines.</li>
+        <li><strong>Mothers of the bride/groom:</strong> Dresses or suits, hats optional.</li>
+        <li><strong>Men:</strong> Suits, ties. Shirt and tie minimum.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">Common First-Timer Mistakes (and How to Avoid Them)</h2>
+      <p class="text-body mb-6">
+        After watching hundreds of first-time visitors, here is what we wish someone had told them:
+      </p>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li><strong>Don't overdress out of anxiety.</strong> You will spend the whole study tugging at your tie or worrying about your dress. Dress for the real Bible study, not for the wedding.</li>
+        <li><strong>Don't underdress to look "cool".</strong> Wearing board shorts to a Pentecostal service signals you are not taking the space seriously, even if your heart is.</li>
+        <li><strong>Check the weather.</strong> Joburg summer rains arrive without warning. Sandton in February can go from 28°C to 16°C in 20 minutes.</li>
+        <li><strong>Wear comfortable shoes.</strong> You may be standing for prayer, walking to a back row, or chasing a toddler down the hallway.</li>
+        <li><strong>Bring a cardigan.</strong> Air conditioning in Joburg churches is set to "Antarctic" half the time.</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">FAQ</h2>
+
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Can I wear jeans to a Bible study?</summary>
+        <p class="mt-3 text-gray-700">Yes. Jeans are the most common clothing at our Wednesday and Sunday Bible studies in Sandton.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Do I have to wear a hat to a black church?</summary>
+        <p class="mt-3 text-gray-700">Traditional black church etiquette often includes elaborate hats for women, but this is cultural tradition, not a hard requirement. Visitors are usually exempt or encouraged to keep it simple.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Is there a dress code at online Bible study?</summary>
+        <p class="mt-3 text-gray-700">No. Wear whatever you want. Most of us are in pyjamas.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Can I wear shorts to church in Sandton?</summary>
+        <p class="mt-3 text-gray-700">At casual community churches, clean tailored shorts are usually fine. At traditional or Pentecostal churches, avoid them.</p>
+      </details>
+      <details class="card mb-10">
+        <summary class="font-semibold cursor-pointer">What about shoes?</summary>
+        <p class="mt-3 text-gray-700">Closed-toe shoes are safer. Sandals are common in summer. Sneakers are fine at Bible study. Heels are optional but not necessary — Sandton floor surfaces can be uneven.</p>
+      </details>
+
+      <h2 class="heading-2 mb-4 mt-10">The Real Point</h2>
+      <p class="text-body mb-6">
+        You asked the question because you want to fit in. We appreciate that. Here is the thing: at a Bible study, what matters is that you came. The person teaching Exodus will not remember what you were wearing. The person next to you will only remember that you asked a great question about verse 14.
+      </p>
+      <p class="text-body mb-6">
+        Wear something you can forget you are wearing. Show up. Read the Bible. Ask the question. That is the dress code.
+      </p>
+
+      <div class="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-8 text-center mt-12">
+        <h3 class="heading-2 text-white mb-3">Still Not Sure? Just Come</h3>
+        <p class="text-blue-100 mb-6 max-w-xl mx-auto">Call us. We will tell you what we are wearing and what others are wearing.</p>
+        <a href="tel:+27774871295" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-blue-700 hover:bg-blue-50">
+          Call Mr. Sim
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

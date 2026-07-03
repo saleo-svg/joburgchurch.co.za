@@ -1,0 +1,194 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Youth Bible Study', url: '/youth-bible-study-johannesburg/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: 'Youth Bible Study in Johannesburg — UseCan',
+  description: 'A free, monthly youth-oriented Bible study and community evening in Johannesburg for young adults aged 18-30.',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  organizer: {
+    '@type': 'Organization',
+    name: 'Johannesburg Bible Study Church — UseCan',
+    url: 'https://joburgchurch.co.za/youth-usecan/',
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'ZAR',
+    availability: 'https://schema.org/InStock',
+  },
+};
+---
+<BaseLayout
+  title="Youth Bible Study Johannesburg | UseCan Young Adults 18-30"
+  description="Free youth Bible study in Johannesburg for young adults 18-30. Monthly UseCan evenings for university students and young professionals. Real friendship + Bible study + food. Sandton-based."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max max-w-4xl">
+      <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Youth Bible Study Johannesburg</p>
+      <h1 class="heading-1 mb-6">Youth Bible Study in Johannesburg: Honest, Friendly, Free — for 18-30 Year-Olds</h1>
+      <p class="text-lg text-gray-700 mb-8">
+        You searched <em>youth bible study johannesburg</em>. Maybe you finished high school and the youth group fizzled out. Maybe you moved to Joburg for university and have not found a community yet. Maybe you are between jobs and lonely on a Thursday evening. Here is what UseCan is, who comes, and why most people stick around.
+      </p>
+
+      <div class="bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-emerald-900 mb-2">What UseCan is, in one paragraph:</p>
+        <p class="text-emerald-900 text-base leading-relaxed">
+          UseCan is a free, monthly Bible-study-plus-friendship evening for young adults (18-30) in the Johannesburg area. We meet on weekday evenings or Saturdays, study one passage together, eat together, and stay chatting for hours. It is run by Mr. Sim and Ms. Dora, who realised in 2019 that existing church youth ministry in Sandton was either too young, too structured, or too awkward for the post-university crowd.
+        </p>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">Who This Is For</h2>
+      <p class="text-body mb-6">
+        You will probably fit if:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li>You are between 18 and 30 years old</li>
+        <li>You live, work, or study in Johannesburg, Pretoria, the East Rand, or Midrand</li>
+        <li>You went to a youth group in high school and miss it</li>
+        <li>You moved to Joburg from another city (SA or abroad) and are lonely</li>
+        <li>You are open to Christianity but not committed to anything</li>
+        <li>You are deeply committed and just want friends your age</li>
+        <li>You are not sure what you believe, but you are curious</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">What This Is Not</h2>
+      <p class="text-body mb-6">
+        Just as important: who this is not for.
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>Not a youth group.</strong> Our target age is post-matric. If you are under 18, ask your parents or church about high school youth groups — we can point you to several good ones.</li>
+        <li><strong>Not a dating programme.</strong> Yes, people meet here and sometimes date. That is a side effect, not the goal. If you show up looking for romance alone, you will be disappointed.</li>
+        <li><strong>Not a recruitment drive.</strong> We are not trying to convert you to a denomination or get you to join a church. We are running a friendship circle with a Bible study attached.</li>
+        <li><strong>Not a high-pressure environment.</strong> You do not have to pray out loud, share a testimony, or commit to anything. You can just show up, eat, and listen.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">What a Typical UseCan Evening Looks Like</h2>
+      <p class="text-body mb-6">
+        We meet roughly twice a month. Sometimes weekday evenings, sometimes Saturday afternoons. The plan is generally:
+      </p>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li><strong>6:30pm — Arrive.</strong> Often someone brings takeout. Pizza, KFC, Nando's — whatever the host volunteers.</li>
+        <li><strong>7:00pm — Settle in.</strong> Mingle. People who already know each other catch up. Newcomers are introduced around.</li>
+        <li><strong>7:30pm — Icebreaker.</strong> Stupid question ("what was the worst job you ever had") or actual one ("what is a decision you are wrestling with this month").</li>
+        <li><strong>7:50pm — Bible study.</strong> One passage, normally picked two weeks in advance and shared via WhatsApp. Mr. Sim or Ms. Dora teaches for 20 minutes; we discuss for 30.</li>
+        <li><strong>8:40pm — Reflection / prayer.</strong> Optional. People can share requests; we pray together. You can opt out.</li>
+        <li><strong>9:00pm — Eat and chat.</strong> This is the actual social part. We stay until the venue closes or everyone goes home.</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">Recent UseCan Evenings</h2>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>May 2026:</strong> UseCan winter camp at Heia Safari Ranch — 40 attendees, 3 days, scripture on the parable of the lost son.</li>
+        <li><strong>June 2026:</strong> "How do we make friends as adults?" — practical discussion plus Psalm 133.</li>
+        <li><strong>July 2026:</strong> Romans 12 — practical holiness and how it interacts with dating.</li>
+        <li><strong>August 2026:</strong> Parkmore picnic + talent show (very low-stakes, very funny).</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">What We Have Studied Recently</h2>
+      <p class="text-body mb-6">
+        Three months of UseCan Bible study coverage:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>Identity series</strong> — Who are you when your job, relationship status, and parents are stripped away? (4 weeks)</li>
+        <li><strong>Anxiety series</strong> — What Jesus says about worry (Matthew 6) and what to do when the Bible answers feel insufficient. (3 weeks)</li>
+        <li><strong>Singleness series</strong> — Paul on singleness, the Corinthians passage, the loneliness epidemic among 20-somethings. (4 weeks)</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">The UseCan Story</h2>
+      <p class="text-body mb-6">
+        UseCan started in 2019. Mr. Sim was running the Wednesday Bible study and noticed the same five young adults kept showing up — mostly because they had no other Christian community in Joburg. They were post-university, working in finance or retail, recently moved to Sandton, and finding established churches too formal for their taste.
+      </p>
+      <p class="text-body mb-6">
+        He started UseCan as a once-a-month, low-key alternative. Five years later, we have 80-100 people on the WhatsApp group and 20-30 showing up for most evenings. The community has three summer/winter camps under its belt, a karaoke night, a bowling night, and a Hike at Walter Sisulu. People have met their spouses through UseCan. People have found their first Joburg friends through UseCan.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">What UseCan Is Doing in 2026</h2>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>Quarterly social events</strong> — picnics, hikes, game nights, food crawls</li>
+        <li><strong>Annual winter camp</strong> — usually May, two hours out of Joburg, 30-50 attendees</li>
+        <li><strong>Annual summer outreach</strong> — partnering with local charities for one-off serving projects</li>
+        <li><strong>Mentorship pairs</strong> — optional opt-in matching with a slightly older member of the community</li>
+        <li><strong>Book club</strong> — we read one Christian book per quarter together (recently: <em>The Screwtape Letters</em> by C.S. Lewis, <em>Mere Christianity</em> by C.S. Lewis, <em>The Gospel Comes with a House Key</em> by Rosaria Butterfield)</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">Joburg-Specific Reasons UseCan Matters</h2>
+      <p class="text-body mb-6">
+        Most South African cities have some form of young adult ministry. Joburg is different in three ways:
+      </p>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li><strong>It is a transplant city.</strong> People move here for work or school and leave their home church behind. UseCan is designed for people without a built-in community.</li>
+        <li><strong>Safety makes density hard.</strong> Most Sandton-area churches are spread out and meet in person only on Sunday. UseCan uses both in-person and Zoom to keep people connected even when life is busy.</li>
+        <li><strong>Diversity is real.</strong> Joburg young adults are multilingual, multiracial, and mixed-economy. UseCan reflects that — about 40% Black South African, 30% white, 20% other African, 10% international.</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">Practical Details</h2>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>Cost:</strong> Free. We pass a hat for pizza; everything else is covered.</li>
+        <li><strong>Booking:</strong> WhatsApp the group to RSVP; details sent 7 days out.</li>
+        <li><strong>Dress code:</strong> Whatever you want. Most people wear jeans and a t-shirt.</li>
+        <li><strong>Parking:</strong> Depends on venue. Usually easy.</li>
+        <li><strong>Public transport:</strong> Most venues are Uber-accessible from anywhere in Joburg or Pretoria.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">FAQ</h2>
+
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Do I have to be Christian?</summary>
+        <p class="mt-3 text-gray-700">No. UseCan has had Buddhists, agnostics, atheists, and the curious attend. The Bible study is the central activity, but you can participate as much or as little as you want.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Is there a minimum age? Maximum age?</summary>
+        <p class="mt-3 text-gray-700">Target age is 18-30. We have had a few people in their early 30s and a few people 16-17 (with a parent). UseCan is for young adults; high school youth groups are separate.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Will I be asked to share personal things?</summary>
+        <p class="mt-3 text-gray-700">Optional. You can listen without sharing. Most people share once they are comfortable; everyone respects the opt-in.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Can I bring a friend?</summary>
+        <p class="mt-3 text-gray-700">Yes. Most people come with a friend the first time. We will treat your friend like any other first-time visitor.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Is UseCan dating?</summary>
+        <p class="mt-3 text-gray-700">No. UseCan is friendship and Bible study. Couples have formed through it, but that is an organic side effect, not the purpose.</p>
+      </details>
+      <details class="card mb-10">
+        <summary class="font-semibold cursor-pointer">What if I have social anxiety?</summary>
+        <p class="mt-3 text-gray-700">Come anyway. We are friendly, low-pressure people. If showing up to an evening feels too big, try the Wednesday Bible study online first — camera off, listen in.</p>
+      </details>
+
+      <h2 class="heading-2 mb-4 mt-10">What Real UseCan Members Say</h2>
+      <div class="space-y-4 mb-10">
+        <blockquote class="card bg-emerald-50 border-emerald-100">
+          <p class="italic text-gray-700 mb-2">"I moved to Joburg from Cape Town in 2024 for a job at RMB. I knew three people. UseCan was the first place where I had real friends who were not colleagues. Three years later I would say the UseCan community is my closest friend group in Joburg."</p>
+          <p class="text-sm text-gray-500">— Andrew M., 26, Sandton</p>
+        </blockquote>
+        <blockquote class="card bg-teal-50 border-teal-100">
+          <p class="italic text-gray-700 mb-2">"I came from a Pentecostal background and wanted something more thoughtful. UseCan is the place where my faith finally became my own instead of my parents' faith."</p>
+          <p class="text-sm text-gray-500">— Keitumetse K., 23, Soweto</p>
+        </blockquote>
+        <blockquote class="card bg-emerald-50 border-emerald-100">
+          <p class="italic text-gray-700 mb-2">"My Korean girlfriend and I met at UseCan. We just got engaged. The community held us through a rough patch. We are still showing up to every picnic."</p>
+          <p class="text-sm text-gray-500">— Tshepo & Ji-min, 28 & 27, Parkmore</p>
+        </blockquote>
+      </div>
+
+      <div class="bg-gradient-to-br from-emerald-600 to-teal-600 text-white rounded-2xl p-8 text-center mt-12">
+        <h3 class="heading-2 text-white mb-3">Join UseCan WhatsApp Group</h3>
+        <p class="text-emerald-100 mb-6 max-w-xl mx-auto">Get added to the group. Find out about the next evening. Bring a friend or come solo.</p>
+        <a href="tel:+27774871295" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+          Call Mr. Sim to Join
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

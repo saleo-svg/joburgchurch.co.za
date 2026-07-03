@@ -1,0 +1,254 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Visit', url: '/visit/' },
+  { name: 'First Time Visitor', url: '/first-time-church-visitor-johannesburg/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Visit a Church for the First Time in Johannesburg',
+  description: 'A practical, no-judgement guide for first-time church visitors in Johannesburg — what to expect, what to bring, how to act, and what to do if you are nervous.',
+  step: [
+    {
+      '@type': 'HowToStep',
+      name: 'Choose the right church for you',
+      text: 'Decide what kind of church you want — online or in-person, casual or traditional, large or small.',
+    },
+    {
+      '@type': 'HowToStep',
+      name: 'Contact the church ahead of time',
+      text: 'Send a WhatsApp or call to ask what to expect. Most Johannesburg churches will respond within an hour.',
+    },
+    {
+      '@type': 'HowToStep',
+      name: 'Dress appropriately',
+      text: 'Wear what makes you comfortable. Casual is fine at community churches; modest is required at cathedrals.',
+    },
+    {
+      '@type': 'HowToStep',
+      name: 'Arrive 10 minutes early',
+      text: 'Get oriented, find parking, meet the welcome team. First-time visitors get the most attention when they arrive early.',
+    },
+    {
+      '@type': 'HowToStep',
+      name: 'Sit anywhere and stay through the whole service',
+      text: 'You do not have to participate. Just being there is enough. Most people do not return because they leave after 15 minutes.',
+    },
+  ],
+};
+---
+<BaseLayout
+  title="First Time Church Visitor Johannesburg | What to Expect, How to Act"
+  description="First time visiting a church in Johannesburg? Read this honest, no-pressure guide. What to expect, what to wear, what to do if you are nervous. From people who run a Bible study in Sandton."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max max-w-4xl">
+      <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">First Time Visitor</p>
+      <h1 class="heading-1 mb-6">First Time Visiting a Church in Johannesburg: An Honest, No-Judgement Guide</h1>
+      <p class="text-lg text-gray-700 mb-8">
+        You searched <em>first time church visitor johannesburg</em>. Maybe a friend invited you. Maybe you have been thinking about it for months. Maybe your grandmother asked too many times and you caved. Whatever brought you here — congratulations. The hardest part is deciding to go. The actual visit is easier than you think. Here is exactly what to expect.
+      </p>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-blue-900 mb-2">Quick summary:</p>
+        <ul class="space-y-1 text-blue-900 text-sm">
+          <li>✓ Churches in Johannesburg welcome visitors — most have a welcome team for exactly this reason.</li>
+          <li>✓ You do not have to give money, raise your hand, sing, pray out loud, or commit to anything.</li>
+          <li>✓ Sit anywhere. Stay the whole time. Ask questions. Talk to one person after the service.</li>
+          <li>✓ Wear whatever makes you comfortable (see <a href="/what-to-wear-to-church-johannesburg/" class="underline">dress code guide</a>).</li>
+        </ul>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">Why the First Visit Is the Hardest</h2>
+      <p class="text-body mb-6">
+        After talking to hundreds of people over 12 years of running Bible study in Sandton, here is the most common thing we hear: <em>"I have been thinking about visiting for months, but I am scared of standing out, of being asked to join a committee, of being hugged by strangers."</em> Those fears are valid. Most of them are also unfounded.
+      </p>
+      <p class="text-body mb-6">
+        Johannesburg churches are welcoming because they <em>want</em> first-time visitors. The pastor's job is partly to make you feel comfortable. The welcome team's job is exactly to greet you. They have been trained for this. You are the person they have been preparing for.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Step 1: Pick the Church That Fits You</h2>
+      <p class="text-body mb-6">
+        Not all Johannesburg churches are the same. Here is the honest breakdown:
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-10">
+        <div class="card bg-blue-50">
+          <h3 class="heading-3 mb-2">Casual community church</h3>
+          <p class="text-sm text-gray-700 mb-2"><strong>Best for:</strong> First-timers, sceptics, anyone who finds religion "weird"</p>
+          <p class="text-sm text-gray-700 mb-2"><strong>Service:</strong> Casual dress, live band, 60-75 min</p>
+          <p class="text-sm text-gray-700"><strong>Examples near Sandton:</strong> Parkhurst Community Church, Honeydew Community, Central Methodist Mission Sandton</p>
+        </div>
+        <div class="card bg-purple-50">
+          <h3 class="heading-3 mb-2">Online Bible study</h3>
+          <p class="text-sm text-gray-700 mb-2"><strong>Best for:</strong> People nervous about in-person, parents who cannot get a sitter, anyone who needs flexibility</p>
+          <p class="text-sm text-gray-700 mb-2"><strong>Service:</strong> Google Meet, 90 min, camera off is fine</p>
+          <p class="text-sm text-gray-700"><strong>Example:</strong> Our Wednesday 7:30pm study</p>
+        </div>
+        <div class="card bg-amber-50">
+          <h3 class="heading-3 mb-2">Pentecostal / evangelical</h3>
+          <p class="text-sm text-gray-700 mb-2"><strong>Best for:</strong> People who grew up in these traditions or who want energetic worship</p>
+          <p class="text-sm text-gray-700 mb-2"><strong>Service:</strong> Loud music, longer services (90-120 min), raised hands</p>
+          <p class="text-sm text-gray-700"><strong>Examples:</strong> Rhema, Rivers Church, Hillsong</p>
+        </div>
+        <div class="card bg-gray-100">
+          <h3 class="heading-3 mb-2">Traditional / liturgical</h3>
+          <p class="text-sm text-gray-700 mb-2"><strong>Best for:</strong> People who want historic liturgy, structure, quiet reverence</p>
+          <p class="text-sm text-gray-700 mb-2"><strong>Service:</strong> Hymns, liturgy, communion, formal dress</p>
+          <p class="text-sm text-gray-700"><strong>Examples:</strong> Cathedral of Christ the King, St Mary’s, various Anglican parishes</p>
+        </div>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">Step 2: Contact Them First (Optional but Recommended)</h2>
+      <p class="text-body mb-6">
+        Most Johannesburg church websites have a "Plan Your Visit" button or a WhatsApp number. Use it. Tell them you are a first-time visitor and ask:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li>"What should I expect on a Sunday morning?"</li>
+        <li>"Is there a dress code?"</li>
+        <li>"Where should I park?"</li>
+        <li>"Do you have anything for kids?" (if relevant)</li>
+      </ul>
+      <p class="text-body mb-6">
+        A good church will respond within an hour. If they do not respond, that itself tells you something about how they treat newcomers — keep looking.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Step 3: What to Bring</h2>
+      <p class="text-body mb-6">
+        Less than you think:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li>✓ Yourself. That is the main thing.</li>
+        <li>✓ A Bible if you have one. (If not, you will be given one or shown the passage on a screen.)</li>
+        <li>✓ Phone — you may need to scan a QR code for the church bulletin or kids check-in.</li>
+        <li>✓ R20-50 for an offering if you want to participate (no obligation).</li>
+        <li>✓ A jacket — Joburg air conditioning is aggressive.</li>
+      </ul>
+      <p class="text-body mb-6">
+        Do not bring: alcohol, expectations of perfection, fear of judgement.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Step 4: Arrive 10-15 Minutes Early</h2>
+      <p class="text-body mb-6">
+        This is the best-kept secret of first-time visitors. Arrive 10-15 minutes before the service starts. You will:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li>Find parking easily (Joburg Sunday morning traffic is fine, but street parking fills up)</li>
+        <li>Be greeted by the welcome team before the rush</li>
+        <li>Have a chance to use the bathroom, find your seat, and acclimate</li>
+        <li>Potentially meet the pastor in a low-pressure setting</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">Step 5: What Happens Inside</h2>
+      <p class="text-body mb-6">
+        A typical Johannesburg Sunday service has these elements, in order:
+      </p>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li><strong>Welcome and announcements (5-10 min).</strong> Standing, no participation needed.</li>
+        <li><strong>Worship (15-25 min).</strong> Singing. Stand if everyone stands. Sit if everyone sits. Read the lyrics off the screen if you do not know them.</li>
+        <li><strong>Offering (5 min).</strong> A basket passes. Visitors do not put anything in.</li>
+        <li><strong>Sermon (30-45 min).</strong> The pastor teaches from the Bible. Take notes if you want. Check your phone if you want. No one is judging you.</li>
+        <li><strong>Prayer / closing (5-10 min).</strong> Sometimes people gather at the front for prayer. You can stay seated.</li>
+        <li><strong>Coffee and snacks (15-30 min).</strong> This is the best part. Get yourself a coffee and introduce yourself to one new person.</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">Step 6: The Awkward Things Nobody Tells You</h2>
+      <p class="text-body mb-6">
+        Here is the unfiltered list of things that surprised our first-time visitors:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>You will probably be asked to stand up and introduce yourself.</strong> Just say your first name and where you live. They do not need your life story.</li>
+        <li><strong>Hugging is common at black churches and charismatic churches.</strong> If you are uncomfortable, just step back politely. Most people respect personal space.</li>
+        <li><strong>Some services are 90 minutes long.</strong> Plan your Sunday accordingly. Bring a snack if you need one.</li>
+        <li><strong>People may try to "follow up" with you.</strong> This means a WhatsApp message asking how you enjoyed the service. Reply if you want. Ignore if you do not.</li>
+        <li><strong>There will be a kids' ministry.</strong> It is usually excellent. If you have kids, drop them off — they will love it more than you think.</li>
+        <li><strong>The sermon will probably be longer than you expected.</strong> Joburg preachers love a 40-minute message. Bring water.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">Step 7: After the Service (Most Important)</h2>
+      <p class="text-body mb-6">
+        The single biggest mistake first-timers make: leaving straight after the sermon ends. Stay for coffee. Introduce yourself to one person. Mention you are visiting. That is the entire social contract. From there, you can:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li>Leave whenever you want (most people stay 15 minutes for coffee)</li>
+        <li>Ask the pastor a question (most pastors love this)</li>
+        <li>Exchange numbers with one friendly person</li>
+        <li>Take a brochure (or not)</li>
+        <li>Just observe and process the experience on your own</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">What If I Never Want to Go Back?</h2>
+      <p class="text-body mb-6">
+        That is completely fine. There is no obligation, no contract, no follow-up guilt. You showed up, you tried it, you learned something. That is a complete experience in itself.
+      </p>
+      <p class="text-body mb-6">
+        Most people do not return to the first church they visit. They return to the one that felt right — and you usually cannot know which one that is until you have tried a few. Give yourself permission to be a tourist for a few Sundays while you figure out where you fit.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Alternative: Start Online</h2>
+      <p class="text-body mb-6">
+        If the in-person visit feels too big, start with an online Bible study. We run ours every Wednesday at 7:30pm. You can join with your camera off, listen for 90 minutes, and decide without anyone seeing your face. After a few weeks, if you want to come in person, you will already know the people. That makes the first in-person visit much easier.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Common Mistakes First-Timers Make</h2>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li><strong>Arriving late.</strong> You sit in the back, you cannot hear, you feel awkward, you leave. Arrive 10 minutes early.</li>
+        <li><strong>Judging the first 5 minutes.</strong> The welcome, the music, the prayers — none of this is the main event. Give it 30 minutes before you decide.</li>
+        <li><strong>Comparing it to your childhood church.</strong> If you grew up religious, every church will feel "wrong" compared to what you remember. Compare it to itself, not to nostalgia.</li>
+        <li><strong>Trying to understand everything the first time.</strong> You will not. Come back next week for the parts you missed.</li>
+        <li><strong>Saying yes to every program.</strong> You will be invited to a small group, a Bible study, a serving team, a men's breakfast. Say yes to one. Decline the rest gracefully. Burnout is real.</li>
+        <li><strong>Not telling anyone you are new.</strong> If you do not tell the welcome team, they cannot help you. They will gladly answer questions, give you a tour, and explain the service.</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">FAQ</h2>
+
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Will I have to give money?</summary>
+        <p class="mt-3 text-gray-700">No. Visitors are not expected to give. A basket will pass during the service, but you can let it pass you by.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Will they ask me to join a committee?</summary>
+        <p class="mt-3 text-gray-700">Not on the first visit. They may invite you to a small group or Bible study, which you can politely decline or accept.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">What if I cry?</summary>
+        <p class="mt-3 text-gray-700">You will not be the first. Most churches have tissues at the back. People cry at churches. It is a normal response to a powerful message.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">What if my family is mixed-faith?</summary>
+        <p class="mt-3 text-gray-700">Most Johannesburg churches are welcoming to mixed-faith families. Many couples attend together even if one is more religious. Kids' ministry is usually ecumenical.</p>
+      </details>
+      <details class="card mb-10">
+        <summary class="font-semibold cursor-pointer">What if I have a bad experience?</summary>
+        <p class="mt-3 text-gray-700">Try a different church next time. Not every church is for every person. There are dozens of excellent options in Johannesburg — give yourself the gift of trying two or three before deciding.</p>
+      </details>
+
+      <h2 class="heading-2 mb-4 mt-10">A Final Word</h2>
+      <p class="text-body mb-6">
+        You do not need to be a Christian to visit a church. You do not need to believe anything. You do not need to perform. The church has been a part of Johannesburg for over 130 years — it is part of the cultural fabric of the city. You are welcome to come and see what it is about.
+      </p>
+      <p class="text-body mb-6">
+        If you decide to walk in, you will find that the people inside are mostly warm, mostly imperfect, mostly trying. Same as anywhere else. The difference is they have decided that their trying is rooted in a 2,000-year-old story about a man who said "come as you are". That is not a bad story to sit next to for an hour.
+      </p>
+
+      <div class="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-8 text-center mt-12">
+        <h3 class="heading-2 text-white mb-3">Try It This Wednesday — Online, No Pressure</h3>
+        <p class="text-blue-100 mb-6 max-w-xl mx-auto">Camera off. Pyjamas on. Just listen. 7:30pm, 90 minutes.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+27774871295" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-blue-700 hover:bg-blue-50">
+            Call Mr. Sim for the Link
+          </a>
+          <a href="/online-bible-study-johannesburg/" class="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white hover:bg-white/20">
+            How Online Bible Study Works
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

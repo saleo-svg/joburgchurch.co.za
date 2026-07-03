@@ -1,0 +1,226 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Church Times', url: '/church-service-times-sandton/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What time is the Bible study in Sandton?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Our Wednesday evening Bible study runs from 7:30pm to 9:00pm on Google Meet. The link is sent to anyone who calls or messages to register.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is the Wednesday Bible study in person?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'It is online on Google Meet from 7:30pm to 9:00pm. We also meet in person on the first Saturday of the month at 4:00pm in Parkmore, Sandton.',
+      },
+    },
+  ],
+};
+---
+<BaseLayout
+  title="Church Service Times in Sandton | Bible Study Wednesday 7:30pm"
+  description="Church service times in Sandton, Johannesburg — Bible study every Wednesday 7:30pm (online, Google Meet), Sunday Korean class 2:00pm (in person), and first-Saturday in-person Bible study 4:00pm (Parkmore). Free, open to all."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max max-w-4xl">
+      <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Service Times</p>
+      <h1 class="heading-1 mb-6">Church Service Times in Sandton & Johannesburg: What Runs When and Where</h1>
+      <p class="text-lg text-gray-700 mb-8">
+        You searched <em>church service times sandton</em> or <em>church times johannesburg</em>. Here is the honest, complete, never-stale answer: every weekly gathering we run, what each one costs, what to bring, and who shows up. No fluff, no marketing, just the schedule.
+      </p>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-blue-900 mb-2">The four weekly rhythms at a glance:</p>
+        <ul class="space-y-1 text-blue-900 text-sm">
+          <li>📖 <strong>Wednesday 7:30pm</strong> — Online Bible study (Google Meet, free)</li>
+          <li>🇰🇷 <strong>Sunday 2:00pm</strong> — Free Korean class (Parkmore, in person)</li>
+          <li>🪑 <strong>First Saturday of month, 4:00pm</strong> — In-person Bible study (Parkmore)</li>
+          <li>🎯 <strong>UseCan youth evenings</strong> — Variable (see youth page)</li>
+        </ul>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">Quick Comparison Table</h2>
+      <div class="overflow-x-auto mb-10">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-gray-100 text-left">
+              <th class="p-3 font-semibold">Gathering</th>
+              <th class="p-3 font-semibold">Day & Time</th>
+              <th class="p-3 font-semibold">Location</th>
+              <th class="p-3 font-semibold">Cost</th>
+              <th class="p-3 font-semibold">Booking</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="p-3 font-medium">Wednesday Bible Study</td>
+              <td class="p-3">Wednesday 7:30–9:00pm</td>
+              <td class="p-3">Online (Google Meet)</td>
+              <td class="p-3">Free</td>
+              <td class="p-3">Call/WhatsApp for link</td>
+            </tr>
+            <tr class="border-b bg-blue-50">
+              <td class="p-3 font-medium">Sunday Korean Class</td>
+              <td class="p-3">Sunday 2:00–4:00pm</td>
+              <td class="p-3">Parkmore, Sandton</td>
+              <td class="p-3">Free</td>
+              <td class="p-3">Appointment required</td>
+            </tr>
+            <tr class="border-b">
+              <td class="p-3 font-medium">In-Person Bible Study</td>
+              <td class="p-3">First Saturday 4:00–6:00pm</td>
+              <td class="p-3">Parkmore, Sandton</td>
+              <td class="p-3">Free</td>
+              <td class="p-3">Drop-in welcome</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-medium">UseCan Youth Evenings</td>
+              <td class="p-3">Variable (monthly)</td>
+              <td class="p-3">Rotating (Sandton area)</td>
+              <td class="p-3">Free</td>
+              <td class="p-3">RSVP via WhatsApp</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">Wednesday Evening Bible Study — 7:30pm Online</h2>
+      <p class="text-body mb-6">
+        Our flagship weekly gathering. Every Wednesday from 7:30pm to 9:00pm, we run an online Bible study on Google Meet. People join from Sandton, Randburg, Fourways, Midrand, Pretoria East, and one regular who has been logging in from Cape Town since 2022.
+      </p>
+      <p class="text-body mb-6">
+        <strong>What we study:</strong> Books of the Bible, one book at a time over 6-12 weeks. Currently working through the Parables Jesus Actually Told. In 2025 we did Exodus, John, and Psalms.
+      </p>
+      <p class="text-body mb-6">
+        <strong>Who shows up:</strong> Roughly 15-25 people each week. Ages 19 to 60, mixed gender and ethnicity. About 60% South Africans, 20% other African countries (Zimbabwe, Nigeria, DRC, Kenya), 20% expats (US, UK, Korea, China).
+      </p>
+      <p class="text-body mb-6">
+        <strong>How to join:</strong> Call or WhatsApp either number below. We add you to the WhatsApp group and send the Google Meet link the day of. You can keep your camera off for as long as you want. There is no expectation that you speak, pray, or commit.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Sunday Korean Class — 2:00pm in Parkmore</h2>
+      <p class="text-body mb-6">
+        Every Sunday afternoon, Ms. Dora teaches Korean to absolute beginners in a community room at Parkmore, Sandton. The class runs from 2:00pm to 4:00pm, with an optional 30-minute hangout for coffee and conversation afterward.
+      </p>
+      <p class="text-body mb-6">
+        <strong>What we cover:</strong> Hangul alphabet (week 1), basic conversation, Korean culture and food. By week 8 you can introduce yourself, order at a Korean restaurant, and ask for directions.
+      </p>
+      <p class="text-body mb-6">
+        <strong>Who shows up:</strong> 8-15 adults each week. Mostly 22-45 years old. About half are preparing for exchange/travel/work in Korea. The other half are K-drama or K-pop fans, or simply curious.
+      </p>
+      <p class="text-body mb-6">
+        <strong>How to join:</strong> Call or WhatsApp Ms. Dora (or Mr. Sim) to confirm a seat. We supply all materials and coffee. Bring yourself and a notebook if you like taking notes.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">First Saturday In-Person Bible Study — 4:00pm in Parkmore</h2>
+      <p class="text-body mb-6">
+        Once a month, on the first Saturday, we hold the same Bible study in person. The passage is the same one we will study the following Wednesday. People who attend get two bites at the apple, which is helpful for dense passages.
+      </p>
+      <p class="text-body mb-6">
+        <strong>What to expect:</strong> 8-15 people in a circle, Mr. Sim or Ms. Dora teaching, tea and biscuits provided. Same format as the online study but face-to-face. End by 6:00pm sharp so you can have your Saturday evening.
+      </p>
+      <p class="text-body mb-6">
+        <strong>Who shows up:</strong> Regulars who live nearby, people who prefer in-person, visitors from out of town. Often 1-2 new faces each month.
+      </p>
+      <p class="text-body mb-6">
+        <strong>How to join:</strong> No booking needed. Show up at 3:50pm. Address sent via WhatsApp on request.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Other Churches in Sandton with Sunday Service Times</h2>
+      <p class="text-body mb-6">
+        If our gatherings do not fit your schedule, here are some other Sunday service times in the Sandton area that we know of:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>Parkhurst Community Church</strong> — Sunday 9:00am, Parkhurst Primary School</li>
+        <li><strong>Rhema Bible Church</strong> — Sunday 9:00am, Randburg</li>
+        <li><strong>Rivers Church Sandton</strong> — Sunday 9:30am, Sandton Convention Centre</li>
+        <li><strong>Hillsong Church Johannesburg</strong> — Sunday 9:00am and 11:30am, Morningside</li>
+        <li><strong>Cathedral of Christ the King</strong> — Sunday 7:00am, 9:00am, 11:00am, 6:00pm; daily Mass 12:15pm</li>
+        <li><strong>St Mary's Anglican Church</strong> — Sunday 8:00am, 10:00am</li>
+        <li><strong>Central Methodist Mission</strong> — Sunday 9:00am, Johannesburg CBD</li>
+      </ul>
+      <p class="text-body mb-6">
+        <em>Note: Service times can change. Always confirm via the church's own website or WhatsApp before your first visit.</em>
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Sandton Sunday Service Times — General Pattern</h2>
+      <p class="text-body mb-6">
+        Most Sandton-area churches run a Sunday morning service between 8:00am and 11:00am. The traditional reason for the morning time is historical (people worked six days a week; Sunday was the only free day). Today's Joburg services cluster at three slots:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>7:00-8:30am</strong> — Early service (Cathedral, traditional Anglican/Catholic)</li>
+        <li><strong>9:00-10:30am</strong> — Most popular slot (most evangelical/Pentecostal/modern community)</li>
+        <li><strong>11:00am-12:30pm</strong> — Second wave (larger churches offering multiple services)</li>
+        <li><strong>5:00-7:00pm</strong> — Evening service (less common; some evangelical and Pentecostal)</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">What Is the Best Time to Visit a Johannesburg Church?</h2>
+      <p class="text-body mb-6">
+        If you are a first-timer, the <strong>9:00am Sunday slot</strong> is the safest choice for three reasons:
+      </p>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li>Most churches run their largest, friendliest, best-staffed service at this time.</li>
+        <li>The welcome team is fully awake.</li>
+        <li>The kids' ministry is fully operational.</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">Our Schedule Through 2026 (Quarter View)</h2>
+      <p class="text-body mb-6">
+        A look ahead at what is coming up:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>July 2026:</strong> Parables series continues (Luke 15: The Lost Sheep, the Lost Coin, the Prodigal Son)</li>
+        <li><strong>August 2026:</strong> Romans Part 1 (Justification by faith)</li>
+        <li><strong>September 2026:</strong> Spring community picnic at Mushroom Farm Park (Sat 20 Sept)</li>
+        <li><strong>October 2026:</strong> Wisdom Literature (Proverbs, Ecclesiastes — 4 weeks)</li>
+        <li><strong>November 2026:</strong> Advent series begins 29 Nov</li>
+        <li><strong>December 2026:</strong> Christmas special and year-end social</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">FAQ — Service Times</h2>
+
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">What time is Bible study in Sandton?</summary>
+        <p class="mt-3 text-gray-700">Wednesday 7:30pm online. Saturday first-of-the-month 4:00pm in person.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Is your Bible study in person or online?</summary>
+        <p class="mt-3 text-gray-700">Both. Wednesday is online. First Saturday is in person at Parkmore, Sandton.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">What time does the Korean class start in Sandton?</summary>
+        <p class="mt-3 text-gray-700">Sunday 2:00pm sharp. We start with greetings and 10 minutes of intro.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Are any of your services cancelled over December?</summary>
+        <p class="mt-3 text-gray-700">Yes. The last Wednesday Bible study before Christmas is usually 17 December. We restart in the second week of January.</p>
+      </details>
+      <details class="card mb-10">
+        <summary class="font-semibold cursor-pointer">What if I need to leave early?</summary>
+        <p class="mt-3 text-gray-700">At online Bible study, just leave. At in-person, slip out quietly. No one will notice or care. We have parents with babies, doctors on call, students with morning deadlines. Life happens.</p>
+      </details>
+
+      <div class="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-8 text-center mt-12">
+        <h3 class="heading-2 text-white mb-3">Pick One Wednesday. Just Show Up.</h3>
+        <p class="text-blue-100 mb-6 max-w-xl mx-auto">7:30pm. Google Meet. Camera off if you want. 90 minutes. No pressure.</p>
+        <a href="tel:+27774871295" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-blue-700 hover:bg-blue-50">
+          Call Mr. Sim
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,264 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Churches in Sandton', url: '/churches-in-sandton/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Churches in Sandton, Johannesburg',
+  description: 'A practical guide to churches in Sandton, Johannesburg, from a Bible study community that has been meeting in the area since 2014.',
+  numberOfItems: 8,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Parkmore Bible Study (ours)', url: 'https://joburgchurch.co.za/' },
+    { '@type': 'ListItem', position: 2, name: 'Parkhurst Community Church', url: 'https://www.parkhurstcommunitychurch.co.za/' },
+    { '@type': 'ListItem', position: 3, name: 'Rivers Church Sandton', url: 'https://rivers.church/' },
+    { '@type': 'ListItem', position: 4, name: 'Rhema Bible Church', url: 'https://www.rhemagroup.co.za/' },
+    { '@type': 'ListItem', position: 5, name: 'Hillsong Johannesburg', url: 'https://hillsong.com/johannesburg' },
+    { '@type': 'ListItem', position: 6, name: 'Cathedral of Christ the King', url: 'https://cathedral.jnb.za/' },
+    { '@type': 'ListItem', position: 7, name: 'St Mary the Virgin Anglican', url: 'https://stmarysandton.co.za/' },
+    { '@type': 'ListItem', position: 8, name: 'Central Methodist Mission', url: 'https://cmm.org.za/' },
+  ],
+};
+---
+<BaseLayout
+  title="Churches in Sandton, Johannesburg | 2026 Guide to Local Churches"
+  description="Looking for a church in Sandton? Honest guide to 8 churches in Sandton — types, service times, who goes, what to expect. From the team behind Johannesburg Bible Study Church."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max max-w-4xl">
+      <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Churches in Sandton</p>
+      <h1 class="heading-1 mb-6">Churches in Sandton, Johannesburg: An Honest 2026 Guide</h1>
+      <p class="text-lg text-gray-700 mb-8">
+        You searched <em>churches in sandton</em> or <em>churches near me sandton</em>. Sandton has about a dozen accessible churches within a 10-minute drive. Choosing one is harder than finding one. Here is the guide we wish we had been given when we started Johannesburg Bible Study Church in 2014.
+      </p>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-blue-900 mb-2">What you will get from this page:</p>
+        <ul class="space-y-1 text-blue-900 text-sm">
+          <li>✓ An honest comparison of 8 active Sandton churches</li>
+          <li>✓ What each one is like, who goes, what to expect on your first visit</li>
+          <li>✓ Honest pros and cons from people who have attended multiple churches in the area</li>
+          <li>✓ A self-assessment to help you pick the right one for you</li>
+        </ul>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">The Quick Comparison</h2>
+      <div class="overflow-x-auto mb-10">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-gray-100 text-left">
+              <th class="p-3 font-semibold">Church</th>
+              <th class="p-3 font-semibold">Style</th>
+              <th class="p-3 font-semibold">Sunday Time</th>
+              <th class="p-3 font-semibold">Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b bg-blue-50">
+              <td class="p-3 font-medium">Parkmore Bible Study (us)</td>
+              <td class="p-3">Casual Bible study</td>
+              <td class="p-3">Wed 7:30pm (online)</td>
+              <td class="p-3">Sceptics, learners, busy professionals</td>
+            </tr>
+            <tr class="border-b">
+              <td class="p-3 font-medium">Parkhurst Community Church</td>
+              <td class="p-3">Casual community</td>
+              <td class="p-3">Sun 9:00am</td>
+              <td class="p-3">Families, first-timers, local feel</td>
+            </tr>
+            <tr class="border-b">
+              <td class="p-3 font-medium">Rivers Church Sandton</td>
+              <td class="p-3">Modern evangelical</td>
+              <td class="p-3">Sun 9:30am</td>
+              <td class="p-3">Young professionals, families</td>
+            </tr>
+            <tr class="border-b">
+              <td class="p-3 font-medium">Rhema Bible Church</td>
+              <td class="p-3">Pentecostal / charismatic</td>
+              <td class="p-3">Sun 9:00am</td>
+              <td class="p-3">Loud worship, faith-healing emphasis</td>
+            </tr>
+            <tr class="border-b">
+              <td class="p-3 font-medium">Hillsong Johannesburg</td>
+              <td class="p-3">Modern megachurch</td>
+              <td class="p-3">Sun 9:00am, 11:30am</td>
+              <td class="p-3">Young adults, families, bands</td>
+            </tr>
+            <tr class="border-b">
+              <td class="p-3 font-medium">Cathedral of Christ the King</td>
+              <td class="p-3">Catholic</td>
+              <td class="p-3">Sun 7, 9, 11am + 6pm</td>
+              <td class="p-3">Traditional, liturgical, historic</td>
+            </tr>
+            <tr class="border-b">
+              <td class="p-3 font-medium">St Mary the Virgin</td>
+              <td class="p-3">Anglican</td>
+              <td class="p-3">Sun 8:00am, 10:00am</td>
+              <td class="p-3">Traditional, family-friendly</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-medium">Central Methodist Mission</td>
+              <td class="p-3">Methodist / city church</td>
+              <td class="p-3">Sun 9:00am (CBD)</td>
+              <td class="p-3">Historic, social justice focus</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">Self-Assessment: Pick the Right Church in 60 Seconds</h2>
+      <p class="text-body mb-6">
+        Answer these five questions honestly. The answers will point you to a church in the list above.
+      </p>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li><strong>Do you want a service on Sunday morning or a Bible study on a weekday evening?</strong> Sunday morning → skip to Q3. Weekday evening → <strong>Parkmore Bible Study (us)</strong>.</li>
+        <li><strong>Do you prefer modern, casual worship or traditional liturgy?</strong> Modern → Q3 below. Traditional → <strong>Cathedral of Christ the King</strong> or <strong>St Mary the Virgin</strong>.</li>
+        <li><strong>Do you want loud, energetic worship or calm and reflective?</strong> Energetic → <strong>Rhema</strong> or <strong>Hillsong</strong>. Reflective → <strong>Parkhurst Community</strong> or <strong>Rivers</strong>.</li>
+        <li><strong>How old are you and what is your family situation?</strong> 20s/30s single → <strong>Hillsong</strong>, <strong>Rivers</strong>, or us. With kids → all of them, but <strong>Parkhurst Community</strong> and <strong>Rivers</strong> have the strongest kids' ministry.</li>
+        <li><strong>Is your hesitation "I do not believe all this" or "I do not have time"?</strong> Hesitation about belief → try <strong>Parkmore Bible Study (us)</strong> — we have had Buddhists. Time-constrained → same.</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">Honest Reviews (From People Who Have Attended Multiple)</h2>
+
+      <h3 class="heading-3 mb-3 mt-8">1. Parkmore Bible Study (us) — Johannesburg Bible Study Church</h3>
+      <p class="text-body mb-6">
+        <strong>Vibe:</strong> Low-key, conversational, small. Most people are at work or in pyjamas for the Wednesday online session. Sundays at Parkmore for Korean class have 8-15 people. No collection plate, no offering, no altar call. We are a Bible study community, not a Sunday service.
+      </p>
+      <p class="text-body mb-4"><strong>Pros:</strong> Free, no commitment, friendly to sceptics, parents welcome with kids, accessible online. Sunday afternoon slot works for shift workers.</p>
+      <p class="text-body mb-4"><strong>Cons:</strong> Not a Sunday service. No worship band. No big community feel on a Sunday morning.</p>
+      <p class="text-body mb-6"><strong>Best for:</strong> Sceptics, busy professionals, parents, mixed-faith couples, anyone curious about the Bible but not ready to "commit" to a church yet.</p>
+
+      <h3 class="heading-3 mb-3 mt-8">2. Parkhurst Community Church</h3>
+      <p class="text-body mb-6">
+        <strong>Vibe:</strong> Casual, family-friendly. About 200-300 people on a Sunday. Meet at Parkhurst Primary School. Modern worship, expository preaching.
+      </p>
+      <p class="text-body mb-4"><strong>Pros:</strong> Strong community, great kids' ministry, expository (verse-by-verse) preaching, easy to connect.</p>
+      <p class="text-body mb-4"><strong>Cons:</strong> Smaller building than a megachurch, can feel less impressive at first.</p>
+      <p class="text-body mb-6"><strong>Best for:</strong> Families, first-time visitors, anyone who likes a "small town church" feel.</p>
+
+      <h3 class="heading-3 mb-3 mt-8">3. Rivers Church Sandton</h3>
+      <p class="text-body mb-6">
+        <strong>Vibe:</strong> Modern, polished, large. 1000+ attendees across multiple services. Hillsong-style contemporary worship.
+      </p>
+      <p class="text-body mb-4"><strong>Pros:</strong> Excellent kids' ministry, multiple service times, young adult ministry programs, professional production.</p>
+      <p class="text-body mb-4"><strong>Cons:</strong> Can feel anonymous at scale, hard to connect in a large crowd.</p>
+      <p class="text-body mb-6"><strong>Best for:</strong> Young professionals, families, people who like a polished experience.</p>
+
+      <h3 class="heading-3 mb-3 mt-8">4. Rhema Bible Church</h3>
+      <p class="text-body mb-6">
+        <strong>Vibe:</strong> Charismatic, Pentecostal, vibrant. Faith-healing emphasis. Large gatherings with prophecy and prayer ministry.
+      </p>
+      <p class="text-body mb-4"><strong>Pros:</strong> Strong sense of the supernatural, deep pastoral care, healing ministry.</p>
+      <p class="text-body mb-4"><strong>Cons:</strong> Too intense for people who prefer a quieter worship style. Practice style is not for everyone.</p>
+      <p class="text-body mb-6"><strong>Best for:</strong> People who want to experience the charismatic tradition and pursue healing / prophecy.</p>
+
+      <h3 class="heading-3 mb-3 mt-8">5. Hillsong Johannesburg</h3>
+      <p class="text-body mb-6">
+        <strong>Vibe:</strong> Modern megachurch. Professional music, multi-site, large youth and young adult programs.
+      </p>
+      <p class="text-body mb-4"><strong>Pros:</strong> Excellent music, large young adult community, polished production.</p>
+      <p class="text-body mb-4"><strong>Cons:</strong> Anonymous at scale, controversy in the global Hillsong brand, can feel performative.</p>
+      <p class="text-body mb-6"><strong>Best for:</strong> Families and young adults who want a big, energetic church.</p>
+
+      <h3 class="heading-3 mb-3 mt-8">6. Cathedral of Christ the King</h3>
+      <p class="text-body mb-6">
+        <strong>Vibe:</strong> Catholic, traditional, historic. Beautiful architecture, liturgy, daily Mass.
+      </p>
+      <p class="text-body mb-4"><strong>Pros:</strong> Centuries of tradition, beautiful space, frequent Mass times, strong on history.</p>
+      <p class="text-body mb-4"><strong>Cons:</strong> Dress code required (modest). Latin or English liturgy. No kids' program.</p>
+      <p class="text-body mb-6"><strong>Best for:</strong> Catholics, history lovers, anyone drawn to traditional liturgy.</p>
+
+      <h3 class="heading-3 mb-3 mt-8">7. St Mary the Virgin (Anglican)</h3>
+      <p class="text-body mb-6">
+        <strong>Vibe:</strong> Anglican, traditional but warm. Family-friendly Sunday school at the 10:00am service.
+      </p>
+      <p class="text-body mb-4"><strong>Pros:</strong> Beautiful space, strong tradition, excellent kids' ministry, multiple Sunday services.</p>
+      <p class="text-body mb-4"><strong>Cons:</strong> No Saturday service, formal liturgy.</p>
+      <p class="text-body mb-6"><strong>Best for:</strong> Anglicans, traditional families, fans of historic liturgy.</p>
+
+      <h3 class="heading-3 mb-3 mt-8">8. Central Methodist Mission (CBD)</h3>
+      <p class="text-body mb-6">
+        <strong>Vibe:</strong> Methodist, historic, social-justice oriented. Oldest congregation in Joburg. Multi-racial historically.
+      </p>
+      <p class="text-body mb-4"><strong>Pros:</strong> Beautiful historic space, social-action emphasis, inclusive community.</p>
+      <p class="text-body mb-4"><strong>Cons:</strong> Not in Sandton proper — you need to drive or Uber to the Joburg CBD.</p>
+      <p class="text-body mb-6"><strong>Best for:</strong> People who want to combine Sunday worship with social justice engagement.</p>
+
+      <h2 class="heading-2 mb-4 mt-10">The Five Things Most Newcomers Want to Know (and We Have Answers)</h2>
+
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li><strong>"Which church is closest to me?"</strong> Use Google Maps. Drive-time at Sunday morning is what matters, not distance.</li>
+        <li><strong>"Which is the busiest?"</strong> Hillsong and Rivers are the largest by attendance.</li>
+        <li><strong>"Which is the most Bible-focused?"</strong> We would argue ours (Parkmore Bible Study). Among Sunday services: Parkhurst Community and Rivers are biblically expository.</li>
+        <li><strong>"Which is most welcoming to first-timers?"</strong> Parkhurst Community, Hillsong, and Rivers all have dedicated first-time greeters.</li>
+        <li><strong>"Which is best if I am visiting Joburg briefly?"</strong> Sunday morning at any of the listed churches works. Plan to arrive 15 min early.</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">A Local Note: Things to Know About Sunday Mornings in Sandton</h2>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>Parking fills up by 8:45am.</strong> Plan to arrive 15 minutes before the service starts.</li>
+        <li><strong>Most churches have a children's programme</strong> but you must register on arrival for security.</li>
+        <li><strong>Greeters will recognise you are new.</strong> Tell them. They will help you find your way.</li>
+        <li><strong>Coffee is almost always after the service.</strong> Stay for it. That is where community happens.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">What We Recommend If You Have Time for Only One Visit</h2>
+      <p class="text-body mb-6">
+        If you have one Sunday to explore, here is the order we suggest:
+      </p>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li><strong>Sunday morning:</strong> Visit one Sunday service from the list above (Rivers or Parkhurst Community for a balanced first impression).</li>
+        <li><strong>Sunday afternoon:</strong> Drop into our free Korean class at Parkmore (totally unrelated to your morning visit — just another data point).</li>
+        <li><strong>Wednesday evening:</strong> Join our online Bible study. 90 minutes. Camera off. Just listen.</li>
+      </ol>
+      <p class="text-body mb-6">
+        After those three visits you will know which community fits you.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">FAQ</h2>
+
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Which Sandton church is best for young adults?</summary>
+        <p class="mt-3 text-gray-700">Hillsong Johannesburg and Rivers Sandton both have strong young adult ministries. Ours (Parkmore Bible Study) is also explicitly young adult-oriented.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Which Sandton church is best for families?</summary>
+        <p class="mt-3 text-gray-700">Parkhurst Community Church and Rivers Sandton both have excellent kids' ministry. St Mary the Virgin is also great with a strong 10:00am Sunday school.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Which church should I visit if I am not religious but open?</summary>
+        <p class="mt-3 text-gray-700">Parkhurst Community Church, ours (Parkmore Bible Study), or Rivers Sandton. All three are warm to sceptics.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Are there any churches that meet at night?</summary>
+        <p class="mt-3 text-gray-700">Yes. Our Bible study meets Wednesdays online at 7:30pm. Some evangelical churches have Saturday evening services.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Is there a megachurch in Sandton?</summary>
+        <p class="mt-3 text-gray-700">Rivers Sandton and Hillsong Johannesburg are the closest to megachurch.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Are there any Afrikaans churches in the area?</summary>
+        <p class="mt-3 text-gray-700">Yes — many Afrikaans-speaking Reformed, Dutch Reformed, and Afrikaans evangelical congregations in the northern suburbs. We can recommend specific ones based on denomination — call us.</p>
+      </details>
+      <details class="card mb-10">
+        <summary class="font-semibold cursor-pointer">What is the dress code at Sandton churches?</summary>
+        <p class="mt-3 text-gray-700">Most are casual to smart casual. Cathedral of Christ the King requires modest dress. Read our <a href="/what-to-wear-to-church-johannesburg/" class="underline">dress code guide</a> for full details.</p>
+      </details>
+
+      <div class="bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-2xl p-8 text-center mt-12">
+        <h3 class="heading-2 text-white mb-3">Still Deciding? Start Online</h3>
+        <p class="text-blue-100 mb-6 max-w-xl mx-auto">Every Wednesday 7:30pm. Free. No commitment. Just listen to Scripture explained.</p>
+        <a href="tel:+27774871295" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-blue-700 hover:bg-blue-50">
+          Call Mr. Sim for the Link
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
