@@ -1,0 +1,164 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Locations', url: '/locations/' },
+  { name: 'Bible Study Alberton', url: '/bible-study-alberton/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is there a Bible study group in Alberton?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Johannesburg Bible Study Church serves Alberton and the surrounding suburbs of Alberante, New Redruth, Brackenhurst, and Meyersdal. Our main programme is a free Wednesday evening online Bible study that anyone from Alberton can join via Google Meet.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where do Alberton residents meet for Bible study?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most Alberton residents who attend our Bible study join the Wednesday online session at 7:30pm from home. Our main community hub is at Parkmore, Sandton — about 25 to 35 minutes drive from most Alberton suburbs, depending on traffic.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is the Alberton Bible study free?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Our Bible study and Korean class are free. There is no fee, no suggested donation, no obligation to give.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What time does the Bible study meet?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Wednesday evenings, 7:30pm to 9:00pm, online via Google Meet. You can log in from home.',
+      },
+    },
+  ],
+};
+---
+<BaseLayout
+  title="Bible Study in Alberton | Wednesday Group for Alberton Residents"
+  description="Looking for a Bible study in Alberton, Johannesburg? Free Wednesday evening group for Alberton, Brackenhurst, Meyersdal and New Redruth residents. Online via Google Meet. All welcome."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max max-w-4xl">
+      <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Bible Study in Alberton</p>
+      <h1 class="heading-1 mb-6">Bible Study in Alberton: A Free Wednesday Group for Residents of Alberton, Brackenhurst and Meyersdal</h1>
+      <p class="text-lg text-gray-700 mb-8">
+        If you searched <em>bible study alberton</em>, you probably know that Alberton has plenty of Afrikaans and English churches but the Bible study options — small, conversational, weekday-evening — are thinner on the ground. We are trying to fill that gap, and here is how.
+      </p>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-blue-900 mb-3">This page covers:</p>
+        <ul class="space-y-2 text-blue-900 text-sm">
+          <li>✓ What our Wednesday evening group is honestly like</li>
+          <li>✓ The Alberton suburbs we serve most</li>
+          <li>✓ How to join in three simple steps</li>
+          <li>✓ Driving directions from major Alberton suburbs to Parkmore</li>
+        </ul>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">Why Alberton Is on Our Radar</h2>
+      <p class="text-body mb-6">
+        Alberton is a tight-knit part of the East Rand with a strong church-going culture. The big Afrikaans churches (NG, Hervormde) are well represented, as are several English-speaking evangelical congregations. What is harder to find is a small, conversational Bible study that meets midweek, especially for people who want something less formal than a Sunday service.
+      </p>
+      <p class="text-body mb-6">
+        Our Wednesday evening online Bible study is built for that gap. People from Alberton, Brackenhurst, Meyersdal, Alberante, New Redruth, and even the southern parts of Boksburg have been joining us for years. The online format works particularly well for Alberton residents because the drive into central Sandton is not trivial — 25 to 45 minutes depending on traffic and time of day.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">The Wednesday Evening Bible Study</h2>
+      <p class="text-body mb-6">
+        Wednesdays, 7:30pm to 9:00pm, on Google Meet. We open in prayer, read a passage, and discuss. The group has about a dozen to two dozen regulars from across Johannesburg — including a steady Alberton contingent.
+      </p>
+      <p class="text-body mb-6">
+        The Bible study is unhurried. We work through a chapter over four to five weeks. Recent passages include Psalm 23, the book of Ruth, the Sermon on the Mount, and the early chapters of John. The tone is conversational, not academic.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Who Joins from Alberton</h2>
+      <p class="text-body mb-6">
+        We have regulars from Alberton proper, plus Brackenhurst, Meyersdal, Alberante, New Redruth, and the western edges of the area near Glenvista. About a third of our Alberton regulars are Afrikaans-speaking and we accommodate that — Bible translations in Afrikaans (1933/53 or 1983) are always available.
+      </p>
+      <p class="text-body mb-6">
+        Demographically, the Alberton group is mostly in their thirties to fifties, often with school-aged or teenage kids, often solidly churched in the past but looking for something midweek and intimate. Many are bilingual or Afrikaans-first.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">In-Person Options in Parkmore</h2>
+      <p class="text-body mb-6">
+        For Alberton residents who want to meet in person, our main hub is at Parkmore, 11th Street, Sandton. Off-peak driving time is 25 to 35 minutes from most Alberton suburbs. Peak traffic can stretch it to 50 minutes or more, which is why most of our Alberton members prefer the Wednesday online session.
+      </p>
+      <p class="text-body mb-6">
+        Two in-person programmes run at Parkmore:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>Free Korean Class</strong> — Sundays at 2:00pm. About 90 minutes. Beginners welcome.</li>
+        <li><strong>First Saturday In-Person Bible Study</strong> — once a month, first Saturday, 4:00pm. Smaller, more conversational than the Wednesday group.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">How to Join</h2>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li>Call or WhatsApp <strong>Mr. Sim on +27 77 487 1295</strong> or <strong>Ms. Dora on +27 67 442 4461</strong>.</li>
+        <li>We send you the Google Meet link the morning of the session.</li>
+        <li>Log in at 7:30pm. Camera on or off.</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">Driving Directions from Major Alberton Suburbs</h2>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>From Alberton CBD:</strong> Voortrekker Road north, M2 west, M1 north, Jan Smuts into Sandton. About 35 minutes off-peak.</li>
+        <li><strong>From Brackenhurst:</strong> Hennie Alberts, M2 west, M1 north. About 30 minutes off-peak.</li>
+        <li><strong>From Meyersdal:</strong> Michelle Avenue to Hennie Alberts. About 35 minutes off-peak.</li>
+        <li><strong>From New Redruth / Alberante:</strong> Du Plessis Road to M2. About 30 minutes off-peak.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">Frequently Asked Questions</h2>
+      <div class="space-y-4 mb-10">
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Do you have a Sunday service in Alberton?</summary>
+          <p class="text-body mt-3">No. We do not run a traditional Sunday service in Alberton. Our in-person hub is in Parkmore, Sandton. If you are looking for a Sunday service closer to home, we can recommend a few — call us.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Is the Bible study available in Afrikaans?</summary>
+          <p class="text-body mt-3">Yes. About a third of our Alberton regulars prefer Afrikaans. We accommodate that by using the 1933/53 or 1983 translation for those who want it. The discussion is mostly in English but anyone is welcome to contribute in Afrikaans.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Can I attend if I am not a Christian?</summary>
+          <p class="text-body mt-3">Yes. Sceptics and seekers are welcome. About a third of our regulars are not committed Christians.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Is there a youth programme in Alberton?</summary>
+          <p class="text-body mt-3">Our youth programme (UseCan) runs in Parkmore, Sandton, on Saturdays at 3:00pm. Drive time is about 35 minutes from most Alberton suburbs.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">What Bible translation do you use?</summary>
+          <p class="text-body mt-3">Mostly NIV in English, with Afrikaans 1933/53 and 1983 available. ESV and NASB are also on hand.</p>
+        </details>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">The Honest Bottom Line</h2>
+      <p class="text-body mb-6">
+        Alberton has plenty of churches. What it has less of is a small, midweek, conversational Bible study. That is what we are. Wednesday evening, online, free. Phone numbers: <strong>Mr. Sim +27 77 487 1295</strong>, <strong>Ms. Dora +27 67 442 4461</strong>. One sentence is enough.
+      </p>
+
+      <div class="bg-blue-100 border border-blue-300 rounded-xl p-6 mb-10 mt-10">
+        <p class="font-semibold text-blue-900 mb-3">Related pages:</p>
+        <ul class="space-y-2 text-blue-900 text-sm">
+          <li>→ <a href="/free-bible-study-sandton/" class="underline">Free Bible Study in Sandton</a></li>
+          <li>→ <a href="/online-bible-study-johannesburg/" class="underline">Online Bible Study in Johannesburg</a></li>
+          <li>→ <a href="/bible-study-randburg/" class="underline">Bible Study in Randburg</a></li>
+          <li>→ <a href="/locations/alberton/" class="underline">Alberton Location Overview</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

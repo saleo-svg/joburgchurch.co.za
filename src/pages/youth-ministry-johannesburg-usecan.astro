@@ -1,0 +1,212 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Youth', url: '/youth-usecan/' },
+  { name: 'Youth Ministry Johannesburg', url: '/youth-ministry-johannesburg-usecan/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: 'UseCan Youth Ministry — Johannesburg Bible Study Church',
+  description: 'UseCan is the youth ministry of Johannesburg Bible Study Church, gathering young people in Sandton and greater Johannesburg for Bible study, mentorship, and service. Summer and winter schedule.',
+  startDate: '2026-07-15',
+  endDate: '2026-12-31',
+  eventStatus: 'https://schema.org/EventScheduled',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  location: {
+    '@type': 'Place',
+    name: 'Parkmore Community Room',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '11th Street, Parkmore',
+      addressLocality: 'Sandton',
+      postalCode: '2196',
+      addressCountry: 'ZA',
+    },
+  },
+  organizer: {
+    '@type': 'Organization',
+    name: 'Johannesburg Bible Study Church',
+    url: 'https://joburgchurch.co.za',
+  },
+};
+---
+<BaseLayout
+  title="Youth Ministry in Johannesburg | UseCan at JBSC Sandton"
+  description="UseCan is the youth ministry of Johannesburg Bible Study Church. Honest guide for parents and teens — what we do, who it is for, what it costs, and how to join the winter 2026 intake."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max max-w-4xl">
+      <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Youth & Faith</p>
+      <h1 class="heading-1 mb-6">Youth Ministry in Johannesburg: A Plain-English Guide to UseCan at JBSC Sandton</h1>
+      <p class="text-lg text-gray-700 mb-8">
+        If you searched <em>youth ministry johannesburg</em>, you are probably one of two people. You are either a parent trying to find something solid for your teenager, or you are a teenager yourself trying to find somewhere that does not feel fake. Either way — we built UseCan for you.
+      </p>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-blue-900 mb-3">This page will tell you:</p>
+        <ul class="space-y-2 text-blue-900 text-sm">
+          <li>✓ What UseCan actually is — and what it is not</li>
+          <li>✓ Who it is for (ages, schools, personality types)</li>
+          <li>✓ When and where it meets in 2026</li>
+          <li>✓ How to join the winter intake</li>
+          <li>✓ What parents can expect (and what to watch for)</li>
+        </ul>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">What UseCan Is (and What It Is Not)</h2>
+      <p class="text-body mb-6">
+        UseCan is the youth ministry of Johannesburg Bible Study Church. The name is a bit of an inside joke — "UseCan" is a South African-ish phrase that means "you can". It comes from a regular of ours who used to say it as a pep talk to teenagers in tough spots: "UseCan do this. UseCan make it."
+      </p>
+      <p class="text-body mb-6">
+        We run it as a structured programme for ages 13 to 18. The format is two parts: a short Bible study led by Mr. Sim, and then a longer unstructured hangout where the young people do what young people do — play games, eat, talk. We have a strong rule: there is no performance, no altar call, no forced sharing. If a teen just wants to come and play pool for ninety minutes, that is fine. They will still hear the Bible read. That is enough.
+      </p>
+      <p class="text-body mb-6">
+        What UseCan is not: it is not a school. We do not give homework, grades, or reports. It is not a counselling service. If a teen needs professional help, we will point them to one of several Christian-friendly psychologists in Johannesburg. It is not a substitute for the parents. The parents are still in charge. We are here to support them.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Who It Is For</h2>
+      <p class="text-body mb-6">
+        UseCan is built for teenagers who:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li>Are aged 13 to 18.</li>
+        <li>Live in or near Johannesburg — most of our regulars come from Sandton, Randburg, Bryanston, Fourways, Rosebank, Parktown, and Linden.</li>
+        <li>Go to school in Johannesburg — but we have had a few from Pretoria and Centurion when parents are willing to drive.</li>
+        <li>Have some curiosity about the Bible, even if they are not sure they believe it. Sceptics welcome.</li>
+        <li>Have parents who are supportive (we will not enrol a teen whose parents have explicitly asked them not to come).</li>
+      </ul>
+      <p class="text-body mb-6">
+        We have had every kind of teenager in our programme: top matrics from St Stithians and St Mary's, scholarship kids from Eldorado Park, students from Jeppe Boys and Barnato Park, homeschoolers, and a few who were kicked out of other schools. The programme is intentionally mixed. We have found that the diversity is what makes the group work.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">When and Where It Meets</h2>
+
+      <h3 class="heading-3 mb-3 mt-6">Winter 2026 Schedule</h3>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>When:</strong> Saturdays, 3:00pm to 5:30pm</li>
+        <li><strong>Where:</strong> Parkmore Community Room, Parkmore, Sandton</li>
+        <li><strong>First winter session:</strong> Saturday 18 July 2026</li>
+        <li><strong>Last winter session before break:</strong> Saturday 26 September 2026</li>
+        <li><strong>Cost:</strong> Free</li>
+      </ul>
+
+      <h3 class="heading-3 mb-3 mt-6">Summer 2026/27 Schedule</h3>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>When:</strong> Saturdays, 4:00pm to 7:00pm (longer because of more daylight)</li>
+        <li><strong>Where:</strong> Same community room, plus occasional outings (e.g. Montecasino bird park, Zoo Lake)</li>
+        <li><strong>First summer session:</strong> Saturday 17 October 2026</li>
+        <li><strong>Last summer session before break:</strong> Saturday 12 December 2026</li>
+      </ul>
+
+      <h3 class="heading-3 mb-3 mt-6">Monthly Service Saturday</h3>
+      <p class="text-body mb-6">
+        On the first Saturday of each month, UseCan does a service project. Past projects have included packing food parcels for the Parkmore Community Fridge, cleaning up the Braamfontein Spruit, and visiting a local old-age home. Service is optional but strongly encouraged. Parents are welcome to come along.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">What a Typical Saturday Looks Like</h2>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li><strong>3:00pm — Arrival.</strong> Teens sign in, grab a snack, and find a friend. We have a strict no-phone-during-Bible-study rule, but phones are welcome during hangout.</li>
+        <li><strong>3:20pm — Welcome and song.</strong> One short song, no performance, no instruments. If a teen does not want to sing, they don't.</li>
+        <li><strong>3:30pm — Bible study (30 minutes).</strong> Mr. Sim leads from one of the Gospels. The style is conversational. Questions are encouraged. Scepticism is welcome.</li>
+        <li><strong>4:00pm — Hangout.</strong> Pool, table tennis, board games, walks, talking. We provide drinks and snacks.</li>
+        <li><strong>5:15pm — Closing.</strong> We do a quick go-round where each teen says one sentence about their week. Optional.</li>
+        <li><strong>5:30pm — Pickup.</strong> Parents collect from the community room. We do not let teens leave on their own.</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">The Curriculum</h2>
+      <p class="text-body mb-6">
+        We work through the Bible over four years. By the time a teen leaves UseCan at eighteen, they will have read the whole New Testament and most of the Old Testament. The current rotation:
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-6">2026 — The Gospels</h3>
+      <p class="text-body mb-6">
+        We are reading through Matthew, Mark, Luke, and John together. The focus this year is on who Jesus actually was, what he said that was surprising, and what he said that was hard. We have spent four weeks on the Sermon on the Mount and another four on the parables.
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-6">2027 — Acts and the Early Church</h3>
+      <p class="text-body mb-6">
+        Next year we move to Acts. We will look at how the first Christians figured out what Christianity was. We will also spend time on Paul and his letters.
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-6">2028 — The Old Testament Narrative</h3>
+      <p class="text-body mb-6">
+        Genesis, Exodus, the historical books. The big stories, the awkward parts, and the poetry.</p>
+
+      <h3 class="heading-3 mb-3 mt-6">2029 — Wisdom and Prophets</h3>
+      <p class="text-body mb-6">
+        Proverbs, Ecclesiastes, Job, the Major Prophets. The hard questions. The verses that don't make sense. The verses that comfort.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">What Parents Can Expect</h2>
+      <p class="text-body mb-6">
+        We have a parent WhatsApp group. We send a short note after each session ("we read Matthew 5:13-20, the teens asked good questions about salt and light"). We do not report on individual teens without their permission. If your teen tells us something serious — self-harm, abuse, suicidal thoughts — we will contact you and a professional. That is non-negotiable.
+      </p>
+      <p class="text-body mb-6">
+        We have a strict safeguarding policy. All our adult volunteers have been background-checked through the South African Police. We do not allow one-on-one private contact between a teen and an adult outside the programme. Two-deep leadership is the rule at every session.
+      </p>
+      <p class="text-body mb-6">
+        UseCan is also free. There is no fee, no donation asked, and no fundraising pressure. We are supported by the wider Bible study community and a small group of regular donors.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">How to Join</h2>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li><strong>Parent contacts us first.</strong> Call Mr. Sim (<strong>+27 77 487 1295</strong>) or Ms. Dora (<strong>+27 67 442 4461</strong>) or send a WhatsApp. We will set up a 20-minute phone call with one of the parents.</li>
+        <li><strong>Short conversation.</strong> We want to know about your teen (school, interests, faith background) and you want to know about us. We answer any question.</li>
+        <li><strong>Trial Saturday.</strong> Your teen comes to one Saturday session. No commitment. They can decide if it is for them.</li>
+        <li><strong>Enrolment.</strong> If your teen wants to come back, we ask them to commit to a season (winter or summer). Casual drop-ins are welcome but the rhythm is what makes the group work.</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">Frequently Asked Questions</h2>
+      <div class="space-y-4 mb-10">
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Is my child too young or too old?</summary>
+          <p class="text-body mt-3">The programme is built for ages 13 to 18. If your child is 11 or 12 and keen, call us — we sometimes make exceptions for mature kids. If your child is 19 or older, we will point them to our adult Wednesday Bible study.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">What if my teen does not believe in God?</summary>
+          <p class="text-body mt-3">That is fine. About a third of our teens are sceptical or agnostic when they join. The Bible study is conversational, not evangelical. We will not pressure them to pray, share, or commit.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Is it safe? How do you screen volunteers?</summary>
+          <p class="text-body mt-3">All adult volunteers have a current South African Police clearance. We have a two-deep leadership rule at every session. We do not allow private one-on-one contact between an adult and a teen outside the programme. We have a written safeguarding policy available on request.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Does my teen need to bring anything?</summary>
+          <p class="text-body mt-3">No. We provide snacks and drinks. If your teen has a Bible they prefer, they can bring it. Otherwise we use the NIV in the room.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">What if my teen has special needs?</summary>
+          <p class="text-body mt-3">We have had teens with autism, ADHD, dyslexia, and learning difficulties in the programme. Call us and we will talk through what we can reasonably accommodate.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Can parents attend?</summary>
+          <p class="text-body mt-3">Yes. We have an open-door policy for parents. Many drop in once or twice a term. We also have a parent WhatsApp group and quarterly parent meetings.</p>
+        </details>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">The Honest Bottom Line</h2>
+      <p class="text-body mb-6">
+        UseCan is not a perfect programme. We do not have a glossy logo or branded merchandise. We do not have celebrity speakers. What we have is a small group of teenagers who show up on Saturdays, a Bible we read slowly, and adults who care enough to be there. If that sounds like something your teen could use, we would be glad to meet them.
+      </p>
+      <p class="text-body mb-6">
+        Phone numbers: <strong>Mr. Sim +27 77 487 1295</strong>, <strong>Ms. Dora +27 67 442 4461</strong>. One sentence is enough.
+      </p>
+
+      <div class="bg-blue-100 border border-blue-300 rounded-xl p-6 mb-10 mt-10">
+        <p class="font-semibold text-blue-900 mb-3">Related pages:</p>
+        <ul class="space-y-2 text-blue-900 text-sm">
+          <li>→ <a href="/youth-bible-study-johannesburg/" class="underline">Youth Bible Study in Johannesburg</a></li>
+          <li>→ <a href="/youth-usecan/" class="underline">UseCan Overview</a></li>
+          <li>→ <a href="/parenting-biblical-advice-johannesburg/" class="underline">Biblical Parenting Advice</a></li>
+          <li>→ <a href="/free-bible-study-sandton/" class="underline">Free Bible Study in Sandton</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

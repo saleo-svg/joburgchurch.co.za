@@ -108,6 +108,21 @@ These need content depth + backlinks, but are attainable.
 | /youth-bible-study-johannesburg/ | youth bible study johannesburg | 4900 |
 | /churches-in-sandton/ | churches in sandton | 5300 |
 
+### Phase 10 SEO Landing Pages (Month 2 — added 2026-07-03)
+
+| Page | Primary Keyword | Word Count | Schema |
+|------|-----------------|------------|--------|
+| /bible-study-for-depression-johannesburg/ | bible study for depression johannesburg | 4800 | MedicalCondition + FAQPage |
+| /marriage-counselling-johannesburg/ | marriage counselling johannesburg | 4500 | Service + FAQPage |
+| /parenting-biblical-advice-johannesburg/ | biblical parenting advice johannesburg | 4600 | HowTo + FAQPage |
+| /youth-ministry-johannesburg-usecan/ | youth ministry johannesburg | 4400 | Event + FAQPage |
+| /bible-study-randburg/ | bible study randburg | 4200 | LocalBusiness + FAQPage |
+| /bible-study-fourways/ | bible study fourways | 4200 | LocalBusiness + FAQPage |
+| /bible-study-midrand/ | bible study midrand | 4000 | LocalBusiness + FAQPage |
+| /bible-study-alberton/ | bible study alberton | 3800 | LocalBusiness + FAQPage |
+| /bible-study-roodepoort/ | bible study roodepoort | 3800 | LocalBusiness + FAQPage |
+| /bible-study-soweto/ | bible study soweto | 3800 | LocalBusiness + FAQPage |
+
 ### Blog Posts (each targeting 1-2 long-tail keywords)
 
 | Slug | Primary Keyword | Date |
@@ -191,7 +206,7 @@ Each page also has:
 - ⏳ Submit to 5 free SA directories
 
 ### Month 2 (Aug 2026)
-- Add 3-5 new SEO landing pages (target: youth ministry, parenting, depression, marriage)
+- ✅ Add 10 new SEO landing pages (this phase — depression / marriage / parenting / youth ministry + 6 location pages: randburg, fourways, midrand, alberton, roodepoort, soweto)
 - First batch of backlinks from directories indexed
 - Start publishing 1 blog post per week
 - Add customer reviews/testimonials page

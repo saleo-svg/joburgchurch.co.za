@@ -1,0 +1,164 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Locations', url: '/locations/' },
+  { name: 'Bible Study Roodepoort', url: '/bible-study-roodepoort/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is there a Bible study group in Roodepoort?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Johannesburg Bible Study Church serves Roodepoort and the surrounding suburbs of Weltevredenpark, Constantia Kloof, Florida, Radiokop, and Little Falls. Our main programme is a free Wednesday evening online Bible study that anyone from Roodepoort can join via Google Meet.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where do Roodepoort residents meet for Bible study?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most Roodepoort residents who attend our Bible study join the Wednesday online session at 7:30pm from home. Our main community hub is at Parkmore, Sandton — about 25 to 35 minutes drive from most Roodepoort suburbs, depending on traffic.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is the Roodepoort Bible study free?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Our Bible study and Korean class are free. There is no fee, no suggested donation, no obligation to give.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What time does the Bible study meet?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Wednesday evenings, 7:30pm to 9:00pm, online via Google Meet. You can log in from home.',
+      },
+    },
+  ],
+};
+---
+<BaseLayout
+  title="Bible Study in Roodepoort | Wednesday Group for Roodepoort Residents"
+  description="Looking for a Bible study in Roodepoort, Johannesburg? Free Wednesday evening group for Roodepoort, Weltevredenpark, Florida, Constantia Kloof and Little Falls residents. Online via Google Meet. All welcome."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max max-w-4xl">
+      <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Bible Study in Roodepoort</p>
+      <h1 class="heading-1 mb-6">Bible Study in Roodepoort: A Free Wednesday Group for Residents of Roodepoort, Weltevredenpark and Florida</h1>
+      <p class="text-lg text-gray-700 mb-8">
+        If you searched <em>bible study roodepoort</em>, you are probably someone who grew up in a West Rand church, drifted somewhere along the way, and is now quietly wondering if it is time to come back. Or maybe you are new to the area and looking for community. Either way — welcome.
+      </p>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-blue-900 mb-3">This page covers:</p>
+        <ul class="space-y-2 text-blue-900 text-sm">
+          <li>✓ What our Wednesday evening group is honestly like</li>
+          <li>✓ The Roodepoort suburbs we serve most</li>
+          <li>✓ How to join in three simple steps</li>
+          <li>✓ Driving directions from major Roodepoort suburbs to Parkmore</li>
+        </ul>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">Why Roodepoort Is on Our Radar</h2>
+      <p class="text-body mb-6">
+        Roodepoort is one of the more churched parts of the West Rand. Weltevredenpark, Constantia Kloof, Florida, and Little Falls are full of people who grew up in NG, Hervormde, or Methodist congregations. Many of them are now in their thirties and forties, with kids of their own, and the small conversational Bible study they grew up with has either disappeared or morphed into something bigger and more performative.
+      </p>
+      <p class="text-body mb-6">
+        Our Wednesday evening group is built to fill that gap. It is small, conversational, online, and free. People from Roodepoort join from their lounges or studies at 7:30pm, log out by 9:00pm, and have not had to drive anywhere. Over the last few years, we have picked up a steady Roodepoort contingent — about a dozen regulars from across the area.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">The Wednesday Evening Bible Study</h2>
+      <p class="text-body mb-6">
+        Wednesdays, 7:30pm to 9:00pm, on Google Meet. We open in prayer, read a passage, and discuss. The group has about a dozen to two dozen regulars from across Johannesburg.
+      </p>
+      <p class="text-body mb-6">
+        The Bible study is unhurried. We take four to five weeks on each chapter. The tone is conversational. The expectation is honesty, not expertise. Scepticism is welcome.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Who Joins from Roodepoort</h2>
+      <p class="text-body mb-6">
+        We have regulars from Roodepoort proper (the central area around Ontdekkers Road), Weltevredenpark, Constantia Kloof, Florida, Radiokop, Little Falls, and the edges near Krugersdorp. We also have a few from Strubensvallei and Allen's Nek.
+      </p>
+      <p class="text-body mb-6">
+        Demographically, the Roodepoort group is mostly in their thirties to fifties. About a third are Afrikaans-speaking and we accommodate that — Bible translations in Afrikaans are always available. Many are coming back to faith after a long gap and are looking for something gentle, not heavy.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">In-Person Options in Parkmore</h2>
+      <p class="text-body mb-6">
+        For Roodepoort residents who want to meet in person, our main hub is at Parkmore, 11th Street, Sandton. Off-peak driving time is 25 to 35 minutes from most Roodepoort suburbs. Peak traffic can stretch it to 45 minutes, which is why most of our Roodepoort members prefer the Wednesday online session.
+      </p>
+      <p class="text-body mb-6">
+        Two in-person programmes run at Parkmore:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>Free Korean Class</strong> — Sundays at 2:00pm. About 90 minutes. Beginners welcome.</li>
+        <li><strong>First Saturday In-Person Bible Study</strong> — once a month, first Saturday, 4:00pm. Smaller, more conversational than the Wednesday group.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">How to Join</h2>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li>Call or WhatsApp <strong>Mr. Sim on +27 77 487 1295</strong> or <strong>Ms. Dora on +27 67 442 4461</strong>.</li>
+        <li>We send you the Google Meet link the morning of the session.</li>
+        <li>Log in at 7:30pm. Camera on or off.</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">Driving Directions from Major Roodepoort Suburbs</h2>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>From Weltevredenpark:</strong> Hendrik Potgieter toward Sandton, about 25 minutes off-peak.</li>
+        <li><strong>From Constantia Kloof / Florida:</strong> Hendrik Potgieter toward Sandton, about 30 minutes off-peak.</li>
+        <li><strong>From Little Falls:</strong> Hendrik Potgieter, about 30 minutes off-peak.</li>
+        <li><strong>From Radiokop:</strong> Christiaan de Wet, Hendrik Potgieter, about 30 minutes off-peak.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">Frequently Asked Questions</h2>
+      <div class="space-y-4 mb-10">
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Do you have a Sunday service in Roodepoort?</summary>
+          <p class="text-body mt-3">No. We do not run a traditional Sunday service in Roodepoort. Our in-person hub is in Parkmore, Sandton. If you are looking for a Sunday service closer to home, we can recommend a few — call us.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Is the Bible study available in Afrikaans?</summary>
+          <p class="text-body mt-3">Yes. About a third of our Roodepoort regulars prefer Afrikaans. The discussion is mostly in English but Afrikaans contributions are always welcome.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Can I attend if I am not a Christian?</summary>
+          <p class="text-body mt-3">Yes. Sceptics and seekers are welcome. About a third of our regulars are not committed Christians.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Is there a youth programme in Roodepoort?</summary>
+          <p class="text-body mt-3">Our youth programme (UseCan) runs in Parkmore, Sandton, on Saturdays at 3:00pm. Drive time is about 30 to 35 minutes from most Roodepoort suburbs.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">What Bible translation do you use?</summary>
+          <p class="text-body mt-3">Mostly NIV in English, with Afrikaans 1933/53 and 1983 available. ESV and NASB are also on hand.</p>
+        </details>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">The Honest Bottom Line</h2>
+      <p class="text-body mb-6">
+        Roodepoort is full of people who grew up in church, drifted, and are quietly wondering if it is time to come back. Our Wednesday online Bible study is built for that person — gentle, serious, free. Phone numbers: <strong>Mr. Sim +27 77 487 1295</strong>, <strong>Ms. Dora +27 67 442 4461</strong>. One sentence is enough.
+      </p>
+
+      <div class="bg-blue-100 border border-blue-300 rounded-xl p-6 mb-10 mt-10">
+        <p class="font-semibold text-blue-900 mb-3">Related pages:</p>
+        <ul class="space-y-2 text-blue-900 text-sm">
+          <li>→ <a href="/free-bible-study-sandton/" class="underline">Free Bible Study in Sandton</a></li>
+          <li>→ <a href="/online-bible-study-johannesburg/" class="underline">Online Bible Study in Johannesburg</a></li>
+          <li>→ <a href="/bible-study-randburg/" class="underline">Bible Study in Randburg</a></li>
+          <li>→ <a href="/locations/roodepoort/" class="underline">Roodepoort Location Overview</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

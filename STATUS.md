@@ -1,7 +1,46 @@
 # STATUS.md
 
 ## Current Phase
-**Phase 9 DEPLOYED. SEO blitz 2 — 6 new long-tail SEO landing pages targeting real search intent. Total 42 pages, 0 errors. Live at joburgchurch.co.za.**
+**Phase 10 DEPLOYED. SEO blitz 3 — 10 new long-tail SEO landing pages (4 topical + 6 location-specific) + 3 new blog posts + BACKLINK_SOP.md + GSC_SUBMISSION_CHECKLIST.md. Total ~52 pages + 12 blog posts. Live at joburgchurch.co.za.**
+
+## Phase 10 (2026-07-03) — Long-tail SEO Blitz 3
+
+### 10 New SEO Landing Pages
+| Page | Primary Keyword | Word Count | Schema |
+|------|-----------------|------------|--------|
+| /bible-study-for-depression-johannesburg/ | bible study for depression johannesburg | ~4800 | FAQPage |
+| /marriage-counselling-johannesburg/ | marriage counselling johannesburg | ~4500 | FAQPage |
+| /parenting-biblical-advice-johannesburg/ | biblical parenting advice johannesburg | ~4600 | HowTo + FAQPage |
+| /youth-ministry-johannesburg-usecan/ | youth ministry johannesburg | ~4400 | Event + FAQPage |
+| /bible-study-randburg/ | bible study randburg | ~4200 | FAQPage |
+| /bible-study-fourways/ | bible study fourways | ~4200 | FAQPage |
+| /bible-study-midrand/ | bible study midrand | ~4000 | FAQPage |
+| /bible-study-alberton/ | bible study alberton | ~3800 | FAQPage |
+| /bible-study-roodepoort/ | bible study roodepoort | ~3800 | FAQPage |
+| /bible-study-soweto/ | bible study soweto | ~3800 | FAQPage |
+
+### 3 New Blog Posts
+- /blog/when-the-bible-feels-irrelevant/ (2026-07-05) — honest-faith, ~1100 words
+- /blog/what-sandton-gets-wrong-about-christianity/ (2026-07-08) — Sandton culture, ~1200 words
+- /blog/the-gospel-according-to-load-shedding/ (2026-07-10) — Johannesburg + faith, ~1300 words
+
+### New SEO Process Documents
+- **BACKLINK_SOP.md** — 30 min/week white-hat backlink workflow (directory, social, Quora, guest post)
+- **GSC_SUBMISSION_CHECKLIST.md** — 5-minute step-by-step for GSC verification + sitemap submission
+- **KEYWORD_MATRIX.md** — updated with all 10 new pages and Month 2 plan
+
+### Sitemap & Indexing
+- Total sitemap URLs: **52** (15 static + 19 SEO landing + 12 blog + 7 location + 1 video index)
+- lastmod 2026-07-03
+- Each new page has FAQPage / HowTo / Event schema
+- Internal links to /free-bible-study-sandton, /online-bible-study-johannesburg, /spiritual-education
+
+### Owner Manual Action Required
+1. **GSC submission** — see GSC_SUBMISSION_CHECKLIST.md (5 min)
+2. **GBP verification** — see SEO_BACKLINK_CHECKLIST.md section 2 (10 min + 14 day postcard)
+3. **Weekly 30 min backlink cadence** — see BACKLINK_SOP.md (start Saturday)
+
+
 
 ## Phase 9 (2026-07-03) — Long-tail SEO Blitz
 

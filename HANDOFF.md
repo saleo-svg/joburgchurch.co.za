@@ -3,7 +3,7 @@
 ## Project: Johannesburg Bible Study Church Website
 
 ## Status
-**Phase 9 DEPLOYED. SEO blitz 2 — 6 long-tail SEO landing pages + KEYWORD_MATRIX.md.**
+**Phase 10 DEPLOYED. SEO blitz 3 — 10 new SEO landing pages + 3 blog posts + BACKLINK_SOP.md + GSC_SUBMISSION_CHECKLIST.md. Total ~52 pages + 12 blog posts. Live at joburgchurch.co.za. Preview: TBD after deploy.**
 
 Build: 42 pages, 0 errors. Live at joburgchurch.co.za. Preview: e6a9502c.joburgchurch.pages.dev.
 
@@ -87,17 +87,19 @@ npx astro preview
 
 ## Next Steps (In Order)
 1. ~~Build and deploy (Phase 8b completed)~~
-2. **Owner manual: Google Search Console** — submit sitemap (5 min)
+2. **Owner manual: Google Search Console** — submit sitemap (5 min) — see GSC_SUBMISSION_CHECKLIST.md
    - https://search.google.com/search-console
    - Login leo123asante@gmail.com → add property → verify → submit sitemap
 3. **Owner manual: Google Business Profile** — create + verify (10 min + 14 day postcard)
    - https://business.google.com
-4. **Owner manual: Sveltia CMS OAuth** — follow CMS_SETUP_GUIDE.md (30 min)
+4. **Owner manual: Weekly 30 min backlink cadence** — see BACKLINK_SOP.md
+   - 1 directory per week, 1 Quora answer per week, 1 social reply per week
+5. **Owner manual: SA directory submissions** — follow BACKLINK_SOP.md Tier 2
+   - 5-10 directories over 2 months (free)
+6. **Owner manual: Sveltia CMS OAuth** — follow CMS_SETUP_GUIDE.md (30 min)
    - GitHub OAuth App → Worker deploy → update config.yml → invite collaborators
-5. **Owner manual: SA directory submissions** — follow SEO_BACKLINK_CHECKLIST.md
-   - Submit to 5-10 directories (15 min total)
-6. Replace SVG placeholder images with real church photos when available
-7. Rotate the exposed Cloudflare API token if not yet rotated.
+7. Replace SVG placeholder images with real church photos when available
+8. Rotate the exposed Cloudflare API token if not yet rotated.
 
 ## Deployment Automation
 - Local deploy command: `npm run deploy:cloudflare`

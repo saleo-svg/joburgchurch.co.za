@@ -1,0 +1,165 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Locations', url: '/locations/' },
+  { name: 'Bible Study Midrand', url: '/bible-study-midrand/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is there a Bible study group in Midrand?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Johannesburg Bible Study Church serves Midrand and the surrounding suburbs of Kyalami, Glen Austin, Halfway House, Vorna Valley, and Noordwyk. Our main programme is a free Wednesday evening online Bible study that anyone from Midrand can join via Google Meet.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where do Midrand residents meet for Bible study?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most Midrand residents who attend our Bible study join the Wednesday online session at 7:30pm from home. For in-person meetings, our main community hub is at Parkmore, 11th Street, Sandton — about 20 to 30 minutes drive from most Midrand suburbs, depending on traffic.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is the Midrand Bible study free?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Our Bible study and Korean class are free. There is no fee, no suggested donation, no obligation to give.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What time does the Bible study meet?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Wednesday evenings, 7:30pm to 9:00pm, online via Google Meet. You can log in from home. The in-person Saturday Bible study in Parkmore is once a month, first Saturday of the month, 4:00pm to 5:30pm.',
+      },
+    },
+  ],
+};
+---
+<BaseLayout
+  title="Bible Study in Midrand | Wednesday Group for Midrand Residents"
+  description="Looking for a Bible study in Midrand, Johannesburg? Free Wednesday evening group for Midrand, Kyalami, Halfway House, Vorna Valley and Noordwyk residents. Online via Google Meet. All welcome."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max max-w-4xl">
+      <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Bible Study in Midrand</p>
+      <h1 class="heading-1 mb-6">Bible Study in Midrand: A Free Wednesday Group for Residents of Midrand, Kyalami, Halfway House and Vorna Valley</h1>
+      <p class="text-lg text-gray-700 mb-8">
+        If you searched <em>bible study midrand</em>, you have probably noticed that Midrand has grown fast in the last decade, and the churches have not always kept up. New estates around Waterfall, Carlswald, and Kyalami are full of young families, but the Bible study options are scattered. We are one of them. Here is the honest picture.
+      </p>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-blue-900 mb-3">This page covers:</p>
+        <ul class="space-y-2 text-blue-900 text-sm">
+          <li>✓ What our Wednesday evening group is honestly like</li>
+          <li>✓ The Midrand suburbs we serve most</li>
+          <li>✓ How to join in three simple steps</li>
+          <li>✓ Driving directions from major Midrand suburbs to Parkmore</li>
+        </ul>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">Why Midrand Is on Our Radar</h2>
+      <p class="text-body mb-6">
+        Midrand is the kind of place where you can live for three years and still not know your neighbours. People move in for work — the N1 corridor pulls professionals from across the country and the continent. Many of them are looking for a Bible study that does not require driving 40 minutes after work. The online Wednesday format is built for exactly that.
+      </p>
+      <p class="text-body mb-6">
+        Over the last five years, we have picked up a steady contingent of Midrand regulars. They tend to be young professionals, often with young children, often new to Johannesburg, often not strongly churched but curious about the Bible. The Wednesday group fits their schedule perfectly — log in at 7:30pm, log out at 9:00pm, no driving required.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">The Wednesday Evening Bible Study</h2>
+      <p class="text-body mb-6">
+        Wednesdays, 7:30pm to 9:00pm, on Google Meet. We open in prayer, read a passage, and discuss. The group has about a dozen to two dozen regulars from across Johannesburg, including a strong Midrand contingent.
+      </p>
+      <p class="text-body mb-6">
+        The Bible study is unhurried. We work through a chapter over four to five weeks so we can ask slow questions. Recent passages include the Sermon on the Mount, the book of Ruth, and the early chapters of John.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Who Joins from Midrand</h2>
+      <p class="text-body mb-6">
+        We have regulars from Midrand proper, plus Kyalami, Glen Austin, Halfway House, Vorna Valley, Noordwyk, and the new Waterfall estates. A few drive in from Centurion, which is technically Tshwane but close enough that some Centurion residents prefer our group.
+      </p>
+      <p class="text-body mb-6">
+        Demographically, the Midrand group is mostly young professionals in their late twenties to early forties, often with young children, often working in tech or finance. About a third are not South African — we have regulars from Zimbabwe, Zambia, India, the UK, and the US.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">In-Person Options in Parkmore</h2>
+      <p class="text-body mb-6">
+        For Midrand residents who want to meet in person, our main hub is at Parkmore, 11th Street, Sandton. Off-peak driving time is 20 to 30 minutes from most Midrand suburbs, depending on where you are. Peak traffic can stretch it to 40 minutes, which is why most of our Midrand members prefer the online Wednesday group.
+      </p>
+      <p class="text-body mb-6">
+        Two in-person programmes run at Parkmore:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>Free Korean Class</strong> — Sundays at 2:00pm. About 90 minutes. Beginners welcome.</li>
+        <li><strong>First Saturday In-Person Bible Study</strong> — once a month, first Saturday, 4:00pm. Smaller, more conversational than the Wednesday group.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">How to Join</h2>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li>Call or WhatsApp <strong>Mr. Sim on +27 77 487 1295</strong> or <strong>Ms. Dora on +27 67 442 4461</strong>.</li>
+        <li>We send you the Google Meet link the morning of the session.</li>
+        <li>Log in at 7:30pm. Camera on or off.</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">Driving Directions from Major Midrand Suburbs</h2>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>From Midrand CBD / Halfway House:</strong> Old Pretoria Road, N1 south, Jan Smuts off-ramp into Sandton. About 25 minutes off-peak.</li>
+        <li><strong>From Kyalami:</strong> Main Road to Kyalami Boulevard, N1 south, into Sandton. About 28 minutes off-peak.</li>
+        <li><strong>From Vorna Valley:</strong> Old Mutual Lane to Old Pretoria Road, N1 south. About 30 minutes off-peak.</li>
+        <li><strong>From Noordwyk:</strong> Lever Road to N1 south. About 25 minutes off-peak.</li>
+        <li><strong>From Carlswald / Waterfall:</strong> New Road to N1 south. About 30 minutes off-peak.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">Frequently Asked Questions</h2>
+      <div class="space-y-4 mb-10">
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Do you have a Sunday service in Midrand?</summary>
+          <p class="text-body mt-3">No. We do not run a traditional Sunday service in Midrand. Our in-person hub is in Parkmore, Sandton. If you are looking for a Sunday service closer to home, we can recommend a few — call us.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Can I join from Centurion or Pretoria?</summary>
+          <p class="text-body mt-3">Yes. Several of our regulars drive from Centurion. The Wednesday online group is the easiest way to join from outside Johannesburg — no driving needed.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Is there a youth programme in Midrand?</summary>
+          <p class="text-body mt-3">Our youth programme (UseCan) runs in Parkmore, Sandton, on Saturdays at 3:00pm. Drive time is about 30 minutes from most Midrand suburbs.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">What Bible translation do you use?</summary>
+          <p class="text-body mt-3">Mostly NIV. Some regulars prefer ESV or NASB. Afrikaans 1933/53 is available for those who prefer it.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Can I attend if I am not a Christian?</summary>
+          <p class="text-body mt-3">Yes. Sceptics and seekers are welcome. About a third of our regulars are not committed Christians.</p>
+        </details>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">The Honest Bottom Line</h2>
+      <p class="text-body mb-6">
+        Midrand is full of people who are tired of long drives and tired of performance. Our Wednesday online Bible study is built for that person. Phone numbers: <strong>Mr. Sim +27 77 487 1295</strong>, <strong>Ms. Dora +27 67 442 4461</strong>. One sentence is enough.
+      </p>
+
+      <div class="bg-blue-100 border border-blue-300 rounded-xl p-6 mb-10 mt-10">
+        <p class="font-semibold text-blue-900 mb-3">Related pages:</p>
+        <ul class="space-y-2 text-blue-900 text-sm">
+          <li>→ <a href="/free-bible-study-sandton/" class="underline">Free Bible Study in Sandton</a></li>
+          <li>→ <a href="/online-bible-study-johannesburg/" class="underline">Online Bible Study in Johannesburg</a></li>
+          <li>→ <a href="/bible-study-fourways/" class="underline">Bible Study in Fourways</a></li>
+          <li>→ <a href="/locations/midrand/" class="underline">Midrand Location Overview</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

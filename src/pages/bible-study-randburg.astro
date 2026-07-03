@@ -1,0 +1,167 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Locations', url: '/locations/' },
+  { name: 'Bible Study Randburg', url: '/bible-study-randburg/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is there a Bible study group in Randburg?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Johannesburg Bible Study Church serves Randburg and the surrounding suburbs of Ferndale, Blairgowrie, Linden, Cresta, Blackheath, and Emmarentia. Our main programme is a free Wednesday evening online Bible study that anyone from Randburg can join via Google Meet.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where do Randburg residents meet for Bible study?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most Randburg residents who attend our Bible study join the Wednesday online session at 7:30pm from home. For in-person meetings, our main community hub is at Parkmore, 11th Street, Sandton — about 15 minutes drive from most Randburg suburbs. Our Sunday Korean class also happens in Parkmore.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is the Randburg Bible study free?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Our Bible study and Korean class are free. There is no fee, no suggested donation, no obligation to give.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'I live in Randburg and I am not a Christian. Can I come?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. About a third of our Wednesday regulars started as sceptics or seekers. The group is non-denominational and conversational. Scepticism is welcome.',
+      },
+    },
+  ],
+};
+---
+<BaseLayout
+  title="Bible Study in Randburg | Wednesday Group for Randburg Residents"
+  description="Looking for a Bible study in Randburg, Johannesburg? Free Wednesday evening group for Randburg, Ferndale, Blairgowrie, Linden and Cresta residents. Online via Google Meet. All welcome."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max max-w-4xl">
+      <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Bible Study in Randburg</p>
+      <h1 class="heading-1 mb-6">Bible Study in Randburg: A Free Wednesday Group for Residents of Randburg, Ferndale, Blairgowrie and Linden</h1>
+      <p class="text-lg text-gray-700 mb-8">
+        If you searched <em>bible study randburg</em>, you are probably one of three things: a long-time Randburg resident looking for a community that takes the Bible seriously, a new arrival to Johannesburg who landed in Randburg and is finding their feet, or someone whose faith has lapsed and is quietly looking for a way back. All three are welcome here.
+      </p>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-blue-900 mb-3">This page will help you:</p>
+        <ul class="space-y-2 text-blue-900 text-sm">
+          <li>✓ Find the right Bible study option for your Randburg suburb</li>
+          <li>✓ Understand what our Wednesday evening group is honestly like</li>
+          <li>✓ Decide between the online group and our in-person Parkmore hub</li>
+          <li>✓ Get the practical info you need to join this week</li>
+        </ul>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">Why Randburg Is on Our Radar</h2>
+      <p class="text-body mb-6">
+        Randburg is one of the most quietly Christian parts of Johannesburg. The suburbs of Ferndale, Blairgowrie, Linden, and Cresta are full of people who grew up in church, drifted, and are now — sometimes in their thirties or forties — wondering if they should come back. We have met dozens of them in the last ten years, and many of them now sit in our Wednesday group.
+      </p>
+      <p class="text-body mb-6">
+        The challenge with Randburg is that it is a sprawl of suburbs. There is no obvious central church or meeting place that everyone walks to. Most people drive 10 to 20 minutes to wherever they land on a Sunday. For a weekday Bible study, that means online works better than anything else — which is why we run ours on Google Meet.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">The Wednesday Evening Bible Study</h2>
+      <p class="text-body mb-6">
+        Our main programme is a free Wednesday evening Bible study from 7:30pm to 9:00pm, hosted on Google Meet. About twelve to eighteen people join from across Johannesburg — Randburg, Sandton, Linden, Parkview, and further out. We open in prayer, read a passage, and discuss.
+      </p>
+      <p class="text-body mb-6">
+        The format is unhurried. We take four to five weeks on a single chapter so we can read slowly and ask the awkward questions. Recent passages we have worked through include the Sermon on the Mount, Psalm 23, the book of Ruth, and the early chapters of Genesis.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Who Joins from Randburg</h2>
+      <p class="text-body mb-6">
+        We have regulars from most Randburg suburbs. The most common are Ferndale, Blairgowrie, Linden, Cresta, Blackheath, and Emmarentia. We also have a few from Victory Park, Linden Extension, and the edges of Greenside. A handful drive in from Sundowner and Northcliff, which is technically Roodepoort but close enough.
+      </p>
+      <p class="text-body mb-6">
+        Demographically, the Randburg contingent tends to be a bit older than the Sandton side of the group — more in their thirties to fifties, more with school-aged kids, more coming back to faith after a decade or two away. They tend to be professionals: teachers, accountants, software engineers, nurses, small-business owners.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">In-Person Options in Parkmore (15 Minutes from Randburg)</h2>
+      <p class="text-body mb-6">
+        For those who want to meet in person, our main hub is at Parkmore, 11th Street, Sandton. From most Randburg suburbs, the drive is about 12 to 20 minutes off-peak. We host two in-person programmes there:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>Free Korean Class</strong> — every Sunday at 2:00pm. About 90 minutes. Beginners welcome. Two dozen students from across Johannesburg attend.</li>
+        <li><strong>First Saturday In-Person Bible Study</strong> — once a month, on the first Saturday at 4:00pm. About 90 minutes. Smaller group than the Wednesday online session.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">The Practical Stuff</h2>
+
+      <h3 class="heading-3 mb-3 mt-6">How to Join the Wednesday Group</h3>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li>Call or WhatsApp <strong>Mr. Sim on +27 77 487 1295</strong> or <strong>Ms. Dora on +27 67 442 4461</strong>. One sentence is enough.</li>
+        <li>We send you the Google Meet link the morning of the session.</li>
+        <li>Log in at 7:30pm. Camera on or off. Pyjamas welcome.</li>
+        <li>Come back next week, or don't.</li>
+      </ol>
+
+      <h3 class="heading-3 mb-3 mt-6">Driving Directions from Major Randburg Suburbs</h3>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>From Ferndale or Blairgowrie:</strong> Republic Road toward Sandton, left into Main, right into 11th Street. About 15 minutes.</li>
+        <li><strong>From Linden or Cresta:</strong> Republic Road toward Sandton. About 18 minutes.</li>
+        <li><strong>From Emmarentia or Blackheath:</strong> Barry Hertzog Avenue, then M1 south, Jan Smuts, into Sandton. About 22 minutes.</li>
+        <li><strong>From Victory Park:</strong> Louis Botha Avenue, into Sandton via Katherine. About 18 minutes.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">Frequently Asked Questions</h2>
+      <div class="space-y-4 mb-10">
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Do you have a Sunday service in Randburg?</summary>
+          <p class="text-body mt-3">No. We do not run a traditional Sunday service in Randburg. Our in-person hub is in Parkmore, Sandton. If you are looking for a Sunday service in Randburg, we can recommend a few churches that we know and trust — call us and we will share the list.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">My spouse is not interested. Can I come on my own?</summary>
+          <p class="text-body mt-3">Yes. Many of our regulars came on their own for months before their partner joined. About 40% of the group attends solo.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Is there a youth programme in Randburg?</summary>
+          <p class="text-body mt-3">Our youth programme (UseCan) runs in Parkmore, Sandton, on Saturday afternoons. Randburg teens are welcome — many attend. Drive time is about 15 minutes from most Randburg suburbs.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">What Bible translation do you use?</summary>
+          <p class="text-body mt-3">Mostly NIV. Some regulars prefer ESV or NASB. Afrikaans 1933/53 is available for those who prefer it.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Can I attend if I am not a Christian?</summary>
+          <p class="text-body mt-3">Yes. Sceptics and seekers are welcome. We will not pressure you to believe or share anything personal.</p>
+        </details>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">The Honest Bottom Line</h2>
+      <p class="text-body mb-6">
+        If you live in Randburg and you have been quietly looking for a Bible study that is serious, warm, and free — that is what we are trying to be. Wednesday evenings online, Sunday Korean class in Parkmore, monthly Saturday in-person Bible study in Parkmore. No fee. No obligation. Show up once and see what you think.
+      </p>
+      <p class="text-body mb-6">
+        Phone numbers: <strong>Mr. Sim +27 77 487 1295</strong>, <strong>Ms. Dora +27 67 442 4461</strong>. One sentence is enough.
+      </p>
+
+      <div class="bg-blue-100 border border-blue-300 rounded-xl p-6 mb-10 mt-10">
+        <p class="font-semibold text-blue-900 mb-3">Related pages:</p>
+        <ul class="space-y-2 text-blue-900 text-sm">
+          <li>→ <a href="/free-bible-study-sandton/" class="underline">Free Bible Study in Sandton</a></li>
+          <li>→ <a href="/online-bible-study-johannesburg/" class="underline">Online Bible Study in Johannesburg</a></li>
+          <li>→ <a href="/korean-language-class-for-beginners-johannesburg/" class="underline">Free Korean Class for Beginners</a></li>
+          <li>→ <a href="/locations/randburg/" class="underline">Randburg Location Overview</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

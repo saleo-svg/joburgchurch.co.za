@@ -1,0 +1,222 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Bible Study', url: '/spiritual-education/' },
+  { name: 'Bible Study for Depression', url: '/bible-study-for-depression-johannesburg/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Can Bible study help with depression in Johannesburg?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Bible study is not a substitute for clinical treatment of depression, but for many people in Johannesburg it provides community, structure, hope and a sense of meaning that meaningfully complements therapy and medication. Our Wednesday evening online group includes several regulars who came initially because of a low season and stayed because the rhythm of study and prayer helped.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'I am not a Christian. Will I be welcome at your Bible study if I am depressed?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. About a third of our Wednesday regulars started as sceptics or seekers, not as committed Christians. There is no application, no interview, no expectation that you believe anything before you show up. You are welcome to listen, ask questions, and just be in the room.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer Christian counselling for depression in Sandton?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We are a Bible study group, not a counselling practice. We do not diagnose, prescribe, or replace a therapist. What we can offer is a small, non-judgemental community where the Bible is read slowly and honestly. For clinical depression, please contact a GP or a registered counsellor in Johannesburg — we are happy to share a short list of Christian-friendly counsellors on request.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is your Bible study free?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Our Wednesday online Bible study and our Sunday Korean class in Parkmore are free, with no fees, no donations asked, and no obligation to give. We are supported by a small group of regular volunteers.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if I cannot attend in person because of my depression?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most of our group attends online via Google Meet. You can keep your camera off, join from bed if you need to, leave early if it gets too much, and come back next week. There is no attendance pressure. Showing up once is enough.',
+      },
+    },
+  ],
+};
+---
+<BaseLayout
+  title="Bible Study for Depression in Johannesburg | A Quiet, Free Wednesday Group"
+  description="Looking for a Bible study in Johannesburg where you do not have to pretend to be okay? Honest guide to our free Wednesday evening group — what to expect, who comes, how to join. From people who have been there."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max max-w-4xl">
+      <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Mental Health & Faith</p>
+      <h1 class="heading-1 mb-6">Bible Study for Depression in Johannesburg: A Quiet Room When You Cannot Fake It Anymore</h1>
+      <p class="text-lg text-gray-700 mb-8">
+        If you searched <em>bible study for depression johannesburg</em>, you are probably not in a great place. Maybe it is a slow grey season. Maybe it is grief. Maybe it is the third year of a job you cannot quit and the fourth month of a marriage that has gone quiet. Maybe you have been carrying something for so long you forgot it was heavy. Whatever it is — you are not imagining it, and you are not alone.
+      </p>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-blue-900 mb-3">This page will help you decide:</p>
+        <ul class="space-y-2 text-blue-900 text-sm">
+          <li>✓ Whether Bible study is a useful next step when you are struggling (and when it is not)</li>
+          <li>✓ What our Wednesday evening group in Johannesburg is actually like, honestly</li>
+          <li>✓ How to join if you do not have the energy to "join" anything</li>
+          <li>✓ Where to get real clinical help in Johannesburg if you need it</li>
+          <li>✓ Scriptures that have helped our regulars through low seasons</li>
+        </ul>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-300 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-amber-900 mb-2">A note before we go further:</p>
+        <p class="text-amber-900 text-base leading-relaxed">
+          We are a Bible study group. We are not therapists, doctors, or counsellors. If you are in crisis — having thoughts of harming yourself — please call <strong>South African Depression and Anxiety Group (SADAG)</strong> on <strong>0800 567 567</strong> or the Suicide Crisis Line on <strong>0800 12 13 14</strong> immediately. They are free, 24/7, and staffed by trained counsellors.
+        </p>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">When Bible Study Helps (and When It Does Not)</h2>
+      <p class="text-body mb-6">
+        We want to be honest with you, because honest is what you need right now. Bible study is not a treatment for clinical depression. If you have been low for more than two weeks, if sleep has stopped working, if you have lost interest in things you used to love, please see a GP. South Africa has good psychiatrists in Johannesburg, and most medical aids cover sessions.
+      </p>
+      <p class="text-body mb-6">
+        But here is what we have seen, over ten years of running a Wednesday Bible study: alongside therapy and medication, regular contact with a small group of honest people who read a passage slowly and talk about real life tends to help. It gives you a structure. It gives you something to do on a weeknight that is not scrolling. It gives you two or three people who notice when you disappear. None of that is magic. It is just community.
+      </p>
+      <p class="text-body mb-6">
+        Several of our regulars came to us in the middle of a hard time — a divorce, a redundancy, the loss of a parent, a chronic illness diagnosis. They are still here. Not because the Bible fixed them, but because the group stayed.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">What the Wednesday Group Actually Feels Like</h2>
+      <p class="text-body mb-6">
+        It is 7:30pm on a Wednesday. About twelve to eighteen people log in to Google Meet from their homes across Johannesburg — Sandton, Randburg, Roodepoort, Soweto, even Pretoria sometimes. We open in prayer. We read a passage from the Bible. We go around the room and each person shares one honest sentence about their week. Then we discuss.
+      </p>
+      <p class="text-body mb-6">
+        There is no performance. Nobody is trying to impress anyone. If you have had the worst week of your life, you can say so. If you do not have anything to say, you can stay silent. About a third of the group keeps their camera off — and that is completely fine.
+      </p>
+      <p class="text-body mb-6">
+        The study itself is unhurried. We read a chapter over four or five weeks so we can go slowly. We use questions like "what do you notice", "what do you disagree with", "what would this look like on a Tuesday morning". We are not testing anyone on theology. We are figuring out what these old texts mean in a 2026 South African week.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Who Comes to Our Bible Study</h2>
+      <p class="text-body mb-6">
+        Theologically, our regulars are a mix: some grew up in church, some came back to faith in their thirties, some are still working out what they believe. We are non-denominational and we keep it that way on purpose — the goal is to read the Bible together, not to agree on everything.
+      </p>
+      <p class="text-body mb-6">
+        Demographically, our group looks like Johannesburg in 2026: teachers, nurses, software engineers, parents with young kids, a few university students, retirees, a handful of small-business owners. About 60% are women. Ages range from early twenties to mid-seventies. We have had people join from Parkmore, Bryanston, Sandown, Hyde Park, Linden, Randburg, Fourways, Midrand, Roodepoort, Soweto, and as far out as Centurion.
+      </p>
+      <p class="text-body mb-6">
+        If you are looking for a Bible study where everyone is dressed up and polished — we are not that. If you want a Bible study where you can be honest about being tired, anxious, or sad — you will fit right in.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">How to Join (Even If You Have Zero Energy)</h2>
+      <p class="text-body mb-6">
+        We know that when you are in a low season, "joining a new group" sounds exhausting. So we made it as easy as possible:
+      </p>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li><strong>Send a WhatsApp or call.</strong> Mr. Sim (<strong>+27 77 487 1295</strong>) or Ms. Dora (<strong>+27 67 442 4461</strong>). One sentence is enough. "I would like to try the Wednesday Bible study but I am having a rough time" is a perfectly fine first message.</li>
+        <li><strong>We send you the Google Meet link.</strong> No registration form. No intake interview. No awkward "tell us about yourself".</li>
+        <li><strong>You log in on Wednesday at 7:30pm.</strong> Camera on or off. Pyjamas welcome. We will not call on you unless you ask to be called on.</li>
+        <li><strong>You come back next week.</strong> Or you don't. There is no obligation to be a regular. Show up once. That is enough.</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">Passages That Have Helped Our Group Through Hard Seasons</h2>
+      <p class="text-body mb-6">
+        We are not going to pretend that reading the Bible fixes depression. It does not. But several passages have anchored our regulars in low seasons. We share them here without commentary — read them slowly, or don't.
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-6">Psalm 42 — "As the deer pants for streams of water"</h3>
+      <p class="text-body mb-6">
+        The whole psalm is a man talking to himself about why he is so down. "Why, my soul, are you downcast?" he keeps asking. It does not pretend the depression is not there. It does not promise a quick fix. It ends with a kind of stubborn hope: "Hope in God; I will yet praise him."
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-6">Ecclesiastes 3 — "There is a time for everything"</h3>
+      <p class="text-body mb-6">
+        If you have ever felt that your life has lost its shape, Ecclesiastes is the book. "A time to weep and a time to laugh, a time to mourn and a time to dance." The author is not promising the laughing and dancing are coming tomorrow. He is saying: the season will change.
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-6">Romans 8 — "Neither death nor life will be able to separate us"</h3>
+      <p class="text-body mb-6">
+        For some of our regulars, this passage has been the one they re-read every morning. It is a long chapter. The last third — verses 28 to 39 — is a list of everything that cannot separate us from God's love. Whatever you are carrying, it is on the list.
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-6">Matthew 11 — "Come to me, all who are weary"</h3>
+      <p class="text-body mb-6">
+        A short passage. Jesus says "Come to me, all you who are weary and heavy laden, and I will give you rest." It has been read at more Johannesburg funerals and hospital beds than we can count. It still does what it says.
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-6">Lamentations 3 — "His mercies are new every morning"</h3>
+      <p class="text-body mb-6">
+        The middle of this chapter is one of the most quoted verses in the Bible. The book it sits in is the most depressing book in the Bible. The juxtaposition is honest: things can be terrible, and still there is mercy in the morning.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Other Resources in Johannesburg for Depression</h2>
+      <p class="text-body mb-6">
+        We are a Bible study, not a clinic. If you need clinical help, here are real options in Johannesburg. We do not get referral fees. We list them because we want you to get the help you need.
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>SADAG (South African Depression and Anxiety Group):</strong> <strong>0800 567 567</strong> — 24-hour helpline. Free.</li>
+        <li><strong>Suicide Crisis Line:</strong> <strong>0800 12 13 14</strong> — free, 24/7, staffed by trained counsellors.</li>
+        <li><strong>Life Line Johannesburg:</strong> <strong>011 728 1331</strong> — for crisis and ongoing support.</li>
+        <li><strong>Your GP:</strong> Most GPs in Johannesburg can do a first assessment and refer you to a psychiatrist if needed.</li>
+        <li><strong>Christian counsellors in Johannesburg:</strong> We keep a short list — call Ms. Dora on <strong>+27 67 442 4461</strong> and we will share it with you.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">Frequently Asked Questions</h2>
+      <div class="space-y-4 mb-10">
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Do I need to believe in God to attend?</summary>
+          <p class="text-body mt-3">No. Several of our regulars came in as sceptics. You can read, listen, ask questions, and disagree. We will not ask you to pray out loud or share a testimony unless you want to.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Is there a cost?</summary>
+          <p class="text-body mt-3">No. The Bible study is free. There is no membership fee, no suggested donation. We are supported by a small group of regulars who give voluntarily.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Can I just listen and not speak?</summary>
+          <p class="text-body mt-3">Yes. We have several regulars who mute themselves and never turn on their camera. They are still part of the group.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">What Bible translation do you use?</summary>
+          <p class="text-body mt-3">Mostly NIV for readability, sometimes ESV for accuracy. We occasionally use the Afrikaans 1933/53 translation when a member prefers it. Use whatever you are comfortable with at home.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">I am on antidepressants. Will the group judge me?</summary>
+          <p class="text-body mt-3">No. Several of our regulars are on medication. We believe in both clinical care and spiritual community. The two are not in competition.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Can I leave the group if it is not for me?</summary>
+          <p class="text-body mt-3">Of course. There is no obligation, no follow-up call asking why. Come for one week, or stay for years. Either is fine.</p>
+        </details>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">The Honest Bottom Line</h2>
+      <p class="text-body mb-6">
+        We are not going to tell you that Bible study will cure your depression. We are not going to tell you that God will fix everything in three months. What we will tell you is that you do not have to carry it alone, that there is a small group in Johannesburg that meets on Wednesday evenings and would be glad to have you, that there is no cost, and that you can keep your camera off.
+      </p>
+      <p class="text-body mb-6">
+        If that sounds like something you could use this week, here are the two phone numbers again: <strong>Mr. Sim +27 77 487 1295</strong>, <strong>Ms. Dora +27 67 442 4461</strong>. One sentence is enough.
+      </p>
+
+      <div class="bg-blue-100 border border-blue-300 rounded-xl p-6 mb-10 mt-10">
+        <p class="font-semibold text-blue-900 mb-3">Other pages that might help:</p>
+        <ul class="space-y-2 text-blue-900 text-sm">
+          <li>→ <a href="/online-bible-study-johannesburg/" class="underline">Online Bible Study in Johannesburg</a> — the practical "how to join" guide</li>
+          <li>→ <a href="/free-bible-study-sandton/" class="underline">Free Bible Study in Sandton</a> — full overview of the group</li>
+          <li>→ <a href="/spiritual-education/" class="underline">Spiritual Education at JBSC</a> — our broader Bible study programme</li>
+          <li>→ <a href="/first-time-church-visitor-johannesburg/" class="underline">First Time Visiting a Church in Johannesburg</a> — what to expect, with low-pressure options</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

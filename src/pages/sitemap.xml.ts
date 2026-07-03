@@ -30,7 +30,8 @@ export const GET: APIRoute = () => {
   { url: '/locations/soweto/', priority: '0.7', changefreq: 'monthly' },
 ];
 
-  const blogPosts = [
+  // Phase 10 SEO landing pages — added 2026-07-03
+  const seoLandingPages = [
     { url: '/free-bible-study-sandton/', lastmod: '2026-07-03' },
     { url: '/online-bible-study-johannesburg/', lastmod: '2026-07-03' },
     { url: '/korean-language-class-for-beginners-johannesburg/', lastmod: '2026-07-03' },
@@ -40,7 +41,19 @@ export const GET: APIRoute = () => {
     { url: '/free-korean-class-johannesburg/', lastmod: '2026-07-03' },
     { url: '/youth-bible-study-johannesburg/', lastmod: '2026-07-03' },
     { url: '/churches-in-sandton/', lastmod: '2026-07-03' },
-    { url: '/videos/', lastmod: '2026-07-03' },
+    { url: '/bible-study-for-depression-johannesburg/', lastmod: '2026-07-03' },
+    { url: '/marriage-counselling-johannesburg/', lastmod: '2026-07-03' },
+    { url: '/parenting-biblical-advice-johannesburg/', lastmod: '2026-07-03' },
+    { url: '/youth-ministry-johannesburg-usecan/', lastmod: '2026-07-03' },
+    { url: '/bible-study-randburg/', lastmod: '2026-07-03' },
+    { url: '/bible-study-fourways/', lastmod: '2026-07-03' },
+    { url: '/bible-study-midrand/', lastmod: '2026-07-03' },
+    { url: '/bible-study-alberton/', lastmod: '2026-07-03' },
+    { url: '/bible-study-roodepoort/', lastmod: '2026-07-03' },
+    { url: '/bible-study-soweto/', lastmod: '2026-07-03' },
+  ];
+
+  const blogPosts = [
     { url: '/blog/welcome-to-our-church/', lastmod: '2026-01-01' },
     { url: '/blog/free-korean-class-community/', lastmod: '2026-02-01' },
     { url: '/blog/why-community-learning-matters/', lastmod: '2026-03-01' },
@@ -50,10 +63,14 @@ export const GET: APIRoute = () => {
     { url: '/blog/learning-korean-as-an-adult-sandton/', lastmod: '2026-06-15' },
     { url: '/blog/finding-community-as-a-young-adult-johannesburg/', lastmod: '2026-06-20' },
     { url: '/blog/bible-study-near-me-johannesburg/', lastmod: '2026-06-25' },
+    { url: '/blog/when-the-bible-feels-irrelevant/', lastmod: '2026-07-05' },
+    { url: '/blog/what-sandton-gets-wrong-about-christianity/', lastmod: '2026-07-08' },
+    { url: '/blog/the-gospel-according-to-load-shedding/', lastmod: '2026-07-10' },
   ];
 
   const allPages = [
     ...staticPages,
+    ...seoLandingPages.map((p) => ({ ...p, priority: '0.8', changefreq: 'monthly' })),
     ...blogPosts.map((p) => ({ ...p, priority: '0.7', changefreq: 'monthly' })),
   ];
 

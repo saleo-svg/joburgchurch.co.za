@@ -1,0 +1,168 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Locations', url: '/locations/' },
+  { name: 'Bible Study Soweto', url: '/bible-study-soweto/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is there a Bible study group in Soweto?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Johannesburg Bible Study Church serves Soweto and the surrounding areas of Diepkloof, Meadowlands, Orlando, Pimville, Dobsonville, and Protea Glen. Our main programme is a free Wednesday evening online Bible study that anyone from Soweto can join via Google Meet.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where do Soweto residents meet for Bible study?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most Soweto residents who attend our Bible study join the Wednesday online session at 7:30pm from home. Our main community hub is at Parkmore, Sandton — about 30 to 45 minutes drive from most Soweto areas, depending on traffic.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is the Soweto Bible study free?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Our Bible study and Korean class are free. There is no fee, no suggested donation, no obligation to give.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What time does the Bible study meet?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Wednesday evenings, 7:30pm to 9:00pm, online via Google Meet. You can log in from home.',
+      },
+    },
+  ],
+};
+---
+<BaseLayout
+  title="Bible Study in Soweto | Wednesday Group for Soweto Residents"
+  description="Looking for a Bible study in Soweto, Johannesburg? Free Wednesday evening group for Soweto, Diepkloof, Orlando, Meadowlands, Pimville and Protea Glen residents. Online via Google Meet. All welcome."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max max-w-4xl">
+      <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Bible Study in Soweto</p>
+      <h1 class="heading-1 mb-6">Bible Study in Soweto: A Free Wednesday Group for Residents of Soweto, Diepkloof, Orlando and Meadowlands</h1>
+      <p class="text-lg text-gray-700 mb-8">
+        If you searched <em>bible study soweto</em>, you know that Soweto has many large, lively churches — the kind with choir robes and four-hour services and a real sense of community. What it has less of is a small, midweek, conversational Bible study that meets online or in a quiet room. That is what we are trying to add.
+      </p>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-blue-900 mb-3">This page covers:</p>
+        <ul class="space-y-2 text-blue-900 text-sm">
+          <li>✓ What our Wednesday evening group is honestly like</li>
+          <li>✓ The Soweto areas we serve most</li>
+          <li>✓ How to join in three simple steps</li>
+          <li>✓ Driving directions from major Soweto areas to Parkmore</li>
+        </ul>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">Why Soweto Is on Our Radar</h2>
+      <p class="text-body mb-6">
+        Soweto is one of the most churched parts of South Africa. There are dozens of large, vibrant congregations across the township — Methodist, Zionist, Baptist, Apostolic, Pentecostal, and more. People who grew up in those churches have a deep love for Scripture.
+      </p>
+      <p class="text-body mb-6">
+        What some of them are also looking for is a smaller setting for midweek conversation. A place where the Bible can be read slowly and the questions can be honest. A place where you can disagree with the pastor and still be welcome. A place where the Wednesday is a meaningful part of the Christian rhythm, not just the warm-up act for Sunday.
+      </p>
+      <p class="text-body mb-6">
+        That is what our Wednesday online group offers. We have a small but steady contingent of regulars from Soweto, mostly joining from Diepkloof, Meadowlands, Orlando, Pimville, and Protea Glen. They bring a depth of biblical literacy and a warmth that has shaped our whole group.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">The Wednesday Evening Bible Study</h2>
+      <p class="text-body mb-6">
+        Wednesdays, 7:30pm to 9:00pm, on Google Meet. We open in prayer, read a passage, and discuss. The group has about a dozen to two dozen regulars from across Johannesburg.
+      </p>
+      <p class="text-body mb-6">
+        The Bible study is unhurried. We take four to five weeks on each chapter. The tone is conversational, not academic. The expectation is honesty, not expertise. Scepticism is welcome. So is enthusiasm.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Who Joins from Soweto</h2>
+      <p class="text-body mb-6">
+        We have regulars from several Soweto areas: Diepkloof, Meadowlands, Orlando East, Orlando West, Pimville, Dobsonville, Protea Glen, and Jabulani. A few join from the southern parts of Soweto near Lenasia and Eldorado Park.
+      </p>
+      <p class="text-body mb-6">
+        Demographically, the Soweto group spans a wide range. Some are in their twenties and early thirties, often students or early-career professionals. Others are in their fifties and sixties, often retired or semi-retired, often with deep church backgrounds. About half attend alongside their Sunday-morning congregation — Wednesday is an additional layer, not a replacement.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">In-Person Options in Parkmore</h2>
+      <p class="text-body mb-6">
+        For Soweto residents who want to meet in person, our main hub is at Parkmore, 11th Street, Sandton. Off-peak driving time is 30 to 45 minutes from most Soweto areas. Peak traffic can stretch it to 60 minutes or more, which is why most of our Soweto members prefer the Wednesday online session.
+      </p>
+      <p class="text-body mb-6">
+        Two in-person programmes run at Parkmore:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>Free Korean Class</strong> — Sundays at 2:00pm. About 90 minutes. Beginners welcome.</li>
+        <li><strong>First Saturday In-Person Bible Study</strong> — once a month, first Saturday, 4:00pm. Smaller, more conversational than the Wednesday group.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">How to Join</h2>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li>Call or WhatsApp <strong>Mr. Sim on +27 77 487 1295</strong> or <strong>Ms. Dora on +27 67 442 4461</strong>.</li>
+        <li>We send you the Google Meet link the morning of the session.</li>
+        <li>Log in at 7:30pm. Camera on or off.</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">Driving Directions from Major Soweto Areas</h2>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>From Diepkloof:</strong> N1 south toward Sandton via Booysens. About 35 minutes off-peak.</li>
+        <li><strong>From Meadowlands:</strong> M70 to M1 north, into Sandton. About 40 minutes off-peak.</li>
+        <li><strong>From Orlando East / West:</strong> M70 to M1 north, into Sandton. About 40 minutes off-peak.</li>
+        <li><strong>From Pimville:</strong> M1 north, into Sandton. About 35 minutes off-peak.</li>
+        <li><strong>From Protea Glen / Dobsonville:</strong> M68 to M1, into Sandton. About 45 minutes off-peak.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">Frequently Asked Questions</h2>
+      <div class="space-y-4 mb-10">
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Do you have a Sunday service in Soweto?</summary>
+          <p class="text-body mt-3">No. We do not run a traditional Sunday service in Soweto. Soweto already has many strong churches — if you are looking for one to attend on Sunday, we can recommend a few that we know personally. Our in-person hub is in Parkmore, Sandton.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Will the group understand my context?</summary>
+          <p class="text-body mt-3">Yes. We have regulars from Soweto, Lenasia, Eldorado Park, and other southern Johannesburg areas. The group is intentional about being a diverse South African community, not a Sandton-centric one. We listen well.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Can I attend alongside my Sunday-morning church?</summary>
+          <p class="text-body mt-3">Absolutely. Most of our Soweto regulars also attend a Sunday service at their home congregation. Wednesday is meant to complement, not replace. There is no expectation that you change churches.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Is there a youth programme in Soweto?</summary>
+          <p class="text-body mt-3">Our youth programme (UseCan) runs in Parkmore, Sandton, on Saturdays at 3:00pm. Drive time is about 40 to 50 minutes from most Soweto areas. Some families make the drive; others wait until they can attend the Sunday Korean class together.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">What Bible translation do you use?</summary>
+          <p class="text-body mt-3">Mostly NIV in English. Some regulars prefer KJV. Afrikaans and Zulu translations are available for those who want them.</p>
+        </details>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">The Honest Bottom Line</h2>
+      <p class="text-body mb-6">
+        Soweto has many excellent churches. What it has less of is a small, midweek, conversational Bible study on the side. Our Wednesday online group is built for that person. Phone numbers: <strong>Mr. Sim +27 77 487 1295</strong>, <strong>Ms. Dora +27 67 442 4461</strong>. One sentence is enough.
+      </p>
+
+      <div class="bg-blue-100 border border-blue-300 rounded-xl p-6 mb-10 mt-10">
+        <p class="font-semibold text-blue-900 mb-3">Related pages:</p>
+        <ul class="space-y-2 text-blue-900 text-sm">
+          <li>→ <a href="/free-bible-study-sandton/" class="underline">Free Bible Study in Sandton</a></li>
+          <li>→ <a href="/online-bible-study-johannesburg/" class="underline">Online Bible Study in Johannesburg</a></li>
+          <li>→ <a href="/bible-study-randburg/" class="underline">Bible Study in Randburg</a></li>
+          <li>→ <a href="/locations/soweto/" class="underline">Soweto Location Overview</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

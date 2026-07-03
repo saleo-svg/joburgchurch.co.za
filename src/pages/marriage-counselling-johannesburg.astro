@@ -1,0 +1,208 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Resources', url: '/spiritual-education/' },
+  { name: 'Marriage Counselling', url: '/marriage-counselling-johannesburg/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Do you offer marriage counselling in Johannesburg?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We are a Bible study and community, not a registered counselling practice. What we can offer is a small, faith-based community for couples who want to read the Bible together, talk honestly about their marriage, and be supported by other couples. For clinical marriage therapy, we are happy to share a short list of Christian-friendly marriage counsellors in Johannesburg on request.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between marriage counselling and a marriage Bible study?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Counselling is one-on-one or couple work with a trained therapist who diagnoses issues and guides you through them. A marriage Bible study is a small group that meets regularly to read Scripture together and discuss how it applies to married life. The two are not interchangeable. Counselling addresses specific problems; a Bible study sustains the everyday rhythm of a marriage.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is this suitable for couples who are separated or considering divorce?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'It depends on the couple. If one of you has already filed for divorce and the other does not want to attend, a marriage Bible study is unlikely to help in the short term — please see a marriage therapist first. If you are still talking, still in the same house, and still willing to try, our community can be a safe place to start.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does it cost?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Nothing. Our Wednesday online group and Sunday Korean class are free. There is no fee, no donation asked, and no obligation to give.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is it confidential?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. We operate on a small-group confidentiality norm — what is shared in the group stays in the group. We do not record sessions. We do not post screenshots or quotes on social media without explicit permission.',
+      },
+    },
+  ],
+};
+---
+<BaseLayout
+  title="Marriage Counselling in Johannesburg | Christian Couples Community"
+  description="A Christian community for married couples in Johannesburg. Honest about what a Bible study can and cannot do for a struggling marriage, with referrals to real counsellors when needed."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max max-w-4xl">
+      <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Marriage & Faith</p>
+      <h1 class="heading-1 mb-6">Marriage Counselling in Johannesburg: What a Bible Study Can (and Cannot) Do for a Marriage</h1>
+      <p class="text-lg text-gray-700 mb-8">
+        If you typed <em>marriage counselling johannesburg</em> into Google, you are probably somewhere on the spectrum between "we have been snappy for months and I am worried" and "we have not spoken properly in two weeks and one of us is Googling". Either way — you are here. That is already a step.
+      </p>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-blue-900 mb-3">This page will help you decide:</p>
+        <ul class="space-y-2 text-blue-900 text-sm">
+          <li>✓ Whether a Bible study is the right next step for your marriage (or whether you need a real counsellor)</li>
+          <li>✓ What our Wednesday evening community in Johannesburg is honestly like for couples</li>
+          <li>✓ What we are not — and who to call instead when we are not enough</li>
+          <li>✓ Passages from the Bible that have grounded couples in our group through hard seasons</li>
+          <li>✓ A short list of Christian marriage counsellors in Johannesburg and Sandton</li>
+        </ul>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-300 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-amber-900 mb-2">A note before we go further:</p>
+        <p class="text-amber-900 text-base leading-relaxed">
+          We are a Bible study community, not a registered counselling practice. We are not equipped to help couples through active abuse, infidelity in crisis, or addiction. If your marriage is in any of those places, please contact a registered marriage therapist in Johannesburg — we have a short list below. We list this first because we want you to get the right help.
+        </p>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">When a Bible Study Helps a Marriage (and When It Does Not)</h2>
+      <p class="text-body mb-6">
+        Let us be honest. A Bible study will not save a marriage that is already over. It will not fix an affair. It will not stop a partner from being violent. For those situations, you need a trained therapist — preferably one with experience in marriage work — and you need them now, not next month.
+      </p>
+      <p class="text-body mb-6">
+        What a Bible study can do, over months and years, is provide the daily rhythm of a Christian community that holds marriages. It gives you two hours a week to sit beside your spouse and listen to someone read slowly. It gives you other couples who are also figuring it out. It gives you a vocabulary for the things you never learned to say. None of that is counselling. All of it helps.
+      </p>
+      <p class="text-body mb-6">
+        In ten years of running our Wednesday group in Sandton, we have seen couples come in on the edge of separation and stay for the long road back. We have also seen couples realise, in the company of others, that they are done. Both outcomes are honest. Both are okay.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">What Wednesday Evening Is Like for Couples</h2>
+      <p class="text-body mb-6">
+        Most couples in our community log in from the same room. Some sit on the same couch. A few log in from different rooms because they need the space, and that is fine too. We open in prayer, read a passage, and discuss.
+      </p>
+      <p class="text-body mb-6">
+        About once every six to eight weeks, we do a "marriage evening". Instead of going round the room with a general question, we read a passage about marriage — Ephesians 5, Song of Songs, 1 Corinthians 13 — and we ask the couples to talk to each other in front of the group. It is gentle. There is no pressure to share anything personal. People who want to listen are free to listen.
+      </p>
+      <p class="text-body mb-6">
+        The point of these evenings is not to fix anything in one night. The point is to give couples a regular, low-stakes reason to look at each other and say something true.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Who Comes</h2>
+      <p class="text-body mb-6">
+        We have about a dozen regular couples in our Wednesday group, ranging from newlyweds in their first year to couples celebrating their fortieth anniversary. Some came in together from the start. Others came separately and their partner joined later. A handful joined after a marriage crisis, on the recommendation of a counsellor or a friend.
+      </p>
+      <p class="text-body mb-6">
+        Theologically, we are non-denominational and we keep it that way on purpose. Some couples are strongly Christian. Some are "figuring it out". Some are not Christian at all and have just come because a friend invited them. The only expectation is that you listen and treat each other with respect.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Passages That Have Helped Couples in Our Group</h2>
+
+      <h3 class="heading-3 mb-3 mt-6">1 Corinthians 13 — "Love is patient, love is kind"</h3>
+      <p class="text-body mb-6">
+        This is the most-read wedding passage in the English-speaking world, but it is much harder to live than to read at an altar. We have spent four weeks on this chapter at a time with couples, asking the slow question: "Where in your marriage right now is this hard?" The honest answers tend to be the helpful ones.
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-6">Ephesians 5:21-33 — "Submit to one another"</h3>
+      <p class="text-body mb-6">
+        This passage is famously misunderstood. The first sentence is the key: "Submit to one another out of reverence for Christ." The verses that follow about wives and husbands only make sense inside that first sentence. Mutual submission, not unilateral obedience, is the point. We have seen couples re-read this and have a long overdue conversation.
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-6">Song of Songs — "I have found the one whom my soul loves"</h3>
+      <p class="text-body mb-6">
+        Surprisingly tender and erotic. The book is a collection of love poems between a man and a woman. It does not mention God once. Some of our couples have found this passage surprisingly refreshing after years of heavy theology — it is a reminder that marriage is also meant to be joyful, playful, and physical.
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-6">Mark 10:6-9 — "What God has joined together"</h3>
+      <p class="text-body mb-6">
+        Jesus on marriage. Short. Direct. He says marriage is a permanent union, and then immediately says "let no one separate what God has joined together". This passage is heavy for couples who are struggling — and that is part of its purpose. Marriage is hard. It is supposed to be.
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-6">Colossians 3:12-17 — "Clothe yourselves with compassion"</h3>
+      <p class="text-body mb-6">
+        A practical passage. Bear with each other. Forgive as the Lord forgave you. Over all these virtues put on love. We have used this with couples who are stuck in cycles of small resentments and it has helped them start a new rhythm.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Christian Marriage Counsellors in Johannesburg and Sandton</h2>
+      <p class="text-body mb-6">
+        We are not a substitute for a real therapist. If your marriage needs more than a Bible study can offer, here are a few options. We do not get referral fees. We list them because we want you to get the right help.
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>Marriage Foundation South Africa</strong> — Christian, premarital and marriage counselling. Offices in Randburg.</li>
+        <li><strong>Careline Counselling</strong> — multi-disciplinary, Christian-friendly. Centred in Linden.</li>
+        <li><strong>Family Life Centre Johannesburg</strong> — for couples and families, sliding scale.</li>
+        <li><strong>FAMSA (Family and Marriage Society of South Africa)</strong> — secular but solid. Multiple Johannesburg branches.</li>
+        <li><strong>Your local pastor or priest</strong> — if you belong to a church, your minister is usually the first call. Many churches in Sandton offer premarital and marriage counselling.</li>
+      </ul>
+      <p class="text-body mb-6">
+        Most medical aids in South Africa cover a portion of registered marriage therapy sessions. If cost is a concern, ask the therapist about sliding-scale fees.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Frequently Asked Questions</h2>
+      <div class="space-y-4 mb-10">
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Do we have to be married?</summary>
+          <p class="text-body mt-3">No. Engaged couples, dating couples, and even single people are welcome. We have several regulars who are not in a relationship and find the marriage-focused evenings meaningful anyway.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">What if my spouse does not want to come?</summary>
+          <p class="text-body mt-3">Come on your own. Many of our regulars came for months before their partner joined. Sometimes the change in one spouse is what brings the other along eventually.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Is it really free?</summary>
+          <p class="text-body mt-3">Yes. The Bible study and the marriage evenings are free, no suggested donation, no obligation to give.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Will anyone pressure us to share personal details?</summary>
+          <p class="text-body mt-3">No. The group norm is "share only what you are comfortable with". You can pass on every question for a year. You will still be welcome.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Can I attend if I am not a Christian?</summary>
+          <p class="text-body mt-3">Yes. About a quarter of our regulars are either sceptics or from other faith traditions. The marriage evenings are about marriage, not about converting anyone.</p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">We are separated. Can we still come?</summary>
+          <p class="text-body mt-3">If you can be in the same online room without it being harmful to either of you, yes. If not, please see a marriage therapist first. We are happy to share a short list.</p>
+        </details>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">The Honest Bottom Line</h2>
+      <p class="text-body mb-6">
+        We are not going to tell you that a Bible study will save your marriage. We are not going to tell you that prayer fixes everything. What we will tell you is that there is a small group in Johannesburg that meets on Wednesday evenings, that couples have been finding their way back to each other in that group for years, and that the door is open. There is no fee. There is no obligation. Show up once. See what you think.
+      </p>
+      <p class="text-body mb-6">
+        If you would like to join, here are the two phone numbers: <strong>Mr. Sim +27 77 487 1295</strong>, <strong>Ms. Dora +27 67 442 4461</strong>. One sentence is enough. "We would like to try the Wednesday Bible study" is a fine first message.
+      </p>
+
+      <div class="bg-blue-100 border border-blue-300 rounded-xl p-6 mb-10 mt-10">
+        <p class="font-semibold text-blue-900 mb-3">Related pages:</p>
+        <ul class="space-y-2 text-blue-900 text-sm">
+          <li>→ <a href="/parenting-biblical-advice-johannesburg/" class="underline">Biblical Parenting Advice in Johannesburg</a></li>
+          <li>→ <a href="/bible-study-for-depression-johannesburg/" class="underline">Bible Study for Depression in Johannesburg</a></li>
+          <li>→ <a href="/free-bible-study-sandton/" class="underline">Free Bible Study in Sandton</a></li>
+          <li>→ <a href="/spiritual-education/" class="underline">Spiritual Education</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
