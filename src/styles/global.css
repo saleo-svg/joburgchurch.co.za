@@ -4,8 +4,18 @@
 
 @layer base {
   :root {
-    --color-primary: #2563eb;
-    --color-warm: #eab308;
+    /* ==== Color system (calm, premium, intentional) ==== */
+    --color-ink: #0f172a;        /* deep navy — primary text + headers on light bg */
+    --color-primary: #1e3a5f;    /* deep marine — links, buttons */
+    --color-warm: #c8862f;       /* muted amber — accents, CTA, scripture highlight */
+    --color-warm-soft: #fbf3e4;  /* cream — section background */
+    --color-cream: #faf8f4;      /* page background for featured sections */
+    --color-stone: #f4f4f3;      /* subtle stone — dividers, secondary bg */
+
+    /* Typography scale */
+    --font-serif: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+    --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-scripture: 'Cardo', 'Georgia', serif;
   }
 
   html {
@@ -14,6 +24,21 @@
 
   body {
     @apply bg-white text-gray-900 antialiased;
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01" on, "ss02" on, "cv01" on;
+  }
+
+  /* Headings default to serif for premium feel */
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-ink);
+  }
+
+  /* Force heading utility classes to use the serif font */
+  .heading-1, .heading-2, .heading-3 {
+    font-family: var(--font-serif);
   }
 
   * {
@@ -22,43 +47,152 @@
 }
 
 @layer components {
+  /* ==== Buttons ==== */
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-7 py-3 text-sm font-semibold text-white shadow-sm transition-all;
+    background-color: var(--color-primary);
+    border-radius: 6px;
+    letter-spacing: 0.01em;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-ink);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15);
+  }
+  .btn-primary:focus-visible {
+    outline: 2px solid var(--color-warm);
+    outline-offset: 2px;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 shadow-sm transition-colors hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-7 py-3 text-sm font-semibold shadow-sm transition-all;
+    background-color: white;
+    color: var(--color-ink);
+    border: 1px solid #e4e4e7;
+    border-radius: 6px;
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-cream);
+    border-color: var(--color-warm);
+    transform: translateY(-1px);
   }
 
   .btn-warm {
-    @apply inline-flex items-center justify-center rounded-lg bg-amber-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-7 py-3 text-sm font-semibold text-white shadow-sm transition-all;
+    background-color: var(--color-warm);
+    border-radius: 6px;
+  }
+  .btn-warm:hover {
+    background-color: #a8741f;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(200, 134, 47, 0.3);
   }
 
+  /* ==== Layout ==== */
   .section-padding {
-    @apply px-4 py-16 sm:px-6 lg:px-8 lg:py-20;
+    @apply px-4 py-20 sm:px-6 lg:px-8 lg:py-28;
   }
-
+  .section-tighter {
+    @apply px-4 py-14 sm:px-6 lg:px-8 lg:py-20;
+  }
   .container-max {
-    @apply mx-auto max-w-7xl;
+    @apply mx-auto max-w-6xl;
+  }
+  .container-narrow {
+    @apply mx-auto max-w-3xl;
   }
 
+  /* ==== Cards ==== */
   .card {
-    @apply rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md;
+    @apply bg-white p-7 shadow-sm transition-all;
+    border: 1px solid #ececec;
+    border-radius: 8px;
+  }
+  .card:hover {
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    transform: translateY(-2px);
+  }
+  .card-image {
+    border-radius: 8px;
+    overflow: hidden;
   }
 
+  /* ==== Typography ==== */
   .heading-1 {
-    @apply text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl;
+    @apply text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-7xl;
+    letter-spacing: -0.03em;
+    color: var(--color-ink);
   }
-
   .heading-2 {
-    @apply text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl;
+    @apply text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl;
+    letter-spacing: -0.02em;
+    color: var(--color-ink);
   }
-
   .heading-3 {
-    @apply text-xl font-semibold text-gray-900 sm:text-2xl;
+    @apply text-xl font-semibold leading-snug sm:text-2xl;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
   }
 
   .text-body {
-    @apply text-lg text-gray-600 leading-relaxed;
+    @apply text-base leading-relaxed;
+    color: #404040;
   }
+  .text-eyebrow {
+    @apply text-xs font-semibold uppercase;
+    color: var(--color-warm);
+    letter-spacing: 0.18em;
+  }
+
+  /* ==== Scripture / Pull quote ==== */
+  .scripture-quote {
+    font-family: var(--font-scripture);
+    @apply text-2xl italic leading-relaxed sm:text-3xl lg:text-4xl;
+    color: var(--color-ink);
+    letter-spacing: -0.01em;
+  }
+  .scripture-ref {
+    @apply mt-4 text-sm not-italic;
+    font-family: var(--font-sans);
+    color: var(--color-warm);
+    letter-spacing: 0.05em;
+  }
+
+  /* ==== Sections ==== */
+  .section-cream {
+    background-color: var(--color-cream);
+  }
+  .section-warm {
+    background-color: var(--color-warm-soft);
+  }
+  .section-dark {
+    background-color: var(--color-ink);
+    color: #f3f4f6;
+  }
+  .section-dark h1, .section-dark h2, .section-dark h3 {
+    color: #ffffff;
+  }
+
+  /* ==== Decorative ==== */
+  .divider-accent {
+    @apply mx-auto mt-3 h-1 w-12;
+    background-color: var(--color-warm);
+  }
+}
+
+/* ==== Image rendering helpers ==== */
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ==== Smooth appear ==== */
+.fade-up {
+  animation: fade-up 0.6s ease-out;
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

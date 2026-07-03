@@ -18,317 +18,334 @@ const schema = getChurchSchema({
     },
   ],
 });
+
+/* Real photography from Unsplash — public Unsplash License */
+const heroPhoto = 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=1600&q=80&auto=format&fit=crop';
+const koreanPhoto = 'https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1200&q=80&auto=format&fit=crop';
+const youthPhoto = 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80&auto=format&fit=crop';
+const communityPhoto = 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1600&q=80&auto=format&fit=crop';
 ---
 
 <BaseLayout
-  title="Johannesburg Bible Study Church | Sandton Church & Bible Study Johannesburg"
-  description="Join a welcoming Bible study and Christian community in Sandton, Johannesburg. Wednesday online Bible study, Sunday Korean class, spiritual education, youth programs, and community activities."
+  title="Johannesburg Bible Study Church | A Bible Study Community in Sandton"
+  description="Join a welcoming Bible study and Christian community in Sandton, Johannesburg. Wednesday online Bible study, free Sunday Korean class, spiritual education, youth programs, and community activities."
   schema={schema}
 >
-  <!-- Hero Section -->
-  <section class="relative overflow-hidden text-white" style="background: linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 50%, #7c3aed 100%);">
-    <!-- SVG background -->
-    <div class="absolute inset-0 pointer-events-none select-none" aria-hidden="true">
+  <!-- ============================================================ -->
+  <!-- HERO · full-bleed image, serif headline, breathing space     -->
+  <!-- ============================================================ -->
+  <section class="relative isolate overflow-hidden bg-white">
+    <div class="absolute inset-0 -z-10">
       <img
-        src="/images/og-default.svg"
-        alt=""
-        class="w-full h-full object-cover opacity-20"
+        src={heroPhoto}
+        alt="People gathered around a table for Bible study"
+        class="h-full w-full object-cover opacity-30"
         loading="eager"
+        fetchpriority="high"
+        decoding="async"
       />
+      <div class="absolute inset-0 bg-gradient-to-b from-white/40 via-white/70 to-white"></div>
     </div>
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-700/70 to-blue-900/70"></div>
-    <div class="container-max section-padding relative">
-      <div class="grid gap-8 lg:grid-cols-2 items-center">
-        <div>
-          <p class="text-blue-200 font-medium uppercase tracking-widest text-sm mb-4">
-            Welcome to Johannesburg Bible Study Church
-          </p>
-          <h1 class="heading-1 text-white mb-6">
-            A Bible Study Community<br />in Sandton, Johannesburg
-          </h1>
-          <p class="text-body text-blue-100 mb-8 max-w-2xl">
-            Join our welcoming Christian community in Sandton for Wednesday online Bible study, free Sunday Korean class, youth programs, and more. Everyone is welcome.
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="/visit" class="btn-warm">Plan Your Visit</a>
-            <a href="/community-classes/korean" class="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-blue-700">
-              Free Korean Class
-            </a>
-            <a href="/videos" class="inline-flex items-center justify-center gap-2 rounded-lg border border-amber-300/60 bg-amber-400/10 px-6 py-3 text-sm font-semibold text-amber-50 backdrop-blur-sm transition-colors hover:bg-amber-400/20">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16v16H4z" opacity=".0"/><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-7l-3 3.72L9 13l-4 5h14l-5-6z"/></svg>
-              See Recent Studies
-            </a>
-          </div>
-        </div>
-        <!-- This Wednesday's Passage — replaces rickroll video -->
-        <div class="hidden lg:block">
-          <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/20 bg-gradient-to-br from-amber-300 via-amber-400 to-amber-600 p-8 flex flex-col justify-center text-amber-950">
-            <p class="text-xs font-semibold uppercase tracking-widest text-amber-900/80 mb-3">This Wednesday</p>
-            <p class="text-2xl font-bold mb-2 leading-tight">Exodus 14</p>
-            <p class="text-lg font-medium mb-5 opacity-90">The Sea That Parts</p>
-            <blockquote class="text-base font-serif italic leading-relaxed border-l-4 border-amber-900/40 pl-4 mb-5">
-              &ldquo;The LORD will fight for you; you need only to be still.&rdquo;
-            </blockquote>
-            <p class="text-sm opacity-80 mb-4">— Exodus 14:14</p>
-            <a href="/visit/" class="inline-flex items-center gap-2 self-start rounded-lg bg-amber-950/90 px-4 py-2 text-sm font-semibold text-amber-50 transition-colors hover:bg-amber-950">
-              Join us Wednesday 7:30pm
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-            </a>
-          </div>
-          <p class="text-xs text-blue-200 mt-2 text-center">Lead: Mr. Sim &middot; Wednesday online Bible study</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Upcoming Activities -->
-  <section class="section-padding bg-blue-50">
-    <div class="container-max">
-      <div class="grid gap-8 md:grid-cols-3">
-        <div class="card text-center">
-          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-700 mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-          </div>
-          <h3 class="heading-3 mb-2">Wednesday Bible Study</h3>
-          <p class="text-body text-sm text-blue-700 font-medium">Online, 7:30pm via Google Meet</p>
-          <p class="text-sm text-gray-500 mt-1">Weekly Bible study open to all</p>
-        </div>
-        <div class="card text-center">
-          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-amber-100 text-amber-700 mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 0 1 4.612 15c0 2.144 1.04 3.93 2.674 5.012M9 3v2m6.386-3.5A18.022 18.022 0 0 1 19.388 15c0 2.144-1.04 3.93-2.674 5.012M9 12H3m6 6H3m6 6H3" /></svg>
-          </div>
-          <h3 class="heading-3 mb-2">Free Korean Class</h3>
-          <p class="text-body text-sm text-amber-700 font-medium">Sunday 2:00pm, Offline</p>
-          <p class="text-sm text-gray-500 mt-1">Free community class, appointment required</p>
-        </div>
-        <div class="card text-center">
-          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-100 text-green-700 mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-          </div>
-          <h3 class="heading-3 mb-2">Youth Programs</h3>
-          <p class="text-body text-sm text-green-700 font-medium">Summer / Winter schedule</p>
-          <p class="text-sm text-gray-500 mt-1">UseCan youth empowerment</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Korean Class Highlight -->
-  <section class="section-padding">
-    <div class="container-max">
-      <div class="max-w-2xl mb-12">
-        <p class="text-amber-600 font-semibold uppercase tracking-wide text-sm mb-2">
-          Community Classes
-        </p>
-        <h2 class="heading-2 mb-4">Free Korean Class in Sandton, Johannesburg</h2>
-        <p class="text-body">
-          Learn Korean language and culture for free at our Sunday class in Sandton, Johannesburg. No church membership required — open to the entire community.
-        </p>
-      </div>
-
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="card hover:border-amber-200">
-          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-amber-100 text-2xl mb-3">KR</div>
-          <h3 class="heading-3 mb-2">Korean Class</h3>
-          <p class="text-sm text-gray-600 mb-4">
-            Free Korean language and culture class. Sunday 2:00pm, offline in Sandton.
-          </p>
-          <p class="text-xs text-amber-600 font-semibold mb-1">Free of charge</p>
-          <p class="text-xs text-gray-500">Appointment required</p>
-          <a href="/community-classes/korean" class="text-blue-600 font-medium text-sm hover:underline mt-3 inline-block">
-            Learn more
-          </a>
-        </div>
-
-        <div class="card hover:border-blue-200">
-          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-blue-100 text-blue-700 mb-3 font-bold">BS</div>
-          <h3 class="heading-3 mb-2">Bible Study</h3>
-          <p class="text-sm text-gray-600 mb-4">
-            Wednesday evening online Bible study via Google Meet. All are welcome.
-          </p>
-          <p class="text-xs text-blue-600 font-semibold mb-1">Online, 7:30pm</p>
-          <p class="text-xs text-gray-500">Every Wednesday</p>
-          <a href="/spiritual-education" class="text-blue-600 font-medium text-sm hover:underline mt-3 inline-block">
-            Learn more
-          </a>
-        </div>
-
-        <div class="card hover:border-green-200">
-          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-green-100 text-green-700 mb-3 font-bold">YP</div>
-          <h3 class="heading-3 mb-2">Youth Programs</h3>
-          <p class="text-sm text-gray-600 mb-4">
-            UseCan youth empowerment — leadership, service, and growth for young people.
-          </p>
-          <p class="text-xs text-green-600 font-semibold mb-1">Summer / Winter</p>
-          <p class="text-xs text-gray-500">Age-appropriate groups</p>
-          <a href="/youth-usecan" class="text-blue-600 font-medium text-sm hover:underline mt-3 inline-block">
-            Learn more
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Snippet -->
-  <section class="section-padding bg-gray-900 text-white">
-    <div class="container-max">
-      <div class="grid gap-12 lg:grid-cols-2 items-center">
-        <div>
-          <h2 class="heading-2 text-white mb-4">A Welcoming Christian Community in Sandton</h2>
-          <p class="text-blue-200 text-lg mb-6">
-            Johannesburg Bible Study Church is a Bible-centred community in Sandton, Johannesburg. We gather for Wednesday online Bible study, offer free community classes, and run youth programs — all open to everyone in the Johannesburg area.
-          </p>
-          <div class="grid grid-cols-2 gap-4 mb-8">
-            <div class="bg-gray-800 rounded-lg p-4">
-              <p class="text-2xl font-bold text-white">Sandton</p>
-              <p class="text-sm text-blue-300">Johannesburg, SA</p>
-            </div>
-            <div class="bg-gray-800 rounded-lg p-4">
-              <p class="text-2xl font-bold text-white">Free</p>
-              <p class="text-sm text-blue-300">Korean class open to all</p>
-            </div>
-          </div>
-          <a href="/about" class="btn-secondary border-white/30 text-white hover:bg-white/10">
-            About Our Church
-          </a>
-        </div>
-        <div class="bg-gray-800 rounded-2xl p-8 space-y-4">
-          <div class="flex gap-3 items-start">
-            <div class="shrink-0 mt-1">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-            </div>
-            <div>
-              <p class="font-semibold text-white">Location</p>
-              <p class="text-sm text-blue-300">Parkmore, 11th Street, Sandton, 2196 Johannesburg</p>
-            </div>
-          </div>
-          <div class="flex gap-3 items-start">
-            <div class="shrink-0 mt-1">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-            </div>
-            <div>
-              <p class="font-semibold text-white">Phone</p>
-              <p class="text-sm text-blue-300">+27 77 487 1295</p>
-            </div>
-          </div>
-          <div class="flex gap-3 items-start">
-            <div class="shrink-0 mt-1">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-            </div>
-            <div>
-              <p class="font-semibold text-white">Bible Study</p>
-              <p class="text-sm text-blue-300">Wednesday 7:30pm, Online via Google Meet</p>
-            </div>
-          </div>
-          <div class="flex gap-3 items-start">
-            <div class="shrink-0 mt-1">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 0 1 4.612 15c0 2.144 1.04 3.93 2.674 5.012M9 3v2m6.386-3.5A18.022 18.022 0 0 1 19.388 15c0 2.144-1.04 3.93-2.674 5.012M9 12H3m6 6H3m6 6H3" /></svg>
-            </div>
-            <div>
-              <p class="font-semibold text-white">Korean Class</p>
-              <p class="text-sm text-amber-300">Sunday 2:00pm, Offline, Free</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blog Snippet -->
-  <section class="section-padding">
-    <div class="container-max text-center">
-      <h2 class="heading-2 mb-4">From Our Community</h2>
-      <p class="text-body max-w-2xl mx-auto mb-8">
-        Articles on Bible study, community life, and faith from our church in Sandton, Johannesburg.
+    <div class="container-narrow section-padding text-center">
+      <p class="text-eyebrow mb-6">A Bible study community · Sandton · Johannesburg</p>
+      <h1 class="heading-1 mb-8">
+        Where Johannesburg<br />reads the Bible together.
+      </h1>
+      <p class="text-body mx-auto max-w-2xl mb-10 text-lg">
+        Wednesday evenings online. Sunday afternoons in person. A welcoming Christian
+        community in Parkmore, Sandton — for anyone curious enough to show up.
       </p>
-      <a href="/blog" class="btn-secondary">Read Our Blog</a>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="/visit" class="btn-primary">Plan Your Visit</a>
+        <a href="/spiritual-education" class="btn-secondary">About Bible Study</a>
+      </div>
+      <p class="mt-10 text-sm text-gray-500">
+        <span class="font-semibold text-gray-700">This Wednesday</span> ·
+        <a href="/visit" class="text-[color:var(--color-warm)] hover:underline">Exodus 14: The Sea That Parts · 7:30pm</a>
+      </p>
     </div>
   </section>
 
-  <!-- Voices from the Bible study -->
-  <section class="section-padding bg-white">
-    <div class="container-max">
-      <div class="max-w-2xl mx-auto text-center mb-12">
-        <p class="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-2">
-          Voices from the Bible Study
+  <!-- ============================================================ -->
+  <!-- SCRIPTURE QUOTE · serif, full-width, breathing               -->
+  <!-- ============================================================ -->
+  <section class="section-padding section-cream">
+    <div class="container-narrow text-center">
+      <p class="text-eyebrow mb-8">From this week's passage</p>
+      <blockquote>
+        <p class="scripture-quote">
+          &ldquo;The LORD will fight for you; you need only to be still.&rdquo;
         </p>
-        <h2 class="heading-2 mb-4">What People in the Room Say</h2>
+        <p class="scripture-ref">— Exodus 14:14</p>
+      </blockquote>
+      <div class="mt-10">
+        <a href="/spiritual-education" class="btn-warm">Join the Wednesday Study</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- THREE WAYS · image-forward, asymmetric                      -->
+  <!-- ============================================================ -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="mb-16 max-w-2xl">
+        <p class="text-eyebrow mb-3">Three ways to belong</p>
+        <h2 class="heading-2 mb-4">Showing up is the first step.</h2>
         <p class="text-body">
-          Honest, lightly edited, with permission. Most of these come from people who searched "Bible study near me Johannesburg", showed up once, and are still here two years later.
+          Bible study on Wednesday, a free Korean class on Sunday, and a youth
+          community that runs seasonal — choose one. Showing up is the only
+          requirement.
         </p>
       </div>
-      <div class="grid gap-6 lg:grid-cols-3">
+
+      <div class="grid gap-10 lg:grid-cols-2">
+        <!-- Big card: Bible study -->
+        <article class="card-image group relative overflow-hidden">
+          <div class="aspect-[5/4] overflow-hidden">
+            <img
+              src={heroPhoto}
+              alt="People in a small Bible study group"
+              class="img-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="p-8">
+            <p class="text-eyebrow mb-2">Bible Study</p>
+            <h3 class="heading-3 mb-3">Wednesday evenings, online.</h3>
+            <p class="text-body mb-6">
+              7:30pm on Google Meet. Read the same passage. Ask the question you
+              have been sitting with. An open room for beginners and long-time
+              students alike.
+            </p>
+            <a href="/spiritual-education" class="text-sm font-semibold text-[color:var(--color-primary)] hover:underline">
+              Learn about Bible Study →
+            </a>
+          </div>
+        </article>
+
+        <!-- Smaller cards stacked -->
+        <div class="flex flex-col gap-10">
+          <article class="card-image group relative overflow-hidden">
+            <div class="aspect-[5/3] overflow-hidden">
+              <img
+                src={koreanPhoto}
+                alt="Students in a Korean language class"
+                class="img-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="p-8">
+              <p class="text-eyebrow mb-2">Korean Class</p>
+              <h3 class="heading-3 mb-3">Sundays at 2pm in Parkmore.</h3>
+              <p class="text-body mb-6">
+                A free Korean class for the Johannesburg community. Beginners
+                welcome. The Hangul alphabet on day one; a restaurant menu by
+                the end of the session.
+              </p>
+              <a href="/community-classes/korean" class="text-sm font-semibold text-[color:var(--color-primary)] hover:underline">
+                See the Korean Class →
+              </a>
+            </div>
+          </article>
+
+          <article class="card-image group relative overflow-hidden">
+            <div class="aspect-[5/3] overflow-hidden">
+              <img
+                src={youthPhoto}
+                alt="Young people at a youth camp outdoors"
+                class="img-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="p-8">
+              <p class="text-eyebrow mb-2">Youth Programs</p>
+              <h3 class="heading-3 mb-3">UseCan, in summer and winter.</h3>
+              <p class="text-body mb-6">
+                Seasonal camps and leadership development for young people in
+                Johannesburg. Service, growth, and good company.
+              </p>
+              <a href="/youth-usecan" class="text-sm font-semibold text-[color:var(--color-primary)] hover:underline">
+                Youth Programs →
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- ABOUT · photo left, text right                                -->
+  <!-- ============================================================ -->
+  <section class="section-padding section-cream">
+    <div class="container-max">
+      <div class="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
+        <div class="relative overflow-hidden rounded-lg">
+          <img
+            src={communityPhoto}
+            alt="Johannesburg Bible Study Church community gathering"
+            class="aspect-[5/6] w-full img-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div>
+          <p class="text-eyebrow mb-3">About</p>
+          <h2 class="heading-2 mb-6">A welcoming community in Sandton.</h2>
+          <p class="text-body mb-6">
+            Johannesburg Bible Study Church is a Bible-centred community in
+            Parkmore, Sandton. We gather online on Wednesday evenings, offer a
+            free Korean class on Sundays, and run youth programs through the
+            year — all open to everyone in the greater Johannesburg area, with
+            no church membership required.
+          </p>
+          <dl class="mb-8 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-gray-300 pt-6">
+            <div>
+              <dt class="text-xs uppercase tracking-widest text-gray-500">Where</dt>
+              <dd class="font-serif text-lg text-gray-900">Parkmore, Sandton</dd>
+            </div>
+            <div>
+              <dt class="text-xs uppercase tracking-widest text-gray-500">When</dt>
+              <dd class="font-serif text-lg text-gray-900">Wed 7:30pm · Sun 2pm</dd>
+            </div>
+            <div>
+              <dt class="text-xs uppercase tracking-widest text-gray-500">Cost</dt>
+              <dd class="font-serif text-lg text-gray-900">Free, always</dd>
+            </div>
+            <div>
+              <dt class="text-xs uppercase tracking-widest text-gray-500">Membership</dt>
+              <dd class="font-serif text-lg text-gray-900">None required</dd>
+            </div>
+          </dl>
+          <a href="/about" class="btn-primary">Our Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- VOICES · Three testimonials                                   -->
+  <!-- ============================================================ -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="mx-auto mb-16 max-w-2xl text-center">
+        <p class="text-eyebrow mb-3">Voices from the Bible Study</p>
+        <h2 class="heading-2 mb-4">What people in the room say.</h2>
+        <p class="text-body">
+          Honest, lightly edited, with permission. Most of these come from
+          people who searched "Bible study near me Johannesburg", showed up
+          once, and are still here two years later.
+        </p>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-3">
         <figure class="card">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-200 mb-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/>
-          </svg>
-          <blockquote class="text-sm text-gray-700 leading-relaxed mb-4">
-            I came to one Wednesday expecting to feel like an outsider. By the end of the evening, two people from Randburg had offered me a lift to the next one. I have been in this Bible study for three years now.
+          <blockquote class="text-base leading-relaxed text-gray-700">
+            <p class="font-serif text-lg leading-snug text-gray-900">
+              I came to one Wednesday expecting to feel like an outsider. By the
+              end of the evening, two people from Randburg had offered me a
+              lift to the next one.
+            </p>
           </blockquote>
-          <figcaption class="text-sm">
+          <figcaption class="mt-6 border-t border-gray-100 pt-5">
             <p class="font-semibold text-gray-900">— Lerato M.</p>
-            <p class="text-gray-500">Sandton, joined 2023</p>
+            <p class="text-sm text-gray-500">Sandton, joined 2023</p>
           </figcaption>
         </figure>
         <figure class="card">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-200 mb-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/>
-          </svg>
-          <blockquote class="text-sm text-gray-700 leading-relaxed mb-4">
-            I moved to Johannesburg from Cape Town for a new job and did not know a soul. The Sunday Korean class in Sandton became my soft landing. I now have actual friends in the city, which I did not expect from a free class in Parkmore.
+          <blockquote class="text-base leading-relaxed text-gray-700">
+            <p class="font-serif text-lg leading-snug text-gray-900">
+              I moved here from Cape Town for a new job and did not know a soul.
+              The Sunday Korean class in Sandton became my soft landing. I now
+              have actual friends in the city.
+            </p>
           </blockquote>
-          <figcaption class="text-sm">
+          <figcaption class="mt-6 border-t border-gray-100 pt-5">
             <p class="font-semibold text-gray-900">— David K.</p>
-            <p class="text-gray-500">Parkmore, joined 2024</p>
+            <p class="text-sm text-gray-500">Parkmore, joined 2024</p>
           </figcaption>
         </figure>
         <figure class="card">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-200 mb-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/>
-          </svg>
-          <blockquote class="text-sm text-gray-700 leading-relaxed mb-4">
-            I had not opened a Bible since school. The first Wednesday, I just listened. The second one, I asked a question about the book of Exodus that I had been sitting with for a month. Mr. Sim treated it like the most important question in the room.
+          <blockquote class="text-base leading-relaxed text-gray-700">
+            <p class="font-serif text-lg leading-snug text-gray-900">
+              I had not opened a Bible since school. The second Wednesday, I
+              asked a question about Exodus that I had been sitting with for a
+              month. Mr. Sim treated it like the most important question.
+            </p>
           </blockquote>
-          <figcaption class="text-sm">
+          <figcaption class="mt-6 border-t border-gray-100 pt-5">
             <p class="font-semibold text-gray-900">— Sarah P.</p>
-            <p class="text-gray-500">Randburg, joined 2025</p>
+            <p class="text-sm text-gray-500">Randburg, joined 2025</p>
           </figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <!-- First-time visitor guide -->
-  <section class="section-padding bg-gray-50">
+  <!-- ============================================================ -->
+  <!-- NEW HERE · 3 steps                                           -->
+  <!-- ============================================================ -->
+  <section class="section-padding section-warm">
     <div class="container-max">
-      <div class="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-start">
+      <div class="grid items-start gap-12 lg:grid-cols-[1fr_1.3fr]">
         <div>
-          <p class="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-2">
-            New Here?
+          <p class="text-eyebrow mb-3">New here?</p>
+          <h2 class="heading-2 mb-5">A simple way to start.</h2>
+          <p class="text-body mb-6">
+            Many people find us while searching for Bible study in
+            Johannesburg, church in Sandton, or a friendly Christian community
+            nearby. You do not need to know everything before joining. A phone
+            call is enough.
           </p>
-          <h2 class="heading-2 mb-4">A Simple Way to Start</h2>
-          <p class="text-body">
-            Many people find us while searching for Bible study in Johannesburg, church in Sandton, or a friendly Christian community nearby. You do not need to know everything before joining. A phone call is enough to ask questions, get the Google Meet link, or register for the Korean class.
-          </p>
+          <a href="/contact" class="btn-primary">Get in Touch</a>
         </div>
-        <div class="grid gap-4 sm:grid-cols-3">
+        <div class="grid gap-6 sm:grid-cols-3">
           <div class="card">
-            <p class="text-sm font-semibold text-blue-600 mb-2">1. Choose</p>
-            <h3 class="font-semibold text-gray-900 mb-2">Bible Study or Class</h3>
-            <p class="text-sm text-gray-600">Join Wednesday Bible study online, or register for the free Sunday Korean class in Sandton.</p>
+            <p class="font-serif text-3xl text-[color:var(--color-warm)] mb-3">01</p>
+            <h3 class="heading-3 mb-2">Choose</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Bible study on Wednesday or the free Korean class on Sunday.
+              Either one is a fine place to start.
+            </p>
           </div>
           <div class="card">
-            <p class="text-sm font-semibold text-blue-600 mb-2">2. Call</p>
-            <h3 class="font-semibold text-gray-900 mb-2">Ask for Details</h3>
-            <p class="text-sm text-gray-600">Call Mr. Sim or Ms. Dora for the meeting link, directions, class availability, or youth program schedule.</p>
+            <p class="font-serif text-3xl text-[color:var(--color-warm)] mb-3">02</p>
+            <h3 class="heading-3 mb-2">Call</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Call Mr. Sim or Ms. Dora for the meeting link, directions, or to
+              register for the Korean class.
+            </p>
           </div>
           <div class="card">
-            <p class="text-sm font-semibold text-blue-600 mb-2">3. Join</p>
-            <h3 class="font-semibold text-gray-900 mb-2">Come as You Are</h3>
-            <p class="text-sm text-gray-600">Visitors, beginners, students, families, and people exploring faith are welcome.</p>
+            <p class="font-serif text-3xl text-[color:var(--color-warm)] mb-3">03</p>
+            <h3 class="heading-3 mb-2">Show up</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Visitors, beginners, students, families, and people exploring
+              faith are welcome. As you are.
+            </p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- BLOG · CTA strip                                              -->
+  <!-- ============================================================ -->
+  <section class="section-padding">
+    <div class="container-narrow text-center">
+      <p class="text-eyebrow mb-3">From our community</p>
+      <h2 class="heading-2 mb-5">Articles on Bible study, community, and faith.</h2>
+      <p class="text-body mx-auto mb-8 max-w-2xl">
+        Long-form writing from the people who show up on Wednesdays and Sundays
+        in Sandton.
+      </p>
+      <a href="/blog" class="btn-secondary">Read the Blog</a>
     </div>
   </section>
 </BaseLayout>
