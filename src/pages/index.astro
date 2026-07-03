@@ -38,21 +38,41 @@ const schema = getChurchSchema({
     </div>
     <div class="absolute inset-0 bg-gradient-to-br from-blue-700/70 to-blue-900/70"></div>
     <div class="container-max section-padding relative">
-      <div class="max-w-3xl">
-        <p class="text-blue-200 font-medium uppercase tracking-widest text-sm mb-4">
-          Welcome to Johannesburg Bible Study Church
-        </p>
-        <h1 class="heading-1 text-white mb-6">
-          A Bible Study Community<br />in Sandton, Johannesburg
-        </h1>
-        <p class="text-body text-blue-100 mb-8 max-w-2xl">
-          Join our welcoming Christian community in Sandton for Wednesday online Bible study, free Sunday Korean class, youth programs, and more. Everyone is welcome.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="/visit" class="btn-warm">Plan Your Visit</a>
-          <a href="/community-classes/korean" class="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-blue-700">
-            Free Korean Class
-          </a>
+      <div class="grid gap-8 lg:grid-cols-2 items-center">
+        <div>
+          <p class="text-blue-200 font-medium uppercase tracking-widest text-sm mb-4">
+            Welcome to Johannesburg Bible Study Church
+          </p>
+          <h1 class="heading-1 text-white mb-6">
+            A Bible Study Community<br />in Sandton, Johannesburg
+          </h1>
+          <p class="text-body text-blue-100 mb-8 max-w-2xl">
+            Join our welcoming Christian community in Sandton for Wednesday online Bible study, free Sunday Korean class, youth programs, and more. Everyone is welcome.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/visit" class="btn-warm">Plan Your Visit</a>
+            <a href="/community-classes/korean" class="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-blue-700">
+              Free Korean Class
+            </a>
+            <a href="/videos" class="inline-flex items-center justify-center gap-2 rounded-lg border border-amber-300/60 bg-amber-400/10 px-6 py-3 text-sm font-semibold text-amber-50 backdrop-blur-sm transition-colors hover:bg-amber-400/20">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              Watch Bible Study
+            </a>
+          </div>
+        </div>
+        <!-- Featured video preview -->
+        <div class="hidden lg:block">
+          <div class="aspect-video rounded-2xl overflow-hidden bg-black/30 shadow-2xl ring-1 ring-white/20">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+              title="Latest Bible Study"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              class="w-full h-full"
+            ></iframe>
+          </div>
+          <p class="text-xs text-blue-200 mt-2 text-center">Latest: Exodus 14 — The Sea That Parts (Mr. Sim)</p>
         </div>
       </div>
     </div>

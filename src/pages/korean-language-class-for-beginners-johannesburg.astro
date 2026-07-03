@@ -1,0 +1,181 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Korean Class', url: '/community-classes/korean/' },
+  { name: 'Beginners Guide', url: '/korean-language-class-for-beginners-johannesburg/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Course',
+  name: 'Free Korean Language Class for Beginners — Sandton',
+  description: 'A free Sunday afternoon Korean language class for absolute beginners in Parkmore, Sandton, Johannesburg. Learn Hangul, basic conversation, and Korean culture in a welcoming community.',
+  provider: {
+    '@type': 'Organization',
+    name: 'Johannesburg Bible Study Church',
+    url: 'https://joburgchurch.co.za',
+  },
+  educationalLevel: 'Beginner',
+  inLanguage: ['en', 'ko'],
+  isAccessibleForFree: true,
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'ZAR',
+  },
+  hasCourseInstance: {
+    '@type': 'CourseInstance',
+    courseMode: 'onsite',
+    courseWorkload: 'PT2H',
+    location: {
+      '@type': 'Place',
+      name: 'Parkmore Community Centre',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '11th Street',
+        addressLocality: 'Sandton',
+        addressRegion: 'Gauteng',
+        postalCode: '2196',
+        addressCountry: 'ZA',
+      },
+    },
+  },
+};
+---
+<BaseLayout
+  title="Free Korean Class for Beginners in Sandton, Johannesburg | Learn Hangul"
+  description="Free Korean language class for absolute beginners in Parkmore, Sandton, Johannesburg. Sundays 2pm. Learn Hangul alphabet, basic Korean conversation, and culture. No textbook needed."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max max-w-4xl">
+      <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Korean Class for Beginners</p>
+      <h1 class="heading-1 mb-6">Learning Korean as a Beginner in Sandton: Your Honest First-Session Guide</h1>
+      <p class="text-lg text-gray-700 mb-8">
+        If you have ever typed <em>free Korean class Sandton</em> into Google at 11pm wondering whether you will ever actually read a Korean restaurant menu, this page is for you. We have been teaching Korean to absolute beginners in Parkmore since 2019. Here is what the first Sunday actually looks like.
+      </p>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-amber-900 mb-2">Quick answer if you are scanning:</p>
+        <ul class="space-y-1 text-amber-900 text-sm">
+          <li>✓ <strong>When:</strong> Every Sunday, 2:00pm to 4:00pm</li>
+          <li>✓ <strong>Where:</strong> Parkmore, 11th Street, Sandton</li>
+          <li>✓ <strong>Cost:</strong> Free, since 2019</li>
+          <li>✓ <strong>What to bring:</strong> Just yourself. We supply the worksheets.</li>
+          <li>✓ <strong>Appointment required:</strong> Yes — call ahead so we save you a seat</li>
+        </ul>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">You Will Read Hangul by the End of the First Session</h2>
+      <p class="text-body mb-6">
+        The single most surprising thing for new students is how quickly the Korean alphabet (한글, <em>Hangul</em>) clicks. Hangul is a designed writing system — King Sejong published it in 1443 so that ordinary Koreans could read and write in under a week. It is not like Mandarin characters or Japanese kanji. There are 14 basic consonants and 10 vowels. You can read them all by lunchtime on a Sunday.
+      </p>
+      <p class="text-body mb-6">
+        Most of our students spend the first 40 minutes sounding out their own names in Korean. By the end of the two-hour session, they can read simple signs and a few basic phrases. We do not promise fluency — that takes years — but we promise you will read, write, and pronounce 30 to 50 characters correctly on day one.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">What You Actually Learn in Week One</h2>
+      <p class="text-body mb-4">
+        The first Sunday is structured like this:
+      </p>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li><strong>10 minutes — hellos in Korean.</strong> 안녕하세요 (annyeonghaseyo). We learn how to bow slightly without making it weird. Names, ages, where you live.</li>
+        <li><strong>30 minutes — the Hangul consonants.</strong> ㄱ ㄴ ㄷ ㄹ ㅁ ㅂ ㅅ ㅇ ㅈ ㅊ ㅋ ㅌ ㅍ ㅎ. We use a Hangul worksheet we created, and you trace along.</li>
+        <li><strong>15 minutes — the basic vowels.</strong> ㅏ ㅑ ㅓ ㅕ ㅗ ㅛ ㅜ ㅠ ㅡ ㅣ.</li>
+        <li><strong>15 minutes — combining vowels and consonants.</strong> This is where it starts to feel like magic. 가나다라마바사.</li>
+        <li><strong>30 minutes — break + casual conversation.</strong> Coffee, tea, biscuits. Most people stay and chat for an extra 30 minutes.</li>
+        <li><strong>20 minutes — basic phrases.</strong> 감사합니다 (thank you), 죄송합니다 (sorry), 네 / 아니오 (yes / no).</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">Who Shows Up on a Sunday Afternoon</h2>
+      <p class="text-body mb-6">
+        Our class is not a school classroom. The people who come are:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li>University students at Wits, UJ, and Stias preparing for exchange in Seoul</li>
+        <li>Young professionals whose partners are Korean and they want to talk to the in-laws</li>
+        <li>K-drama and K-pop fans who got tired of subtitles</li>
+        <li>Adults who tried Duolingo for six months and want a real class</li>
+        <li>Parents who want their kids to grow up bilingual</li>
+        <li>Anyone who is curious — and yes, that includes people who have no Korean connection at all</li>
+      </ul>
+      <p class="text-body mb-6">
+        Most students are between 19 and 45, but we have had learners from 14 to 72. The common thread is curiosity and patience. You do not need to be gifted at languages. You just need to show up.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Why Our Class Is Free (and Has Been Since 2019)</h2>
+      <p class="text-body mb-6">
+        The class is run by Ms. Dora, who taught Korean professionally for eight years before moving to Johannesburg. She volunteers her time because she believes language learning is a doorway into a different culture — and a different culture is a doorway into seeing your own life more clearly. That is also why we run it alongside a Bible study in the same community: we are not selling anything. We just want a place where people from different backgrounds can learn something together.
+      </p>
+      <p class="text-body mb-6">
+        You will not be asked to buy a textbook. We print the worksheets in-house. We provide coffee. The only thing we ask is that you book ahead so we know how many chairs to set up.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">How to Book Your Seat</h2>
+      <p class="text-body mb-6">
+        Booking is simple. Pick whichever is easier:
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4 mb-10">
+        <div class="card bg-blue-50 border-blue-100">
+          <p class="font-semibold mb-1">Call Mr. Sim</p>
+          <p class="text-2xl font-bold text-blue-700">+27 77 487 1295</p>
+          <p class="text-xs text-gray-600 mt-1">WhatsApp available</p>
+        </div>
+        <div class="card bg-purple-50 border-purple-100">
+          <p class="font-semibold mb-1">Call Ms. Dora</p>
+          <p class="text-2xl font-bold text-purple-700">+27 67 442 4461</p>
+          <p class="text-xs text-gray-600 mt-1">Korean & English</p>
+        </div>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">What Happens After the First Class</h2>
+      <p class="text-body mb-6">
+        Most students come back. About 60% of beginners complete the first 8 weeks. By week 8, you can introduce yourself, order food in Korean, ask for directions, and hold a 2-minute conversation. By week 16, you can read a Korean news headline and follow a K-drama without English subtitles (mostly).
+      </p>
+      <p class="text-body mb-6">
+        We do not give certificates. We do not run exams. We just keep showing up on Sundays with worksheets and coffee. The progress happens quietly.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Frequently Asked Questions</h2>
+
+      <div class="space-y-4 mb-10">
+        <details class="card">
+          <summary class="font-semibold cursor-pointer">Do I need to know any Korean before starting?</summary>
+          <p class="mt-3 text-gray-700">No. About 70% of our students start with zero Korean. We design the first 4 weeks for absolute beginners.</p>
+        </details>
+        <details class="card">
+          <summary class="font-semibold cursor-pointer">Is the class really free? What is the catch?</summary>
+          <p class="mt-3 text-gray-700">Yes, free since 2019. The only expectation is that you call ahead to book. We do not push any religion. We do not collect your data. We just teach Korean.</p>
+        </details>
+        <details class="card">
+          <summary class="font-semibold cursor-pointer">Can I come just to try once before committing?</summary>
+          <p class="mt-3 text-gray-700">Absolutely. Many students drop in for a single session. If you like it, you are welcome to come back. If it is not for you, no pressure.</p>
+        </details>
+        <details class="card">
+          <summary class="font-semibold cursor-pointer">What is the parking like in Parkmore?</summary>
+          <p class="mt-3 text-gray-700">Free street parking on 11th Street and surrounding roads. Sundays are quiet. You will not struggle to find a spot.</p>
+        </details>
+        <details class="card">
+          <summary class="font-semibold cursor-pointer">Do you offer intermediate or advanced classes?</summary>
+          <p class="mt-3 text-gray-700">After completing the first 8-week beginner cycle, students are invited to an intermediate group that meets at a separate time. Advanced learners can join our conversation practice evenings.</p>
+        </details>
+      </div>
+
+      <div class="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-8 text-center">
+        <h3 class="heading-2 text-white mb-3">Ready to Start?</h3>
+        <p class="text-blue-100 mb-6">Pick up the phone. Two minutes is all it takes.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+27774871295" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-blue-700 hover:bg-blue-50">
+            Call Mr. Sim
+          </a>
+          <a href="tel:+27674424461" class="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white hover:bg-white/20">
+            Call Ms. Dora
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

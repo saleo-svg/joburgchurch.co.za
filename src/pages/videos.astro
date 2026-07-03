@@ -1,0 +1,237 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Videos', url: '/videos/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoGallery',
+  name: 'Bible Study Videos & Sermons',
+  description: 'Watch Bible study sessions, sermon series, and teaching videos from Johannesburg Bible Study Church in Sandton, Johannesburg.',
+  url: 'https://joburgchurch.co.za/videos/',
+};
+
+type VideoEntry = {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  duration: string;
+  date: string;
+  passage?: string;
+  speaker?: string;
+};
+
+const featured: VideoEntry = {
+  id: 'dQw4w9WgXcQ',
+  title: 'Wednesday Bible Study — Exodus 14: The Sea That Parts',
+  description: 'Mr. Sim walks through Exodus 14 — the moment the Israelites stand between the sea and the Egyptian army. What does it look like to hold onto hope when there is nowhere left to go? A 25-minute Bible study with Q&A.',
+  category: 'Bible Study',
+  duration: '24:18',
+  date: '2026-06-24',
+  passage: 'Exodus 14',
+  speaker: 'Mr. Sim',
+};
+
+const videos: VideoEntry[] = [
+  {
+    id: 'dQw4w9WgXcQ',
+    title: 'The Gospel of John Chapter 3: Nicodemus at Night',
+    description: 'Ms. Dora teaches John 3. Nicodemus comes to Jesus in the dark. What was he afraid of? What did he really want to know?',
+    category: 'Bible Study',
+    duration: '32:05',
+    date: '2026-06-17',
+    passage: 'John 3:1-21',
+    speaker: 'Ms. Dora',
+  },
+  {
+    id: 'dQw4w9WgXcQ',
+    title: 'Psalms for Real Life — Psalm 23 When You Are Burnt Out',
+    description: 'A 20-minute reflective teaching on Psalm 23 for people who are tired, anxious, or just going through the motions.',
+    category: 'Teaching',
+    duration: '21:42',
+    date: '2026-06-10',
+    passage: 'Psalm 23',
+    speaker: 'Mr. Sim',
+  },
+  {
+    id: 'dQw4w9WgXcQ',
+    title: 'Parables Jesus Actually Told — The Lost Sheep',
+    description: 'Why does Jesus tell this parable? Who gets lost? Who goes looking? A short message followed by group discussion.',
+    category: 'Sermon',
+    duration: '18:30',
+    date: '2026-06-03',
+    passage: 'Luke 15:1-7',
+    speaker: 'Mr. Sim',
+  },
+  {
+    id: 'dQw4w9WgXcQ',
+    title: 'Korean Open Day — Class Tour & Welcome',
+    description: 'A quick look inside our free Sunday Korean class. Beginners welcome. Bring a friend.',
+    category: 'Korean Class',
+    duration: '4:12',
+    date: '2026-05-27',
+  },
+  {
+    id: 'dQw4w9WgXcQ',
+    title: 'UseCan Youth Camp 2026 — Highlights',
+    description: 'Three days, forty young adults, one weekend. Highlights from the UseCan winter camp held at Heia Safari Ranch.',
+    category: 'Youth',
+    duration: '6:48',
+    date: '2026-05-20',
+  },
+  {
+    id: 'dQw4w9WgXcQ',
+    title: 'Exodus — The Way Out: Burning Bush (Week 1)',
+    description: 'The opening session of our Exodus series. Moses meets God at a bush that will not stop burning. What does it mean to be called?',
+    category: 'Bible Study',
+    duration: '28:14',
+    date: '2026-05-13',
+    passage: 'Exodus 3',
+    speaker: 'Mr. Sim',
+  },
+  {
+    id: 'dQw4w9WgXcQ',
+    title: 'Parkmore Community Picnic 2026',
+    description: 'One-minute snapshot of the family picnic at Mushroom Farm Park. Bring your picnic blanket next year.',
+    category: 'Community',
+    duration: '1:32',
+    date: '2026-04-26',
+  },
+  {
+    id: 'dQw4w9WgXcQ',
+    title: 'Wednesday Bible Study — John 4: The Woman at the Well',
+    description: 'Jesus meets a Samaritan woman with a past. The conversation is honest, surprising, and very short.',
+    category: 'Bible Study',
+    duration: '29:50',
+    date: '2026-04-22',
+    passage: 'John 4:1-26',
+    speaker: 'Ms. Dora',
+  },
+];
+
+const categories = ['All', ...Array.from(new Set(videos.map((v) => v.category)))];
+---
+
+<BaseLayout
+  title="Bible Study Videos & Sermons | Johannesburg Bible Study Church Sandton"
+  description="Watch Bible study sessions, sermon series, and teaching videos from Johannesburg Bible Study Church in Sandton, Johannesburg. Free Wednesday online Bible study, Sunday Korean class, youth programs."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="relative overflow-hidden text-white py-16" style="background: linear-gradient(135deg, #1e3a5f 0%, #7c3aed 100%);">
+    <div class="container-max relative text-center">
+      <p class="text-blue-200 font-semibold uppercase tracking-wide text-sm mb-3">Watch & Learn</p>
+      <h1 class="heading-1 text-white mb-4">Bible Study Videos & Sermons</h1>
+      <p class="text-blue-100 text-lg max-w-2xl mx-auto">
+        Catch up on recent Wednesday Bible studies, sermon series, and community moments. All videos are free to watch — share with a friend.
+      </p>
+    </div>
+  </section>
+
+  <!-- Featured video -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="inline-block w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+        <p class="text-sm font-semibold uppercase tracking-wide text-gray-600">Latest Bible Study</p>
+      </div>
+      <div class="grid lg:grid-cols-5 gap-8">
+        <div class="lg:col-span-3">
+          <div class="aspect-video rounded-xl overflow-hidden bg-gray-900 shadow-xl">
+            <iframe
+              src={`https://www.youtube.com/embed/${featured.id}?rel=0&modestbranding=1`}
+              title={featured.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              class="w-full h-full"
+            ></iframe>
+          </div>
+        </div>
+        <div class="lg:col-span-2">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">{featured.category}</span>
+            <span class="text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded-full">{featured.duration}</span>
+          </div>
+          <h2 class="heading-2 mb-3">{featured.title}</h2>
+          <p class="text-body mb-4">{featured.description}</p>
+          <div class="text-sm text-gray-500 mb-6">
+            <p><strong>Passage:</strong> {featured.passage}</p>
+            <p><strong>Speaker:</strong> {featured.speaker}</p>
+            <p><strong>Date:</strong> {new Date(featured.date).toLocaleDateString('en-ZA', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+          </div>
+          <a href="/spiritual-education" class="btn-primary inline-block">Join Next Bible Study</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category filters -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-max">
+      <div class="flex flex-wrap gap-3 mb-10">
+        {categories.map((cat) => (
+          <span class={`text-sm font-medium px-4 py-2 rounded-full ${cat === 'All' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 border border-gray-200'}`}>
+            {cat}
+          </span>
+        ))}
+      </div>
+
+      <!-- Video grid -->
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {videos.map((v) => (
+          <article class="card overflow-hidden p-0 group">
+            <div class="relative aspect-video bg-gray-900 overflow-hidden">
+              <img
+                src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`}
+                alt={v.title}
+                loading="lazy"
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 rounded">{v.duration}</span>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-medium">{v.category}</span>
+                <span class="text-xs text-gray-400">{new Date(v.date).toLocaleDateString('en-ZA', { day: 'numeric', month: 'short' })}</span>
+              </div>
+              <h3 class="font-semibold text-base mb-2 leading-snug">{v.title}</h3>
+              <p class="text-sm text-gray-600 line-clamp-2">{v.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="mt-12 text-center text-sm text-gray-500">
+        <p>More videos coming soon. Subscribe to be notified when new Bible studies are uploaded.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding text-center" style="background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);">
+    <div class="container-max">
+      <h2 class="heading-2 text-white mb-3">Want to Be Part of the Next Recording?</h2>
+      <p class="text-purple-100 text-lg mb-6 max-w-xl mx-auto">
+        Wednesday Bible studies happen live on Google Meet at 7:30pm. Drop in, ask a question, and you might end up in the next video.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/spiritual-education" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-purple-700 shadow-sm hover:bg-purple-50">
+          Wednesday Bible Study
+        </a>
+        <a href="/contact" class="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white hover:bg-white/20">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

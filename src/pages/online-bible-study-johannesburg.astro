@@ -1,0 +1,147 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Online Bible Study', url: '/online-bible-study-johannesburg/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is online Bible study really effective?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Online Bible study through video conferencing tools like Google Meet allows for real-time discussion, questions, and prayer. Our Wednesday evening study has run online since 2017 and many participants say the screen-based format actually helps them focus.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need to install anything to join?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No installation needed. We use Google Meet, which works in any browser. You can also join via the free Google Meet mobile app.',
+      },
+    },
+  ],
+};
+---
+<BaseLayout
+  title="Online Bible Study Johannesburg | Wednesday 7:30pm Google Meet"
+  description="Online Bible study in Johannesburg every Wednesday 7:30pm on Google Meet. Free, open to all, no church background needed. Discuss Scripture in a welcoming online group."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max max-w-4xl">
+      <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Online Bible Study</p>
+      <h1 class="heading-1 mb-6">Online Bible Study in Johannesburg: Why a Wednesday on Google Meet Beats Sandton Traffic</h1>
+      <p class="text-lg text-gray-700 mb-8">
+        Let us be honest. Getting from Randburg to Sandton at 7pm on a Wednesday is a 45-minute affair if the M1 is cooperating. Most weeks it is not. This is exactly why our Bible study has been online since 2017 — long before it was fashionable — and why it works. Here is what an online Wednesday looks like, and why most of our regulars would not go back to in-person.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">The Joburg Traffic Problem (and Why Online Solves It)</h2>
+      <p class="text-body mb-6">
+        Johannesburg traffic is the city's least charming feature. If you live in Roodepoort, Fourways, or Midrand and drive into Sandton for a 7:30pm meeting, you are committing to two hours of your evening — 45 minutes each way plus the session itself. By the time you get home, it is past 10pm. You have missed dinner with your family, you have not read to your kids, and you are too tired to do the homework. We have lived this. We do not recommend it.
+      </p>
+      <p class="text-body mb-6">
+        An online Bible study removes that friction entirely. You make coffee. You open your laptop. You log into the Google Meet. You are in the room. The cost is 90 minutes, not three hours. You can do it in your pyjamas if you want — half our regulars do.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">What You Need to Join</h2>
+      <p class="text-body mb-6">
+        Almost nothing:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li>A device with a screen (phone, tablet, laptop, desktop)</li>
+        <li>An internet connection that can handle video (most Joburg fibre or 4G can)</li>
+        <li>The Google Meet link (we send it via WhatsApp when you register)</li>
+        <li>Optional: a Bible app on your phone (YouVersion, Bible Gateway, or Blue Letter Bible are all free)</li>
+      </ul>
+      <p class="text-body mb-6">
+        That is it. You do not need to install anything. You do not need an account. You do not need to register on a website. Just click the link at 7:30pm on Wednesday.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Why Online Bible Study Actually Works Better</h2>
+      <p class="text-body mb-6">
+        We were sceptical at first. Would people really participate through a screen? Would the discussion feel forced? After eight years of running this, here is what we have learned:
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-8">1. People talk more, not less</h3>
+      <p class="text-body mb-6">
+        Counterintuitively, the online format makes quieter people more willing to speak. There is no physical intimidation of sitting in a circle with 12 strangers. People turn on video or keep it off — either way, they type in the chat or unmute and ask the question they were afraid to ask in person. We have had people share deeply personal things online that they would never have said face-to-face.
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-8">2. The geography becomes irrelevant</h3>
+      <p class="text-body mb-6">
+        Our group currently includes people from Sandton, Randburg, Roodepoort, Centurion, Pretoria East, and one person who has been joining from Cape Town since 2022. When you remove the geography constraint, you get a more interesting, more diverse group. And the diversity makes the Bible study richer.
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-8">3. You can rewatch</h3>
+      <p class="text-body mb-6">
+        We record the teaching portion of every session (with permission) and send it out. Missed a Wednesday because of a work trip? Watch it Saturday morning with your coffee.
+      </p>
+
+      <h3 class="heading-3 mb-3 mt-8">4. You can invite people easily</h3>
+      <p class="text-body mb-6">
+        "Hey, want to join my Bible study? Here is a Google Meet link" is a much easier ask than "Hey, want to come to church with me on Sunday?" Many of our current regulars came because a friend forwarded them a Meet link with the message: "Just try once, you can leave anytime."
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">What to Expect on Your First Wednesday</h2>
+      <p class="text-body mb-6">
+        First-time visitors get a 5-minute welcome from Mr. Sim or Ms. Dora. We briefly explain what we are studying and how the session will flow. Then we dive in. There is no awkward "Hi, I'm new, tell me your testimony" moment. We just read the passage and start talking about it.
+      </p>
+      <p class="text-body mb-6">
+        If you prefer to keep your camera off for the first session, that is completely fine. We have had people show up for three weeks with no video before they turned it on. Take your time.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Common Concerns (and Honest Answers)</h2>
+
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">I am not a Christian. Is this still for me?</summary>
+        <p class="mt-3 text-gray-700">Yes. We have had Buddhists, agnostics, and people who just enjoy discussing ancient texts. We will not pressure you to convert. We will read the Bible together and let the text speak.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Will I be forced to share prayer requests?</summary>
+        <p class="mt-3 text-gray-700">No. Prayer requests are opt-in. You can listen to others pray without sharing anything.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">What if I do not understand the Bible at all?</summary>
+        <p class="mt-3 text-gray-700">Perfect. We design the study for people who do not understand it. That is the whole point.</p>
+      </details>
+      <details class="card mb-10">
+        <summary class="font-semibold cursor-pointer">Is it really free?</summary>
+        <p class="mt-3 text-gray-700">Yes. Free. No collection plate. No upgrade tier. No paid newsletter. Just a Google Meet link and 90 minutes of your evening.</p>
+      </details>
+
+      <h2 class="heading-2 mb-4 mt-10">Get the Meeting Link</h2>
+      <p class="text-body mb-6">
+        We send the link via WhatsApp. Pick whichever number is easier:
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-10">
+        <div class="card bg-blue-50 border-blue-100 text-center">
+          <p class="font-semibold mb-1">Mr. Sim</p>
+          <a href="tel:+27774871295" class="text-2xl font-bold text-blue-700 block my-2">+27 77 487 1295</a>
+          <p class="text-xs text-gray-600">WhatsApp available</p>
+        </div>
+        <div class="card bg-purple-50 border-purple-100 text-center">
+          <p class="font-semibold mb-1">Ms. Dora</p>
+          <a href="tel:+27674424461" class="text-2xl font-bold text-purple-700 block my-2">+27 67 442 4461</a>
+          <p class="text-xs text-gray-600">WhatsApp available</p>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-8 text-center">
+        <h3 class="heading-2 text-white mb-3">This Wednesday, 7:30pm</h3>
+        <p class="text-blue-100 mb-6 max-w-xl mx-auto">Two clicks. Ninety minutes. One passage of Scripture. Bring your coffee.</p>
+        <a href="tel:+27774871295" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-blue-700 hover:bg-blue-50">
+          Call Now to Get the Link
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

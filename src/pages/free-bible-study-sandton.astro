@@ -1,0 +1,160 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Bible Study', url: '/spiritual-education/' },
+  { name: 'Free Bible Study Sandton', url: '/free-bible-study-sandton/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: 'Free Bible Study in Sandton, Johannesburg',
+  description: 'A free, weekly Bible study held every Wednesday evening in Sandton, Johannesburg. Open to all, no church background required.',
+  eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  location: {
+    '@type': 'VirtualLocation',
+    url: 'https://joburgchurch.co.za/spiritual-education/',
+  },
+  organizer: {
+    '@type': 'Organization',
+    name: 'Johannesburg Bible Study Church',
+    url: 'https://joburgchurch.co.za',
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'ZAR',
+    availability: 'https://schema.org/InStock',
+  },
+  startDate: '2026-07-08T19:30+02:00',
+  endDate: '2026-07-08T21:00+02:00',
+  recurringEvent: {
+    '@type': 'Schedule',
+    byDay: 'https://schema.org/Wednesday',
+    startTime: '19:30',
+    endTime: '21:00',
+    duration: 'PT1H30M',
+    repeatFrequency: 'P1W',
+  },
+};
+---
+<BaseLayout
+  title="Free Bible Study in Sandton, Johannesburg | Wednesday Online Bible Study"
+  description="A free weekly Bible study in Sandton, Johannesburg. Every Wednesday 7:30pm on Google Meet. No church background needed. Open to anyone curious about the Bible."
+  breadcrumbs={breadcrumbs}
+  schema={schema}
+>
+  <section class="section-padding">
+    <div class="container-max max-w-4xl">
+      <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Bible Study in Sandton</p>
+      <h1 class="heading-1 mb-6">Free Bible Study in Sandton: Wednesday Evenings, Open to Anyone</h1>
+      <p class="text-lg text-gray-700 mb-8">
+        If you live in Sandton, Parkmore, Benmore, Hyde Park, or anywhere in northern Joburg, and you have been looking for a free Bible study that does not feel like a lecture, this is it. We meet every Wednesday at 7:30pm on Google Meet. We have been running this since 2014. Everyone is welcome — including people who have never opened a Bible.
+      </p>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-blue-900 mb-2">At a glance:</p>
+        <ul class="space-y-1 text-blue-900 text-sm">
+          <li>📖 <strong>When:</strong> Every Wednesday, 7:30pm to 9:00pm</li>
+          <li>💻 <strong>Where:</strong> Google Meet (link sent when you join)</li>
+          <li>💰 <strong>Cost:</strong> Free, no strings</li>
+          <li>👤 <strong>Who:</strong> Anyone. No church background required.</li>
+          <li>🌍 <strong>Language:</strong> English (with occasional Korean for visiting friends)</li>
+        </ul>
+      </div>
+
+      <h2 class="heading-2 mb-4 mt-10">Who We Are</h2>
+      <p class="text-body mb-6">
+        We are Johannesburg Bible Study Church — a small, interdenominational Christian community that has been meeting in and around Sandton for over a decade. We are not affiliated with any specific denomination. We are not part of a larger church network. We are a community of believers (and seekers) who meet weekly to study the Bible, support one another, and try to live out what we read.
+      </p>
+      <p class="text-body mb-6">
+        Mr. Sim and Ms. Dora lead the Wednesday study. Mr. Sim handles most of the teaching. Ms. Dora runs the Korean class on Sundays and joins the Wednesday Bible study when she is in town. They have been doing this together since 2017.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">What a Wednesday Evening Looks Like</h2>
+      <p class="text-body mb-4">
+        Each Wednesday follows a similar rhythm:
+      </p>
+      <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
+        <li><strong>7:30pm — Settle in.</strong> People join the Google Meet from laptops, phones, and the occasional tablet. We wait 5 minutes for latecomers.</li>
+        <li><strong>7:35pm — Catch-up.</strong> Optional check-in. How was your week? Anyone travelling? Anyone sick? We keep this to 10 minutes.</li>
+        <li><strong>7:45pm — Reading the passage.</strong> We pick a passage on Monday and share it via WhatsApp during the week. Tonight we are reading <em>Exodus 14</em>.</li>
+        <li><strong>7:50pm — Teaching.</strong> Mr. Sim gives a 15-20 minute walkthrough. Historical context, original language notes (Hebrew / Greek), how it connects to the rest of Scripture.</li>
+        <li><strong>8:10pm — Discussion.</strong> Anyone can ask a question. Anyone can share a thought. There are no stupid questions. We have had nuclear physicists and first-time Bible readers in the same conversation.</li>
+        <li><strong>8:50pm — Prayer requests.</strong> Anyone can share a request. We pray together. You can opt out — no pressure.</li>
+        <li><strong>9:00pm — Done.</strong> Most people stay on the Meet for another 10-15 minutes just chatting.</li>
+      </ol>
+
+      <h2 class="heading-2 mb-4 mt-10">What We Have Studied Recently</h2>
+      <p class="text-body mb-6">
+        We work through books of the Bible over several weeks. Recent series:
+      </p>
+      <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li><strong>Exodus — The Way Out</strong> (Jan–Mar 2026): Israel's escape from Egypt, the wilderness, and what "salvation" actually means.</li>
+        <li><strong>The Gospel of John</strong> (Mar–May 2026): Who is Jesus, according to John's account?</li>
+        <li><strong>Psalms for Real Life</strong> (May–Jun 2026): How the Psalms speak to anxiety, joy, grief, and ordinary Mondays.</li>
+        <li><strong>Parables Jesus Actually Told</strong> (Jun–Aug 2026): The Lost Sheep, the Prodigal Son, the Workers in the Vineyard, the Unmerciful Servant.</li>
+      </ul>
+
+      <h2 class="heading-2 mb-4 mt-10">Why "Free" Matters</h2>
+      <p class="text-body mb-6">
+        We do not charge. We do not pass a collection plate. We do not run a paid membership programme. The Bible study is supported by people who already attend and who give voluntarily when they can. Some give R50 a month. Some give nothing. That is fine.
+      </p>
+      <p class="text-body mb-6">
+        We believe the gospel is free, and the study of Scripture should be too. If you are between jobs, if you are a student, if you are a single parent, if you are just exploring — you are welcome. The Zoom link costs you nothing but 90 minutes of your evening.
+      </p>
+
+      <h2 class="heading-2 mb-4 mt-10">Common Questions from First-Timers</h2>
+
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Do I need a Bible?</summary>
+        <p class="mt-3 text-gray-700">No. We share the passage via WhatsApp before each session. Most people use a phone Bible app during the study (YouVersion is popular).</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Will I be asked to share my video?</summary>
+        <p class="mt-3 text-gray-700">No. About half the group joins with video on, half with video off. Both are fine.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">What if I have never read the Bible?</summary>
+        <p class="mt-3 text-gray-700">Perfect. You are exactly the kind of person we want in the room. We explain context, define terms, and never assume prior knowledge.</p>
+      </details>
+      <details class="card mb-3">
+        <summary class="font-semibold cursor-pointer">Is this a Bible study or a church service?</summary>
+        <p class="mt-3 text-gray-700">It is a Bible study. There is no worship band, no altar call, no offering. Just Scripture, discussion, and prayer.</p>
+      </details>
+      <details class="card mb-10">
+        <summary class="font-semibold cursor-pointer">What if I am not a Christian?</summary>
+        <p class="mt-3 text-gray-700">Come anyway. We have had Buddhists, agnostics, and curious atheists join over the years. We will not try to convert you. We will read the text together and let it speak.</p>
+      </details>
+
+      <h2 class="heading-2 mb-4 mt-10">How to Join</h2>
+      <p class="text-body mb-6">
+        Pick up the phone or send a WhatsApp. We will add you to the group chat and send you the Google Meet link.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-10">
+        <div class="card bg-blue-50 border-blue-100 text-center">
+          <p class="font-semibold mb-1">Mr. Sim</p>
+          <a href="tel:+27774871295" class="text-2xl font-bold text-blue-700 block my-2">+27 77 487 1295</a>
+          <p class="text-xs text-gray-600">English / 中文</p>
+        </div>
+        <div class="card bg-purple-50 border-purple-100 text-center">
+          <p class="font-semibold mb-1">Ms. Dora</p>
+          <a href="tel:+27674424461" class="text-2xl font-bold text-purple-700 block my-2">+27 67 442 4461</a>
+          <p class="text-xs text-gray-600">English / 한국어</p>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-2xl p-8 text-center">
+        <h3 class="heading-2 text-white mb-3">This Wednesday, 7:30pm</h3>
+        <p class="text-blue-100 mb-6 max-w-xl mx-auto">No prep needed. Just bring yourself and a cup of coffee.</p>
+        <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-blue-700 hover:bg-blue-50">
+          Get the Meeting Link
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = () => {
   const siteUrl = 'https://joburgchurch.co.za';
-  const now = '2026-06-27';
+  const now = '2026-07-03';
 
   const staticPages = [
     { url: '/', priority: '1.0', changefreq: 'weekly' },
@@ -10,13 +10,14 @@ export const GET: APIRoute = () => {
     { url: '/visit/', priority: '0.9', changefreq: 'monthly' },
     { url: '/community-classes/', priority: '0.9', changefreq: 'weekly' },
     { url: '/community-classes/korean/', priority: '0.9', changefreq: 'weekly' },
-    { url: '/spiritual-education/', priority: '0.8', changefreq: 'weekly' },
+    { url: '/spiritual-education/', priority: '0.9', changefreq: 'weekly' },
     { url: '/youth-usecan/', priority: '0.8', changefreq: 'monthly' },
     { url: '/sermons/', priority: '0.7', changefreq: 'weekly' },
+    { url: '/videos/', priority: '0.9', changefreq: 'weekly' },
     { url: '/events/', priority: '0.7', changefreq: 'weekly' },
     { url: '/gallery/', priority: '0.6', changefreq: 'monthly' },
-    { url: '/blog/', priority: '0.8', changefreq: 'weekly' },
-    { url: '/faq/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/blog/', priority: '0.9', changefreq: 'weekly' },
+    { url: '/faq/', priority: '0.8', changefreq: 'monthly' },
     { url: '/contact/', priority: '0.8', changefreq: 'monthly' },
   { url: '/privacy/', priority: '0.3', changefreq: 'yearly' },
   { url: '/locations/', priority: '0.8', changefreq: 'weekly' },
@@ -30,6 +31,10 @@ export const GET: APIRoute = () => {
 ];
 
   const blogPosts = [
+    { url: '/free-bible-study-sandton/', lastmod: '2026-07-03' },
+    { url: '/online-bible-study-johannesburg/', lastmod: '2026-07-03' },
+    { url: '/korean-language-class-for-beginners-johannesburg/', lastmod: '2026-07-03' },
+    { url: '/videos/', lastmod: '2026-07-03' },
     { url: '/blog/welcome-to-our-church/', lastmod: '2026-01-01' },
     { url: '/blog/free-korean-class-community/', lastmod: '2026-02-01' },
     { url: '/blog/why-community-learning-matters/', lastmod: '2026-03-01' },

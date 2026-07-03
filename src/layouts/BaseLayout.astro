@@ -11,6 +11,7 @@ interface Props {
   ogType?: string;
   publishDate?: string;
   schema?: Record<string, unknown>;
+  breadcrumbs?: Array<{ name: string; url: string }>;
 }
 
 const {
@@ -21,13 +22,99 @@ const {
   ogType = 'website',
   publishDate,
   schema,
+  breadcrumbs,
 } = Astro.props;
 
 const siteName = 'Johannesburg Bible Study Church';
 const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
 const siteUrl = 'https://joburgchurch.co.za';
 
-const jsonLd = schema ? JSON.stringify(schema) : null;
+// Global LocalBusiness schema — present on every page for Google Maps / Knowledge Panel signals
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${siteUrl}/#organization`,
+  name: siteName,
+  alternateName: 'Joburg Bible Study Church',
+  url: siteUrl,
+  logo: `${siteUrl}/images/og-default.svg`,
+  image: `${siteUrl}/images/og-default.svg`,
+  description: 'A Bible study and welcoming Christian community in Sandton, Johannesburg. Wednesday online Bible study, free Sunday Korean class, youth programs.',
+  telephone: ['+27774871295', '+27674424461'],
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Parkmore, 11th Street',
+    addressLocality: 'Sandton',
+    addressRegion: 'Gauteng',
+    postalCode: '2196',
+    addressCountry: 'ZA',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -26.1076,
+    longitude: 28.0567,
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Wednesday'],
+      opens: '19:30',
+      closes: '21:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Sunday'],
+      opens: '14:00',
+      closes: '16:00',
+    },
+  ],
+  priceRange: 'Free',
+  areaServed: [
+    { '@type': 'City', name: 'Johannesburg' },
+    { '@type': 'City', name: 'Sandton' },
+    { '@type': 'City', name: 'Randburg' },
+    { '@type': 'City', name: 'Fourways' },
+    { '@type': 'City', name: 'Midrand' },
+    { '@type': 'City', name: 'Alberton' },
+    { '@type': 'City', name: 'Roodepoort' },
+    { '@type': 'City', name: 'Soweto' },
+    { '@type': 'AdministrativeArea', name: 'Gauteng' },
+    { '@type': 'Country', name: 'South Africa' },
+  ],
+  knowsAbout: [
+    'Bible Study',
+    'Christian Community',
+    'Korean Language Class',
+    'Youth Ministry',
+    'Online Bible Study',
+    'Spiritual Education',
+    'Worship',
+    'Christian Fellowship',
+  ],
+  sameAs: [
+    'https://joburgchurch.co.za',
+  ],
+};
+
+// BreadcrumbList schema (optional)
+const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbs.map((crumb, idx) => ({
+    '@type': 'ListItem',
+    position: idx + 1,
+    name: crumb.name,
+    item: crumb.url.startsWith('http') ? crumb.url : `${siteUrl}${crumb.url}`,
+  })),
+} : null;
+
+// Combine into single schema graph
+const allSchemas: Record<string, unknown>[] = [];
+allSchemas.push(localBusinessSchema);
+if (breadcrumbSchema) allSchemas.push(breadcrumbSchema);
+if (schema) allSchemas.push(schema);
+
+const combinedJsonLd = JSON.stringify(allSchemas);
 ---
 
 <!doctype html>
@@ -36,10 +123,19 @@ const jsonLd = schema ? JSON.stringify(schema) : null;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#1e3a5f" />
 
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Geographic / language targeting -->
+    <meta name="geo.region" content="ZA-GP" />
+    <meta name="geo.placename" content="Sandton, Johannesburg, South Africa" />
+    <meta name="geo.position" content="-26.1076;28.0567" />
+    <meta name="ICBM" content="-26.1076, 28.0567" />
+    <link rel="alternate" hreflang="en-za" href={siteUrl} />
+    <link rel="alternate" hreflang="x-default" href={siteUrl} />
 
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />
@@ -48,6 +144,9 @@ const jsonLd = schema ? JSON.stringify(schema) : null;
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content={siteName} />
     <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={fullTitle} />
     <meta property="og:locale" content="en_ZA" />
     {publishDate && <meta property="article:published_time" content={publishDate} />}
 
@@ -59,14 +158,20 @@ const jsonLd = schema ? JSON.stringify(schema) : null;
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
 
-    <!-- Google Fonts -->
+    <!-- Performance: DNS prefetch & preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.youtube.com" />
+    <link rel="dns-prefetch" href="https://i.ytimg.com" />
+    <link rel="dns-prefetch" href="https://www.google.com" />
+
+    <!-- Google Fonts (display=swap for CLS) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- JSON-LD Schema -->
-    {jsonLd && <script type="application/ld+json" set:html={jsonLd} />}
+    <!-- JSON-LD Schema graph -->
+    <script type="application/ld+json" set:html={combinedJsonLd} />
   </head>
   <body class="flex min-h-screen flex-col">
     <Header />
