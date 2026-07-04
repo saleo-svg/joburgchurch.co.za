@@ -175,21 +175,18 @@ const combinedJsonLd = JSON.stringify(allSchemas);
     <!-- Google Analytics 4 + Baidu Tongji                            -->
     <!-- ============================================================ -->
     <!--
-      Set the GA4 Measurement ID via env var GA4_ID at build time.
-      Get one free at https://analytics.google.com (you will need the Gmail you used for GSC).
-      Same for Baidu Tongji BAIDU_TONGJI_ID if you want to track mainland-China visits.
+      GA4_ID is hardcoded (it is a public identifier that appears on every
+      page anyway — no security reason to hide it).
+      Baidu Tongji stays env-var-gated (set BAIDU_TONGJI_ID at build time
+      if you need mainland-China tracking).
     -->
-    {import.meta.env.GA4_ID && (
-      <>
-        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.GA4_ID}`} />
-        <script is:inline set:html={`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${import.meta.env.GA4_ID}', { anonymize_ip: true });
-        `} />
-      </>
-    )}
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-LWST7GKLWZ" />
+    <script is:inline set:html={`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LWST7GKLWZ', { anonymize_ip: true });
+    `} />
     {import.meta.env.BAIDU_TONGJI_ID && (
       <script is:inline async src={`https://hm.baidu.com/hm.js?${import.meta.env.BAIDU_TONGJI_ID}`} />
     )}
