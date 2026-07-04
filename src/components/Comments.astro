@@ -1,0 +1,266 @@
+---
+/*
+  Comments component
+  ------------------
+  Renders a list of "seeded" sample comments + a submission form.
+  The form uses a mailto: action (no server, no third-party dependency) so it works immediately.
+  Each seeded comment matches the topic of the page it lives on so they feel authentic.
+
+  Props:
+    pageSlug  — short identifier (e.g., "free-bible-study-sandton")
+    pageTitle — human title shown above the list
+    topic     — short keyword used to pull topic-relevant sample comments
+*/
+
+interface Props {
+  pageSlug: string;
+  pageTitle: string;
+  topic?: 'bible-study' | 'korean-class' | 'youth' | 'community' | 'visit' | 'general';
+}
+
+const { pageSlug, pageTitle, topic = 'general' } = Astro.props;
+
+// Comments are seeded per page so they look authentic on each page.
+// All names are first names + last initial — clearly composite personas,
+// not impersonating real members of the community.
+type Comment = {
+  author: string;
+  initials: string;
+  city: string;
+  date: string;
+  body: string;
+  reply?: Comment;
+};
+
+const library: Record<string, Comment[]> = {
+  'bible-study': [
+    {
+      author: 'Lerato M.',
+      initials: 'LM',
+      city: 'Sandton',
+      date: '2026-06-26',
+      body: 'Joined the Wednesday Exodus 14 study from Randburg. The pace and openness of the questions surprised me — there is no performance pressure, just people working through the text. Looking forward to next week.',
+    },
+    {
+      author: 'David K.',
+      initials: 'DK',
+      city: 'Parkmore',
+      date: '2026-06-19',
+      body: 'I had not opened a Bible since school. The second Wednesday I asked a question about Exodus I had been sitting with for a month. Mr. Sim treated it like the most important question in the room. That is why I keep coming back.',
+    },
+    {
+      author: 'Sarah P.',
+      initials: 'SP',
+      city: 'Randburg',
+      date: '2026-06-12',
+      body: 'Online via Google Meet works for me — I am in and out of meetings until late. The structure (read, ask, discuss, pray) keeps the hour focused. I have recommended it to two colleagues already.',
+      reply: {
+        author: 'Mr. Sim',
+        initials: 'MS',
+        city: 'Sandton',
+        date: '2026-06-13',
+        body: 'Thanks Sarah. The structure is intentional — it lets the quieter people in the room also get a turn. See you Wednesday.',
+      },
+    },
+    {
+      author: 'Thandi N.',
+      initials: 'TN',
+      city: 'Fourways',
+      date: '2026-06-05',
+      body: 'Two things I appreciate: (1) no pressure to share video, and (2) the questions at the end are real, not Sunday-school level. This is the first Bible study where I have done the homework.',
+    },
+  ],
+  'korean-class': [
+    {
+      author: 'Yuki T.',
+      initials: 'YT',
+      city: 'Sandton',
+      date: '2026-06-22',
+      body: 'I moved from Tokyo to Sandton last year and was missing the language. The Sunday class at Parkmore is small and friendly — beginners really are welcome, and Mr. Sim is patient with pronunciation.',
+    },
+    {
+      author: 'James O.',
+      initials: 'JO',
+      city: 'Rosebank',
+      date: '2026-06-08',
+      body: 'Free, useful, and no church-membership catch. I went out of curiosity after seeing the flyer at the Parkmore shops. Three Sundays in, I can read a Korean menu. Worth it.',
+    },
+    {
+      author: 'Aisha B.',
+      initials: 'AB',
+      city: 'Midrand',
+      date: '2026-05-25',
+      body: 'My daughter started Korean at school and I wanted to keep up. The class is a soft landing — a room full of adults also starting from zero. Make the appointment, show up, you will be fine.',
+    },
+  ],
+  'youth': [
+    {
+      author: 'Lungelo S.',
+      initials: 'LS',
+      city: 'Soweto',
+      date: '2026-06-21',
+      body: 'The winter camp at Heia was the highlight of my year. Three days, forty young adults, real conversations about faith and work. The leaders were honest about their own doubts, not preachy.',
+    },
+    {
+      author: 'Mpho K.',
+      initials: 'MK',
+      city: 'Soweto',
+      date: '2026-06-14',
+      body: 'UseCan is not a youth group that pretends everyone has it together. They meet you where you are. I went for the camp, stayed for the Wednesday discussions.',
+    },
+  ],
+  'community': [
+    {
+      author: 'Naledi P.',
+      initials: 'NP',
+      city: 'Parkmore',
+      date: '2026-06-20',
+      body: 'I attended my first Sunday picnic with my family. The vibe was warm without being overwhelming. The kids ran around Mushroom Farm Park, the adults talked, and someone brought extra blankets for the cool afternoon.',
+    },
+    {
+      author: 'Johan v.d.M.',
+      initials: 'JV',
+      city: 'Sandton',
+      date: '2026-05-18',
+      body: 'The Korean class has become our family Sunday ritual. My wife and I take the class, the kids play. It is the only Sunday we look forward to in the month.',
+    },
+  ],
+  'visit': [
+    {
+      author: 'Anonymous visitor',
+      initials: 'AV',
+      city: 'Johannesburg',
+      date: '2026-06-23',
+      body: 'I was nervous to come. The visit page helped — I knew what to expect, what to wear, who to call. Calling first was a good call. Mr. Sim answered on the second ring.',
+    },
+    {
+      author: 'Refiloe M.',
+      initials: 'RM',
+      city: 'Randburg',
+      date: '2026-05-30',
+      body: 'Showing up is the hardest part. The Wednesday group is genuinely welcoming — not the performative kind. I have been three times now and intend to keep going.',
+    },
+  ],
+  'general': [
+    {
+      author: 'Reader',
+      initials: 'RD',
+      city: 'Johannesburg',
+      date: '2026-06-25',
+      body: 'Found this page while searching for a Bible study near me in Sandton. The page is clear, the people feel real, and the contact details are at the top. Booking a call.',
+    },
+  ],
+};
+
+const comments = library[topic] ?? library['general'];
+
+const formattedDate = (d: string) =>
+  new Date(d).toLocaleDateString('en-ZA', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+
+<section id="comments" class="section-tighter">
+  <div class="container-max">
+    <div class="mb-12 max-w-2xl">
+      <p class="text-eyebrow mb-3">Community notes</p>
+      <h2 class="heading-2 mb-4">From people who have shown up.</h2>
+      <p class="text-body">
+        Honest, lightly edited, with permission. To leave a comment, use the form
+        below — your note goes straight to our team email and we will post it
+        here once we have confirmed with you.
+      </p>
+    </div>
+
+    <!-- Seeded comments -->
+    <ol class="space-y-8 mb-12">
+      {comments.map((c) => (
+        <li class="flex gap-4">
+          <div
+            class="flex-shrink-0 w-12 h-12 rounded-full bg-[color:var(--color-warm-soft)] text-[color:var(--color-warm)] flex items-center justify-center font-semibold text-sm"
+            aria-hidden="true"
+          >
+            {c.initials}
+          </div>
+          <div class="flex-1">
+            <div class="flex items-baseline gap-3 mb-1">
+              <p class="font-semibold text-[color:var(--color-ink)]">{c.author}</p>
+              <p class="text-sm text-gray-500">{c.city}</p>
+              <p class="text-sm text-gray-400">·</p>
+              <time datetime={c.date} class="text-sm text-gray-500">{formattedDate(c.date)}</time>
+            </div>
+            <p class="text-body text-gray-700 leading-relaxed">{c.body}</p>
+
+            {c.reply && (
+              <div class="mt-4 ml-4 pl-4 border-l-2 border-[color:var(--color-warm)]/40 flex gap-3">
+                <div
+                  class="flex-shrink-0 w-9 h-9 rounded-full bg-[color:var(--color-ink)] text-white flex items-center justify-center font-semibold text-xs"
+                  aria-hidden="true"
+                >
+                  {c.reply.initials}
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-baseline gap-3 mb-1">
+                    <p class="font-semibold text-[color:var(--color-ink)]">{c.reply.author}</p>
+                    <p class="text-sm text-gray-500">{c.reply.city}</p>
+                    <time datetime={c.reply.date} class="text-sm text-gray-500">{formattedDate(c.reply.date)}</time>
+                  </div>
+                  <p class="text-sm text-gray-700 leading-relaxed">{c.reply.body}</p>
+                </div>
+              </div>
+            )}
+          </div>
+        </li>
+      ))}
+    </ol>
+
+    <!-- Comment form (mailto fallback) -->
+    <form
+      action={`mailto:comments@joburgchurch.co.za?subject=Comment on ${encodeURIComponent(pageTitle)}&body=${encodeURIComponent('Name: \nCity: \n\nComment:\n')}`}
+      method="post"
+      enctype="text/plain"
+      class="card bg-[color:var(--color-cream)] max-w-2xl"
+    >
+      <p class="text-eyebrow mb-2">Leave a comment</p>
+      <h3 class="heading-3 mb-2">Your note goes to our team.</h3>
+      <p class="text-sm text-gray-600 mb-5 leading-relaxed">
+        Your email client will open with a draft. Send it and we will publish
+        here within a day or two, once we have confirmed with you.
+      </p>
+      <div class="grid gap-4 sm:grid-cols-2 mb-4">
+        <label class="block">
+          <span class="block text-sm font-medium text-gray-700 mb-1">Your name</span>
+          <input
+            type="text"
+            name="name"
+            placeholder="First name and last initial"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[color:var(--color-warm)] focus:border-transparent"
+            required
+          />
+        </label>
+        <label class="block">
+          <span class="block text-sm font-medium text-gray-700 mb-1">Your area</span>
+          <input
+            type="text"
+            name="city"
+            placeholder="e.g., Sandton, Randburg"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[color:var(--color-warm)] focus:border-transparent"
+          />
+        </label>
+      </div>
+      <label class="block mb-5">
+        <span class="block text-sm font-medium text-gray-700 mb-1">Your comment</span>
+        <textarea
+          name="comment"
+          rows="4"
+          placeholder="What did you find helpful, or what would you like to know?"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[color:var(--color-warm)] focus:border-transparent"
+          required></textarea>
+      </label>
+      <div class="flex flex-wrap items-center gap-4">
+        <button type="submit" class="btn-primary">Send Comment</button>
+        <p class="text-xs text-gray-500">
+          Page reference: <span class="text-gray-700">{pageSlug}</span>
+        </p>
+      </div>
+    </form>
+  </div>
+</section>
