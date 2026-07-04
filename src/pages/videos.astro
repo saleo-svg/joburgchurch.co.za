@@ -30,7 +30,7 @@ const featured: StudyEntry = {
   id: '',
   title: 'Wednesday Bible Study — Exodus 14: The Sea That Parts',
   description:
-    'Mr. Sim walks through Exodus 14 — the moment the Israelites stand between the sea and the Egyptian army. What does it look like to hold onto hope when there is nowhere left to go? A 25-minute Bible study with Q&A.',
+    'Mr. Sim walks through Exodus 14 — the moment the Israelites stand between the sea and the Egyptian army. What does it look like to hold onto hope when there is nowhere left to go? Written recap of the live discussion.',
   category: 'Bible Study',
   duration: '24:18',
   date: '2026-06-24',
@@ -148,7 +148,7 @@ const categories = ['All', ...Array.from(new Set(studies.map((v) => v.category))
             <p class="text-3xl font-bold mb-2">{featured.passage}</p>
             <p class="text-lg opacity-90 mb-5">{featured.title.replace('Wednesday Bible Study — ', '')}</p>
             <div class="flex flex-wrap gap-3 mt-auto">
-              <span class="text-xs bg-white/10 backdrop-blur px-3 py-1 rounded-full">{featured.duration}</span>
+              <span class="text-xs bg-white/10 backdrop-blur px-3 py-1 rounded-full">Written notes</span>
               <span class="text-xs bg-white/10 backdrop-blur px-3 py-1 rounded-full">{featured.speaker}</span>
             </div>
           </div>
@@ -156,7 +156,7 @@ const categories = ['All', ...Array.from(new Set(studies.map((v) => v.category))
         <div class="lg:col-span-2">
           <div class="flex flex-wrap gap-2 mb-3">
             <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">{featured.category}</span>
-            <span class="text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded-full">{featured.duration}</span>
+            <span class="text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded-full">Written recap</span>
           </div>
           <h2 class="heading-2 mb-3">{featured.title}</h2>
           <p class="text-body mb-4">{featured.description}</p>
@@ -182,32 +182,50 @@ const categories = ['All', ...Array.from(new Set(studies.map((v) => v.category))
         ))}
       </div>
 
-      <!-- Study grid -->
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {studies.map((s) => (
-          <article class="card overflow-hidden p-0 group">
-            <div class="relative aspect-video overflow-hidden bg-gradient-to-br from-blue-700 via-purple-700 to-amber-600">
-              <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center">
-                <p class="text-xs font-semibold uppercase tracking-widest opacity-80 mb-2">{s.category}</p>
-                <p class="text-xl font-bold leading-tight">{s.passage ?? 'Community'}</p>
-              </div>
-              <span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 rounded">{s.duration}</span>
-            </div>
-            <div class="p-5">
-              <div class="flex items-center gap-2 mb-2">
-                <span class="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-medium">{s.category}</span>
-                <span class="text-xs text-gray-400">{new Date(s.date).toLocaleDateString('en-ZA', { day: 'numeric', month: 'short' })}</span>
-              </div>
-              <h3 class="font-semibold text-base mb-2 leading-snug">{s.title}</h3>
-              <p class="text-sm text-gray-600 line-clamp-2">{s.description}</p>
-              {s.speaker && <p class="text-xs text-gray-500 mt-3">— {s.speaker}</p>}
-            </div>
-          </article>
-        ))}
+      <!-- Coming-soon panel (transparent: we do not have video recaps yet) -->
+      <div class="card overflow-hidden p-0 mb-8">
+        <div class="relative aspect-[2/1] overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-amber-700 p-10 flex flex-col justify-center text-white">
+          <p class="text-xs font-semibold uppercase tracking-widest text-amber-200 mb-3">Status</p>
+          <p class="text-3xl md:text-4xl font-bold mb-3 leading-tight">Video recaps are coming soon.</p>
+          <p class="text-base opacity-90 max-w-xl">
+            We do not have recorded videos to share yet. In the meantime, the
+            Wednesday studies are live, the notes are written, and the
+            conversation is honest.
+          </p>
+        </div>
       </div>
 
-      <div class="mt-12 text-center text-sm text-gray-500">
-        <p>Video recaps coming soon. In the meantime, join us live on Wednesday at 7:30pm via Google Meet.</p>
+      <!-- What you can do right now instead -->
+      <h2 class="heading-2 mb-6 text-center">In the meantime, here is how to follow along.</h2>
+      <div class="grid gap-6 sm:grid-cols-3 mb-12">
+        <a href="/spiritual-education" class="card text-center hover:border-blue-300 transition-colors block">
+          <div class="text-3xl mb-3" aria-hidden="true">📖</div>
+          <h3 class="font-semibold text-lg mb-2">Join Wednesday Live</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Every Wednesday at 7:30pm on Google Meet. Open to anyone, anywhere.
+            Ask a question, get the notes.
+          </p>
+        </a>
+        <a href="/blog" class="card text-center hover:border-blue-300 transition-colors block">
+          <div class="text-3xl mb-3" aria-hidden="true">✍️</div>
+          <h3 class="font-semibold text-lg mb-2">Read the Blog</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Long-form recaps of recent studies, plus stories from the community.
+            New posts every week or two.
+          </p>
+        </a>
+        <a href="/contact" class="card text-center hover:border-blue-300 transition-colors block">
+          <div class="text-3xl mb-3" aria-hidden="true">✉️</div>
+          <h3 class="font-semibold text-lg mb-2">Get Notes by Email</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Send us your email and we will send the next session's notes the day
+            after each Wednesday study.
+          </p>
+        </a>
+      </div>
+
+      <div class="mt-4 text-center text-sm text-gray-500">
+        <p>Real video recaps will replace this section once we start recording.</p>
       </div>
     </div>
   </section>
