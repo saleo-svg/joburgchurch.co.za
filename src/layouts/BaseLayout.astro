@@ -171,6 +171,29 @@ const combinedJsonLd = JSON.stringify(allSchemas);
     <!-- Google Fonts: Inter (body) + Playfair Display (display) + Cardo (scripture) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
+    <!-- ============================================================ -->
+    <!-- Google Analytics 4 + Baidu Tongji                            -->
+    <!-- ============================================================ -->
+    <!--
+      Set the GA4 Measurement ID via env var GA4_ID at build time.
+      Get one free at https://analytics.google.com (you will need the Gmail you used for GSC).
+      Same for Baidu Tongji BAIDU_TONGJI_ID if you want to track mainland-China visits.
+    -->
+    {import.meta.env.GA4_ID && (
+      <>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.GA4_ID}`} />
+        <script is:inline set:html={`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${import.meta.env.GA4_ID}', { anonymize_ip: true });
+        `} />
+      </>
+    )}
+    {import.meta.env.BAIDU_TONGJI_ID && (
+      <script is:inline async src={`https://hm.baidu.com/hm.js?${import.meta.env.BAIDU_TONGJI_ID}`} />
+    )}
+
     <!-- JSON-LD Schema graph -->
     <script type="application/ld+json" set:html={combinedJsonLd} />
   </head>

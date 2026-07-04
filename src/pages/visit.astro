@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import Comments from '@/components/Comments.astro';
+import Share from '@/components/Share.astro';
 import { getChurchSchema } from '@/components/Schema';
 
 const schema = getChurchSchema();
@@ -168,4 +170,12 @@ const schema = getChurchSchema();
       <a href="/contact" class="btn-warm">Contact Us</a>
     </div>
   </section>
+
+  <section class="section-tighter border-t border-gray-200">
+    <div class="container-max">
+      <Share title="Plan Your Visit | Sandton Bible Study Church" />
+    </div>
+  </section>
+
+  <Comments pageSlug="visit" pageTitle="Plan Your Visit" topic="visit" />
 </BaseLayout>

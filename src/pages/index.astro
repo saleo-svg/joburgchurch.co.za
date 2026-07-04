@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import Share from '@/components/Share.astro';
 import { getChurchSchema } from '@/components/Schema';
 
 const schema = getChurchSchema({
@@ -346,6 +347,20 @@ const communityPhoto = 'https://images.unsplash.com/photo-1511632765486-a01980e0
         in Sandton.
       </p>
       <a href="/blog" class="btn-secondary">Read the Blog</a>
+    </div>
+  </section>
+
+  <!-- Share strip — last CTA before footer -->
+  <section class="section-tighter border-t border-gray-200">
+    <div class="container-narrow text-center">
+      <p class="text-eyebrow mb-4">Found this useful?</p>
+      <p class="text-body mb-6 max-w-xl mx-auto">
+        If someone you know would value a Bible study community in Sandton,
+        send it their way.
+      </p>
+      <div class="flex justify-center">
+        <Share title="Johannesburg Bible Study Church — A Bible Study Community in Sandton" align="center" />
+      </div>
     </div>
   </section>
 </BaseLayout>

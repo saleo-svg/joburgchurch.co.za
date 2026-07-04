@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import Comments from '@/components/Comments.astro';
+import Share from '@/components/Share.astro';
 
 const breadcrumbs = [
   { name: 'Home', url: '/' },
@@ -157,4 +159,12 @@ const schema = {
       </div>
     </div>
   </section>
+
+  <section class="section-tighter border-t border-gray-200">
+    <div class="container-max">
+      <Share title="Free Bible Study in Sandton, Johannesburg | Every Wednesday" />
+    </div>
+  </section>
+
+  <Comments pageSlug="free-bible-study-sandton" pageTitle="Free Bible Study in Sandton, Johannesburg" topic="bible-study" />
 </BaseLayout>
