@@ -69,6 +69,10 @@ collections:
       - {label: 'Author', name: 'author', widget: 'string', default: 'Mr. Sim'}
       - {label: 'Tags', name: 'tags', widget: 'list', required: false}
       - {label: 'Image', name: 'image', widget: 'image', required: false, allow_multiple: false}
+      - {label: 'Language', name: 'language', widget: 'select', options: ['English', 'Zulu', 'Xhosa', 'Sotho', 'Tswana', 'Swahili', 'Dinka', 'Nuer', 'Shona', 'Korean', 'Lingala', 'French', 'Portuguese', 'Other'], required: false, hint: 'For hymns only'}
+      - {label: 'Key (Chord Key)', name: 'key', widget: 'string', required: false, hint: 'e.g. G, C, Dm — for hymns only'}
+      - {label: 'Chords', name: 'chords', widget: 'string', required: false, hint: 'e.g. G - D - Em - C — for hymns only'}
+      - {label: 'Download (.docx)', name: 'download', widget: 'file', required: false, hint: 'Upload .docx with chords/notation for hymns'}
       - {label: 'Body', name: 'body', widget: 'markdown'}
     view_filters:
       - {label: 'Drafts', field: 'draft'}

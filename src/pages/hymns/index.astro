@@ -1,0 +1,1202 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const languages = [
+  { code: 'all', name: 'All Languages' },
+  { code: 'zulu', name: 'Zulu / isiZulu' },
+  { code: 'xhosa', name: 'Xhosa / isiXhosa' },
+  { code: 'sotho', name: 'Sotho / Sesotho' },
+  { code: 'tswana', name: 'Tswana / Setswana' },
+  { code: 'pedi', name: 'Pedi / Sepedi' },
+  { code: 'ndebele', name: 'Ndebele / isiNdebele' },
+  { code: 'swahili', name: 'Swahili / Kiswahili' },
+  { code: 'dinka', name: 'Dinka (South Sudan)' },
+  { code: 'shona', name: 'Shona (Zimbabwe)' },
+  { code: 'lingala', name: 'Lingala (DRC)' },
+  { code: 'igbo', name: 'Igbo (Nigeria)' },
+  { code: 'yoruba', name: 'Yoruba (Nigeria)' },
+  { code: 'amharic', name: 'Amharic (Ethiopia)' },
+  { code: 'english', name: 'English' },
+  { code: 'korean', name: 'Korean / 한국어' },
+];
+
+const hymns = [
+  // ==================== ZULU (isiZulu) ====================
+  {
+    slug: 'amazing-grace',
+    title: 'Amazing Grace',
+    language: 'english',
+    languageName: 'English',
+    key: 'G',
+    chords: 'G - D - Em - C - G',
+    excerpt: 'One of the most beloved hymns of all time. A powerful reminder of God\'s grace and salvation.',
+    tags: ['hymn', 'english', 'classic', 'grace'],
+    region: 'Global / South Africa',
+  },
+  {
+    slug: 'sthandwa-sami',
+    title: 'Sthandwa Sami',
+    alternateTitle: 'My Beloved / My Soul',
+    language: 'zulu',
+    languageName: 'Zulu',
+    key: 'C',
+    chords: 'C - Am - F - G',
+    excerpt: 'A beautiful Zulu worship song about thirsting for God\'s presence.',
+    tags: ['hymn', 'zulu', 'worship', 'traditional'],
+    region: 'KwaZulu-Natal, South Africa',
+  },
+  {
+    slug: 'jesu-usuqhamo-njani',
+    title: 'Jesu, Usuqhamo Njani?',
+    alternateTitle: 'How Great Is Our God',
+    language: 'zulu',
+    languageName: 'Zulu',
+    key: 'D',
+    chords: 'D - A - Bm - G',
+    excerpt: 'Zulu translation celebrating God\'s greatness and majesty.',
+    tags: ['hymn', 'zulu', 'praise', 'contemporary'],
+    region: 'Gauteng, South Africa',
+  },
+  {
+    slug: 'igama-lakho',
+    title: 'Igama Lakho Lindumile',
+    alternateTitle: 'Your Name Has Been Exalted',
+    language: 'zulu',
+    languageName: 'Zulu',
+    key: 'A',
+    chords: 'A - E - F#m - D',
+    excerpt: 'Powerful Zulu praise song declaring the greatness of God\'s name.',
+    tags: ['hymn', 'zulu', 'praise', 'worship'],
+    region: 'KwaZulu-Natal, South Africa',
+  },
+  {
+    slug: 'nkosi-yakwami',
+    title: 'Nkosi Yakwami',
+    alternateTitle: 'My God Reigns',
+    language: 'zulu',
+    languageName: 'Zulu',
+    key: 'G',
+    chords: 'G - D - Em - C',
+    excerpt: 'Traditional Zulu hymn declaring God\'s sovereign rule over all.',
+    tags: ['hymn', 'zulu', 'traditional', 'sovereignty'],
+    region: 'KwaZulu-Natal, South Africa',
+  },
+  {
+    slug: 'wona-ungabiki',
+    title: 'Wona Ungcwele',
+    alternateTitle: 'Holy Holy Holy',
+    language: 'zulu',
+    languageName: 'Zulu',
+    key: 'F',
+    chords: 'F - Bb - C - F',
+    excerpt: 'Zulu rendition of the classic trisagion hymn of praise.',
+    tags: ['hymn', 'zulu', 'worship', 'holy'],
+    region: 'Eastern Cape, South Africa',
+  },
+  {
+    slug: 'qhala-umoya',
+    title: 'Qhala Umoya',
+    alternateTitle: 'The Spirit Descended',
+    language: 'zulu',
+    languageName: 'Zulu',
+    key: 'D',
+    chords: 'D - A - G - D',
+    excerpt: 'Zulu Pentecost worship song celebrating the Holy Spirit.',
+    tags: ['hymn', 'zulu', 'pentecost', 'spirit'],
+    region: 'Gauteng, South Africa',
+  },
+
+  // ==================== XHOSA (isiXhosa) ====================
+  {
+    slug: 'nkosi-yam',
+    title: 'Nkosi Yam',
+    alternateTitle: 'Lord My God',
+    language: 'xhosa',
+    languageName: 'Xhosa',
+    key: 'A',
+    chords: 'A - E - F#m - D',
+    excerpt: 'Xhosa worship song calling out to God with reverence and love.',
+    tags: ['hymn', 'xhosa', 'worship', 'traditional'],
+    region: 'Eastern Cape, South Africa',
+  },
+  {
+    slug: 'nantsi-inkonjana',
+    title: 'Nants\'inkonjane',
+    alternateTitle: 'There Is a Lily',
+    language: 'xhosa',
+    languageName: 'Xhosa',
+    key: 'G',
+    chords: 'G - D - Em - C',
+    excerpt: 'Beautiful Xhosa hymn about God\'s provision and care.',
+    tags: ['hymn', 'xhosa', 'traditional', 'provision'],
+    region: 'Eastern Cape, South Africa',
+  },
+  {
+    slug: 'ishe-komborhe',
+    title: 'Ishe Komborhe',
+    alternateTitle: 'Good Lord',
+    language: 'xhosa',
+    languageName: 'Xhosa',
+    key: 'D',
+    chords: 'D - A - G - D',
+    excerpt: 'Traditional Xhosa praise song of gratitude to God.',
+    tags: ['hymn', 'xhosa', 'praise', 'gratitude'],
+    region: 'Eastern Cape, South Africa',
+  },
+  {
+    slug: 'ukuhlabelwa-kwakowetu',
+    title: 'Ukuhlabelwa Kwakowetu',
+    alternateTitle: 'Our Song',
+    language: 'xhosa',
+    languageName: 'Xhosa',
+    key: 'C',
+    chords: 'C - G - Am - F',
+    excerpt: 'Xhosa worship song about raising voices in praise to God.',
+    tags: ['hymn', 'xhosa', 'praise', 'worship'],
+    region: 'Western Cape, South Africa',
+  },
+
+  // ==================== SOTHO (Sesotho) ====================
+  {
+    slug: 'molomo-oa-botho',
+    title: 'Molomo oa Botho',
+    alternateTitle: 'Word of Compassion',
+    language: 'sotho',
+    languageName: 'Sotho',
+    key: 'G',
+    chords: 'G - D - Em - C',
+    excerpt: 'Sotho hymn reflecting on God\'s word of compassion and mercy.',
+    tags: ['hymn', 'sotho', 'meditation', 'traditional'],
+    region: 'Free State, South Africa',
+  },
+  {
+    slug: 'ke-mo-o-lapeng',
+    title: 'Ke Moo Lapeng',
+    alternateTitle: 'It Is Well With My Soul',
+    language: 'sotho',
+    languageName: 'Sotho',
+    key: 'C',
+    chords: 'C - G - Am - F',
+    excerpt: 'Sotho translation of the beloved hymn of peace and trust in God.',
+    tags: ['hymn', 'sotho', 'peace', 'trust'],
+    region: 'Lesotho / Free State, South Africa',
+  },
+  {
+    slug: 'thapelo-tsa-makgongwana',
+    title: 'Thapelo ea Makgongwana',
+    alternateTitle: 'Prayer of the Faithful',
+    language: 'sotho',
+    languageName: 'Sotho',
+    key: 'A',
+    chords: 'A - E - D - A',
+    excerpt: 'Sotho hymn of prayer and intercession for the community.',
+    tags: ['hymn', 'sotho', 'prayer', 'intercession'],
+    region: 'Lesotho',
+  },
+  {
+    slug: 'orahlano',
+    title: 'O Rahlano',
+    alternateTitle: 'You Are Our Portion',
+    language: 'sotho',
+    languageName: 'Sotho',
+    key: 'F',
+    chords: 'F - C - Bb - F',
+    excerpt: 'Sotho worship song declaring God as our portion and inheritance.',
+    tags: ['hymn', 'sotho', 'worship', 'inheritance'],
+    region: 'Lesotho',
+  },
+
+  // ==================== TSWANA (Setswana) ====================
+  {
+    slug: 'modimo-o-bogasi',
+    title: 'Modimo o Bogasi',
+    alternateTitle: 'God Is Merciful',
+    language: 'tswana',
+    languageName: 'Tswana',
+    key: 'G',
+    chords: 'G - D - Em - C',
+    excerpt: 'Tswana hymn celebrating God\'s mercy and loving-kindness.',
+    tags: ['hymn', 'tswana', 'mercy', 'traditional'],
+    region: 'North West, South Africa',
+  },
+  {
+    slug: 'thobo-ya-bonno',
+    title: 'Thobo ya Bonno',
+    alternateTitle: 'The Joy of Salvation',
+    language: 'tswana',
+    languageName: 'Tswana',
+    key: 'D',
+    chords: 'D - A - G - D',
+    excerpt: 'Tswana praise song about the joy of being saved.',
+    tags: ['hymn', 'tswana', 'salvation', 'joy'],
+    region: 'Botswana / North West SA',
+  },
+  {
+    slug: 'ntshitshware',
+    title: 'Ntshitshware Malebana',
+    alternateTitle: 'Forgive Us Our Sins',
+    language: 'tswana',
+    languageName: 'Tswana',
+    key: 'A',
+    chords: 'A - E - D - A',
+    excerpt: 'Tswana hymn of confession and seeking God\'s forgiveness.',
+    tags: ['hymn', 'tswana', 'confession', 'forgiveness'],
+    region: 'Botswana',
+  },
+
+  // ==================== PEDI (Sepedi) ====================
+  {
+    slug: 'ntlo-thaba',
+    title: 'Ntlo ya Thaba',
+    alternateTitle: 'House on the Rock',
+    language: 'pedi',
+    languageName: 'Pedi',
+    key: 'G',
+    chords: 'G - D - Em - C',
+    excerpt: 'Pedi hymn based on the parable of the wise builder.',
+    tags: ['hymn', 'pedi', 'wisdom', 'foundation'],
+    region: 'Limpopo, South Africa',
+  },
+  {
+    slug: 'moloto-wa-betha',
+    title: 'Moloto wa Betha',
+    alternateTitle: 'The Way of Prayer',
+    language: 'pedi',
+    languageName: 'Pedi',
+    key: 'C',
+    chords: 'C - G - Am - F',
+    excerpt: 'Pedi worship song about walking in God\'s ways.',
+    tags: ['hymn', 'pedi', 'worship', 'guidance'],
+    region: 'Limpopo, South Africa',
+  },
+  {
+    slug: 'sechaba-sa-gona',
+    title: 'Sechaba sa Gona',
+    alternateTitle: 'The Faithful Nation',
+    language: 'pedi',
+    languageName: 'Pedi',
+    key: 'D',
+    chords: 'D - A - G - D',
+    excerpt: 'Pedi hymn celebrating God\'s chosen people.',
+    tags: ['hymn', 'pedi', 'praise', 'chosen'],
+    region: 'Limpopo, South Africa',
+  },
+
+  // ==================== NDEBELE (isiNdebele) ====================
+  {
+    slug: 'muden-iwe',
+    title: 'Mundeni Iwe',
+    alternateTitle: 'Praise Him',
+    language: 'ndebele',
+    languageName: 'Ndebele',
+    key: 'G',
+    chords: 'G - D - Em - C',
+    excerpt: 'Ndebele praise song calling all to worship God.',
+    tags: ['hymn', 'ndebele', 'praise', 'worship'],
+    region: 'Mpumalanga, South Africa',
+  },
+  {
+    slug: 'inkosi-yethu',
+    title: 'INKOSI YETHU',
+    alternateTitle: 'Our Lord',
+    language: 'ndebele',
+    languageName: 'Ndebele',
+    key: 'A',
+    chords: 'A - E - D - A',
+    excerpt: 'Ndebele hymn declaring Jesus as Lord and Savior.',
+    tags: ['hymn', 'ndebele', 'lordship', 'salvation'],
+    region: 'Gauteng, South Africa',
+  },
+
+  // ==================== SWAHILI (Kiswahili) ====================
+  {
+    slug: 'mungu-ni-pema',
+    title: 'Mungu Ni Pema',
+    alternateTitle: 'God Is Love',
+    language: 'swahili',
+    languageName: 'Swahili',
+    key: 'E',
+    chords: 'E - B - C#m - A',
+    excerpt: 'Swahili hymn celebrating God\'s unfailing love.',
+    tags: ['hymn', 'swahili', 'love', 'praise'],
+    region: 'East Africa / Kenya',
+  },
+  {
+    slug: 'haleluya-kristu',
+    title: 'Haleluya Kristu',
+    alternateTitle: 'Hallelujah Christ',
+    language: 'swahili',
+    languageName: 'Swahili',
+    key: 'D',
+    chords: 'D - A - G - D',
+    excerpt: 'Swahili praise song to Christ, the King of Kings.',
+    tags: ['hymn', 'swahili', 'praise', 'contemporary'],
+    region: 'Tanzania / Kenya',
+  },
+  {
+    slug: 'bwana-ni-rafiki',
+    title: 'Bwana Ni Rafiki',
+    alternateTitle: 'The Lord Is My Friend',
+    language: 'swahili',
+    languageName: 'Swahili',
+    key: 'G',
+    chords: 'G - D - Em - C',
+    excerpt: 'Swahili hymn about God\'s friendship and companionship.',
+    tags: ['hymn', 'swahili', 'friendship', 'comfort'],
+    region: 'Kenya',
+  },
+  {
+    slug: 'sabato-yake',
+    title: 'Sabato Yake',
+    alternateTitle: 'His Sabbath',
+    language: 'swahili',
+    languageName: 'Swahili',
+    key: 'C',
+    chords: 'C - G - Am - F',
+    excerpt: 'Swahili song celebrating the day of rest and worship.',
+    tags: ['hymn', 'swahili', 'sabbath', 'worship'],
+    region: 'Tanzania',
+  },
+  {
+    slug: 'yesu-kwa-magia',
+    title: 'Yesu Kwa Magatia',
+    alternateTitle: 'Trust in Jesus',
+    language: 'swahili',
+    languageName: 'Swahili',
+    key: 'A',
+    chords: 'A - E - D - A',
+    excerpt: 'Swahili hymn about putting complete trust in Jesus.',
+    tags: ['hymn', 'swahili', 'trust', 'faith'],
+    region: 'Uganda',
+  },
+
+  // ==================== DINKA (South Sudan) ====================
+  {
+    slug: 'khor-a-jesus',
+    title: 'Khor a Jesus',
+    alternateTitle: 'Voice of Jesus',
+    language: 'dinka',
+    languageName: 'Dinka',
+    key: 'F',
+    chords: 'F - C - Bb - F',
+    excerpt: 'Traditional Dinka hymn praising the voice and presence of Jesus.',
+    tags: ['hymn', 'dinka', 'south-sudan', 'traditional'],
+    region: 'South Sudan',
+  },
+  {
+    slug: 'koc-na-ngun',
+    title: 'Koc na Ngun',
+    alternateTitle: 'God Is With Us',
+    language: 'dinka',
+    languageName: 'Dinka',
+    key: 'G',
+    chords: 'G - D - Em - C',
+    excerpt: 'Dinka worship song declaring God\'s presence among His people.',
+    tags: ['hymn', 'dinka', 'south-sudan', 'worship'],
+    region: 'South Sudan',
+  },
+  {
+    slug: 'yen-a-juk',
+    title: 'Yen a Juk',
+    alternateTitle: 'He Is Our King',
+    language: 'dinka',
+    languageName: 'Dinka',
+    key: 'D',
+    chords: 'D - A - G - D',
+    excerpt: 'Dinka praise song declaring Christ as King over all.',
+    tags: ['hymn', 'dinka', 'praise', 'king'],
+    region: 'South Sudan',
+  },
+  {
+    slug: 'ngathok-aya',
+    title: 'Ngathok Aya',
+    alternateTitle: 'We Thank You',
+    language: 'dinka',
+    languageName: 'Dinka',
+    key: 'C',
+    chords: 'C - G - Am - F',
+    excerpt: 'Dinka hymn of gratitude and thanksgiving to God.',
+    tags: ['hymn', 'dinka', 'thanksgiving', 'gratitude'],
+    region: 'South Sudan',
+  },
+
+  // ==================== SHONA (chiShona) ====================
+  {
+    slug: 'mambo-vese-rinoita',
+    title: 'Mambo Vese Rinoita',
+    alternateTitle: 'All Power Belongs to God',
+    language: 'shona',
+    languageName: 'Shona',
+    key: 'D',
+    chords: 'D - G - A - D',
+    excerpt: 'Shona praise declaring God\'s supreme power and authority.',
+    tags: ['hymn', 'shona', 'zimbabwe', 'praise'],
+    region: 'Zimbabwe',
+  },
+  {
+    slug: 'jesu-ndinamatee',
+    title: 'Jesu NdinoMutee',
+    alternateTitle: 'I Surrender All',
+    language: 'shona',
+    languageName: 'Shona',
+    key: 'A',
+    chords: 'A - E - D - A',
+    excerpt: 'Shona hymn of surrender and devotion to Jesus Christ.',
+    tags: ['hymn', 'shona', 'zimbabwe', 'surrender'],
+    region: 'Zimbabwe',
+  },
+  {
+    slug: 'vatete-vedu',
+    title: 'Vatete Vedu',
+    alternateTitle: 'Our Ancestors',
+    language: 'shona',
+    languageName: 'Shona',
+    key: 'G',
+    chords: 'G - D - Em - C',
+    excerpt: 'Shona hymn connecting faith heritage with present worship.',
+    tags: ['hymn', 'shona', 'zimbabwe', 'heritage'],
+    region: 'Zimbabwe',
+  },
+  {
+    slug: 'hymn-zvishana',
+    title: 'Hymn Yezvishana',
+    alternateTitle: 'Morning Hymn',
+    language: 'shona',
+    languageName: 'Shona',
+    key: 'C',
+    chords: 'C - G - Am - F',
+    excerpt: 'Shona morning worship song greeting the new day with God.',
+    tags: ['hymn', 'shona', 'morning', 'worship'],
+    region: 'Zimbabwe',
+  },
+
+  // ==================== LINGALA (DRC) ====================
+  {
+    slug: 'nkolo-a-yesu',
+    title: 'Nkolo a Yesu',
+    alternateTitle: 'Lord Jesus',
+    language: 'lingala',
+    languageName: 'Lingala',
+    key: 'D',
+    chords: 'D - A - G - D',
+    excerpt: 'Lingala worship song praising the name of Jesus Christ.',
+    tags: ['hymn', 'lingala', 'drc', 'worship'],
+    region: 'Democratic Republic of Congo',
+  },
+  {
+    slug: 'mokonzi-wa-bato',
+    title: 'Mokonzi wa Bato',
+    alternateTitle: 'King of Kings',
+    language: 'lingala',
+    languageName: 'Lingala',
+    key: 'G',
+    chords: 'G - D - Em - C',
+    excerpt: 'Lingala hymn declaring Christ as King of all nations.',
+    tags: ['hymn', 'lingala', 'praise', 'king'],
+    region: 'DRC / Congo',
+  },
+  {
+    slug: 'likambo',
+    title: 'Likambo',
+    alternateTitle: 'The Miracle',
+    language: 'lingala',
+    languageName: 'Lingala',
+    key: 'A',
+    chords: 'A - E - D - A',
+    excerpt: 'Lingala song celebrating God\'s miracles and wonders.',
+    tags: ['hymn', 'lingala', 'miracle', 'praise'],
+    region: 'Republic of Congo',
+  },
+
+  // ==================== IGBO (Nigeria) ====================
+  {
+    slug: 'chinedum-gi',
+    title: 'Chinedum Gi',
+    alternateTitle: 'Your Goodness',
+    language: 'igbo',
+    languageName: 'Igbo',
+    key: 'G',
+    chords: 'G - D - Em - C',
+    excerpt: 'Igbo hymn celebrating the goodness and mercies of God.',
+    tags: ['hymn', 'igbo', 'nigeria', 'mercy'],
+    region: 'Nigeria',
+  },
+  {
+    slug: 'onye-nwe-yo',
+    title: 'Onye Nwe Yo',
+    alternateTitle: 'God Alone',
+    language: 'igbo',
+    languageName: 'Igbo',
+    key: 'D',
+    chords: 'D - A - G - D',
+    excerpt: 'Igbo worship song declaring God\'s sovereignty and uniqueness.',
+    tags: ['hymn', 'igbo', 'nigeria', 'sovereignty'],
+    region: 'Nigeria',
+  },
+  {
+    slug: 'imela-maka',
+    title: 'ImelaMaka',
+    alternateTitle: 'Thank You Lord',
+    language: 'igbo',
+    languageName: 'Igbo',
+    key: 'A',
+    chords: 'A - E - D - A',
+    excerpt: 'Igbo thanksgiving hymn expressing gratitude to God.',
+    tags: ['hymn', 'igbo', 'thanksgiving', 'nigeria'],
+    region: 'Nigeria',
+  },
+
+  // ==================== YORUBA (Nigeria) ====================
+  {
+    slug: 'olorun-wole',
+    title: 'Olorun Wo Le',
+    alternateTitle: 'God Is Able',
+    language: 'yoruba',
+    languageName: 'Yoruba',
+    key: 'G',
+    chords: 'G - D - Em - C',
+    excerpt: 'Yoruba hymn declaring God\'s infinite ability and power.',
+    tags: ['hymn', 'yoruba', 'nigeria', 'power'],
+    region: 'Nigeria',
+  },
+  {
+    slug: 'alabukun',
+    title: 'Alabukun',
+    alternateTitle: 'The One Who Blots Out Sin',
+    language: 'yoruba',
+    languageName: 'Yoruba',
+    key: 'C',
+    chords: 'C - G - Am - F',
+    excerpt: 'Yoruba hymn about God\'s forgiveness and redemption.',
+    tags: ['hymn', 'yoruba', 'forgiveness', 'nigeria'],
+    region: 'Nigeria',
+  },
+  {
+    slug: 'orukun',
+    title: 'Oru Kun',
+    alternateTitle: 'Night of Joy',
+    language: 'yoruba',
+    languageName: 'Yoruba',
+    key: 'D',
+    chords: 'D - A - G - D',
+    excerpt: 'Yoruba celebration song for answered prayers.',
+    tags: ['hymn', 'yoruba', 'celebration', 'nigeria'],
+    region: 'Nigeria',
+  },
+
+  // ==================== AMHARIC (Ethiopia) ====================
+  {
+    slug: 'mela-new',
+    title: 'Mela New',
+    alternateTitle: 'Our King',
+    language: 'amharic',
+    languageName: 'Amharic',
+    key: 'G',
+    chords: 'G - D - Em - C',
+    excerpt: 'Amharic Orthodox hymn celebrating Christ as King.',
+    tags: ['hymn', 'amharic', 'ethiopia', 'orthodox'],
+    region: 'Ethiopia',
+  },
+  {
+    slug: 'yene-yene',
+    title: 'Yene Yene',
+    alternateTitle: 'My Hope',
+    language: 'amharic',
+    languageName: 'Amharic',
+    key: 'A',
+    chords: 'A - E - D - A',
+    excerpt: 'Amharic hymn of hope and trust in God\'s promises.',
+    tags: ['hymn', 'amharic', 'ethiopia', 'hope'],
+    region: 'Ethiopia',
+  },
+
+  // ==================== KOREAN (한국어) ====================
+  {
+    slug: 'hannam-e-seonta',
+    title: '하나님 앞에 선탄',
+    alternateTitle: 'Standing Before God',
+    language: 'korean',
+    languageName: 'Korean',
+    key: 'C',
+    chords: 'C - G - Am - F',
+    excerpt: 'Korean hymn about standing in the presence of Almighty God.',
+    tags: ['hymn', 'korean', 'worship', 'traditional'],
+    region: 'Korea / Johannesburg Korean Community',
+  },
+  {
+    slug: 'jeosu-chamsong',
+    title: '예수님 참사랑',
+    alternateTitle: 'Jesus True Love',
+    language: 'korean',
+    languageName: 'Korean',
+    key: 'G',
+    chords: 'G - D - Em - C',
+    excerpt: 'Korean hymn celebrating the true love of Jesus Christ.',
+    tags: ['hymn', 'korean', 'love', 'contemporary'],
+    region: 'Korea',
+  },
+  {
+    slug: 'sangnae-pil-liwo',
+    title: '생명 안에 필数的',
+    alternateTitle: 'Light in the Darkness',
+    language: 'korean',
+    languageName: 'Korean',
+    key: 'D',
+    chords: 'D - A - G - D',
+    excerpt: 'Korean hymn about God being light in our darkness.',
+    tags: ['hymn', 'korean', 'light', 'comfort'],
+    region: 'Korea',
+  },
+  {
+    slug: 'nallimyeo',
+    title: '날찌며 버디는 사랑',
+    alternateTitle: 'Love That Never Ends',
+    language: 'korean',
+    languageName: 'Korean',
+    key: 'A',
+    chords: 'A - E - D - A',
+    excerpt: 'Korean hymn about God\'s everlasting love for us.',
+    tags: ['hymn', 'korean', 'love', 'eternal'],
+    region: 'Korea',
+  },
+];
+
+const regionImages: Record<string, string> = {
+  'Global / South Africa': 'https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&q=80',
+  'KwaZulu-Natal, South Africa': 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80',
+  'Gauteng, South Africa': 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80',
+  'Eastern Cape, South Africa': 'https://images.unsplash.com/photo-1523803832-1c1b5e8ed3c9?w=800&q=80',
+  'Western Cape, South Africa': 'https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800&q=80',
+  'Free State, South Africa': 'https://images.unsplash.com/photo-1517783999520-f068a47e5f53?w=800&q=80',
+  'North West, South Africa': 'https://images.unsplash.com/photo-1516535794938-606144394881?w=800&q=80',
+  'Limpopo, South Africa': 'https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?w=800&q=80',
+  'Mpumalanga, South Africa': 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80',
+  'Lesotho': 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80',
+  'Lesotho / Free State, South Africa': 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80',
+  'Botswana': 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80',
+  'Botswana / North West SA': 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80',
+  'East Africa / Kenya': 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=800&q=80',
+  'Kenya': 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=800&q=80',
+  'Tanzania': 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+  'Tanzania / Kenya': 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=800&q=80',
+  'Uganda': 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80',
+  'South Sudan': 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=800&q=80',
+  'Zimbabwe': 'https://images.unsplash.com/photo-1517783999520-f068a47e5f53?w=800&q=80',
+  'Democratic Republic of Congo': 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80',
+  'DRC / Congo': 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80',
+  'Republic of Congo': 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80',
+  'Nigeria': 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80',
+  'Ethiopia': 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80',
+  'Korea': 'https://images.unsplash.com/photo-1534008757030-27299c4371b6?w=800&q=80',
+  'Korea / Johannesburg Korean Community': 'https://images.unsplash.com/photo-1534008757030-27299c4371b6?w=800&q=80',
+};
+---
+
+<BaseLayout
+  title="Hymns & Worship Songs | Johannesburg Bible Study Church"
+  description="Praise and worship songs in 15+ languages — Zulu, Xhosa, Sotho, Tswana, Pedi, Swahili, Dinka, Shona, Lingala, Igbo, Yoruba, Amharic, English, and Korean. Download chord sheets."
+>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1600&q=80"
+        alt="African worship community"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/85 to-slate-900/70"></div>
+    </div>
+    
+    <div class="absolute inset-0 z-10 opacity-10" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 80 80%22><path fill=%22%23f4e4bc%22 d=%22M0 0h40v40H0zM40 40h40v40H40z%22/><path fill=%22%23c9a227%22 d=%22M20 20h20v20H20z%22/></svg>'); background-size: 40px 40px;"></div>
+    
+    <div class="relative z-20 section-padding py-24 md:py-32">
+      <div class="container-max">
+        <div class="max-w-3xl">
+          <div class="flex items-center gap-2 text-amber-200/80 text-sm mb-6">
+            <a href="/" class="hover:text-white transition-colors">Home</a>
+            <span>/</span>
+            <span class="text-white">Hymns & Worship</span>
+          </div>
+          
+          <p class="text-amber-400 font-semibold uppercase tracking-wider text-sm mb-3">
+            Praise & Worship
+          </p>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            Hymns & <span class="text-amber-400">Worship Songs</span>
+          </h1>
+          
+          <p class="text-xl text-slate-200 mb-8 max-w-2xl leading-relaxed">
+            Our community worships in many languages. From the hills of KwaZulu-Natal to the plains of South Sudan, 
+            we raise our voices together in praise.
+          </p>
+          
+          <div class="flex flex-wrap gap-8 mb-10">
+            <div class="text-center">
+              <p class="text-3xl font-bold text-amber-400">{hymns.length}</p>
+              <p class="text-sm text-slate-300">Songs</p>
+            </div>
+            <div class="text-center">
+              <p class="text-3xl font-bold text-amber-400">16</p>
+              <p class="text-sm text-slate-300">Languages</p>
+            </div>
+            <div class="text-center">
+              <p class="text-3xl font-bold text-amber-400">Free</p>
+              <p class="text-sm text-slate-300">Downloads</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="absolute bottom-0 left-0 right-0 z-20">
+      <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+        <path d="M0 100L60 90C120 80 240 60 360 50C480 40 600 40 720 45C840 50 960 60 1080 65C1200 70 1320 70 1380 70L1440 70V100H0Z" fill="white"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Audio Player -->
+  <section class="bg-gradient-to-r from-amber-600 to-orange-600 py-4 sticky top-16 md:top-14 z-40 shadow-lg">
+    <div class="container-max">
+      <div class="flex items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <button 
+            id="play-btn"
+            class="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors"
+            title="Play/Pause"
+          >
+            <svg id="play-icon" class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            <svg id="pause-icon" class="w-6 h-6 text-white hidden" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6 4h4v16H6zM14 4h4v16h-4z"/>
+            </svg>
+          </button>
+          
+          <div class="text-white">
+            <p id="now-playing-title" class="font-medium text-sm">Now Playing</p>
+            <p id="now-playing-lang" class="text-xs text-amber-200">Click play to start</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-3">
+          <!-- Volume Control -->
+          <div class="flex items-center gap-2">
+            <button id="volume-btn" class="text-white/80 hover:text-white transition-colors">
+              <svg id="volume-on-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+              </svg>
+              <svg id="volume-off-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+              </svg>
+            </button>
+            <input 
+              type="range" 
+              id="volume-slider" 
+              min="0" 
+              max="100" 
+              value="50"
+              class="w-20 md:w-32 h-1 bg-white/30 rounded-lg appearance-none cursor-pointer accent-white"
+            />
+          </div>
+          
+          <!-- Shuffle -->
+          <button 
+            id="shuffle-btn"
+            class="px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-full text-white text-xs font-medium transition-colors flex items-center gap-1"
+            title="Play Random"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+            <span class="hidden md:inline">Shuffle</span>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Progress Bar -->
+      <div class="mt-2">
+        <div class="bg-white/20 rounded-full h-1 overflow-hidden">
+          <div id="progress-bar" class="bg-white h-full w-0 transition-all duration-100"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Hidden Audio Element -->
+    <audio id="bg-audio" loop>
+      <source src="" type="audio/mpeg">
+    </audio>
+  </section>
+
+  <!-- Language Filter -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="text-center mb-8">
+        <h2 class="heading-2 mb-3">Browse by Language</h2>
+        <p class="text-gray-600">Select a language to filter hymns</p>
+      </div>
+      
+      <div class="flex flex-wrap justify-center gap-3">
+        {languages.map((lang) => (
+          <button 
+            class="lang-filter px-4 py-2 rounded-full text-sm font-medium transition-all duration-200
+                   bg-slate-100 text-slate-700 hover:bg-amber-500 hover:text-white hover:shadow-lg hover:-translate-y-0.5"
+            data-lang={lang.code}
+          >
+            {lang.name}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Hymns Grid -->
+  <section class="section-padding bg-gradient-to-b from-slate-50 to-white">
+    <div class="container-max">
+      <div id="hymns-grid" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {hymns.map((hymn) => {
+          const imageUrl = regionImages[hymn.region] || regionImages['Global / South Africa'];
+          return (
+            <article 
+              class="hymn-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              data-language={hymn.language}
+            >
+              <div class="relative h-48 overflow-hidden">
+                <img 
+                  src={imageUrl}
+                  alt={`${hymn.region}`}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                
+                <div class="absolute top-4 left-4">
+                  <span class="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-sm text-slate-800 px-3 py-1.5 rounded-full text-xs font-semibold shadow-sm">
+                    <svg class="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                    </svg>
+                    {hymn.languageName}
+                  </span>
+                </div>
+                
+                <div class="absolute top-4 right-4">
+                  <span class="bg-amber-500/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                    Key: {hymn.key}
+                  </span>
+                </div>
+              </div>
+              
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-slate-800 mb-1 group-hover:text-amber-600 transition-colors">
+                  {hymn.title}
+                </h3>
+                
+                {hymn.alternateTitle && (
+                  <p class="text-sm text-amber-600 font-medium mb-3">{hymn.alternateTitle}</p>
+                )}
+                
+                <p class="text-sm text-slate-600 mb-4 line-clamp-3 leading-relaxed">{hymn.excerpt}</p>
+                
+                <div class="flex items-center gap-2 text-xs text-slate-500 mb-4">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  {hymn.region}
+                </div>
+                
+                <div class="bg-slate-50 rounded-lg px-3 py-2 mb-4">
+                  <p class="text-xs text-slate-500 mb-1">Chord Progression</p>
+                  <p class="text-sm font-mono font-semibold text-slate-700">{hymn.chords}</p>
+                </div>
+                
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  {hymn.tags.filter(t => t !== 'hymn' && t !== hymn.language).map((tag) => (
+                    <span class="text-xs bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full font-medium">{tag}</span>
+                  ))}
+                </div>
+                
+                <div class="flex gap-3 pt-4 border-t border-slate-100">
+                  <a 
+                    href={`/blog/${hymn.slug}`}
+                    class="flex-1 inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    View Lyrics
+                  </a>
+                  <a 
+                    href={`/hymns/${hymn.slug}.docx`}
+                    class="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-colors"
+                    download
+                  >
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    .docx
+                  </a>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+      
+      <p id="no-results" class="hidden text-center text-gray-500 py-16">
+        <svg class="w-16 h-16 mx-auto mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+        </svg>
+        No hymns found for this language.<br/>
+        <button onclick="document.querySelector('[data-lang=all]').click()" class="text-blue-600 hover:underline mt-2">View all hymns</button>
+      </p>
+    </div>
+  </section>
+
+  <!-- Community Section -->
+  <section class="section-padding bg-gradient-to-br from-amber-50 via-orange-50 to-amber-50 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-amber-200/30 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-orange-200/20 rounded-full blur-3xl"></div>
+    
+    <div class="container-max relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+          Share Your Worship
+        </div>
+        
+        <h2 class="heading-1 mb-6">Add Your Voice to Our Collection</h2>
+        
+        <p class="text-lg text-slate-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+          Do you have lyrics or chord sheets in your language? Whether it's Pedi, Tswana, Ndebele, 
+          or any other language spoken in our Johannesburg community — we'd love to add your songs.
+        </p>
+        
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/contact" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all hover:-translate-y-0.5 hover:shadow-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            Contact Us
+          </a>
+          <a href="/blog" class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 px-8 py-4 rounded-xl text-lg font-semibold border-2 border-slate-200 transition-all hover:-translate-y-0.5">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+            Read Our Blog
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ hymns }}>
+  const audio = document.getElementById('bg-audio');
+  const playBtn = document.getElementById('play-btn');
+  const playIcon = document.getElementById('play-icon');
+  const pauseIcon = document.getElementById('pause-icon');
+  const shuffleBtn = document.getElementById('shuffle-btn');
+  const volumeBtn = document.getElementById('volume-btn');
+  const volumeSlider = document.getElementById('volume-slider');
+  const volumeOnIcon = document.getElementById('volume-on-icon');
+  const volumeOffIcon = document.getElementById('volume-off-icon');
+  const progressBar = document.getElementById('progress-bar');
+  const nowPlayingTitle = document.getElementById('now-playing-title');
+  const nowPlayingLang = document.getElementById('now-playing-lang');
+  
+  let isPlaying = false;
+  let isMuted = false;
+  let currentVolume = 50;
+  let currentHymnIndex = 0;
+  
+  // Sample audio URLs (replace with actual audio files)
+  const sampleAudioUrls = [
+    'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+    'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+    'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
+  ];
+  
+  // Initialize
+  if (audio) {
+    audio.volume = currentVolume / 100;
+  }
+  
+  // Play/Pause
+  function togglePlay() {
+    if (!audio) return;
+    
+    if (isPlaying) {
+      audio.pause();
+      isPlaying = false;
+      playIcon.classList.remove('hidden');
+      pauseIcon.classList.add('hidden');
+    } else {
+      // Set a random audio if none is set
+      if (!audio.src || audio.src === window.location.href) {
+        const randomIndex = Math.floor(Math.random() * sampleAudioUrls.length);
+        audio.src = sampleAudioUrls[randomIndex];
+        currentHymnIndex = randomIndex;
+        updateNowPlaying();
+      }
+      audio.play().catch(e => console.log('Audio play failed:', e));
+      isPlaying = true;
+      playIcon.classList.add('hidden');
+      pauseIcon.classList.remove('hidden');
+    }
+  }
+  
+  // Shuffle/Play Random
+  function playRandom() {
+    if (!audio) return;
+    
+    const randomIndex = Math.floor(Math.random() * sampleAudioUrls.length);
+    audio.src = sampleAudioUrls[randomIndex];
+    currentHymnIndex = randomIndex;
+    updateNowPlaying();
+    
+    audio.play().catch(e => console.log('Audio play failed:', e));
+    isPlaying = true;
+    playIcon.classList.add('hidden');
+    pauseIcon.classList.remove('hidden');
+  }
+  
+  // Update Now Playing display
+  function updateNowPlaying() {
+    if (hymns[currentHymnIndex]) {
+      const hymn = hymns[currentHymnIndex];
+      if (nowPlayingTitle) {
+        nowPlayingTitle.textContent = hymn.title;
+      }
+      if (nowPlayingLang) {
+        nowPlayingLang.textContent = hymn.languageName + ' • ' + hymn.region;
+      }
+    }
+  }
+  
+  // Volume control
+  function updateVolume() {
+    if (!audio || !volumeSlider) return;
+    
+    currentVolume = parseInt(volumeSlider.value);
+    audio.volume = currentVolume / 100;
+    
+    if (isMuted) {
+      volumeOnIcon.classList.add('hidden');
+      volumeOffIcon.classList.remove('hidden');
+    } else {
+      volumeOnIcon.classList.remove('hidden');
+      volumeOffIcon.classList.add('hidden');
+    }
+  }
+  
+  // Mute toggle
+  function toggleMute() {
+    if (!audio) return;
+    
+    isMuted = !isMuted;
+    audio.muted = isMuted;
+    
+    if (isMuted) {
+      volumeOnIcon.classList.add('hidden');
+      volumeOffIcon.classList.remove('hidden');
+    } else {
+      volumeOnIcon.classList.remove('hidden');
+      volumeOffIcon.classList.add('hidden');
+    }
+  }
+  
+  // Event listeners
+  playBtn?.addEventListener('click', togglePlay);
+  shuffleBtn?.addEventListener('click', playRandom);
+  volumeBtn?.addEventListener('click', toggleMute);
+  volumeSlider?.addEventListener('input', updateVolume);
+  
+  // Update progress bar
+  audio?.addEventListener('timeupdate', () => {
+    if (audio && audio.duration) {
+      const progress = (audio.currentTime / audio.duration) * 100;
+      if (progressBar) {
+        progressBar.style.width = progress + '%';
+      }
+    }
+  });
+  
+  // Language filter
+  const filterButtons = document.querySelectorAll('.lang-filter');
+  const hymnCards = document.querySelectorAll('.hymn-card');
+  const noResults = document.getElementById('no-results');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const lang = button.getAttribute('data-lang');
+      
+      filterButtons.forEach(btn => {
+        btn.classList.remove('bg-amber-500', 'text-white', 'shadow-lg');
+        btn.classList.add('bg-slate-100', 'text-slate-700');
+      });
+      button.classList.remove('bg-slate-100', 'text-slate-700');
+      button.classList.add('bg-amber-500', 'text-white', 'shadow-lg');
+      
+      let visibleCount = 0;
+      hymnCards.forEach((card, index) => {
+        const cardLang = card.getAttribute('data-language');
+        const htmlCard = card;
+        
+        if (lang === 'all' || cardLang === lang) {
+          htmlCard.style.display = 'block';
+          htmlCard.style.animation = `fadeInUp 0.4s ease ${index * 0.05}s both`;
+          visibleCount++;
+        } else {
+          htmlCard.style.display = 'none';
+        }
+      });
+      
+      if (noResults) {
+        noResults.classList.toggle('hidden', visibleCount > 0);
+      }
+    });
+  });
+
+  const allButton = document.querySelector('[data-lang="all"]');
+  if (allButton) {
+    allButton.classList.remove('bg-slate-100', 'text-slate-700');
+    allButton.classList.add('bg-amber-500', 'text-white', 'shadow-lg');
+  }
+</script>
+
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Volume slider styling */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+  }
+</style>
