@@ -9,6 +9,7 @@ const languages = [
   { code: 'tswana', name: 'Tswana / Setswana' },
   { code: 'pedi', name: 'Pedi / Sepedi' },
   { code: 'ndebele', name: 'Ndebele / isiNdebele' },
+  { code: 'afrikaans', name: 'Afrikaans' },
   { code: 'swahili', name: 'Swahili / Kiswahili' },
   { code: 'dinka', name: 'Dinka (South Sudan)' },
   { code: 'shona', name: 'Shona (Zimbabwe)' },
@@ -306,6 +307,104 @@ const hymns = [
     excerpt: 'Ndebele hymn declaring Jesus as Lord and Savior.',
     tags: ['hymn', 'ndebele', 'lordship', 'salvation'],
     region: 'Gauteng, South Africa',
+  },
+
+  // ==================== AFRIKAANS ====================
+  {
+    slug: 'lof-sy-heerlikheid',
+    title: 'Lofprysing',
+    alternateTitle: 'Praise His Name',
+    language: 'afrikaans',
+    languageName: 'Afrikaans',
+    key: 'G',
+    chords: 'G - D - Em - C',
+    excerpt: 'Traditional Afrikaans hymn of praise to God\'s glorious name.',
+    tags: ['hymn', 'afrikaans', 'praise', 'traditional'],
+    region: 'South Africa / Afrikaans',
+  },
+  {
+    slug: 'hy-is-ons-toevlug',
+    title: 'Hy Is Ons Toevlug',
+    alternateTitle: 'He Is Our Refuge',
+    language: 'afrikaans',
+    languageName: 'Afrikaans',
+    key: 'D',
+    chords: 'D - A - G - D',
+    excerpt: 'Afrikaans hymn declaring God as our refuge and strength.',
+    tags: ['hymn', 'afrikaans', 'worship', 'refuge'],
+    region: 'South Africa / Afrikaans',
+  },
+  {
+    slug: 'gods-liefde-bly',
+    title: 'God se Liefde Bly',
+    alternateTitle: 'God\'s Love Endures',
+    language: 'afrikaans',
+    languageName: 'Afrikaans',
+    key: 'A',
+    chords: 'A - E - F#m - D',
+    excerpt: 'Afrikaans worship song about the everlasting love of God.',
+    tags: ['hymn', 'afrikaans', 'love', 'worship'],
+    region: 'South Africa / Afrikaans',
+  },
+  {
+    slug: 'klim-ek-op',
+    title: 'Klim Ek Op',
+    alternateTitle: 'I Will Climb',
+    language: 'afrikaans',
+    languageName: 'Afrikaans',
+    key: 'C',
+    chords: 'C - G - Am - F',
+    excerpt: 'Afrikaans hymn about climbing to God\'s holy mountain.',
+    tags: ['hymn', 'afrikaans', 'worship', 'traditional'],
+    region: 'South Africa / Afrikaans',
+  },
+  {
+    slug: 'vader-ons',
+    title: 'Vader Ons',
+    alternateTitle: 'Our Father',
+    language: 'afrikaans',
+    languageName: 'Afrikaans',
+    key: 'F',
+    chords: 'F - Bb - C - F',
+    excerpt: 'Afrikaans rendition of the Lord\'s Prayer in song.',
+    tags: ['hymn', 'afrikaans', 'prayer', 'traditional'],
+    region: 'South Africa / Afrikaans',
+  },
+  {
+    slug: 'heer-jesu-kom',
+    title: 'Heer, Jesu Kom',
+    alternateTitle: 'Lord Jesus Come',
+    language: 'afrikaans',
+    languageName: 'Afrikaans',
+    key: 'G',
+    chords: 'G - D - C - G',
+    excerpt: 'Afrikaans hymn calling for Jesus\'s soon return.',
+    tags: ['hymn', 'afrikaans', 'worship', 'return'],
+    region: 'South Africa / Afrikaans',
+  },
+  {
+    slug: 'almal-sal-sien',
+    title: 'Almal Sal Sien',
+    alternateTitle: 'All Will See',
+    language: 'afrikaans',
+    languageName: 'Afrikaans',
+    key: 'D',
+    chords: 'D - A - Bm - G',
+    excerpt: 'Afrikaans hymn about the day when all will see God\'s glory.',
+    tags: ['hymn', 'afrikaans', 'glory', 'worship'],
+    region: 'South Africa / Afrikaans',
+  },
+  {
+    slug: 'jou-hand-vas',
+    title: 'Jou Hand Vas',
+    alternateTitle: 'Holding Your Hand',
+    language: 'afrikaans',
+    languageName: 'Afrikaans',
+    key: 'A',
+    chords: 'A - E - D - A',
+    excerpt: 'Afrikaans song about walking with God and holding His hand.',
+    tags: ['hymn', 'afrikaans', 'comfort', 'worship'],
+    region: 'South Africa / Afrikaans',
   },
 
   // ==================== SWAHILI (Kiswahili) ====================
@@ -689,12 +788,13 @@ const regionImages: Record<string, string> = {
   'Ethiopia': 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80',
   'Korea': 'https://images.unsplash.com/photo-1534008757030-27299c4371b6?w=800&q=80',
   'Korea / Johannesburg Korean Community': 'https://images.unsplash.com/photo-1534008757030-27299c4371b6?w=800&q=80',
+  'South Africa / Afrikaans': 'https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800&q=80',
 };
 ---
 
 <BaseLayout
   title="Hymns & Worship Songs | Johannesburg Bible Study Church"
-  description="Praise and worship songs in 15+ languages — Zulu, Xhosa, Sotho, Tswana, Pedi, Swahili, Dinka, Shona, Lingala, Igbo, Yoruba, Amharic, English, and Korean. Download chord sheets."
+  description="Praise and worship songs in 17 languages — Zulu, Xhosa, Sotho, Tswana, Pedi, Ndebele, Afrikaans, Swahili, Dinka, Shona, Lingala, Igbo, Yoruba, Amharic, English, and Korean. Download chord sheets."
 >
   <!-- Hero Section -->
   <section class="relative overflow-hidden">
@@ -737,7 +837,7 @@ const regionImages: Record<string, string> = {
               <p class="text-sm text-slate-300">Songs</p>
             </div>
             <div class="text-center">
-              <p class="text-3xl font-bold text-amber-400">16</p>
+              <p class="text-3xl font-bold text-amber-400">17</p>
               <p class="text-sm text-slate-300">Languages</p>
             </div>
             <div class="text-center">
