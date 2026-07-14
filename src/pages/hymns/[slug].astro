@@ -1,0 +1,401 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import {
+  hymns,
+  getRelatedHymns,
+  getYouTubeUrl,
+  getYouTubeEmbedUrl,
+  getSpotifySearchUrl,
+  getAppleMusicSearchUrl,
+  getSoundCloudSearchUrl,
+} from '@/data/hymns.ts';
+
+export function getStaticPaths() {
+  return hymns.map((hymn) => ({
+    params: { slug: hymn.slug },
+    props: { hymn },
+  }));
+}
+
+const { hymn } = Astro.props as { hymn: typeof hymns[number] };
+const related = getRelatedHymns(hymn, 3);
+
+const youtubeUrl = getYouTubeUrl(hymn);
+const youtubeEmbed = getYouTubeEmbedUrl(hymn);
+const spotifyUrl = getSpotifySearchUrl(hymn);
+const appleMusicUrl = getAppleMusicSearchUrl(hymn);
+const soundCloudUrl = getSoundCloudSearchUrl(hymn);
+const docxUrl = `/hymns/${hymn.slug}.docx`;
+
+// Pre-format lyrics into blocks. Lines starting with "Chorus" or "[Chorus]"
+// become section labels, blank lines separate blocks.
+const lyricBlocks = hymn.lyrics
+  ? hymn.lyrics.split(/\n\s*\n/).map((block) => {
+      const trimmed = block.trim();
+      const m = trimmed.match(/^\[?([Cc]horus|[Bb]ridge|[Tt]ag|[Oo]utro|[Pp]re[- ]?[Cc]horus|[Ii]nterlude|V\d+|[\d]+)\b[:\]]?\s*\n?/);
+      if (m) {
+        const label = m[1].replace(/[-_]/g, ' ');
+        const body = trimmed.slice(m[0].length).trim();
+        return { label, body };
+      }
+      return { label: null as string | null, body: trimmed };
+    })
+  : [];
+---
+
+<BaseLayout
+  title={`${hymn.title} (${hymn.languageName}) | Hymns | Johannesburg Bible Study Church`}
+  description={`${hymn.title} — ${hymn.excerpt} Free chord sheet, lyrics, and YouTube link in ${hymn.languageName}.`}
+  canonicalUrl={`https://joburgchurch.co.za/hymns/${hymn.slug}/`}
+  ogImage={hymn.image}
+  schema={{
+    '@context': 'https://schema.org',
+    '@type': 'MusicComposition',
+    name: hymn.title,
+    alternateName: hymn.alternateTitle,
+    inLanguage: hymn.language,
+    composer: hymn.artist ? { '@type': 'Person', name: hymn.artist } : undefined,
+    datePublished: hymn.releasedYear ? String(hymn.releasedYear) : undefined,
+    lyrics: hymn.lyrics
+      ? { '@type': 'CreativeWork', text: hymn.lyrics }
+      : undefined,
+    recordedAs: youtubeEmbed ? {
+      '@type': 'MusicRecording',
+      byArtist: hymn.artist ? { '@type': 'Person', name: hymn.artist } : undefined,
+      video: { '@type': 'VideoObject', embedUrl: youtubeEmbed, url: youtubeUrl },
+    } : undefined,
+  }}
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Hymns', url: '/hymns/' },
+    { name: hymn.title, url: `/hymns/${hymn.slug}/` },
+  ]}
+>
+  <!-- HERO -->
+  <section class="relative overflow-hidden bg-slate-900 text-white">
+    <div class="absolute inset-0 z-0">
+      <img src={hymn.image} alt={hymn.title} class="w-full h-full object-cover opacity-40" />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/85 to-slate-900/60"></div>
+    </div>
+    <div class="relative z-10 container-max section-padding py-16 md:py-24">
+      <nav class="flex flex-wrap items-center gap-2 text-amber-200/80 text-sm mb-6">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <a href="/hymns/" class="hover:text-white transition-colors">Hymns</a>
+        <span>/</span>
+        <span class="text-white">{hymn.title}</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-[2fr_1fr] gap-10 items-end">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="inline-flex items-center gap-1.5 bg-white/95 text-slate-800 px-3 py-1.5 rounded-full text-xs font-semibold shadow-sm">
+              {hymn.languageName}
+            </span>
+            {hymn.key && (
+              <span class="bg-amber-500 text-white px-2.5 py-1 rounded-full text-xs font-bold">
+                Key: {hymn.key}
+              </span>
+            )}
+            {hymn.releasedYear && (
+              <span class="bg-white/20 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-semibold">
+                {hymn.releasedYear}
+              </span>
+            )}
+            {hymn.popularity && (
+              <span class="inline-flex items-center gap-1 bg-red-600 text-white px-2.5 py-1 rounded-full text-xs font-bold">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+                Popular
+              </span>
+            )}
+          </div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3">
+            {hymn.title}
+          </h1>
+          {hymn.alternateTitle && (
+            <p class="text-xl text-amber-300 font-medium mb-4">{hymn.alternateTitle}</p>
+          )}
+          {hymn.artist && (
+            <p class="text-slate-300 text-lg mb-2">by {hymn.artist}</p>
+          )}
+          <p class="text-lg text-slate-200 max-w-2xl leading-relaxed">{hymn.excerpt}</p>
+        </div>
+
+        <div class="flex flex-col gap-3 lg:items-end">
+          {hymn.chords && (
+            <div class="bg-slate-800/80 backdrop-blur-sm rounded-xl px-5 py-4 border border-amber-500/30">
+              <p class="text-xs text-amber-300 uppercase tracking-wide font-semibold mb-1">Chord Progression</p>
+              <p class="text-2xl font-mono font-bold text-amber-100">{hymn.chords}</p>
+            </div>
+          )}
+          <a
+            href={docxUrl}
+            download
+            class="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold transition-all hover:-translate-y-0.5 hover:shadow-lg"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            Download .docx
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LISTEN · YouTube / Spotify / Apple / SoundCloud -->
+  <section class="bg-gradient-to-b from-slate-50 to-white section-padding">
+    <div class="container-max">
+      <div class="text-center mb-8">
+        <p class="text-amber-700 font-semibold uppercase tracking-wider text-sm mb-2">Listen &amp; Watch</p>
+        <h2 class="heading-2">Find it on your favourite platform</h2>
+        <p class="text-gray-600 mt-2">Open in YouTube, Spotify, Apple Music, or SoundCloud.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+        <a
+          href={youtubeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white px-5 py-4 rounded-xl font-semibold transition-all hover:-translate-y-0.5 hover:shadow-xl"
+        >
+          <svg class="w-7 h-7 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          <div>
+            <p class="text-sm opacity-80">Watch on</p>
+            <p class="text-lg font-bold">YouTube</p>
+          </div>
+        </a>
+
+        <a
+          href={spotifyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-5 py-4 rounded-xl font-semibold transition-all hover:-translate-y-0.5 hover:shadow-xl"
+        >
+          <svg class="w-7 h-7 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12C24 5.4 18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+          </svg>
+          <div>
+            <p class="text-sm opacity-80">Listen on</p>
+            <p class="text-lg font-bold">Spotify</p>
+          </div>
+        </a>
+
+        <a
+          href={appleMusicUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group flex items-center gap-3 bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white px-5 py-4 rounded-xl font-semibold transition-all hover:-translate-y-0.5 hover:shadow-xl"
+        >
+          <svg class="w-7 h-7 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043A5.022 5.022 0 0019.55.012 10.59 10.59 0 0017.93 0h-12c-.539 0-1.082.014-1.625.04-1.179.072-2.221.42-3.075 1.092C.13 1.852-.39 2.85-.59 4.137a8.51 8.51 0 00-.21 1.978c-.014.6-.014 1.205-.014 1.805v6.84c0 .61 0 1.21.014 1.82.014.66.074 1.31.21 1.964.31 1.7 1.32 2.87 2.96 3.45.6.21 1.23.32 1.87.35.6.04 1.2.04 1.81.04h11.62c.61 0 1.21 0 1.82-.04.62-.03 1.24-.13 1.83-.34 1.65-.59 2.66-1.77 2.97-3.48.14-.65.2-1.31.21-1.96.01-.61.01-1.21.01-1.82V7.96c0-.6 0-1.21-.01-1.81l.02-.026zm-6.71 4.04c-.51.51-1.27.51-1.78 0-.51-.51-.51-1.27 0-1.78.51-.51 1.27-.51 1.78 0 .5.51.5 1.27 0 1.78zM12 5.31c-1.49 0-2.69 1.2-2.69 2.69 0 .7.27 1.34.71 1.81l1.98-1.98-1.98-1.98c.47-.44 1.11-.71 1.81-.71 1.49 0 2.69 1.2 2.69 2.69s-1.2 2.69-2.69 2.69c-.7 0-1.34-.27-1.81-.71l1.98 1.98L12 9.8V5.31z"/>
+          </svg>
+          <div>
+            <p class="text-sm opacity-80">Listen on</p>
+            <p class="text-lg font-bold">Apple Music</p>
+          </div>
+        </a>
+
+        <a
+          href={soundCloudUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-5 py-4 rounded-xl font-semibold transition-all hover:-translate-y-0.5 hover:shadow-xl"
+        >
+          <svg class="w-7 h-7 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c0-.057-.045-.1-.09-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.09.094s.089-.045.104-.104l.21-1.319-.21-1.334c0-.061-.044-.09-.09-.09m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.12.119.12.061 0 .105-.061.121-.12l.254-2.474-.254-2.548c-.016-.06-.061-.12-.121-.12m.945-.089c-.075 0-.135.06-.15.135l-.193 2.64.21 2.544c.016.077.075.138.149.138.075 0 .135-.061.15-.151l.24-2.531-.24-2.64c0-.075-.06-.135-.135-.135m1.155.36c-.005-.09-.075-.149-.159-.149-.09 0-.158.06-.164.149l-.217 2.43.2 2.563c.005.09.075.157.159.157.074 0 .148-.068.148-.158l.227-2.563-.227-2.444zm.809-1.709c-.101 0-.18.09-.18.181l-.21 3.957.187 2.563c0 .09.08.164.18.164.094 0 .174-.09.18-.18l.209-2.563-.209-3.972c-.008-.104-.088-.18-.18-.18m.959-.914c-.105 0-.195.09-.203.194l-.18 4.872.165 2.548c.015.12.105.21.21.21.104 0 .194-.09.21-.21l.193-2.548-.192-4.856c-.016-.12-.105-.21-.21-.21m.989-.449c-.121 0-.211.089-.225.209l-.165 5.275.165 2.52c.014.119.104.225.225.225.119 0 .209-.105.225-.225l.179-2.52-.18-5.27c-.029-.135-.119-.225-.239-.225m1.245-.435c-.135 0-.241.105-.255.241l-.15 5.776.135 2.46c.03.146.135.255.27.255.135 0 .24-.109.255-.255l.165-2.46-.165-5.776c-.015-.136-.12-.241-.255-.241m1.005-.045c0-.166-.12-.301-.27-.301-.149 0-.27.135-.27.301l-.149 5.491.149 2.474c.016.166.135.301.27.301.149 0 .27-.135.27-.301l.149-2.474-.149-5.491m1.245-.539c0-.18-.135-.331-.301-.331-.165 0-.3.151-.3.331l-.135 6.066.119 2.445c.016.18.135.33.301.33.165 0 .301-.15.301-.33l.135-2.445-.135-6.066m.808-.211c0-.21-.165-.375-.375-.375s-.375.165-.375.375l-.135 6.246.135 2.43c0 .211.165.375.375.375s.375-.164.375-.375l.135-2.43-.135-6.246m.99-.209c-.225 0-.405.18-.405.405l-.12 6.066.12 2.43c0 .225.18.405.405.405.224 0 .404-.18.404-.405l.135-2.43-.135-6.066c0-.225-.18-.405-.405-.405m1.214-.06c-.255 0-.449.21-.449.465l-.105 6.066.105 2.445c.016.255.21.45.465.45.255 0 .449-.21.449-.465l.105-2.445-.105-6.066c-.016-.255-.21-.465-.465-.465m1.005-.195c0-.27-.21-.479-.479-.479-.27 0-.48.21-.48.479l-.105 6.246.105 2.43c0 .27.21.479.48.479.27 0 .479-.21.479-.479l.105-2.43-.105-6.246m.84.045c0-.301-.24-.539-.54-.539s-.54.239-.54.539l-.105 6.246.105 2.43c0 .3.24.539.54.539s.54-.239.54-.539l.105-2.43-.105-6.246m1.245-.226c-.346 0-.615.27-.615.615l-.105 6.246.105 2.43c0 .345.27.615.615.615.345 0 .615-.27.615-.615l.105-2.43-.105-6.246c0-.345-.27-.615-.615-.615m.945.135c0-.375-.3-.675-.675-.675s-.675.3-.675.675l-.105 6.246.105 2.43c0 .375.3.675.675.675s.675-.3.675-.675l.105-2.43-.105-6.246m.9.15c0-.42-.345-.765-.765-.765s-.766.345-.766.765l-.104 6.246.105 2.43c0 .42.344.765.765.765s.765-.345.765-.765l.105-2.43-.105-6.246zM19.967 6.43c-.45 0-.81.36-.81.81l-.105 6.246.105 2.43c0 .45.36.81.81.81.45 0 .81-.36.81-.81l.105-2.43-.105-6.246c0-.45-.36-.81-.81-.81m1.094.15c-.524 0-.945.42-.945.945l-.105 6.246.105 2.43c0 .524.42.945.945.945.524 0 .945-.42.945-.945l.105-2.43-.105-6.246c0-.524-.42-.945-.945-.945m.93.165c-.6 0-1.08.479-1.08 1.08l-.105 6.246.105 2.43c0 .6.48 1.08 1.08 1.08s1.08-.48 1.08-1.08l.105-2.43-.105-6.246c0-.601-.48-1.08-1.08-1.08"/>
+          </svg>
+          <div>
+            <p class="text-sm opacity-80">Listen on</p>
+            <p class="text-lg font-bold">SoundCloud</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- YouTube Embed (if we have a video id) -->
+      {youtubeEmbed && (
+        <div class="aspect-video w-full max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl bg-slate-900">
+          <iframe
+            src={youtubeEmbed}
+            title={`${hymn.title} on YouTube`}
+            class="w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+      )}
+      {!youtubeEmbed && (
+        <div class="max-w-3xl mx-auto bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-xl">
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            <div>
+              <p class="font-semibold text-amber-900 mb-1">YouTube search</p>
+              <p class="text-sm text-amber-800 mb-3">
+                We don't have a pinned video for this song — open YouTube to search for the best version.
+              </p>
+              <a href={youtubeUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg text-sm font-semibold">
+                Search on YouTube →
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- LYRICS -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="text-center mb-10">
+        <p class="text-amber-700 font-semibold uppercase tracking-wider text-sm mb-2">Lyrics &amp; Chords</p>
+        <h2 class="heading-2">Sing along</h2>
+      </div>
+
+      {lyricBlocks.length > 0 ? (
+        <article class="prose prose-lg max-w-none">
+          {lyricBlocks.map((block) => (
+            <div class="mb-8">
+              {block.label && (
+                <p class="text-amber-700 font-bold text-sm uppercase tracking-wider mb-2 not-italic">
+                  {block.label.toUpperCase()}
+                </p>
+              )}
+              {block.body.split('\n').map((line) => (
+                <p class="text-slate-800 leading-relaxed text-lg font-serif mb-1">{line}</p>
+              ))}
+            </div>
+          ))}
+        </article>
+      ) : (
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-10 text-center">
+          <svg class="w-16 h-16 mx-auto mb-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+          </svg>
+          <p class="text-slate-600 text-lg mb-2">Full lyrics are being prepared for this song.</p>
+          <p class="text-slate-500 text-sm mb-6">The chord sheet, audio, and links above are ready to use.</p>
+          <a href={docxUrl} download class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-xl font-semibold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            Download .docx chord sheet
+          </a>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- INFO BAR -->
+  <section class="bg-slate-50 section-padding">
+    <div class="container-narrow">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {hymn.artist && (
+          <div>
+            <p class="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-1">Artist</p>
+            <p class="text-slate-800 font-medium">{hymn.artist}</p>
+          </div>
+        )}
+        {hymn.releasedYear && (
+          <div>
+            <p class="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-1">Released</p>
+            <p class="text-slate-800 font-medium">{hymn.releasedYear}</p>
+          </div>
+        )}
+        <div>
+          <p class="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-1">Language</p>
+          <p class="text-slate-800 font-medium">{hymn.languageName}</p>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-1">Region</p>
+          <p class="text-slate-800 font-medium">{hymn.region}</p>
+        </div>
+      </div>
+
+      {hymn.tags && hymn.tags.length > 0 && (
+        <div class="mt-6 flex flex-wrap gap-2">
+          {hymn.tags.map((tag) => (
+            <span class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full font-medium">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      )}
+
+      {hymn.popularity && (
+        <div class="mt-6 flex items-center gap-2 text-sm text-slate-700 bg-red-50 border border-red-100 rounded-lg px-4 py-3">
+          <svg class="w-4 h-4 text-red-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          <span><span class="font-semibold">Trending:</span> {hymn.popularity}</span>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- RELATED SONGS -->
+  {related.length > 0 && (
+    <section class="section-padding">
+      <div class="container-max">
+        <h2 class="heading-2 mb-8">More songs in {hymn.languageName}</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {related.map((r) => (
+            <a
+              href={`/hymns/${r.slug}/`}
+              class="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1"
+            >
+              <div class="relative h-40 overflow-hidden">
+                <img src={r.image} alt={r.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent"></div>
+                {r.popularity && (
+                  <div class="absolute top-3 right-3">
+                    <span class="inline-flex items-center gap-1 bg-red-600 text-white px-2 py-0.5 rounded-full text-xs font-bold">
+                      <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                      Popular
+                    </span>
+                  </div>
+                )}
+              </div>
+              <div class="p-5">
+                <h3 class="font-bold text-slate-800 group-hover:text-amber-600 transition-colors mb-1">
+                  {r.title}
+                </h3>
+                {r.alternateTitle && (
+                  <p class="text-sm text-amber-600 mb-2">{r.alternateTitle}</p>
+                )}
+                {r.chords && (
+                  <p class="text-xs font-mono text-slate-500">{r.chords}</p>
+                )}
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  <section class="section-padding bg-gradient-to-br from-amber-50 to-orange-50">
+    <div class="container-max text-center">
+      <h2 class="heading-2 mb-4">Browse all {hymns.length} hymns</h2>
+      <p class="text-slate-600 mb-6 max-w-xl mx-auto">
+        Worship songs in 16 languages — Zulu, Xhosa, Sotho, Tswana, Pedi, Ndebele, Afrikaans, Swahili, Dinka, Shona, Lingala, Igbo, Yoruba, Amharic, English, and Korean.
+      </p>
+      <a
+        href="/hymns/"
+        class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all hover:-translate-y-0.5 hover:shadow-lg"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+        </svg>
+        See full hymn library
+      </a>
+    </div>
+  </section>
+</BaseLayout>
