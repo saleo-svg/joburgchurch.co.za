@@ -195,3 +195,29 @@ collections:
           - {label: 'Phone Ms. Dora', name: 'phone_dora', widget: 'string'}
           - {label: 'Address', name: 'address', widget: 'string'}
           - {label: 'Welcome Message', name: 'welcome_message', widget: 'text'}
+
+  # ============================================
+  # Hymns / Songs Suggestions
+  # ============================================
+  - name: hymns
+    label: 'Hymn Suggestions'
+    label_singular: 'Hymn Suggestion'
+    description: 'Submit new hymn or song suggestions for review. Admin will add approved songs to the main collection.'
+    folder: 'src/content/hymn-suggestions'
+    create: true
+    delete: true
+    slug: '{{slug}}'
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - {label: 'Song Title', name: 'title', widget: 'string'}
+      - {label: 'Language', name: 'language', widget: 'select', options: ['Zulu', 'Xhosa', 'Sotho', 'Tswana', 'Pedi', 'Ndebele', 'Afrikaans', 'Swahili', 'Dinka', 'Shona', 'Lingala', 'Igbo', 'Yoruba', 'Amharic', 'English', 'Korean', 'Other']}
+      - {label: 'Region / Country', name: 'region', widget: 'string', hint: 'e.g. South Africa, Zimbabwe, Nigeria, Korea'}
+      - {label: 'Artist / Origin', name: 'artist', widget: 'string', required: false, hint: 'e.g. Traditional, Hillsong, Sinach'}
+      - {label: 'Chord Key', name: 'key', widget: 'string', required: false, hint: 'e.g. G, C, Dm'}
+      - {label: 'Chord Progression', name: 'chords', widget: 'string', required: false, hint: 'e.g. G - D - Em - C'}
+      - {label: 'YouTube Search Term', name: 'youtube_search', widget: 'string', required: false, hint: 'Search term to find this song on YouTube'}
+      - {label: 'YouTube Video ID', name: 'youtube_id', widget: 'string', required: false, hint: 'Full YouTube video ID (after youtu.be/)'}
+      - {label: 'Lyrics', name: 'lyrics', widget: 'markdown', required: false, hint: 'Paste lyrics here if you have them'}
+      - {label: 'Notes', name: 'notes', widget: 'text', required: false, hint: 'Any additional notes or context about this song'}
+      - {label: 'Submitted By', name: 'submitted_by', widget: 'string', hint: 'Your name'}

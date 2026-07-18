@@ -1,16 +1,25 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
-type GalleryImage = {
-  src: string;
-  alt: string;
-  title: string;
-  caption: string;
-  category: string;
-};
+// Fetch gallery photos from CMS content collection
+const galleryEntries = await getCollection('gallery');
 
-/* Real photography from Unsplash — public Unsplash License */
-const images: GalleryImage[] = [
+// Sort by date (newest first)
+const images = galleryEntries
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map((entry) => ({
+    src: entry.data.photo || 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1400&q=80&auto=format&fit=crop',
+    alt: entry.data.alt || entry.data.title,
+    title: entry.data.title,
+    caption: entry.data.caption || '',
+    category: entry.data.category || 'Community',
+    date: entry.data.date,
+    photographer: entry.data.photographer || '',
+  }));
+
+// Fallback images if no CMS content exists
+const fallbackImages = [
   {
     src: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1400&q=80&auto=format&fit=crop',
     alt: 'A diverse group of people sitting together in fellowship',
@@ -39,23 +48,12 @@ const images: GalleryImage[] = [
     caption: 'Three days, forty young adults, one weekend — UseCan winter camp at Heia Safari Ranch.',
     category: 'Youth',
   },
-  {
-    src: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&q=80&auto=format&fit=crop',
-    alt: 'A quiet morning landscape with light over the hills',
-    title: 'Sandton Mornings',
-    caption: 'Where we meet, where we walk — Parkmore and the wider Sandton neighbourhood we are rooted in.',
-    category: 'Place',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=1400&q=80&auto=format&fit=crop',
-    alt: 'An open Bible on a quiet table with soft light',
-    title: 'Reading Together',
-    caption: 'Most Wednesday nights, three things happen: a Bible is opened, a question is asked, and time runs a little longer than planned.',
-    category: 'Bible Study',
-  },
 ];
 
-const categories = ['All', ...new Set(images.map((i) => i.category))];
+// Use CMS content if available, otherwise fallback
+const displayImages = images.length > 0 ? images : fallbackImages;
+
+const categories = ['All', ...new Set(displayImages.map((i) => i.category))];
 ---
 
 <BaseLayout
@@ -74,6 +72,11 @@ const categories = ['All', ...new Set(images.map((i) => i.category))];
         gatherings in Sandton, Johannesburg. These images give you a sense of
         who shows up and what we do together.
       </p>
+      {images.length === 0 && (
+        <p class="text-sm text-amber-600 mt-4">
+          Gallery photos are managed through the CMS. <a href="/admin/" class="underline">Log in to add photos</a>.
+        </p>
+      )}
     </div>
   </section>
 
@@ -90,7 +93,7 @@ const categories = ['All', ...new Set(images.map((i) => i.category))];
 
       <!-- Editorial masonry-ish grid -->
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {images.map((img, idx) => (
+        {displayImages.map((img, idx) => (
           <article class={`card-image overflow-hidden group ${idx === 0 ? 'lg:row-span-2 lg:col-span-1' : ''}`}>
             <div class={`overflow-hidden ${idx === 0 ? 'aspect-[3/4]' : 'aspect-[4/3]'}`}>
               <img
@@ -109,6 +112,9 @@ const categories = ['All', ...new Set(images.map((i) => i.category))];
               </div>
               <h3 class="heading-3 mb-2 text-lg">{img.title}</h3>
               <p class="text-sm text-gray-600 leading-relaxed">{img.caption}</p>
+              {img.photographer && (
+                <p class="text-xs text-gray-400 mt-2">Photo by {img.photographer}</p>
+              )}
             </div>
           </article>
         ))}

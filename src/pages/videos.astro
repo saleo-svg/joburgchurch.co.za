@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
 const breadcrumbs = [
   { name: 'Home', url: '/' },
@@ -26,7 +27,35 @@ type StudyEntry = {
   speaker?: string;
 };
 
-const featured: StudyEntry = {
+// Fetch videos from CMS content collection
+const videoEntries = await getCollection('videos');
+
+// Sort by date (newest first)
+const cmsStudies: StudyEntry[] = videoEntries
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map((entry) => ({
+    id: entry.slug,
+    title: entry.data.title,
+    description: entry.data.description || '',
+    category: entry.data.category || 'Bible Study',
+    duration: entry.data.duration || '',
+    date: entry.data.date,
+    passage: entry.data.passage || '',
+    speaker: entry.data.speaker || '',
+  }));
+
+// Featured video (most recent or marked as featured)
+const featuredEntry = videoEntries.find(v => v.data.featured) || videoEntries[0];
+const featured: StudyEntry = featuredEntry ? {
+  id: featuredEntry.slug,
+  title: featuredEntry.data.title,
+  description: featuredEntry.data.description || '',
+  category: featuredEntry.data.category || 'Bible Study',
+  duration: featuredEntry.data.duration || '',
+  date: featuredEntry.data.date,
+  passage: featuredEntry.data.passage || '',
+  speaker: featuredEntry.data.speaker || '',
+} : {
   id: '',
   title: 'Wednesday Bible Study — Exodus 14: The Sea That Parts',
   description:
@@ -38,7 +67,9 @@ const featured: StudyEntry = {
   speaker: 'Mr. Sim',
 };
 
-const studies: StudyEntry[] = [
+// Studies list (all except featured)
+const studies = cmsStudies.filter(s => s.id !== featured.id);
+const allStudies = cmsStudies.length > 0 ? studies : [
   {
     id: '',
     title: 'The Gospel of John Chapter 3: Nicodemus at Night',
@@ -69,53 +100,9 @@ const studies: StudyEntry[] = [
     passage: 'Luke 15:1-7',
     speaker: 'Mr. Sim',
   },
-  {
-    id: '',
-    title: 'Korean Open Day — Class Tour & Welcome',
-    description: 'A quick look inside our free Sunday Korean class. Beginners welcome. Bring a friend.',
-    category: 'Korean Class',
-    duration: '4:12',
-    date: '2026-05-27',
-  },
-  {
-    id: '',
-    title: 'UseCan Youth Camp 2026 — Highlights',
-    description: 'Three days, forty young adults, one weekend. Highlights from the UseCan winter camp held at Heia Safari Ranch.',
-    category: 'Youth',
-    duration: '6:48',
-    date: '2026-05-20',
-  },
-  {
-    id: '',
-    title: 'Exodus — The Way Out: Burning Bush (Week 1)',
-    description: 'The opening session of our Exodus series. Moses meets God at a bush that will not stop burning. What does it mean to be called?',
-    category: 'Bible Study',
-    duration: '28:14',
-    date: '2026-05-13',
-    passage: 'Exodus 3',
-    speaker: 'Mr. Sim',
-  },
-  {
-    id: '',
-    title: 'Parkmore Community Picnic 2026',
-    description: 'One-minute snapshot of the family picnic at Mushroom Farm Park. Bring your picnic blanket next year.',
-    category: 'Community',
-    duration: '1:32',
-    date: '2026-04-26',
-  },
-  {
-    id: '',
-    title: 'Wednesday Bible Study — John 4: The Woman at the Well',
-    description: 'Jesus meets a Samaritan woman with a past. The conversation is honest, surprising, and very short.',
-    category: 'Bible Study',
-    duration: '29:50',
-    date: '2026-04-22',
-    passage: 'John 4:1-26',
-    speaker: 'Ms. Dora',
-  },
 ];
 
-const categories = ['All', ...Array.from(new Set(studies.map((v) => v.category)))];
+const categories = ['All', ...Array.from(new Set(allStudies.map((v) => v.category)))];
 ---
 
 <BaseLayout
@@ -131,6 +118,11 @@ const categories = ['All', ...Array.from(new Set(studies.map((v) => v.category))
       <p class="text-blue-100 text-lg max-w-2xl mx-auto">
         Catch up on recent Wednesday Bible study series, sermon notes, and community moments. Written summaries, key passages, and discussion questions.
       </p>
+      {videoEntries.length === 0 && (
+        <p class="text-sm text-amber-300 mt-4">
+          Videos are managed through the CMS. <a href="/admin/" class="underline">Log in to add a video</a>.
+        </p>
+      )}
     </div>
   </section>
 
@@ -180,19 +172,6 @@ const categories = ['All', ...Array.from(new Set(studies.map((v) => v.category))
             {cat}
           </span>
         ))}
-      </div>
-
-      <!-- Coming-soon panel (transparent: we do not have video recaps yet) -->
-      <div class="card overflow-hidden p-0 mb-8">
-        <div class="relative aspect-[2/1] overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-amber-700 p-10 flex flex-col justify-center text-white">
-          <p class="text-xs font-semibold uppercase tracking-widest text-amber-200 mb-3">Status</p>
-          <p class="text-3xl md:text-4xl font-bold mb-3 leading-tight">Video recaps are coming soon.</p>
-          <p class="text-base opacity-90 max-w-xl">
-            We do not have recorded videos to share yet. In the meantime, the
-            Wednesday studies are live, the notes are written, and the
-            conversation is honest.
-          </p>
-        </div>
       </div>
 
       <!-- What you can do right now instead -->

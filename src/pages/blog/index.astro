@@ -1,7 +1,23 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
-const posts = [
+// Fetch blog posts from CMS content collection
+const posts = await getCollection('posts');
+
+// Sort by date (newest first)
+const sortedPosts = posts
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map((post) => ({
+    slug: post.slug,
+    title: post.data.title,
+    date: post.data.date,
+    excerpt: post.data.description || '',
+    tags: post.data.tags || [],
+  }));
+
+// Fallback posts if no CMS content exists
+const fallbackPosts = [
   {
     slug: 'welcome-to-our-church',
     title: 'Welcome to Our Bible Study Community in Johannesburg',
@@ -17,76 +33,16 @@ const posts = [
     tags: ['Korean Class', 'Community'],
   },
   {
-    slug: 'why-community-learning-matters',
-    title: 'Why Community Learning Matters in Johannesburg',
-    date: '2026-03-01',
-    excerpt: 'When a church opens its doors to serve the community through free education and skills programs, everyone benefits.',
-    tags: ['Education', 'Community'],
-  },
-  {
-    slug: 'youth-growth-spiritual-education',
-    title: 'Youth Growth and Spiritual Education in Sandton',
-    date: '2026-04-01',
-    excerpt: 'Supporting young people in their spiritual journey is one of the most important things a church community can do.',
-    tags: ['Youth', 'Spiritual Growth'],
-  },
-  {
-    slug: 'how-to-join-online-bible-study',
-    title: 'How to Join Our Wednesday Online Bible Study in Johannesburg',
-    date: '2026-05-01',
-    excerpt: 'Thinking about joining our Wednesday online Bible study in Sandton? Here is everything you need to know to get started.',
-    tags: ['Bible Study', 'Online'],
-  },
-  {
     slug: 'what-to-expect-first-bible-study',
     title: 'What to Expect at Your First Bible Study (Even If You Have Never Opened a Bible)',
     date: '2026-06-10',
     excerpt: 'You do not need to know anything about the Bible to join us on a Wednesday evening in Johannesburg. Here is what a first session actually looks like, and why most people wish they had started sooner.',
     tags: ['Bible Study', 'Beginners'],
   },
-  {
-    slug: 'learning-korean-as-an-adult-sandton',
-    title: 'Learning Korean as an Adult in Sandton: Six Honest Reasons to Try Our Free Class',
-    date: '2026-06-15',
-    excerpt: 'A free Sunday Korean class in Parkmore, Sandton — sounds too good to be true. Here is what actually happens each week, who shows up, and why adults keep coming back.',
-    tags: ['Korean Class', 'Adult Learning'],
-  },
-  {
-    slug: 'finding-community-as-a-young-adult-johannesburg',
-    title: 'Finding Community as a Young Adult in Johannesburg (Without Forcing It)',
-    date: '2026-06-20',
-    excerpt: 'Moving to Johannesburg for university or your first job is exciting and lonely at the same time. Here is how UseCan and our Wednesday evenings have become a soft landing place for young adults across Sandton, Randburg, and Midrand.',
-    tags: ['Youth', 'Community'],
-  },
-  {
-    slug: 'bible-study-near-me-johannesburg',
-    title: 'Bible Study Near Me in Johannesburg: Why Online Actually Works Better',
-    date: '2026-06-25',
-    excerpt: 'Searching for a Bible study near you in Johannesburg or Sandton? Before you drive across town on a Wednesday night, read this — most of our regulars joined from their couches first.',
-    tags: ['Bible Study', 'Online'],
-  },
-  {
-    slug: 'when-the-bible-feels-irrelevant',
-    title: 'When the Bible Feels Irrelevant: An Honest Conversation from a Wednesday Night',
-    date: '2026-07-05',
-    excerpt: 'There are weeks where the Bible feels like a 2000-year-old book that has nothing to say about load-shedding, property prices, or the year your marriage went cold. Here is what our Wednesday group does about it.',
-    tags: ['Bible Study', 'Honest Faith'],
-  },
-  {
-    slug: 'what-sandton-gets-wrong-about-christianity',
-    title: 'What Sandton Gets Wrong About Christianity (And What It Gets Right)',
-    date: '2026-07-08',
-    excerpt: 'A decade of running a Bible study in the wealthiest square mile in Africa has taught us a few things about the particular shape of faith in Sandton. Some of it is beautiful. Some of it is worth pushing back on.',
-    tags: ['Sandton', 'Culture'],
-  },
-  {
-    slug: 'the-gospel-according-to-load-shedding',
-    title: 'The Gospel According to Load-Shedding: Six Bible Versues for When Eskom Lets You Down',
-    date: '2026-07-10',
-    excerpt: 'If you live in Johannesburg, you have a complicated relationship with your power utility. Here is what the Bible has to say about waiting, trusting, and finding light in the dark — literally.',
-    tags: ['Johannesburg', 'Faith & Life'],
-  },
 ];
+
+// Use CMS content if available, otherwise fallback
+const displayPosts = sortedPosts.length > 0 ? sortedPosts : fallbackPosts;
 ---
 
 <BaseLayout
@@ -102,14 +58,19 @@ const posts = [
       <p class="text-body max-w-2xl mb-8">
         Articles on Bible study, faith, community life, and church activities from our community in Sandton, Johannesburg.
       </p>
+      {posts.length === 0 && (
+        <p class="text-sm text-amber-600 mb-4">
+          Blog posts are managed through the CMS. <a href="/admin/" class="underline">Log in to write a new post</a>.
+        </p>
+      )}
     </div>
   </section>
 
   <section class="section-padding bg-gray-50">
     <div class="container-max">
       <div class="grid gap-8 lg:grid-cols-2 max-w-5xl">
-        {posts.map((post) => (
-          <a href={`/blog/${post.slug}`} class="card group hover:border-blue-200 hover:shadow-md">
+        {displayPosts.map((post) => (
+          <a href={`/blog/${post.slug}/`} class="card group hover:border-blue-200 hover:shadow-md">
             <p class="text-xs text-gray-500 mb-2">{post.date}</p>
             <h3 class="heading-3 mb-3 group-hover:text-blue-700 transition-colors">{post.title}</h3>
             <p class="text-sm text-gray-600 mb-4">{post.excerpt}</p>

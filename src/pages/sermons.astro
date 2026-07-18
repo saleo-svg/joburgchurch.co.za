@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
 type Sermon = {
   date: string;
@@ -10,7 +11,22 @@ type Sermon = {
   summary: string;
 };
 
-const series: { name: string; description: string; color: string }[] = [
+// Fetch sermons from CMS content collection
+const sermonEntries = await getCollection('sermons');
+
+// Sort by date (newest first)
+const cmsSermons: Sermon[] = sermonEntries
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map((entry) => ({
+    date: entry.data.date,
+    title: entry.data.title,
+    passage: entry.data.passage || '',
+    series: entry.data.series || 'Bible Study',
+    speaker: entry.data.speaker || 'Mr. Sim',
+    summary: entry.data.description || '',
+  }));
+
+const series = [
   {
     name: 'Exodus — The Way Out',
     description: 'A six-week walk through the book of Exodus, looking at what it means to be led, fed, and tested in the wilderness.',
@@ -33,24 +49,24 @@ const series: { name: string; description: string; color: string }[] = [
   },
 ];
 
-const allSermons: Sermon[] = [
-  // Exodus series
-  { date: '2026-04-08', title: 'Exodus 1 — A People That Would Not Disappear', passage: 'Exodus 1:1–22', series: 'Exodus — The Way Out', speaker: 'Mr. Sim', summary: 'We start the series where the story starts, with a small group of people in a difficult place, and the slow work of God keeping them in the picture.' },
-  { date: '2026-04-15', title: 'Exodus 2 — The Boy in the Basket', passage: 'Exodus 2:1–25', series: 'Exodus — The Way Out', speaker: 'Ms. Dora', summary: 'Moses grows up in two houses at once. We talked about what it means to live between two worlds and still recognise a call.' },
-  { date: '2026-04-22', title: 'Exodus 3 — The Bush That Was on Fire', passage: 'Exodus 3:1–22', series: 'Exodus — The Way Out', speaker: 'Mr. Sim', summary: 'A short reading with a long discussion. The most famous conversation in the Old Testament, and the part that is easy to miss.' },
-  { date: '2026-04-29', title: 'Exodus 12 — A Meal That Remembers', passage: 'Exodus 12:1–28', series: 'Exodus — The Way Out', speaker: 'Mr. Sim', summary: 'Passover as a family meal with a future tense. We ended up talking about how our own family tables carry memory forward.' },
-  // John series
-  { date: '2026-05-06', title: 'John 1 — In the Beginning, in the Neighbourhood', passage: 'John 1:1–18', series: 'The Gospel of John', speaker: 'Ms. Dora', summary: 'The famous prologue, read slowly. The Word became flesh and pitched a tent among us — what does that actually look like in Johannesburg?' },
-  { date: '2026-05-13', title: 'John 3 — A Late Conversation', passage: 'John 3:1–21', series: 'The Gospel of John', speaker: 'Mr. Sim', summary: 'Nicodemus comes to Jesus at night. We asked why the conversation is more honest in the dark than in the daylight.' },
-  { date: '2026-05-20', title: 'John 4 — A Woman at a Well', passage: 'John 4:1–42', series: 'The Gospel of John', speaker: 'Ms. Dora', summary: 'A long chapter, a long conversation. We spent the second half on the moment Jesus says he is the living water, and what that has to do with us today.' },
-  // Psalms
+// Static sermons as fallback
+const staticSermons: Sermon[] = [
+  { date: '2026-04-08', title: 'Exodus 1 — A People That Would Not Disappear', passage: 'Exodus 1:1-22', series: 'Exodus — The Way Out', speaker: 'Mr. Sim', summary: 'We start the series where the story starts, with a small group of people in a difficult place, and the slow work of God keeping them in the picture.' },
+  { date: '2026-04-15', title: 'Exodus 2 — The Boy in the Basket', passage: 'Exodus 2:1-25', series: 'Exodus — The Way Out', speaker: 'Ms. Dora', summary: 'Moses grows up in two houses at once. We talked about what it means to live between two worlds and still recognise a call.' },
+  { date: '2026-04-22', title: 'Exodus 3 — The Bush That Was on Fire', passage: 'Exodus 3:1-22', series: 'Exodus — The Way Out', speaker: 'Mr. Sim', summary: 'A short reading with a long discussion. The most famous conversation in the Old Testament, and the part that is easy to miss.' },
+  { date: '2026-04-29', title: 'Exodus 12 — A Meal That Remembers', passage: 'Exodus 12:1-28', series: 'Exodus — The Way Out', speaker: 'Mr. Sim', summary: 'Passover as a family meal with a future tense. We ended up talking about how our own family tables carry memory forward.' },
+  { date: '2026-05-06', title: 'John 1 — In the Beginning, in the Neighbourhood', passage: 'John 1:1-18', series: 'The Gospel of John', speaker: 'Ms. Dora', summary: 'The famous prologue, read slowly. The Word became flesh and pitched a tent among us — what does that actually look like in Johannesburg?' },
+  { date: '2026-05-13', title: 'John 3 — A Late Conversation', passage: 'John 3:1-21', series: 'The Gospel of John', speaker: 'Mr. Sim', summary: 'Nicodemus comes to Jesus at night. We asked why the conversation is more honest in the dark than in the daylight.' },
+  { date: '2026-05-20', title: 'John 4 — A Woman at a Well', passage: 'John 4:1-42', series: 'The Gospel of John', speaker: 'Ms. Dora', summary: 'A long chapter, a long conversation. We spent the second half on the moment Jesus says he is the living water, and what that has to do with us today.' },
   { date: '2026-05-27', title: 'Psalm 23 — The Lord Is My', passage: 'Psalm 23', series: 'Psalms for Real Life', speaker: 'Mr. Sim', summary: 'A psalm most people know in fragments. We read it all the way through, slowly, and talked about the part about walking through the darkest valley.' },
   { date: '2026-06-03', title: 'Psalm 13 — How Long?', passage: 'Psalm 13', series: 'Psalms for Real Life', speaker: 'Ms. Dora', summary: 'A short psalm, six verses, and an argument with God that ends in song. We talked about what it looks like to keep being honest in prayer.' },
-  { date: '2026-06-10', title: 'Psalm 139 — Known', passage: 'Psalm 139:1–18', series: 'Psalms for Real Life', speaker: 'Mr. Sim', summary: 'A psalm about being fully known, in the comforting parts and the difficult parts. The conversation drifted toward what we hide from the people closest to us.' },
-  // Parables
-  { date: '2026-06-17', title: 'The Lost Sheep', passage: 'Luke 15:1–7', series: 'Parables Jesus Actually Told', speaker: 'Ms. Dora', summary: 'A short parable, ninety minutes of discussion. The maths of grace, and what it says about what God pays attention to.' },
-  { date: '2026-06-24', title: 'The Two Sons', passage: 'Luke 15:11–32', series: 'Parables Jesus Actually Told', speaker: 'Mr. Sim', summary: 'The parable most people half-remember. We spent the hour on the older brother, and the part of the parable that the comfortable reader usually misses.' },
+  { date: '2026-06-10', title: 'Psalm 139 — Known', passage: 'Psalm 139:1-18', series: 'Psalms for Real Life', speaker: 'Mr. Sim', summary: 'A psalm about being fully known, in the comforting parts and the difficult parts. The conversation drifted toward what we hide from the people closest to us.' },
+  { date: '2026-06-17', title: 'The Lost Sheep', passage: 'Luke 15:1-7', series: 'Parables Jesus Actually Told', speaker: 'Ms. Dora', summary: 'A short parable, ninety minutes of discussion. The maths of grace, and what it says about what God pays attention to.' },
+  { date: '2026-06-24', title: 'The Two Sons', passage: 'Luke 15:11-32', series: 'Parables Jesus Actually Told', speaker: 'Mr. Sim', summary: 'The parable most people half-remember. We spent the hour on the older brother, and the part of the parable that the comfortable reader usually misses.' },
 ];
+
+// Use CMS content if available, otherwise fallback
+const allSermons = cmsSermons.length > 0 ? cmsSermons : staticSermons;
 
 const seriesColorClass: Record<string, string> = {
   amber: 'bg-amber-50 text-amber-700 border-amber-200',
@@ -59,6 +75,7 @@ const seriesColorClass: Record<string, string> = {
   purple: 'bg-purple-50 text-purple-700 border-purple-200',
 };
 ---
+
 <BaseLayout
   title="Sermons & Bible Study Notes | Johannesburg Bible Study Church"
   description="Sermon notes, Bible study summaries, and teaching series from Johannesburg Bible Study Church in Sandton, Johannesburg. Exodus, John, Psalms, Parables, and more."
@@ -72,6 +89,11 @@ const seriesColorClass: Record<string, string> = {
       <p class="text-body max-w-2xl mb-8">
         Notes and summaries from our Wednesday Bible study in Sandton, Johannesburg. We work through books of the Bible slowly, in series, and we publish a short summary after each session.
       </p>
+      {sermonEntries.length === 0 && (
+        <p class="text-sm text-amber-600 mb-4">
+          Sermons are managed through the CMS. <a href="/admin/" class="underline">Log in to add a sermon</a>.
+        </p>
+      )}
     </div>
   </section>
 

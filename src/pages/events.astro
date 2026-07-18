@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
 type Event = {
   day: string;
@@ -12,46 +13,32 @@ type Event = {
   kind: 'weekly' | 'monthly' | 'special';
 };
 
-const upcoming: Event[] = [
-  // Special / one-off
-  {
-    day: '12', month: 'Jul',
-    title: 'Sandton Community Picnic',
-    when: 'Saturday 12 July, 11:00am – 3:00pm',
-    where: 'Parkmore, Sandton',
-    description: 'A Saturday morning for the families and friends of the Bible study community. Bring a dish, bring the kids, meet the people you have only seen on Google Meet.',
-    cta: { label: 'Call to RSVP', href: '/contact' },
-    kind: 'special',
-  },
-  {
-    day: '02', month: 'Aug',
-    title: 'Korean Class Open Day',
-    when: 'Sunday 2 August, 2:00pm',
-    where: 'Parkmore, Sandton',
-    description: 'Drop-in afternoon for anyone thinking about joining the free Sunday Korean class. Sample lesson, conversation practice, and tea. No commitment required.',
-    cta: { label: 'Reserve a Spot', href: '/contact' },
-    kind: 'special',
-  },
-  {
-    day: '15', month: 'Aug',
-    title: 'UseCan Youth Winter Camp',
-    when: 'Friday 15 – Sunday 17 August',
-    where: 'Just outside Johannesburg',
-    description: 'Three days for the UseCan youth group — Bible study, outdoor activities, leadership workshops, and the kind of late-night conversations you only have when you are away from home with people your age.',
-    cta: { label: 'Get Camp Details', href: '/contact' },
-    kind: 'special',
-  },
-  {
-    day: '06', month: 'Sep',
-    title: 'Sandton Open House',
-    when: 'Saturday 6 September, 10:00am – 1:00pm',
-    where: 'Parkmore, Sandton',
-    description: 'Our once-a-term open morning. Tour the venue, meet the team, ask every awkward question you have been sitting with. Coffee and rusks provided.',
-    cta: { label: 'Save the Date', href: '/contact' },
-    kind: 'special',
-  },
-];
+// Fetch events from CMS content collection
+const eventEntries = await getCollection('events');
 
+// Sort by date (newest first)
+const cmsEvents = eventEntries
+  .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime())
+  .map((entry) => {
+    const date = new Date(entry.data.date);
+    return {
+      day: date.getDate().toString(),
+      month: date.toLocaleDateString('en-US', { month: 'short' }),
+      title: entry.data.title,
+      when: `${entry.data.date}${entry.data.time ? ', ' + entry.data.time : ''}`,
+      where: entry.data.location || 'Parkmore, Sandton',
+      description: entry.data.description || '',
+      kind: 'special' as const,
+    };
+  });
+
+const eventColors: Record<Event['kind'], string> = {
+  weekly: 'bg-blue-50 text-blue-700 border-blue-200',
+  monthly: 'bg-amber-50 text-amber-700 border-amber-200',
+  special: 'bg-green-50 text-green-700 border-green-200',
+};
+
+// Static weekly/monthly events (recurring)
 const weekly: Event[] = [
   {
     day: 'Wed', month: 'Weekly',
@@ -82,11 +69,27 @@ const weekly: Event[] = [
   },
 ];
 
-const eventColors: Record<Event['kind'], string> = {
-  weekly: 'bg-blue-50 text-blue-700 border-blue-200',
-  monthly: 'bg-amber-50 text-amber-700 border-amber-200',
-  special: 'bg-green-50 text-green-700 border-green-200',
-};
+// Convert CMS events to the same format
+const upcoming: Event[] = cmsEvents.length > 0 ? cmsEvents : [
+  {
+    day: '12', month: 'Jul',
+    title: 'Sandton Community Picnic',
+    when: 'Saturday 12 July, 11:00am – 3:00pm',
+    where: 'Parkmore, Sandton',
+    description: 'A Saturday morning for the families and friends of the Bible study community. Bring a dish, bring the kids, meet the people you have only seen on Google Meet.',
+    cta: { label: 'Call to RSVP', href: '/contact' },
+    kind: 'special',
+  },
+  {
+    day: '02', month: 'Aug',
+    title: 'Korean Class Open Day',
+    when: 'Sunday 2 August, 2:00pm',
+    where: 'Parkmore, Sandton',
+    description: 'Drop-in afternoon for anyone thinking about joining the free Sunday Korean class. Sample lesson, conversation practice, and tea. No commitment required.',
+    cta: { label: 'Reserve a Spot', href: '/contact' },
+    kind: 'special',
+  },
+];
 ---
 <BaseLayout
   title="Events & Calendar | Johannesburg Bible Study Church, Sandton"
@@ -101,6 +104,11 @@ const eventColors: Record<Event['kind'], string> = {
       <p class="text-body max-w-2xl mb-8">
         Regular Bible study and Korean class, plus one-off community events through the year. Everything on this page is open to anyone in Sandton, Randburg, and greater Johannesburg — bring a friend.
       </p>
+      {eventEntries.length === 0 && (
+        <p class="text-sm text-amber-600 mb-4">
+          Events are managed through the CMS. <a href="/admin/" class="underline">Log in to add an event</a>.
+        </p>
+      )}
     </div>
   </section>
 

@@ -14,6 +14,8 @@ A no-code admin panel at `https://joburgchurch.co.za/admin/` where volunteers ca
 - Write and publish blog posts (in markdown)
 - Add events to the calendar
 - Embed YouTube videos
+- Add sermon series and Bible study notes
+- Submit hymn/song suggestions for review
 - Update service times and contact info
 
 When they publish, the change is automatically committed to GitHub and the site rebuilds within 1-2 minutes.
@@ -127,13 +129,14 @@ Anyone who logs into the CMS must be a GitHub collaborator on your repo.
 1. Visit https://joburgchurch.co.za/admin/
 2. Click **"Login with GitHub"**
 3. Authorize the OAuth app
-4. You should land in the Sveltia CMS dashboard with 6 collections visible:
+4. You should land in the Sveltia CMS dashboard with 7 collections visible:
    - Blog Posts
    - Sermons & Bible Studies
    - Events
    - Photo Gallery
    - Videos
    - Site Settings
+   - Hymn Suggestions
 
 If you see an error:
 - **"OAuth failed"** → Check that `base_url` in `config.yml` matches your worker URL exactly
@@ -200,6 +203,31 @@ After setup is complete, share this with your volunteers:
 2. Copy the YouTube ID — the part after `youtu.be/` or `v=` in the URL
 3. In Sveltia: **Videos** → **New Video** → paste the ID
 4. Click **"Publish"**
+
+### How to Submit a Hymn Suggestion
+
+Volunteers can submit new song suggestions for review:
+1. Click **Hymn Suggestions** in the sidebar
+2. Click **"New Hymn Suggestion"**
+3. Fill in song details (title, language, artist, chords, YouTube link, lyrics)
+4. Click **"Publish"**
+5. Admin will review and add approved songs to the main hymns collection
+
+---
+
+## Volunteer Permissions Summary
+
+Volunteers have **full permissions** to:
+- ✅ Create, edit, and delete blog posts (with images)
+- ✅ Create, edit, and delete events (with images)
+- ✅ Upload photos to the gallery
+- ✅ Add YouTube videos
+- ✅ Create sermon and Bible study entries
+- ✅ Submit hymn/song suggestions
+- ✅ Update site settings (contact info, service times)
+
+**Review required** (admin only):
+- Hymns added to main collection after review
 
 ---
 
