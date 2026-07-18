@@ -53,6 +53,20 @@ export const languages = [
   { code: 'igbo', name: 'Igbo (Nigeria)' },
   { code: 'yoruba', name: 'Yoruba (Nigeria)' },
   { code: 'amharic', name: 'Amharic (Ethiopia)' },
+  { code: 'french', name: 'French / Français' },
+  { code: 'portuguese', name: 'Portuguese / Português' },
+  { code: 'spanish', name: 'Spanish / Español' },
+  { code: 'german', name: 'German / Deutsch' },
+  { code: 'chinese', name: 'Chinese / 中文' },
+  { code: 'japanese', name: 'Japanese / 日本語' },
+  { code: 'vietnamese', name: 'Vietnamese / Tiếng Việt' },
+  { code: 'arabic', name: 'Arabic / العربية' },
+  { code: 'hindi', name: 'Hindi / हिन्दी' },
+  { code: 'indonesian', name: 'Indonesian / Bahasa' },
+  { code: 'tagalog', name: 'Filipino / Tagalog' },
+  { code: 'tamil', name: 'Tamil / தமிழ்' },
+  { code: 'persian', name: 'Persian / فارسی' },
+  { code: 'russian', name: 'Russian / Русский' },
   { code: 'english', name: 'English' },
   { code: 'korean', name: 'Korean / 한국어' },
 ];
@@ -2543,6 +2557,559 @@ export const hymns: Hymn[] = [
       "releasedYear": 2014,
       "youtubeSearch": "Abba Yesus Good Good Father Amharic",
       "popularity": "YouTube Ethiopian gospel · TikTok"
+    },
+    // ============================================
+    // FRENCH HYMNS
+    // ============================================
+    {
+      "slug": "dieu-seul",
+      "title": "Dieu seul",
+      "alternateTitle": "God Alone",
+      "language": "french",
+      "languageName": "French",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800&q=80",
+      "excerpt": "French worship song declaring God alone as our refuge and strength.",
+      "tags": ["hymn", "french", "worship", "god-alone"],
+      "region": "France / Francophone Africa",
+      "artist": "Contemporary French worship",
+      "youtubeSearch": "Dieu seul worship french"
+    },
+    {
+      "slug": "grace-incroyable",
+      "title": "Grace Incroyable",
+      "alternateTitle": "Amazing Grace French",
+      "language": "french",
+      "languageName": "French",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=800&q=80",
+      "excerpt": "The beloved hymn Amazing Grace in French translation.",
+      "tags": ["hymn", "french", "grace", "classic"],
+      "region": "France / Francophone Africa",
+      "artist": "John Newton (French)",
+      "releasedYear": 1779,
+      "youtubeSearch": "Grace Incroyable Amazing Grace french worship"
+    },
+    {
+      "slug": "mon-dieu-tu-es-grand",
+      "title": "Mon Dieu, Tu Es Grand",
+      "alternateTitle": "How Great Is Our God French",
+      "language": "french",
+      "languageName": "French",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&q=80",
+      "excerpt": "French worship anthem celebrating the greatness of God.",
+      "tags": ["hymn", "french", "praise", "greatness"],
+      "region": "France / Francophone Africa",
+      "artist": "Chris Tomlin (French)",
+      "youtubeSearch": "Mon Dieu Tu Es Grand french worship"
+    },
+    {
+      "slug": "tu-es-la-reponse",
+      "title": "Tu Es La Réponse",
+      "alternateTitle": "Way Maker French",
+      "language": "french",
+      "languageName": "French",
+      "key": "E",
+      "chords": "E - B - C#m - A",
+      "image": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80",
+      "excerpt": "French rendition of the global worship hit Way Maker.",
+      "tags": ["hymn", "french", "praise", "worship"],
+      "region": "France / Francophone Africa",
+      "artist": "Sinach (French translation)",
+      "youtubeSearch": "Tu Es La Reponse Way Maker french"
+    },
+    // ============================================
+    // PORTUGUESE HYMNS
+    // ============================================
+    {
+      "slug": "deus-e-bom",
+      "title": "Deus É Bom",
+      "alternateTitle": "Good Good Father Portuguese",
+      "language": "portuguese",
+      "languageName": "Portuguese",
+      "key": "A",
+      "chords": "A - E - F#m - D",
+      "image": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=800&q=80",
+      "excerpt": "Portuguese version of Good Good Father — a heartfelt declaration of God's love.",
+      "tags": ["hymn", "portuguese", "father", "love"],
+      "region": "Brazil / Portugal / Mozambique",
+      "artist": "Chris Tomlin (Portuguese)",
+      "youtubeSearch": "Deus e Bom Good Good Father Portuguese"
+    },
+    {
+      "slug": "maravilhoso- Deus",
+      "title": "Maravilhoso Deus",
+      "alternateTitle": "Awesome God Portuguese",
+      "language": "portuguese",
+      "languageName": "Portuguese",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&q=80",
+      "excerpt": "Portuguese worship song declaring God's awesome power.",
+      "tags": ["hymn", "portuguese", "praise", "power"],
+      "region": "Brazil / Portugal",
+      "artist": "Contemporary Brazilian worship",
+      "youtubeSearch": "Maravilhoso Deus Awesome God Portuguese"
+    },
+    {
+      "slug": "tu-e-o-caminho",
+      "title": "Tu És O Caminho",
+      "alternateTitle": "Way Maker Portuguese",
+      "language": "portuguese",
+      "languageName": "Portuguese",
+      "key": "E",
+      "chords": "E - B - C#m - A",
+      "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+      "excerpt": "Portuguese version of Way Maker — miracle worker, promise keeper.",
+      "tags": ["hymn", "portuguese", "praise", "worship"],
+      "region": "Brazil / Angola / Mozambique",
+      "artist": "Sinach (Portuguese)",
+      "youtubeSearch": "Tu es o Caminho Way Maker Portuguese worship"
+    },
+    {
+      "slug": "graça-maravilhosa",
+      "title": "Graça Maravilhosa",
+      "alternateTitle": "Amazing Grace Portuguese",
+      "language": "portuguese",
+      "languageName": "Portuguese",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+      "excerpt": "The timeless hymn Amazing Grace in beautiful Portuguese.",
+      "tags": ["hymn", "portuguese", "grace", "classic"],
+      "region": "Brazil / Portugal",
+      "artist": "John Newton (Portuguese)",
+      "youtubeSearch": "Graca Maravilhosa Amazing Grace Portuguese"
+    },
+    // ============================================
+    // SPANISH HYMNS
+    // ============================================
+    {
+      "slug": "dios-es-bueno",
+      "title": "Dios Es Bueno",
+      "alternateTitle": "Good Good Father Spanish",
+      "language": "spanish",
+      "languageName": "Spanish",
+      "key": "A",
+      "chords": "A - E - F#m - D",
+      "image": "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80",
+      "excerpt": "Spanish worship song about God's perfect love as a father.",
+      "tags": ["hymn", "spanish", "father", "love"],
+      "region": "Latin America / Spain",
+      "artist": "Chris Tomlin (Spanish)",
+      "youtubeSearch": "Dios es Bueno Good Good Father Spanish"
+    },
+    {
+      "slug": "grande-es-tu",
+      "title": "Grande Es Tu",
+      "alternateTitle": "How Great Is Our God Spanish",
+      "language": "spanish",
+      "languageName": "Spanish",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+      "excerpt": "Spanish anthem celebrating the greatness of our God.",
+      "tags": ["hymn", "spanish", "praise", "greatness"],
+      "region": "Latin America / Spain",
+      "artist": "Chris Tomlin (Spanish)",
+      "youtubeSearch": "Grande Es Tu How Great Is Our God Spanish"
+    },
+    {
+      "slug": "eres-el-camino",
+      "title": "Eres El Camino",
+      "alternateTitle": "Way Maker Spanish",
+      "language": "spanish",
+      "languageName": "Spanish",
+      "key": "E",
+      "chords": "E - B - C#m - A",
+      "image": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80",
+      "excerpt": "Spanish rendition of Way Maker — miracle working God.",
+      "tags": ["hymn", "spanish", "praise", "worship"],
+      "region": "Latin America / Spain",
+      "artist": "Sinach (Spanish)",
+      "youtubeSearch": "Eres el Camino Way Maker Spanish worship"
+    },
+    {
+      "slug": "gracia-sublime",
+      "title": "Gracia Sublime",
+      "alternateTitle": "Amazing Grace Spanish",
+      "language": "spanish",
+      "languageName": "Spanish",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=800&q=80",
+      "excerpt": "The beloved hymn Amazing Grace in Spanish.",
+      "tags": ["hymn", "spanish", "grace", "classic"],
+      "region": "Latin America / Spain",
+      "artist": "John Newton (Spanish)",
+      "youtubeSearch": "Gracia Sublime Amazing Grace Spanish worship"
+    },
+    // ============================================
+    // GERMAN HYMNS
+    // ============================================
+    {
+      "slug": "gott-ist-gut",
+      "title": "Gott Ist Gut",
+      "alternateTitle": "Good Good Father German",
+      "language": "german",
+      "languageName": "German",
+      "key": "A",
+      "chords": "A - E - F#m - D",
+      "image": "https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?w=800&q=80",
+      "excerpt": "German worship song declaring God's goodness and love.",
+      "tags": ["hymn", "german", "father", "love"],
+      "region": "Germany / Austria / Switzerland",
+      "artist": "Chris Tomlin (German)",
+      "youtubeSearch": "Gott Ist Gut Good Good Father German"
+    },
+    {
+      "slug": "wie-gross-ist-gott",
+      "title": "Wie Gross Ist Gott",
+      "alternateTitle": "How Great Is Our God German",
+      "language": "german",
+      "languageName": "German",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
+      "excerpt": "German worship anthem celebrating God's greatness.",
+      "tags": ["hymn", "german", "praise", "greatness"],
+      "region": "Germany / Austria / Switzerland",
+      "artist": "Chris Tomlin (German)",
+      "youtubeSearch": "Wie Gross Ist Gott How Great Is Our God German"
+    },
+    // ============================================
+    // CHINESE HYMNS
+    // ============================================
+    {
+      "slug": "zhu-chong-bai",
+      "title": "主崇拜",
+      "alternateTitle": "Worship the Lord Chinese",
+      "language": "chinese",
+      "languageName": "Chinese",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=800&q=80",
+      "excerpt": "Chinese worship song praising God's holy name.",
+      "tags": ["hymn", "chinese", "worship", "praise"],
+      "region": "China / Taiwan / Singapore",
+      "artist": "Contemporary Chinese worship",
+      "youtubeSearch": "主崇拜 Chinese worship hymn"
+    },
+    {
+      "slug": "shi-jian-de-zan-mei",
+      "title": "时间的赞美",
+      "alternateTitle": "10,000 Reasons Chinese",
+      "language": "chinese",
+      "languageName": "Chinese",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&q=80",
+      "excerpt": "Chinese worship song with 10,000 reasons to bless the Lord.",
+      "tags": ["hymn", "chinese", "praise", "worship"],
+      "region": "China / Taiwan",
+      "artist": "Matt Redman (Chinese)",
+      "youtubeSearch": "时间的赞美 10000 reasons Chinese worship"
+    },
+    {
+      "slug": "wan-hua-he-ai",
+      "title": "万华和爱",
+      "alternateTitle": "All Heaven and Love",
+      "language": "chinese",
+      "languageName": "Chinese",
+      "key": "C",
+      "chords": "C - G - Am - F",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+      "excerpt": "Beautiful Chinese worship about heaven's love reaching earth.",
+      "tags": ["hymn", "chinese", "love", "heaven"],
+      "region": "China / Taiwan / Singapore",
+      "artist": "Traditional Chinese hymn",
+      "youtubeSearch": "万华和爱 Chinese worship hymn"
+    },
+    // ============================================
+    // JAPANESE HYMNS
+    // ============================================
+    {
+      "slug": "kami-sama-wa-sugoi",
+      "title": "神様はすごい",
+      "alternateTitle": "How Great Is Our God Japanese",
+      "language": "japanese",
+      "languageName": "Japanese",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1528164344705-47542687000d?w=800&q=80",
+      "excerpt": "Japanese worship song celebrating God's incredible greatness.",
+      "tags": ["hymn", "japanese", "praise", "greatness"],
+      "region": "Japan",
+      "artist": "Chris Tomlin (Japanese)",
+      "youtubeSearch": "神様はすごい Japanese worship hymn"
+    },
+    {
+      "slug": "shiawase-no-tame-no-inori",
+      "title": "幸せのための祈り",
+      "alternateTitle": "Prayer for Happiness",
+      "language": "japanese",
+      "languageName": "Japanese",
+      "key": "C",
+      "chords": "C - G - Am - F",
+      "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80",
+      "excerpt": "Japanese worship song of prayer and gratitude.",
+      "tags": ["hymn", "japanese", "prayer", "gratitude"],
+      "region": "Japan",
+      "artist": "Contemporary Japanese worship",
+      "youtubeSearch": "幸せのための祈り Japanese worship hymn"
+    },
+    // ============================================
+    // VIETNAMESE HYMNS
+    // ============================================
+    {
+      "slug": "ngai-cha-tot-lao",
+      "title": "Ngài Cha Tốt Lành",
+      "alternateTitle": "Good Good Father Vietnamese",
+      "language": "vietnamese",
+      "languageName": "Vietnamese",
+      "key": "A",
+      "chords": "A - E - F#m - D",
+      "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
+      "excerpt": "Vietnamese worship song declaring God as our perfect Father.",
+      "tags": ["hymn", "vietnamese", "father", "love"],
+      "region": "Vietnam",
+      "artist": "Chris Tomlin (Vietnamese)",
+      "youtubeSearch": "Ngai Cha Tot Lành Good Good Father Vietnamese"
+    },
+    {
+      "slug": "thien-chuong-vinh-quang",
+      "title": "Tiếng Chuông Vinh Quang",
+      "alternateTitle": "Glorious Bell",
+      "language": "vietnamese",
+      "languageName": "Vietnamese",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80",
+      "excerpt": "Vietnamese worship song about God's glorious name.",
+      "tags": ["hymn", "vietnamese", "praise", "glory"],
+      "region": "Vietnam",
+      "artist": "Traditional Vietnamese hymn",
+      "youtubeSearch": "Tiếng Chuông Vinh Quang Vietnamese worship"
+    },
+    // ============================================
+    // ARABIC HYMNS
+    // ============================================
+    {
+      "slug": "allah-kabir",
+      "title": "الله كبير",
+      "alternateTitle": "God Is Great Arabic",
+      "language": "arabic",
+      "languageName": "Arabic",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1465795451132-a1f4b20c7af3?w=800&q=80",
+      "excerpt": "Arabic worship song declaring the greatness of God.",
+      "tags": ["hymn", "arabic", "praise", "greatness"],
+      "region": "Middle East / North Africa",
+      "artist": "Contemporary Arabic worship",
+      "youtubeSearch": "الله كبير Arabic worship hymn"
+    },
+    {
+      "slug": "ya-rab-albi",
+      "title": "يا رب قلبي",
+      "alternateTitle": "O Lord My Heart",
+      "language": "arabic",
+      "languageName": "Arabic",
+      "key": "C",
+      "chords": "C - G - Am - F",
+      "image": "https://images.unsplash.com/photo-1489549132488-d00b7eee80f1?w=800&q=80",
+      "excerpt": "Arabic worship song of devotion and heartfelt prayer.",
+      "tags": ["hymn", "arabic", "prayer", "devotion"],
+      "region": "Middle East / North Africa",
+      "artist": "Traditional Arabic hymn",
+      "youtubeSearch": "يا رب قلبي Arabic worship hymn"
+    },
+    // ============================================
+    // HINDI HYMNS
+    // ============================================
+    {
+      "slug": "bhagwan-bada-hai",
+      "title": "भगवान बड़ा है",
+      "alternateTitle": "God Is Great Hindi",
+      "language": "hindi",
+      "languageName": "Hindi",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80",
+      "excerpt": "Hindi worship song celebrating God's greatness.",
+      "tags": ["hymn", "hindi", "praise", "greatness"],
+      "region": "India",
+      "artist": "Contemporary Indian worship",
+      "youtubeSearch": "भगवान बड़ा है Hindi worship hymn"
+    },
+    {
+      "slug": "prabhu-tum-bada",
+      "title": "प्रभु तुम बड़ा",
+      "alternateTitle": "Lord You Are Great",
+      "language": "hindi",
+      "languageName": "Hindi",
+      "key": "A",
+      "chords": "A - E - F#m - D",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+      "excerpt": "Hindi worship song of praise and adoration.",
+      "tags": ["hymn", "hindi", "praise", "adoration"],
+      "region": "India",
+      "artist": "Indian Christian worship",
+      "youtubeSearch": "प्रभु तुम बड़ा Hindi worship"
+    },
+    // ============================================
+    // INDONESIAN HYMNS
+    // ============================================
+    {
+      "slug": "tuhan-baik",
+      "title": "Tuhan Baik",
+      "alternateTitle": "Good Good Father Indonesian",
+      "language": "indonesian",
+      "languageName": "Indonesian",
+      "key": "A",
+      "chords": "A - E - F#m - D",
+      "image": "https://images.unsplash.com/photo-1502786129293-79981df4e689?w=800&q=80",
+      "excerpt": "Indonesian worship song about God's perfect goodness.",
+      "tags": ["hymn", "indonesian", "father", "love"],
+      "region": "Indonesia",
+      "artist": "Chris Tomlin (Indonesian)",
+      "youtubeSearch": "Tuhan Baik Good Good Father Indonesian"
+    },
+    {
+      "slug": "besar-tuhan",
+      "title": "Besar Tuhan",
+      "alternateTitle": "How Great Is Our God Indonesian",
+      "language": "indonesian",
+      "languageName": "Indonesian",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=800&q=80",
+      "excerpt": "Indonesian worship anthem celebrating God's majesty.",
+      "tags": ["hymn", "indonesian", "praise", "majesty"],
+      "region": "Indonesia",
+      "artist": "Chris Tomlin (Indonesian)",
+      "youtubeSearch": "Besar Tuhan How Great Is Our God Indonesian"
+    },
+    // ============================================
+    // FILIPINO/TAGALOG HYMNS
+    // ============================================
+    {
+      "slug": "diyos-maayo-kanato",
+      "title": "Diyos Maayo Kanato",
+      "alternateTitle": "Good Good Father Filipino",
+      "language": "tagalog",
+      "languageName": "Filipino",
+      "key": "A",
+      "chords": "A - E - F#m - D",
+      "image": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=800&q=80",
+      "excerpt": "Filipino worship song declaring God's goodness and love.",
+      "tags": ["hymn", "filipino", "father", "love"],
+      "region": "Philippines",
+      "artist": "Chris Tomlin (Filipino)",
+      "youtubeSearch": "Diyos Maayo Kanato Good Good Father Filipino"
+    },
+    {
+      "slug": "dakilang-diyos",
+      "title": "Dakilang Diyos",
+      "alternateTitle": "Great God Filipino",
+      "language": "tagalog",
+      "languageName": "Filipino",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "excerpt": "Filipino worship song praising God's greatness.",
+      "tags": ["hymn", "filipino", "praise", "greatness"],
+      "region": "Philippines",
+      "artist": "Contemporary Filipino worship",
+      "youtubeSearch": "Dakilang Diyos Great God Filipino worship"
+    },
+    // ============================================
+    // TAMIL HYMNS
+    // ============================================
+    {
+      "slug": "naan-yesu",
+      "title": "நான் ஏசு",
+      "alternateTitle": "I Am Jesus Tamil",
+      "language": "tamil",
+      "languageName": "Tamil",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80",
+      "excerpt": "Tamil worship song declaring faith in Jesus.",
+      "tags": ["hymn", "tamil", "jesus", "faith"],
+      "region": "Sri Lanka / Tamil Nadu",
+      "artist": "Contemporary Tamil worship",
+      "youtubeSearch": "நான் ஏசு Tamil worship hymn"
+    },
+    {
+      "slug": "naan-thunai",
+      "title": "நான் துணை",
+      "alternateTitle": "I Am Your Help Tamil",
+      "language": "tamil",
+      "languageName": "Tamil",
+      "key": "C",
+      "chords": "C - G - Am - F",
+      "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
+      "excerpt": "Tamil worship song about God's sustaining presence.",
+      "tags": ["hymn", "tamil", "help", "presence"],
+      "region": "Sri Lanka / Tamil Nadu",
+      "artist": "Traditional Tamil hymn",
+      "youtubeSearch": "நான் துணை Tamil worship hymn"
+    },
+    // ============================================
+    // PERSIAN HYMNS
+    // ============================================
+    {
+      "slug": "khoda-bozorg-ast",
+      "title": "خدابزرگ است",
+      "alternateTitle": "God Is Great Persian",
+      "language": "persian",
+      "languageName": "Persian",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1483046196206-2ac1d868挤e7f?w=800&q=80",
+      "excerpt": "Persian worship song celebrating God's greatness.",
+      "tags": ["hymn", "persian", "praise", "greatness"],
+      "region": "Iran / Afghanistan",
+      "artist": "Persian Christian worship",
+      "youtubeSearch": "خدابزرگ است Persian worship hymn"
+    },
+    // ============================================
+    // RUSSIAN HYMNS
+    // ============================================
+    {
+      "slug": "bog-slavnyy",
+      "title": "Бог славный",
+      "alternateTitle": "Glorious God Russian",
+      "language": "russian",
+      "languageName": "Russian",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1494500764479-0c8f2919a3d?w=800&q=80",
+      "excerpt": "Russian worship song praising God's glorious name.",
+      "tags": ["hymn", "russian", "praise", "glory"],
+      "region": "Russia / Ukraine / Belarus",
+      "artist": "Russian Orthodox tradition",
+      "youtubeSearch": "Бог славный Russian worship hymn"
+    },
+    {
+      "slug": "gospodi-miloserdnyy",
+      "title": "Господи милосердный",
+      "alternateTitle": "Lord Have Mercy Russian",
+      "language": "russian",
+      "languageName": "Russian",
+      "key": "C",
+      "chords": "C - G - Am - F",
+      "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+      "excerpt": "Russian prayer hymn asking for God's mercy.",
+      "tags": ["hymn", "russian", "prayer", "mercy"],
+      "region": "Russia / Ukraine",
+      "artist": "Traditional Russian hymn",
+      "youtubeSearch": "Господи милосердный Russian worship hymn"
     }
 ];
 
