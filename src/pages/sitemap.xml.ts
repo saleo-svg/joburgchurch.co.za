@@ -19,16 +19,17 @@ export const GET: APIRoute = () => {
     { url: '/blog/', priority: '0.9', changefreq: 'weekly' },
     { url: '/faq/', priority: '0.8', changefreq: 'monthly' },
     { url: '/contact/', priority: '0.8', changefreq: 'monthly' },
-  { url: '/privacy/', priority: '0.3', changefreq: 'yearly' },
-  { url: '/locations/', priority: '0.8', changefreq: 'weekly' },
-  { url: '/locations/sandton/', priority: '0.9', changefreq: 'weekly' },
-  { url: '/locations/randburg/', priority: '0.7', changefreq: 'monthly' },
-  { url: '/locations/fourways/', priority: '0.7', changefreq: 'monthly' },
-  { url: '/locations/midrand/', priority: '0.7', changefreq: 'monthly' },
-  { url: '/locations/alberton/', priority: '0.7', changefreq: 'monthly' },
-  { url: '/locations/roodepoort/', priority: '0.7', changefreq: 'monthly' },
-  { url: '/locations/soweto/', priority: '0.7', changefreq: 'monthly' },
-];
+    { url: '/privacy/', priority: '0.3', changefreq: 'yearly' },
+    { url: '/locations/', priority: '0.8', changefreq: 'weekly' },
+    { url: '/locations/sandton/', priority: '0.9', changefreq: 'weekly' },
+    { url: '/locations/randburg/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/locations/fourways/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/locations/midrand/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/locations/alberton/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/locations/roodepoort/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/locations/soweto/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/churches-in-johannesburg/', priority: '0.8', changefreq: 'monthly' },
+  ];
 
   // Phase 10 SEO landing pages — added 2026-07-03
   const seoLandingPages = [
@@ -66,6 +67,19 @@ export const GET: APIRoute = () => {
     { url: '/blog/when-the-bible-feels-irrelevant/', lastmod: '2026-07-05' },
     { url: '/blog/what-sandton-gets-wrong-about-christianity/', lastmod: '2026-07-08' },
     { url: '/blog/the-gospel-according-to-load-shedding/', lastmod: '2026-07-10' },
+    { url: '/blog/why-online-bible-study-johannesburg/', lastmod: '2026-07-18' },
+    { url: '/blog/free-korean-class-sandton-johannesburg/', lastmod: '2026-07-18' },
+    { url: '/blog/first-time-bible-study-what-to-expect/', lastmod: '2026-07-18' },
+    { url: '/blog/find-right-church-johannesburg/', lastmod: '2026-07-18' },
+    { url: '/blog/church-near-me-sandton/', lastmod: '2026-07-18' },
+    { url: '/blog/online-church-johannesburg/', lastmod: '2026-07-18' },
+    { url: '/blog/christian-community-johannesburg/', lastmod: '2026-07-18' },
+    { url: '/blog/ubuntu-and-christianity-south-africa/', lastmod: '2026-07-21' },
+    { url: '/blog/load-shedding-bible-study-guide-south-africa/', lastmod: '2026-07-21' },
+    { url: '/blog/township-bible-study-soweto-alexandra/', lastmod: '2026-07-21' },
+    { url: '/blog/heritage-day-christian-reflection/', lastmod: '2026-07-21' },
+    { url: '/blog/multilingual-worship-johannesburg/', lastmod: '2026-07-21' },
+    { url: '/blog/jozi-young-professionals-bible-study/', lastmod: '2026-07-21' },
   ];
 
   const allPages = [
