@@ -2,11 +2,17 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Comments from '@/components/Comments.astro';
 import Share from '@/components/Share.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Spiritual Education', url: '/spiritual-education/' },
+];
 ---
 
 <BaseLayout
-  title="Bible Study in Sandton Johannesburg | Wednesday Online Bible Study"
-  description="Join our Wednesday online Bible study in Sandton, Johannesburg. Wednesday 7:30pm via Google Meet. A welcoming Bible study community in the heart of Johannesburg."
+  title="Online Bible Study Johannesburg & Sandton | Wednesday 7:30pm"
+  description="Join our online Bible study in Johannesburg and Sandton. Every Wednesday at 7:30pm via Google Meet. A welcoming Christian community open to beginners, seekers, and long-time readers. Free, no commitment required."
+  breadcrumbs={breadcrumbs}
 >
   <section class="section-padding">
     <div class="container-max">

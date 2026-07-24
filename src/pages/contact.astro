@@ -1,10 +1,16 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Contact', url: '/contact/' },
+];
 ---
 
 <BaseLayout
-  title="Contact Us | Sandton Bible Study Church, Johannesburg"
-  description="Contact Johannesburg Bible Study Church in Sandton, Johannesburg. Call our hotline to join Bible study, register for Korean class, or make enquiries."
+  title="Contact Johannesburg Bible Study Church | Phone & WhatsApp"
+  description="Contact Johannesburg Bible Study Church in Sandton, Johannesburg. Call +27 77 487 1295 (Mr. Sim) or WhatsApp +27 67 442 4461 (Ms. Dora) to join Bible study, register for Korean class, or make enquiries."
+  breadcrumbs={breadcrumbs}
 >
   <section class="section-padding">
     <div class="container-max">

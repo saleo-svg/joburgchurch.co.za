@@ -7,11 +7,18 @@ const schema = getCourseSchema(
   'Learn Korean language and culture for free at Johannesburg Bible Study Church in Sandton, Johannesburg. Sunday 2:00pm offline class. Open to all community members. Appointment required.',
   'Johannesburg Bible Study Church'
 );
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Community Classes', url: '/community-classes/' },
+  { name: 'Korean Class', url: '/community-classes/korean/' },
+];
 ---
 
 <BaseLayout
-  title="Free Korean Class in Sandton Johannesburg"
-  description="Join a free Korean class in Sandton, Johannesburg. Sunday 2:00pm offline class. Appointment required for registration and attendance. Open to all community members."
+  title="Free Korean Class in Sandton Johannesburg | Sunday 2:00pm"
+  description="Learn Korean for free in Sandton, Johannesburg. Every Sunday 2:00pm in Parkmore. Native speaker teacher, beginner-friendly, open to all. No church membership required. Register by phone or WhatsApp."
+  breadcrumbs={breadcrumbs}
   schema={schema}
 >
   <section class="section-padding">

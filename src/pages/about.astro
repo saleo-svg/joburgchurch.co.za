@@ -1,10 +1,16 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'About', url: '/about/' },
+];
 ---
 
 <BaseLayout
-  title="About Johannesburg Bible Study Church | Sandton Christian Community"
-  description="Learn about Johannesburg Bible Study Church — a Bible study and welcoming Christian community in Sandton, Johannesburg. Our beliefs, mission, and heart for the community."
+  title="About Johannesburg Bible Study Church | Our Story, Beliefs & Community"
+  description="Learn about Johannesburg Bible Study Church — a welcoming Bible study and Christian community in Sandton, Johannesburg since 2014. Our beliefs, mission, team, and the story of how this community began."
+  breadcrumbs={breadcrumbs}
 >
   <!-- About hero -->
   <section class="relative overflow-hidden text-white py-20" style="background: linear-gradient(135deg, #1e3a5f 0%, #4f46e5 100%);">

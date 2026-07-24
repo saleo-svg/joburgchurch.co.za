@@ -1,203 +1,295 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getFaqSchema } from '@/components/Schema';
 
-type FaqItem = { q: string; a: string };
+const faqSchema = getFaqSchema([
+  {
+    question: "What is the Wednesday Bible study schedule?",
+    answer: "Our Wednesday Bible study runs from 7:30pm to 9:00pm online via Google Meet. It is open to everyone in the Johannesburg and Sandton area. No commitment required to attend."
+  },
+  {
+    question: "Is the Wednesday Bible study online or in person?",
+    answer: "The Wednesday Bible study is online via Google Meet. You can join from anywhere in Johannesburg or beyond. We also hold an in-person Bible study on the first Saturday of each month at 4:00pm in Parkmore, Sandton."
+  },
+  {
+    question: "Do I need to be a Christian to join the Bible study?",
+    answer: "No. Our Bible study is open to everyone — Christians, seekers, doubters, and people just curious about the Bible. You do not need to believe anything specific to join."
+  },
+  {
+    question: "What happens at the Wednesday Bible study?",
+    answer: "We read a passage of the Bible together, then discuss it as a group. Questions are welcome. Mr. Sim or a volunteer leads the discussion. You can keep your camera on or off, speak or listen — whatever feels comfortable."
+  },
+  {
+    question: "What is the free Korean class about?",
+    answer: "Ms. Dora teaches Korean language and culture every Sunday at 2:00pm in Parkmore, Sandton. The class covers Hangul (Korean alphabet), basic conversation, and Korean culture. Beginners are welcome. No materials needed — we provide everything."
+  },
+  {
+    question: "Do I need to register for the Korean class?",
+    answer: "Yes, appointments are required. Please call Mr. Sim (+27 77 487 1295) or Ms. Dora (+27 67 442 4461) to register before attending. This helps us confirm space and prepare materials."
+  },
+  {
+    question: "Is the Korean class free?",
+    answer: "Yes, the Korean class is completely free. It is a community service offered by Johannesburg Bible Study Church. No church membership is required."
+  },
+  {
+    question: "What should I wear to church or Bible study?",
+    answer: "There is no dress code. Most people wear casual or smart casual clothing. Come as you are."
+  },
+  {
+    question: "Can I bring my children to the Bible study or Korean class?",
+    answer: "For the Wednesday online Bible study, children are welcome to join if parents think it is appropriate. For the Sunday Korean class, please call ahead to discuss — we may be able to arrange childcare depending on the class size."
+  },
+  {
+    question: "How do I join the WhatsApp group?",
+    answer: "Contact Mr. Sim or Ms. Dora by phone or WhatsApp. They will add you to the group and send the Google Meet link before Wednesday sessions."
+  },
+  {
+    question: "Is there a cost to attend any of your programs?",
+    answer: "No. All our programs — Wednesday Bible study, Sunday Korean class, and the first Saturday in-person study — are completely free. No donations or offerings are expected from visitors."
+  },
+  {
+    question: "Do I need church membership to attend?",
+    answer: "No. All our programs are open to the entire Johannesburg and Sandton community. No membership is required for anything we offer."
+  },
+  {
+    question: "What if I cannot attend every week?",
+    answer: "There is no commitment to attend every week. Come when you can. We do not track attendance or expect regular participation. You are welcome to attend occasionally or regularly, whichever suits your life."
+  },
+  {
+    question: "How is the Bible study different from a Sunday church service?",
+    answer: "We do not run a traditional Sunday service with worship music and a sermon. Our focus is on Bible study and discussion. If you are looking for a traditional church service, we can recommend other churches in the Sandton area."
+  },
+  {
+    question: "Can non-Christians attend?",
+    answer: "Absolutely. Many people in our community are exploring faith, have questions about Christianity, or are simply curious. You do not need to be a Christian or believe anything specific to join us."
+  }
+]);
 
-const general: FaqItem[] = [
-  {
-    q: 'Where is the Bible study held in Johannesburg?',
-    a: 'Our main Bible study runs every Wednesday at 7:30pm online via Google Meet, so most people join from home anywhere in Johannesburg, Sandton, Randburg, Midrand, Fourways, or further afield. We also meet in person in Parkmore, Sandton, on the first Saturday of every month at 4:00pm.',
-  },
-  {
-    q: 'Do I need to be a Christian to come to the Bible study?',
-    a: 'No. The Wednesday Bible study is open to anyone curious about the Bible — whether you have been a Christian for years, you are exploring faith for the first time, or you are just here because a friend asked you to come. We have had first-timers sit quietly for the first twenty minutes and then stay for two years.',
-  },
-  {
-    q: 'Is the Bible study really free?',
-    a: 'Yes. The Wednesday Bible study, the Sunday Korean class, and the youth programmes are all free. There is no membership fee, no registration fee, and no collection plate on the way in.',
-  },
-  {
-    q: 'How do I join the Wednesday Bible study?',
-    a: 'Call or WhatsApp Mr. Sim on +27 77 487 1295 or Ms. Dora on +27 67 442 4461, any weekday. We will send you the Google Meet link the morning of the next Wednesday.',
-  },
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'FAQ', url: '/faq/' },
 ];
-
-const korean: FaqItem[] = [
-  {
-    q: 'Is the Korean class really free?',
-    a: 'Yes. The class has been free since it started in 2019. The only thing we ask is that you book in advance, so we know how many seats to set up and we have materials ready for you on the day.',
-  },
-  {
-    q: 'I have never studied Korean before. Can I still come?',
-    a: 'Absolutely. Most of the people in the Sunday class are complete beginners. We start with Hangul (the Korean alphabet) on day one, and most students can read simple words on a Korean menu by the end of the first session.',
-  },
-  {
-    q: 'Do I need to bring a textbook or laptop?',
-    a: 'No textbook to buy and no laptop required. We provide all the materials. Bring a pen if you want to take notes — that is the only thing we ask.',
-  },
-  {
-    q: 'When and where is the Korean class?',
-    a: 'Every Sunday at 2:00pm in Parkmore, Sandton, Johannesburg. The full address is sent when you book. There is parking on site.',
-  },
-  {
-    q: 'Do I need to be a member of the church to come to the Korean class?',
-    a: 'No. The class is a community service open to anyone in Johannesburg. Most people who come are not members of the church, and many are not Christian. The class is a space for language and culture, full stop.',
-  },
-];
-
-const youth: FaqItem[] = [
-  {
-    q: 'What age range is UseCan for?',
-    a: 'UseCan is our youth programme for anyone roughly between 18 and 35. The room tends to include university students, young professionals, and people who are new to Johannesburg and looking for a soft place to land.',
-  },
-  {
-    q: 'When does the UseCan programme run?',
-    a: 'UseCan activities follow a summer and winter schedule. The Wednesday evening Bible study runs all year. The bigger in-person events — the camp, the open days, the community projects — happen in summer and winter blocks.',
-  },
-  {
-    q: 'My teenager is between 13 and 17. Is there something for them?',
-    a: 'Yes. We run a parallel youth track for teenagers, also through UseCan, with its own schedule. Call us and we will send you the upcoming dates.',
-  },
-];
-
-const practical: FaqItem[] = [
-  {
-    q: 'What language is the Bible study in?',
-    a: 'English. Mr. Sim and Ms. Dora are both comfortable slowing down for second-language speakers, and we have had regulars join whose first language is Zulu, Afrikaans, Sotho, French, Korean, Mandarin, and Portuguese.',
-  },
-  {
-    q: 'Is the Bible study open to people who do not live in Sandton?',
-    a: 'Yes. Because it is online, we have regulars from all over Johannesburg (Sandton, Randburg, Roodepoort, Midrand, Soweto, Fourways, Alberton) and from other cities entirely. Several people who moved away still join on a Wednesday night.',
-  },
-  {
-    q: 'Can my friend and I come together?',
-    a: 'Please do. Coming with a friend is the easiest way to start, and most of the people in the room first heard about the Bible study from someone they already knew.',
-  },
-  {
-    q: 'I have a question I do not want to ask in the group. What do I do?',
-    a: 'Call or message Mr. Sim on +27 77 487 1295 any weekday. Most "embarrassing" questions have been asked before, and they are usually the ones that start the best conversation the following week.',
-  },
-];
-
-const allFaqs = [...general, ...korean, ...youth, ...practical];
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: allFaqs.map((f) => ({
-    '@type': 'Question',
-    name: f.q,
-    acceptedAnswer: { '@type': 'Answer', text: f.a },
-  })),
-};
 ---
+
 <BaseLayout
-  title="FAQ | Bible Study & Korean Class in Sandton, Johannesburg"
-  description="Frequently asked questions about our Bible study, free Korean class, and youth programmes in Sandton, Johannesburg. Times, costs, language, who can come."
+  title="Bible Study & Church FAQ | Johannesburg Bible Study Church"
+  description="Frequently asked questions about Johannesburg Bible Study Church — Wednesday online Bible study, free Korean class in Sandton, membership, costs, and what to expect. All welcome."
+  breadcrumbs={breadcrumbs}
   schema={faqSchema}
 >
   <section class="section-padding">
     <div class="container-max">
-      <p class="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-2">
-        Frequently Asked Questions
-      </p>
-      <h1 class="heading-1 mb-6">Honest Answers, Before You Come</h1>
+      <p class="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-3">Questions & Answers</p>
+      <h1 class="heading-1 mb-6">Frequently Asked Questions</h1>
       <p class="text-body max-w-2xl mb-8">
-        The questions people ask before their first Bible study, first Korean class, or first youth event. If yours is not here, call us — Mr. Sim on +27 77 487 1295 or Ms. Dora on +27 67 442 4461.
+        Common questions about our Wednesday Bible study, free Korean class, church community, and what to expect when you visit or join us online.
       </p>
     </div>
   </section>
 
   <section class="section-padding bg-gray-50">
-    <div class="container-max max-w-4xl space-y-12">
-      <div>
-        <h2 class="heading-2 mb-6">About the Bible Study</h2>
-        <div class="space-y-4">
-          {general.map((f) => (
-            <details class="card group">
-              <summary class="flex items-center justify-between cursor-pointer list-none">
-                <h3 class="font-semibold text-gray-900 pr-4">{f.q}</h3>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-              </summary>
-              <p class="text-sm text-gray-600 leading-relaxed mt-4">{f.a}</p>
-            </details>
-          ))}
-        </div>
-      </div>
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="heading-2 mb-8">About Our Bible Study</h2>
+        
+        <details class="card mb-4 group" open>
+          <summary class="font-semibold text-gray-900 cursor-pointer flex items-center justify-between">
+            What is the Wednesday Bible study schedule?
+            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            Our Wednesday Bible study runs from <strong>7:30pm to 9:00pm</strong> online via Google Meet. It is open to everyone in the Johannesburg and Sandton area. No commitment required to attend.
+          </p>
+        </details>
 
-      <div>
-        <h2 class="heading-2 mb-6">About the Free Korean Class</h2>
-        <div class="space-y-4">
-          {korean.map((f) => (
-            <details class="card group">
-              <summary class="flex items-center justify-between cursor-pointer list-none">
-                <h3 class="font-semibold text-gray-900 pr-4">{f.q}</h3>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-              </summary>
-              <p class="text-sm text-gray-600 leading-relaxed mt-4">{f.a}</p>
-            </details>
-          ))}
-        </div>
-      </div>
+        <details class="card mb-4 group">
+          <summary class="font-semibold text-gray-900 cursor-pointer flex items-center justify-between">
+            Is the Wednesday Bible study online or in person?
+            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            The Wednesday Bible study is <strong>online via Google Meet</strong>. You can join from anywhere in Johannesburg or beyond. We also hold an in-person Bible study on the <strong>first Saturday of each month at 4:00pm</strong> in Parkmore, Sandton.
+          </p>
+        </details>
 
-      <div>
-        <h2 class="heading-2 mb-6">About UseCan Youth</h2>
-        <div class="space-y-4">
-          {youth.map((f) => (
-            <details class="card group">
-              <summary class="flex items-center justify-between cursor-pointer list-none">
-                <h3 class="font-semibold text-gray-900 pr-4">{f.q}</h3>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-              </summary>
-              <p class="text-sm text-gray-600 leading-relaxed mt-4">{f.a}</p>
-            </details>
-          ))}
-        </div>
-      </div>
+        <details class="card mb-4 group">
+          <summary class="font-semibold text-gray-900 cursor-pointer flex items-center justify-between">
+            Do I need to be a Christian to join?
+            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            No. Our Bible study is open to <strong>everyone</strong> — Christians, seekers, doubters, and people just curious about the Bible. You do not need to believe anything specific to join.
+          </p>
+        </details>
 
-      <div>
-        <h2 class="heading-2 mb-6">Practical Questions</h2>
-        <div class="space-y-4">
-          {practical.map((f) => (
-            <details class="card group">
-              <summary class="flex items-center justify-between cursor-pointer list-none">
-                <h3 class="font-semibold text-gray-900 pr-4">{f.q}</h3>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-              </summary>
-              <p class="text-sm text-gray-600 leading-relaxed mt-4">{f.a}</p>
-            </details>
-          ))}
-        </div>
+        <details class="card mb-4 group">
+          <summary class="font-semibold text-gray-900 cursor-pointer flex items-center justify-between">
+            What happens at the Wednesday Bible study?
+            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            We read a passage of the Bible together, then discuss it as a group. Questions are welcome. Mr. Sim or a volunteer leads the discussion. You can keep your camera on or off, speak or listen — whatever feels comfortable.
+          </p>
+        </details>
+
+        <details class="card mb-4 group">
+          <summary class="font-semibold text-gray-900 cursor-pointer flex items-center justify-between">
+            What is the free Korean class about?
+            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            Ms. Dora teaches Korean language and culture every <strong>Sunday at 2:00pm</strong> in Parkmore, Sandton. The class covers Hangul (Korean alphabet), basic conversation, and Korean culture. Beginners are welcome. No materials needed — we provide everything.
+          </p>
+        </details>
+
+        <details class="card mb-4 group">
+          <summary class="font-semibold text-gray-900 cursor-pointer flex items-center justify-between">
+            Do I need to register for the Korean class?
+            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            Yes, <strong>appointments are required</strong>. Please call Mr. Sim (+27 77 487 1295) or Ms. Dora (+27 67 442 4461) to register before attending. This helps us confirm space and prepare materials.
+          </p>
+        </details>
       </div>
     </div>
   </section>
 
-  <section class="section-padding text-center">
+  <section class="section-padding">
     <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="heading-2 mb-8">Practical Questions</h2>
+
+        <details class="card mb-4 group">
+          <summary class="font-semibold text-gray-900 cursor-pointer flex items-center justify-between">
+            Is the Korean class free?
+            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            Yes, the Korean class is <strong>completely free</strong>. It is a community service offered by Johannesburg Bible Study Church. No church membership is required.
+          </p>
+        </details>
+
+        <details class="card mb-4 group">
+          <summary class="font-semibold text-gray-900 cursor-pointer flex items-center justify-between">
+            What should I wear to church or Bible study?
+            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            There is <strong>no dress code</strong>. Most people wear casual or smart casual clothing. Come as you are.
+          </p>
+        </details>
+
+        <details class="card mb-4 group">
+          <summary class="font-semibold text-gray-900 cursor-pointer flex items-center justify-between">
+            Can I bring my children?
+            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            For the Wednesday online Bible study, children are welcome to join if parents think it is appropriate. For the Sunday Korean class, please call ahead to discuss — we may be able to arrange childcare depending on the class size.
+          </p>
+        </details>
+
+        <details class="card mb-4 group">
+          <summary class="font-semibold text-gray-900 cursor-pointer flex items-center justify-between">
+            Is there a cost to attend?
+            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            <strong>No.</strong> All our programs — Wednesday Bible study, Sunday Korean class, and the first Saturday in-person study — are completely free. No donations or offerings are expected from visitors.
+          </p>
+        </details>
+
+        <details class="card mb-4 group">
+          <summary class="font-semibold text-gray-900 cursor-pointer flex items-center justify-between">
+            Do I need church membership?
+            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            No. All our programs are open to the <strong>entire Johannesburg and Sandton community</strong>. No membership is required for anything we offer.
+          </p>
+        </details>
+
+        <details class="card mb-4 group">
+          <summary class="font-semibold text-gray-900 cursor-pointer flex items-center justify-between">
+            What if I cannot attend every week?
+            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            There is <strong>no commitment</strong> to attend every week. Come when you can. We do not track attendance or expect regular participation. You are welcome to attend occasionally or regularly, whichever suits your life.
+          </p>
+        </details>
+
+        <details class="card mb-4 group">
+          <summary class="font-semibold text-gray-900 cursor-pointer flex items-center justify-between">
+            How is the Bible study different from a Sunday church service?
+            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            We do <strong>not run a traditional Sunday service</strong> with worship music and a sermon. Our focus is on Bible study and discussion. If you are looking for a traditional church service, we can recommend other churches in the Sandton area.
+          </p>
+        </details>
+
+        <details class="card mb-4 group">
+          <summary class="font-semibold text-gray-900 cursor-pointer flex items-center justify-between">
+            Can non-Christians attend?
+            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            <strong>Absolutely.</strong> Many people in our community are exploring faith, have questions about Christianity, or are simply curious. You do not need to be a Christian or believe anything specific to join us.
+          </p>
+        </details>
+
+        <details class="card mb-4 group">
+          <summary class="font-semibold text-gray-900 cursor-pointer flex items-center justify-between">
+            How do I join the WhatsApp group?
+            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            Contact Mr. Sim or Ms. Dora by phone or WhatsApp. They will add you to the group and send the Google Meet link before Wednesday sessions.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-blue-50">
+    <div class="container-max text-center">
       <h2 class="heading-2 mb-4">Still Have Questions?</h2>
       <p class="text-body max-w-xl mx-auto mb-6">
-        Call us on a weekday. We would rather you ask the awkward question now than turn up to a Wednesday evening worrying about it.
+        If your question is not answered here, please contact us. We are happy to help.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <div class="flex flex-col sm:flex-row gap-3">
-          <a href="tel:+27774871295" class="btn-primary">Call Mr. Sim</a>
-          <a href="https://wa.me/27774871295" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            WhatsApp
-          </a>
-        </div>
-        <div class="flex flex-col sm:flex-row gap-3">
-          <a href="tel:+27674424461" class="btn-secondary">Call Ms. Dora</a>
-          <a href="https://wa.me/27674424461" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            WhatsApp
-          </a>
-        </div>
-      </div>
+      <a href="/contact" class="btn-primary">Contact Us</a>
     </div>
   </section>
 </BaseLayout>

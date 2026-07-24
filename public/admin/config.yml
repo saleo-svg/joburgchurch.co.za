@@ -14,6 +14,9 @@
 #     GITHUB_CLIENT_SECRET = <from step 1>
 #
 # STEP 3: Replace YOUR_WORKER_URL below with your deployed worker URL
+#
+# The collections defined here MUST match src/content/config.ts.
+# If you add a new collection, update both files in the same PR.
 
 backend:
   name: github
@@ -47,10 +50,11 @@ logo_url: https://joburgchurch.co.za/images/og-default.svg
 locale: en
 
 # Collections
+# Each collection is mirrored in src/content/config.ts.
 collections:
 
   # ============================================
-  # Blog Posts
+  # Blog Posts (folder: src/content/posts)
   # ============================================
   - name: blog
     label: 'Blog Posts'
@@ -69,18 +73,21 @@ collections:
       - {label: 'Author', name: 'author', widget: 'string', default: 'Mr. Sim'}
       - {label: 'Tags', name: 'tags', widget: 'list', required: false}
       - {label: 'Image', name: 'image', widget: 'image', required: false, allow_multiple: false}
+      - {label: 'Hero Image', name: 'heroImage', widget: 'image', required: false, allow_multiple: false, hint: 'Optional larger image for the post header'}
+      - {label: 'Excerpt', name: 'excerpt', widget: 'text', required: false}
+      - {label: 'Is Hymn?', name: 'isHymn', widget: 'boolean', required: false, default: false, hint: 'Mark true to also appear on /hymns/'}
       - {label: 'Language', name: 'language', widget: 'select', options: ['English', 'Zulu', 'Xhosa', 'Sotho', 'Tswana', 'Swahili', 'Dinka', 'Nuer', 'Shona', 'Korean', 'Lingala', 'French', 'Portuguese', 'Other'], required: false, hint: 'For hymns only'}
       - {label: 'Key (Chord Key)', name: 'key', widget: 'string', required: false, hint: 'e.g. G, C, Dm — for hymns only'}
       - {label: 'Chords', name: 'chords', widget: 'string', required: false, hint: 'e.g. G - D - Em - C — for hymns only'}
       - {label: 'Download (.docx)', name: 'download', widget: 'file', required: false, hint: 'Upload .docx with chords/notation for hymns'}
       - {label: 'Body', name: 'body', widget: 'markdown'}
     view_filters:
-      - {label: 'Drafts', field: 'draft'}
+      - {label: 'Hymns only', field: 'isHymn'}
     view_groups:
       - {label: 'Year', field: 'date'}
 
   # ============================================
-  # Sermon Series
+  # Sermon Series (folder: src/content/sermons)
   # ============================================
   - name: sermons
     label: 'Sermons & Bible Studies'
@@ -102,9 +109,12 @@ collections:
       - {label: 'Duration', name: 'duration', widget: 'string', required: false, hint: 'e.g. 24:18'}
       - {label: 'Description', name: 'description', widget: 'text'}
       - {label: 'Body / Notes', name: 'body', widget: 'markdown', required: false}
+    view_groups:
+      - {label: 'Series', field: 'series'}
+      - {label: 'Year', field: 'date'}
 
   # ============================================
-  # Events
+  # Events (folder: src/content/events)
   # ============================================
   - name: events
     label: 'Events'
@@ -128,9 +138,11 @@ collections:
       - {label: 'Registration Required', name: 'registration_required', widget: 'boolean', default: false}
       - {label: 'Image', name: 'image', widget: 'image', required: false}
       - {label: 'Body', name: 'body', widget: 'markdown', required: false}
+    view_groups:
+      - {label: 'Year', field: 'date'}
 
   # ============================================
-  # Gallery (Photos)
+  # Gallery (folder: src/content/gallery)
   # ============================================
   - name: gallery
     label: 'Photo Gallery'
@@ -145,14 +157,16 @@ collections:
     fields:
       - {label: 'Title', name: 'title', widget: 'string'}
       - {label: 'Date', name: 'date', widget: 'datetime', format: 'YYYY-MM-DD'}
-      - {label: 'Photo', name: 'photo', widget: 'image', allow_multiple: false}
+      - {label: 'Photo', name: 'photo', widget: 'image', allow_multiple: false, hint: 'Upload to public/images/uploads/'}
       - {label: 'Category', name: 'category', widget: 'select', options: ['Bible Study', 'Korean Class', 'Youth (UseCan)', 'Community', 'Worship', 'Other']}
       - {label: 'Caption', name: 'caption', widget: 'text', required: false}
       - {label: 'Alt Text', name: 'alt', widget: 'string', hint: 'For screen readers and SEO. Describe the photo briefly.'}
       - {label: 'Photographer', name: 'photographer', widget: 'string', required: false}
+    view_groups:
+      - {label: 'Category', field: 'category'}
 
   # ============================================
-  # Videos
+  # Videos (folder: src/content/videos)
   # ============================================
   - name: videos
     label: 'Videos'
@@ -174,6 +188,8 @@ collections:
       - {label: 'Duration', name: 'duration', widget: 'string', required: false}
       - {label: 'Description', name: 'description', widget: 'text'}
       - {label: 'Featured', name: 'featured', widget: 'boolean', default: false, hint: 'Show on homepage hero?'}
+    view_groups:
+      - {label: 'Category', field: 'category'}
 
   # ============================================
   # Site Settings (single file)
@@ -197,9 +213,10 @@ collections:
           - {label: 'Welcome Message', name: 'welcome_message', widget: 'text'}
 
   # ============================================
-  # Hymns / Songs Suggestions
+  # Hymns / Songs Suggestions (folder: src/content/hymn-suggestions)
+  # Admin reviews; approved ones are moved to the blog collection as isHymn:true
   # ============================================
-  - name: hymns
+  - name: hymnSuggestions
     label: 'Hymn Suggestions'
     label_singular: 'Hymn Suggestion'
     description: 'Submit new hymn or song suggestions for review. Admin will add approved songs to the main collection.'
@@ -221,3 +238,4 @@ collections:
       - {label: 'Lyrics', name: 'lyrics', widget: 'markdown', required: false, hint: 'Paste lyrics here if you have them'}
       - {label: 'Notes', name: 'notes', widget: 'text', required: false, hint: 'Any additional notes or context about this song'}
       - {label: 'Submitted By', name: 'submitted_by', widget: 'string', hint: 'Your name'}
+      - {label: 'Status', name: 'status', widget: 'select', options: ['pending', 'approved', 'rejected'], default: 'pending', hint: 'Admin: set to approved after moving to blog'}

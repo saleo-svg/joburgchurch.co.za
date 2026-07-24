@@ -83,6 +83,26 @@ export function getEventSchema(title, description, startDate, location) {
 }
 
 /**
+ * Returns an FAQPage schema for FAQ pages.
+ * @param {Array<{question: string, answer: string}>} faqs
+ * @returns {object}
+ */
+export function getFaqSchema(faqs) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
+/**
  * Returns a BlogPosting schema for a blog article.
  * @param {string} title
  * @param {string} description

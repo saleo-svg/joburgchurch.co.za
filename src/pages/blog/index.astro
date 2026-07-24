@@ -1,52 +1,41 @@
 ---
+/**
+ * src/pages/blog/index.astro
+ *
+ * Blog index. Refactored to consume the lib layer.
+ *
+ * Per Anti-Design-Debt principle #2 (interface before implementation)
+ * this page calls `listBlogPosts()` and never `getCollection()`
+ * directly. The same module is reusable for RSS, search, and the
+ * homepage "latest" widget.
+ */
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
+import { listBlogPosts, bandOf, type BlogBand } from '@/lib/modules/blog';
+import { env } from '@/lib/env';
 
-// Fetch blog posts from CMS content collection
-const posts = await getCollection('posts');
+const { items: posts, source } = await listBlogPosts();
+const config = env();
 
-// Sort by date (newest first)
-const sortedPosts = posts
-  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
-  .map((post) => ({
-    slug: post.slug,
-    title: post.data.title,
-    date: post.data.date,
-    excerpt: post.data.description || '',
-    tags: post.data.tags || [],
-  }));
+// Group posts by band for the sectioned listing UI.
+const bandedPosts = new Map<BlogBand, typeof posts>();
+for (const post of posts) {
+  const band = bandOf(post);
+  const list = bandedPosts.get(band) ?? [];
+  list.push(post);
+  bandedPosts.set(band, list);
+}
 
-// Fallback posts if no CMS content exists
-const fallbackPosts = [
-  {
-    slug: 'welcome-to-our-church',
-    title: 'Welcome to Our Bible Study Community in Johannesburg',
-    date: '2026-01-01',
-    excerpt: 'We are glad you are here. Johannesburg Bible Study Church is a welcoming Bible study and Christian community in Sandton, Johannesburg.',
-    tags: ['Community', 'Welcome'],
-  },
-  {
-    slug: 'free-korean-class-community',
-    title: 'Free Korean Class for the Sandton and Johannesburg Community',
-    date: '2026-02-01',
-    excerpt: 'Our free Korean class is open to everyone in Sandton and greater Johannesburg. Sunday 2:00pm, appointment required. Open to all community members.',
-    tags: ['Korean Class', 'Community'],
-  },
-  {
-    slug: 'what-to-expect-first-bible-study',
-    title: 'What to Expect at Your First Bible Study (Even If You Have Never Opened a Bible)',
-    date: '2026-06-10',
-    excerpt: 'You do not need to know anything about the Bible to join us on a Wednesday evening in Johannesburg. Here is what a first session actually looks like, and why most people wish they had started sooner.',
-    tags: ['Bible Study', 'Beginners'],
-  },
-];
-
-// Use CMS content if available, otherwise fallback
-const displayPosts = sortedPosts.length > 0 ? sortedPosts : fallbackPosts;
+const bandLabels: Record<BlogBand, string> = {
+  devotional: 'Devotionals & Reflections',
+  'sa-local': 'South African Life & Faith',
+  beginner: 'For Beginners',
+  pastoral: 'Pastoral Reflections',
+  hymn: 'Hymns & Worship',
+};
+const bandOrder: readonly BlogBand[] = ['devotional', 'sa-local', 'beginner', 'pastoral', 'hymn'];
 ---
-
 <BaseLayout
-  title="Blog | Bible Study and Church Life in Sandton Johannesburg"
+  title={`Blog | ${config.site.name}`}
   description="Articles on Bible study, faith, community, and church life from Johannesburg Bible Study Church in Sandton, Johannesburg."
 >
   <section class="section-padding">
@@ -58,7 +47,7 @@ const displayPosts = sortedPosts.length > 0 ? sortedPosts : fallbackPosts;
       <p class="text-body max-w-2xl mb-8">
         Articles on Bible study, faith, community life, and church activities from our community in Sandton, Johannesburg.
       </p>
-      {posts.length === 0 && (
+      {source === 'fallback' && (
         <p class="text-sm text-amber-600 mb-4">
           Blog posts are managed through the CMS. <a href="/admin/" class="underline">Log in to write a new post</a>.
         </p>
@@ -66,24 +55,33 @@ const displayPosts = sortedPosts.length > 0 ? sortedPosts : fallbackPosts;
     </div>
   </section>
 
-  <section class="section-padding bg-gray-50">
-    <div class="container-max">
-      <div class="grid gap-8 lg:grid-cols-2 max-w-5xl">
-        {displayPosts.map((post) => (
-          <a href={`/blog/${post.slug}/`} class="card group hover:border-blue-200 hover:shadow-md">
-            <p class="text-xs text-gray-500 mb-2">{post.date}</p>
-            <h3 class="heading-3 mb-3 group-hover:text-blue-700 transition-colors">{post.title}</h3>
-            <p class="text-sm text-gray-600 mb-4">{post.excerpt}</p>
-            <div class="flex flex-wrap gap-2">
-              {post.tags.map((tag) => (
-                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">{tag}</span>
-              ))}
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
+  {bandOrder.map((band) => {
+    const list = bandedPosts.get(band) ?? [];
+    if (list.length === 0) return null;
+    return (
+      <section class="section-padding bg-gray-50">
+        <div class="container-max">
+          <h2 class="heading-2 mb-6">{bandLabels[band]}</h2>
+          <div class="grid gap-8 lg:grid-cols-2 max-w-5xl">
+            {list.map((post) => (
+              <a href={`/blog/${post.slug}/`} class="card group hover:border-blue-200 hover:shadow-md">
+                <p class="text-xs text-gray-500 mb-2">
+                  {new Date(post.data.date).toLocaleDateString('en-ZA', { day: 'numeric', month: 'long', year: 'numeric' })}
+                </p>
+                <h3 class="heading-3 mb-3 group-hover:text-blue-700 transition-colors">{post.data.title}</h3>
+                <p class="text-sm text-gray-600 mb-4">{post.data.description}</p>
+                <div class="flex flex-wrap gap-2">
+                  {post.data.tags.map((tag) => (
+                    <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">{tag}</span>
+                  ))}
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  })}
 
   <section class="section-padding text-center">
     <div class="container-max">

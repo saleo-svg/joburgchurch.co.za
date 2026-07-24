@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Business Profile 商家提交工具 - Johannesburg Bible Study Church</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f0f9ff;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+      color: white;
+      padding: 40px;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    
+    header .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    
+    .card h2 {
+      color: #1e3a5f;
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .step {
+      background: #f8fafc;
+      border-left: 4px solid #4285f4;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .step h3 {
+      color: #4285f4;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+    
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background: #4285f4;
+      color: white;
+      border-radius: 50%;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    .form-section {
+      margin-bottom: 25px;
+    }
+    
+    .form-section label {
+      display: block;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 8px;
+    }
+    
+    .form-section .hint {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+    
+    .copy-field {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .copy-field .field-label {
+      font-size: 0.85rem;
+      color: #64748b;
+      min-width: 120px;
+    }
+    
+    .copy-field .field-value {
+      background: white;
+      padding: 10px 15px;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      flex: 1;
+      word-break: break-all;
+      font-size: 0.95rem;
+    }
+    
+    .copy-btn {
+      background: #4285f4;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    
+    .copy-btn:hover {
+      background: #3367d6;
+    }
+    
+    .open-btn {
+      background: #34a853;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 20px;
+      width: 100%;
+      transition: background 0.2s;
+    }
+    
+    .open-btn:hover {
+      background: #2d8f47;
+    }
+    
+    .info-box {
+      background: #fef3c7;
+      border: 1px solid #fbbf24;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    
+    .info-box h4 {
+      color: #92400e;
+      margin-bottom: 8px;
+    }
+    
+    .info-box p {
+      color: #78350f;
+      font-size: 0.9rem;
+    }
+    
+    .checkbox-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 15px;
+      background: #f8fafc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    
+    .checkbox-item input[type="checkbox"] {
+      width: 22px;
+      height: 22px;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+    
+    .checkbox-item label {
+      cursor: pointer;
+      flex: 1;
+    }
+    
+    .checkbox-item .item-title {
+      font-weight: 600;
+      color: #1e3a5f;
+      display: block;
+      margin-bottom: 4px;
+    }
+    
+    .checkbox-item .item-desc {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+    
+    .gallery-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+    
+    .gallery-item {
+      background: #f1f5f9;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      border: 2px dashed #cbd5e1;
+    }
+    
+    .gallery-item .icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    
+    .gallery-item .label {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Google Business Profile 商家提交</h1>
+      <p class="subtitle">Johannesburg Bible Study Church</p>
+      <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.85;">
+        生成日期：2026年7月18日
+      </p>
+    </header>
+    
+    <!-- 步骤说明 -->
+    <div class="card">
+      <h2>📝 提交流程</h2>
+      
+      <div class="step">
+        <h3><span class="step-number">1</span> 访问Google Business Profile</h3>
+        <p>点击下方按钮打开Google商家中心，然后点击"Manage Now"或"Add Your Business"。</p>
+        <button class="open-btn" onclick="window.open('https://business.google.com')">
+          🌐 打开 Google Business Profile
+        </button>
+      </div>
+      
+      <div class="step">
+        <h3><span class="step-number">2</span> 输入商家名称</h3>
+        <p>在"Enter your business name"字段中输入商家名称。必须与下方完全一致。</p>
+      </div>
+      
+      <div class="step">
+        <h3><span class="step-number">3</span> 选择商家类别</h3>
+        <p>选择主要类别为"Church"，然后可以添加额外的类别。</p>
+      </div>
+      
+      <div class="step">
+        <h3><span class="step-number">4</span> 填写地址</h3>
+        <p>输入物理地址或选择"Sign up with a service area business"。</p>
+      </div>
+      
+      <div class="step">
+        <h3><span class="step-number">5</span> 验证商家</h3>
+        <p>Google会通过明信片或电话验证。验证通常需要7-14天。</p>
+      </div>
+    </div>
+    
+    <!-- 商家信息 -->
+    <div class="card">
+      <h2>📋 商家信息（复制使用）</h2>
+      
+      <div class="form-section">
+        <label>商家名称 (Business Name)</label>
+        <div class="copy-field">
+          <span class="field-value">Johannesburg Bible Study Church</span>
+          <button class="copy-btn" onclick="copyToClipboard('Johannesburg Bible Study Church')">📋 复制</button>
+        </div>
+      </div>
+      
+      <div class="form-section">
+        <label>完整地址 (Full Address)</label>
+        <div class="copy-field">
+          <span class="field-value">Parkmore, 11th Street, Sandton, 2196, South Africa</span>
+          <button class="copy-btn" onclick="copyToClipboard('Parkmore, 11th Street, Sandton, 2196, South Africa')">📋 复制</button>
+        </div>
+      </div>
+      
+      <div class="form-section">
+        <label>主要电话 (Primary Phone)</label>
+        <div class="copy-field">
+          <span class="field-value">+27 77 487 1295</span>
+          <button class="copy-btn" onclick="copyToClipboard('+27 77 487 1295')">📋 复制</button>
+        </div>
+      </div>
+      
+      <div class="form-section">
+        <label>网站 (Website)</label>
+        <div class="copy-field">
+          <span class="field-value">https://joburgchurch.co.za</span>
+          <button class="copy-btn" onclick="copyToClipboard('https://joburgchurch.co.za')">📋 复制</button>
+        </div>
+      </div>
+      
+      <div class="form-section">
+        <label>服务区域 (Service Area)</label>
+        <div class="copy-field">
+          <span class="field-value">Johannesburg, Sandton, Randburg, Fourways, Midrand, Gauteng</span>
+          <button class="copy-btn" onclick="copyToClipboard('Johannesburg, Sandton, Randburg, Fourways, Midrand, Gauteng')">📋 复制</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 类别选择 -->
+    <div class="card">
+      <h2>🏷️ 商家类别 (Business Category)</h2>
+      
+      <div class="form-section">
+        <label>主要类别 (Primary Category)</label>
+        <div class="copy-field">
+          <span class="field-value">Church</span>
+          <button class="copy-btn" onclick="copyToClipboard('Church')">📋 复制</button>
+        </div>
+      </div>
+      
+      <div class="form-section">
+        <label>额外类别 (Additional Categories)</label>
+        <div class="copy-field">
+          <span class="field-value">Place of Worship, Christian Organization, Bible Study Center, Community Service</span>
+          <button class="copy-btn" onclick="copyToClipboard('Place of Worship, Christian Organization, Bible Study Center, Community Service')">📋 复制</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 营业时间 -->
+    <div class="card">
+      <h2>🕐 营业时间 (Business Hours)</h2>
+      
+      <div class="form-section">
+        <label>周三 Bible Study</label>
+        <div class="copy-field">
+          <span class="field-value">Wednesday: 19:30 - 21:00</span>
+          <button class="copy-btn" onclick="copyToClipboard('Wednesday: 19:30 - 21:00')">📋 复制</button>
+        </div>
+      </div>
+      
+      <div class="form-section">
+        <label>周日 Korean Class</label>
+        <div class="copy-field">
+          <span class="field-value">Sunday: 14:00 - 16:00</span>
+          <button class="copy-btn" onclick="copyToClipboard('Sunday: 14:00 - 16:00')">📋 复制</button>
+        </div>
+      </div>
+      
+      <div class="form-section">
+        <label>周六 Bible Study (每月第一个)</label>
+        <div class="copy-field">
+          <span class="field-value">Saturday (First of month): 16:00 - 18:00</span>
+          <button class="copy-btn" onclick="copyToClipboard('Saturday (First of month): 16:00 - 18:00')">📋 复制</button>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <h4>💡 提示</h4>
+        <p>如果Google不允许你设置不规则时间，可以设置为"Wednesday: 19:30 - 21:00"和"Sunday: 14:00 - 16:00"，其他时间留空或标记为Closed。</p>
+      </div>
+    </div>
+    
+    <!-- 商家描述 -->
+    <div class="card">
+      <h2>📝 商家描述 (Business Description)</h2>
+      
+      <div class="form-section">
+        <label>Short Description（短描述，最多750字符）</label>
+        <div class="copy-field" style="flex-direction: column; align-items: flex-start;">
+          <span class="field-value" style="width: 100%; margin-bottom: 10px;">
+A welcoming Bible study and Christian community in Sandton, Johannesburg. Wednesday online Bible study at 7:30pm, free Korean language class on Sunday at 2:00pm. Open to all, questions welcome. Community for seekers, believers, and everyone in between.
+          </span>
+          <button class="copy-btn" onclick="copyToClipboard('A welcoming Bible study and Christian community in Sandton, Johannesburg. Wednesday online Bible study at 7:30pm, free Korean language class on Sunday at 2:00pm. Open to all, questions welcome. Community for seekers, believers, and everyone in between.')">📋 复制</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 上传照片 -->
+    <div class="card">
+      <h2>📷 建议上传的照片</h2>
+      
+      <div class="gallery-section">
+        <div class="gallery-item">
+          <div class="icon">🏛️</div>
+          <div class="label">教会/社区标识</div>
+        </div>
+        <div class="gallery-item">
+          <div class="icon">👥</div>
+          <div class="label">团队照片</div>
+        </div>
+        <div class="gallery-item">
+          <div class="icon">📚</div>
+          <div class="label">圣经学习场景</div>
+        </div>
+        <div class="gallery-item">
+          <div class="icon">🎓</div>
+          <div class="label">韩语课程</div>
+        </div>
+        <div class="gallery-item">
+          <div class="icon">🏠</div>
+          <div class="label">场地/室内</div>
+        </div>
+        <div class="gallery-item">
+          <div class="icon">📍</div>
+          <div class="label">门口标识</div>
+        </div>
+      </div>
+      
+      <div class="info-box" style="margin-top: 20px;">
+        <h4>💡 照片建议</h4>
+        <p>上传清晰、真实反映你们社区的照片。避免使用stock照片或过度编辑的图片。</p>
+      </div>
+    </div>
+    
+    <!-- Attributes -->
+    <div class="card">
+      <h2>✅ 商家属性 (Business Attributes)</h2>
+      
+      <div class="checkbox-item">
+        <input type="checkbox" id="wheelchair">
+        <label for="wheelchair">
+          <span class="item-title">Wheelchair accessible entrance</span>
+          <span class="item-desc">无障碍入口（如果适用）</span>
+        </label>
+      </div>
+      
+      <div class="checkbox-item">
+        <input type="checkbox" id="goodfor" checked>
+        <label for="goodfor">
+          <span class="item-title">Good for groups</span>
+          <span class="item-desc">适合团体参加</span>
+        </label>
+      </div>
+      
+      <div class="checkbox-item">
+        <input type="checkbox" id="appointment" checked>
+        <label for="appointment">
+          <span class="item-title">Appointment required (Korean class)</span>
+          <span class="item-desc">韩语课程需要预约</span>
+        </label>
+      </div>
+      
+      <div class="checkbox-item">
+        <input type="checkbox" id="online" checked>
+        <label for="online">
+          <span class="item-title">Online services available</span>
+          <span class="item-desc">提供在线服务</span>
+        </label>
+      </div>
+    </div>
+    
+    <!-- 提交按钮 -->
+    <div class="card" style="text-align: center;">
+      <h2 style="justify-content: center;">🚀 开始提交</h2>
+      <p style="color: #64748b; margin-bottom: 20px;">
+        点击下方按钮开始Google Business Profile提交流程
+      </p>
+      <button class="open-btn" onclick="window.open('https://business.google.com')">
+        🌐 打开 Google Business Profile
+      </button>
+      
+      <div class="info-box" style="margin-top: 30px; text-align: left;">
+        <h4>⚠️ 重要提醒</h4>
+        <p>
+          1. 商家名称必须与上方完全一致<br>
+          2. 地址必须完全匹配（包括拼写）<br>
+          3. 电话必须与网站和其他目录一致<br>
+          4. 验证后可以在"Info"中编辑所有信息<br>
+          5. 验证明信片通常需要7-14天送达
+        </p>
+      </div>
+    </div>
+    
+    <!-- 追踪清单 -->
+    <div class="card">
+      <h2>📊 提交追踪</h2>
+      
+      <div class="checkbox-item">
+        <input type="checkbox" id="step1" onchange="updateTracker()">
+        <label for="step1">
+          <span class="item-title">✅ 步骤1：访问Google Business Profile</span>
+          <span class="item-desc">已打开网站</span>
+        </label>
+      </div>
+      
+      <div class="checkbox-item">
+        <input type="checkbox" id="step2" onchange="updateTracker()">
+        <label for="step2">
+          <span class="item-title">✅ 步骤2：输入商家名称</span>
+          <span class="item-desc">Johannesburg Bible Study Church</span>
+        </label>
+      </div>
+      
+      <div class="checkbox-item">
+        <input type="checkbox" id="step3" onchange="updateTracker()">
+        <label for="step3">
+          <span class="item-title">✅ 步骤3：选择类别</span>
+          <span class="item-desc">Church, Place of Worship</span>
+        </label>
+      </div>
+      
+      <div class="checkbox-item">
+        <input type="checkbox" id="step4" onchange="updateTracker()">
+        <label for="step4">
+          <span class="item-title">✅ 步骤4：填写地址</span>
+          <span class="item-desc">Parkmore, 11th Street, Sandton</span>
+        </label>
+      </div>
+      
+      <div class="checkbox-item">
+        <input type="checkbox" id="step5" onchange="updateTracker()">
+        <label for="step5">
+          <span class="item-title">✅ 步骤5：添加联系方式</span>
+          <span class="item-desc">电话和网站</span>
+        </label>
+      </div>
+      
+      <div class="checkbox-item">
+        <input type="checkbox" id="step6" onchange="updateTracker()">
+        <label for="step6">
+          <span class="item-title">✅ 步骤6：设置营业时间</span>
+          <span class="item-desc">周三和周日时间</span>
+        </label>
+      </div>
+      
+      <div class="checkbox-item">
+        <input type="checkbox" id="step7" onchange="updateTracker()">
+        <label for="step7">
+          <span class="item-title">✅ 步骤7：上传照片</span>
+          <span class="item-desc">建议5-10张照片</span>
+        </label>
+      </div>
+      
+      <div class="checkbox-item">
+        <input type="checkbox" id="step8" onchange="updateTracker()">
+        <label for="step8">
+          <span class="item-title">✅ 步骤8：提交审核</span>
+          <span class="item-desc">点击Submit完成提交</span>
+        </label>
+      </div>
+      
+      <div class="checkbox-item" style="background: #dcfce7;">
+        <input type="checkbox" id="step9" onchange="updateTracker()">
+        <label for="step9">
+          <span class="item-title">⏳ 等待验证</span>
+          <span class="item-desc">等待Google明信片或电话验证</span>
+        </label>
+      </div>
+      
+      <div class="checkbox-item" style="background: #dbeafe;">
+        <input type="checkbox" id="step10" onchange="updateTracker()">
+        <label for="step10">
+          <span class="item-title">⏳ 完成验证</span>
+          <span class="item-desc">输入验证码完成验证</span>
+        </label>
+      </div>
+      
+      <p style="text-align: center; margin-top: 20px; color: #64748b;">
+        进度：<strong id="progressText">0</strong>/10 已完成
+      </p>
+    </div>
+    
+    <footer>
+      <p>📧 商家邮箱: contact@joburgchurch.co.za</p>
+      <p>🌐 网站: https://joburgchurch.co.za</p>
+      <p style="margin-top: 15px;">
+        完成后请在Google Maps中搜索"Johannesburg Bible Study Church"确认显示正确。
+      </p>
+    </footer>
+  </div>
+  
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = event.target;
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '✅ 已复制';
+        btn.style.background = '#34a853';
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.style.background = '';
+        }, 1500);
+      }).catch(err => {
+        console.error('复制失败:', err);
+        alert('已复制: ' + text);
+      });
+    }
+    
+    function updateTracker() {
+      const checkboxes = document.querySelectorAll('#step1, #step2, #step3, #step4, #step5, #step6, #step7, #step8, #step9, #step10');
+      const completed = Array.from(checkboxes).filter(cb => cb.checked).length;
+      document.getElementById('progressText').textContent = completed;
+      
+      localStorage.setItem('gbpProgress', Array.from(checkboxes).map(cb => cb.id + ':' + cb.checked).join(','));
+    }
+    
+    // 恢复进度
+    window.onload = function() {
+      const saved = localStorage.getItem('gbpProgress');
+      if (saved) {
+        saved.split(',').forEach(item => {
+          const [id, checked] = item.split(':');
+          const cb = document.getElementById(id);
+          if (cb) cb.checked = checked === 'true';
+        });
+        updateTracker();
+      }
+    };
+  </script>
+</body>
+</html>
