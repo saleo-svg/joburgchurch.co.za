@@ -5,15 +5,23 @@
  *
  * Per Anti-Design-Debt principle #2 (interface before implementation),
  * this module depends only on the StorageAdapter contract — no
- * direct `getCollection('posts')` calls.
+ * direct `getCollection('posts')` calls in page code.
  *
  * Per principle #4 (no new concepts), blog data is shaped by the
  * BlogData interface from core/content.ts — never re-defined here.
+ *
+ * Build-time vs runtime:
+ *  - Pages call `listBlogPosts()` from `.astro` files. Inside an
+ *    Astro build, `astro:content` is available. We use it via
+ *    the `astro-collection-reader` adapter so the module reads
+ *    the same content the rest of the site reads.
+ *  - For non-Astro contexts (admin scripts, ISR, future SSR), the
+ *    `localStorageAdapter` is the fallback. Both adapters return
+ *    the same ResolvedContent<T> shape.
  */
 
 import type {
   BlogData,
-  ContentQuery,
   ContentResultSet,
   ResolvedContent,
 } from '../core/content';
@@ -38,6 +46,55 @@ export function bandOf(post: ResolvedContent<BlogData>): BlogBand {
 }
 
 /**
+ * Try to use Astro's `astro:content` first (the supported, build-time
+ * reading path). Falls back to the local adapter for non-Astro
+ * contexts (admin scripts, etc).
+ *
+ * This is the single place that decides which provider to use.
+ * Per principle #5 (zero hardcoding): swapping providers is one
+ * line here.
+ */
+async function readAstroCollection(): Promise<ContentResultSet<ResolvedContent<BlogData>> | null> {
+  try {
+    // Dynamic import — `astro:content` only resolves inside an Astro
+    // build. Outside (e.g. plain Node scripts) it throws.
+    const astro = await import('astro:content');
+    const raw = await astro.getCollection('posts');
+    const items: ResolvedContent<BlogData>[] = raw.map((entry) => ({
+      kind: 'blog',
+      slug: entry.slug,
+      title: entry.data.title,
+      date: new Date(entry.data.date),
+      status: 'published',
+      data: {
+        title: entry.data.title,
+        description: entry.data.description,
+        date: new Date(entry.data.date),
+        author: entry.data.author ?? 'Mr. Sim',
+        tags: entry.data.tags ?? [],
+        image: entry.data.image,
+        heroImage: entry.data.heroImage,
+        isHymn: entry.data.isHymn,
+        language: entry.data.language,
+        key: entry.data.key,
+        chords: entry.data.chords,
+        excerpt: entry.data.excerpt,
+      },
+      url: `/blog/${entry.slug}/`,
+      source: 'cms',
+    }));
+    return { items, source: 'cms', count: items.length };
+  } catch {
+    return null;
+  }
+}
+
+async function readFallbackCollection(): Promise<ContentResultSet<ResolvedContent<BlogData>>> {
+  const adapter = await localStorageFactory.create();
+  return adapter.list<ResolvedContent<BlogData>>({ kind: 'blog', order: 'newest' });
+}
+
+/**
  * Public API — every page calls this; never the adapter directly.
  * Per principle #5 (zero hardcoding): changing the provider does
  * not require changing any page.
@@ -45,17 +102,32 @@ export function bandOf(post: ResolvedContent<BlogData>): BlogBand {
 export async function listBlogPosts(
   opts: { limit?: number; tag?: string; band?: BlogBand } = {},
 ): Promise<ContentResultSet<ResolvedContent<BlogData>>> {
-  const adapter = await getAdapter();
-  const query: ContentQuery = {
-    kind: 'blog',
-    order: 'newest',
-    limit: opts.limit,
-    tag: opts.tag,
-  };
-  const result = await adapter.list<ResolvedContent<BlogData>>(query);
+  let result =
+    (await readAstroCollection()) ??
+    (await readFallbackCollection());
+  if (result.items.length > 0) {
+    result = {
+      items: result.items.slice().sort(
+        (a, b) => b.date.getTime() - a.date.getTime(),
+      ),
+      source: result.source,
+      count: result.items.length,
+    };
+  }
+  if (opts.tag) {
+    const filtered = result.items.filter((p) => p.data.tags.includes(opts.tag!));
+    result = { items: filtered, source: result.source, count: filtered.length };
+  }
   if (opts.band) {
     const filtered = result.items.filter((p) => bandOf(p) === opts.band);
-    return { items: filtered, source: result.source, count: filtered.length };
+    result = { items: filtered, source: result.source, count: filtered.length };
+  }
+  if (opts.limit && result.items.length > opts.limit) {
+    result = {
+      items: result.items.slice(0, opts.limit),
+      source: result.source,
+      count: result.items.length,
+    };
   }
   return result;
 }
@@ -63,8 +135,8 @@ export async function listBlogPosts(
 export async function getBlogPost(
   slug: string,
 ): Promise<ResolvedContent<BlogData> | null> {
-  const adapter = await getAdapter();
-  return adapter.get<BlogData>('blog', slug);
+  const all = await listBlogPosts();
+  return all.items.find((p) => p.slug === slug) ?? null;
 }
 
 /**
@@ -131,13 +203,5 @@ export function labelShapeRow(row: ShapeRow): string {
   }
 }
 
-// ─────────────────────────────────────────────────────────
-// Adapter binding — point of provider selection.
-// Per principle #5 (zero hardcoding), the only place a concrete
-// adapter is referenced. Swapping to GitHub-backed adapter is a
-// one-line change here.
-// ─────────────────────────────────────────────────────────
-async function getAdapter(): Promise<StorageAdapter> {
-  // Future: read STORAGE_PROVIDER from env.ts and dispatch.
-  return localStorageFactory.create();
-}
+// Kept for future use; not currently referenced.
+export type { StorageAdapter };
