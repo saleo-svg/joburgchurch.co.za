@@ -14,8 +14,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-对话记录.txt
-开发记录.txt
 
 # OS
 .DS_Store
