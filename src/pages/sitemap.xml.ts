@@ -80,6 +80,11 @@ export const GET: APIRoute = () => {
     { url: '/blog/heritage-day-christian-reflection/', lastmod: '2026-07-21' },
     { url: '/blog/multilingual-worship-johannesburg/', lastmod: '2026-07-21' },
     { url: '/blog/jozi-young-professionals-bible-study/', lastmod: '2026-07-21' },
+    { url: '/blog/joburg-rainy-season-quiet-time/', lastmod: '2026-07-23' },
+    { url: '/blog/reading-bible-second-language-johannesburg/', lastmod: '2026-07-23' },
+    { url: '/blog/commuter-prayer-johannesburg-guide/', lastmod: '2026-07-23' },
+    { url: '/blog/winter-funerals-south-africa-grief/', lastmod: '2026-07-23' },
+    { url: '/blog/mid-year-reset-july-spiritual-check-in/', lastmod: '2026-07-23' },
   ];
 
   const allPages = [
