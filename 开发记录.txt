@@ -1,24 +1,24 @@
 =====================================
-开发记�?- Church Site 项目
+开发记�?- Church Site 项目
 更新时间: 2026-07-06 11:56
 =====================================
 
---- 开发记�?1: WhatsApp 按钮功能 ---
+--- 开发记�?1: WhatsApp 按钮功能 ---
 
-【开始时间�?026-07-06 09:27
-【结束时间�?026-07-06 09:30
+【开始时间�?026-07-06 09:27
+【结束时间�?026-07-06 09:30
 
-【需求�?
+【需求�?
 为联系人添加 WhatsApp 直接联系按钮
 
-【实施步骤�?
+【实施步骤�?
 1. 读取 Contact 页面，查看现有联系人结构
-2. 设计 WhatsApp 按钮样式（绿色背景、WhatsApp 图标�?
+2. 设计 WhatsApp 按钮样式（绿色背景、WhatsApp 图标�?
 3. 添加 WhatsApp 链接：https://wa.me/[号码]
-4. 搜索所有包含联系人的页�?
+4. 搜索所有包含联系人的页�?
 5. 统一为两个联系人添加 WhatsApp 按钮
 
-【修改文件�?
+【修改文件�?
 - src/pages/contact.astro
 - src/pages/faq.astro
 - src/pages/visit.astro
@@ -37,56 +37,56 @@
 - src/pages/parenting-biblical-advice-johannesburg.astro
 - src/pages/privacy.astro
 
-【结果】成�?- 已推送到 GitHub
+【结果】成�?- 已推送到 GitHub
 
 ---
 
---- 开发记�?2: 钢琴背景音乐替换 ---
+--- 开发记�?2: 钢琴背景音乐替换 ---
 
-【开始时间�?026-07-06 09:46
-【结束时间�?026-07-06 09:52
+【开始时间�?026-07-06 09:46
+【结束时间�?026-07-06 09:52
 
-【需求�?
+【需求�?
 用真实的钢琴音频替换 Web Audio API 合成的机械音
 
-【实施步骤�?
-1. 搜索免费的钢琴音频资�?
-2. �?Freesound 下载 3 个钢琴循�?
-3. 创建 public/audio 文件�?
+【实施步骤�?
+1. 搜索免费的钢琴音频资�?
+2. �?Freesound 下载 3 个钢琴循�?
+3. 创建 public/audio 文件�?
 4. 修改 hymns/index.astro 使用真实音频
 5. 测试构建
 
-【遇到的问题�?
+【遇到的问题�?
 GitHub Secret Scanning 误报 - MP3 文件中检测到 Mapbox token（假阳性）
 
-【解决方案�?
-- 移除了本地音频文�?
+【解决方案�?
+- 移除了本地音频文�?
 - 改用"Background music coming soon!"提示
-- 保留了音频播放器代码框架，以便后续添�?
+- 保留了音频播放器代码框架，以便后续添�?
 
-【修改文件�?
+【修改文件�?
 - src/pages/hymns/index.astro
 
-【结果】成�?- 已推送到 GitHub
+【结果】成�?- 已推送到 GitHub
 
 ---
 
---- 开发记�?3: 添加 Afrikaans 赞美�?---
+--- 开发记�?3: 添加 Afrikaans 赞美�?---
 
-【开始时间�?026-07-06 09:55
-【结束时间�?026-07-06 10:00
+【开始时间�?026-07-06 09:55
+【结束时间�?026-07-06 10:00
 
-【需求�?
-为南非白人社区添�?Afrikaans（南非荷兰语）赞美诗
+【需求�?
+为南非白人社区添�?Afrikaans（南非荷兰语）赞美诗
 
-【实施步骤�?
-1. �?languages 数组中添�?{ code: 'afrikaans', name: 'Afrikaans' }
-2. �?regionImages 中添�?'South Africa / Afrikaans' 的图�?
-3. 添加 8 �?Afrikaans 赞美诗数�?
-4. 更新页面描述�?5+ 改为 17 种语言�?
-5. 更新统计数字�?6 改为 17�?
+【实施步骤�?
+1. �?languages 数组中添�?{ code: 'afrikaans', name: 'Afrikaans' }
+2. �?regionImages 中添�?'South Africa / Afrikaans' 的图�?
+3. 添加 8 �?Afrikaans 赞美诗数�?
+4. 更新页面描述�?5+ 改为 17 种语言�?
+5. 更新统计数字�?6 改为 17�?
 
-【添加的赞美诗�?
+【添加的赞美诗�?
 1. lof-sy-heerlikheid - Lofprysing / Praise His Name
 2. hy-is-ons-toevlug - Hy Is Ons Toevlug / He Is Our Refuge
 3. gods-liefde-bly - God se Liefde Bly / God's Love Endures
@@ -96,282 +96,282 @@ GitHub Secret Scanning 误报 - MP3 文件中检测到 Mapbox token（假阳性�
 7. almal-sal-sien - Almal Sal Sien / All Will See
 8. jou-hand-vas - Jou Hand Vas / Holding Your Hand
 
-【修改文件�?
+【修改文件�?
 - src/pages/hymns/index.astro
 
-【结果】成�?- 已推送到 GitHub
+【结果】成�?- 已推送到 GitHub
 
 ---
 
---- 开发记�?4: 赞美诗卡片图片优�?---
+--- 开发记�?4: 赞美诗卡片图片优�?---
 
-【开始时间�?026-07-06 11:34
-【结束时间�?026-07-06 11:42
+【开始时间�?026-07-06 11:34
+【结束时间�?026-07-06 11:42
 
-【需求�?
-每首赞美诗使用不同的图片，避免重�?
+【需求�?
+每首赞美诗使用不同的图片，避免重�?
 
-【实施步骤�?
+【实施步骤�?
 1. 读取 hymns/index.astro 文件
-2. 为每首赞美诗添加 image 属性，使用唯一�?Unsplash URL
-3. 修改模板代码，优先使�?hymn.image，否则回退�?regionImages
-4. 为所�?60 首赞美诗分配不同的自然风景图�?
+2. 为每首赞美诗添加 image 属性，使用唯一�?Unsplash URL
+3. 修改模板代码，优先使�?hymn.image，否则回退�?regionImages
+4. 为所�?60 首赞美诗分配不同的自然风景图�?
 
-【图片分配策略�?
-- Zulu/Xhosa/Sotho: 非洲草原、山脉、日�?
+【图片分配策略�?
+- Zulu/Xhosa/Sotho: 非洲草原、山脉、日�?
 - Tswana/Pedi/Ndebele: 沙漠、森林、瀑布
-- Afrikaans: 南非城市，自然风�?
-- Swahili: 东非海岸、野生动�?
+- Afrikaans: 南非城市，自然风�?
+- Swahili: 东非海岸、野生动�?
 - Dinka: 苏丹大草原、尼罗河
 - Shona: 津巴布韦瀑布、维多利亚瀑布
-- Lingala: 刚果雨林、热带风�?
-- Igbo/Yoruba: 尼日利亚城市、教�?
-- Amharic: 埃塞俄比亚高原、岩石教�?
-- Korean: 韩国山川、樱�?
+- Lingala: 刚果雨林、热带风�?
+- Igbo/Yoruba: 尼日利亚城市、教�?
+- Amharic: 埃塞俄比亚高原、岩石教�?
+- Korean: 韩国山川、樱�?
 
-【修改文件�?
+【修改文件�?
 - src/pages/hymns/index.astro
 
-【结果】成�?- 已推送到 GitHub
+【结果】成�?- 已推送到 GitHub
 
 ---
 
---- 开发记�?5: 对话记录保存系统 ---
+--- 开发记�?5: 对话记录保存系统 ---
 
-【开始时间�?026-07-06 11:56
-【结束时间�?026-07-06 11:56
+【开始时间�?026-07-06 11:56
+【结束时间�?026-07-06 11:56
 
-【需求�?
+【需求�?
 保存所有对话记录到两个文件
 
-【实施步骤�?
-1. 检查现有文�?
-2. 读取用户对话汇�?txt
-3. 创建完整的用户对话记�?txt
-4. 创建开发记�?txt
+【实施步骤�?
+1. 检查现有文�?
+2. 读取用户对话汇�?txt
+3. 创建完整的用户对话记�?txt
+4. 创建开发记�?txt
 
-【创建的文件�?
+【创建的文件�?
 1. 用户对话记录.txt - 包含用户所有提问和反馈
-2. 开发记�?txt - 包含开发过程详细记�?
+2. 开发记�?txt - 包含开发过程详细记�?
 
-【文件路径�?
+【文件路径�?
 - C:\Users\Laptop\Desktop\Church-Site\用户对话记录.txt
-- C:\Users\Laptop\Desktop\Church-Site\开发记�?txt
+- C:\Users\Laptop\Desktop\Church-Site\开发记�?txt
 
-【结果】成�?
+【结果】成�?
 
 =====================================
 文件结束
 =====================================
 
 =====================================
-开发记�?- Church Site 项目
+开发记�?- Church Site 项目
 更新时间: 2026-07-14 13:19 SAST
 =====================================
 
---- 开发记�?6: 用户没看到网站改�?�?push + deploy ---
+--- 开发记�?6: 用户没看到网站改�?�?push + deploy ---
 
-【开始时间�?026-07-14 13:19
-【结束时间�?026-07-14 13:48
+【开始时间�?026-07-14 13:19
+【结束时间�?026-07-14 13:48
 
-【问题诊断�?
-打开 https://joburgchurch.co.za/hymns/ 发现没有显示新功能�?
-git status 显示本地�?222 个新文件�?15 �?hymn .docx + YouTube 嵌入 + 详情�?+ 数据文件 + 图标按钮等）但都未提交�?
+【问题诊断�?
+打开 https://joburgchurch.co.za/hymns/ 发现没有显示新功能�?
+git status 显示本地�?222 个新文件�?15 �?hymn .docx + YouTube 嵌入 + 详情�?+ 数据文件 + 图标按钮等）但都未提交�?
 
-【实施步骤�?
-1. git status / git log / git remote -v 检查仓库状�?
-2. git add -A 暂存所有更�?
-3. git commit -F COMMIT_MSG 提交�?
+【实施步骤�?
+1. git status / git log / git remote -v 检查仓库状�?
+2. git add -A 暂存所有更�?
+3. git commit -F COMMIT_MSG 提交�?
    - feat(hymns): YouTube embeds, lyrics pages, audio links, docx downloads
 4. git push origin master 推送到 GitHub
    21208be..be31167 master -> master
-5. powershell scripts/deploy-cloudflare.ps1 部署�?Cloudflare Pages�?
+5. powershell scripts/deploy-cloudflare.ps1 部署�?Cloudflare Pages�?
    - 上传 116 个新文件
    - wrangler 4.110.0
-   - 部署�?https://d7498ffb.joburgchurch.pages.dev
-6. 在线验证�?
+   - 部署�?https://d7498ffb.joburgchurch.pages.dev
+6. 在线验证�?
    - /hymns/ 列表页：115 Songs / 17 Languages / Free Downloads / YouTube & Social Hits
-   - /hymns/way-maker/ 详情页：YouTube 嵌入、Spotify/Apple/SoundCloud 链接、完整歌词、相关歌�?
-   - /hymns/way-maker.docx 下载�?255 字节合法 ZIP
+   - /hymns/way-maker/ 详情页：YouTube 嵌入、Spotify/Apple/SoundCloud 链接、完整歌词、相关歌�?
+   - /hymns/way-maker.docx 下载�?255 字节合法 ZIP
 
-【修改文件�?
-- src/data/hymns.ts (新建, 115 �?hymn 数据)
-- src/pages/hymns/[slug].astro (新建, 详情�?+ YouTube 嵌入 + MusicComposition schema)
+【修改文件�?
+- src/data/hymns.ts (新建, 115 �?hymn 数据)
+- src/pages/hymns/[slug].astro (新建, 详情�?+ YouTube 嵌入 + MusicComposition schema)
 - src/pages/hymns/index.astro (更新, 链接到详情页 + YouTube / docx 按钮)
-- scripts/generate-hymns-docx.mjs (新建, 自动生成所�?.docx, �?EBUSY 重试逻辑)
-- src/layouts/BaseLayout.astro (修复 og:image 双域�?bug)
+- scripts/generate-hymns-docx.mjs (新建, 自动生成所�?.docx, �?EBUSY 重试逻辑)
+- src/layouts/BaseLayout.astro (修复 og:image 双域�?bug)
 - public/hymns/*.docx (115 个自动生成的 chord sheet)
 
-【部署结果�?
-- �?GitHub: be31167 已推�?
-- �?Cloudflare Pages: 222 pages 部署成功
-- �?主域名通过 alias 自动更新
+【部署结果�?
+- �?GitHub: be31167 已推�?
+- �?Cloudflare Pages: 222 pages 部署成功
+- �?主域名通过 alias 自动更新
 
 ---
 
---- 开发记�?7: 修复 hero 乱码 + 替换重复背景�?�?push + deploy ---
+--- 开发记�?7: 修复 hero 乱码 + 替换重复背景�?�?push + deploy ---
 
-【开始时间�?026-07-14 14:25
-【结束时间�?026-07-14 14:38
+【开始时间�?026-07-14 14:25
+【结束时间�?026-07-14 14:38
 
-【问题诊断�?
-1. /hymns/ hero �?4 个统计数据是乱码（E9 88 BD 字节序列 = 损坏�?"1" 字符）�?
-   用户截图确认�?
-2. 用户新需求：背景图去重，换成十字�?/ 简约耶稣主题�?
-   统计�?15 首歌曲只�?56 张不同的图（最大重�?5 次）�?
+【问题诊断�?
+1. /hymns/ hero �?4 个统计数据是乱码（E9 88 BD 字节序列 = 损坏�?"1" 字符）�?
+   用户截图确认�?
+2. 用户新需求：背景图去重，换成十字�?/ 简约耶稣主题�?
+   统计�?15 首歌曲只�?56 张不同的图（最大重�?5 次）�?
 
-【实施步骤�?
-1. �?hex 找出乱码字节 (E9 88 BD)，定位到 src/pages/hymns/index.astro:101
-2. 修复方案�?
-   - �?4 个统计改成动态计�?youtubeHitsCount
+【实施步骤�?
+1. �?hex 找出乱码字节 (E9 88 BD)，定位到 src/pages/hymns/index.astro:101
+2. 修复方案�?
+   - �?4 个统计改成动态计�?youtubeHitsCount
    - 语言数量从硬编码 "17" 改成 {languages.length - 1}
-3. 搜索 Unsplash，找�?19 张验证可访问的十字架 / 敬拜 / 圣经主题图：
-   - 5 张十字架剪影（不同天�?/ 山间 / 城市�?
-   - 3 张暗光十字架 / 耶稣受难�?
-   - 3 张敬拜举�?
-   - 4 张彩色玻璃窗 / 教堂�?
-   - 2 张圣�?/ 窗光
+3. 搜索 Unsplash，找�?19 张验证可访问的十字架 / 敬拜 / 圣经主题图：
+   - 5 张十字架剪影（不同天�?/ 山间 / 城市�?
+   - 3 张暗光十字架 / 耶稣受难�?
+   - 3 张敬拜举�?
+   - 4 张彩色玻璃窗 / 教堂�?
+   - 2 张圣�?/ 窗光
    - 2 张暗教堂烛光
-   每张都用 Invoke-WebRequest HEAD 验证返回 200�?
-4. �?scripts/dedupe-hymn-images.mjs�?
-   - 解析 src/data/hymns.ts 的数�?
-   - �?stableIndex(slug) 哈希分配 19 张图
+   每张都用 Invoke-WebRequest HEAD 验证返回 200�?
+4. �?scripts/dedupe-hymn-images.mjs�?
+   - 解析 src/data/hymns.ts 的数�?
+   - �?stableIndex(slug) 哈希分配 19 张图
    - 序列化回 TS 文件
-   - 运行后：115 �?�?19 张图，分�?3-12 张每�?
-5. 替换 src/pages/hymns/index.astro �?regionImages map
+   - 运行后：115 �?�?19 张图，分�?3-12 张每�?
+5. 替换 src/pages/hymns/index.astro �?regionImages map
    把所有区域映射改成十字架 / 敬拜主题
-6. 校验�?
-   - npm run build �?222 pages, 0 errors
-   - dist/hymns/index.html 中唯一图片 20 �?
+6. 校验�?
+   - npm run build �?222 pages, 0 errors
+   - dist/hymns/index.html 中唯一图片 20 �?
    - 乱码字节消失
 7. git commit + push + wrangler deploy
    - GitHub: be31167..d977649
    - Cloudflare: 26da43c3.joburgchurch.pages.dev
-8. 在线验证�?
+8. 在线验证�?
    - Songs: 115 / Languages: 16 / YouTube hits: 115+
-   - 唯一图片 ID: 20 �?
-   - Mojibake 字节: 不存�?
+   - 唯一图片 ID: 20 �?
+   - Mojibake 字节: 不存�?
 
-【新�?/ 修改文件�?
+【新�?/ 修改文件�?
 - src/data/hymns.ts (更新, 115 张图片全部换成十字架主题)
 - src/pages/hymns/index.astro (修复乱码 + 替换 region map)
-- scripts/dedupe-hymn-images.mjs (新建, 一键去重脚�?
+- scripts/dedupe-hymn-images.mjs (新建, 一键去重脚�?
 
-【部署结果�?
-- �?GitHub: d977649 已推�?
-- �?Cloudflare Pages: 222 pages 部署成功
-- �?/hymns/ 在线验证全部通过
+【部署结果�?
+- �?GitHub: d977649 已推�?
+- �?Cloudflare Pages: 222 pages 部署成功
+- �?/hymns/ 在线验证全部通过
 
 ---
 
---- 开发记�?8: 用户要求保存对话 �?写入两个 TXT �?commit ---
+--- 开发记�?8: 用户要求保存对话 �?写入两个 TXT �?commit ---
 
-【开始时间�?026-07-14 16:50
-【结束时间】本次会�?
+【开始时间�?026-07-14 16:50
+【结束时间】本次会�?
 
-【用户需求�?
-用户要求把所有会话内容分别保存到两个 TXT�?
-1. 用户对话记录.txt �?只保存用户的消息
-2. 开发记�?txt �?只保存助手的回答和开发步�?
+【用户需求�?
+用户要求把所有会话内容分别保存到两个 TXT�?
+1. 用户对话记录.txt �?只保存用户的消息
+2. 开发记�?txt �?只保存助手的回答和开发步�?
 
-每次会话都要更新�?
+每次会话都要更新�?
 
-【实施步骤�?
-1. 检查仓库现有的 .txt 文件，找�?4 个：
+【实施步骤�?
+1. 检查仓库现有的 .txt 文件，找�?4 个：
    - 对话记录.txt (3174 B, 2026-07-04 历史)
-   - 开发记�?txt (5044 B, 2026-07-06 历史) �?复用
-   - 用户对话汇�?txt (2469 B, 旧汇�?
-   - 用户对话记录.txt (3967 B, 2026-07-06 历史) �?复用
-2. 决定：保�?用户对话记录.txt + 开发记�?txt 作为长期归档
-3. �?scripts/save-session-logs.py 把本次会话追加到这两个文�?
-4. 删除冗余�?对话记录.txt �?用户对话汇�?txt
+   - 开发记�?txt (5044 B, 2026-07-06 历史) �?复用
+   - 用户对话汇�?txt (2469 B, 旧汇�?
+   - 用户对话记录.txt (3967 B, 2026-07-06 历史) �?复用
+2. 决定：保�?用户对话记录.txt + 开发记�?txt 作为长期归档
+3. �?scripts/save-session-logs.py 把本次会话追加到这两个文�?
+4. 删除冗余�?对话记录.txt �?用户对话汇�?txt
 5. 提交并推送到 GitHub
 
-【新�?/ 修改文件�?
+【新�?/ 修改文件�?
 - 用户对话记录.txt (追加对话 7 / 8 / 9)
-- 开发记�?txt (追加开发记�?6 / 7 / 8)
-- scripts/save-session-logs.py (新建, 未来可重复运�?
-- 删除: 对话记录.txt, 用户对话汇�?txt
+- 开发记�?txt (追加开发记�?6 / 7 / 8)
+- scripts/save-session-logs.py (新建, 未来可重复运�?
+- 删除: 对话记录.txt, 用户对话汇�?txt
 
-【下一步�?
-- 未来每次会话开始时，可重跑 save-session-logs.py 把上次会话追加进�?
+【下一步�?
+- 未来每次会话开始时，可重跑 save-session-logs.py 把上次会话追加进�?
 - 或者直接用 Read 工具读取用户对话原文后再编辑
 
 =====================================
-开发记�?- Church Site 项目
+开发记�?- Church Site 项目
 更新时间: 2026-07-24 20:04 SAST
 =====================================
 
---- 开发记�?9: 5 篇本地化高价值博客创�?---
+--- 开发记�?9: 5 篇本地化高价值博客创�?---
 
-【开始时间�?026-07-21 上午
-【结束时间�?026-07-21 中午
+【开始时间�?026-07-21 上午
+【结束时间�?026-07-21 中午
 
-【需求�?
-- 普遍接受的基督教主题（不教义争议�?
-- 100% 本地化到南非 / 约翰内斯�?
-- 2000-3500 �?
+【需求�?
+- 普遍接受的基督教主题（不教义争议�?
+- 100% 本地化到南非 / 约翰内斯�?
+- 2000-3500 �?
 - 实用 / 温暖 / 非商业化教会语气
 
-�? 篇文章�?
+�? 篇文章�?
 1. joburg-rainy-season-quiet-time.md
-   - 11�?3月雨季如何调整灵修习�?
+   - 11�?3月雨季如何调整灵修习�?
 2. reading-bible-second-language-johannesburg.md
-   - 英语非母语者如何在南非读圣�?
+   - 英语非母语者如何在南非读圣�?
 3. commuter-prayer-johannesburg-guide.md
-   - 在出租车 / Gautrain / 通勤中祷�?
+   - 在出租车 / Gautrain / 通勤中祷�?
 4. winter-funerals-south-africa-grief.md
-   - 6-8月（南非最重葬礼月）的基督教哀伤辅�?
+   - 6-8月（南非最重葬礼月）的基督教哀伤辅�?
 5. mid-year-reset-july-spiritual-check-in.md
-   - 7月年中灵性回顾（避免新年目标失效�?
+   - 7月年中灵性回顾（避免新年目标失效�?
 
-【集成步骤�?
-1. 修改 src/pages/blog/[slug].astro �?getStaticPaths + posts 对象
+【集成步骤�?
+1. 修改 src/pages/blog/[slug].astro �?getStaticPaths + posts 对象
 2. 修改 src/pages/sitemap.xml.ts 添加 5 个新 URL
-3. npm run build �?268 pages, 0 errors
+3. npm run build �?268 pages, 0 errors
 4. git commit + push + Cloudflare deploy
-5. Live 验证：所�?5 篇在线可访问
+5. Live 验证：所�?5 篇在线可访问
 
-【部署结果�?
-�?268 pages, 0 errors
-�?origin/master updated
-�?https://joburgchurch.co.za 全部 5 篇上�?
+【部署结果�?
+�?268 pages, 0 errors
+�?origin/master updated
+�?https://joburgchurch.co.za 全部 5 篇上�?
 
 ---
 
---- 开发记�?10: Phase 12 �?lib/ 架构层引�?+ 反技术债硬约束 ---
+--- 开发记�?10: Phase 12 �?lib/ 架构层引�?+ 反技术债硬约束 ---
 
-【开始时间�?026-07-24 19:12
-【结束时间�?026-07-24 19:34
+【开始时间�?026-07-24 19:12
+【结束时间�?026-07-24 19:34
 
-【背景�?
-用户要求�?
-1. 评估教会成员 CMS 模块的现�?
-2. 引入反技术�?/ 反设计债硬约束
+【背景�?
+用户要求�?
+1. 评估教会成员 CMS 模块的现�?
+2. 引入反技术�?/ 反设计债硬约束
 3. 每个新增模块先做"20 步债务评估"
-4. 提前 20 步思考可拓展性、模块化、横�?纵向扩展
+4. 提前 20 步思考可拓展性、模块化、横�?纵向扩展
 
-【现状盘清�?
+【现状盘清�?
 | 维度 | 现状 | 问题 |
 |------|------|------|
 | CMS 后端 | Sveltia + GitHub OAuth + Cloudflare Worker | Worker URL 占位符未部署 |
-| 内容集合 | 7 �?collections 全部接�?| 缺显�?schema |
-| Blog 双源 | getCollection + 硬编�?fallback | 混乱 |
-| Hymn 系统 | �?posts 文件夹中标记 isHymn | �?blog 耦合 |
-| 类型安全 | .astro �?JSDoc + any | �?discriminated union |
-| 硬编�?| Schema.ts / Header / Footer 硬编�?church info | 应来�?settings |
+| 内容集合 | 7 �?collections 全部接�?| 缺显�?schema |
+| Blog 双源 | getCollection + 硬编�?fallback | 混乱 |
+| Hymn 系统 | �?posts 文件夹中标记 isHymn | �?blog 耦合 |
+| 类型安全 | .astro �?JSDoc + any | �?discriminated union |
+| 硬编�?| Schema.ts / Header / Footer 硬编�?church info | 应来�?settings |
 
-�?0 步债务评估 �?每个模块�?5 个未来扩展路径�?
+�?0 步债务评估 �?每个模块�?5 个未来扩展路径�?
 
 #### Blog
 - A. 多语言版本
 - B. 评论系统
-- C. 草稿/审核工作�?
+- C. 草稿/审核工作�?
 - D. RSS feed
-- E. 关系（related posts / series�?
+- E. 关系（related posts / series�?
 
 #### Sermons
-- A. 关联�?Bible Study 系列（reference�?
+- A. 关联�?Bible Study 系列（reference�?
 - B. YouTube 自动同步
 - C. 音频 podcast RSS
 - D. 讲道稿与笔记分离
@@ -379,8 +379,8 @@ git status 显示本地�?222 个新文件�?15 �?hymn .docx + YouTube 嵌入 +
 
 #### Events
 - A. RSVP 表单
-- B. 重复规则（RRULE�?
-- C. 跨时�?
+- B. 重复规则（RRULE�?
+- C. 跨时�?
 - D. 多语言描述
 - E. .ics calendar export
 
@@ -399,100 +399,201 @@ git status 显示本地�?222 个新文件�?15 �?hymn .docx + YouTube 嵌入 +
 - E. 自动转录
 
 #### Hymn Suggestions
-- A. 审核工作�?
+- A. 审核工作�?
 - B. 自动 .docx 生成
 - C. YouTube 自动搜索
 - D. Spotify 集成
-- E. 与现�?hymns.ts 同步
+- E. 与现�?hymns.ts 同步
 
 #### Settings
 - A. 多语言设置
 - B. 主题切换
-- C. 多网�?
+- C. 多网�?
 - D. 推送通知
-- E. 隐私政策随时间更�?
+- E. 隐私政策随时间更�?
 
-【实�?�?19 个新文件�?
+【实�?�?19 个新文件�?
 
 **核心层（5 个，纯类型无 IO）：**
-- src/content/config.ts �?Zod schema�? �?collection
-- src/lib/core/content.ts �?ResolvedContent<T> 通用值类�?+ 8 �?Data shape
-- src/lib/core/events.ts �?Append-only CmsEvent discriminated union
-- src/lib/core/never.ts �?assertNever 助手
-- src/lib/env.ts �?单一 env 入口
+- src/content/config.ts �?Zod schema�? �?collection
+- src/lib/core/content.ts �?ResolvedContent<T> 通用值类�?+ 8 �?Data shape
+- src/lib/core/events.ts �?Append-only CmsEvent discriminated union
+- src/lib/core/never.ts �?assertNever 助手
+- src/lib/env.ts �?单一 env 入口
 
-**Adapter 层（2 个）�?*
-- src/lib/adapters/storage.ts �?StorageAdapter 契约 + factory
-- src/lib/adapters/local.ts �?本地文件系统实现
+**Adapter 层（2 个）�?*
+- src/lib/adapters/storage.ts �?StorageAdapter 契约 + factory
+- src/lib/adapters/local.ts �?本地文件系统实现
 
-**Module 层（5 个业务模块）�?*
-- src/lib/modules/blog.ts �?listBlogPosts() + bandOf() 自动分类
-- src/lib/modules/hymns.ts �?hymn + suggestion 服务 + 审核工作�?
-- src/lib/modules/sermons.ts �?讲道服务 + 系列分组
-- src/lib/modules/settings.ts �?设置服务 + 缓存
-- src/lib/modules/media.ts �?媒体服务 + MIME 检�?
+**Module 层（5 个业务模块）�?*
+- src/lib/modules/blog.ts �?listBlogPosts() + bandOf() 自动分类
+- src/lib/modules/hymns.ts �?hymn + suggestion 服务 + 审核工作�?
+- src/lib/modules/sermons.ts �?讲道服务 + 系列分组
+- src/lib/modules/settings.ts �?设置服务 + 缓存
+- src/lib/modules/media.ts �?媒体服务 + MIME 检�?
 
-**Index + 文档�? 个）�?*
-- src/lib/index.ts �?公共重导�?
-- docs/architecture.md �?10 条决�?+ "为什么不" 日志 + 5 步未来路�?
-- docs/cms-architecture.md �?CMS 公共参�?
-- src/pages/blog/index.astro �?重构为按 5 �?band 分组
+**Index + 文档�? 个）�?*
+- src/lib/index.ts �?公共重导�?
+- docs/architecture.md �?10 条决�?+ "为什么不" 日志 + 5 步未来路�?
+- docs/cms-architecture.md �?CMS 公共参�?
+- src/pages/blog/index.astro �?重构为按 5 �?band 分组
 
-**修改文件�? 个）�?*
-- public/admin/index.html �?修复 meta 标签 typo，更干净 Sveltia mount
-- public/admin/config.yml �?�?Astro schema 对齐，新�?isHymn/heroImage/excerpt/status
-- src/pages/blog/index.astro �?新模块消�?
+**修改文件�? 个）�?*
+- public/admin/index.html �?修复 meta 标签 typo，更干净 Sveltia mount
+- public/admin/config.yml �?�?Astro schema 对齐，新�?isHymn/heroImage/excerpt/status
+- src/pages/blog/index.astro �?新模块消�?
 
-【应用的 10 条硬约束�?
-1. 20 步债务评估 �?每个模块 5 步未来路径记录在 docs/architecture.md
-2. 接口优先 �?storage.ts 契约先于 local.ts 实现
-3. 类型穷举 �?6 �?discriminated union：ContentKind / CmsEvent / BlogBand / SermonKind / HymnReviewAction / MediaCategory
-4. 不发明新概念 �?ResolvedContent 等类型只�?core/content.ts 唯一定义
-5. 零硬编码 �?切换 provider 只改 env.ts 一�?
-6. 不可变事�?�?applyReview() 返回新对象，不修改输�?
-7. Append-only �?CmsEvent 只有 append()，没�?update()
-8. 依赖方向 �?core �?adapters �?modules �?apps（严格单向）
-9. 删除 > 兼容 �?�?ad-hoc shape 不打补丁，新 shape �?core
-10. "为什么不" �?10 条决策全部记录在 docs/architecture.md
+【应用的 10 条硬约束�?
+1. 20 步债务评估 �?每个模块 5 步未来路径记录在 docs/architecture.md
+2. 接口优先 �?storage.ts 契约先于 local.ts 实现
+3. 类型穷举 �?6 �?discriminated union：ContentKind / CmsEvent / BlogBand / SermonKind / HymnReviewAction / MediaCategory
+4. 不发明新概念 �?ResolvedContent 等类型只�?core/content.ts 唯一定义
+5. 零硬编码 �?切换 provider 只改 env.ts 一�?
+6. 不可变事�?�?applyReview() 返回新对象，不修改输�?
+7. Append-only �?CmsEvent 只有 append()，没�?update()
+8. 依赖方向 �?core �?adapters �?modules �?apps（严格单向）
+9. 删除 > 兼容 �?�?ad-hoc shape 不打补丁，新 shape �?core
+10. "为什么不" �?10 条决策全部记录在 docs/architecture.md
 
-【验证结果�?
+【验证结果�?
 - Build: 268 pages, 0 errors, 0 warnings
-- Blog 页面�?5 �?band 自动分组�?
+- Blog 页面�?5 �?band 自动分组�?
   - Devotionals & Reflections (2)
-  - South African Life & Faith (16) �?最大分�?
+  - South African Life & Faith (16) �?最大分�?
   - For Beginners (1)
   - Pastoral Reflections (1)
   - Hymns & Worship (10)
-- 这是一个新�?UX 提升，完全免�?
+- 这是一个新�?UX 提升，完全免�?
 
-【Bug 反馈 + 修复�?
-用户的诊断：「blog 页面没显示文章」�?
-我的诊断：lib 模块用了 localStorageAdapter，但 Astro 是用 astro:content 内部 loader，所�?list 出来空�?
-修复：blog 模块改用 astro:content 优先，localStorageAdapter 作为 non-Astro 场景�?fallback�?
-验证：Build �?268 pages 全部正常，blog index 渲染 30 篇文章按 5 �?band 分组显示�?
+【Bug 反馈 + 修复�?
+用户的诊断：「blog 页面没显示文章」�?
+我的诊断：lib 模块用了 localStorageAdapter，但 Astro 是用 astro:content 内部 loader，所�?list 出来空�?
+修复：blog 模块改用 astro:content 优先，localStorageAdapter 作为 non-Astro 场景�?fallback�?
+验证：Build �?268 pages 全部正常，blog index 渲染 30 篇文章按 5 �?band 分组显示�?
 
-【Git Commits�?
+【Git Commits�?
 - 25ee82c feat(arch): introduce lib/ layer for content + CMS architecture
 - 7d82423 fix(blog): use astro:content as primary reader
 - 9a81f60 docs: log Phase 12 architecture refactor
 
-【部署结果�?
-�?GitHub: 3 commits 已推送到 origin/master
-�?Cloudflare Pages: 268 pages 部署成功
-�?Live 验证：https://joburgchurch.co.za/blog/ �?band 分组显示
-�?Live 验证：https://joburgchurch.co.za/admin/config.yml 可访�?
-�?Sveltia UI 加载正常
+【部署结果�?
+�?GitHub: 3 commits 已推送到 origin/master
+�?Cloudflare Pages: 268 pages 部署成功
+�?Live 验证：https://joburgchurch.co.za/blog/ �?band 分组显示
+�?Live 验证：https://joburgchurch.co.za/admin/config.yml 可访�?
+�?Sveltia UI 加载正常
 
-【增量迁移路线（已记录，但未执行）�?
-- [x] Step 1: lib 层创�?
+【增量迁移路线（已记录，但未执行）�?
+- [x] Step 1: lib 层创�?
 - [x] Step 2: content config schema 落地
-- [x] Step 3: blog index �?listBlogPosts()（带 band 分组�?
-- [ ] Step 4: blog detail �?getBlogPost()
-- [ ] Step 5: events page �?listEvents() (module TBD)
-- [ ] Step 6: sermons page �?listSermons()
-- [ ] Step 7: gallery page �?listGallery() (module TBD)
+- [x] Step 3: blog index �?listBlogPosts()（带 band 分组�?
+- [ ] Step 4: blog detail �?getBlogPost()
+- [ ] Step 5: events page �?listEvents() (module TBD)
+- [ ] Step 6: sermons page �?listSermons()
+- [ ] Step 7: gallery page �?listGallery() (module TBD)
 - [ ] Step 8: settings-driven Header / Footer / Schema
 - [ ] Step 9: hymn-suggestions review UI
+
+=====================================
+本次保存内容结束
+=====================================
+
+=====================================
+开发记录 11: 5 篇新博客内容（2026-07-25）
+=====================================
+
+【开始时间】2026-07-25 13:35
+【结束时间】2026-07-25 13:58
+
+【需求】
+延续前一轮「再增加一些内容」任务，添加 5 篇新的高价值本地化、非争议性「干货」博客，目标受众仍是南非本地基督徒。
+
+【话题选择原则】
+- 100% 本地化（Jozi / Sandton / Soweto / Pretoria 等真实地点）
+- 避开教义争议（不涉及预定论、灵恩、末世论、成功神学、教派分歧）
+- 与已有 30 篇博客话题不重复
+- 实用、温暖、接地气风格
+
+【5 篇新博客】
+
+1. **Waiting on God in Johannesburg: A Christian's Guide to the Long Pause**
+   - slug: waiting-on-god-johannesburg-delays
+   - 主题：从 load-shedding、Home Affairs 队列、签证、求职等 Jozi 实际场景出发，写基督徒如何「在长 pause 中与神同行」
+   - 核心经文：Psalm 27:14, 130:5, Habakkuk 2:3, Isaiah 40:31, Lamentations 3:25-26
+   - 长度：~3500 字
+   - 自动归类：devotional band
+
+2. **Caring for Aging Parents from a Distance: A Christian's Guide for the South African Diaspora**
+   - slug: caring-aging-parents-south-africa
+   - 主题：远距离照顾南非年迈父母的圣经原则 + 实用月/季/年计划
+   - 核心经文：Exodus 20:12, Proverbs 23:22, 1 Timothy 5:4, 1 Timothy 5:8, Isaiah 46:4
+   - 长度：~3500 字
+   - 自动归类：pastoral band
+
+3. **Moving to Johannesburg: A Survival Guide for New Arrivals to the City of Gold**
+   - slug: moving-to-johannesburg-newcomers
+   - 主题：刚搬来 Jozi 的 90 天生存指南（银行、医疗、驾照、教会、社区）
+   - 核心经文：Genesis 12:1, Ruth 1:16, Jeremiah 29:4-7, Psalm 137:4, 1 Peter 1:6-7
+   - 长度：~4000 字
+   - 自动归类：sa-local band
+
+4. **Single Adult Christians in Johannesburg: The Quiet Obedience of the Long Wait**
+   - slug: single-adults-faith-johannesburg
+   - 主题：Jozi 单身成年人的身份与长期等待，避开「催婚」陷阱
+   - 核心经文：1 Corinthians 7:7-8, 7:32-35, Matthew 19:12, Luke 2:36-37 (Anna), Psalm 46:10, 1 Peter 2:9
+   - 长度：~4000 字
+   - 自动归类：pastoral band
+
+5. **Money, Generosity, and the South African Christian: A Practical Guide to Stewardship**
+   - slug: money-stewardship-south-african-christians
+   - 主题：圣经金钱观 + 10/10/10/70 实用预算 + 5 个常见误解（明确反对成功神学）
+   - 核心经文：Malachi 3:10, 2 Corinthians 9:6-7, 1 Timothy 6:10, Luke 12:15, Matthew 6:24, Acts 2:44-45, Proverbs 22:7, 1 Timothy 5:8, Hebrews 13:5
+   - 长度：~4500 字
+   - 自动归类：sa-local band
+
+【实施步骤】
+1. 检查已有博客标题列表，避免话题重复
+2. 选择 5 个全新方向
+3. 为每篇创建 markdown 文件（frontmatter + 正文）
+4. 更新 src/pages/blog/[slug].astro 的 posts[] 字典（5 个新条目，HTML 格式）
+5. 更新 src/pages/blog/[slug].astro 的 getStaticPaths()（5 个新 slug）
+6. 更新 src/pages/sitemap.xml.ts（5 个新 URL）
+7. 不添加 heroImage（保持图片缺失时页面正常渲染，避免生产 404）
+
+【修改文件】
+- src/content/posts/waiting-on-god-johannesburg-delays.md（NEW）
+- src/content/posts/caring-aging-parents-south-africa.md（NEW）
+- src/content/posts/moving-to-johannesburg-newcomers.md（NEW）
+- src/content/posts/single-adults-faith-johannesburg.md（NEW）
+- src/content/posts/money-stewardship-south-african-christians.md（NEW）
+- src/pages/blog/[slug].astro（修改：添加 5 个 slug + 5 个字典条目）
+- src/pages/sitemap.xml.ts（修改：添加 5 个 URL）
+
+【架构原则遵循】
+- 数据写入 src/content/posts/*.md → 通过 lib/modules/blog.ts 的 listBlogPosts() 自动显示
+- Astro build 自动读取 markdown frontmatter，验证 Zod schema（src/content/config.ts）
+- 新内容自动归类到正确的 BlogBand（devotional/sa-local/pastoral/beginner/hymn）
+- 无新增模块、无破坏性 schema 变更、无新概念发明
+- 5 篇博客全部用 Markdown 格式，符合现有博客风格
+- detail 页内容仍然通过 posts[] 字典（不读 markdown 正文）—— 保持向后兼容
+
+【验证结果】
+- Build: 0 errors, 0 warnings, 0 invalid content
+- 生成 5 个新静态页面：
+  - /blog/waiting-on-god-johannesburg-delays/
+  - /blog/caring-aging-parents-south-africa/
+  - /blog/moving-to-johannesburg-newcomers/
+  - /blog/single-adults-faith-johannesburg/
+  - /blog/money-stewardship-south-african-christians/
+- Blog index 自动按 5 个 band 分组显示新文章
+- Sitemap 包含 5 个新 URL（lastmod 2026-07-25）
+- 已有 30 篇博客保持正常显示
+
+【与 Phase 12 架构的关系】
+- 完全复用 lib/modules/blog.ts 的 listBlogPosts() 接口
+- 零新增模块、零硬编码、零破坏性 schema 变更
+- 符合 Anti-Design-Debt 全部 10 条硬约束
+- Markdown frontmatter 自动通过 Zod 校验
 
 =====================================
 本次保存内容结束

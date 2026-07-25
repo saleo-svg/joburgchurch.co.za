@@ -85,6 +85,11 @@ export const GET: APIRoute = () => {
     { url: '/blog/commuter-prayer-johannesburg-guide/', lastmod: '2026-07-23' },
     { url: '/blog/winter-funerals-south-africa-grief/', lastmod: '2026-07-23' },
     { url: '/blog/mid-year-reset-july-spiritual-check-in/', lastmod: '2026-07-23' },
+    { url: '/blog/waiting-on-god-johannesburg-delays/', lastmod: '2026-07-25' },
+    { url: '/blog/caring-aging-parents-south-africa/', lastmod: '2026-07-25' },
+    { url: '/blog/moving-to-johannesburg-newcomers/', lastmod: '2026-07-25' },
+    { url: '/blog/single-adults-faith-johannesburg/', lastmod: '2026-07-25' },
+    { url: '/blog/money-stewardship-south-african-christians/', lastmod: '2026-07-25' },
   ];
 
   const allPages = [
