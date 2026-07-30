@@ -306,55 +306,107 @@ Build 后：268 pages 全部正常，blog index 渲染 30 篇文章按 5 �?ban
 文件结束
 =====================================
 
---- �Ի� 17 (2026-07-25 13:35) --- ��������Ի� ---
+--- �Ի� 17 (2026-07-25 13:35) --- ��������Ի� ---
 
-���û����ʡ�
-��ǰ��һ��������һ���������ƣ���������һЩ���ݰɣ��ðɣ�
+���û����ʡ�
+��ǰ��һ��������һ���������ƣ���������һЩ���ݰɣ��ðɣ�
 
-���ҵĻش�
-�õģ�������"�߼�ֵ���ػ���������������顢100% �Ϸ�����"ԭ�����������ݡ�
+���ҵĻش�
+�õģ�������"�߼�ֵ���ػ���������������顢100% �Ϸ�����"ԭ�����������ݡ�
 
-��ѡ�� 5 ��ȫ�µġ�֮ǰû�и��ǵķ���
+��ѡ�� 5 ��ȫ�µġ�֮ǰû�и��ǵķ���
 
 1. **Waiting on God in Johannesburg: A Christian's Guide to the Long Pause**
-   - Jozi ��"�� pause"������ load-shedding��Home Affairs ���С�ǩ֤����ְ��д����ڵȴ�������ͬ��
-   - ~3500 �� / �Զ����� devotional band
+   - Jozi ��"�� pause"������ load-shedding��Home Affairs ���С�ǩ֤����ְ��д����ڵȴ�������ͬ��
+   - ~3500 �� / �Զ����� devotional band
 
 2. **Caring for Aging Parents from a Distance: A Christian's Guide for the South African Diaspora**
-   - Զ�����չ��Ϸ�������ĸ��ʥ��ԭ�� + ��/��/��ʵ�üƻ�
-   - ~3500 �� / �Զ����� pastoral band
+   - Զ�����չ��Ϸ�������ĸ��ʥ��ԭ�� + ��/��/��ʵ�üƻ�
+   - ~3500 �� / �Զ����� pastoral band
 
 3. **Moving to Johannesburg: A Survival Guide for New Arrivals to the City of Gold**
-   - �հ��� Jozi �� 90 ������ָ�ϡ������С�ҽ�ơ����ա��̻ᡢ����
-   - ~4000 �� / �Զ����� sa-local band
+   - �հ��� Jozi �� 90 ������ָ�ϡ������С�ҽ�ơ����ա��̻ᡢ����
+   - ~4000 �� / �Զ����� sa-local band
 
 4. **Single Adult Christians in Johannesburg: The Quiet Obedience of the Long Wait**
-   - Jozi ���������˵������볤�ڵȴ����ܿ�"�߻�"����
-   - ~4000 �� / �Զ����� pastoral band
+   - Jozi ���������˵������볤�ڵȴ����ܿ�"�߻�"����
+   - ~4000 �� / �Զ����� pastoral band
 
 5. **Money, Generosity, and the South African Christian: A Practical Guide to Stewardship**
-   - ʥ����Ǯ�� + 10/10/10/70 ʵ��Ԥ�� + 5 ��������⣨��ȷ���Գɹ���ѧ��
-   - ~4500 �� / �Զ����� sa-local band
+   - ʥ����Ǯ�� + 10/10/10/70 ʵ��Ԥ�� + 5 ��������⣨��ȷ���Գɹ���ѧ��
+   - ~4500 �� / �Զ����� sa-local band
 
-���ܹ�ʵʩ��
-- 5 ƪ markdown д�� src/content/posts/
-- src/pages/blog/[slug].astro �� posts[] �ֵ����� 5 ������Ŀ
-- src/pages/blog/[slug].astro �� getStaticPaths() ���� 5 �� slug
-- src/pages/sitemap.xml.ts ���� 5 �� URL
-- ������ heroImage���������� 404��
-- ��ȫ�������� lib/modules/blog.ts �ӿ�
-- 0 ����ģ�飬0 Ӳ���룬0 �ƻ��Ա��
+���ܹ�ʵʩ��
+- 5 ƪ markdown д�� src/content/posts/
+- src/pages/blog/[slug].astro �� posts[] �ֵ����� 5 ������Ŀ
+- src/pages/blog/[slug].astro �� getStaticPaths() ���� 5 �� slug
+- src/pages/sitemap.xml.ts ���� 5 �� URL
+- ������ heroImage���������� 404��
+- ��ȫ�������� lib/modules/blog.ts �ӿ�
+- 0 ����ģ�飬0 Ӳ���룬0 �ƻ��Ա��
 
-����֤�����
+����֤�����
 - Build: 0 errors, 0 warnings, 0 invalid content
-- 5 ���¾�̬ҳ�����ɳɹ�
-- Blog index �Զ��� 5 �� band ������ʾ������
-- Sitemap ���� 5 ���� URL
-- ���� 30 ƪ���ͱ���������ʾ
+- 5 ���¾�̬ҳ�����ɳɹ�
+- Blog index �Զ��� 5 �� band ������ʾ������
+- Sitemap ���� 5 ���� URL
+- ���� 30 ƪ���ͱ���������ʾ
 
-��Git ״̬��
-�� commit + push �� origin/master �� Cloudflare Pages �Զ�����
+��Git ״̬��
+�� commit + push �� origin/master �� Cloudflare Pages �Զ�����
 
 =====================================
-�ļ�����
+�ļ�����
+=====================================
+
+=====================================
+用户对话记录 - Church Site 项目
+更新时间: 2026-07-30 20:11 SAST
+=====================================
+
+--- 对话 18 (今天 20:03) --- 新一轮内容添加
+
+【用户提问】
+读取历史对话记录开发记录，然后再增加一些适当的文章内容，要求文章要有价值，不要泛泛而谈 不要general talking， 要面向针对南非本地群体的，而且文章内容严格遵守圣经，不要随意添加自己的理解
+
+【我的回答】
+理解了。我先读取了：
+1. 用户对话记录.txt（涵盖 2026-06 到 2026-07-25 所有对话）
+2. 开发记录.md / 开发记录.txt（涵盖 6 个开发会话 + Phase 12 反技术债架构）
+3. 项目现有的 src/content/posts/ 中的 30+ 篇文章
+
+从对话历史看到用户要求：
+- 高价值干货、不泛泛而谈
+- 100% 面向南非本地（Jozi / Sandton / Soweto / Pretoria）
+- 避开教义争议（不涉及预定论、灵恩、末世论、成功神学）
+- 严格遵守圣经、不随意添加自己的理解
+
+我盘点已有 30+ 篇文章的话题，确认 5 个全新方向（不与已有重复）：
+
+1. **Hospital Beds, Prayer, and the Long Wait** — 南非医院探望病人的圣经指南（独特 SA 痛点）
+2. **Raising Children in Faith Across Two Languages** — 南非双语/多语家庭的信仰传承
+3. **Forgiveness in a Country That Has Not Forgotten** — 历史的沉重 + 圣经宽恕观
+4. **How to Recognise a False Teacher** — 南非宗教市场环境下的辨别指引（明确反对成功神学）
+5. **Passing the Faith to the Next Generation** — Titus 2 代际门训模型
+
+每篇：
+- ~3500-4500 词
+- 大量圣经经文（每篇 8-12 处 direct quote + citation）
+- 真实南非地点（Baragwanath、Charlotte Maxeke、Parkmore、Soweto、Sandton）
+- 实用实践 + 经文应用
+- 无个人发挥、不添加未经圣经支持的教导
+
+【完成】
+- 5 篇 markdown 写好（src/content/posts/）
+- 5 个新 slug 添加到 src/pages/blog/[slug].astro 的 getStaticPaths
+- 5 个字典条目添加到 src/pages/blog/[slug].astro 的 posts 字典
+- 5 个新 URL 添加到 src/pages/sitemap.xml.ts
+- sitemap.xml.ts 的 now 常量从 2026-07-03 改为 2026-07-30
+- Build: 278 pages, 0 errors, 0 warnings
+- 自动归类到 sa-local band
+- Git commit 97563ac + push origin/master
+- Cloudflare Pages 部署完成：https://1586f4c9.joburgchurch.pages.dev
+
+=====================================
+文件结束
 =====================================
