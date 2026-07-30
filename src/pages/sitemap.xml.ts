@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = () => {
   const siteUrl = 'https://joburgchurch.co.za';
-  const now = '2026-07-03';
+  const now = '2026-07-30';
 
   const staticPages = [
     { url: '/', priority: '1.0', changefreq: 'weekly' },
@@ -90,6 +90,11 @@ export const GET: APIRoute = () => {
     { url: '/blog/moving-to-johannesburg-newcomers/', lastmod: '2026-07-25' },
     { url: '/blog/single-adults-faith-johannesburg/', lastmod: '2026-07-25' },
     { url: '/blog/money-stewardship-south-african-christians/', lastmod: '2026-07-25' },
+    { url: '/blog/hospital-visit-south-africa-christian/', lastmod: '2026-07-30' },
+    { url: '/blog/raising-children-faith-multilingual-south-africa/', lastmod: '2026-07-30' },
+    { url: '/blog/forgiveness-south-africa-historical-weight/', lastmod: '2026-07-30' },
+    { url: '/blog/discerning-false-teachers-south-africa/', lastmod: '2026-07-30' },
+    { url: '/blog/intergenerational-discipleship-south-africa/', lastmod: '2026-07-30' },
   ];
 
   const allPages = [
