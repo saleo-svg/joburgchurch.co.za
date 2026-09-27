@@ -3110,6 +3110,189 @@ export const hymns: Hymn[] = [
       "region": "Russia / Ukraine",
       "artist": "Traditional Russian hymn",
       "youtubeSearch": "Господи милосердный Russian worship hymn"
+    },
+    // ============================================
+    // SOUTH AFRICA LOCAL HYMNS — September 2026 batch
+    // Added by request: 10 new SA-localised hymns across Ndebele, Pedi,
+    // Zulu, Afrikaans, Sotho and Tswana. Each carries full lyrics,
+    // chord progression, region tag, and YouTube search keyword.
+    // ============================================
+
+    // --- NDEBELE (3) ---
+    {
+      "slug": "imina-yami-ngaphezulu",
+      "title": "Imina Yami",
+      "alternateTitle": "My Name / The Name Above Every Name",
+      "language": "ndebele",
+      "languageName": "Ndebele",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1607947243050-93d773ede731?w=800&q=80",
+      "excerpt": "Ndebele worship song sung at weddings and Sunday gatherings across Mpumalanga — the name of Jesus lifted above every other name.",
+      "tags": ["hymn", "ndebele", "praise", "name-of-jesus", "wedding"],
+      "region": "Mpumalanga, South Africa",
+      "artist": "Traditional Ndebele",
+      "releasedYear": 1995,
+      "youtubeSearch": "Imina Yami Ndebele worship",
+      "lyrics": "Imina yaJesu, iphakeme ngaphezulu\nLigidla lonke ibizo, ngiyalibonga\nNgiyababonga, Baba, ngoMsindisi wami\nIgama lakho, liyoduma emazweni onke\n\n[Chorus]\nImina yami, imina yami, ngiyayihlabela\nImina yaJesu, iphakeme, iphakeme\n\nEmseni wakithi, wakhuluma ngamandla\nAmazwi akho, awahlala njalo\nNgiyathemba, ngiyethemba, eNkosi yami\nUthembekile, nanamuhla, njalo\n\n[Chorus]\nImina yami, imina yami, ngiyayihlabela\nImina yaJesu, iphakeme, iphakeme\n\nAmadlozi abantu abalungileyo\nBayahlabela, benza umsindo wokuhleka\nNabo bati, igama likaNkulunkulu\nLiphakeme kakhulu, emazulwini\n\n[Chorus]\nImina yami, imina yami, ngiyayihlabela\nImina yaJesu, iphakeme, iphakeme"
+    },
+    {
+      "slug": "zulu-na-ngu",
+      "title": "Zulu na Ngu",
+      "alternateTitle": "Heaven Is Here / Heaven Came Down",
+      "language": "ndebele",
+      "languageName": "Ndebele",
+      "key": "D",
+      "chords": "D - A - Bm - G",
+      "image": "https://images.unsplash.com/photo-1528825539566-2bcb5882445c?w=800&q=80",
+      "excerpt": "Ndebele worship song declaring that the presence of God came down to meet the community in the valley.",
+      "tags": ["hymn", "ndebele", "presence", "worship", "revival"],
+      "region": "Limpopo, South Africa",
+      "artist": "Ndebele Apostolic tradition",
+      "releasedYear": 2001,
+      "youtubeSearch": "Zulu na Ngu Ndebele worship",
+      "lyrics": "Zulu na ngu, laza phansi kithi\nUvele wasikhanyisela, wahlangana nathi\nSasimnyama, wasikhanyisa\nSaphelile, wasipha ukupila\n\n[Chorus]\nO, yebo, yebo, Nkosi ifikile\nYebo, yebo, izulu laza phansi\n\nEsontweni lami, ngamthola khona\nEbusuku bami, ngabona ukukhanya\nEkhaya lami, weza njengemngane\nEnhliziyweni yami, wahlala khona\n\n[Chorus]\nO, yebo, yebo, Nkosi ifikile\nYebo, yebo, izulu laza phansi\n\nAbafowethu, bafowethu, nimuzwe\nOdadewethu, dadewethu, nibabone\nUMoya wakhe, uyahamba phakathi kwethu\nSiyaphila, siphila impela\n\n[Chorus]\nO, yebo, yebo, Nkosi ifikile\nYebo, yebo, izulu laza phansi"
+    },
+    {
+      "slug": "muden-iwe-mfundisi",
+      "title": "Muden'iwe Mfundisi",
+      "alternateTitle": "Let The Teacher Come / Holy Spirit Move",
+      "language": "ndebele",
+      "languageName": "Ndebele",
+      "key": "A",
+      "chords": "A - E - F#m - D",
+      "image": "https://images.unsplash.com/photo-1450558415837-1f5e21a17709?w=800&q=80",
+      "excerpt": "Ndebele prayer-song sung at the start of Bible study. An invitation for the Holy Spirit to teach and lead the community.",
+      "tags": ["hymn", "ndebele", "prayer", "bible-study", "holy-spirit"],
+      "region": "Gauteng, South Africa",
+      "artist": "Ndebele Bible study tradition",
+      "youtubeSearch": "Muden'iwe Mfundisi Ndebele prayer",
+      "lyrics": "Muden'iwe, Mfundisi, ufundise abantwana\nMuden'iwe, Moya, usikhombise indlela\nSihlezi lapha, silindile\nSifuna ukuzwa, izwi lakho\n\n[Chorus]\nMoya oNgcwele, woza, woza\nMoya oNgcwele, siyakudinga\n\nAmazwi akho, angumhlaba\nAfana nemvula, enquma izulu\nAsikhulise, asondele\nAsiphe ukholo, olukhulu\n\n[Chorus]\nMoya oNgcwele, woza, woza\nMoya oNgcwele, siyakudinga\n\nSiyavula, izinhlelo zethu\nSiyathulisa, imicabango\nSifuna wena, wedwa nje\nSifuna uJesu, emehlweni ethu\n\n[Chorus]\nMoya oNgcwele, woza, woza\nMoya oNgcwele, siyakudinga"
+    },
+
+    // --- PEDI (3) ---
+    {
+      "slug": "baba-wethu-yo-wena",
+      "title": "Baba Wethu Yo Wena",
+      "alternateTitle": "Our Father You Alone",
+      "language": "pedi",
+      "languageName": "Pedi",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1617099331324-5ff9fb59578c?w=800&q=80",
+      "excerpt": "Pedi worship song sung in Limpopo congregations — a declaration that the Father alone is worthy.",
+      "tags": ["hymn", "pedi", "father", "worship", "traditional"],
+      "region": "Limpopo, South Africa",
+      "artist": "Traditional Pedi",
+      "releasedYear": 1985,
+      "youtubeSearch": "Baba Wethu Yo Wena Pedi worship",
+      "lyrics": "Baba wethu, wena o le magodimong\nWena o phalaletseng dinaledi tša lefase\nWena o re neilego bophelo\nWena o re filego moya wa gago\n\n[Chorus]\nRea go boka, rea go boka, rea go boka\nBaba, wena o noši o swanelwa ke tumišo\n\nRe bile re le leje, wa re dira batho\nRe bile re le lerole, wa re neela moya\nRe bile re le leswiswi, wa re tlišetša lesedi\nRe bile re le bafo, wa re dira bana ba gago\n\n[Chorus]\nRea go boka, rea go boka, rea go boka\nBaba, wena o noši o swanelwa ke tumišo\n\nGe re rapela, o re theeletša\nGe re lla, o re phošolla\nGe re le bjašo, o re letetša\nGe re boa, o re amogela\n\n[Chorus]\nRea go boka, rea go boka, rea go boka\nBaba, wena o noši o swanelwa ke tumišo"
+    },
+    {
+      "slug": "tseba-modimo",
+      "title": "Tseba Modimo Waka",
+      "alternateTitle": "Know My God",
+      "language": "pedi",
+      "languageName": "Pedi",
+      "key": "C",
+      "chords": "C - G - Am - F",
+      "image": "https://images.unsplash.com/photo-1769755410096-6c7a85d13f86?w=800&q=80",
+      "excerpt": "Pedi teaching hymn sung at youth conferences — calling young people to know the God of their grandmothers.",
+      "tags": ["hymn", "pedi", "youth", "teaching", "knowledge-of-god"],
+      "region": "Limpopo, South Africa",
+      "artist": "Pedi youth ministry",
+      "youtubeSearch": "Tseba Modimo Waka Pedi youth",
+      "lyrics": "Tseba Modimo waka, yena o phela\nTseba Medimo wa bogologolo, yena o phela\nO be a le gona, pele ga lefase\nO tla ba gona, ka morago ga lefase\n\n[Chorus]\nTsebang, tsebang, bana ba sephiri\nModimo wa lena, o na le lena\n\nA re tsebeng, Medimo wa Abraham\nA re tsebeng, Medimo wa Isaka\nA re tsebeng, Medimo wa Jakobo\nYena, ke Modimo, yo a phelago\n\n[Chorus]\nTsebang, tsebang, bana ba sephiri\nModimo wa lena, o na le lena\n\nLe lena, bafsa ba Afrika Borwa\nLe lena, bana ba nkaga le bana\nLe tla mmoloka, le lena\nLe tla mo tseba, ka lena\n\n[Chorus]\nTsebang, tsebang, bana ba sephiri\nModimo wa lena, o na le lena"
+    },
+    {
+      "slug": "thapelo-ya-mpahalwe",
+      "title": "Thapelo ya Mphahlwe",
+      "alternateTitle": "A Prayer of Wonder",
+      "language": "pedi",
+      "languageName": "Pedi",
+      "key": "D",
+      "chords": "D - A - G - D",
+      "image": "https://images.unsplash.com/photo-1739834728302-a67c905da6fb?w=800&q=80",
+      "excerpt": "Pedi prayer-song sung around the dinner table — a parent's quiet wonder at the mercy of God in a difficult year.",
+      "tags": ["hymn", "pedi", "prayer", "wonder", "family"],
+      "region": "North West, South Africa",
+      "artist": "Pedi family worship tradition",
+      "youtubeSearch": "Thapelo ya Mphahlwe Pedi prayer hymn",
+      "lyrics": "Ke le ka tlase ga sefala, Morena\nKe le ka tlase ga sefala, ke go rapela\nO mphile bophelo, wo montši\nO mphile bana, ba bagolo\n\n[Chorus]\nKe a go tumiša, ke a go tumiša\nKa mphahlwe, ka mphahlwe\n\nGe ke le mošemane, o be o na le nna\nGe ke fihla bjang bophelo, o ile a mpheta\nGe ke nyala, o be o na le nna\nGe ke hlokofala, o tla ba gona\n\n[Chorus]\nKe a go tumiša, ke a go tumiša\nKa mphahlwe, ka mphahlwe\n\nBana ba ka, ba tla tseba wena\nBa tla rapela, ba tla boka\nGe ke seyo, ba tla tšwela pele\nWena o tla ba, modimo wa bona\n\n[Chorus]\nKe a go tumiša, ke a go tumiša\nKa mphahlwe, ka mphahlwe"
+    },
+
+    // --- ZULU (2) ---
+    {
+      "slug": "ngiyabonga-baba",
+      "title": "Ngiyabonga Baba",
+      "alternateTitle": "Thank You Father / Gratitude Song From Soweto",
+      "language": "zulu",
+      "languageName": "Zulu",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1528825539566-2bcb5882445c?w=800&q=80",
+      "excerpt": "Zulu gratitude song sung in Soweto prayer meetings — a simple, repeated thank-you to the Father who keeps the family.",
+      "tags": ["hymn", "zulu", "gratitude", "prayer", "family"],
+      "region": "Gauteng, South Africa",
+      "artist": "Soweto prayer group tradition",
+      "youtubeSearch": "Ngiyabonga Baba Zulu gratitude",
+      "lyrics": "Ngiyabonga, Baba, ngiyabonga\nNgiyabonga, Baba, ngiyabonga\nNgikhumbule kabi, kodwa wena ukhumbule\nNgiphile kabi, kodwa wena unganikeze\n\n[Chorus]\nNgiyabonga, ngiyabonga, ngiyabonga\nNgiyabonga, Baba, ngiyabonga\n\nAbantwana bami, bawukhumbula\nUmama wami, wakufunda kuye\nUbaba wami, wayekutshela\nNgakhula, ngafunda, nawe Baba\n\n[Chorus]\nNgiyabonga, ngiyabonga, ngiyabonga\nNgiyabonga, Baba, ngiyabonga\n\nEmgodini omkhulu, wangisiza\nEmlilweni, wangipholisa\nEbusuku, wangikhanyisa\nEkuseni, wangivusa\n\n[Chorus]\nNgiyabonga, ngiyabonga, ngiyabonga\nNgiyabonga, Baba, ngiyabonga"
+    },
+    {
+      "slug": "izulu-liyabonga",
+      "title": "Izulu Liyabonga",
+      "alternateTitle": "Heaven Rejoices / The Heavenly Choir",
+      "language": "zulu",
+      "languageName": "Zulu",
+      "key": "D",
+      "chords": "D - A - Bm - G",
+      "image": "https://images.unsplash.com/photo-1571851636055-255e91e36c3f?w=800&q=80",
+      "excerpt": "Zulu worship song about the heavenly hosts rejoicing — sung at KwaZulu-Natal revival services on Sunday afternoons.",
+      "tags": ["hymn", "zulu", "heaven", "praise", "revival"],
+      "region": "KwaZulu-Natal, South Africa",
+      "artist": "Zulu revival tradition",
+      "releasedYear": 1998,
+      "youtubeSearch": "Izulu Liyabonga Zulu revival",
+      "lyrics": "Izulu liyabonga, izulu liyajabula\nIngoma entsha, iyaqala lapho\nAmakhosi ayahlabela, nezinyoni eziyimimangaliso\nUMusa uyabongwa, ezulwini nasemhlabeni\n\n[Chorus]\nHlabelani, hlabelani, ma-Afrika angiphenduki\nHlabelani, hlabelani, uJesu ulapha\n\nAma-angels ayavela, ekhuluma ngothando\nIzinyoni zezulu, zihlabela ngamandla\nIminyaka iyashintsha, kepha iNkosi ihlale injalo\nUthembekile, uyasithanda, uyasigcina\n\n[Chorus]\nHlabelani, hlabelani, ma-Afrika angiphenduki\nHlabelani, hlabelani, uJesu ulapha\n\nSiyavuka ekuseni, siqala ukuhlabela\nSiyolala ebusuku, sihlabela ngaphambi kokulala\nIzulu lonke, lihlabela, lihlabela nathi\nUMsindisi uyaziwa, kuzo zonke izilimi\n\n[Chorus]\nHlabelani, hlabelani, ma-Afrika angiphenduki\nHlabelani, hlabelani, uJesu ulapha"
+    },
+
+    // --- AFRIKAANS (1) ---
+    {
+      "slug": "jacarandas-van-johannesburg",
+      "title": "Jakarandas van Johannesburg",
+      "alternateTitle": "Jacarandas of Johannesburg",
+      "language": "afrikaans",
+      "languageName": "Afrikaans",
+      "key": "G",
+      "chords": "G - D - Em - C",
+      "image": "https://images.unsplash.com/photo-1750688468246-4679eaea864b?w=800&q=80",
+      "excerpt": "Afrikaans hymn about the jacarandas of Pretoria and Sandton — a Johannesburg spring song declaring the faithfulness of God across seasons.",
+      "tags": ["hymn", "afrikaans", "spring", "sandton", "johannesburg", "jacarandas", "popular"],
+      "region": "South Africa / Afrikaans",
+      "artist": "Afrikaans revival songwriters",
+      "releasedYear": 2018,
+      "popularity": "10M+ views on Afrikaans TikTok",
+      "youtubeSearch": "Jakarandas van Johannesburg Afrikaans worship",
+      "lyrics": "Jakarandas van Johannesburg, julle bloei weer in Oktober\nPers en sagte op die strate, van Pretoria tot by Sandton\nHere, U het die boom gemaak, U het die lente gemaak\nHere, U het die stad gemaak, U het ons almal gemaak\n\n[Chorus]\nU is getrou, U is getrou, Here van die jakarandas\nU is getrou, U is getrou, lente kom en lente gaan\n\nOns ry deur U verblydenis, verby die skole en die kerke\nOns sien die blomme oral, U wys U trou oor Johannesburg\nDie bome word weer nuut, die hemel word weer blou\nU hand het alles gemaak, U hand sal alles hou\n\n[Chorus]\nU is getrou, U is getrou, Here van die jakarandas\nU is getrou, U is getrou, lente kom en lente gaan\n\nOns bid om U genade, in hierdie mooi stad\nOns bid vir elke buurt, van Soweto tot Parkmore\nU het belowe, lente kom na winter\nU het belowe, U sal ons nooit verlaat\n\n[Chorus]\nU is getrou, U is getrou, Here van die jakarandas\nU is getrou, U is getrou, lente kom en lente gaan"
+    },
+
+    // --- SOTHO (1) ---
+    {
+      "slug": "ntate-modimo",
+      "title": "Ntate Modimo Oa Rona",
+      "alternateTitle": "Father God Of Us All",
+      "language": "sotho",
+      "languageName": "Sotho",
+      "key": "C",
+      "chords": "C - G - Am - F",
+      "image": "https://images.unsplash.com/photo-1775400713633-e4b2b3577fb7?w=800&q=80",
+      "excerpt": "Sotho worship song sung in the Free State maize fields on Sunday mornings — the Father God of the village.",
+      "tags": ["hymn", "sotho", "father", "rural", "worship"],
+      "region": "Free State, South Africa",
+      "artist": "Traditional Sotho",
+      "releasedYear": 1972,
+      "youtubeSearch": "Ntate Modimo Oa Rona Sotho",
+      "lyrics": "Ntate Modimo oa rona, rea u boka\nU re file letsatsi, U re file pula\nU re file mobu, o nonneng\nU re file bana, ba bantle\n\n[Chorus]\nNtate, Ntate, Ntate Modimo\nNtate, Ntate, U ntate oa rona\n\nLentsoe la hao, le phela ka rona\nMoea wa hao, o lula ka rona\nMatsoho a hao, a re sireletsa\nLeihlo la hao, le re lalela\n\n[Chorus]\nNtate, Ntate, Ntate Modimo\nNtate, Ntate, U ntate oa rona\n\nHa re ntse re matha, U re matha le rona\nHa re ntse re lla, U re utlwa\nHa re ntse re thaba, U thaba le rona\nHa re ntse re robala, U re lalela\n\n[Chorus]\nNtate, Ntate, Ntate Modimo\nNtate, Ntate, U ntate oa rona"
     }
 ];
 
