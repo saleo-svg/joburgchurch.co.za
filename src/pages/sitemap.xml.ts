@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = () => {
   const siteUrl = 'https://joburgchurch.co.za';
-  const now = '2026-07-30';
+  const now = '2026-09-27';
 
   const staticPages = [
     { url: '/', priority: '1.0', changefreq: 'weekly' },
@@ -95,6 +95,16 @@ export const GET: APIRoute = () => {
     { url: '/blog/forgiveness-south-africa-historical-weight/', lastmod: '2026-07-30' },
     { url: '/blog/discerning-false-teachers-south-africa/', lastmod: '2026-07-30' },
     { url: '/blog/intergenerational-discipleship-south-africa/', lastmod: '2026-07-30' },
+    { url: '/blog/heritage-month-south-africa-memory/', lastmod: '2026-09-20' },
+    { url: '/blog/joburg-spring-new-seasons-bible/', lastmod: '2026-09-20' },
+    { url: '/blog/sandton-soweto-gospel-gap/', lastmod: '2026-09-20' },
+    { url: '/blog/trust-honesty-south-africa-christian/', lastmod: '2026-09-20' },
+    { url: '/blog/peace-uncertainty-johannesburg-christian/', lastmod: '2026-09-20' },
+    { url: '/blog/sabbath-rest-johannesburg-city-never-stops/', lastmod: '2026-09-27' },
+    { url: '/blog/christian-grandparent-johannesburg-faith-2026/', lastmod: '2026-09-27' },
+    { url: '/blog/helping-children-hard-news-south-africa/', lastmod: '2026-09-27' },
+    { url: '/blog/christian-wedding-marriage-preparation-johannesburg/', lastmod: '2026-09-27' },
+    { url: '/blog/lunch-break-bible-study-sandton-workplace/', lastmod: '2026-09-27' },
   ];
 
   const allPages = [
