@@ -10,4 +10,4 @@ Welcome to Johannesburg Bible Study Church. We are a Bible study and welcoming C
 
 For the first time visitor: come to Wednesday Bible Study at 7:30pm on Google Meet. Bring a Bible if you have one. If you do not, we share the passage in the WhatsApp group ahead of time.
 
-For the Korean learner: come to our free Sunday Korean class at 2:00pm in Parkmore. We supply everything. Just call ahead.
+For the Korean learner: come to our Sunday Korean class at 3:00pm in Parkmore. A course fee applies — please call for current fees. Call ahead to register.

@@ -10,8 +10,8 @@ const breadcrumbs = [
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Course',
-  name: 'Free Korean Language Class for Beginners — Sandton',
-  description: 'A free Sunday afternoon Korean language class for absolute beginners in Parkmore, Sandton, Johannesburg. Learn Hangul, basic conversation, and Korean culture in a welcoming community.',
+  name: 'Korean Language Class for Beginners — Sandton',
+  description: 'A Sunday afternoon Korean language class for absolute beginners in Parkmore, Sandton, Johannesburg. Learn Hangul, basic conversation, and Korean culture. A course fee applies.',
   provider: {
     '@type': 'Organization',
     name: 'Johannesburg Bible Study Church',
@@ -19,11 +19,12 @@ const schema = {
   },
   educationalLevel: 'Beginner',
   inLanguage: ['en', 'ko'],
-  isAccessibleForFree: true,
+  isAccessibleForFree: false,
   offers: {
     '@type': 'Offer',
-    price: '0',
     priceCurrency: 'ZAR',
+    availability: 'https://schema.org/InStock',
+    url: 'https://joburgchurch.co.za/community-classes/korean/',
   },
   hasCourseInstance: {
     '@type': 'CourseInstance',
@@ -45,8 +46,8 @@ const schema = {
 };
 ---
 <BaseLayout
-  title="Free Korean Class for Beginners in Sandton, Johannesburg | Learn Hangul"
-  description="Free Korean language class for absolute beginners in Parkmore, Sandton, Johannesburg. Sundays 2pm. Learn Hangul alphabet, basic Korean conversation, and culture. No textbook needed."
+  title="Korean Class for Beginners in Sandton, Johannesburg | Learn Hangul"
+  description="Korean language class for absolute beginners in Parkmore, Sandton, Johannesburg. Sundays 3pm. Learn Hangul alphabet, basic Korean conversation, and culture. A course fee applies."
   breadcrumbs={breadcrumbs}
   schema={schema}
 >
@@ -55,15 +56,15 @@ const schema = {
       <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Korean Class for Beginners</p>
       <h1 class="heading-1 mb-6">Learning Korean as a Beginner in Sandton: Your Honest First-Session Guide</h1>
       <p class="text-lg text-gray-700 mb-8">
-        If you have ever typed <em>free Korean class Sandton</em> into Google at 11pm wondering whether you will ever actually read a Korean restaurant menu, this page is for you. We have been teaching Korean to absolute beginners in Parkmore since 2019. Here is what the first Sunday actually looks like.
+        If you have ever typed <em>Korean class Sandton</em> into Google at 11pm wondering whether you will ever actually read a Korean restaurant menu, this page is for you. We have been teaching Korean to absolute beginners in Parkmore since 2019. Here is what the first Sunday actually looks like.
       </p>
 
       <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-10">
         <p class="font-semibold text-amber-900 mb-2">Quick answer if you are scanning:</p>
         <ul class="space-y-1 text-amber-900 text-sm">
-          <li>✓ <strong>When:</strong> Every Sunday, 2:00pm to 4:00pm</li>
+          <li>✓ <strong>When:</strong> Every Sunday, 3:00pm to 5:00pm</li>
           <li>✓ <strong>Where:</strong> Parkmore, 11th Street, Sandton</li>
-          <li>✓ <strong>Cost:</strong> Free, since 2019</li>
+          <li>✓ <strong>Cost:</strong> A course fee applies. Please contact us for current fees.</li>
           <li>✓ <strong>What to bring:</strong> Just yourself. We supply the worksheets.</li>
           <li>✓ <strong>Appointment required:</strong> Yes — call ahead so we save you a seat</li>
         </ul>
@@ -106,12 +107,12 @@ const schema = {
         Most students are between 19 and 45, but we have had learners from 14 to 72. The common thread is curiosity and patience. You do not need to be gifted at languages. You just need to show up.
       </p>
 
-      <h2 class="heading-2 mb-4 mt-10">Why Our Class Is Free (and Has Been Since 2019)</h2>
+      <h2 class="heading-2 mb-4 mt-10">Who Teaches, and What It Costs</h2>
       <p class="text-body mb-6">
-        The class is run by Ms. Dora, who taught Korean professionally for eight years before moving to Johannesburg. She volunteers her time because she believes language learning is a doorway into a different culture — and a different culture is a doorway into seeing your own life more clearly. That is also why we run it alongside a Bible study in the same community: we are not selling anything. We just want a place where people from different backgrounds can learn something together.
+        The class is run by Ms. Dora, who taught Korean professionally for eight years before moving to Johannesburg. She teaches because she believes language learning is a doorway into a different culture — and a different culture is a doorway into seeing your own life more clearly. That is also why we run it alongside a Bible study in the same community: you do not have to join the church to join the class.
       </p>
       <p class="text-body mb-6">
-        You will not be asked to buy a textbook. We print the worksheets in-house. We provide coffee. The only thing we ask is that you book ahead so we know how many chairs to set up.
+        A course fee applies. Please call or WhatsApp for the current amount before you register. You will not be asked to buy a textbook. We print the worksheets in-house. The only other thing we ask is that you book ahead so we know how many chairs to set up.
       </p>
 
       <h2 class="heading-2 mb-4 mt-10">How to Book Your Seat</h2>
@@ -147,8 +148,8 @@ const schema = {
           <p class="mt-3 text-gray-700">No. About 70% of our students start with zero Korean. We design the first 4 weeks for absolute beginners.</p>
         </details>
         <details class="card">
-          <summary class="font-semibold cursor-pointer">Is the class really free? What is the catch?</summary>
-          <p class="mt-3 text-gray-700">Yes, free since 2019. The only expectation is that you call ahead to book. We do not push any religion. We do not collect your data. We just teach Korean.</p>
+          <summary class="font-semibold cursor-pointer">Is the class free? What is the catch?</summary>
+          <p class="mt-3 text-gray-700">The class is not free. A course fee applies. Our website previously listed it as free by mistake. Please call ahead to book and to confirm the current fee. We do not push any religion. We just teach Korean.</p>
         </details>
         <details class="card">
           <summary class="font-semibold cursor-pointer">Can I come just to try once before committing?</summary>

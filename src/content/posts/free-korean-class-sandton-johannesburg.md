@@ -1,6 +1,6 @@
 ---
-title: "Free Korean Class in Sandton: A Community Language Learning Experience"
-description: "Learn Korean for free in Sandton, Johannesburg. Our Sunday Korean class at 2pm in Parkmore is open to beginners, K-drama fans, and anyone curious about Korean language and culture."
+title: "Korean Class in Sandton: A Community Language Learning Experience"
+description: "Learn Korean in Sandton, Johannesburg. Our Sunday Korean class at 3pm in Parkmore is open to beginners, K-drama fans, and anyone curious about Korean language and culture. A course fee applies."
 date: 2026-07-18
 author: "Mr. Sim"
 tags: ["Korean class", "Sandton", "Johannesburg", "language learning", "community"]
@@ -18,7 +18,7 @@ That first Sunday, four people showed up. By the third week, there were eleven. 
 
 ## What the Class Actually Is
 
-This is not a formal language course. There are no textbooks. There are no tests. There is no syllabus that assumes you have three hours a week to practice.
+This is not a formal language school with exams. There is a simple weekly rhythm: worksheets, conversation practice, and a teacher who grew up speaking Korean.
 
 Ms. Dora teaches the way you would learn if a Korean friend invited you over for coffee and decided to show you a few things.
 
@@ -30,7 +30,7 @@ Week five through eight: Cultural context. Why Korean has formal and informal sp
 
 By week eight: You can introduce yourself in Korean, ask where the bathroom is, order at a Korean restaurant, and understand why your favorite K-drama character is being politely rude to someone older.
 
-## Who Comes to the Free Korean Class
+## Who Comes to the Korean Class
 
 The class attracts three main types of people:
 
@@ -42,35 +42,35 @@ The class attracts three main types of people:
 
 ## What You Need to Bring
 
-Nothing.
+Nothing special for the first visit.
 
-Ms. Dora supplies all materials. You do not need a notebook, though some people bring one. You do not need to know any Korean before you arrive. You do not need to be a Christian, a church member, or even particularly religious.
+Ms. Dora supplies class materials. You do not need a notebook, though some people bring one. You do not need to know any Korean before you arrive. You do not need to be a Christian, a church member, or even particularly religious.
 
-The class is a free community service offered by Johannesburg Bible Study Church. It is open to everyone in the greater Johannesburg area. If you are in Sandton, Randburg, Fourways, Midrand, or anywhere nearby, you are welcome.
+A course fee applies. Please call or WhatsApp for current fees before you register. The class is open to everyone in the greater Johannesburg area. If you are in Sandton, Randburg, Fourways, Midrand, or anywhere nearby, you are welcome.
 
 ## The Schedule
 
-Every Sunday at 2:00pm in Parkmore, Sandton.
+Every Sunday at 3:00pm in Parkmore, Sandton.
 
-The class runs 2:00pm to 4:00pm. After that, some people stay for coffee and conversation — an optional 30 minutes where you can practice speaking with Ms. Dora and the regulars.
+The class runs 3:00pm to 5:00pm. After that, some people stay for coffee and conversation — an optional 30 minutes where you can practice speaking with Ms. Dora and the regulars.
 
 The address is sent via WhatsApp when you register. There is a community room in Parkmore that we use. You will need to call or WhatsApp ahead to confirm your seat, because we cap the class size to keep it manageable.
 
 ## The Unique Thing About This Class
 
-There are paid Korean language courses in Johannesburg. There are apps like Duolingo and TTMIK. There are YouTube channels and online tutors.
+There are other Korean language courses in Johannesburg. There are apps like Duolingo and TTMIK. There are YouTube channels and online tutors.
 
-None of them offer this:
+What we offer is this:
 
-A Korean teacher who grew up speaking the language, who knows the culture inside and out, who genuinely enjoys teaching it, and who does not charge anything. A room full of fellow learners at different levels. Coffee afterward. And a community that keeps showing up every Sunday because they actually like being there.
+A Korean teacher who grew up speaking the language, who knows the culture inside and out, and who genuinely enjoys teaching it. A room full of fellow learners at different levels. Coffee afterward. And a community that keeps showing up every Sunday because they actually like being there.
 
 ## If You Are in Johannesburg and Interested in Korean
 
-You do not need to commit to eight weeks. You can come once, see how it feels, and decide from there. If you are searching for "free Korean class Johannesburg" or "Korean class Sandton," this is one of the few free options in the area that is taught by a native speaker and runs consistently every week.
+You do not need to commit to eight weeks on the first call. Ask about the current course fee, book a seat, come once, and decide from there. If you are searching for "Korean class Johannesburg" or "Korean class Sandton," this is a native-speaker class that runs consistently every week in Parkmore.
 
 ## Related Searches
 
-People who find us through "free Korean class Johannesburg" or "learn Korean Sandton" often also search for:
+People who find us through "Korean class Johannesburg" or "learn Korean Sandton" often also search for:
 
 - Korean lessons Johannesburg
 - Korean language class for beginners
@@ -80,10 +80,8 @@ People who find us through "free Korean class Johannesburg" or "learn Korean San
 
 ## How to Register
 
-WhatsApp Ms. Dora or Mr. Sim. The numbers are on our contact page. Tell them you want to join the Sunday Korean class. They will send you the address and confirm your seat.
-
-No commitment required. No deposit. No expectation that you will keep coming. Just show up if you are interested.
+WhatsApp Ms. Dora or Mr. Sim. The numbers are on our contact page. Tell them you want to join the Sunday Korean class. They will confirm the current fee, send you the address, and confirm your seat.
 
 ---
 
-*Free Korean Class in Sandton — Every Sunday 2:00pm — Open to all in the Johannesburg community*
+*Korean Class in Sandton — Every Sunday 3:00pm — Open to all in the Johannesburg community. A course fee applies.*

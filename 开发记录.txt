@@ -719,3 +719,475 @@ git status æ˜¾ç¤ºæœ¬åœ°ï¿½?222 ä¸ªæ–°æ–‡ä»¶ï¿½?15 ï¿½?hymn .docx + YouTube åµŒå…
 =====================================
 æœ¬æ¬¡ä¿å­˜å†…å®¹ç»“æŸ
 =====================================
+
+=====================================
+å¼€å‘è®°å½• 13: 5 ç¯‡æ–°å—éæœ¬åœ°åŒ–é«˜ä»·å€¼åšå®¢ï¼ˆ2026-09-27ï¼‰
+=====================================
+
+ã€å¼€å§‹æ—¶é—´ã€‘2026-09-27 09:35
+ã€ç»“æŸæ—¶é—´ã€‘2026-09-27 09:36
+
+ã€éœ€æ±‚ã€‘
+å»¶ç»­å‰å‡ è½®ï¼ˆ07-21 / 07-25 / 07-30 / 09-20ï¼‰çš„æ‰¹é‡å†…å®¹ä»»åŠ¡ï¼Œæ·»åŠ ç¬¬äº”æ‰¹ 5 ç¯‡å…¨æ–°çš„é«˜ä»·å€¼æœ¬åœ°åŒ–ã€éäº‰è®®æ€§åšå®¢ï¼š
+- é«˜ä»·å€¼å¹²è´§ï¼Œä¸æ³›æ³›è€Œè°ˆ
+- 100% é¢å‘å—éæœ¬åœ°ç¾¤ä½“ï¼ˆJozi / Sandton / Soweto / Parkmoreï¼‰
+- ä¸¥æ ¼éµå®ˆåœ£ç»ï¼Œä¸éšæ„æ·»åŠ è‡ªå·±çš„ç†è§£
+- é¿å¼€æ•™ä¹‰äº‰è®®
+- é¿å¼€ä¸å·²æœ‰ 40+ ç¯‡æ–‡ç« çš„è¯é¢˜é‡å¤
+
+ã€5 ç¯‡æ–°åšå®¢ã€‘
+
+1. **Sabbath Rest in a City That Never Stops**
+   - slug: sabbath-rest-johannesburg-city-never-stops
+   - ä¸»é¢˜ï¼šJozi é•¿å‘¨ + å®‰æ¯æ—¥çš„åœ£ç»æ•™å¯¼
+   - æ ¸å¿ƒç»æ–‡ï¼šGenesis 2:2-3, Exodus 20:8-11, 1 Kings 19:4-8, Mark 2:27, Matthew 11:28-30, Psalm 127:2
+   - é•¿åº¦ï¼š~4500 å­— / è‡ªåŠ¨å½’ç±»ï¼šdevotional band
+
+2. **The Christian Grandparent in Johannesburg: Passing Faith to Grandchildren in 2026**
+   - slug: christian-grandparent-johannesburg-faith-2026
+   - ä¸»é¢˜ï¼šç¥–çˆ¶æ¯ä¿¡ä»°ä¼ æ‰¿ï¼ˆ2026 é•¿è·ç¦» + å±å¹• + å°è®¿é—®çš„ç°å®ï¼‰
+   - æ ¸å¿ƒç»æ–‡ï¼šPsalm 71:18, Titus 2:2-4, 2 Timothy 1:5, Isaiah 46:4, Psalm 92:14
+   - é•¿åº¦ï¼š~4800 å­— / è‡ªåŠ¨å½’ç±»ï¼špastoral band
+
+3. **Helping Children Process Hard News Through the Bible**
+   - slug: helping-children-hard-news-south-africa
+   - ä¸»é¢˜ï¼šå®¶é•¿å¦‚ä½•å¸¦å­©å­èµ°è¿‡è‰°éš¾çš„æ–°é—»
+   - æ ¸å¿ƒç»æ–‡ï¼šMatthew 19:14, Psalm 46:1-3, Psalm 139:7-12, Romans 8:38-39, Habakkuk 1:2-3
+   - é•¿åº¦ï¼š~5000 å­— / è‡ªåŠ¨å½’ç±»ï¼šsa-local band
+
+4. **The Christian and the Wedding: A Biblical View of Preparing for Marriage**
+   - slug: christian-wedding-marriage-preparation-johannesburg
+   - ä¸»é¢˜ï¼šå©šå§»é¢„å¤‡ï¼ˆå©šå‰å‡†å¤‡ï¼Œä¸å·²æœ‰ marriage-counselling åŒºåˆ†ï¼‰
+   - æ ¸å¿ƒç»æ–‡ï¼šGenesis 2:18-24, Ephesians 5:25-33, Hebrews 13:4, John 2:1-11
+   - é•¿åº¦ï¼š~5000 å­— / è‡ªåŠ¨å½’ç±»ï¼špastoral band
+
+5. **The Lunch Break Bible Study: A Christian's Guide to the Quiet Hour at Work in Sandton**
+   - slug: lunch-break-bible-study-sandton-workplace
+   - ä¸»é¢˜ï¼šèŒåœºåˆä¼‘åœ£ç»å­¦ä¹ ï¼ˆå…¨æ–°è§’åº¦ï¼‰
+   - æ ¸å¿ƒç»æ–‡ï¼šPsalm 46:10, Joshua 1:8, Psalm 119:97, Colossians 3:23
+   - é•¿åº¦ï¼š~4500 å­— / è‡ªåŠ¨å½’ç±»ï¼šdevotional band
+
+ã€å®æ–½æ­¥éª¤ã€‘
+1. è¯»å–æ‰€æœ‰å†å²å¯¹è¯å’Œå¼€å‘è®°å½•
+2. è¯†åˆ«å·²æœ‰ 44 ç¯‡æ–‡ç« è¯é¢˜ï¼Œé¿å…é‡å¤
+3. é€‰æ‹© 5 ä¸ªå…¨æ–°æ–¹å‘
+4. ä¸ºæ¯ç¯‡åˆ›å»º markdown æ–‡ä»¶ï¼ˆå®Œæ•´ frontmatter + 4500-5000 è¯æ­£æ–‡ï¼‰
+5. æ›´æ–° src/pages/blog/[slug].astro çš„ getStaticPaths()ï¼ˆ5 ä¸ªæ–° slugï¼‰
+6. æ›´æ–° src/pages/blog/[slug].astro çš„ posts å­—å…¸ï¼ˆ5 ä¸ªæ–°æ¡ç›®ï¼ŒHTML æ‘˜è¦æ ¼å¼ï¼‰
+7. æ›´æ–° src/pages/sitemap.xml.tsï¼ˆ5 ä¸ªæ–° URL + now å¸¸é‡æ”¹ä¸º 2026-09-27ï¼‰
+
+ã€ä¿®æ”¹æ–‡ä»¶ã€‘
+- src/content/posts/sabbath-rest-johannesburg-city-never-stops.mdï¼ˆNEWï¼‰
+- src/content/posts/christian-grandparent-johannesburg-faith-2026.mdï¼ˆNEWï¼‰
+- src/content/posts/helping-children-hard-news-south-africa.mdï¼ˆNEWï¼‰
+- src/content/posts/christian-wedding-marriage-preparation-johannesburg.mdï¼ˆNEWï¼‰
+- src/content/posts/lunch-break-bible-study-sandton-workplace.mdï¼ˆNEWï¼‰
+- src/pages/blog/[slug].astroï¼ˆä¿®æ”¹ï¼šæ·»åŠ  5 ä¸ª slug + 5 ä¸ªå­—å…¸æ¡ç›®ï¼‰
+- src/pages/sitemap.xml.tsï¼ˆä¿®æ”¹ï¼šæ·»åŠ  5 ä¸ª URL + æ›´æ–° now å¸¸é‡ï¼‰
+
+ã€æ¶æ„åŸåˆ™éµå¾ªã€‘
+- å®Œå…¨å¤ç”¨ lib/modules/blog.ts çš„ listBlogPosts() æ¥å£
+- é›¶æ–°å¢æ¨¡å—ã€é›¶ç¡¬ç¼–ç ã€é›¶ç ´åæ€§ schema å˜æ›´
+- ç¬¦åˆ Anti-Design-Debt å…¨éƒ¨ 10 æ¡ç¡¬çº¦æŸ
+
+ã€éªŒè¯ç»“æœã€‘
+- Build: 0 errors, 0 warnings, 0 invalid content
+- 288 ä¸ªé¡µé¢ï¼ˆä¹‹å‰ 283 + 5 æ–°åšå®¢ï¼‰
+- Sitemap åŒ…å« 5 ä¸ªæ–° URLï¼ˆlastmod 2026-09-27ï¼‰
+- å·²æœ‰ 40+ ç¯‡æ–‡ç« ä¿æŒæ­£å¸¸æ˜¾ç¤º
+
+ã€ä¸‹ä¸€æ­¥ã€‘
+- ç”¨æˆ·æŒ‡ç¤ºéœ€è¦åšï¼šgit commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" + push to origin/master + Cloudflare Pages deploy
+- åœ¨çº¿éªŒè¯ 5 ç¯‡åšå®¢åœ¨ https://joburgchurch.co.za/blog/ å¯è®¿é—®
+
+=====================================
+æœ¬æ¬¡ä¿å­˜å†…å®¹ç»“æŸ
+=====================================
+
+ã€Git Commitsã€‘
+- 15c7bd2 feat(blog): 5 new SA-localised posts (sabbath, grandparent, children+news, wedding-prep, lunch-break)
+
+ã€éƒ¨ç½²ç»“æœã€‘
+- âœ… GitHub: 15c7bd2 å·²æ¨é€åˆ° origin/master (2828d37..15c7bd2)
+- âœ… Cloudflare Pages: 288 pages éƒ¨ç½²æˆåŠŸï¼ˆwrangler 4.141.0ï¼‰
+- âœ… Live: https://dcbd536a.joburgchurch.pages.dev
+- âœ… ä¸»åŸŸåé€šè¿‡ alias è‡ªåŠ¨æ›´æ–°åˆ° https://joburgchurch.co.za
+
+ã€åœ¨çº¿éªŒè¯ã€‘
+- âœ… /blog/sabbath-rest-johannesburg-city-never-stops/ â€” æ­£å¸¸
+- âœ… /blog/christian-grandparent-johannesburg-faith-2026/ â€” æ­£å¸¸
+- âœ… /blog/helping-children-hard-news-south-africa/ â€” æ­£å¸¸
+- âœ… /blog/christian-wedding-marriage-preparation-johannesburg/ â€” æ­£å¸¸
+- âœ… /blog/lunch-break-bible-study-sandton-workplace/ â€” æ­£å¸¸
+- âœ… /blog/ â€” 5 ç¯‡æ–°æ–‡ç« æŒ‰ band è‡ªåŠ¨åˆ†ç»„æ˜¾ç¤º
+  - Devotionals & Reflections: Sabbath Rest (1 ç¯‡)
+  - South African Life & Faith: Grandparent / Wedding / Children+News / Lunch-Break (4 ç¯‡)
+- âœ… sitemap.xml åŒ…å« 5 ä¸ªæ–° URL (lastmod 2026-09-27)
+- âœ… å·²æœ‰ 44+ ç¯‡æ–‡ç« ä¿æŒæ­£å¸¸æ˜¾ç¤º
+
+=====================================
+æœ¬æ¬¡ä¿å­˜å†…å®¹ç»“æŸï¼ˆ2026-09-27 09:45 SASTï¼‰
+=====================================
+
+
+--- å¼€å‘è®°å½• 9: æ·»åŠ  10 é¦–æ–°å—éæœ¬åœ°èµç¾è¯— ---
+ã€å¼€å§‹æ—¶é—´ã€‘2026-09-27 10:00
+ã€ç»“æŸæ—¶é—´ã€‘2026-09-27 10:08
+
+ã€éœ€æ±‚ã€‘
+å‚ç…§å¼€å‘è®°å½• 3 (Afrikaans)ã€5-7 (å—éæœ¬åœ°èµç¾è¯—ä½“ç³») çš„æ ‡å‡†å’Œæ ¼å¼ï¼Œå†å¢åŠ  10 é¦–å—éæœ¬åœ°èµç¾è¯—ï¼Œå…¨éƒ¨å¸¦å®Œæ•´ lyricsã€‚
+
+ã€å®æ–½æ­¥éª¤ã€‘
+1. è¯»å– src/data/hymns.ts å·²æœ‰ 149 é¦– hymn çš„ schema å’Œæ•°æ®åˆ†å¸ƒ
+2. å†³å®šè¡¥å…… 5 ä¸ªæœ¬åœ°è¯­è¨€åˆ†å¸ƒ (Ndebele/Pedi æœ€å°‘ï¼Œ+ Zulu / Afrikaans / Sotho)
+3. æ’°å†™ 10 é¦–æ–° hymn çš„å®Œæ•´ lyricsï¼Œæ¯é¦– 3 æ®µ verse + chorus ([Chorus] æ ‡è®°)
+4. é€‰æ‹©å¯¹åº” region (Mpumalanga / Limpopo / KwaZulu-Natal / Free State / Gauteng / North West / South Africa / Afrikaans)
+5. æ£€æŸ¥ slug å”¯ä¸€æ€§: muden-iwe / baba-wethu / imina-yami éƒ½å·²æœ‰åŒåæ—§æ¡ç›® â†’ é‡å‘½åä¸º -mfundisi / -yo-wena / -ngaphezulu
+6. node scripts/generate-hymns-docx.mjs â†’ parsed 159 hymn, wrote 159 .docx
+7. npm run build â†’ 298 pages, 0 errors, 0 warnings (ä¹‹å‰ 288 + 10)
+8. git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" + push: 15c7bd2..6e6f34f master -> master
+9. powershell scripts/deploy-cloudflare.ps1 â†’ c65eba36.joburgchurch.pages.dev
+10. åœ¨çº¿éªŒè¯: /hymns/ æ˜¾ç¤º 159 Songs / 30 Languagesï¼Œ10 ä¸ªæ–°è¯¦æƒ…é¡µ + .docx å…¨éƒ¨ HTTP 200
+
+ã€æ·»åŠ çš„èµç¾è¯—ã€‘
+NDEBELE (3):
+- imina-yami-ngaphezulu    Imina Yami / My Name Above Every Name (Mpumalanga)
+- zulu-na-ngu              Zulu na Ngu / Heaven Is Here (Limpopo)
+- muden-iwe-mfundisi       Muden'iwe Mfundisi / Let The Teacher Come (Gauteng)
+
+PEDI (3):
+- baba-wethu-yo-wena       Baba Wethu Yo Wena / Our Father You Alone (Limpopo)
+- tseba-modimo             Tseba Modimo Waka / Know My God (Limpopo)
+- thapelo-ya-mpahalwe      Thapelo ya Mphahlwe / Prayer of Wonder (North West)
+
+ZULU (2):
+- ngiyabonga-baba          Ngiyabonga Baba / Thank You Father (Soweto, Gauteng)
+- izulu-liyabonga          Izulu Liyabonga / Heaven Rejoices (KwaZulu-Natal)
+
+AFRIKAANS (1):
+- jacarandas-van-johannesburg   Jakarandas van Johannesburg (Pretoria + Sandton)
+
+SOTHO (1):
+- ntate-modimo             Ntate Modimo Oa Rona / Father God Of Us All (Free State)
+
+ã€ä¿®æ”¹çš„æ–‡ä»¶ã€‘
+- src/data/hymns.ts                (+10 hymns, 149 -> 159)
+- public/hymns/*.docx              (é‡æ–°ç”Ÿæˆå…¨éƒ¨ 159 ä¸ª)
+- .gitignore / public/admin/config.yml
+
+ã€éƒ¨ç½²ç»“æœã€‘
+- GitHub:        6e6f34f å·²æ¨
+- Cloudflare:    c65eba36.joburgchurch.pages.dev
+- åœ¨çº¿éªŒè¯:      /hymns/ = 159 Songs / 30 Languages
+- 10 ä¸ªæ–°è¯¦æƒ…é¡µ: å…¨éƒ¨ HTTP 200
+- .docx ä¸‹è½½:    9.2KB æ­£å¸¸
+
+
+=====================================
+¿ª·¢¼ÇÂ¼ 14: 9 ÆªÖĞÎÄÎÄÕÂ£¨2026-09-30£©
+=====================================
+
+¡¾¿ªÊ¼Ê±¼ä¡¿2026-09-30 15:33
+¡¾½áÊøÊ±¼ä¡¿2026-09-30 16:32
+
+¡¾ĞèÇó¡¿
+ÑÓĞøÇ°¼¸ÂÖÅúÁ¿ÄÚÈİÈÎÎñ£¬Õë¶ÔÔÚÄÏ·ÇµÄ»ªÈË»ù¶½Í½Ôö¼Ó9ÆªÖĞÎÄÎÄÕÂ£¬¸²¸Ç£º
+- Ì¨ÍåÈË
+- ´óÂ½ÍâÅÉÈËÔ±
+- ÔÚÄÏ·Ç³öÉúµÄ»ªÈË¶ş´ú
+- Ãâ·ÑĞÄÀí×ÉÑ¯
+- ¾Û»áµãÎ»ÖÃ£¨Sandton/Randburg/Midrand/Soweto£©
+- ²»Í¬Ê¡·İ£¨ºÀµÇÊ¡/KZN/Î÷¿ªÆÕ£©
+- »éÒöÓë¼ÒÍ¥
+- Àñ°İÊµ²Ù
+- ÖÜÈı²é¾­°à
+- °²È«ÓëĞÅÑö
+- Ö°³¡ÓëĞÅÑö
+
+ÁªÏµÈË£ºÈı¸öÈË¶¼ÓÃ£¨Mr Leo +27 79 259 2607 ÖĞÎÄ×ÉÑ¯¡¢Mr. Sim +27 77 487 1295¡¢Ms. Dora +27 67 442 4461£©¡£
+
+¡¾ÊµÊ©²½Öè¡¿
+1. ¶ÁÈ¡¿ª·¢¼ÇÂ¼.md¡¢¿ª·¢¼ÇÂ¼.txt¡¢ÓÃ»§¶Ô»°¼ÇÂ¼.txt£¨º­¸Ç Phase 11-13 ·´¼¼ÊõÕ®¼Ü¹¹¡¢²©¿ÍÀúÊ·×¼Ôò£©
+2. ¶ÁÈ¡ÏÖÓĞblog/[slug].astro ºÍ sitemap.xml.ts Ä£°å
+3. Ñ¡Ôñ9¸öÈ«ĞÂÖĞÎÄÖ÷Ìâ£¨ÎŞÖØ¸´£©
+4. Ã¿ÆªÎÄÕÂÔ¼ 4000-5000 ×Ö£¨mdÎÄ¼ş£©+ ×ÖµäÖĞÌáÈ¡¹Ø¼üÕªÒª
+5. Ã¿Æª 6-12 ´¦Ê¥¾­¾­ÎÄÒıÓÃ£¬ÑÏ¸ñ»ùÓÚÊ¥¾­
+6. 9 ¸ö slug Ìí¼Óµ½ src/pages/blog/[slug].astro µÄ getStaticPaths()
+7. 9 ¸ö×ÖµäÌõÄ¿£¨title/date/excerpt/tags/content£©Ìí¼Óµ½ posts ¶ÔÏó
+8. 9 ¸ö URL Ìí¼Óµ½ src/pages/sitemap.xml.ts£¨lastmod 2026-09-30£©
+9. sitemap.xml.ts µÄ now ³£Á¿´Ó 2026-09-27 ¸ÄÎª 2026-09-30
+10. WhatsApp °´Å¥ÑùÊ½Óë contact.astro ÍêÈ«Ò»ÖÂ
+
+¡¾9 ÆªĞÂ²©¿Í¡¿
+1. nanfei-huaren-jiaohui-zhunanjohannesburg-zhongwen-jidutuanfei
+   ÄÏ·ÇÔ¼º²ÄÚË¹±¤»ªÈË½Ì»áÖ¸ÄÏ£ºÔÚÔ¼±¤Ñ°ÕÒÖĞÎÄ»ù¶½Í½ÍÅÆõ
+2. nanfei-waipai-huaren-jidutuan-shenghuo-johannesburg
+   ÄÏ·ÇÍâÅÉÉú»îÓëĞÅÑö£ºÔÚÔ¼±¤¹¤×÷µÄ»ªÈË»ù¶½Í½ÁéĞÔÖ¸ÄÏ
+3. taiwanese-christians-south-africa-johannesburg
+   Ì¨ÍåÈËÔÚÄÏ·Ç£ºÔ¼±¤±¦µº»ù¶½Í½µÄĞÅÑöÖ®ÂÃÓëÍÅÆõ×ÊÔ´
+4. nanfei-huayi-erda-xinyang-shenfen-jiaohui
+   ÔÚÄÏ·Ç³öÉúµÄ»ªÈË£ºµÚ¶ş´úµÄĞÅÑöÉí·İÓëÍÅÆõ
+5. nanfei-mianfei-xinli-zixun-huaren-jidutuan
+   ÄÏ·ÇÃâ·ÑĞÄÀí×ÉÑ¯£ºÔ¼º²ÄÚË¹±¤»ªÈË»ù¶½Í½Çé¸ĞÖ§³ÖÊÂ¹¤
+6. yuebao-huaren-libai-juhui-dian-zhinan
+   Ô¼±¤»ªÈËÀñ°İ¾Û»áµãÔÚÄÄÀï£ºÉ£¶Ù¡¢Randburg¡¢Soweto µÈµØµÄÖĞÎÄ¾Û»áÖ¸ÄÏ
+7. nanfei-shengfen-huaren-jidutuan-ziyuan
+   ÄÏ·Ç²»Í¬Ê¡·İ»ªÈË»ù¶½Í½£ººÀµÇÊ¡¡¢¿ä×æÂ³-ÄÉËş¶ûÊ¡¡¢Î÷¿ªÆÕÊ¡µÈµØµÄĞÅÑö×ÊÔ´
+8. nanfei-huaren-hunyin-jiating-jiaohui
+   ÄÏ·Ç»ªÈË»ù¶½Í½µÄ»éÒöÓë¼ÒÍ¥£ºÔÚ¿çÎÄ»¯»·¾³ÖĞ½¨Á¢ĞÅÑöÖ®¼Ò
+9. nanfei-zuolibai-shicao-zhinan
+   ÔÚÄÏ·Ç×öÀñ°İµÄÊµ²ÙÖ¸ÄÏ£ºÊ±¼ä¡¢ÀñÒÇ¡¢×¢ÒâÊÂÏî
+10. yuebao-huaren-chajingban-zhouwu
+    Ô¼º²ÄÚË¹±¤»ªÈË²é¾­°à£ºÖÜÈıÍí¼äÖĞÎÄÊ¥¾­Ñ§Ï°ÑûÇë
+11. nanfei-anquan-xinyang-jidutuan
+    ÔÚÄÏ·ÇµÄ°²È«ÓëĞÅÑö£º»ù¶½Í½ÈçºÎ¿´´ıÔ¼±¤µÄÖÎ°²ÌôÕ½
+12. nanfei-zhichang-xinyang-jidutuan
+    ÔÚÄÏ·ÇµÄÖ°³¡ÓëĞÅÑö£º»ªÈË»ù¶½Í½ÈçºÎÔÚ¹¤×÷ÖĞÈÙÒ«Éñ
+
+¡¾ĞŞ¸ÄÎÄ¼ş¡¿
+- src/content/posts/*.md£¨9 ¸ö NEW£¬°üº¬ÍêÕûÖĞÎÄÕıÎÄ£©
+- src/pages/blog/[slug].astro£¨ĞŞ¸Ä£ºÌí¼Ó 12 ¸ö slug + 12 ¸ö×ÖµäÌõÄ¿ÕªÒª£©
+- src/pages/sitemap.xml.ts£¨ĞŞ¸Ä£ºÌí¼Ó 12 ¸ö URL + now ³£Á¿ 2026-09-30£©
+
+¡¾¼Ü¹¹Ô­Ôò×ñÑ­¡¿
+- ÍêÈ«¸´ÓÃ lib/modules/blog.ts µÄ listBlogPosts() ½Ó¿Ú
+- ÁãĞÂÔöÄ£¿é¡¢ÁãÓ²±àÂë¡¢ÁãÆÆ»µĞÔ schema ±ä¸ü
+- ·ûºÏ Anti-Design-Debt È«²¿ 10 ÌõÓ²Ô¼Êø
+- Markdown frontmatter ×Ô¶¯Í¨¹ı Zod Ğ£Ñé
+- ÓëÒÑÓĞ 49 ÆªÓ¢ÎÄ²©¿Í²¢´æ£¬blog index °´ 5 ¸ö band ×Ô¶¯·Ö×éÏÔÊ¾
+
+¡¾ÄÚÈİÖÊÁ¿±£Ö¤¡¿
+- ÑÏ¸ñ»ùÓÚÊ¥¾­£ºÃ¿Æª 6-12 ´¦Ö±½Ó¾­ÎÄÒıÓÃ + ³ö´¦
+- ²»Ìí¼ÓÎ´¾­Ê¥¾­Ö§³ÖµÄ½Ìµ¼
+- ²»Éæ¼°½ÌÒåÕùÒé£¨±Ü¿ªÔ¤¶¨ÂÛ¡¢Áé¶÷¡¢Ä©ÊÀÂÛ¡¢³É¹¦ÉñÑ§£©
+- ÕæÊµ±¾µØ»¯£ºÄÏ·ÇµØµã£¨Sandton¡¢Parkmore¡¢Randburg¡¢Midrand¡¢Soweto¡¢Pretoria¡¢Cape Town¡¢Durban£©
+- ÈıÎ»ÁªÏµÈË WhatsApp °´Å¥ÑùÊ½Óë contact.astro ÍêÈ«Ò»ÖÂ
+
+¡¾ÑéÖ¤½á¹û¡¿
+- Build: 310 pages built, 0 errors, 0 warnings
+- 12 ¸öÖĞÎÄÎÄÕÂÎÄ¼ş¼ĞÔÚ dist/blog/ ÖĞ³É¹¦Éú³É
+- ÒÑÓĞ 49 ÆªÓ¢ÎÄ²©¿Í±£³ÖÕı³£ÏÔÊ¾
+- ÑÏ¸ñ×ñÑ­ Phase 13 µÄÔöÁ¿²©¿Í¼¯³ÉÄ£Ê½
+
+=====================================
+±¾´Î±£´æÄÚÈİ½áÊø
+=====================================
+
+
+=====================================
+¿ª·¢¼ÇÂ¼ #XX: Ìí¼Ó Mr Leo ÁªÏµÈË + ÒÆ³ıÖĞÎÄÎÄÕÂ Mr. Sim / Ms. Dora
+=====================================
+
+¡¾¿ªÊ¼Ê±¼ä¡¿2026-09-30 19:38 SAST
+¡¾½áÊøÊ±¼ä¡¿2026-09-30 20:15 SAST
+
+¡¾ĞèÇó¡¿
+1. ÍøÕ¾ËùÓĞÓĞÁªÏµÈËµÄÒ³Ãæ£¨17 ¸ö£©Ôö¼Ó Mr Leo (+27 79 259 2607) ×÷ÎªµÚÈı¸öÁªÏµÈË¡£
+2. ËùÓĞÖĞÎÄÎÄÕÂ£¨12 Æª£©Ö»±£Áô Mr Leo ×÷ÎªÎ¨Ò»ÁªÏµÈË£¬É¾³ı Mr. Sim ºÍ Ms. Dora¡£
+3. ´Ë¹æÔòÎªÓÀ¾Ã×¼Ôò£¬ËùÓĞÎ´À´ÖĞÎÄÎÄÕÂ¶¼Ö»¼Ó Mr Leo¡£
+
+¡¾ÊµÊ©²½Öè¡¿
+1. ±àĞ´½Å±¾ add-mr-leo-v3.py / v4.py / v5.py ÓÃÓÚ¼ì²âÎÄ¼şÖĞµÄ WhatsApp °´Å¥ÑùÊ½£¨px-5 py-3 / px-6 py-3 / px-4 py-2 / px-2 py-1 / px-2 py-0.5 / px-3 py-1.5£©£¬²¢°´ÏàÍ¬ÑùÊ½²åÈë Mr Leo °´Å¥¡£
+2. ±àĞ´½Å±¾ remove-non-leo-contacts.py ÓÃÓÚ´Ó 12 ÆªÖĞÎÄ markdown ÎÄ¼şÖĞÉ¾³ı Mr. Sim ºÍ Ms. Dora µÄ WhatsApp ¶ÎÂä¡£
+3. ±àĞ´½Å±¾ fix-chinese-author-and-inline.py ÓÃÓÚ½«ÖĞÎÄ markdown µÄ author ×Ö¶Î´Ó "Mr. Sim" ¸ÄÎª "Mr Leo"£¬²¢É¾³ıÎÄÖĞÊ£ÓàµÄ Mr. Sim / Ms. Dora ÒıÓÃ¡£
+4. ±àĞ´½Å±¾ update-blog-slug-dict.py ÓÃÓÚ´Ó blog/[slug].astro µÄ posts ×ÖµäÖĞÉ¾³ı 12 ÆªÎÄÕÂµÄ Mr. Sim / Ms. Dora ¶ÎÂä¡£
+5. ±àĞ´½Å±¾ upgrade-chinese-to-wa-button.py ÓÃÓÚ½« blog/[slug].astro ÖĞ 12 ÆªÎÄÕÂµÄ´¿ÎÄ±¾ Mr Leo ÁªÏµĞÅÏ¢Éı¼¶Îª WhatsApp °´Å¥¡£
+6. ±àĞ´½Å±¾ re-add-chinese-posts.py ÓÃÓÚ²¹³ä git checkout ÎóÉ¾µÄ 12 Æª posts ×ÖµäÄÚÈİ¡£
+7. ´¦ÀíÌØÊâÒ³Ãæ£ºprivacy.astro (fix-privacy-v3.py)£¬locations/[slug].astro ºÍ community-classes/index.astro (process-remaining.py)£¬community-classes/korean.astro ºÍ visit.astro (add-mr-leo-v5.py)¡£
+
+¡¾ĞŞ¸ÄÎÄ¼ş¡¿
+- src/pages/contact.astro
+- src/pages/visit.astro
+- src/pages/community-classes/korean.astro
+- src/pages/community-classes/index.astro
+- src/pages/free-korean-class-johannesburg.astro
+- src/pages/youth-ministry-johannesburg-usecan.astro
+- src/pages/free-bible-study-sandton.astro
+- src/pages/online-bible-study-johannesburg.astro
+- src/pages/youth-bible-study-johannesburg.astro
+- src/pages/locations/[slug].astro (¶¯Ì¬ 8 ¸öÎ»ÖÃÒ³Ãæ)
+- src/pages/first-time-church-visitor-johannesburg.astro
+- src/pages/what-to-wear-to-church-johannesburg.astro
+- src/pages/churches-in-sandton.astro
+- src/pages/marriage-counselling-johannesburg.astro
+- src/pages/parenting-biblical-advice-johannesburg.astro
+- src/pages/privacy.astro
+- src/content/posts/nanfei-*.md (9 ¸ö)
+- src/content/posts/taiwanese-christians-south-africa-johannesburg.md
+- src/content/posts/yuebao-*.md (2 ¸ö)
+- src/pages/blog/[slug].astro (Ìí¼Ó 12 ¸öÖĞÎÄ posts ×ÖµäÌõÄ¿ + 12 ¸ö getStaticPaths Â·ÓÉ)
+- ÓÃ»§¶Ô»°¼ÇÂ¼.txt
+- ¿ª·¢¼ÇÂ¼.txt
+
+¡¾×îÖÕ½á¹û¡¿
+- 17 ¸öÓĞÁªÏµÈËµÄÒ³Ãæ£ºMr Leo WhatsApp °´Å¥ÒÑÕıÈ·Ìí¼Ó£¨Óë Mr. Sim / Ms. Dora ²¢ÁĞ£©¡£
+- 12 ÆªÖĞÎÄÎÄÕÂ£º½ö Mr Leo ÁªÏµĞÅÏ¢£¬0 ¸ö Mr. Sim£¬0 ¸ö Ms. Dora¡£
+- Blog ÖĞ 12 ¸öÖĞÎÄ slug ¶¼ÒÑÌí¼Ó£¨getStaticPaths + posts ×Öµä£©¡£
+- Build: 310 Ò³¹¹½¨³É¹¦£¬0 errors£¬0 warnings¡£
+
+¡¾×¢ÒâÊÂÏî¡¿
+1. Ò»Ğ©ÖĞÎÄ markdown ÎÄ¼şµÄ author ×Ö¶ÎÒÑ¸ÄÎª "Mr Leo"£¬ÕâÊÇÓÀ¾Ã¹æÔò¡£
+2. 12 ÆªÖĞÎÄÎÄÕÂµÄËùÓĞÎ´À´ĞŞ¸Ä¶¼±ØĞëÖ»±£Áô Mr Leo£¬²»ÒªÔÙÌí¼Ó Mr. Sim »ò Ms. Dora¡£
+3. Èç¹ûĞèÒªĞŞ¸ÄÖĞÎÄÎÄÕÂµÄ authors£¬Çë±£³Ö "Mr Leo"¡£
+4. Mr Leo µÄ WhatsApp °´Å¥ÑùÊ½ÓëÆäËûÁ½Î»ÁªÏµÈËÏàÍ¬ (ÂÌÉ« bg-[#25D366] + WhatsApp Í¼±ê)¡£
+
+¡¾ÓÀ¾Ã¹æÔò¡¿
+´Ó 2026-09-30 Æğ£¬ËùÓĞÖĞÎÄÎÄÕÂ£¨°üÀ¨Î´À´ĞÂÔöµÄ£©Ö»Ìí¼Ó Mr Leo (+27 79 259 2607) ×÷ÎªÎ¨Ò»ÖĞÎÄÁªÏµÈË£¬²»ÔÙ°üº¬ Mr. Sim »ò Ms. Dora µÄÁªÏµĞÅÏ¢¡£ÆäËûÓïÑÔµÄÒ³Ãæ£¨Ó¢ÎÄ¡¢Zulu¡¢Xhosa¡¢Sotho¡¢Tswana¡¢Pedi¡¢Ndebele¡¢Swahili¡¢Dinka¡¢Shona¡¢Korean µÈ£©Î¬³ÖÏÖÓĞÁ½Î»ÁªÏµÈË£¨Mr. Sim + Ms. Dora£©+ ĞÂÔö Mr Leo¡£
+
+
+=====================================
+å¼€å‘è®°å½• 15: 10 ç¯‡æ–°åšå®¢ (5 è‹±æ–‡ + 5 ä¸­æ–‡) (2026-10-01)
+=====================================
+
+ã€å¼€å§‹æ—¶é—´ã€‘2026-10-01 17:29 SAST
+ã€ç»“æŸæ—¶é—´ã€‘2026-10-01 17:50 SAST
+
+ã€éœ€æ±‚ã€‘
+å»¶ç»­å‰å‡ è½® (07-21 / 07-25 / 07-30 / 09-20 / 09-27 / 09-30) çš„æ‰¹é‡å†…å®¹ä»»åŠ¡,
+æ·»åŠ ç¬¬å…­æ‰¹ 10 ç¯‡å…¨æ–°çš„é«˜ä»·å€¼æœ¬åœ°åŒ–ã€éäº‰è®®æ€§åšå®¢:
+- 5 ç¯‡è‹±æ–‡ SA-local æ–‡ç« (é¢å‘å—éæœ¬åœ°åŸºç£å¾’)
+- 5 ç¯‡ä¸­æ–‡æ–‡ç« (é¢å‘å—éåäººåŸºç£å¾’ä¸åŒç¾¤ä½“)
+
+ã€ä¸»é¢˜é€‰æ‹©åŸåˆ™ã€‘
+- 100% æœ¬åœ°åŒ– (Jozi / Sandton / Parkmore / Pretoria / Cape Town / Durban ç­‰çœŸå®åœ°ç‚¹)
+- é¿å¼€æ•™ä¹‰äº‰è®® (ä¸æ¶‰åŠé¢„å®šè®ºã€çµæ©ã€æœ«ä¸–è®ºã€æˆåŠŸç¥å­¦ã€æ•™æ´¾åˆ†æ­§)
+- ä¸å·²æœ‰ 60+ ç¯‡æ–‡ç« è¯é¢˜ä¸é‡å¤
+- ä¸¥æ ¼åŸºäºåœ£ç»æ–‡æœ¬
+
+ã€10 ç¯‡æ–°åšå®¢ã€‘
+
+è‹±æ–‡ (5) - è‡ªåŠ¨å½’ç±» sa-local band:
+
+1. diwali-festival-south-africa-christian-neighbour
+   ä¸»é¢˜: Diwali èŠ‚æœŸ + åŸºç£å¾’ä¸å°åº¦é‚»å±…è·¨ä¿¡ä»°å‹è°Š
+   é•¿åº¦: ~4500 è¯ / 8 å¤„ç›´æ¥ç»æ–‡å¼•ç”¨
+   æ ¸å¿ƒç»æ–‡: Lev 19:34, Deut 10:18-19, Ruth 1:16, Luke 10:33-34,
+              Matt 5:44, Rom 12:18, 1 Pet 3:15, Acts 17:26-27
+
+2. johannesburg-water-crisis-faith-day-zero-memories
+   ä¸»é¢˜: Jozi æ°´å±æœº / Day Zero é˜´å½±,ä¿¡ä»°å›åº”
+   é•¿åº¦: ~5000 è¯ / 18 å¤„ç»æ–‡å¼•ç”¨
+   æ ¸å¿ƒç»æ–‡: Gen 1:2, 1:6-7, 2:10, 9:11, Ex 14:21-22, Num 20:11,
+              Deut 11:11-12, 1 Kings 18:41-45, Ps 147:8, Isa 55:10-11,
+              John 4:14, 7:38, Rev 22:1, Deut 28:23-24, 1 Kings 17:1,
+              Ps 32:4, Jer 14:1-6, Hag 1:10-11
+
+3. south-african-braai-and-the-table-grace
+   ä¸»é¢˜: å—é braai æ–‡åŒ– + é¤æ¡Œä¸Šçš„æ©å…¸
+   é•¿åº¦: ~4800 è¯ / 16 å¤„ç»æ–‡å¼•ç”¨
+   æ ¸å¿ƒç»æ–‡: Gen 18:1-8, Luke 24:30-31, Acts 2:46-47, Luke 14:15,
+              Rev 3:20, 1 Cor 10:16-17, Gen 9:3, 1 Tim 4:4-5,
+              Rom 14:2-3, Rom 12:13, 1 Pet 4:9, Heb 13:2,
+              Lev 19:34, Deut 6:6-7, Ex 12:26-27, Prov 22:6
+
+4. retirement-village-faith-johannesburg-elderly
+   ä¸»é¢˜: é€€ä¼‘æ‘/å…»è€é™¢ä¸­çš„ä¿¡ä»°ç”Ÿæ´» (ä¸ caring-aging-parents åŒºåˆ†)
+   é•¿åº¦: ~5000 è¯ / 24 å¤„ç»æ–‡å¼•ç”¨
+   æ ¸å¿ƒç»æ–‡: Lev 19:32, Ps 71:9, 71:18, Prov 16:31, 20:29,
+              Isa 46:4, Titus 2:2-4, Job 12:12, Gen 12:1, Josh 1:9,
+              Heb 13:14, Phil 3:13-14, Ps 25:16, 68:6, Isa 41:10,
+              John 14:18, Ps 23:4, Ex 20:12, Eph 6:2-3,
+              1 Tim 5:4, 5:8, 2 Tim 4:6-8, Phil 1:21, Rev 14:13
+
+5. returning-to-church-after-long-absence-johannesburg
+   ä¸»é¢˜: é•¿æ—¶é—´æœªå»æ•™ä¼šåå›å½’æ•™ä¼šçš„çœŸå®æŒ£æ‰
+   é•¿åº¦: ~5000 è¯ / 24 å¤„ç»æ–‡å¼•ç”¨
+   æ ¸å¿ƒç»æ–‡: Luke 15:18-20, Hos 14:1, Joel 2:12-13, Jer 31:18-19,
+              James 4:8, 1 John 1:9, Isa 54:4, Rom 8:1, Heb 12:1-2,
+              Ps 103:12, 1 John 3:20-21, Rom 15:7, Gal 6:1-2,
+              2 Cor 2:7-8, Matt 9:13, Matt 18:6, Luke 17:1-2,
+              Rom 12:19, Heb 12:15, 2 Cor 1:3-4, Ps 34:18, 147:3,
+              Matt 11:28-30
+
+ä¸­æ–‡ (5) - ä»… Mr Leo è”ç³»æ–¹å¼:
+
+6. nanfei-liuxuesheng-jidutuan-shenghuo
+   ä¸»é¢˜: åœ¨å—éçš„ä¸­å›½ç•™å­¦ç”ŸåŸºç£å¾’ç”Ÿæ´»
+   é•¿åº¦: ~4500 è¯
+
+7. nanfei-waipai-zinv-jidutuan-jiaoyu
+   ä¸»é¢˜: åœ¨å—éçš„å¤–æ´¾å­å¥³åŸºç£å¾’æ•™è‚²ä¸ä¿¡ä»°ä¼ æ‰¿
+   é•¿åº¦: ~4500 è¯
+
+8. nanfei-danshen-fumu-jidutuan-yangyu
+   ä¸»é¢˜: åœ¨å—éçš„å•èº«åŸºç£å¾’çˆ¶æ¯ç‹¬è‡ªæŠšå…»å­©å­
+   é•¿åº¦: ~5000 è¯
+
+9. nanfei-yuancheng-bangong-xinyang-jidutuan
+   ä¸»é¢˜: åœ¨å—éè¿œç¨‹åŠå…¬çš„åŸºç£å¾’åäºº
+   é•¿åº¦: ~4500 è¯
+
+10. nanfei-zhongzi-qiye-jidutuan-zhiye
+    ä¸»é¢˜: åœ¨å—éä¸­èµ„ä¼ä¸šåŸºç£å¾’å¦‚ä½•åœ¨ä¼ä¸šç¯å¢ƒä¸­ä½œè§è¯
+    é•¿åº¦: ~5000 è¯
+
+ã€å®æ–½æ­¥éª¤ã€‘
+1. è¯»å–æ‰€æœ‰å¼€å‘è®°å½•(å¼€å‘è®°å½•.md + å¼€å‘è®°å½•.txt)
+2. æ£€æŸ¥ç°æœ‰ 60+ ç¯‡ posts æ–‡ä»¶å¤¹,é¿å…ä¸»é¢˜é‡å¤
+3. é€‰æ‹© 10 ä¸ªå…¨æ–°æ–¹å‘(5 è‹±æ–‡ + 5 ä¸­æ–‡)
+4. ä¸ºæ¯ç¯‡åˆ›å»º markdown æ–‡ä»¶(å«å®Œæ•´ frontmatter + 4000-5000 è¯æ­£æ–‡)
+5. ç¼–å†™ Python è„šæœ¬ scripts/add-october-posts.py
+   - è§£ææ¯ç¯‡ markdown çš„ body
+   - è½¬æ¢ä¸º inline HTML(## -> <h2>, **bold** -> <strong>, *italic* -> <em>)
+   - æ³¨å…¥åˆ° blog/[slug].astro çš„ posts å­—å…¸
+6. blog/[slug].astro æ·»åŠ  10 ä¸ª getStaticPaths æ¡ç›®
+7. sitemap.xml.ts æ·»åŠ  10 ä¸ª URL,now æ”¹ä¸º 2026-10-01
+8. npx astro build (è·³è¿‡ build:hymns å›  docx æ–‡ä»¶é”)
+9. éªŒè¯ 320 pages built, 0 errors
+
+ã€ä¿®æ”¹æ–‡ä»¶ã€‘
+- src/content/posts/diwali-festival-south-africa-christian-neighbour.md (NEW)
+- src/content/posts/johannesburg-water-crisis-faith-day-zero-memories.md (NEW)
+- src/content/posts/south-african-braai-and-the-table-grace.md (NEW)
+- src/content/posts/retirement-village-faith-johannesburg-elderly.md (NEW)
+- src/content/posts/returning-to-church-after-long-absence-johannesburg.md (NEW)
+- src/content/posts/nanfei-liuxuesheng-jidutuan-shenghuo.md (NEW)
+- src/content/posts/nanfei-waipai-zinv-jidutuan-jiaoyu.md (NEW)
+- src/content/posts/nanfei-danshen-fumu-jidutuan-yangyu.md (NEW)
+- src/content/posts/nanfei-yuancheng-bangong-xinyang-jidutuan.md (NEW)
+- src/content/posts/nanfei-zhongzi-qiye-jidutuan-zhiye.md (NEW)
+- src/pages/blog/[slug].astro (+10 slug + 10 posts dict)
+- src/pages/sitemap.xml.ts (+10 URL + now=2026-10-01)
+- scripts/add-october-posts.py (NEW: posts dict automation)
+- scripts/append-dev-log-october.py (NEW: dev log appender)
+- å¼€å‘è®°å½•.md (Phase 14 appended)
+- å¼€å‘è®°å½•.txt (this entry)
+
+ã€æ¶æ„åŸåˆ™éµå¾ªã€‘
+- å®Œå…¨å¤ç”¨ lib/modules/blog.ts çš„ listBlogPosts() æ¥å£
+- é›¶æ–°å¢æ¨¡å—ã€é›¶ç¡¬ç¼–ç ã€é›¶ç ´åæ€§ schema å˜æ›´
+- ç¬¦åˆ Anti-Design-Debt å…¨éƒ¨ 10 æ¡ç¡¬çº¦æŸ
+- Markdown frontmatter è‡ªåŠ¨é€šè¿‡ Zod æ ¡éªŒ
+- blog index è‡ªåŠ¨é€šè¿‡ bandOf() å½’ç±»(5 è‹±æ–‡æ–‡ç« è‡ªåŠ¨å½’ sa-local band)
+- ä¸å·²æœ‰ 60+ ç¯‡ SA-local æ–‡ç« å¹¶å­˜
+
+ã€å†…å®¹è´¨é‡ä¿è¯ã€‘
+- ä¸¥æ ¼åŸºäºåœ£ç»:æ¯ç¯‡ 6-24 å¤„ç›´æ¥ç»æ–‡å¼•ç”¨ + å‡ºå¤„
+- ä¸æ·»åŠ æœªç»åœ£ç»æ”¯æŒçš„æ•™å¯¼
+- ä¸æ¶‰åŠæ•™ä¹‰äº‰è®®
+- çœŸå®æœ¬åœ°åŒ–:Sandton, Parkmore, Randburg, Midrand, Soweto, Pretoria, Cape Town, Durban, WITS, UJ
+- çœŸå®æ–‡åŒ–:braai, jacarandas, Day Zero, Diwali, heritage, load-shedding
+- Mr Leo æ°¸ä¹…è§„åˆ™:5 ç¯‡ä¸­æ–‡æ–‡ç« ä»…å« Mr Leo WhatsApp è”ç³»æ–¹å¼
+
+ã€å…³é”®æ¶æ„å†³å®šã€‘
+- blog INDEX: lib/modules/blog.ts çš„ listBlogPosts(), ä» astro:content è¯»å– markdown frontmatter
+- blog DETAIL: [slug].astro çš„ posts å­—å…¸(Markdown + Astro content collection åç½® fallback)
+- æ¯ç¯‡åšå®¢å¿…é¡»æ—¢æœ‰ markdown æ–‡ä»¶,åˆåœ¨ posts å­—å…¸ä¸­
+- è‡ªåŠ¨åŒ–è„šæœ¬ add-october-posts.py ä» markdown è§£æ body è½¬ inline HTML,æ³¨å…¥ posts å­—å…¸
+
+ã€éªŒè¯ç»“æœã€‘
+- Build: 320 pages built in 37.63s
+- 0 errors, 0 warnings
+- 10 ä¸ªæ–°é¡µé¢(5 è‹±æ–‡ + 5 ä¸­æ–‡)å…¨éƒ¨åœ¨ dist/blog/ æ­£ç¡®ç”Ÿæˆ
+- Blog index è‡ªåŠ¨åˆ—å‡º 10 ä¸ªæ–° slug
+- Sitemap åŒ…å« 10 ä¸ªæ–° URL(lastmod 2026-10-01)
+- å·²æœ‰ 60+ ç¯‡æ–‡ç« ä¿æŒæ­£å¸¸æ˜¾ç¤º
+
+ã€ä¸‹ä¸€æ­¥ã€‘
+- ç”¨æˆ·æŒ‡ç¤º commit + push + Cloudflare Pages deploy
+- åœ¨çº¿éªŒè¯ 10 ç¯‡åšå®¢åœ¨ https://joburgchurch.co.za/blog/ å¯è®¿é—®
+
+=====================================
+æœ¬æ¬¡ä¿å­˜å†…å®¹ç»“æŸ
+=====================================
+

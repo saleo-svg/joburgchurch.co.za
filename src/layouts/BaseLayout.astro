@@ -16,7 +16,7 @@ interface Props {
 
 const {
   title,
-  description = 'Johannesburg Bible Study Church — a Bible study and welcoming Christian community in Parkmore, Sandton. Wednesday online Bible study 7:30pm. Free Sunday Korean class 2:00pm. Youth ministry (UseCan). All are welcome.',
+  description = 'Johannesburg Bible Study Church — a Bible study and welcoming Christian community in Parkmore, Sandton. Wednesday online Bible study 7:30pm. Sunday Korean class 3:00pm. Youth ministry (UseCan). All are welcome.',
   canonicalUrl = Astro.url.href,
   ogImage = '/images/og-default.svg',
   ogType = 'website',
@@ -39,7 +39,7 @@ const localBusinessSchema = {
   url: siteUrl,
   logo: `${siteUrl}/images/og-default.svg`,
   image: `${siteUrl}/images/og-default.svg`,
-  description: 'A Bible study and welcoming Christian community in Sandton, Johannesburg. Wednesday online Bible study, free Sunday Korean class, youth programs.',
+  description: 'A Bible study and welcoming Christian community in Sandton, Johannesburg. Wednesday online Bible study, Sunday Korean class, youth programs.',
   telephone: ['+27774871295', '+27674424461'],
   address: {
     '@type': 'PostalAddress',
@@ -64,11 +64,11 @@ const localBusinessSchema = {
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Sunday'],
-      opens: '14:00',
-      closes: '16:00',
+      opens: '15:00',
+      closes: '17:00',
     },
   ],
-  priceRange: 'Free',
+  priceRange: 'Bible study free; Korean class fee applies',
   areaServed: [
     { '@type': 'City', name: 'Johannesburg' },
     { '@type': 'City', name: 'Sandton' },

@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = () => {
   const siteUrl = 'https://joburgchurch.co.za';
-  const now = '2026-09-27';
+  const now = '2026-10-01';
 
   const staticPages = [
     { url: '/', priority: '1.0', changefreq: 'weekly' },
@@ -105,6 +105,43 @@ export const GET: APIRoute = () => {
     { url: '/blog/helping-children-hard-news-south-africa/', lastmod: '2026-09-27' },
     { url: '/blog/christian-wedding-marriage-preparation-johannesburg/', lastmod: '2026-09-27' },
     { url: '/blog/lunch-break-bible-study-sandton-workplace/', lastmod: '2026-09-27' },
+    // 30 September 2026 Chinese-language posts for South African Chinese Christian community
+    { url: '/blog/nanfei-huaren-jiaohui-zhunanjohannesburg-zhongwen-jidutuanfei/', lastmod: '2026-09-30' },
+    { url: '/blog/nanfei-waipai-huaren-jidutuan-shenghuo-johannesburg/', lastmod: '2026-09-30' },
+    { url: '/blog/taiwanese-christians-south-africa-johannesburg/', lastmod: '2026-09-30' },
+    { url: '/blog/nanfei-huayi-erda-xinyang-shenfen-jiaohui/', lastmod: '2026-09-30' },
+    { url: '/blog/nanfei-mianfei-xinli-zixun-huaren-jidutuan/', lastmod: '2026-09-30' },
+    { url: '/blog/yuebao-huaren-libai-juhui-dian-zhinan/', lastmod: '2026-09-30' },
+    { url: '/blog/nanfei-shengfen-huaren-jidutuan-ziyuan/', lastmod: '2026-09-30' },
+    { url: '/blog/nanfei-huaren-hunyin-jiating-jiaohui/', lastmod: '2026-09-30' },
+    { url: '/blog/nanfei-zuolibai-shicao-zhinan/', lastmod: '2026-09-30' },
+    { url: '/blog/yuebao-huaren-chajingban-zhouwu/', lastmod: '2026-09-30' },
+    { url: '/blog/nanfei-anquan-xinyang-jidutuan/', lastmod: '2026-09-30' },
+    { url: '/blog/nanfei-zhichang-xinyang-jidutuan/', lastmod: '2026-09-30' },
+    // 01 October 2026 South Africa localised English posts
+    { url: '/blog/diwali-festival-south-africa-christian-neighbour/', lastmod: '2026-10-01' },
+    { url: '/blog/johannesburg-water-crisis-faith-day-zero-memories/', lastmod: '2026-10-01' },
+    { url: '/blog/south-african-braai-and-the-table-grace/', lastmod: '2026-10-01' },
+    { url: '/blog/retirement-village-faith-johannesburg-elderly/', lastmod: '2026-10-01' },
+    { url: '/blog/returning-to-church-after-long-absence-johannesburg/', lastmod: '2026-10-01' },
+    // 01 October 2026 Chinese-language posts for South African Chinese Christian community
+    { url: '/blog/nanfei-liuxuesheng-jidutuan-shenghuo/', lastmod: '2026-10-01' },
+    { url: '/blog/nanfei-waipai-zinv-jidutuan-jiaoyu/', lastmod: '2026-10-01' },
+    { url: '/blog/nanfei-danshen-fumu-jidutuan-yangyu/', lastmod: '2026-10-01' },
+    { url: '/blog/nanfei-yuancheng-bangong-xinyang-jidutuan/', lastmod: '2026-10-01' },
+    { url: '/blog/nanfei-zhongzi-qiye-jidutuan-zhiye/', lastmod: '2026-10-01' },
+    // 01 October 2026 South Africa localised hot-topic posts (jacarandas/spring)
+    { url: '/blog/jacarandas-spring-joburg-second-bloom/', lastmod: '2026-10-01' },
+    { url: '/blog/joburg-spring-gardening-faith-cultivation/', lastmod: '2026-10-01' },
+    { url: '/blog/first-thunderstorm-spring-joburg-faith/', lastmod: '2026-10-01' },
+    { url: '/blog/october-light-and-late-sundown-joburg/', lastmod: '2026-10-01' },
+    { url: '/blog/spring-cleaning-home-and-soul-johannesburg/', lastmod: '2026-10-01' },
+    // 01 October 2026 Chinese-language hot-topic posts (gold visa/return + dual language)
+    { url: '/blog/nanfei-jinpian-haigui-jidutuan-shenfen/', lastmod: '2026-10-01' },
+    { url: '/blog/nanfei-haiwai-qiaomin-laohui-jiating-jiuye/', lastmod: '2026-10-01' },
+    { url: '/blog/nanfei-haigui-jidutuan-laoling-jihua/', lastmod: '2026-10-01' },
+    { url: '/blog/nanfei-haizi-zhongwen-jiaoyu-shuangyu-qiehuan/', lastmod: '2026-10-01' },
+    { url: '/blog/nanfei-luoye-gengen-jidutuan-shenfen/', lastmod: '2026-10-01' },
   ];
 
   const allPages = [

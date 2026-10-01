@@ -37,11 +37,11 @@ export async function getSettings(): Promise<SettingData> {
       churchName: 'Johannesburg Bible Study Church',
       tagline: 'A Bible study and welcoming Christian community in Sandton, Johannesburg',
       bibleStudyTime: 'Wednesday 7:30pm (Online via Google Meet)',
-      koreanClassTime: 'Sunday 2:00pm (Parkmore, Sandton)',
+      koreanClassTime: 'Sunday 3:00pm (Parkmore, Sandton)',
       phoneSim: '+27 77 487 1295',
       phoneDora: '+27 67 442 4461',
       address: 'Parkmore, 11th Street, Sandton, 2196, Johannesburg',
-      welcomeMessage: 'Join us for free Bible study and Korean class. Everyone is welcome.',
+      welcomeMessage: 'Join us for free Bible study and Sunday Korean class. A course fee applies for Korean class. Everyone is welcome.',
     };
   } else {
     cached = entry.data;

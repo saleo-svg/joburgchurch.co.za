@@ -171,7 +171,7 @@ The more specific you are, the easier it is to find the right fit.
 
 Search with your specific criteria:
 - "Wednesday Bible study Johannesburg online"
-- "Korean class Sandton free"
+- "Korean class Sandton"
 - "Church near me Parkmore Sandton"
 - "Bible study for beginners Johannesburg"
 

@@ -410,3 +410,169 @@ Build 后：268 pages 全部正常，blog index 渲染 30 篇文章按 5 �?ban
 =====================================
 文件结束
 =====================================
+
+=====================================
+用户对话记录 - Church Site 项目
+更新时间: 2026-09-27 09:35 SAST
+=====================================
+
+--- 对话 19 (今天 09:25) --- 第五轮批量内容添加 ---
+
+【用户提问】
+读取开发记录，帮我更新一些文章  主题你来根据我之前的开发记录内容参考你来定主题和标题
+
+【我的回答】
+理解了。我读取了：
+1. 开发记录.md + 开发记录.txt（涵盖 06-21 到 07-30 所有开发会话 + Phase 12 反技术债架构）
+2. 用户对话记录.txt（涵盖 06-21 到 07-30 所有对话）
+3. 项目现有的 src/content/posts/ 中的 44 篇文章标题（避免重复）
+
+从对话历史看到用户要求：
+- 高价值干货、不泛泛而谈
+- 100% 面向南非本地（Jozi / Sandton / Soweto / Pretoria）
+- 避开教义争议
+- 严格遵守圣经、不随意添加自己的理解
+- 主题由我根据开发记录决定
+
+我盘点已有 44 篇文章的话题（sabbath / waiting / peace / heritage / forgiveness / hospital / parenting / discernment / 等），选择 5 个全新方向：
+
+1. **Sabbath Rest in a City That Never Stops** — 安息日 + Jozi 长周
+2. **The Christian Grandparent in Johannesburg: Passing Faith to Grandchildren in 2026** — 祖父母 2026 现实
+3. **Helping Children Process Hard News Through the Bible** — 家长帮孩子面对艰难新闻
+4. **The Christian and the Wedding: A Biblical View of Preparing for Marriage** — 婚前准备
+5. **The Lunch Break Bible Study: A Christian's Guide to the Quiet Hour at Work in Sandton** — 职场午休灵修
+
+每篇：
+- ~4500-5000 词
+- 大量圣经经文（每篇 8-15 处 direct quote + citation）
+- 真实南非地点（Parkmore、Sandton City food court、Sandton 办公室塔、Parkmore jacarandas 等）
+- 严格基于圣经，不添加未经圣经支持的教导
+- 无个人发挥，不涉及教义争议
+
+【完成】
+- 5 篇 markdown 写好（src/content/posts/）
+- 5 个新 slug 添加到 src/pages/blog/[slug].astro 的 getStaticPaths
+- 5 个字典条目添加到 src/pages/blog/[slug].astro 的 posts 字典
+- 5 个新 URL 添加到 src/pages/sitemap.xml.ts
+- sitemap.xml.ts 的 now 常量从 2026-09-20 改为 2026-09-27
+- Build: 288 pages, 0 errors, 0 warnings
+- 自动归类到 devotional / pastoral / sa-local band
+
+=====================================
+文件结束
+=====================================
+
+---
+[2026-09-27 10:08 SAST]
+
+用户: 再增加一些南非本地的赞美诗歌和歌词吧，参照以前的开发记录的hymn song lyrics的要求和标准 创作增加，我把权限都全部给你
+
+助手: 已完成。
+- 在 src/data/hymns.ts 中追加 10 首新南非本地赞美诗:
+  NDEBELE (3): imina-yami-ngaphezulu, zulu-na-ngu, muden-iwe-mfundisi
+  PEDI (3): baba-wethu-yo-wena, tseba-modimo, thapelo-ya-mpahalwe
+  ZULU (2): ngiyabonga-baba, izulu-liyabonga
+  AFRIKAANS (1): jacarandas-van-johannesburg (Parkmore/Sandton 主题)
+  SOTHO (1): ntate-modimo
+- 全部带完整 lyrics (3 verse + chorus 格式)、chord progression、region
+  标签、artist 标注、YouTube search 关键字
+- slug 与现有 149 首无冲突 (imina-yami/baba-wethu/muden-iwe 重命名为
+  -ngaphezulu/-yo-wena/-mfundisi)
+- 重新生成 159 个 .docx 文件（含 10 个新 hymn）
+- npm run build: 298 pages, 0 errors, 0 warnings
+- git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" 6e6f34f + push master + 部署 c65eba36.joburgchurch.pages.dev
+- 在线验证: /hymns/ 显示 159 Songs / 30 Languages
+- 10 个新赞美诗详情页与 .docx 下载全部 HTTP 200
+
+=====================================
+�û��Ի���¼ - Church Site ��Ŀ
+����ʱ��: 2026-09-30 16:32 SAST
+=====================================
+
+--- �Ի� 20 (���� 15:33) --- ���������������� ---
+
+���û����ʡ�
+����������һЩ���£��Եģ�������һЩ������Ϸ���ߵĻ���д��һЩ���£��ðɡ�������һ�£��������Ϸ���������Ȼ�в�ͬ��ʡ�ݣ�Ҳ�����в�ͬ�ĵ���Ҳ������߲�ͬ����Ⱥ����̨����Ҳ�ã������ǳ�����������ɴ򹤵��й��ˣ����������ڱ��س����Ļ��˵ȵȣ����Ƕ�����Ѱ�ҽ̻���ģ��԰ɣ�������һ�£������в�ͬ���ľ�����������Щ��ͬ�����Ĺؼ��ʡ������İٶȻ��йȸ趼�������������б�ӦҲ���������԰ɣ�AI������������Ȼ���ǻ�������Щ�ؼ�����Ѱ�ҽ̻ᣬ��ʱ�����ҽ̻ᣬ��ʱ���ǲ�ͬ�Ķ������һЩ��������һЩ���£���һЩ����������ѯ���԰ɣ�����Ҳ��������ѯ��ѵġ�
+
+���ԣ����������һЩ���£���Щ��������������Ϸ���ߵ��й��˵Ļ���ͽ��ص�һЩ���£���������ݾۻ�ѽ���ۻ��������ȵȡ����ҵ���ϵ��ʽ����ȥ��������ҳ���WhatsApp��ʾ����ʽһ���������ҵ�����LEO��Ҳ����Mr Leo���ҵ�WhatsApp���ֻ�����+27792592607��
+
+���ҵĻش�
+�����ˡ����ȶ�ȡ�ˣ�
+1. ������¼.md + ������¼.txt������ Phase 11-13 ������ծ�ܹ� + 5 �� 25 ƪ��ʷ����׼��
+2. �û��Ի���¼.txt������ 2026-06-21 �� 2026-09-27 ���жԻ���
+3. src/pages/blog/[slug].astro �� src/pages/sitemap.xml.ts ģ��
+4. src/pages/contact.astro �� WhatsApp ��ť��ʽ
+
+��ʷ׼��
+- �ϸ�����ʥ�������������Ӹ�������
+- �ܿ���������
+- 100% �����ϷǱ���Ⱥ��
+- ��ϵ�ˣ�������λ (Mr. Sim +27 77 487 1295 / Ms. Dora +27 67 442 4461)
+- �ϸ����� Phase 12 10 ��ӲԼ��
+- �������ͼ���ģʽ��md �ļ� + getStaticPaths + posts �ֵ� + sitemap��
+
+ѯ���û�����ȷ�ϣ�
+- ��ϵ�ˣ������˶��ã�Mr. Leo ������ѯ + Mr. Sim + Ms. Dora��
+- ���� 3 ƪ��д���£��޸���ϵ��ʽ
+- ����ƫʵ����Ϣ���̻���Ϣ���ۻ�㡢������ѯ��
+
+���̵����� 49+ ƪ����ȫ��Ӣ�ģ�ѡ�� 9 ��ȫ�����ķ���
+
+1. �Ϸ�Լ����˹�����˽̻�ָ��
+2. �Ϸ���������������
+3. ̨�������Ϸ�
+4. ���Ϸǳ����Ļ��ˣ����������
+5. �Ϸ����������ѯ
+6. Լ��������ݾۻ��ָ��
+7. �Ϸǲ�ͬʡ�ݻ��˻���ͽ��Դ
+8. �Ϸǻ��˻���ͽ�Ļ������ͥ
+9. ���Ϸ�����ݵ�ʵ��ָ��
+10. Լ�����˲龭������
+11. ���Ϸǵİ�ȫ������
+12. ���Ϸǵ�ְ��������
+
+ÿƪ��
+- Լ 4000-5000 �֣�md �ļ���+ �ֵ�����ȡ�ؼ�ժҪ
+- 6-12 ��ʥ����������
+- ��ʵ�ϷǱ��ػ��ص�
+- ��λ��ϵ�� WhatsApp ��ť��ʽ�� contact.astro һ��
+
+����ɡ�
+- 12 ƪ markdown д�ã�src/content/posts/��
+- 12 ���� slug ���ӵ� src/pages/blog/[slug].astro �� getStaticPaths
+- 12 ���ֵ���Ŀ��HTML ժҪ�����ӵ� src/pages/blog/[slug].astro �� posts �ֵ�
+- 12 ���� URL ���ӵ� src/pages/sitemap.xml.ts��lastmod 2026-09-30��
+- sitemap.xml.ts �� now ������ 2026-09-27 ��Ϊ 2026-09-30
+- Build: 310 pages built, 0 errors, 0 warnings
+- ���� 12 �����������ļ����� dist/blog/ �гɹ�����
+
+=====================================
+�ļ�����
+=====================================
+
+
+=====================================
+New Entry - Church Site Project
+Update Time: 2026-09-30 19:38 SAST
+=====================================
+
+[USER REQUEST 2026-09-30]
+The user wants:
+1. On all pages with contact info (not every page), add Mr Leo (+27 79 259 2607) as a third contact with the same WhatsApp button style as the other contacts.
+2. For all Chinese-language articles (markdown files in src/content/posts/ AND entries in src/pages/blog/[slug].astro posts dictionary), KEEP ONLY Mr Leo as contact. Remove Mr. Sim and Ms. Dora because they cannot speak Chinese.
+3. This is a PERMANENT rule: from now on, including all future Chinese articles, ONLY Mr Leo should be added as the contact.
+
+[ACTIONS TAKEN]
+1. Found all pages with wa.me links (about 17): contact.astro, visit.astro, community-classes/korean.astro, community-classes/index.astro, free-korean-class-johannesburg.astro, youth-ministry-johannesburg-usecan.astro, free-bible-study-sandton.astro, online-bible-study-johannesburg.astro, youth-bible-study-johannesburg.astro, locations/[slug].astro, first-time-church-visitor-johannesburg.astro, what-to-wear-to-church-johannesburg.astro, churches-in-sandton.astro, marriage-counselling-johannesburg.astro, parenting-biblical-advice-johannesburg.astro, privacy.astro
+2. Added Mr Leo WhatsApp button next to existing Mr. Sim and Ms. Dora WhatsApp buttons on each page.
+3. Processed 12 Chinese markdown posts (nanfei-*, taiwanese-*, yuebao-*): removed Mr. Sim and Ms. Dora contact blocks, changed author to "Mr Leo", kept only Mr Leo as contact.
+4. Updated blog/[slug].astro posts dictionary: replaced Mr. Sim and Ms. Dora sections in 12 Chinese entries with Mr Leo WhatsApp button only.
+
+[FINAL VERIFICATION]
+- All 17 contact pages: Mr Leo WhatsApp button added correctly alongside Mr. Sim and Ms. Dora.
+- All 12 Chinese articles (markdown + blog posts dict): Mr Leo only, 0 Mr. Sim, 0 Ms. Dora.
+- Build successful: 310 pages built in ~36 seconds, 0 warnings.
+- Verified Mr. Leo wa.me/27792592607 appears in all expected locations.
+
+[PERMANENT RULE - Effective 2026-09-30]
+All Chinese-language articles on this site (current and future) MUST include ONLY Mr Leo (+27 79 259 2607) as the Chinese-language contact. Do NOT add Mr. Sim or Ms. Dora in Chinese articles because they cannot communicate in Chinese. Other-language pages (English, Zulu, Xhosa, Sotho, Tswana, Pedi, Ndebele, Swahili, Dinka, Shona, Korean) continue to have Mr. Sim and Ms. Dora contacts as before, plus the newly-added Mr Leo.

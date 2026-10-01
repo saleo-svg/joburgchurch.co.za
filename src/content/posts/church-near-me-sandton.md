@@ -119,10 +119,10 @@ These programs are often open to non-members and can be a good way to test a chu
 ### Johannesburg Bible Study Church (Parkmore)
 
 - **Address:** Parkmore, 11th Street, Sandton (main gatherings are online)
-- **Service Times:** Wednesday 7:30pm (online), Sunday 2:00pm (Korean class)
+- **Service Times:** Wednesday 7:30pm (online), Sunday 3:00pm (Korean class)
 - **Website:** joburgchurch.co.za
 - **Best for:** People looking for Bible study, online-friendly community, question-askers
-- **Note:** Free Korean class open to the community, no church membership required
+- **Note:** Korean class open to the community, no church membership required. A course fee applies.
 
 ## How to Choose the Right Church Near You
 
@@ -214,4 +214,4 @@ People searching for "church near me Sandton" also look for:
 
 ---
 
-*Johannesburg Bible Study Church meets online every Wednesday at 7:30pm and offers a free Korean class on Sunday at 2:00pm in Parkmore, Sandton. Contact us to join or learn more.*
+*Johannesburg Bible Study Church meets online every Wednesday at 7:30pm and offers a Korean class on Sunday at 3:00pm in Parkmore, Sandton. Contact us to join or learn more.*

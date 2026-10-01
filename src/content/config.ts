@@ -100,7 +100,7 @@ const settings = defineCollection({
     church_name: z.string().default('Johannesburg Bible Study Church'),
     tagline: z.string().default(''),
     bible_study_time: z.string().default('Wednesday 7:30pm'),
-    korean_class_time: z.string().default('Sunday 2:00pm'),
+    korean_class_time: z.string().default('Sunday 3:00pm'),
     phone_sim: z.string().default('+27 77 487 1295'),
     phone_dora: z.string().default('+27 67 442 4461'),
     address: z.string().default('Parkmore, 11th Street, Sandton, 2196 Johannesburg'),
