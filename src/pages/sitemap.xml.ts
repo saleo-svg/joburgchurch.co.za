@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = () => {
   const siteUrl = 'https://joburgchurch.co.za';
-  const now = '2026-10-01';
+  const now = '2026-10-05';
 
   const staticPages = [
     { url: '/', priority: '1.0', changefreq: 'weekly' },
@@ -39,7 +39,7 @@ export const GET: APIRoute = () => {
     { url: '/what-to-wear-to-church-johannesburg/', lastmod: '2026-07-03' },
     { url: '/first-time-church-visitor-johannesburg/', lastmod: '2026-07-03' },
     { url: '/church-service-times-sandton/', lastmod: '2026-07-03' },
-    { url: '/free-korean-class-johannesburg/', lastmod: '2026-07-03' },
+    { url: '/free-korean-class-johannesburg/', lastmod: '2026-10-01' },
     { url: '/youth-bible-study-johannesburg/', lastmod: '2026-07-03' },
     { url: '/churches-in-sandton/', lastmod: '2026-07-03' },
     { url: '/bible-study-for-depression-johannesburg/', lastmod: '2026-07-03' },
@@ -56,7 +56,7 @@ export const GET: APIRoute = () => {
 
   const blogPosts = [
     { url: '/blog/welcome-to-our-church/', lastmod: '2026-01-01' },
-    { url: '/blog/free-korean-class-community/', lastmod: '2026-02-01' },
+    { url: '/blog/korean-class-community/', lastmod: '2026-10-01' },
     { url: '/blog/why-community-learning-matters/', lastmod: '2026-03-01' },
     { url: '/blog/youth-growth-spiritual-education/', lastmod: '2026-04-01' },
     { url: '/blog/how-to-join-online-bible-study/', lastmod: '2026-05-01' },
@@ -142,6 +142,12 @@ export const GET: APIRoute = () => {
     { url: '/blog/nanfei-haigui-jidutuan-laoling-jihua/', lastmod: '2026-10-01' },
     { url: '/blog/nanfei-haizi-zhongwen-jiaoyu-shuangyu-qiehuan/', lastmod: '2026-10-01' },
     { url: '/blog/nanfei-luoye-gengen-jidutuan-shenfen/', lastmod: '2026-10-01' },
+    // 05 October 2026 — South Africa localised high-value posts (Reddit research based, no controversy)
+    { url: '/blog/money-and-the-south-african-christian-biblical-view/', lastmod: '2026-10-05' },
+    { url: '/blog/mental-health-and-faith-johannesburg-christian/', lastmod: '2026-10-05' },
+    { url: '/blog/finding-a-bible-based-community-johannesburg/', lastmod: '2026-10-05' },
+    { url: '/blog/christian-expat-faith-johannesburg-multilingual/', lastmod: '2026-10-05' },
+    { url: '/blog/small-church-vs-mega-church-south-africa-honest-reflection/', lastmod: '2026-10-05' },
   ];
 
   const allPages = [
