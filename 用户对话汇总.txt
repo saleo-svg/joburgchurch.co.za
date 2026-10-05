@@ -1,6 +1,9 @@
 # 用户对话汇总
 # Johannesburg Bible Study Church Website Project
-# 生成时间: 2026-06-21
+# 最近更新: 2026-10-02
+#
+# 说明: 本文件仅包含用户的提问 / 问题 / 对话。
+#       AI 的答案和实施细节请见 开发记录.txt / 开发记录.md。
 
 ---
 
@@ -96,66 +99,6 @@
 用户提到教会大约有 6-7 个网点，分布在约翰内斯堡不同区域。
 主网点：Sandton（Parkmore, 11th Street）
 其他网点：Johannesburg 各区域（具体位置待扩展）
-
----
-
-## 2026-10-05 晚间 — Reddit 2026-10 调研后新增 5 篇南非本地化博客文章
-
-### 用户原始请求
-
-> 你读取一下我前面的对话和开发记录。前几天让你帮我挖掘了 Reddit，南非这边的很多用户对南非教会相关的关注点和议题在哪里？你找几个比较好的方向，多做一些内容，现在再给我增加一些文章吧，好吧
-
-> 还有，你尽量不要发布如何分辨真假教会、真假牧师这种内容，这很容易引起别人的激烈讨论和争议，这个类型就不要发了
-
-### 用户核心需求
-1. 基于之前 Reddit 调研，找几个好的方向
-2. 增加更多南非本地化的博客文章
-3. 100% 面向南非本地受众
-4. **避开**识别真假教会、真假牧师等容易引起争议的内容
-5. 文章内容严格基于圣经、不添加个人发挥
-
-### 用户隐含策略
-- 顺着 Reddit 反映的真实需求、痛点、关注去做内容
-- 正向引导而非对抗性内容
-- 不冒犯任何具体教会或牧师
-- 100% 圣经为本,每篇有充足经文引用
-
-### 用户期望的产出
-- 5 篇新博客文章
-- 每篇 3500-5500 词
-- 100% 南非本地化场景
-- 严格圣经根基
-- 不引起争议
-
-### 最终选定方向
-
-1. **Money, Tithing and the Christian in South Africa** — 圣经对金钱的真实教导
-2. **Mental Health and Faith in Johannesburg** — 信仰 + 专业帮助
-3. **Finding a Bible-Based Christian Community in Johannesburg** — 找到合适的社群
-4. **Christian, Foreign, and Multilingual** — 外籍基督徒的跨语言坚持
-5. **Small Church vs Big Church in South Africa** — 两个极端的诚实对比
-
-### 实施完成项
-- 5 篇新博客写入 src/pages/blog/[slug].astro 字典
-- 5 个 slug 在 getStaticPaths 中声明
-- 5 个新 URL 在 sitemap.xml.ts
-- 5 个对应 markdown 镜像文件
-- sitemap.xml.ts now 从 2026-10-01 改为 2026-10-05
-- 构建通过:335 pages, 0 errors
-- Git commit 9b9fefa + push origin/master
-
-### 作者/联系约定
-- 5 篇均为英文 post,作者 Mr. Sim
-- 主要联系 Mr. Sim (+27 77 487 1295) + Ms. Dora (+27 67 442 4461)
-- 第 4 篇额外提及 Mr. Leo (+27 79 259 2607) 作为中文选项
-- 符合 2026-09-30 永久规则
-
-### 用户明确避免的主题(均已遵守)
-- ❌ 辨别真假教会
-- ❌ 辨别真假牧师
-- ❌ 识别假教师
-- ❌ 邪教主题
-- ❌ 攻击任何具体教会或牧师
 
 
 ---
@@ -298,3 +241,63 @@
 - 文件名：用户对话汇总.txt、开发记录.txt
 - 严格区分：txt 文件不混用 - 用户对话 vs AI 答案/开发记录
 - txt 与 md 内容一一对应
+
+---
+
+## 2026-10-05 晚间 — Reddit 2026-10 调研后新增 5 篇南非本地化博客文章
+
+### 用户原始请求
+
+> 你读取一下我前面的对话和开发记录。前几天让你帮我挖掘了 Reddit，南非这边的很多用户对南非教会相关的关注点和议题在哪里？你找几个比较好的方向，多做一些内容，现在再给我增加一些文章吧，好吧
+
+> 还有，你尽量不要发布如何分辨真假教会、真假牧师这种内容，这很容易引起别人的激烈讨论和争议，这个类型就不要发了
+
+### 用户核心需求
+1. 基于之前 Reddit 调研，找几个好的方向
+2. 增加更多南非本地化的博客文章
+3. 100% 面向南非本地受众
+4. **避开**识别真假教会、真假牧师等容易引起争议的内容
+5. 文章内容严格基于圣经、不添加个人发挥
+
+### 用户隐含策略
+- 顺着 Reddit 反映的真实需求、痛点、关注去做内容
+- 正向引导而非对抗性内容
+- 不冒犯任何具体教会或牧师
+- 100% 圣经为本，每篇有充足经文引用
+
+### 用户期望的产出
+- 5 篇新博客文章
+- 每篇 3500-5500 词
+- 100% 南非本地化场景
+- 严格圣经根基
+- 不引起争议
+
+### 最终选定方向
+
+1. **Money, Tithing and the Christian in South Africa** — 圣经对金钱的真实教导
+2. **Mental Health and Faith in Johannesburg** — 信仰 + 专业帮助
+3. **Finding a Bible-Based Christian Community in Johannesburg** — 找到合适的社群
+4. **Christian, Foreign, and Multilingual** — 外籍基督徒的跨语言坚持
+5. **Small Church vs Big Church in South Africa** — 两个极端的诚实对比
+
+### 实施完成项
+- 5 篇新博客写入 src/pages/blog/[slug].astro 字典
+- 5 个 slug 在 getStaticPaths 中声明
+- 5 个新 URL 在 sitemap.xml.ts
+- 5 个对应 markdown 镜像文件
+- sitemap.xml.ts now 从 2026-10-01 改为 2026-10-05
+- 构建通过：335 pages, 0 errors
+- Git commit 9b9fefa + push origin/master
+
+### 作者/联系约定
+- 5 篇均为英文 post，作者 Mr. Sim
+- 主要联系 Mr. Sim (+27 77 487 1295) + Ms. Dora (+27 67 442 4461)
+- 第 4 篇额外提及 Mr. Leo (+27 79 259 2607) 作为中文选项
+- 符合 2026-09-30 永久规则
+
+### 用户明确避免的主题（均已遵守）
+- 辨别真假教会
+- 辨别真假牧师
+- 识别假教师
+- 邪教主题
+- 攻击任何具体教会或牧师
