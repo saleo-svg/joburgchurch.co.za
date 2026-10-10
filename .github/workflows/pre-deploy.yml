@@ -1,0 +1,61 @@
+name: Pre-deploy check
+
+on:
+  pull_request:
+    branches: [master, main]
+  push:
+    branches-ignore: [master, main]   # master pushes already trigger release-drafts; don't double-run
+
+permissions:
+  contents: read
+
+jobs:
+  pre-deploy:
+    name: Pre-deploy checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install
+        run: npm ci || npm install
+
+      - name: Pre-deploy check (static)
+        # Fast static checks: JSON-LD, DRAFT detection, GEO files.
+        # Runs in <10s, fails the PR on any issue.
+        run: node scripts/pre-deploy-check.mjs --fast
+
+      - name: Pre-deploy check (full, includes build)
+        # Full check including npm run build. Catches Astro template
+        # errors, broken imports, etc. before the merge lands.
+        run: node scripts/pre-deploy-check.mjs
+        env:
+          NODE_OPTIONS: "--max-old-space-size=4096"
+
+      - name: PR comment on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = [
+              '## \u26a0\ufe0f Pre-deploy check failed',
+              '',
+              'Run `npm run pre-deploy` locally to reproduce.',
+              '',
+              'Common causes:',
+              '- JSON-LD syntax error in a layout/component',
+              '- DRAFT-prefixed blog post got moved to `src/pages/blog/`',
+              '- `npm run build` failed (check the `Build` log)',
+              ''
+            ].join('\n');
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });

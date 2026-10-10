@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+# .husky/pre-commit
+# Run pre-deploy check (fast mode, skip build) before every commit.
+# Bypass with: git commit --no-verify
+
+. "$(dirname "$0")/_/husky.sh"
+
+echo "[husky] running pre-deploy check (fast)..."
+node scripts/pre-deploy-check.mjs --fast

@@ -9,7 +9,10 @@
     "prebuild": "npm run build:hymns",
     "deploy:cloudflare": "powershell -ExecutionPolicy Bypass -File scripts/deploy-cloudflare.ps1",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "pre-deploy": "node scripts/pre-deploy-check.mjs",
+    "pre-deploy:fast": "node scripts/pre-deploy-check.mjs --fast",
+    "healthcheck": "node scripts/post-deploy-healthcheck.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
