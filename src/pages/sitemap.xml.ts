@@ -148,93 +148,102 @@ export const GET: APIRoute = () => {
     { url: '/blog/finding-a-bible-based-community-johannesburg/', lastmod: '2026-10-05' },
     { url: '/blog/christian-expat-faith-johannesburg-multilingual/', lastmod: '2026-10-05' },
     { url: '/blog/small-church-vs-mega-church-south-africa-honest-reflection/', lastmod: '2026-10-05' },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    { url: '/blog/adult-child-still-depends-on-parents/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/anxiety-and-the-south-african-christian/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/being-a-christian-in-the-police/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/being-a-good-neighbour/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/being-the-only-christian-in-the-family/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/blended-family-south-africa/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/boomerang-generation-children-returning-home/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/burnout-and-the-south-african-christian/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/choosing-a-school-in-johannesburg/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/christian-and-the-2026-south-african-budget/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/christian-and-the-addiction-in-south-africa/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/christian-and-the-farm/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/christian-and-the-load-shedding-evening/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/christian-and-the-n1-traffic-spiritual-discipline/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/christian-and-the-pet/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/christian-and-the-pharmacist-shelf/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/christian-and-the-south-african-teen-pregnancy/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/christian-husband-spiritual-leadership/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/christian-pilgrim-in-the-coffee-shop/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/christian-reading-the-daily-newspaper/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/christian-witness-on-social-media/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/debt-and-the-christian/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/entrepreneur-and-the-gospel/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/exam-anxiety-and-the-south-african-christian-student/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/faithful-wife-struggling-husband/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/family-expectations-and-the-christian/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/first-time-church-visitor-who-understands-nothing/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/gardening-and-the-soul/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/gossip-and-the-christian-in-south-africa/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/hospitality-in-a-world-of-locked-doors/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/household-help-boundaries/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/loneliness-in-the-big-city/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/marriage-after-the-honeymoon-johannesburg/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/medical-crisis-and-the-christian/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/navigating-church-conflict-when-someone-hurts-you/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/new-neighbour-who-doesnt-fit/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/npo-and-church-charity-in-south-africa/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/online-bible-study-discipline-in-2026/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/pet-loss-and-the-christian/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/remarriage-after-divorce/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/small-group-commitment/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/south-african-christian-and-the-corporate-team/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/south-african-christian-and-the-driving-lesson/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/south-african-christian-and-the-economy/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/south-african-christian-and-the-school-fees/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/south-african-christian-reading-plan/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/step-parenting-in-south-africa/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/teenagers-and-the-bible-in-sandton/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-bereaved-grandparent-johannesburg/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-bible-translation-you-read/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-bride-who-changed-her-mind/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-after-the-accident/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-and-the-ai/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-and-the-chronic-illness/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-and-the-mental-load/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-and-the-pension-fund/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-artist/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-doctor-in-johannesburg/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-domestic-worker-and-the-employer/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-father-who-works-too-much/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-going-back-to-school/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-grandparent-discipling-grandchildren/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-grandparent-in-the-load-shedding/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-in-the-law-firm/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-mother-of-young-adults-johannesburg/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-stem-student/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-who-doesnt-give-money/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-who-is-doubting/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-christian-who-moved-to-south-africa/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-foreign-christian-in-south-africa/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-neighbourhood-watch-and-the-christian/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-single-christian-mother-in-sandton/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-south-african-christian-and-the-divorce/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-teacher-who-is-also-a-christian/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/the-widower-in-johannesburg/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/time-management-for-the-busy-christian/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/traffic-and-the-christian-driver/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/volunteering-burnout/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/when-the-language-changes-in-church/', lastmod: 'DRAFT-2026-10-10' },
+    { url: '/blog/when-the-pastor-quits/', lastmod: 'DRAFT-2026-10-10' },
   ];
 
+  // Filter out DRAFT- entries from the public sitemap. DRAFT-2026-10-10
+  // is the sentinel we use to mark posts that have not yet been released.
+  // The release script strips the prefix when a batch is promoted.
   const allPages = [
     ...staticPages,
     ...seoLandingPages.map((p) => ({ ...p, priority: '0.8', changefreq: 'monthly' })),
-    ...blogPosts.map((p) => ({ ...p, priority: '0.7', changefreq: 'monthly' })),
+    ...blogPosts
+      .filter((p) => !p.lastmod?.startsWith('DRAFT-'))
+      .map((p) => ({
+        ...p,
+        lastmod: p.lastmod?.replace(/^DRAFT-/, '') ?? p.lastmod,
+        priority: '0.7',
+        changefreq: 'monthly',
+      })),
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
