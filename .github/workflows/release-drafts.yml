@@ -1,0 +1,58 @@
+name: Release Drafts
+
+on:
+  # Run every 3 days at 06:00 UTC = 08:00 SAST
+  schedule:
+    - cron: "0 6 */3 * *"
+  workflow_dispatch:
+    inputs:
+      batches:
+        description: "Number of batches to release now (default 1 = 5 posts)"
+        required: false
+        default: "1"
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Promote 5 drafts to published
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install
+        run: npm ci || npm install
+
+      - name: Promote next batch
+        env:
+          BATCHES_INPUT: ${{ github.event.inputs.batches || '1' }}
+        run: |
+          node scripts/release-next-batch.mjs "$BATCHES_INPUT"
+
+      - name: Build to verify
+        run: npm run build
+        env:
+          NODE_OPTIONS: "--max-old-space-size=4096"
+
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(release): promote next batch of drafts"
+            git push
+          fi

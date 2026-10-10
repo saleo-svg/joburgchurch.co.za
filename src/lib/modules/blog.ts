@@ -60,7 +60,16 @@ async function readAstroCollection(): Promise<ContentResultSet<ResolvedContent<B
     // build. Outside (e.g. plain Node scripts) it throws.
     const astro = await import('astro:content');
     const raw = await astro.getCollection('posts');
-    const items: ResolvedContent<BlogData>[] = raw.map((entry) => ({
+    // 2026-10-10: filter out drafts from public listings.
+    // Drafts live in src/content/posts/ but stay invisible to:
+    //   - blog index page
+    //   - sitemap.xml.ts (handled separately)
+    //   - any blog tag/band query
+    // Drafts are only released when the GitHub Action flips
+    // frontmatter status: draft -> published.
+    const items: ResolvedContent<BlogData>[] = raw
+      .filter((entry) => (entry.data.status ?? 'published') !== 'draft')
+      .map((entry) => ({
       kind: 'blog',
       slug: entry.slug,
       title: entry.data.title,

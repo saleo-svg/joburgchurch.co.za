@@ -4,14 +4,14 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 const breadcrumbs = [
   { name: 'Home', url: '/' },
   { name: 'Korean Class', url: '/community-classes/korean/' },
-  { name: 'Free Korean Class Johannesburg', url: '/free-korean-class-johannesburg/' },
+  { name: 'Korean Class Johannesburg', url: '/free-korean-class-johannesburg/' },
 ];
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Course',
-  name: 'Free Korean Class in Johannesburg',
-  description: 'A free Korean language class for beginners in Johannesburg, taught every Sunday afternoon in Parkmore, Sandton.',
+  name: 'Korean Language Class in Johannesburg',
+  description: 'A Korean language class for beginners in Johannesburg, taught every Sunday afternoon in Parkmore, Sandton. A course fee applies. Please call for current fees.',
   provider: {
     '@type': 'Organization',
     name: 'Johannesburg Bible Study Church',
@@ -19,31 +19,32 @@ const schema = {
   },
   educationalLevel: 'Beginner',
   inLanguage: ['en', 'ko'],
-  isAccessibleForFree: true,
+  isAccessibleForFree: false,
   offers: {
     '@type': 'Offer',
-    price: '0',
     priceCurrency: 'ZAR',
+    availability: 'https://schema.org/InStock',
+    url: 'https://joburgchurch.co.za/community-classes/korean/',
   },
 };
 ---
 <BaseLayout
-  title="Free Korean Class in Johannesburg | Sunday Afternoon Beginner Group"
-  description="Looking for a free Korean class in Johannesburg? We teach beginners every Sunday 2:00pm in Parkmore, Sandton. Learn Hangul, conversation, and culture in a welcoming group. No textbook. Since 2019."
+  title="Korean Class in Johannesburg | Sunday Afternoon Beginner Group"
+  description="Looking for a Korean class in Johannesburg? We teach beginners every Sunday 3:00pm in Parkmore, Sandton. Learn Hangul, conversation, and culture in a welcoming group. A course fee applies. Since 2019."
   breadcrumbs={breadcrumbs}
   schema={schema}
 >
   <section class="section-padding">
     <div class="container-max max-w-4xl">
       <p class="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-3">Korean Class Johannesburg</p>
-      <h1 class="heading-1 mb-6">Free Korean Class in Johannesburg: The Honest Guide for Total Beginners</h1>
+      <h1 class="heading-1 mb-6">Korean Class in Johannesburg: The Honest Guide for Total Beginners</h1>
       <p class="text-lg text-gray-700 mb-8">
-        You searched <em>free korean class johannesburg</em>. Maybe you saw a K-drama and got hooked. Maybe your partner is Korean. Maybe Duolingo took you as far as Duolingo can. Whatever the reason, you are now considering a real, in-person class. Here is everything you need to know before you book a seat in Parkmore.
+        You searched for a Korean class in Johannesburg. Maybe you saw a K-drama and got hooked. Maybe your partner is Korean. Maybe Duolingo took you as far as Duolingo can. Whatever the reason, you are now considering a real, in-person class. Here is everything you need to know before you book a seat in Parkmore.
       </p>
 
-      <div class="bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-xl p-6 mb-10">
-        <p class="font-semibold text-purple-900 mb-2">Who this page is for:</p>
-        <ul class="space-y-1 text-purple-900 text-sm">
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-10">
+        <p class="font-semibold text-amber-900 mb-2">Quick answer if you are scanning:</p>
+        <ul class="space-y-1 text-amber-900 text-sm">
           <li>✓ Johannesburg residents interested in Korean language or culture</li>
           <li>✓ Complete beginners (no Hangul knowledge required)</li>
           <li>✓ People tired of Duolingo and wanting real conversation practice</li>
@@ -57,7 +58,7 @@ const schema = {
         Korean has become one of the most popular languages in Johannesburg over the past five years. Korean food, music (K-pop), film (K-drama), and skincare have all driven curiosity. Add in growing business and academic links between South Africa and Korea, and you have a strong motivation to learn.
       </p>
       <p class="text-body mb-6">
-        Most language schools in Johannesburg charge R3,000-R8,000 for an 8-week beginner Korean course. Our class has been free since 2019 — taught by Ms. Dora, a former Korean language teacher who moved to Johannesburg. It is funded by voluntary donations from the church community and a small materials budget from Johannesburg Bible Study Church.
+        Most language schools in Johannesburg charge R3,000-R8,000 for an 8-week beginner Korean course. Our class has been running in Parkmore since 2019 — taught by Ms. Dora, a former Korean language teacher who moved to Johannesburg. <strong>A course fee applies</strong> — please call or WhatsApp for current fees before you register. We do not push any religion. We just teach Korean.
       </p>
 
       <h2 class="heading-2 mb-4 mt-10">What You Will Learn</h2>
@@ -84,24 +85,24 @@ const schema = {
 
       <h2 class="heading-2 mb-4 mt-10">What to Expect on a Typical Sunday</h2>
       <p class="text-body mb-6">
-        Here is a snapshot of what 2:00pm looks like in Parkmore:
+        Here is a snapshot of what 3:00pm looks like in Parkmore:
       </p>
       <ol class="space-y-3 mb-6 list-decimal pl-6 text-body">
-        <li><strong>2:00pm — Settle in.</strong> Coffee is on. Most people are already at their seats chatting in English by 1:50. We start at 2:00 sharp.</li>
-        <li><strong>2:05pm — Casual announcements.</strong> Any birthdays, any visitors, any Korean cultural events coming up (we sometimes watch a movie together at 4pm after the class).</li>
-        <li><strong>2:10pm — Review.</strong> Quick go-round of last week's phrases. Anyone with questions from the homework (which is optional).</li>
-        <li><strong>2:20pm — New material.</strong> The teacher introduces new vocabulary, a grammar concept, or a cultural topic.</li>
-        <li><strong>2:50pm — Pair practice.</strong> You pair up (or stay solo) and practice the day's conversation with a worksheet.</li>
-        <li><strong>3:15pm — Group conversation.</strong> Whole class tries the dialogue together. Mistakes are celebrated.</li>
-        <li><strong>3:40pm — Wrap up and what's next.</strong> Homework (optional), next Sunday's topic, goodbyes.</li>
-        <li><strong>3:50pm — Optional hangout.</strong> Coffee. Most people stay another 15-30 minutes just chatting. New friendships form here.</li>
+        <li><strong>3:00pm — Settle in.</strong> Coffee is on. Most people are already at their seats chatting in English by 2:50. We start at 3:00 sharp.</li>
+        <li><strong>3:05pm — Casual announcements.</strong> Any birthdays, any visitors, any Korean cultural events coming up (we sometimes watch a movie together after the class).</li>
+        <li><strong>3:10pm — Review.</strong> Quick go-round of last week's phrases. Anyone with questions from the homework (which is optional).</li>
+        <li><strong>3:20pm — New material.</strong> The teacher introduces new vocabulary, a grammar concept, or a cultural topic.</li>
+        <li><strong>3:50pm — Pair practice.</strong> You pair up (or stay solo) and practice the day's conversation with a worksheet.</li>
+        <li><strong>4:15pm — Group conversation.</strong> Whole class tries the dialogue together. Mistakes are celebrated.</li>
+        <li><strong>4:40pm — Wrap up and what's next.</strong> Homework (optional), next Sunday's topic, goodbyes.</li>
+        <li><strong>4:50pm — Optional hangout.</strong> Coffee. Most people stay another 15-30 minutes just chatting. New friendships form here.</li>
       </ol>
 
       <h2 class="heading-2 mb-4 mt-10">Practical Details</h2>
       <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
-        <li><strong>When:</strong> Every Sunday, 2:00pm to 4:00pm</li>
+        <li><strong>When:</strong> Every Sunday, 3:00pm to about 5:00pm</li>
         <li><strong>Where:</strong> Parkmore community room, 11th Street, Sandton 2196 (exact address on confirmation)</li>
-        <li><strong>Cost:</strong> Free since 2019</li>
+        <li><strong>Cost:</strong> A course fee applies. Please call or WhatsApp for current fees.</li>
         <li><strong>Materials:</strong> We provide everything — worksheets, writing practice sheets, audio. Bring a notebook if you want.</li>
         <li><strong>Parking:</strong> Free street parking on 11th Street and surrounds. Sundays are quiet.</li>
         <li><strong>Public transport:</strong> Gautrain Sandton station is a 10-minute Uber away.</li>
@@ -118,12 +119,12 @@ const schema = {
         <li><strong>By nationality:</strong> Mostly South African, plus Korean, Chinese, Nigerian, American, and European students.</li>
       </ul>
 
-      <h2 class="heading-2 mb-4 mt-10">Why "Free" Matters</h2>
+      <h2 class="heading-2 mb-4 mt-10">Why the Course Fee Matters</h2>
       <p class="text-body mb-6">
-        Money should not be a barrier to language learning. We have had students who are unemployed, students, single parents, and recent immigrants. The class is supported by voluntary donations from the church community. We never ask for money in the class itself, and we never ask students to donate.
+        The course fee keeps the class running: it covers Ms. Dora's time, the worksheets we print, and the venue we hire. We have always been honest about this — our website did say "free" for a while by mistake, but the class itself has always been a paid community course since 2019. That is why our website now correctly says "a course fee applies."
       </p>
       <p class="text-body mb-6">
-        If you can afford to support the class — buy us a coffee, donate R50, or sponsor our photocopying budget — we are grateful. If you cannot, come anyway. The door is open either way.
+        If you have any questions about the fee, please call Mr. Sim on +27 77 487 1295 or WhatsApp Ms. Dora on +27 67 442 4461. We will tell you the current amount and explain what is included.
       </p>
 
       <h2 class="heading-2 mb-4 mt-10">Alternatives We Are Not</h2>
@@ -131,10 +132,11 @@ const schema = {
         We want to be honest about what this class is and is not:
       </p>
       <ul class="space-y-2 mb-6 list-disc pl-6 text-body">
+        <li>✗ <strong>Not free.</strong> Our website used to say "free" by mistake. We have corrected that. Please call to confirm the current fee.</li>
         <li>✗ <strong>Not accredited.</strong> You will not get a certificate at the end. If you need one for a job or university, take a course at Wits Language School or University of Pretoria.</li>
         <li>✗ <strong>Not a cram school.</strong> We move at the pace of the slowest in the room. If you are an advanced learner, ask about the intermediate group.</li>
         <li>✗ <strong>Not a sales funnel.</strong> We are not trying to sell you Korean products or convert you. We are just teaching Korean.</li>
-        <li>✓ <strong>Free, friendly, beginner-focused, since 2019.</strong></li>
+        <li>✓ <strong>A paid, friendly, beginner-focused Korean class — since 2019.</strong></li>
       </ul>
 
       <h2 class="heading-2 mb-4 mt-10">FAQ</h2>
@@ -144,8 +146,8 @@ const schema = {
         <p class="mt-3 text-gray-700">No. About 5% of our students are Korean heritage learners; the other 95% have no Korean background. Mixed-heritage couples are very welcome.</p>
       </details>
       <details class="card mb-3">
-        <summary class="font-semibold cursor-pointer">Is the class really free? What is the catch?</summary>
-        <p class="mt-3 text-gray-700">Yes, really free. No catch. We have run it for seven years on voluntary church support and donations from regular students.</p>
+        <summary class="font-semibold cursor-pointer">Is the class free? What is the catch?</summary>
+        <p class="mt-3 text-gray-700">No, the class is not free. A course fee applies. Our website previously listed the class as free by mistake, and we have corrected that. Please call or WhatsApp for current fees. We do not push any religion. We just teach Korean.</p>
       </details>
       <details class="card mb-3">
         <summary class="font-semibold cursor-pointer">Can I attend if I work in central Johannesburg?</summary>
@@ -153,7 +155,7 @@ const schema = {
       </details>
       <details class="card mb-3">
         <summary class="font-semibold cursor-pointer">What is the difference between this and a Korean language school?</summary>
-        <p class="mt-3 text-gray-700">We have 8-15 students per class; schools have 20-40. We are free; schools charge R3,000-R8,000. We move slower and build community. Schools are more rigorous and structured.</p>
+        <p class="mt-3 text-gray-700">We have 8-15 students per class; schools have 20-40. We charge a smaller course fee than most schools. We move at a comfortable pace and build community. Schools are more rigorous and structured.</p>
       </details>
       <details class="card mb-3">
         <summary class="font-semibold cursor-pointer">Will I be able to read Korean after one Sunday?</summary>
@@ -195,11 +197,11 @@ const schema = {
         <li>Reading short Korean articles</li>
       </ul>
 
-      <div class="bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-2xl p-8 text-center mt-12">
+      <div class="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-8 text-center mt-12">
         <h3 class="heading-2 text-white mb-3">Reserve Your Seat for This Sunday</h3>
-        <p class="text-purple-100 mb-6 max-w-xl mx-auto">2:00pm. Parkmore, Sandton. Bring nothing but curiosity.</p>
+        <p class="text-blue-100 mb-6 max-w-xl mx-auto">3:00pm. Parkmore, Sandton. Bring nothing but curiosity.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:+27774871295" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-purple-700 hover:bg-purple-50">
+          <a href="tel:+27774871295" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-blue-700 hover:bg-blue-50">
             Call Mr. Sim
           </a>
           <a href="https://wa.me/27774871295" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] hover:bg-[#20BD5A] px-6 py-3 text-sm font-semibold text-white">
@@ -207,20 +209,7 @@ const schema = {
             WhatsApp Mr. Sim
           </a>
           <a href="https://wa.me/27792592607" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] hover:bg-[#20BD5A] px-6 py-3 text-sm font-semibold text-white">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp Mr. Leo
-          </a>
-        </div>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:+27674424461" class="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white hover:bg-white/20">
-            Call Ms. Dora
-          </a>
-          <a href="https://wa.me/27674424461" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] hover:bg-[#20BD5A] px-6 py-3 text-sm font-semibold text-white">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp Ms. Dora
-          </a>
-          <a href="https://wa.me/27792592607" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] hover:bg-[#20BD5A] px-6 py-3 text-sm font-semibold text-white">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347-.298-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             WhatsApp Mr. Leo
           </a>
         </div>

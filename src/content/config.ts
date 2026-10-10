@@ -31,6 +31,15 @@ const blog = defineCollection({
     key: z.string().optional(),
     chords: z.string().optional(),
     excerpt: z.string().optional(),
+    // 2026-10-10 release pipeline:
+    //   'draft'     — not yet released, hidden from frontend + sitemap
+    //   'scheduled' — approved for release, but release date not yet
+    //   'published' — live on site
+    // Default is 'published' for backward compatibility with existing posts.
+    status: z.enum(['draft', 'scheduled', 'published']).default('published'),
+    // When status was flipped from draft -> published (set by the
+    // release-drafts GitHub Action). Optional.
+    publishedAt: z.coerce.date().optional(),
   }),
 });
 

@@ -576,3 +576,273 @@ The user wants:
 
 [PERMANENT RULE - Effective 2026-09-30]
 All Chinese-language articles on this site (current and future) MUST include ONLY Mr Leo (+27 79 259 2607) as the Chinese-language contact. Do NOT add Mr. Sim or Ms. Dora in Chinese articles because they cannot communicate in Chinese. Other-language pages (English, Zulu, Xhosa, Sotho, Tswana, Pedi, Ndebele, Swahili, Dinka, Shona, Korean) continue to have Mr. Sim and Ms. Dora contacts as before, plus the newly-added Mr Leo.
+
+=====================================
+本次保存内容开始
+=====================================
+
+【任务】Korean Class: 移除所有"免费"描述,改为课程收费
+
+【背景】
+- 网站之前将 Korean class 描述为 "Free" (免费),导致访客截图投诉要求免费
+- 教会组织告知 Korean class 实际是收费课程,并非免费
+- Bible study 保持免费,但 Korean class 必须标明是收费
+- 用户要求:把所有"免费"的内容都改掉,把"免费"去掉
+
+【改动策略】
+1. Korean class 名称: "Free Korean Class" -> "Korean Language Class"
+2. 所有提到 Korean class 的地方注明: "A course fee applies. Please call or WhatsApp for current fees."
+3. Schema.org structured data: Course isAccessibleForFree: true -> false, priceRange 改为 "Bible study free; Korean class fee applies"
+4. /free-korean-class-johannesburg/ 页面保留 URL(SEO 价值),内容改为明确说明课程是收费,网站之前写错了
+5. Blog slug /blog/free-korean-class-community/ 重命名为 /blog/korean-class-community/,添加 301 redirect
+
+【时间保持】
+- Korean class: Sunday 3:00pm (保持不变)
+
+【修改文件】
+- src/pages/community-classes/korean.astro (主页)
+- src/pages/community-classes/index.astro (课程列表)
+- src/pages/free-korean-class-johannesburg.astro (SEO landing,内容改写)
+- src/pages/visit.astro (参观指南)
+- src/pages/contact.astro (联系页面)
+- src/pages/locations/[slug].astro (Sandton 位置页面)
+- src/pages/marriage-counselling-johannesburg.astro (费用 FAQ)
+- src/pages/bible-study-for-depression-johannesburg.astro (费用 FAQ)
+- src/pages/bible-study-randburg.astro (费用说明)
+- src/pages/bible-study-soweto.astro (费用 FAQ)
+- src/pages/bible-study-fourways.astro (费用 FAQ)
+- src/pages/bible-study-alberton.astro (费用 FAQ)
+- src/pages/bible-study-midrand.astro (费用 FAQ)
+- src/pages/bible-study-roodepoort.astro (费用 FAQ)
+- src/pages/korean-language-class-for-beginners-johannesburg.astro (FAQ 改写)
+- src/pages/churches-in-sandton.astro (去除"free"行)
+- src/pages/faq.astro (Korean class FAQ 改写)
+- src/components/Footer.astro (footer 显示 "Course fee applies")
+- src/pages/index.astro (主页 cost 改写)
+- src/layouts/BaseLayout.astro (schema priceRange 改写)
+- src/lib/modules/settings.ts (welcomeMessage)
+- src/content/settings/general.md (welcome_message)
+- src/pages/blog/[slug].astro (slug 重命名 + 内容改写)
+- astro.config.mjs (添加 301 redirect)
+- src/pages/sitemap.xml.ts (更新 blog URL + lastmod)
+
+【301 重定向配置】
+```javascript
+// astro.config.mjs
+redirects: {
+  '/blog/free-korean-class-community/': '/blog/korean-class-community/',
+}
+```
+
+【构建结果】
+- 330 pages built in 38s
+- 0 errors, 0 warnings
+- dist/blog/free-korean-class-community/index.html 正确生成(包含 redirect meta)
+
+【最终 grep 验证】
+- src/ + dist/ 中已无 "free korean" 或 "korean.*free of charge" 等错误描述
+- 保留的"free"均为:
+  1. Bible study (正确:免费)
+  2. FAQ 明确说明 Korean class 不是免费
+  3. Hymn downloads (免费下载)
+
+【用户验证】
+- 用户已在线确认无错误"free korean"内容
+- 已上传并部署 301 redirect 规则
+=====================================
+本次保存内容结束
+=====================================
+
+=====================================
+本次保存内容开始
+=====================================
+
+【任务】Korean Class 收费化 - 最终验收 + 日志更新
+
+【用户请求时间线】
+1. 09:28 PM 用户说: "更新开发记录"
+2. 用户上一条: 完成 Korean class "免费" 移除,改为课程收费
+3. 本次任务: 完整更新所有开发记录文件,确保编码一致
+
+【编码修复 - 开发记录.txt】
+- 问题: 文件之前是 GBK 编码(历史),但本次 Korean class 追加时使用 UTF-8
+- 解决方案: 用 Python 脚本 scripts/fix-dev-log-encoding.py
+  1. 检测混合编码边界(UTF-8 marker 【任务】Korean Class)
+  2. GBK 部分 (51,875 bytes) 解码为字符串
+  3. UTF-8 部分 (3,275 bytes) 解码为字符串
+  4. 合并后重新编码为 GBK
+  5. 文件大小: 55,150 -> 54,835 bytes
+- 验证: 关键内容 "【任务】Korean Class" 和 "330 pages built" 均完整保留
+
+【最终 grep 验证】
+- src/ + dist/ 中已无任何 "free korean" / "korean.*free of charge" 错误描述
+- 保留的"free"均为合法:
+  1. Bible study (正确免费)
+  2. FAQ 明确说明 Korean class **不是**免费
+  3. Hymn downloads (免费下载)
+  4. "Free State"(南非省份名,非相关)
+
+【最终交付状态】
+- 25+ 个页面文件已修改
+- Schema.org Course isAccessibleForFree: true -> false
+- priceRange: "Bible study free; Korean class fee applies"
+- 301 redirect /blog/free-korean-class-community/ -> /blog/korean-class-community/
+- /free-korean-class-johannesburg/ 页面保留 URL + 改写内容说明收费
+- 330 pages built, 0 errors, 0 warnings
+- redirect 文件 dist/blog/free-korean-class-community/index.html 正确生成
+- 所有开发记录文件 (.md + .txt) 已更新本次会话
+- 开发记录.txt 编码统一为 GBK(历史一致性)
+- 其他开发记录文件 (.md) 保持 UTF-8(标准)
+
+【文件状态清单】
+- DEV_LOG.md (UTF-8, 303 lines) ← 已追加 ## 2026-10-01 完整章节
+- 开发记录.md (UTF-8, 627 lines) ← 已追加 ## 2026-10-01 完整章节
+- 开发记录.txt (GBK, 1199 lines) ← 已追加 【任务】章节 + 编码修复
+- 用户对话记录.txt (UTF-8, 629 lines) ← 已追加 【任务】章节
+- 用户对话汇总.md (UTF-8, 128 lines) ← 已追加 ## 2026-10-01 对话记录
+
+【辅助脚本】
+- scripts/append-dev-log-korean-fee.py (NEW: 追加 Korean fee 章节到所有日志)
+- scripts/append-user-summary-korean.py (NEW: 追加用户对话摘要)
+- scripts/fix-dev-log-encoding.py (NEW: 修复 开发记录.txt 编码)
+- scripts/dump-dev-logs.py (NEW: 调试脚本,检查所有日志文件状态)
+
+【下一步】
+- 用户指示: commit + push + Cloudflare Pages deploy
+- 在线验证 https://joburgchurch.co.za/community-classes/korean/ 不再显示"免费"
+- 在线验证 https://joburgchurch.co.za/blog/free-korean-class-community/ 301 重定向到 /blog/korean-class-community/
+=====================================
+本次保存内容结束
+=====================================
+
+=====================================
+本次保存内容开始
+=====================================
+
+【任务】CMS OAuth Worker 部署方案 + 管理员引导页面
+
+--- 对话 21 (今日 20:35) --- CMS OAuth Worker 方案选择 ---
+
+【用户提问】
+你写个脚本把部署 worker 的步骤都写清楚，然后我按照步骤走一遍，然后中间给我提示，让我 5 分钟能搞定。然后那边 admin-guide.astro 那个文件，我本来没规划用 createCollection 的，现在还要重新规划吗？给我 3 个方案对比一下。
+
+【我的回答】
+给了 3 个方案对比：
+- 方案 A：Worker 部署 + admin-guide.astro 用普通 .astro 路由（推荐，5 分钟搞定）
+- 方案 B：升级为 createCollection（需重构，~2 小时）
+- 方案 C：双轨制（两者都做，~2.5 小时）
+
+【完成】
+等用户选择。
+
+--- 对话 22 (今日 20:36) --- 选 A + 引导卡片 ---
+
+【用户提问】
+A 就行，然后用卡片的形式放到 admin 页面右下角，引导他去看 admin-guide 那个页面，对应的中英文的。
+英韩双语引导卡片 + admin-guide.astro 教程页面 + OAuth Worker 部署 3 步脚本。
+
+【我的回答】
+- 创建 src/pages/admin-guide.astro（英韩双语图标化教程，10 个步骤区块）
+- 修改 public/admin/index.html：右下角加浮动引导卡片（中英韩三语），跳转到 /admin-guide/
+- 创建 scripts/deploy-oauth-worker.ps1（一键部署 Worker）
+- 创建 scripts/patch-oauth-config.ps1（替换 config.yml 占位符）
+- 创建 docs/OAUTH_WORKER_DEPLOY.md（中文 9 步部署手册 + 故障排查）
+- 验证：.gitignore 已保护 .env.local，Client Secret 不会泄露
+- 构建：330 pages, 0 errors
+
+--- 对话 23 (今日 20:53) --- 选 Worker 部署方案 ---
+
+【用户提问】
+A
+
+【我的回答】
+收到，按方案 A 来。10 分钟搞定。
+
+--- 对话 24 (今日 20:55) --- 构建完成通知 ---
+
+【系统通知】
+The following task has finished (最终构建验证, 336 pages built)
+
+【我的回答】
+Build task 已成功，336 pages, 0 errors，结果已在上一轮用完，无 follow-up。
+等用户开始走第 1 步（创建 GitHub OAuth App）。
+
+--- 对话 25 (今日 20:57) --- 汇总对话 TXT ---
+
+【用户提问】
+把上下文全部对话里面把我的提问、我的问题、我的对话单独汇总成一个我的对话汇总TXT，
+然后把你的答案，还有你所有的开发记录，另外单独导成1个开发记录TXT。
+
+【我的回答】
+（当前任务：用 Python 脚本把本轮所有内容追加到 两个 TXT 文件，
+保持文件原编码——用户记录 UTF-8，开发记录 GBK——避免历史编码错乱）
+
+=====================================
+本次保存内容结束
+=====================================
+
+=====================================
+本次保存内容开始
+=====================================
+
+【任务】CMS OAuth Worker 部署方案 + 管理员引导页面
+
+--- 对话 21 (今日 20:35) --- CMS OAuth Worker 方案选择 ---
+
+【用户提问】
+你写个脚本把部署 worker 的步骤都写清楚，然后我按照步骤走一遍，然后中间给我提示，让我 5 分钟能搞定。然后那边 admin-guide.astro 那个文件，我本来没规划用 createCollection 的，现在还要重新规划吗？给我 3 个方案对比一下。
+
+【我的回答】
+给了 3 个方案对比：
+- 方案 A：Worker 部署 + admin-guide.astro 用普通 .astro 路由（推荐，5 分钟搞定）
+- 方案 B：升级为 createCollection（需重构，~2 小时）
+- 方案 C：双轨制（两者都做，~2.5 小时）
+
+【完成】
+等用户选择。
+
+--- 对话 22 (今日 20:36) --- 选 A + 引导卡片 ---
+
+【用户提问】
+A 就行，然后用卡片的形式放到 admin 页面右下角，引导他去看 admin-guide 那个页面，对应的中英文的。
+英韩双语引导卡片 + admin-guide.astro 教程页面 + OAuth Worker 部署 3 步脚本。
+
+【我的回答】
+- 创建 src/pages/admin-guide.astro（英韩双语图标化教程，10 个步骤区块）
+- 修改 public/admin/index.html：右下角加浮动引导卡片（中英韩三语），跳转到 /admin-guide/
+- 创建 scripts/deploy-oauth-worker.ps1（一键部署 Worker）
+- 创建 scripts/patch-oauth-config.ps1（替换 config.yml 占位符）
+- 创建 docs/OAUTH_WORKER_DEPLOY.md（中文 9 步部署手册 + 故障排查）
+- 验证：.gitignore 已保护 .env.local，Client Secret 不会泄露
+- 构建：330 pages, 0 errors
+
+--- 对话 23 (今日 20:53) --- 选 Worker 部署方案 ---
+
+【用户提问】
+A
+
+【我的回答】
+收到，按方案 A 来。10 分钟搞定。
+
+--- 对话 24 (今日 20:55) --- 构建完成通知 ---
+
+【系统通知】
+The following task has finished (最终构建验证, 336 pages built)
+
+【我的回答】
+Build task 已成功，336 pages, 0 errors，结果已在上一轮用完，无 follow-up。
+等用户开始走第 1 步（创建 GitHub OAuth App）。
+
+--- 对话 25 (今日 20:57) --- 汇总对话 TXT ---
+
+【用户提问】
+把上下文全部对话里面把我的提问、我的问题、我的对话单独汇总成一个我的对话汇总TXT，
+然后把你的答案，还有你所有的开发记录，另外单独导成1个开发记录TXT。
+
+【我的回答】
+（当前任务：用 Python 脚本把本轮所有内容追加到 两个 TXT 文件，
+保持文件原编码——用户记录 UTF-8，开发记录 GBK——避免历史编码错乱）
+
+=====================================
+本次保存内容结束
+=====================================

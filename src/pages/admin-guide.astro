@@ -1,0 +1,959 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+// ============================================================
+// Admin Guide page
+// Purpose: Bilingual (English / 한국어) illustrated guide for
+//          volunteers to learn how to use the Sveltia CMS at
+//          https://joburgchurch.co.za/admin/
+//
+// Visibility: noindex (set on the <head> below) — not meant for
+//             public visitors; only discoverable via the admin
+//             panel itself or by direct link shared with members.
+//
+// Content lives in markdown front-matter to make future edits
+// painless (one source of truth, no duplicated translation drift).
+// ============================================================
+
+const title = 'Admin Guide — How to Update the Website';
+const description =
+  'Step-by-step bilingual guide (English / 한국어) for church volunteers on how to log in, upload photos, write blog posts, add events, videos and sermons using the Sveltia CMS.';
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+>
+  <!-- noindex -->
+  <Fragment slot="head">
+    <meta name="robots" content="noindex, nofollow" />
+  </Fragment>
+
+  <!-- ============================================================ -->
+  <!-- HERO -->
+  <!-- ============================================================ -->
+  <section class="section-padding" style="background: linear-gradient(135deg, var(--color-warm-soft) 0%, #ffffff 100%);">
+    <div class="container-max">
+      <p class="text-eyebrow mb-3">Internal Use Only · 내부 사용 전용</p>
+      <h1 class="heading-1 mb-4">
+        🛠 Admin Guide<br />
+        <span class="text-2xl sm:text-3xl lg:text-4xl" style="color: var(--color-primary); font-weight: 500;">
+          웹사이트 관리 안내서
+        </span>
+      </h1>
+      <p class="text-body max-w-3xl">
+        A friendly, step-by-step guide for church volunteers who help maintain the website.
+        No coding required — just log in, click, type, and publish.
+        <br /><br />
+        교회 자원봉사자들이 웹사이트를 직접 관리할 수 있도록 돕는 단계별 안내서입니다.
+        코딩이 필요 없습니다 — 로그인하고, 클릭하고, 작성하고, 게시하면 됩니다.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="https://joburgchurch.co.za/admin/" class="btn-primary">
+          🚀 Open Admin Panel · 관리 페이지 열기
+        </a>
+        <a href="#section-login" class="btn-secondary">
+          📖 Start Here · 여기서 시작하기
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- LANGUAGE TABS (no JS — uses :target CSS trick for zero-deps) -->
+  <!-- ============================================================ -->
+  <section class="section-padding" style="background-color: #ffffff;">
+    <div class="container-max">
+
+      <!-- Tab bar -->
+      <div class="flex border-b" style="border-color: #e4e4e7;">
+        <a href="#en" class="lang-tab" data-lang="en">🇬🇧 English</a>
+        <a href="#ko" class="lang-tab" data-lang="ko">🇰🇷 한국어</a>
+      </div>
+
+      <!-- ====================== ENGLISH PANEL ====================== -->
+      <div id="en" class="lang-panel">
+
+        <!-- ========== Section: Login ========== -->
+        <div id="section-login" class="guide-section">
+          <div class="guide-step-badge">Step 1</div>
+          <h2 class="heading-2 mb-2">
+            🔑 How to Log In · 로그인 방법
+          </h2>
+          <p class="text-body mb-6">
+            We use <strong>GitHub</strong> for login (not a separate password).
+            Make sure you have already been invited as a collaborator.
+          </p>
+
+          <ol class="guide-steps">
+            <li>
+              <span class="step-icon">🌐</span>
+              <div>
+                <strong>Go to the admin page</strong><br />
+                Open <code>https://joburgchurch.co.za/admin/</code> in your browser (Chrome or Edge recommended).
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">🖱️</span>
+              <div>
+                <strong>Click "Login with GitHub"</strong><br />
+                The big blue button on the welcome screen.
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">✅</span>
+              <div>
+                <strong>Authorize the app</strong><br />
+                GitHub will ask "Allow this app to access your account?" — click <em>Authorize</em>.
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">🎉</span>
+              <div>
+                <strong>You're in!</strong><br />
+                You should see a left sidebar with 7 sections (Blog, Sermons, Events, Gallery, Videos, Settings, Hymn Suggestions).
+              </div>
+            </li>
+          </ol>
+
+          <div class="guide-tip">
+            <span class="tip-icon">💡</span>
+            <div>
+              <strong>Tip:</strong> Bookmark the admin URL. If GitHub logs you out, just click "Login with GitHub" again.
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== Section: Upload a Photo ========== -->
+        <div class="guide-section">
+          <div class="guide-step-badge">Step 2 · Most common</div>
+          <h2 class="heading-2 mb-2">
+            📸 How to Upload a Photo · 사진 업로드
+          </h2>
+          <p class="text-body mb-6">
+            Used for the <strong>Photo Gallery</strong> page. Best for Bible study gatherings, Korean class events, youth activities, picnics.
+          </p>
+
+          <ol class="guide-steps">
+            <li>
+              <span class="step-icon">🖼️</span>
+              <div>
+                <strong>Click "Photo Gallery"</strong> in the left sidebar.
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">➕</span>
+              <div>
+                Click the <strong>"New Photo"</strong> button (top-right corner).
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">📝</span>
+              <div>
+                Fill in the form:
+                <ul class="inner-list">
+                  <li><strong>Title</strong> — e.g. "Parkmore Picnic 2026"</li>
+                  <li><strong>Date</strong> — when the photo was taken</li>
+                  <li><strong>Photo</strong> — drag-and-drop your image file (or click to browse)</li>
+                  <li><strong>Category</strong> — Bible Study / Korean Class / Youth / Community / Other</li>
+                  <li><strong>Caption</strong> — one or two sentences about the event</li>
+                  <li><strong>Alt Text</strong> — describe the photo briefly (for screen readers & SEO)</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">🚀</span>
+              <div>
+                Click the green <strong>"Publish"</strong> button at the top.
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">⏱️</span>
+              <div>
+                Wait <strong>1–2 minutes</strong>. The website rebuilds automatically and your photo appears on the Gallery page.
+              </div>
+            </li>
+          </ol>
+
+          <div class="guide-tip">
+            <span class="tip-icon">⚠️</span>
+            <div>
+              <strong>Image rules:</strong> JPG / PNG / WebP / GIF only, under <strong>5 MB</strong>.
+              If your photo is larger, resize it first using your phone's built-in editor.
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== Section: Write a Blog Post ========== -->
+        <div class="guide-section">
+          <div class="guide-step-badge">Step 3</div>
+          <h2 class="heading-2 mb-2">
+            ✍️ How to Write a Blog Post · 블로그 글 쓰기
+          </h2>
+
+          <ol class="guide-steps">
+            <li>
+              <span class="step-icon">📝</span>
+              <div>Click <strong>"Blog Posts"</strong> in the sidebar → <strong>"New Blog Post"</strong>.</div>
+            </li>
+            <li>
+              <span class="step-icon">📋</span>
+              <div>
+                Fill in:
+                <ul class="inner-list">
+                  <li><strong>Title</strong> — the headline</li>
+                  <li><strong>Description</strong> — 1-2 sentence summary (shows on listings)</li>
+                  <li><strong>Date</strong> — publication date</li>
+                  <li><strong>Author</strong> — your name (default is Mr. Sim)</li>
+                  <li><strong>Image</strong> — optional cover photo</li>
+                  <li><strong>Tags</strong> — e.g. prayer, devotional, youth</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">📄</span>
+              <div>
+                Write the body using <strong>Markdown</strong>:
+                <pre class="code-block"># Big heading
+## Sub heading
+
+This is a **bold** word, this is *italic*.
+
+- Bullet 1
+- Bullet 2
+
+[Link text](https://example.com)
+
+![Image description](image-url)</pre>
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">🚀</span>
+              <div>Click <strong>"Publish"</strong>. The post shows on the website in 1–2 minutes.</div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- ========== Section: Add an Event ========== -->
+        <div class="guide-section">
+          <div class="guide-step-badge">Step 4</div>
+          <h2 class="heading-2 mb-2">
+            📅 How to Add an Event · 이벤트 추가
+          </h2>
+
+          <ol class="guide-steps">
+            <li>
+              <span class="step-icon">📅</span>
+              <div>Sidebar → <strong>Events</strong> → <strong>New Event</strong>.</div>
+            </li>
+            <li>
+              <span class="step-icon">📝</span>
+              <div>
+                Fill in:
+                <ul class="inner-list">
+                  <li><strong>Title</strong> — e.g. "Easter Picnic 2026"</li>
+                  <li><strong>Date</strong> — start date (you can also add an End Date)</li>
+                  <li><strong>Time</strong> — e.g. "3:00pm – 5:00pm"</li>
+                  <li><strong>Location</strong> — pick from the dropdown (Sandton / Fourways / Online / ...)</li>
+                  <li><strong>Category</strong> — Bible Study / Korean Class / Youth / Community / Special</li>
+                  <li><strong>Description</strong> — what is happening, who is welcome</li>
+                  <li><strong>Image</strong> — optional banner photo</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">🚀</span>
+              <div>Click <strong>"Publish"</strong>.</div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- ========== Section: Add a Video ========== -->
+        <div class="guide-section">
+          <div class="guide-step-badge">Step 5</div>
+          <h2 class="heading-2 mb-2">
+            🎬 How to Add a YouTube Video · 유튜브 영상 추가
+          </h2>
+
+          <ol class="guide-steps">
+            <li>
+              <span class="step-icon">📺</span>
+              <div>First, upload your video to YouTube (or use an existing one).</div>
+            </li>
+            <li>
+              <span class="step-icon">🔗</span>
+              <div>
+                Copy the <strong>YouTube ID</strong> from the URL.<br />
+                Example URL: <code>youtube.com/watch?v=<strong>dQw4w9WgXcQ</strong></code><br />
+                The ID is the part after <code>v=</code>: <code>dQw4w9WgXcQ</code>
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">🎬</span>
+              <div>Sidebar → <strong>Videos</strong> → <strong>New Video</strong>.</div>
+            </li>
+            <li>
+              <span class="step-icon">📝</span>
+              <div>Paste the ID, fill in title / date / category / speaker, then <strong>Publish</strong>.</div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- ========== Section: Submit a Hymn ========== -->
+        <div class="guide-section">
+          <div class="guide-step-badge">Step 6</div>
+          <h2 class="heading-2 mb-2">
+            🎵 How to Suggest a Hymn · 찬양 추천
+          </h2>
+          <p class="text-body mb-4">
+            Help grow our multilingual song library. Submit a new song, and an admin will review and add it to the public Hymns page.
+          </p>
+
+          <ol class="guide-steps">
+            <li>
+              <span class="step-icon">🎵</span>
+              <div>Sidebar → <strong>Hymn Suggestions</strong> → <strong>New Hymn Suggestion</strong>.</div>
+            </li>
+            <li>
+              <span class="step-icon">📝</span>
+              <div>
+                Fill in: Song Title, Language, Region, Artist, Chord Key (e.g. G, C, Dm), Chord Progression, optional YouTube ID, Lyrics (if you have them), Notes, Your Name.
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">🚀</span>
+              <div>Click <strong>"Publish"</strong>. The admin (Mr. Sim) will review and add it to the main collection.</div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- ========== Section: Edit or Delete ========== -->
+        <div class="guide-section">
+          <div class="guide-step-badge">Step 7</div>
+          <h2 class="heading-2 mb-2">
+            ✏️ How to Edit or Delete Content · 수정 및 삭제
+          </h2>
+
+          <ol class="guide-steps">
+            <li>
+              <span class="step-icon">📂</span>
+              <div>Open the section you want to change (e.g. Blog Posts).</div>
+            </li>
+            <li>
+              <span class="step-icon">🖱️</span>
+              <div>
+                Find the item in the table → click <strong>✏️ Edit</strong> to change, or <strong>🗑 Delete</strong> to remove.
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">💾</span>
+              <div>Make changes → click <strong>"Save"</strong> or <strong>"Publish"</strong>.</div>
+            </li>
+          </ol>
+
+          <div class="guide-tip">
+            <span class="tip-icon">⚠️</span>
+            <div>
+              <strong>Be careful with Delete.</strong> It is permanent — once deleted, the content is gone (admin can restore from GitHub history, but please double-check first).
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== FAQ ========== -->
+        <div class="guide-section">
+          <h2 class="heading-2 mb-4">❓ Common Questions · 자주 묻는 질문</h2>
+
+          <div class="faq-item">
+            <p class="faq-q">❓ I changed something but it doesn't show on the website.</p>
+            <p class="faq-a">
+              ✅ Wait 1–2 minutes for the rebuild. The site builds automatically.
+              If still missing after 5 minutes, ask Mr. Sim.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">❓ My image won't upload.</p>
+            <p class="faq-a">
+              ✅ Check the file size (under 5 MB) and format (.jpg, .png, .webp, .gif).
+              Try resizing the image on your phone.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">❓ I can't log in — "OAuth failed".</p>
+            <p class="faq-a">
+              ✅ Tell Mr. Sim. The backend may need a fix. Don't try multiple times — it won't help.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">❓ Can I edit the homepage or the "About" page?</p>
+            <p class="faq-a">
+              ✅ Ask Mr. Sim first. Some structural pages (Home, About, Contact) are
+              coded, not in the CMS, to keep them stable. For content changes, we can add them.
+            </p>
+          </div>
+        </div>
+
+        <!-- ========== Help Banner ========== -->
+        <div class="guide-section">
+          <div class="card" style="background: linear-gradient(135deg, var(--color-warm-soft) 0%, #ffffff 100%); border: 1px solid var(--color-warm);">
+            <h3 class="heading-3 mb-3">🤝 Need Help? · 도움이 필요하신가요?</h3>
+            <p class="text-body mb-4">
+              If anything is unclear, broken, or you want a feature added — please tell Mr. Sim.
+              We can also schedule a 15-minute screen-share to walk you through any section.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="tel:+27774871295" class="btn-primary">📞 Call Mr. Sim · +27 77 487 1295</a>
+              <a href="https://joburgchurch.co.za/admin/" class="btn-warm">🚀 Open Admin · 관리 페이지</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- ====================== /ENGLISH PANEL ====================== -->
+
+      <!-- ====================== KOREAN PANEL ====================== -->
+      <div id="ko" class="lang-panel">
+
+        <!-- ========== Section: Login ========== -->
+        <div class="guide-section">
+          <div class="guide-step-badge">1 단계</div>
+          <h2 class="heading-2 mb-2">
+            🔑 로그인 방법 · How to Log In
+          </h2>
+          <p class="text-body mb-6">
+            별도의 비밀번호 대신 <strong>GitHub 계정</strong>으로 로그인합니다.
+            먼저 GitHub 협력자(Collaborator)로 초대받아야 합니다.
+          </p>
+
+          <ol class="guide-steps">
+            <li>
+              <span class="step-icon">🌐</span>
+              <div>
+                <strong>관리 페이지 열기</strong><br />
+                브라우저(Chrome 또는 Edge 권장)에서 <code>https://joburgchurch.co.za/admin/</code> 주소를 입력하세요.
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">🖱️</span>
+              <div>
+                <strong>"Login with GitHub" 버튼 클릭</strong><br />
+                환영 화면 가운데 파란색 큰 버튼입니다.
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">✅</span>
+              <div>
+                <strong>앱 권한 승인</strong><br />
+                GitHub에서 "이 앱이 내 계정에 접근하도록 허용하시겠습니까?" 라고 묻는 화면이 나오면 <em>Authorize(승인)</em>을 클릭합니다.
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">🎉</span>
+              <div>
+                <strong>로그인 완료!</strong><br />
+                왼쪽 사이드바에 7개 섹션이 보입니다 (Blog, Sermons, Events, Gallery, Videos, Settings, Hymn Suggestions).
+              </div>
+            </li>
+          </ol>
+
+          <div class="guide-tip">
+            <span class="tip-icon">💡</span>
+            <div>
+              <strong>팁:</strong> 관리 페이지 주소를 북마크에 추가해 두세요.
+              GitHub 로그인이 풀렸을 때 다시 "Login with GitHub"만 누르면 됩니다.
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== Section: Upload a Photo ========== -->
+        <div class="guide-section">
+          <div class="guide-step-badge">2 단계 · 가장 많이 사용</div>
+          <h2 class="heading-2 mb-2">
+            📸 사진 업로드 · How to Upload a Photo
+          </h2>
+          <p class="text-body mb-6">
+            <strong>갤러리(Photo Gallery)</strong> 페이지에 올라갈 사진을 등록합니다.
+            성경공부 모임, 한국어 수업, Youth 활동, 소풍 등 모든 사진이 여기에 등록됩니다.
+          </p>
+
+          <ol class="guide-steps">
+            <li>
+              <span class="step-icon">🖼️</span>
+              <div>왼쪽 사이드바에서 <strong>"Photo Gallery"</strong> 클릭.</div>
+            </li>
+            <li>
+              <span class="step-icon">➕</span>
+              <div>오른쪽 위 <strong>"New Photo"</strong> 버튼 클릭.</div>
+            </li>
+            <li>
+              <span class="step-icon">📝</span>
+              <div>
+                양식 작성:
+                <ul class="inner-list">
+                  <li><strong>Title</strong> — 예: "2026년 파크모어 소풍"</li>
+                  <li><strong>Date</strong> — 촬영한 날짜</li>
+                  <li><strong>Photo</strong> — 이미지 파일을 끌어다 놓기 (또는 클릭하여 선택)</li>
+                  <li><strong>Category</strong> — Bible Study / Korean Class / Youth / Community / Other 중 선택</li>
+                  <li><strong>Caption</strong> — 모임에 대한 한두 문장 설명</li>
+                  <li><strong>Alt Text</strong> — 사진에 대한 짧은 설명 (스크린리더 & 검색 최적화용)</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">🚀</span>
+              <div>상단의 초록색 <strong>"Publish"</strong> 버튼 클릭.</div>
+            </li>
+            <li>
+              <span class="step-icon">⏱️</span>
+              <div>
+                <strong>1–2분 정도</strong> 기다리면 됩니다.
+                사이트가 자동으로 다시 빌드되며, 갤러리 페이지에 사진이 나타납니다.
+              </div>
+            </li>
+          </ol>
+
+          <div class="guide-tip">
+            <span class="tip-icon">⚠️</span>
+            <div>
+              <strong>이미지 규칙:</strong> JPG / PNG / WebP / GIF 형식만 허용되며, 크기는 <strong>5MB 이하</strong>여야 합니다.
+              너무 크면 스마트폰 내장 편집기로 먼저 크기를 줄여 주세요.
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== Section: Write a Blog Post ========== -->
+        <div class="guide-section">
+          <div class="guide-step-badge">3 단계</div>
+          <h2 class="heading-2 mb-2">
+            ✍️ 블로그 글 쓰기 · How to Write a Blog Post
+          </h2>
+
+          <ol class="guide-steps">
+            <li>
+              <span class="step-icon">📝</span>
+              <div>사이드바 → <strong>"Blog Posts"</strong> → <strong>"New Blog Post"</strong> 클릭.</div>
+            </li>
+            <li>
+              <span class="step-icon">📋</span>
+              <div>
+                항목 작성:
+                <ul class="inner-list">
+                  <li><strong>Title</strong> — 글 제목</li>
+                  <li><strong>Description</strong> — 1-2문장 요약 (목록 페이지에 표시)</li>
+                  <li><strong>Date</strong> — 게시 날짜</li>
+                  <li><strong>Author</strong> — 작성자 이름 (기본값은 Mr. Sim)</li>
+                  <li><strong>Image</strong> — (선택) 표지 사진</li>
+                  <li><strong>Tags</strong> — 예: prayer, devotional, youth</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">📄</span>
+              <div>
+                본문은 <strong>Markdown</strong> 형식으로 작성:
+                <pre class="code-block"># 큰 제목
+## 작은 제목
+
+이것은 **볼릭체** 단어, 이것은 *이탤릭체*.
+
+- 목록 1
+- 목록 2
+
+[링크 텍스트](https://example.com)
+
+![이미지 설명](이미지-주소)</pre>
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">🚀</span>
+              <div><strong>"Publish"</strong> 클릭. 1–2분 안에 사이트에 게시됩니다.</div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- ========== Section: Add an Event ========== -->
+        <div class="guide-section">
+          <div class="guide-step-badge">4 단계</div>
+          <h2 class="heading-2 mb-2">
+            📅 이벤트 추가 · How to Add an Event
+          </h2>
+
+          <ol class="guide-steps">
+            <li>
+              <span class="step-icon">📅</span>
+              <div>사이드바 → <strong>Events</strong> → <strong>New Event</strong>.</div>
+            </li>
+            <li>
+              <span class="step-icon">📝</span>
+              <div>
+                항목 작성:
+                <ul class="inner-list">
+                  <li><strong>Title</strong> — 예: "2026년 부활절 소풍"</li>
+                  <li><strong>Date</strong> — 시작 날짜 (필요하면 End Date도 추가)</li>
+                  <li><strong>Time</strong> — 예: "오후 3시 – 5시"</li>
+                  <li><strong>Location</strong> — 드롭다운에서 선택 (Sandton / Fourways / Online 등)</li>
+                  <li><strong>Category</strong> — Bible Study / Korean Class / Youth / Community / Special</li>
+                  <li><strong>Description</strong> — 어떤 모임인지, 누가 오면 좋은지</li>
+                  <li><strong>Image</strong> — (선택) 배너 사진</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">🚀</span>
+              <div><strong>"Publish"</strong> 클릭.</div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- ========== Section: Add a Video ========== -->
+        <div class="guide-section">
+          <div class="guide-step-badge">5 단계</div>
+          <h2 class="heading-2 mb-2">
+            🎬 유튜브 영상 추가 · How to Add a YouTube Video
+          </h2>
+
+          <ol class="guide-steps">
+            <li>
+              <span class="step-icon">📺</span>
+              <div>먼저 영상을 YouTube에 업로드하거나 기존 영상 URL을 준비합니다.</div>
+            </li>
+            <li>
+              <span class="step-icon">🔗</span>
+              <div>
+                URL에서 <strong>YouTube ID</strong>를 복사합니다.<br />
+                예시 URL: <code>youtube.com/watch?v=<strong>dQw4w9WgXcQ</strong></code><br />
+                ID는 <code>v=</code> 뒤의 부분: <code>dQw4w9WgXcQ</code>
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">🎬</span>
+              <div>사이드바 → <strong>Videos</strong> → <strong>New Video</strong>.</div>
+            </li>
+            <li>
+              <span class="step-icon">📝</span>
+              <div>ID 붙여넣기 → 제목 / 날짜 / 카테고리 / 강사 입력 → <strong>Publish</strong>.</div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- ========== Section: Submit a Hymn ========== -->
+        <div class="guide-section">
+          <div class="guide-step-badge">6 단계</div>
+          <h2 class="heading-2 mb-2">
+            🎵 찬양 추천 · How to Suggest a Hymn
+          </h2>
+          <p class="text-body mb-4">
+            다국어 찬양 라이브러리를 함께 만들어 갑니다. 새 곡을 추천해 주시면 관리자(Mr. Sim)가 검토 후 공식 찬양 페이지에 추가합니다.
+          </p>
+
+          <ol class="guide-steps">
+            <li>
+              <span class="step-icon">🎵</span>
+              <div>사이드바 → <strong>Hymn Suggestions</strong> → <strong>New Hymn Suggestion</strong>.</div>
+            </li>
+            <li>
+              <span class="step-icon">📝</span>
+              <div>
+                항목 작성: 곡 제목, 언어, 국가/지역, 아티스트, 코드 키 (예: G, C, Dm), 코드 진행, (선택) YouTube ID, 가사, 메모, 본인 이름.
+              </div>
+            </li>
+            <li>
+              <span class="step-icon">🚀</span>
+              <div><strong>"Publish"</strong> 클릭. Mr. Sim이 검토 후 공식 컬렉션에 추가합니다.</div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- ========== Section: Edit or Delete ========== -->
+        <div class="guide-section">
+          <div class="guide-step-badge">7 단계</div>
+          <h2 class="heading-2 mb-2">
+            ✏️ 수정 및 삭제 · How to Edit or Delete Content
+          </h2>
+
+          <ol class="guide-steps">
+            <li>
+              <span class="step-icon">📂</span>
+              <div>변경하려는 곳(예: Blog Posts)을 엽니다.</div>
+            </li>
+            <li>
+              <span class="step-icon">🖱️</span>
+              <div>목록에서 해당 항목을 찾고 → <strong>✏️ Edit</strong>를 눌러 수정, <strong>🗑 Delete</strong>를 눌러 삭제.</div>
+            </li>
+            <li>
+              <span class="step-icon">💾</span>
+              <div>수정 후 <strong>"Save"</strong> 또는 <strong>"Publish"</strong> 클릭.</div>
+            </li>
+          </ol>
+
+          <div class="guide-tip">
+            <span class="tip-icon">⚠️</span>
+            <div>
+              <strong>삭제는 신중하게.</strong> 한 번 삭제하면 되돌리기 어렵습니다
+              (관리자가 GitHub 기록에서 복구할 수는 있지만, 반드시 한 번 더 확인해 주세요).
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== FAQ ========== -->
+        <div class="guide-section">
+          <h2 class="heading-2 mb-4">❓ 자주 묻는 질문 · FAQ</h2>
+
+          <div class="faq-item">
+            <p class="faq-q">❓ 게시했는데 사이트에 안 보여요.</p>
+            <p class="faq-a">
+              ✅ 1–2분 정도 기다려 주세요. 사이트가 자동으로 다시 빌드됩니다.
+              5분 이후에도 안 보이면 Mr. Sim에게 알려 주세요.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">❓ 이미지가 업로드 안 돼요.</p>
+            <p class="faq-a">
+              ✅ 파일 크기(5MB 이하)와 형식(.jpg, .png, .webp, .gif)을 확인해 주세요.
+              스마트폰으로 먼저 크기를 줄여 보세요.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">❓ 로그인이 안 돼요 — "OAuth failed".</p>
+            <p class="faq-a">
+              ✅ Mr. Sim에게 알려 주세요. 백엔드 설정 문제일 수 있습니다.
+              여러 번 시도하지 마세요 — 도움이 되지 않습니다.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">❓ 홈페이지나 "About" 페이지를 수정할 수 있나요?</p>
+            <p class="faq-a">
+              ✅ 먼저 Mr. Sim에게 문의해 주세요. 일부 구조 페이지(Home, About, Contact)는 안정성을 위해 코드로 고정되어 있습니다.
+              내용 수정이 필요하면 추가할 수 있습니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- ========== Help Banner ========== -->
+        <div class="guide-section">
+          <div class="card" style="background: linear-gradient(135deg, var(--color-warm-soft) 0%, #ffffff 100%); border: 1px solid var(--color-warm);">
+            <h3 class="heading-3 mb-3">🤝 도움이 필요하신가요? · Need Help?</h3>
+            <p class="text-body mb-4">
+              설명이 잘 안 이해되거나, 문제가 있거나, 새 기능이 필요하시면 언제든 Mr. Sim에게 알려 주세요.
+              15분 정도 화면 공유로 함께 진행해 드릴 수도 있습니다.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="tel:+27774871295" class="btn-primary">📞 Mr. Sim 전화 · +27 77 487 1295</a>
+              <a href="https://joburgchurch.co.za/admin/" class="btn-warm">🚀 관리 페이지 열기 · Open Admin</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- ====================== /KOREAN PANEL ====================== -->
+
+    </div>
+  </section>
+</BaseLayout>
+
+<!-- ============================================================ -->
+<!-- STYLES (scoped)                                              -->
+<!-- ============================================================ -->
+<style>
+  /* === Language tab bar (pure CSS :target trick, no JS) === */
+  .lang-tab {
+    flex: 0 0 auto;
+    padding: 0.9rem 1.5rem;
+    font-weight: 600;
+    color: #6b7280;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+  .lang-tab:hover {
+    color: var(--color-ink);
+    background-color: var(--color-warm-soft);
+  }
+
+  /* Default: show EN, hide KO. Switch via :target. */
+  #en {
+    display: block;
+  }
+  #ko {
+    display: none;
+  }
+  #ko:target {
+    display: block;
+  }
+  #ko:target ~ #en,
+  #ko:target + #en {
+    display: none;
+  }
+
+  /* Active tab highlight using :has() (Chrome 105+, Safari 15.4+, Edge 105+)
+     Fallback for older browsers: both tabs use the same :hover style. */
+  .lang-tab[data-lang="en"] {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-warm);
+  }
+  :has(#ko:target) .lang-tab[data-lang="en"] {
+    color: #6b7280;
+    border-bottom-color: transparent;
+  }
+  :has(#ko:target) .lang-tab[data-lang="ko"] {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-warm);
+  }
+
+  /* === Guide layout === */
+  .guide-section {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid #ececec;
+  }
+  .guide-section:last-child {
+    border-bottom: none;
+  }
+
+  .guide-step-badge {
+    display: inline-block;
+    background-color: var(--color-warm);
+    color: white;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  /* Numbered step list */
+  .guide-steps {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    counter-reset: step-counter;
+  }
+  .guide-steps > li {
+    counter-increment: step-counter;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px dashed #e4e4e7;
+  }
+  .guide-steps > li:last-child {
+    border-bottom: none;
+  }
+  .guide-steps > li::before {
+    content: counter(step-counter);
+    flex: 0 0 2.25rem;
+    height: 2.25rem;
+    width: 2.25rem;
+    border-radius: 999px;
+    background-color: var(--color-warm-soft);
+    color: var(--color-warm);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    margin-top: 0.15rem;
+  }
+  .step-icon {
+    flex: 0 0 2.5rem;
+    font-size: 1.75rem;
+    text-align: center;
+    line-height: 1;
+    margin-top: 0.1rem;
+  }
+  .guide-steps strong {
+    color: var(--color-ink);
+    font-weight: 700;
+  }
+  .guide-steps code {
+    background-color: var(--color-stone);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    font-size: 0.875rem;
+    color: var(--color-primary);
+  }
+
+  .inner-list {
+    margin-top: 0.5rem;
+    padding-left: 1.25rem;
+    list-style: '✓  ';
+    color: #525252;
+  }
+  .inner-list li {
+    padding-left: 0.25rem;
+    margin-bottom: 0.3rem;
+  }
+  .inner-list strong {
+    color: var(--color-ink);
+  }
+
+  /* Code block (for Markdown example) */
+  .code-block {
+    background-color: #1f2937;
+    color: #f3f4f6;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-top: 0.75rem;
+  }
+
+  /* Tip / warning box */
+  .guide-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background-color: var(--color-warm-soft);
+    border-left: 4px solid var(--color-warm);
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    margin-top: 1.5rem;
+  }
+  .tip-icon {
+    flex: 0 0 1.75rem;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .guide-tip strong {
+    color: var(--color-ink);
+  }
+
+  /* FAQ */
+  .faq-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #ececec;
+  }
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+  .faq-q {
+    font-weight: 600;
+    color: var(--color-ink);
+    margin-bottom: 0.4rem;
+  }
+  .faq-a {
+    color: #525252;
+    line-height: 1.65;
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .guide-steps > li {
+      flex-wrap: wrap;
+    }
+    .step-icon {
+      flex-basis: 2.25rem;
+    }
+  }
+</style>
