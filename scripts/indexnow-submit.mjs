@@ -47,8 +47,7 @@ if (singleUrl) {
   if (fs.existsSync(manifestPath)) {
     const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
     for (const [slug, data] of Object.entries(manifest)) {
-      const meta = data as { status: string };
-      if (meta.status === 'published') {
+      if (data.status === 'published') {
         urls.push(`${SITE_URL}/blog/${slug}/`);
       }
     }
