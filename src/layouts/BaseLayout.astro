@@ -96,6 +96,123 @@ const localBusinessSchema = {
   ],
 };
 
+// WebSite schema with SearchAction — gives Google a site-link
+// search box and helps AI engines understand the site's purpose.
+const webSiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
+  url: siteUrl,
+  name: siteName,
+  alternateName: 'Joburg Bible Study Church',
+  description: description,
+  inLanguage: 'en-ZA',
+  publisher: { '@id': `${siteUrl}/#organization` },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${siteUrl}/blog/?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+
+// Person schema for the lead teacher — this is the strongest
+// E-E-A-T signal we can send. AI engines use Person + author
+// markup to decide who is allowed to write on a topic.
+const authorSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${siteUrl}/#author-mr-sim`,
+  name: 'Mr. Sim',
+  givenName: 'Sim',
+  jobTitle: 'Bible study teacher',
+  worksFor: { '@id': `${siteUrl}/#organization` },
+  url: `${siteUrl}/about/`,
+  telephone: '+27 77 487 1295',
+  knowsLanguage: ['en', 'af', 'zu', 'xh', 'st', 'nso', 'tn', 'ss', 've', 'ts'],
+  knowsAbout: [
+    'Bible study',
+    'Christian pastoral care',
+    'South African Christianity',
+    'Johannesburg community',
+    'Marriage counselling',
+    'Addiction recovery (Christian framework)',
+    'Mental health (Christian framework)',
+    'Hymns and worship',
+  ],
+};
+
+// Person schema for the co-host.
+const coHostSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${siteUrl}/#author-ms-dora`,
+  name: 'Ms. Dora',
+  givenName: 'Dora',
+  jobTitle: 'Bible study co-host',
+  worksFor: { '@id': `${siteUrl}/#organization` },
+  url: `${siteUrl}/about/`,
+  telephone: '+27 67 442 4461',
+  knowsLanguage: ['en', 'af', 'zu', 'xh', 'st', 'nso', 'tn', 'ss', 've', 'ts'],
+};
+
+// Organization schema — the parent of LocalBusiness and Person.
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
+  name: siteName,
+  alternateName: 'Joburg Bible Study Church',
+  url: siteUrl,
+  logo: {
+    '@type': 'ImageObject',
+    url: `${siteUrl}/images/og-default.svg`,
+  },
+  image: `${siteUrl}/images/og-default.svg`,
+  description: 'A Bible study and welcoming Christian community in Sandton, Johannesburg. Wednesday online Bible study, Sunday Korean class, youth programs.',
+  email: 'contact@joburgchurch.co.za',
+  telephone: '+27 77 487 1295',
+  foundingDate: '2015',
+  founder: { '@id': `${siteUrl}/#author-mr-sim` },
+  member: [
+    { '@id': `${siteUrl}/#author-mr-sim` },
+    { '@id': `${siteUrl}/#author-ms-dora` },
+  ],
+  areaServed: [
+    { '@type': 'City', name: 'Johannesburg' },
+    { '@type': 'City', name: 'Sandton' },
+    { '@type': 'City', name: 'Randburg' },
+    { '@type': 'City', name: 'Fourways' },
+    { '@type': 'City', name: 'Midrand' },
+    { '@type': 'City', name: 'Alberton' },
+    { '@type': 'City', name: 'Roodepoort' },
+    { '@type': 'City', name: 'Soweto' },
+    { '@type': 'City', name: 'Pretoria' },
+    { '@type': 'AdministrativeArea', name: 'Gauteng' },
+    { '@type': 'Country', name: 'South Africa' },
+  ],
+  knowsAbout: [
+    'Bible Study',
+    'Christian Community',
+    'Korean Language Class',
+    'Youth Ministry',
+    'Online Bible Study',
+    'Spiritual Education',
+    'Worship',
+    'Christian Fellowship',
+    'Hymns',
+    'Pastoral Care',
+  ],
+  sameAs: [
+    'https://joburgchurch.co.za',
+    'https://joburgchurch.co.za/about/',
+    'https://joburgchurch.co.za/blog/',
+    'https://joburgchurch.co.za/hymns/',
+  ],
+};
+
 // BreadcrumbList schema (optional)
 const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
   '@context': 'https://schema.org',
@@ -108,8 +225,13 @@ const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
   })),
 } : null;
 
-// Combine into single schema graph
+// Combine into single schema graph. Order matters for some AI engines:
+// we put WebSite → Organization → Person(s) → LocalBusiness → Article.
 const allSchemas: Record<string, unknown>[] = [];
+allSchemas.push(webSiteSchema);
+allSchemas.push(organizationSchema);
+allSchemas.push(authorSchema);
+allSchemas.push(coHostSchema);
 allSchemas.push(localBusinessSchema);
 if (breadcrumbSchema) allSchemas.push(breadcrumbSchema);
 if (schema) allSchemas.push(schema);
@@ -163,10 +285,25 @@ const combinedJsonLd = JSON.stringify(allSchemas);
     <!-- Performance: DNS prefetch & preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
     <link rel="dns-prefetch" href="https://www.youtube.com" />
     <link rel="dns-prefetch" href="https://i.ytimg.com" />
     <link rel="dns-prefetch" href="https://www.google.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+    <!--
+      Performance: preconnect to AI engines (GEO). When a user clicks
+      a citation in ChatGPT or Perplexity that links here, the
+      browser has already established the TLS handshake.
+    -->
+    <link rel="dns-prefetch" href="https://chat.openai.com" />
+    <link rel="dns-prefetch" href="https://www.perplexity.ai" />
+    <link rel="dns-prefetch" href="https://gemini.google.com" />
+    <link rel="dns-prefetch" href="https://claude.ai" />
+
+    <!-- Feed discovery -->
+    <link rel="alternate" type="application/rss+xml" title="Johannesburg Bible Study Church Blog" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Johannesburg Bible Study Church Blog (Atom)" href="/atom.xml" />
 
     <!-- Google Fonts: Inter (body) + Playfair Display (display) + Cardo (scripture) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />

@@ -1,33 +1,123 @@
+# Johannesburg Bible Study Church — robots.txt
+# 2026 GEO optimisation: explicitly allow AI crawlers (they are how
+# ChatGPT, Perplexity, Gemini, Claude and other AI engines discover
+# our content). Block only admin paths and draft previews.
+
+# ─── Default ───────────────────────────────────────────────
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /api/
+Disallow: /draft-preview/
 
-# Crawl-delay (polite for Googlebot)
+# ─── Google / Bing / DuckDuckGo (full allow) ─────────────
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0
 
-# Bing
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /blog/
+
 User-agent: Bingbot
 Allow: /
 
-# AI crawlers — block by default to protect content
+User-agent: DuckDuckBot
+Allow: /
+
+# ─── AI crawlers — explicitly ALLOWED (this is GEO) ──────
+# OpenAI (ChatGPT, SearchGPT, OAI-SearchBot)
 User-agent: GPTBot
-Disallow: /
+Allow: /
+
 User-agent: ChatGPT-User
-Disallow: /
-User-agent: CCBot
-Disallow: /
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic (Claude)
 User-agent: anthropic-ai
-Disallow: /
+Allow: /
+
 User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Common Crawl (used by many AI training pipelines)
+User-agent: CCBot
+Allow: /
+
+# Google AI / Gemini
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Mistral / Le Chat
+User-agent: MistralAI-User
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# DeepSeek / Qwen / xAI
+User-agent: DeepSeekBot
+Allow: /
+
+User-agent: QwenBot
+Allow: /
+
+User-agent: xAI
+Allow: /
+
+# ─── Block bad bots (server-load, scrapers) ────────────
+User-agent: AhrefsBot
 Disallow: /
 
-# Yandex / Baidu / SEO crawlers — allowed for indexing
-User-agent: YandexBot
-Allow: /
+User-agent: SemrushBot
+Disallow: /
 
-User-agent: Baiduspider
-Allow: /
+User-agent: MJ12bot
+Disallow: /
 
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# ─── Sitemaps ────────────────────────────────────────────
 Sitemap: https://joburgchurch.co.za/sitemap.xml
+Sitemap: https://joburgchurch.co.za/sitemap-images.xml
+Sitemap: https://joburgchurch.co.za/sitemap-news.xml
+
+# ─── Host ───────────────────────────────────────────────
+Host: https://joburgchurch.co.za

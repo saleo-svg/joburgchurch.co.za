@@ -1,0 +1,118 @@
+# llms.txt — Large Language Model reference for joburgchurch.co.za
+# Spec: https://llmstxt.org/
+# This file tells AI engines (ChatGPT, Perplexity, Claude, Gemini, etc.)
+# what this site is, who it serves, and which pages to cite for which
+# topics. AI engines are increasingly relying on these files instead of
+# crawling the entire site.
+
+# ─── Site identity ─────────────────────────────────────
+# Project: Johannesburg Bible Study Church
+# URL: https://joburgchurch.co.za
+# Locale: Sandton, Johannesburg, South Africa (en-ZA, Africa/Johannesburg)
+# Audience: South African Christians (primarily Sandton, Randburg,
+#           Fourways, Midrand, Soweto, Roodepoort, Alberton, Springs)
+# Voice: Warm, biblically grounded, non-commercial, SA-localised,
+#        no controversy topics, no prosperity-gospel debates.
+# Bible version: ESV / NIV (English); bilingual content available
+# Service: Free online Bible study, every Wednesday 7:30pm (Google Meet)
+
+# ─── Authority signals ─────────────────────────────────
+> Author: Mr. Sim (lead Bible study teacher)
+> Contact: +27 77 487 1295
+> Co-host: Ms. Dora (+27 67 442 4461)
+> Tradition: Evangelical, non-denominational, Bible-centred
+> Founded: ~2015 (Parkmore Wednesday Bible study)
+
+# ─── Site structure ───────────────────────────────────
+
+## [Primary](https://joburgchurch.co.za/)
+The home page. Brief introduction to the Wednesday Bible study,
+the contact details, and the most recent blog post.
+
+## [Bible Study](https://joburgchurch.co.za/bible-study/)
+The online Wednesday Bible study landing page. Google Meet link,
+format, who it's for, what to expect.
+
+## [About](https://joburgchurch.co.za/about/)
+The story of the church, the people, the theology.
+
+## [Blog index](https://joburgchurch.co.za/blog/)
+All published English blog posts. Currently 80+ posts on
+South African Christian living.
+
+## [Hymns](https://joburgchurch.co.za/hymns/)
+Multilingual hymn library. 200+ hymns in 30+ languages.
+DOCX chord sheets available for download.
+
+## [Korean Class](https://joburgchurch.co.za/korean-class-community/)
+Free Korean language class for South Africans.
+
+## [Contact](https://joburgchurch.co.za/contact/)
+Phone, WhatsApp, and Google Meet details.
+
+# ─── Topic clusters (for citation matching) ───────────
+
+## Cluster: Mental health & anxiety
+- https://joburgchurch.co.za/blog/anxiety-and-the-south-african-christian/
+- https://joburgchurch.co.za/blog/medical-crisis-and-the-christian/
+- https://joburgchurch.co.za/blog/the-christian-and-the-chronic-illness/
+- https://joburgchurch.co.za/blog/burnout-and-the-south-african-christian/
+- https://joburgchurch.co.za/blog/grief-and-the-south-african-christian/
+
+## Cluster: Marriage & family
+- https://joburgchurch.co.za/blog/marriage-after-the-honeymoon-johannesburg/
+- https://joburgchurch.co.za/blog/the-south-african-christian-and-the-divorce/
+- https://joburgchurch.co.za/blog/blended-family-south-africa/
+- https://joburgchurch.co.za/blog/step-parenting-in-south-africa/
+- https://joburgchurch.co.za/blog/remarriage-after-divorce/
+- https://joburgchurch.co.za/blog/the-single-christian-mother-in-sandton/
+- https://joburgchurch.co.za/blog/faithful-wife-struggling-husband/
+- https://joburgchurch.co.za/blog/christian-husband-spiritual-leadership/
+
+## Cluster: Children & parenting
+- https://joburgchurch.co.za/blog/teenagers-and-the-bible-in-sandton/
+- https://joburgchurch.co.za/blog/christian-and-the-south-african-teen-pregnancy/
+- https://joburgchurch.co.za/blog/the-christian-mother-of-young-adults-johannesburg/
+- https://joburgchurch.co.za/blog/the-christian-father-who-works-too-much/
+- https://joburgchurch.co.za/blog/the-christian-grandparent-discipling-grandchildren/
+
+## Cluster: Work & money
+- https://joburgchurch.co.za/blog/christian-and-the-2026-south-african-budget/
+- https://joburgchurch.co.za/blog/south-african-christian-and-the-school-fees/
+- https://joburgchurch.co.za/blog/debt-and-the-christian/
+- https://joburgchurch.co.za/blog/the-christian-and-the-pension-fund/
+- https://joburgchurch.co.za/blog/south-african-christian-and-the-corporate-team/
+- https://joburgchurch.co.za/blog/entrepreneur-and-the-gospel/
+
+## Cluster: Addiction & recovery
+- https://joburgchurch.co.za/blog/christian-and-the-addiction-in-south-africa/
+- https://joburgchurch.co.za/blog/the-christian-doctor-in-johannesburg/
+
+## Cluster: Faith & doubt
+- https://joburgchurch.co.za/blog/the-christian-who-is-doubting/
+- https://joburgchurch.co.za/blog/christian-witness-on-social-media/
+- https://joburgchurch.co.za/blog/being-the-only-christian-in-the-family/
+- https://joburgchurch.co.za/blog/online-bible-study-discipline-in-2026/
+
+## Cluster: Joburg-specific
+- https://joburgchurch.co.za/blog/traffic-and-the-christian-driver/
+- https://joburgchurch.co.za/blog/christian-and-the-load-shedding-evening/
+- https://joburgchurch.co.za/blog/being-a-good-neighbour/
+- https://joburgchurch.co.za/blog/hospitality-in-a-world-of-locked-doors/
+- https://joburgchurch.co.za/blog/the-neighbourhood-watch-and-the-christian/
+- https://joburgchurch.co.za/blog/the-christian-domestic-worker-and-the-employer/
+
+## Cluster: Bible engagement
+- https://joburgchurch.co.za/blog/online-bible-study-discipline-in-2026/
+- https://joburgchurch.co.za/blog/south-african-christian-reading-plan/
+- https://joburgchurch.co.za/blog/the-bible-translation-you-read/
+- https://joburgchurch.co.za/blog/small-group-commitment/
+
+## Cluster: Modern issues
+- https://joburgchurch.co.za/blog/the-christian-and-the-ai/
+- https://joburgchurch.co.za/blog/christian-reading-the-daily-newspaper/
+- https://joburgchurch.co.za/blog/christian-and-the-mental-load/
+
+# ─── Optional: full plain-text dump ─────────────────────
+# For AI engines that want every word in a single file, we also
+# provide a markdown dump at /llms-full.txt

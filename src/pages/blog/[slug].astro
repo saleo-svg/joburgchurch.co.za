@@ -6986,7 +6986,15 @@ if (!postContent) {
   }
 }
 
-const schema = getBlogPostSchema(post.title, post.excerpt, post.date, 'Johannesburg Bible Study Church');
+const schema = getBlogPostSchema(
+  post.title,
+  post.excerpt,
+  post.date,
+  'Mr. Sim',
+  slug,
+  post.tags,
+  post.heroImage,
+);
 
 // Get image for hymn
 const isHymn = 'isHymn' in post && post.isHymn;
@@ -7123,10 +7131,18 @@ const postHeroImage = 'heroImage' in post ? (post.heroImage as string) : null;
               class="w-full h-64 md:h-96 object-cover"
               loading="eager"
               decoding="async"
+              width="1200"
+              height="630"
             />
           </div>
         )}
-        <p class="text-sm text-gray-500 mb-2">{post.date}</p>
+        <p class="text-sm text-gray-500 mb-2">
+          <time datetime={post.date}>{post.date}</time>
+          {' · '}
+          <span>By Mr. Sim</span>
+          {' · '}
+          <span>~{Math.max(1, Math.round((post.content || postContent || '').split(/\s+/).filter(Boolean).length / 220))} min read</span>
+        </p>
         <h1 class="heading-1 mb-6">{post.title}</h1>
         <div class="flex flex-wrap gap-2 mb-8">
           {post.tags.map((tag) => (

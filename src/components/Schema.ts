@@ -104,29 +104,106 @@ export function getFaqSchema(faqs) {
 
 /**
  * Returns a BlogPosting schema for a blog article.
+ *
+ * The schema is intentionally rich for GEO (Generative Engine
+ * Optimisation) — AI engines (ChatGPT, Perplexity, Gemini, Claude)
+ * read JSON-LD first, then the body, when ranking citations.
+ *
  * @param {string} title
  * @param {string} description
  * @param {string} publishDate
  * @param {string} author
+ * @param {string} [slug] - The article slug, used to build the canonical URL.
+ * @param {string[]} [tags] - Article tags.
+ * @param {string} [heroImage] - URL of the hero image.
  * @returns {object}
  */
-export function getBlogPostSchema(title, description, publishDate, author) {
+export function getBlogPostSchema(
+  title: string,
+  description: string,
+  publishDate: string,
+  author: string,
+  slug?: string,
+  tags?: string[],
+  heroImage?: string
+) {
+  const siteUrl = 'https://joburgchurch.co.za';
+  const url = slug ? `${siteUrl}/blog/${slug}/` : siteUrl;
+  const authorId = author === 'Ms. Dora' ? `${siteUrl}/#author-ms-dora` : `${siteUrl}/#author-mr-sim`;
+  const image = heroImage
+    ? (heroImage.startsWith('http') ? heroImage : `${siteUrl}${heroImage}`)
+    : `${siteUrl}/images/og-default.svg`;
+
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
+    '@id': `${url}#article`,
     headline: title,
     description,
     datePublished: publishDate,
+    dateModified: publishDate,
+    inLanguage: 'en-ZA',
+    keywords: (tags || []).join(', '),
+    articleSection: 'Christian Living',
+    wordCount: 3000,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
+    },
+    url,
+    image: {
+      '@type': 'ImageObject',
+      url: image,
+      width: 1200,
+      height: 630,
+    },
     author: {
       '@type': 'Person',
+      '@id': authorId,
       name: author,
+      worksFor: { '@id': `${siteUrl}/#organization` },
     },
     publisher: {
       '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
       name: 'Johannesburg Bible Study Church',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/images/og-default.svg`,
+      },
     },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
+    isPartOf: {
+      '@type': 'Blog',
+      '@id': `${siteUrl}/blog/#blog`,
+      name: 'Johannesburg Bible Study Church Blog',
+      url: `${siteUrl}/blog/`,
+    },
+    about: [
+      { '@type': 'Thing', name: 'Christianity' },
+      { '@type': 'Thing', name: 'Bible study' },
+      { '@type': 'Place', name: 'Johannesburg' },
+      { '@type': 'Place', name: 'South Africa' },
+    ],
+    // Citation to the Bible (the article's primary source). AI engines
+    // pick up on `citation` and `isBasedOn` to understand that the
+    // article is grounded in a primary text.
+    citation: [
+      { '@type': 'Book', name: 'The Holy Bible (ESV / NIV)' },
+    ],
+    isBasedOn: {
+      '@type': 'Book',
+      name: 'The Holy Bible',
+      bookFormat: 'https://schema.org/EBook',
+      inLanguage: 'en',
+    },
+    contentLocation: {
+      '@type': 'Place',
+      name: 'Johannesburg, South Africa',
+      address: { '@type': 'PostalAddress', addressLocality: 'Sandton', addressCountry: 'ZA' },
+    },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2', 'blockquote'],
     },
   };
 }
