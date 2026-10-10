@@ -56,3 +56,17 @@ jobs:
             git commit -m "chore(release): promote next batch of drafts"
             git push
           fi
+
+      - name: IndexNow submit (notify Bing/Yandex of new posts)
+        # The key file is committed to public/, so the action can
+        # re-derive the key path. We re-create the .indexnow-key.txt
+        # from the public file to keep the key value out of git history.
+        run: |
+          set -e
+          KEY_FILE=$(ls public/*.txt | xargs -I{} basename {} .txt | grep -E '^[a-z0-9]{20,40}$' | head -1)
+          if [ -z "$KEY_FILE" ]; then
+            echo "[indexnow] no key file found, skipping"
+            exit 0
+          fi
+          echo "$KEY_FILE" > .indexnow-key.txt
+          node scripts/indexnow-submit.mjs --all
