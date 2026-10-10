@@ -58,6 +58,7 @@ jobs:
           fi
 
       - name: IndexNow submit (notify Bing/Yandex of new posts)
+        id: indexnow
         # The key file is committed to public/, so the action can
         # re-derive the key path. We re-create the .indexnow-key.txt
         # from the public file to keep the key value out of git history.
@@ -66,7 +67,34 @@ jobs:
           KEY_FILE=$(ls public/*.txt | xargs -I{} basename {} .txt | grep -E '^[a-z0-9]{20,40}$' | head -1)
           if [ -z "$KEY_FILE" ]; then
             echo "[indexnow] no key file found, skipping"
+            echo "key=" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           echo "$KEY_FILE" > .indexnow-key.txt
+          echo "key=$KEY_FILE" >> "$GITHUB_OUTPUT"
           node scripts/indexnow-submit.mjs --all
+
+      - name: Wait for Cloudflare deployment to propagate
+        # Cloudflare Pages rebuild on push takes 30-60s. Wait before
+        # the health check so it sees the freshly deployed site.
+        run: sleep 60
+
+      - name: Post-deploy health check
+        # Verifies that the live site is still healthy after the
+        # release: 3 sitemaps valid, GEO files 200, IndexNow key
+        # reachable, /blog/ JSON-LD parses, sitemap URLs all 200,
+        # no DRAFT posts leaked into sitemap.
+        env:
+          INDEXNOW_KEY: ${{ steps.indexnow.outputs.key }}
+        run: |
+          node scripts/post-deploy-healthcheck.mjs
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "::error::Post-deploy health check failed. See logs above."
+          echo "::group::Possible causes"
+          echo "- Cloudflare deploy not yet propagated (re-run workflow)"
+          echo "- Sitemap regex broke (check src/pages/sitemap.xml.ts)"
+          echo "- JSON-LD block has syntax error (check src/layouts)"
+          echo "::endgroup::"
