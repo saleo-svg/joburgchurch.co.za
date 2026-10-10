@@ -28,3 +28,7 @@ Thumbs.db
 # astro
 .astro/
 .cache/
+
+# IndexNow key (the public/.txt file IS committed, but the source
+# .indexnow-key.txt is gitignored so the key never appears in git history)
+.indexnow-key.txt
