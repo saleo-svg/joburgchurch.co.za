@@ -47,14 +47,19 @@ for (const batch of queue) {
     //     ...
     //   },
     // We need to flip the 'draft' -> 'published' AND change the date
-    // to today. The entry can be hundreds of lines, so we use
-    // bounded backtracking.
+    // to today. Match the full entry (one level of nested {}) so the
+    // status/date fields are confined to this entry, not leaked into
+    // a neighbour.
     const entryRegex = new RegExp(
-      `('${slug.replace(/-/g, '-')}':\\s*\\{[\\s\\S]*?status:\\s*)'draft'([\\s\\S]*?date:\\s*)'2026-10-10'`,
+      `('${slug.replace(/-/g, '-')}':\\s*\\{(?:[^{}]|\\{[^{}]*\\})*\\})`,
       'm'
     );
-    if (entryRegex.test(astro)) {
-      astro = astro.replace(entryRegex, `$1'published'$2'${today}'`);
+    const entryMatch = astro.match(entryRegex);
+    if (entryMatch && /status:\s*'draft'/.test(entryMatch[1]) && /date:\s*'2026-10-10'/.test(entryMatch[1])) {
+      const updated = entryMatch[1]
+        .replace(/status:\s*'draft'/, `status: 'published'`)
+        .replace(/date:\s*'2026-10-10'/, `date: '${today}'`);
+      astro = astro.replace(entryRegex, updated);
       log(`  astro: ${slug} -> published`);
     } else {
       log(`  astro: ${slug} not found or already published (skipping)`);

@@ -6050,17 +6050,6 @@ const posts = {
       <p class="text-sm text-gray-500 mt-8"><em>Johannesburg Bible Study Church meets online every Wednesday at 7:30pm for a small Bible study with the heart of a megachurch — or, perhaps more accurately, with the heart of the early church. The Bible study is free, open to anyone, and free to join or to leave. Call Mr. Sim on +27 77 487 1295 or Ms. Dora on +27 67 442 4461 to join.</em></p>
     `,
   },
-};
-
-// Hymn region images
-const hymnRegionImages: Record<string, string> = {
-  'English': 'https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1200&q=80',
-  'Zulu': 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1200&q=80',
-  'Xhosa': 'https://images.unsplash.com/photo-1523803832-1c1b5e8ed3c9?w=1200&q=80',
-  'Swahili': 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=1200&q=80',
-  'Dinka': 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=1200&q=80',
-  'Shona': 'https://images.unsplash.com/photo-1517783999520-f068a47e5f53?w=1200&q=80',
-  'Korean': 'https://images.unsplash.com/photo-1534008757030-27299c4371b6?w=1200&q=80',
 
 
 
@@ -7256,6 +7245,16 @@ const hymnRegionImages: Record<string, string> = {
   },
 
 };
+// Hymn region images
+const hymnRegionImages: Record<string, string> = {
+  'English': 'https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1200&q=80',
+  'Zulu': 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1200&q=80',
+  'Xhosa': 'https://images.unsplash.com/photo-1523803832-1c1b5e8ed3c9?w=1200&q=80',
+  'Swahili': 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=1200&q=80',
+  'Dinka': 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=1200&q=80',
+  'Shona': 'https://images.unsplash.com/photo-1517783999520-f068a47e5f53?w=1200&q=80',
+  'Korean': 'https://images.unsplash.com/photo-1534008757030-27299c4371b6?w=1200&q=80',
+};
 
 const post = posts[slug];
 
@@ -7487,3 +7486,4 @@ const postHeroImage = 'heroImage' in post ? (post.heroImage as string) : null;
     </div>
   </section>
 </BaseLayout>
+
