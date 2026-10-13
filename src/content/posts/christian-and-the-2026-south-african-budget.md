@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["budget", "money", "stewardship", "contentment", "Johannesburg", "Sandton", "South Africa", "2026", "cost of living", "Bible study", "Christian living", "household"]
 heroImage: "/images/posts/load-shedding-candlelight.jpg"
 excerpt: "Petrol up. Electricity up. School fees up. Food up. The salary has not changed. Many Christians in Johannesburg in 2026 are quietly feeling the pressure of a budget that no longer stretches to the end of the month. Here is what the Bible says about the budget, about contentment, and the dignity of the careful steward."
-status: draft
+status: published
 ---
 
 # Stretching the Salary to the End of the Month: A Christian's Guide to the South African Budget in 2026

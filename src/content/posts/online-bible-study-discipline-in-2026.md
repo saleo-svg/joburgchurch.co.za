@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["online", "discipline", "commitment", "Sandton", "Johannesburg", "South Africa", "habit", "consistency", "Bible study", "Wednesday", "Christian living", "small habits"]
 heroImage: "/images/posts/jozi-young-professional.jpg"
 excerpt: "An online Bible study is the easiest Bible study to skip. No one is watching. The camera is off. The Wi-Fi is bad. The load-shedding just started. Here is what the Bible says about the small discipline of showing up."
-status: draft
+status: published
 ---
 
 # Showing Up to the Online Bible Study: A South African's Guide to the Small Discipline of the Wednesday Night

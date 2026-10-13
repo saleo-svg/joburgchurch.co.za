@@ -2,14 +2,15 @@
   {
     "batch": 1,
     "release_at": "2026-10-13T08:00:00+02:00",
-    "status": "pending",
+    "status": "released",
     "articles": [
       "anxiety-and-the-south-african-christian",
       "online-bible-study-discipline-in-2026",
       "christian-and-the-2026-south-african-budget",
       "marriage-after-the-honeymoon-johannesburg",
       "the-christian-mother-of-young-adults-johannesburg"
-    ]
+    ],
+    "released_at": "2026-10-13T13:53:31.317Z"
   },
   {
     "batch": 2,

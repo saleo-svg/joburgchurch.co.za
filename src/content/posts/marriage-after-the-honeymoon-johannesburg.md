@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["marriage", "long marriage", "covenant", "Johannesburg", "Sandton", "South Africa", "couples", "husband", "wife", "Bible study", "pastoral", "Christian living"]
 heroImage: "/images/posts/multilingual-worship.jpg"
 excerpt: "The South African Christian couple who has made it past the wedding and the first five years has entered the real marriage. The children, the work, the move, the loss of parents, the empty nest. Here is what the Bible says about the twenty years after the honeymoon."
-status: draft
+status: published
 ---
 
 # The Marriage After the Honeymoon: A South African Christian's Guide to the Twenty Years That Follow the Wedding

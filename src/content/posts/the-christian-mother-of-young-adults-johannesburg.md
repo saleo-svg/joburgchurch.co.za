@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["mother", "empty nest", "grown children", "Sandton", "Johannesburg", "South Africa", "motherhood", "Psalm 131", "Bible study", "pastoral", "Christian living", "older women"]
 heroImage: "/images/posts/township-bible-study.jpg"
 excerpt: "The Christian mother in Johannesburg whose children have grown and left the home has entered a new season. The house is quiet. The Sunday lunch is not what it was. Here is what the Bible says about the empty nest, and the mother who is learning to live with the God who is still at home."
-status: draft
+status: published
 ---
 
 # When the Children Have Grown: A Christian Mother's Honest Reflection on the Empty Nest in Johannesburg

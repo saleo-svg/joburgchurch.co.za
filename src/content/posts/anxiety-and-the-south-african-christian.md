@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["anxiety", "worry", "mental health", "Sandton", "Johannesburg", "South Africa", "prayer", "peace", "Philippians 4", "Bible study", "pastoral", "Christian living"]
 heroImage: "/images/posts/heritage-day-braai.jpg"
 excerpt: "Anxiety is one of the most common struggles the South African Christian carries. The load-shedding worry, the job worry, the parenting worry. This post is a biblical and pastoral guide for the Christian in Johannesburg who has tried to pray the worry away and is still up at three in the morning."
-status: draft
+status: published
 ---
 
 # When the Worries Won't Stop: A South African Christian's Honest Guide to Anxiety and the Bible
