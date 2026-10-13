@@ -1,1146 +1,464 @@
-# ¿ª·¢¼ÇÂ¼»ã×Ü
-# Johannesburg Bible Study Church Website Project
-# ÏîÄ¿Ä¿Â¼: C:\Users\Laptop\Desktop\Church-Site
-# ×î½ü¸üÐÂ: 2026-10-02
-#
-# ËµÃ÷: ±¾ÎÄ¼þ½ö°üº¬ AI µÄ´ð°¸¡¢¾ö²ß¡¢ÊµÊ©Ï¸½Ú¡£
-#       ÓÃ»§µÄÌáÎÊ/ÎÊÌâ/¶Ô»°Çë¼û ÓÃ»§¶Ô»°»ã×Ü.txt / ÓÃ»§¶Ô»°»ã×Ü.md¡£
-
----
-
-## ¿ª·¢»á»°×ÜÀÀ
-
-### »á»° 1 ¡ª 2026-06-20 Íí¼ä£ºÏîÄ¿³õÊ¼»¯
-
-
-
-**ÎÊÌâ£º**
-- ¹¤×÷ÇøÎª¿Õ£¬´ÓÁã¿ªÊ¼
-- PowerShell ²»Ö§³Ö `&&` Á´Ê½Óï·¨
-- `npm create astro` ½»»¥Ê½ CLI »á×èÈû
-
-**½â¾ö·½°¸£º**
-- ÊÖ¶¯´´½¨ `package.json`¡¢`astro.config.mjs`¡¢`tailwind.config.mjs`¡¢`tsconfig.json`
-- Ö±½ÓÔËÐÐ `npm install` ºÍ `npx astro build`
-- ±ÜÃâÁË½»»¥Ê½ CLI µÄÎÊÌâ
-
-**´´½¨µÄÎÄ¼þ£¨µÚÒ»½×¶Î£©£º**
-- `package.json` ¡ª ÒÀÀµ£ºAstro 4.16, @astrojs/tailwind 5.1, Tailwind 3.4, @tailwindcss/typography
-- `astro.config.mjs` ¡ª Astro + Tailwind ¼¯³É
-- `tailwind.config.mjs` ¡ª Ö÷ÌâÅäÖÃ£¨blue/warm É«Ïµ£¬Inter ×ÖÌå£©
-- `tsconfig.json` ¡ª TypeScript ÅäÖÃ£¬º¬ @ ±ðÃû
-- `src/env.d.ts` ¡ª Astro »·¾³ÀàÐÍÉùÃ÷
-- `src/styles/global.css` ¡ª È«¾ÖÑùÊ½£¬¶¨Òå btn-* / heading-* / section-padding µÈ×é¼þÀà
-
-**¹¹½¨´íÎóÐÞ¸´£º**
-1. `Schema.ts` ¡ª esbuild ²»Ê¶±ð TypeScript `export interface` Óï·¨
-   - ÐÞ¸´£º¸ÄÎª´¿ JavaScript + JSDoc ×¢ÊÍ
-2. `blog/[slug].astro` ¡ª ¶¯Ì¬Â·ÓÉÈ±ÉÙ `getStaticPaths()`
-   - ÐÞ¸´£ºÌí¼Ó `export function getStaticPaths()` ·µ»Ø 5 ¸ö¾²Ì¬ slug
-
-**½á¹û£º** 18 ¸öÒ³Ãæ¹¹½¨³É¹¦
-
----
-
-### »á»° 2 ¡ª 2026-06-20 ÉîÒ¹£ºÈÕÖ¾±£»¤»úÖÆ
-
-
-
-**ºËÐÄ¹¤×÷£º**
-- ÓÃ»§Ë¯¾õÇ°ÒªÇóÈÕÖ¾ÓÅÏÈ
-- ÔÚ×öÈÎºÎ´úÂë¸Ä¶¯Ö®Ç°£¬ÏÈÐ´ÁË STATUS.md / DEV_LOG.md / HANDOFF.md
-- È·ÈÏ²ßÂÔÓÐÐ§£ºÎÞÈÕÖ¾¶ªÊ§·çÏÕ
-
-**±£³ÖµÄ²ßÂÔ£º**
-- Ã¿´Î±à³ÌÇ°Ð´ÈÕÖ¾
-- ÈÕÖ¾ÖÐ¼ÇÂ¼"µ±Ç°ÔÚ×öÊ²Ã´"ºÍ"½ÓÏÂÀ´Òª×öÊ²Ã´"
-- ÉÏÏÂÎÄ´ïµ½ 80% Ê±Ñ¹Ëõµ½ HANDOFF.md
-- ÉÏÏÂÎÄ´ïµ½ 88% Ê±Á¢¼´Í£Ö¹
-
----
-
-### »á»° 3 ¡ª 2026-06-21 Íí¼ä£ºPhase 4 Íê³É
-
-
-
-**Phase 4 Íê³ÉÇåµ¥£º**
-
-#### ÕæÊµÐÅÏ¢Ìæ»»
-- Church Name: `[Church Name]` ¡ú `Johannesburg Bible Study Church`
-- Address: `[Street Address]` ¡ú `Parkmore, 11th Street, Sandton, 2196 Johannesburg`
-- Phone: `[Phone Number]` ¡ú `+27 77 487 1295` (Mr. Sim) / `+27 67 442 4461` (Ms. Dora)
-- Email: È«²¿ÒÆ³ý£¨ÓÃ»§Î´Ìá¹©£©
-- Social links: È«²¿ÒÆ³ý£¨ÓÃ»§Î´Ìá¹©£©
-- Hero image: ÒÆ³ý `/images/hero-bg.jpg` ÒÀÀµ£¬¸ÄÓÃ CSS ½¥±ä
-- Emoji Í¼±ê: È«²¿Ìæ»»Îª SVG »òÎÄ×Ö±êÇ©
-
-#### Ò³ÃæÐÅÏ¢¸üÐÂ
-| Ò³Ãæ | Bible Study | Korean Class | ÆäËû |
-|------|-------------|--------------|------|
-| Home | Wednesday 7:30pm Online | Sunday 2:00pm Offline, Free | ÎÞ Sunday service |
-| Korean Class | ¡ª | ÍêÕûÏêÇéÒ³ | Free + Appointment required + Ë«ÈÈÏß |
-| Spiritual Education | Wednesday 7:30pm Google Meet | ¡ª | Bible Study ÎªÖ÷ |
-| Visit | Wednesday 7:30pm Google Meet | Sunday 2:00pm Sandton | ÎÞ Sunday service |
-| Contact | ¡ª | ¡ª | µç»°ÈÈÏß£¬ÎÞ email |
-| Events | Wednesday Online | Sunday 2:00pm | Youth programs |
-
-#### SEO ¹Ø¼ü´ÊÕûºÏ£¨×ÔÈ»·Ö²¼£©
-- Homepage: "Bible study community Sandton Johannesburg", "Christian community Johannesburg"
-- Korean Class: "free Korean class Sandton", "free Korean class Johannesburg", "learn Korean Sandton"
-- Spiritual Education: "Bible study Johannesburg", "online Bible study Sandton", "Bible study Sandton"
-- Youth: "youth church Johannesburg", "Christian youth Sandton"
-- Ã¿¸öÒ³Ãæ title/description ¶¼°üº¬±¾µØ SEO ´Ê
-
-#### JSON-LD Schema ¸üÐÂ
-- PlaceOfWorship schema: Ãû³Æ¡¢µØÖ·£¨Sandton£©¡¢µç»°
-- openingHoursSpecification: Wednesday 19:30¡¢Sunday 14:00
-- Course schema (Korean Class): Ãâ·Ñº«Óï¿Î³Ì
-- BlogPosting schema: publisher ÉèÎª Johannesburg Bible Study Church
-- ÒÆ³ý email ºÍ²»´æÔÚµÄ image ×Ö¶Î
-
-#### Sitemap
-- `@astrojs/sitemap` ²å¼þÒÆ³ý£¨Óë Astro 4.16 °æ±¾²»¼æÈÝ£¬±¨´í£º`Cannot read properties of undefined (reading 'reduce')`£©
-- ¸ÄÓÃ `src/pages/sitemap.xml.ts` ¾²Ì¬ API ¶Ëµã
-- 25 ¸ö URL£¨17 ¸ö»ù´¡ + 8 ¸öÍøµãÒ³Ãæ£©
-
-#### ¶àÍøµã£¨¶àÇøÓò£©Ö§³Ö
-´´½¨ÁË 8 ¸öÍøµãÒ³Ãæ£º
-
-| ÇøÓò | Â·¾¶ | SEO ÖØµã |
-|------|------|---------|
-| Sandton | /locations/sandton | Ö÷Õ¾£¬ÍêÕû¹¦ÄÜ |
-| Randburg | /locations/randburg | Bible study Randburg |
-| Fourways | /locations/fourways | Bible study Fourways |
-| Midrand | /locations/midrand | Bible study Midrand |
-| Alberton | /locations/alberton | Bible study Alberton |
-| Roodepoort | /locations/roodepoort | Bible study Roodepoort |
-| Soweto | /locations/soweto | Bible study Soweto |
-
-Ã¿¸öÍøµãÒ³Ãæ£º
-- ¶ÀÁ¢µÄ SEO title/description£¨area-specific£©
-- Íøµã×¨Êô³ÌÐòÐÅÏ¢
-- ½»²æÁ´½Óµ½ÆäËûÍøµã
-- Sandton Ò³ÃæÓÐÍêÕû Korean Class CTA
-
-#### µ¼º½¸üÐÂ
-- Header: Ìí¼ÓÁË Locations Á´½Ó
-- Footer: ¸ÄÎª 6 ÁÐ²¼¾Ö£¨Brand + Locations 6 ÁÐ + ÆäËû£©£¬°üº¬ËùÓÐ 7 ¸öÍøµãÁ´½Ó
-
-#### ¹¹½¨½á¹û
-```
-26 pages built successfully
-0 warnings
-0 errors
-```
-
----
-
----
-
-## ×îÖÕÎÄ¼þ½á¹¹
-
-
-
-```
-C:\Users\Laptop\Desktop\Church-Site\
-©À©¤©¤ astro.config.mjs          ¡û site: https://example.com£¨ÉÏÏßÇ°±ØÐëÌæ»»£©
-©À©¤©¤ package.json
-©À©¤©¤ tailwind.config.mjs
-©À©¤©¤ tsconfig.json
-©À©¤©¤ STATUS.md                 ¡û µ±Ç°½×¶Î×´Ì¬
-©À©¤©¤ DEV_LOG.md                ¡û ¿ª·¢ÈÕÖ¾
-©À©¤©¤ HANDOFF.md                ¡û ½»½ÓÎÄµµ
-©À©¤©¤ SEO_PLAN.md               ¡û SEO ²ßÂÔÎÄµµ
-©À©¤©¤ public/
-©¦   ©À©¤©¤ robots.txt           ¡û sitemap.xml ÒýÓÃ
-©¦   ©¸©¤©¤ favicon.svg
-©À©¤©¤ dist/                     ¡û ²¿ÊðÎÄ¼þ¼Ð£¨30 ¸öÎÄ¼þ£©
-©¸©¤©¤ src/
-    ©À©¤©¤ env.d.ts
-    ©À©¤©¤ styles/global.css
-    ©À©¤©¤ components/
-    ©¦   ©À©¤©¤ Header.astro     ¡û º¬ Locations nav
-    ©¦   ©À©¤©¤ Footer.astro     ¡û 6ÁÐ£¬º¬ Locations Á´½Ó
-    ©¦   ©À©¤©¤ SEOHead.astro
-    ©¦   ©¸©¤©¤ Schema.ts        ¡û ÕæÊµ½Ì»áÊý¾Ý
-    ©À©¤©¤ layouts/
-    ©¦   ©¸©¤©¤ BaseLayout.astro
-    ©¸©¤©¤ pages/
-        ©À©¤©¤ 404.astro
-        ©À©¤©¤ about.astro
-        ©À©¤©¤ contact.astro     ¡û µç»°ÈÈÏß£¬ÎÞ email
-        ©À©¤©¤ events.astro
-        ©À©¤©¤ index.astro      ¡û ÕæÊµÊý¾Ý£¬ÎÞ hero image
-        ©À©¤©¤ privacy.astro
-        ©À©¤©¤ sermons.astro
-        ©À©¤©¤ spiritual-education.astro
-        ©À©¤©¤ visit.astro
-        ©À©¤©¤ youth-usecan.astro
-        ©À©¤©¤ sitemap.xml.ts    ¡û 25 ¸ö URL
-        ©À©¤©¤ blog/
-        ©¦   ©À©¤©¤ index.astro
-        ©¦   ©¸©¤©¤ [slug].astro  ¡û 5 Æª²©¿ÍÎÄÕÂ
-        ©À©¤©¤ community-classes/
-        ©¦   ©À©¤©¤ index.astro
-        ©¦   ©¸©¤©¤ korean.astro  ¡û SEO ÓÅ»¯°æ
-        ©¸©¤©¤ locations/
-            ©À©¤©¤ index.astro    ¡û 7 ¸öÍøµã¿¨Æ¬
-            ©¸©¤©¤ [slug].astro   ¡û Sandton + 6 ÇøÓò
-```
-
----
-
----
-
-## ²¿ÊðÇ°±Ø×öÊÂÏî
-
-
-
-1. **Ìæ»»ÓòÃû**£¨×îÖØÒª£©
-   - `astro.config.mjs` µÚ 5 ÐÐ: `site: 'https://example.com'`
-   - `src/pages/sitemap.xml.ts` µÚ 3 ÐÐ: `const siteUrl = 'https://example.com'`
-   - `public/robots.txt` µÚ 4 ÐÐ: `Sitemap:` URL
-
-2. **GitHub + Cloudflare Pages**
-   - ÍÆËÍ´úÂëµ½ GitHub ²Ö¿â
-   - Á¬½Ó Cloudflare Pages
-   - ¹¹½¨ÃüÁî: `npm run build`
-   - Êä³öÄ¿Â¼: `dist`
-
-3. **Google Search Console**
-   - Ìá½» sitemap.xml
-   - ¼ì²éË÷Òý¸²¸ÇÂÊ
-
-4. **Google Business Profile**
-   - ´´½¨½Ì»áÉÌ¼ÒÐÅÏ¢
-   - °üº¬ÕæÊµµØÖ·¡¢µç»°¡¢ÓªÒµÊ±¼ä
-
----
-
----
-
-## AI ¸üÐÂ²©¿ÍÎÄÕÂÌáÊ¾´Ê
-
-
-
-```
-Create a new SEO-friendly blog post for Johannesburg Bible Study Church.
-
-Topic: [ÔÚ´ËÕ³ÌùÖ÷Ìâ]
-Audience: People searching for Bible study, church, or Christian community in Johannesburg or Sandton, South Africa.
-
-Requirements:
-- warm, sincere, non-commercial church tone
-- naturally include local SEO: "Bible study", "Sandton", "Johannesburg", "Christian community"
-- no keyword stuffing
-- 800 to 1200 words
-- include title, description, date, tags
-- suggest internal links to relevant site pages
-- save in src/pages/blog/[slug].astro
-- update sitemap.xml.ts to add the new blog URL
-- update DEV_LOG.md and STATUS.md
-```
-
----
-
----
-
-## »·¾³ÐÅÏ¢
-
-
-
-- Node.js: v22.15.0
-- npm: 10.9.2
-- Astro: 4.16.19
-- Tailwind CSS: 3.4.x
-- OS: Windows 10 (PowerShell)
-
----
-
----
-
-## ÒÑÖªÏÞÖÆ
-
-
-
-- ÔÝÎÞ email£¨ÓÃ»§Î´Ìá¹©£©
-- ÔÝÎÞ social links£¨ÓÃ»§Î´Ìá¹©£©
-- ÔÝÎÞ hero ±³¾°Í¼£¨ÓÃ»§ÔÝÊ±²»·Å£©
-- ÔÝÎÞ Google Maps embed£¨¿ÉÔÚÉÏÏßºóÌí¼Ó£©
-- ÓòÃûÔÝÎª example.com£¨ÉÏÏßÇ°±ØÐëÌæ»»£©
-
----
-
----
-
-## Phase 11 (2026-07-18) ¡ª CMS ÓëÇ°¶Ë¶ÏÁ¬ÐÞ¸´ + Hymns Suggestions
-
-### ÎÊÌâ·¢ÏÖ
-
-
-¼ì²éÖ¾Ô¸Õß CMS ¹¦ÄÜÊ±·¢ÏÖÖØ´óÎÊÌâ£ºCMS ÅäÖÃÕýÈ·µ«Ç°¶ËÒ³ÃæÓ²±àÂë£¬Ö¾Ô¸ÕßÉÏ´«ÄÚÈÝ²»»áÏÔÊ¾¡£
-
-### ÐÞ¸´ÄÚÈÝ
-
-
-
-#### CMS ÓëÇ°¶ËÒ³ÃæÖØÐÂÁ¬½Ó
-| Ò³Ãæ | ÐÞ¸Ä | ×´Ì¬ |
-|------|------|------|
-| Gallery | ¸ÄÎª´Ó `src/content/gallery/` ¶ÁÈ¡ | [OK] |
-| Blog | ¸ÄÎª´Ó `src/content/posts/` ¶ÁÈ¡ | [OK] |
-| Events | ¸ÄÎª´Ó `src/content/events/` ¶ÁÈ¡ | [OK] |
-| Videos | ¸ÄÎª´Ó `src/content/videos/` ¶ÁÈ¡ | [OK] |
-| Sermons | ¸ÄÎª´Ó `src/content/sermons/` ¶ÁÈ¡ | [OK] |
-
-#### ÐÂÔö CMS °å¿é
-- **Hymn Suggestions** - Ö¾Ô¸Õß¿ÉÌá½»ÔÞÃÀÊ«½¨Òé¹©¹ÜÀíÔ±ÉóºË
-
-#### ¸üÐÂµÄÎÄ¼þ
-- `src/pages/gallery.astro`
-- `src/pages/blog/index.astro`
-- `src/pages/events.astro`
-- `src/pages/videos.astro`
-- `src/pages/sermons.astro`
-- `public/admin/config.yml`
-- `CMS_SETUP_GUIDE.md`
-
-### Git Commits
-
-
-```
-b95430c feat(cms): connect all pages to CMS + add hymns suggestions
-6046887 chore(hymns): rebuild docx files for 115 hymns
-```
-
-### Ö¾Ô¸ÕßÈ¨ÏÞ×Ü½á
-
-
-| ¹¦ÄÜ | È¨ÏÞ |
-|------|------|
-| ·¢±í²©¿ÍÎÄÕÂ | [OK] ÍêÕû |
-| ÉÏ´«ÕÕÆ¬µ½ Gallery | [OK] ÍêÕû |
-| ·¢²¼»î¶¯ | [OK] ÍêÕû |
-| Ìí¼Ó YouTube ÊÓÆµ | [OK] ÍêÕû |
-| Ìí¼Ó½²µÀ±Ê¼Ç | [OK] ÍêÕû |
-| Ìá½»ÔÞÃÀÊ«½¨Òé | [OK] ÐÂÔö |
-| ¸üÐÂÍøÕ¾ÉèÖÃ | [OK] ÍêÕû |
-
-### ´ýÍê³É£¨ÐèÓÃ»§ÊÖ¶¯²Ù×÷£©
-
-
-1. ´´½¨ GitHub OAuth App
-2. ²¿Êð Cloudflare OAuth Worker
-3. ¸üÐÂ `config.yml` ÖÐµÄ worker URL
-4. ÑûÇëÖ¾Ô¸Õß×÷Îª GitHub Collaborator
-
----
-
----
-
-## Phase 12 (2026-07-24) ¡ª lib/ ¼Ü¹¹²ãÒýÈë + ·´¼¼ÊõÕ®Ó²Ô¼Êø
-
-### ±³¾°
-
-
-ÓÃ»§ÒªÇó£º
-1. ÆÀ¹À½Ì»á³ÉÔ± CMS Ä£¿éµÄÏÖ×´
-2. ÒýÈë·´¼¼ÊõÕ® / ·´Éè¼ÆÕ®Ó²Ô¼Êø
-3. Ã¿¸öÐÂÔöÄ£¿éÏÈ×ö"20 ²½Õ®ÎñÆÀ¹À"
-4. ÌáÇ° 20 ²½Ë¼¿¼¿ÉÍØÕ¹ÐÔ¡¢Ä£¿é»¯¡¢ºáÏò/×ÝÏòÀ©Õ¹
-
-### ÏÖ×´ÅÌÇå
-
-
-
-| Î¬¶È | ÏÖ×´ | ÎÊÌâ |
-|------|------|------|
-| CMS ºó¶Ë | Sveltia + GitHub OAuth + Cloudflare Worker | Worker URL ÊÇÕ¼Î»·ûÎ´²¿Êð |
-| ÄÚÈÝ¼¯ºÏ | 7 ¸ö collections È«²¿½ÓÍ¨ | È±ÏÔÊ½ schema |
-| Blog Ë«Ô´ | `getCollection` + Ó²±àÂë fallback | »ìÂÒ |
-| Hymn ÏµÍ³ | ÔÚ posts ÎÄ¼þ¼ÐÖÐ±ê¼Ç isHymn | Óë blog ñîºÏ |
-| ÀàÐÍ°²È« | `.astro` ÓÃ JSDoc + any | ÎÞ discriminated union |
-| Ó²±àÂë | Schema.ts / Header / Footer Ó²±àÂë church info | Ó¦À´×Ô settings |
-
-### 20 ²½Õ®ÎñÆÀ¹À£¨Ã¿¸öÄ£¿éµÄ 5 ¸öÎ´À´À©Õ¹Â·¾¶£©
-
-
-
-#### Blog Ä£¿é
-- A. ¶àÓïÑÔ°æ±¾
-- B. ÆÀÂÛÏµÍ³
-- C. ²Ý¸å/ÉóºË¹¤×÷Á÷
-- D. RSS feed
-- E. ¹ØÏµ£¨related posts / series£©
-
-#### Sermons Ä£¿é
-- A. ¹ØÁªµ½ Bible Study ÏµÁÐ£¨reference£©
-- B. YouTube ×Ô¶¯Í¬²½
-- C. ÒôÆµ podcast RSS
-- D. ½²µÀ¸åÓë±Ê¼Ç·ÖÀë
-- E. Ö÷ÈÕ vs ÖÜÈý·ÖÀà
-
-#### Events Ä£¿é
-- A. RSVP ±íµ¥
-- B. ÖØ¸´¹æÔò£¨RRULE£©
-- C. ¿çÊ±Çø
-- D. ¶àÓïÑÔÃèÊö
-- E. .ics calendar export
-
-#### Gallery Ä£¿é
-- A. ÊÓÆµ»­ÀÈ
-- B. ×¨¼­/ºÏ¼¯
-- C. ±êÇ©/Ïà²á·ÖÀà
-- D. Lightbox
-- E. EXIF Êý¾Ý±£Áô
-
-#### Videos Ä£¿é
-- A. Vimeo + ±¾µØÊÓÆµ
-- B. ×ÖÄ»
-- C. ÕÂ½Ú±ê¼Ç
-- D. Ö±²¥
-- E. ×Ô¶¯×ªÂ¼
-
-#### Hymn Suggestions
-- A. ÉóºË¹¤×÷Á÷
-- B. ×Ô¶¯ .docx Éú³É
-- C. YouTube ×Ô¶¯ËÑË÷
-- D. Spotify ¼¯³É
-- E. ÓëÏÖÓÐ hymns.ts Í¬²½
-
-#### Settings
-- A. ¶àÓïÑÔÉèÖÃ
-- B. Ö÷ÌâÇÐ»»
-- C. ¶àÍøµã
-- D. ÍÆËÍÍ¨Öª
-- E. ÒþË½Õþ²ßËæÊ±¼ä¸üÐÂ
-
-### ÖØ¹¹£¨Ó¦ÓÃ 10 ÌõÓ²Ô¼Êø£©
-
-
-
-#### ÐÂÔöÎÄ¼þ
-
-**ºËÐÄ²ã£¨ÎÞ IO£©£º**
-- `src/content/config.ts` ¡ª ÏÔÊ½ Zod schema£¨7 ¸ö collection£©
-- `src/lib/core/content.ts` ¡ª `ResolvedContent<T>` Í¨ÓÃÖµÀàÐÍ + 8 ÖÖ Data shape
-- `src/lib/core/events.ts` ¡ª Append-only `CmsEvent` discriminated union
-- `src/lib/core/never.ts` ¡ª `assertNever` ÖúÊÖ£¨ÀàÐÍÇî¾Ù£©
-- `src/lib/env.ts` ¡ª µ¥Ò» env Èë¿Ú
-
-**Adapter ²ã£¨½Ó¿ÚÏÈÓÚÊµÏÖ£©£º**
-- `src/lib/adapters/storage.ts` ¡ª `StorageAdapter` ÆõÔ¼ + factory
-- `src/lib/adapters/local.ts` ¡ª ±¾µØÎÄ¼þÏµÍ³ÊµÏÖ
-
-**Module ²ã£¨ÒµÎñÄ£¿é£©£º**
-- `src/lib/modules/blog.ts` ¡ª `listBlogPosts()` + `bandOf()` ×Ô¶¯·ÖÀà
-- `src/lib/modules/hymns.ts` ¡ª hymn + suggestion ·þÎñ + ÉóºË¹¤×÷Á÷
-- `src/lib/modules/sermons.ts` ¡ª ½²µÀ·þÎñ + ÏµÁÐ·Ö×é
-- `src/lib/modules/settings.ts` ¡ª ÉèÖÃ·þÎñ + »º´æ
-- `src/lib/modules/media.ts` ¡ª Ã½Ìå·þÎñ + MIME ¼ì²â
-
-**ÎÄµµ£º**
-- `docs/architecture.md` ¡ª 10 Ìõ¾ö²ß + "ÎªÊ²Ã´²»"ÈÕÖ¾ + 5 ²½Î´À´Â·¾¶
-- `docs/cms-architecture.md` ¡ª CMS ¹«¹²²Î¿¼
-
-#### ÐÞ¸ÄÎÄ¼þ
-- `src/pages/blog/index.astro` ¡ª ¸ÄÓÃ `listBlogPosts()`£¬°´ 5 ¸ö band ·Ö×éÏÔÊ¾
-- `public/admin/index.html` ¡ª ÐÞ¸´ meta ±êÇ© typo£¬¸ü¸É¾»µÄ Sveltia mount
-- `public/admin/config.yml` ¡ª Óë Astro schema ¶ÔÆë£¬ÐÂÔö isHymn/heroImage/excerpt/status
-
-### Ó¦ÓÃµÄÉè¼ÆÔ­Ôò
-
-
-
-1. **20 ²½Õ®ÎñÆÀ¹À** [X] Ã¿¸öÄ£¿éµÄ 5 ²½Î´À´Â·¾¶ÒÑ¼ÇÂ¼ÔÚ docs/architecture.md
-2. **½Ó¿ÚÓÅÏÈÓÚÊµÏÖ** [X] `storage.ts` ÆõÔ¼ÏÈÓÚ `local.ts` ÊµÏÖ
-3. **ÀàÐÍÇî¾Ù** [X] `CmsEvent` + `ContentKind` discriminated union + `assertNever`
-4. **²»·¢Ã÷ÐÂ¸ÅÄî** [X] `ResolvedContent` µÈÀàÐÍÖ»ÔÚ `core/content.ts` ¶¨Òå
-5. **ÁãÓ²±àÂë** [X] ÇÐ»» provider Ö»¸Ä `env.ts` Ò»ÐÐ
-6. **²»¿É±äÊÂ¼þ** [X] `applyReview()` ·µ»ØÐÂ¶ÔÏó£¬²»ÐÞ¸ÄÊäÈë
-7. **Append-only** [X] `CmsEvent` Ö»ÓÐ `append()`£¬Ã»ÓÐ `update()`
-8. **ÒÀÀµ·½Ïò** [X] `core ¡û adapters ¡û modules ¡û apps`£¨ÑÏ¸ñµ¥Ïò£©
-9. **É¾³ý > ¼æÈÝ** [X] ¾É ad-hoc shape ²»´ò²¹¶¡£¬ÐÂ shape ÔÚ core
-10. **"ÎªÊ²Ã´²»"** [X] ¼ÇÂ¼ÔÚ `docs/architecture.md` Ã¿¸ö¾ö²ß
-
-### ÑéÖ¤
-
-
-
-**Build ÑéÖ¤£º**
-```
-268 page(s) built in 21.49s
-0 errors
-0 warnings
-```
-
-**Live ÑéÖ¤£º**
-- https://joburgchurch.co.za/blog/  °´ 5 ¸ö band ×Ô¶¯·Ö×é£º
-  - Devotionals & Reflections (2)
-  - South African Life & Faith (16)
-  - For Beginners (1)
-  - Pastoral Reflections (1)
-  - Hymns & Worship (10)
-- https://joburgchurch.co.za/admin/config.yml  ¿É·ÃÎÊ
-- Sveltia UI ¼ÓÔØÕý³£
-
-### Git Commits
-
-
-```
-25ee82c feat(arch): introduce lib/ layer for content + CMS architecture
-7d82423 fix(blog): use astro:content as primary reader
-```
-
-### ÏÂÒ»²½£¨Ç¨ÒÆµ½ lib ²ã ¡ª ÔöÁ¿ÍÆ½ø£©
-
-
-
-- [x] Step 1: lib ²ã´´½¨
-- [x] Step 2: content config schema ÂäµØ
-- [x] Step 3: blog index ¡ú `listBlogPosts()`£¨´ø band ·Ö×é£©
-- [ ] Step 4: blog detail ¡ú `getBlogPost()`
-- [ ] Step 5: events page ¡ú `listEvents()` (module TBD)
-- [ ] Step 6: sermons page ¡ú `listSermons()`
-- [ ] Step 7: gallery page ¡ú `listGallery()` (module TBD)
-- [ ] Step 8: settings-driven Header / Footer / Schema
-- [ ] Step 9: hymn-suggestions review UI
-
----
-
----
-
-## Phase 14 (2026-10-01) ¡ª µÚÁùÅú 10 Æª±¾µØ»¯¸ß¼ÛÖµ²©¿Í£¨5 Ó¢ÎÄ + 5 ÖÐÎÄ£©
-
-### ±³¾°
-
-
-ÑÓÐø Phase 11/12/13 ºóµÄÅúÁ¿ÄÚÈÝÈÎÎñ£¬ÓÃ»§ÇëÇó£º
-- ¶ÁÈ¡È«²¿¿ª·¢¼ÇÂ¼£¨¿ª·¢¼ÇÂ¼.md + ¿ª·¢¼ÇÂ¼.txt£©
-- ×ÔÖ÷Ñ¡ÔñÖ÷Ìâ
-- ÑÏ¸ñ×ñÊØÊ¥¾­¡¢²»ËæÒâÌí¼Ó¸öÈËÀí½â
-- 100% ÃæÏòÄÏ·Ç±¾µØ£¨Ó¢ÎÄ + ÖÐÎÄË«Ïß£©
-- ±Ü¿ª½ÌÒåÕùÒé
-
-### Ö÷ÌâÑ¡Ôñ£¨»ùÓÚÏÖÓÐ 60+ ÆªÎÄÕÂÅÌµã£¬±ÜÃâÖØ¸´£©
-
-
-
-#### 5 ÆªÓ¢ÎÄ SA-local ÎÄÕÂ£¨sa-local band ×Ô¶¯¹éÀà£©£º
-
-| Ö÷Ìâ | slug | ÓëÒÑÓÐÎÄÕÂµÄÇø·Ö |
-|------|------|---------------|
-| Diwali + Christian neighbour | diwali-festival-south-africa-christian-neighbour | È«ÐÂÖ÷Ìâ£º¿çÐÅÑöÁÚÉá |
-| Johannesburg Water Crisis + Day Zero | johannesburg-water-crisis-faith-day-zero-memories | ²»Í¬ÓÚ load-shedding£º¾Û½¹Ë®Î£»ú |
-| South African Braai + Table Grace | south-african-braai-and-the-table-grace | È«ÐÂÖ÷Ìâ£ºÄÏ·ÇÉÕ¿¾ÎÄ»¯ |
-| Retirement Village + Elderly Faith | retirement-village-faith-johannesburg-elderly | ²»Í¬ÓÚ caring-aging-parents£¨ÄÇ¸ö¾Û½¹Ô¶³ÌÕÕ¹Ë£©£º¾Û½¹ÍËÐÝ´å±¾Éí |
-| Returning to Church After Absence | returning-to-church-after-long-absence-johannesburg | È«ÐÂÖ÷Ìâ£º½Ì»á»Ø¹é |
-
-#### 5 ÆªÖÐÎÄÎÄÕÂ£¨Õë¶ÔÔÚÄÏ·Ç»ªÈË»ù¶½Í½µÄ²»Í¬ÈºÌå£©£º
-
-| Ö÷Ìâ | slug | ÓëÒÑÓÐÎÄÕÂµÄÇø·Ö |
-|------|------|---------------|
-| ÖÐ¹úÁôÑ§Éú»ù¶½Í½ | nanfei-liuxuesheng-jidutuan-shenghuo | ²»Í¬ÓÚÒÑÓÐ 12 Æª£¨ÍâÅÉ¡¢Ö°³¡¡¢»ªÒá¶þ´ú¡¢ÐÄÀíµÈ£© |
-| ÍâÅÉ×ÓÅ®»ù¶½Í½½ÌÓý | nanfei-waipai-zinv-jidutuan-jiaoyu | È«ÐÂÖ÷Ìâ£º¾Û½¹×ÓÅ® |
-| µ¥Éí»ù¶½Í½¸¸Ä¸ | nanfei-danshen-fumu-jidutuan-yangyu | È«ÐÂÖ÷Ìâ£ºµ¥ÉíÓý¶ù |
-| Ô¶³Ì°ì¹«»ªÈË»ù¶½Í½ | nanfei-yuancheng-bangong-xinyang-jidutuan | È«ÐÂÖ÷Ìâ£ºÔ¶³Ì°ì¹« |
-| ÖÐ×ÊÆóÒµ»ù¶½Í½ | nanfei-zhongzi-qiye-jidutuan-zhiye | È«ÐÂÖ÷Ìâ£ºÖÐ×ÊÖ°³¡ |
-
-### ÊµÊ©
-
-
-- 10 Æª markdown Ð´ºÃ£¨Ã¿Æª 4000-5000 ´Ê£©
-- 10 ¸öÐÂ slug Ìí¼Óµ½ getStaticPaths
-- 10 ¸ö×ÖµäÌõÄ¿Ìí¼Óµ½ posts ×Öµä£¨×Ô¶¯»¯½Å±¾ add-october-posts.py£©
-- 10 ¸öÐÂ URL Ìí¼Óµ½ sitemap.xml.ts
-- now ³£Á¿¸ÄÎª 2026-10-01
-
-### ¹Ø¼ü¼Ü¹¹¾ö¶¨
-
-
-- blog INDEX£ºÊ¹ÓÃ `lib/modules/blog.ts` µÄ `listBlogPosts()`£¬´Ó `astro:content` ×Ô¶¯¶ÁÈ¡ markdown frontmatter
-- blog DETAIL£ºÊ¹ÓÃ `[slug].astro` µÄ posts ×Öµä£¨ÔÚ Markdown + Astro content collection ºóÖÃ fallback£©
-- Òò´ËÃ¿Æª²©¿Í±ØÐë¼ÈÓÐ markdown ÎÄ¼þ£¬ÓÖÔÚ posts ×ÖµäÖÐ
-- ×Ô¶¯»¯½Å±¾£¨add-october-posts.py£©´Ó markdown ½âÎö body ×ª inline HTML£¬×¢Èë posts ×Öµä
-
-### ÑéÖ¤
-
-
-- Build: 320 pages, 0 errors, 0 warnings
-- Blog index °´ 5 ¸ö band ×Ô¶¯·Ö×é£¬ËùÓÐ 10 ÆªÐÂÎÄÕÂ¶¼ÕýÈ·ÏÔÊ¾
-- ÖÐÎÄÎÄÕÂÑÏ¸ñ×ñÊØÓÀ¾Ã¹æÔò£º½öº¬ Mr Leo (+27 79 259 2607) WhatsApp ÁªÏµ·½Ê½
-- 5 ÆªÓ¢ÎÄÎÄÕÂ×ñÑ­ sa-local band ×Ô¶¯¹éÀà£¨tags °üº¬ Sandton / Johannesburg / South Africa£©
-- ÍêÈ«¸´ÓÃÏÖÓÐ lib/modules/blog.ts ºÍ astro:content ¼Ü¹¹
-- ÁãÐÂÔöÄ£¿é¡¢ÁãÓ²±àÂë¡¢ÁãÆÆ»µÐÔ schema ±ä¸ü
-- ·ûºÏ Anti-Design-Debt È«²¿ 10 ÌõÓ²Ô¼Êø
-
-### ÐÞ¸ÄµÄÎÄ¼þ
-
-
-- src/content/posts/*.md£¨10 ¸ö NEW£©
-- src/pages/blog/[slug].astro£¨ÐÞ¸Ä£º10 ¸ö getStaticPaths + 10 ¸ö posts ×ÖµäÏî£©
-- src/pages/sitemap.xml.ts£¨ÐÞ¸Ä£º10 ¸öÐÂ URL + now=2026-10-01£©
-- scripts/add-october-posts.py£¨ÐÂ½¨£º×Ô¶¯»¯ posts ×ÖµäÉú³É£©
-
-### ÏÂÒ»²½
-
-
-- ÓÃ»§Ö¸Ê¾ÐèÒª×ö£ºgit commit + push + Cloudflare Pages deploy
-- ÔÚÏßÑéÖ¤ 10 Æª²©¿ÍÔÚ https://joburgchurch.co.za/blog/ ¿É·ÃÎÊ
-- ÑéÖ¤ blog index °´ band ×Ô¶¯·Ö×éÏÔÊ¾
-
-### Git Commits
-
-
-(´ýÓÃ»§Ö¸Ê¾ commit)
-
----
-
----
-
-## Phase 14 (2026-09-27) ¡ª µÚÎåÅú 5 Æª±¾µØ»¯¸ß¼ÛÖµ²©¿Í
-
-### ±³¾°
-
-
-ÑÓÐø Phase 11 / 12 ºóµÄÅúÁ¿ÄÚÈÝÈÎÎñ£¬ÓÃ»§ÇëÇó£º
-- ¶ÁÈ¡ÀúÊ·¿ª·¢¼ÇÂ¼
-- ÎÒ×ÔÖ÷Ñ¡ÔñÖ÷Ìâ
-- ÑÏ¸ñ×ñÊØÊ¥¾­¡¢²»ËæÒâÌí¼Ó¸öÈËÀí½â
-- 100% ÃæÏòÄÏ·Ç±¾µØ¡¢±Ü¿ª½ÌÒåÕùÒé
-
-### Ö÷ÌâÑ¡Ôñ£¨»ùÓÚ¿ª·¢¼ÇÂ¼ + ÒÑÓÐ 44 ÆªÎÄÕÂÅÌµã£©
-
-
-
-| Ö÷Ìâ | slug | band | Çø·ÖÓÚÒÑÓÐÎÄÕÂ |
-|------|------|------|---------------|
-| Sabbath Rest in a City That Never Stops | sabbath-rest-johannesburg-city-never-stops | devotional | ²»Í¬ÓÚ waiting-on-god / peace-uncertainty |
-| The Christian Grandparent in 2026 | christian-grandparent-johannesburg-faith-2026 | pastoral | ²»Í¬ÓÚ intergenerational-discipleship£¨¾Û½¹ 2026 ³¤¾àÀë + ÆÁÄ»£© |
-| Helping Children Process Hard News | helping-children-hard-news-south-africa | sa-local | ²»Í¬ÓÚ raising-children-faith£¨¾Û½¹ÐÂÎÅ + º¢×ÓÇéÐ÷£© |
-| The Christian and the Wedding | christian-wedding-marriage-preparation-johannesburg | pastoral | ²»Í¬ÓÚ marriage-counselling£¨×¨×¢»éÇ°×¼±¸£© |
-| Lunch Break Bible Study | lunch-break-bible-study-sandton-workplace | devotional | ²»Í¬ÓÚ commuter-prayer£¨¾Û½¹ÎçÐÝ°ì¹«ÊÒ£© |
-
-### ÊµÊ©
-
-
-- 5 Æª markdown Ð´ºÃ£¨Ã¿Æª 4500-5000 ´Ê£©
-- 5 ¸öÐÂ slug Ìí¼Óµ½ getStaticPaths
-- 5 ¸ö×ÖµäÌõÄ¿Ìí¼Óµ½ posts ×Öµä
-- 5 ¸öÐÂ URL Ìí¼Óµ½ sitemap.xml.ts
-- now ³£Á¿¸ÄÎª 2026-09-27
-
-### ÑéÖ¤
-
-
-- Build: 288 pages, 0 errors, 0 warnings
-- ÒÑÓÐ 44 ÆªÎÄÕÂ±£³ÖÕý³£ÏÔÊ¾
-- ÑÏ¸ñ»ùÓÚÊ¥¾­£ºÃ¿Æª 8-15 ´¦Ö±½Ó¾­ÎÄÒýÓÃ + ³ö´¦
-- ²»Éæ¼°½ÌÒåÕùÒé
-- ÍêÈ«¸´ÓÃ lib/modules/blog.ts µÄ listBlogPosts() ½Ó¿Ú
-- ÁãÐÂÔöÄ£¿é¡¢ÁãÓ²±àÂë¡¢ÁãÆÆ»µÐÔ schema ±ä¸ü
-- ·ûºÏ Anti-Design-Debt È«²¿ 10 ÌõÓ²Ô¼Êø
-
-### ÏÂÒ»²½
-
-
-- ÓÃ»§Ö¸Ê¾ÐèÒª×ö£ºgit commit + push + Cloudflare Pages deploy
-- ÔÚÏßÑéÖ¤ 5 Æª²©¿ÍÔÚ https://joburgchurch.co.za/blog/ ¿É·ÃÎÊ
-
-
----
-
----
-
-## 2026-10-01 ¡ª Korean Class: È¥³ý"Ãâ·Ñ"ÃèÊö,¸ÄÎª¿Î³ÌÊÕ·Ñ
-
-### ±³¾°
-
-
-- ÍøÕ¾Ö®Ç°½« Korean class ÃèÊöÎª "Free" (Ãâ·Ñ),µ¼ÖÂ·Ã¿Í½ØÍ¼Í¶ËßÒªÇóÃâ·Ñ¿Î³Ì
-- ½Ì»á×éÖ¯¸æÖª Korean class Êµ¼ÊÊÇ**ÊÕ·Ñ¿Î³Ì**,²¢·ÇÃâ·Ñ
-- Bible study ±£³ÖÃâ·Ñ,µ« Korean class ±ØÐë±êÃ÷ÊÇÊÕ·Ñ
-
-### ¸Ä¶¯²ßÂÔ
-
-
-1. **ÖØÃüÃû**: "Free Korean Class" -> "Korean Language Class"
-2. **Ìí¼ÓÊÕ·ÑÍ¨Öª**: ËùÓÐÌáµ½ Korean class µÄµØ·½×¢Ã÷ "A course fee applies. Please call or WhatsApp for current fees."
-3. **Schema.org ¸ÄÐ´**: Course `isAccessibleForFree: true` -> `false`,`priceRange` ¸ÄÎª "Bible study free; Korean class fee applies"
-4. **SEO Ò³Ãæ¸ÄÐ´**: `/free-korean-class-johannesburg/` URL ±£Áô(SEO ¼ÛÖµ),ÄÚÈÝ¸ÄÎªÍ¸Ã÷ËµÃ÷¿Î³ÌÊÇÊÕ·Ñ + ÍøÕ¾Ö®Ç°Ð´´íÁË
-5. **Blog ÖØÃüÃû**: `/blog/free-korean-class-community/` -> `/blog/korean-class-community/`,Ìí¼Ó 301 redirect
-
-### Ê±¼ä±í
-
-
-- Korean class: **Sunday 3:00pm** (±£³Ö²»±ä)
-
-### ÐÞ¸ÄÎÄ¼þÇåµ¥
-
-
-- `src/pages/community-classes/korean.astro` (Ö÷Ò³)
-- `src/pages/community-classes/index.astro` (¿Î³ÌÁÐ±í)
-- `src/pages/free-korean-class-johannesburg.astro` (SEO landing ¸ÄÐ´)
-- `src/pages/visit.astro` (²Î¹ÛÖ¸ÄÏ)
-- `src/pages/contact.astro` (ÁªÏµÒ³Ãæ)
-- `src/pages/locations/[slug].astro` (Sandton Î»ÖÃÒ³Ãæ)
-- `src/pages/marriage-counselling-johannesburg.astro` (·ÑÓÃ FAQ)
-- `src/pages/bible-study-for-depression-johannesburg.astro` (·ÑÓÃ FAQ)
-- `src/pages/bible-study-randburg.astro` (·ÑÓÃËµÃ÷)
-- `src/pages/bible-study-soweto.astro` (·ÑÓÃ FAQ)
-- `src/pages/bible-study-fourways.astro` (·ÑÓÃ FAQ)
-- `src/pages/bible-study-alberton.astro` (·ÑÓÃ FAQ)
-- `src/pages/bible-study-midrand.astro` (·ÑÓÃ FAQ)
-- `src/pages/bible-study-roodepoort.astro` (·ÑÓÃ FAQ)
-- `src/pages/korean-language-class-for-beginners-johannesburg.astro` (FAQ ¸ÄÐ´)
-- `src/pages/churches-in-sandton.astro` (È¥³ý"free"ÐÐ)
-- `src/pages/faq.astro` (Korean class FAQ ¸ÄÐ´)
-- `src/components/Footer.astro` (footer "Course fee applies")
-- `src/pages/index.astro` (Ö÷Ò³ cost ¸ÄÐ´)
-- `src/layouts/BaseLayout.astro` (schema priceRange ¸ÄÐ´)
-- `src/lib/modules/settings.ts` (welcomeMessage)
-- `src/content/settings/general.md` (welcome_message)
-- `src/pages/blog/[slug].astro` (slug ÖØÃüÃû + ÄÚÈÝ¸ÄÐ´)
-- `astro.config.mjs` (Ìí¼Ó 301 redirect)
-- `src/pages/sitemap.xml.ts` (¸üÐÂ blog URL + lastmod)
-
-### 301 ÖØ¶¨ÏòÅäÖÃ
-
-
-```javascript
-// astro.config.mjs
-redirects: {
-  '/blog/free-korean-class-community/': '/blog/korean-class-community/',
-}
-```
-
-### ¹¹½¨½á¹û
-
-
-- **330 pages built in 38s**
-- 0 errors, 0 warnings
-- `dist/blog/free-korean-class-community/index.html` ÕýÈ·Éú³É(°üº¬ redirect meta)
-
-### ×îÖÕ grep ÑéÖ¤
-
-
-- `src/` + `dist/` ÖÐÒÑÎÞ "free korean" »ò "korean.*free of charge" µÈ´íÎóÃèÊö
-- ±£ÁôµÄ"free"¾ùÎª:
-  1. Bible study (ÕýÈ·:Ãâ·Ñ)
-  2. FAQ Ã÷È·ËµÃ÷ Korean class **²»ÊÇ**Ãâ·Ñ
-  3. Hymn downloads (Ãâ·ÑÏÂÔØ)
-
-
----
-
----
-
-## 2026-10-01 (ÍíÉÏ) ¡ª Korean Class ÊÕ·Ñ»¯×îÖÕÑéÊÕ + ÈÕÖ¾¸üÐÂ
-
-### ±àÂëÐÞ¸´ - ¿ª·¢¼ÇÂ¼.txt
-
-
-- **ÎÊÌâ**: ÎÄ¼þÖ®Ç°ÊÇ GBK ±àÂë(ÀúÊ·),µ«±¾´Î Korean class ×·¼ÓÊ±Ê¹ÓÃ UTF-8,µ¼ÖÂ»ìºÏ±àÂë
-- **½â¾ö·½°¸**: ÓÃ Python ½Å±¾ `scripts/fix-dev-log-encoding.py`
-  1. ¼ì²â»ìºÏ±àÂë±ß½ç(UTF-8 marker `¡¾ÈÎÎñ¡¿Korean Class`)
-  2. GBK ²¿·Ö (51,875 bytes) ½âÂëÎª×Ö·û´®
-  3. UTF-8 ²¿·Ö (3,275 bytes) ½âÂëÎª×Ö·û´®
-  4. ºÏ²¢ºóÖØÐÂ±àÂëÎª GBK
-  5. ÎÄ¼þ´óÐ¡: `55,150` ¡ú `54,835` bytes
-- **ÑéÖ¤**: ¹Ø¼üÄÚÈÝ `¡¾ÈÎÎñ¡¿Korean Class` ºÍ `330 pages built` ¾ùÍêÕû±£Áô
-
-### ×îÖÕ grep ÑéÖ¤
-
-
-- `src/` + `dist/` ÖÐÒÑÎÞÈÎºÎ "free korean" / "korean.*free of charge" ´íÎóÃèÊö
-- ±£ÁôµÄ"free"¾ùÎªºÏ·¨:
-  1. **Bible study** (ÕýÈ·Ãâ·Ñ)
-  2. **FAQ Ã÷È·ËµÃ÷** Korean class **²»ÊÇ**Ãâ·Ñ
-  3. **Hymn downloads** (Ãâ·ÑÏÂÔØ)
-  4. **"Free State"** (ÄÏ·ÇÊ¡·ÝÃû,·ÇÏà¹Ø)
-
-### ×îÖÕ½»¸¶×´Ì¬
-
-
-- 25+ ¸öÒ³ÃæÎÄ¼þÒÑÐÞ¸Ä
-- Schema.org Course `isAccessibleForFree: true` ¡ú `false`
-- `priceRange: "Bible study free; Korean class fee applies"`
-- 301 redirect `/blog/free-korean-class-community/` ¡ú `/blog/korean-class-community/`
-- `/free-korean-class-johannesburg/` Ò³Ãæ±£Áô URL + ¸ÄÐ´ÄÚÈÝËµÃ÷ÊÕ·Ñ
-- **330 pages built, 0 errors, 0 warnings**
-- redirect ÎÄ¼þ `dist/blog/free-korean-class-community/index.html` ÕýÈ·Éú³É
-- ËùÓÐ¿ª·¢¼ÇÂ¼ÎÄ¼þ (.md + .txt) ÒÑ¸üÐÂ±¾´Î»á»°
-- ¿ª·¢¼ÇÂ¼.txt ±àÂëÍ³Ò»Îª GBK(ÀúÊ·Ò»ÖÂÐÔ)
-- ÆäËû¿ª·¢¼ÇÂ¼ÎÄ¼þ (.md) ±£³Ö UTF-8(±ê×¼)
-
-### ÎÄ¼þ×´Ì¬Çåµ¥
-
-
-| ÎÄ¼þ | ±àÂë | ÐÐÊý | ×´Ì¬ |
-|------|------|------|------|
-| `DEV_LOG.md` | UTF-8 | 303 | ÒÑ×·¼Ó ## 2026-10-01 ÍêÕûÕÂ½Ú |
-| `¿ª·¢¼ÇÂ¼.md` | UTF-8 | 627 | ÒÑ×·¼Ó ## 2026-10-01 ÍêÕûÕÂ½Ú |
-| `¿ª·¢¼ÇÂ¼.txt` | GBK | 1199 | ÒÑ×·¼Ó ¡¾ÈÎÎñ¡¿ÕÂ½Ú + ±àÂëÐÞ¸´ |
-| `ÓÃ»§¶Ô»°¼ÇÂ¼.txt` | UTF-8 | 629 | ÒÑ×·¼Ó ¡¾ÈÎÎñ¡¿ÕÂ½Ú |
-| `ÓÃ»§¶Ô»°»ã×Ü.md` | UTF-8 | 128 | ÒÑ×·¼Ó ## 2026-10-01 ¶Ô»°¼ÇÂ¼ |
-
-### ¸¨Öú½Å±¾(ÐÂÔö)
-
-
-- `scripts/append-dev-log-korean-fee.py` ¡ª ×·¼Ó Korean fee ÕÂ½Úµ½ËùÓÐÈÕÖ¾
-- `scripts/append-user-summary-korean.py` ¡ª ×·¼ÓÓÃ»§¶Ô»°ÕªÒª
-- `scripts/fix-dev-log-encoding.py` ¡ª ÐÞ¸´ ¿ª·¢¼ÇÂ¼.txt ±àÂë
-- `scripts/dump-dev-logs.py` ¡ª µ÷ÊÔ½Å±¾,¼ì²éËùÓÐÈÕÖ¾ÎÄ¼þ×´Ì¬
-
-### ÏÂÒ»²½
-
-
-- ÓÃ»§Ö¸Ê¾: commit + push + Cloudflare Pages deploy
-- ÔÚÏßÑéÖ¤ https://joburgchurch.co.za/community-classes/korean/ ²»ÔÙÏÔÊ¾"Ãâ·Ñ"
-- ÔÚÏßÑéÖ¤ https://joburgchurch.co.za/blog/free-korean-class-community/ 301 ÖØ¶¨Ïòµ½ /blog/korean-class-community/
-
----
-
----
-
-## 2026-10-02 Íí¼ä ¡ª Reddit ½Ì»á»°ÌâÈ«ÃæÑÐ¾¿ + Á÷Á¿·½Ïò±¨¸æ
-
-### ÑÐ¾¿Ö´ÐÐ
-
-
-- **ËÑË÷´ÎÊý**£º18 ´Î²¢ÐÐ WebSearch
-- **¸²¸ÇÌû×Ó**£º60+ ¸ö Reddit Ìû×ÓºÍÆÀÂÛ
-- **¸²¸ÇÎ¬¶È**£º
-  - ×ÜÀÀ£º½Ì»á¡¢½ÌÌÃ¡¢Christian community South Africa
-  - ÕÒ½Ì»á£ºlooking for church / church recommendation
-  - ¾¯ÌèÐÔ»°Ìâ£ºmega church / scam / cult / CRC / Unite 180
-  - ¹«Òæ£ºNGO / charity / donation / food bank
-  - ÁéÐÔÐèÇó£ºprayer / faith / mental health / depression
-  - ÈËÉúÒéÌâ£ºmarriage / dating / addiction / grief
-  - ¿ç½çÓïÑÔ£ºKorean class / Chinese Mandarin class
-  - ÕùÒé£ºleaving church / deconstruction / abuse
-  - ±¾µØ£ºRandburg / Sandton / Parkmore / Fourways / Korean Church JHB
-
-### µ÷ÑÐºóÔÄ¶ÁµÄ±¾µØÎÄ¼þ
-
-
-- `astro.config.mjs`£¨È·ÈÏ site: https://joburgchurch.co.za£¬redirects ÅäÖÃ£©
-- `src/pages/index.astro`£¨È·ÈÏ SEO / hero / three ways / ¹ØÓÚ / voices / ÐÂÈË / blog µÈ½á¹¹£©
-
-### ±¨¸æ½»¸¶£¨10 ´óÕÂ½Ú£©
-
-
-
-#### 1. ËÑË÷·½·¨£¨¸²¸ÇÎ¬¶ÈÇåµ¥£©
-
-#### 2. Tier 1 ³¬¸ßÈÈ¶È»°Ìâ£¨°´ÆÀÂÛ/µãÔÞ/Æµ´ÎÅÅÐò£©
-
-| # | »°Ìâ | ¹Ø¼üÐÅºÅ |
-|---|------|---------|
-| 1 | ±æ±ð"Ð°½Ì/Á²²Æ½Ì»á"µÄºìÆì | Unite 180 µ¥Ìû 1970+ ×Ö·û¸ºÆÀ¡¢CRC ¶àÌû±»Âî"¼Ù½Ì»á" |
-| 2 | ÈçºÎÕÒÒ»¸öºÃµÄ½Ì»á | r/johannesburg / r/Pretoria / r/capetown Ã¿ÔÂ¶¼ÓÐÈËÎÊ |
-| 3 | Randburg / Sandton ¸½½ü´«Í³½Ì»áÍÆ¼ö | Liberty Church / Ferndale Bible Chapel / Living Stone |
-| 4 | ÐÄÀí½¡¿µ + ÐÅÑö³åÍ» | Òý±¬³åÍ»×î´óµÄÍ´µã |
-| 5 | »éÒö¸¨µ¼ / »éÇ°¸¨µ¼ / »éÇ°·¨ÂÉÁ÷³Ì | Home Affairs Á÷³ÌÌûÆÀÂÛ¼«¶à |
-| 6 | ÄÏ·Ç NPO ×¢²á / Section 18A ¼õË° | ¾è¿îÕßÏë¸ãÃ÷°×Ë°ÎñÏ¸½Ú |
-| 7 | Àë¿ª½Ì»áºóµÄ¿ÕÐéÓëÉí·ÝÎ£»ú | r/Deconstruction / r/exchristian ¸ß»¥¶¯ |
-| 8 | º«¹ú½Ì»á / º«¹úÉçÇø / º«ÓïÑ§Ï° | Kokoro / Sejong Institute ·´¸´³öÏÖ |
-| 9 | ÖÜÈÕ¾Û»á / ÔÚÏßÖ±²¥Àñ°Ý / ½Ì»áÌåÑé | ¾Ó¼Ò¡¢ÀÏÈË¡¢ÂÃÐÐÕß¶¼ÓÐÐèÇó |
-| 10 | LGBTQ+ Óë½Ì»á | ÄÏ·ÇÁ¢·¨³ÐÈÏ vs ½Ì»áÄÚ²¿³åÍ» |
-
-#### 3. Í´µã¡¢ÐèÇó¡¢ÇéÐ÷µØÍ¼£¨P1-P10£©
-
-- **P1£º±»"¼Ù½Ì»á"ÉËº¦¹ý**£¨Reddit ÕæÊµÒýÓï£©
-- **P2£ºÐÄÀí½¡¿µ±»½Ì»áÆÀÅÐ**£¨ÒÖÓô/½¹ÂÇ/³ÔÒ©ÊÇ²»ÊÇÈ±·¦ÐÅÐÄ£©
-- **P3£ºÔáÀñ/É¥Ç×Ê±½Ì»á²»À´**£¨r/widowers Í¶Ëß¼«¶à£©
-- **P4£ºÏëÕÒ¸ö"no funny business"µÄ´«Í³½Ì»á**£¨ºÚÈË¡¢´«Í³ÐÅÍ½£©
-- **P5£º×÷ÎªÐÂÈËÏë³¢ÊÔµ«ÅÂ±»Ñ¹Á¦**
-- **P6£º»éÇ°Á÷³Ì»ìÂÒ**£¨ÉæÍâ½á»éÇåµ¥¡¢Home Affairs ÅÅ¶Ó5¸öÔÂ£©
-- **P7£ºÔ¼±¤±±ÇøÕÒ²»µ½º«Óï / ÖÐÎÄ¿Î**
-- **P8£ºLGBTQ+ ÔÚ½Ì»áÊÜÅÅ³â**
-- **P9£ºÀë¿ª½Ì»áºóÉí·Ý±ÀËú**
-- **P10£º½Ì»á²ÆÎñ²»Í¸Ã÷**
-
-#### 4. ¶ÔÍøÕ¾µÄ¾ßÌåÄÚÈÝ½¨Òé£¨°´ÓÅÏÈ¼¶£©
-
-- **? P0£¨ÂíÉÏ¿ÉÒÔ×ö£©**£º
-  1. ÈçºÎÔÚ Randburg/Sandton ÕÒÒ»¸ö¿¿Æ×µÄ½Ì»á
-  2. ÄÏ·ÇÐÄÀí½¡¿µÓëÐÅÑöÏµÁÐÎÄ
-  3. »éÇ°¸¨µ¼ + Home Affairs ÉæÍâ½á»éÇåµ¥
-  4. Kokoro / Cyrildene / º«¹ú½Ì»áÏà¹Ø³¤Î²
-
-- **? P1£¨ÖÐÓÅÏÈ¼¶£©**£º
-  5. ÄÏ·Ç·îÏ×Ë°Îñ Section 18A Ïê½â
-  6. ÈçºÎ±æ±ðÐ°½ÌÊ½½Ì»á¶ÔÕÕ±í
-  7. Ô¼±¤Ê³ÎïÔ®Öú / Ê³Æ·ÒøÐÐ»ã×ÜÒ³
-  8. ÄÏ·Ç AA / NA ½ä¾Æ»¥ÖúÒ³
-  9. ZCC / Îý°²É½½Ì»áÊÇÊ²Ã´¿ÆÆÕÎÄ
-  10. Ê§È¥Ç×ÈËÊ±½Ì»áÄÜ×öÊ²Ã´
-
-- **? P2£¨³¤Î²£©**£º
-  11-20£ºMandarin ÖÐÎÄ¿Î / Ô¼±¤³ÉÈË½ÌÓý / iSiZulu ÓïÑÔ¿Î / ÐÅÑöÓë LGBTQ+ / BSF Ê¥¾­ÑÐ¶Á / Christian dating / Àë¿ª½Ì»á / ´«Í³ vs Áé¶÷ / Àë»éºóÔÙ»é / Ô¼±¤º«¹ú²ÍÌüµØÍ¼
-
-#### 5. SEO ¹Ø¼ü´Ê½¨Òé£¨¸ß/ÖÐ/µÍÁ÷Á¿£©
-
-```
-Ö÷¹Ø¼ü´Ê£¨Ó¦Ö÷ÍÆ£©
-- bible study sandton / bible study johannesburg / bible study randburg
-- church sandton / churches in sandton
-- free korean class johannesburg
-- marriage counseling johannesburg / premarital counseling sandton
-- christian community sandton
-
-¶þ¼¶³¤Î²£¨ÈÝÒ×ÉÏÊ×Ò³£©
-- how to find a good church in johannesburg
-- how to marry a foreigner south africa home affairs
-- depression anxiety faith south africa
-- cult red flags churches south africa
-- korean church fourways / korean class sandton / learn hangul beginners
-- section 18a tax certificate church donation
-- free food bank randburg
-
-Èý¼¶³¤Î²£¨ÎÄÕÂ¿ÉÇÐÈë£©
-- unite 180 review / crc church south africa review
-- zcc zion christian church explained
-- christian dating south africa apps
-- grief support south africa / pastoral care bereavement
-- lgbtq affirming church sandton
-- bible study for depression johannesburg£¨ÒÑÓÐÒ³Ãæ£¡£©
-- aa meetings johannesburg churches / free rehab johannesburg
-- home affairs marriage interview what to expect
-```
-
-#### 6. Ð´×÷½Ç¶È / Tips£¨»ùÓÚ Reddit ¸ßÔÞÆÀÂÛ£©
-
-- **Tip 1**£ºÓÃ"·´Ð°½Ì"×÷Îª²îÒì»¯¶¨Î»
-- **Tip 2**£ºÓÃ"ÐÄÀí½¡¿µ + ÐÅÑö"½¨Á¢ÐÅÈÎ
-- **Tip 3**£º°Ñ»éÇ°Á÷³Ì×ö³É"Çåµ¥¹¤¾ß"
-- **Tip 4**£º×ö"Ô¼±¤º«¹úÉçÇøÖ¸ÄÏ"
-- **Tip 5**£ºÓÃ"ÊÜº¦Õß¹ÊÊÂ"×öÄÚÈÝ£¨È¥±êÊ¶»¯£©
-- **Tip 6**£ºÔÚÃ¿ÆªÎÄÕÂµ×²¿¼Ó FAQ
-- **Tip 7**£º±¾µØ»¯Ð´×÷ÓïÑÔ£¨"We don't pressure anyone to tithe."£©
-
-#### 7. ×î¿ì»ñµÃÁ÷Á¿µÄ 5 ÆªÐÂÎÄÕÂ£¨°´ ROI ÅÅÐò£©
-
-1. `/blog/how-to-find-a-good-church-in-johannesburg`£¨3000+ ×Ö£©
-3. `/blog/christianity-and-mental-health-south-africa`
-4. `/blog/korean-community-guide-johannesburg`
-5. `/blog/premarital-counseling-checklist-south-africa`
-2. `/blog/how-to-marry-a-foreigner-in-south-africa`£¨Çåµ¥¹¤¾ßÒ³£©
-
-#### 9. ÖµµÃ³¤ÆÚ¸ú×ÙµÄ Reddit Ö÷Ìâ
-
-| Subreddit | ¹Ø×¢µã |
-|-----------|--------|
-| r/johannesburg | ±¾µØÕÒ½Ì»á¡¢ÕÒÄÁÊ¦¡¢ÕÒ¸¨µ¼ |
-| r/askSouthAfrica | È«ÄÏ·ÇÎÊÌâ |
-| r/AskZA | Í¬ÉÏ£¬¸üÉú»î»¯ |
-| r/southafrica | È«¹úÊÓ½Ç£¨Ð°½Ì¡¢¾è¿î¡¢Ë°Îñ£© |
-| r/capetown | ¿ªÆÕ¶Ø²Î¿¼ |
-| r/Pretoria | ±ÈÀÕÍÓÀûÑÇ²Î¿¼ |
-| r/Durban | µÂ°à²Î¿¼ |
-| r/Deconstruction / r/exchristian / r/Exvangelical | Àë¿ª½Ì»áÈËÈº |
-| r/Christianity / r/ChristianDating | Ò»°ã»ù¶½Í½ÐèÇó |
-| r/Shincheonji | ·´Ð°½Ì×ÊÔ´ |
-
-#### 10. ¿ìËÙÐÐ¶¯Çåµ¥
-
-- [ ] ÔÚ `/visit` Ò³ÃæÃ÷È·Ð´³ö "no membership / no tithing pressure / no prosperity gospel"
-- [ ] ÐÂ½¨ `/blog/how-to-find-a-good-church-in-johannesburg` ³¤ÎÄ£¨3000+ ×Ö£©
-- [ ] ÐÂ½¨ `/blog/christianity-and-mental-health-south-africa`
-- [ ] °Ñ `/marriage-counselling-johannesburg.astro` À©Õ¹ÎªÉæÍâ½á»éÇåµ¥
-- [ ] °Ñ `/community-classes/korean.astro` À©Õ¹Îª"Ô¼±¤º«¹úÉçÇøÖ¸ÄÏ"
-- [ ] ÔÚ²©¿ÍÃ¿ÆªÎÄÕÂµ×²¿¼Ó 5-8 ¸ö FAQ
-- [ ] Ð´Ò»Æª"Ô¼±¤Ê³ÎïÒøÐÐ / NGO / ½Ì»á´ÈÉÆ"»ã×ÜÒ³
-
----
-
----
----
-
-
-## 2026-10-05 ¡ª ÎåÆªÄÏ·Ç±¾µØ»¯ÐÂ²©¿ÍÎÄÕÂ (»ùÓÚ Reddit 2026-10 µ÷ÑÐ,ÎÞÕùÒé)
-
-### ÓÃ»§Ô­Ê¼ÇëÇó
-
-> Äã¶ÁÈ¡Ò»ÏÂÎÒÇ°ÃæµÄ¶Ô»°ºÍ¿ª·¢¼ÇÂ¼¡£Ç°¼¸ÌìÈÃÄã°ïÎÒÍÚ¾òÁË Reddit,ÄÏ·ÇÕâ±ßµÄºÜ¶àÓÃ»§¶ÔÄÏ·Ç½Ì»áÏà¹ØµÄ¹Ø×¢µãºÍÒéÌâÔÚÄÄÀï?ÄãÕÒ¼¸¸ö±È½ÏºÃµÄ·½Ïò,¶à×öÒ»Ð©ÄÚÈÝ,ÏÖÔÚÔÙ¸øÎÒÔö¼ÓÒ»Ð©ÎÄÕÂ°É,ºÃ°É
-
-> »¹ÓÐ,Äã¾¡Á¿²»Òª·¢²¼ÈçºÎ·Ö±æÕæ¼Ù½Ì»á¡¢Õæ¼ÙÄÁÊ¦ÕâÖÖÄÚÈÝ,ÕâºÜÈÝÒ×ÒýÆð±ðÈËµÄ¼¤ÁÒÌÖÂÛºÍÕùÒé,Õâ¸öÀàÐÍ¾Í²»Òª·¢ÁË
-
-### ²ßÂÔ
-
-¸ù¾ÝÓÃ»§Ã÷È·ÒªÇó,**±Ü¿ª**ÈÎºÎ¹ØÓÚ"Ê¶±ð¼Ù½ÌÊ¦ / Ð°½Ì / ¹¥»÷´óÐÍ½Ì»á"µÄÄÚÈÝ¡£¸ÄÓÃÒÔÏÂ 5 ¸öÕýÏòÒýµ¼·½Ïò:
-
-1. **Money, Tithing and the Christian in South Africa** ¡ª Ê¥¾­¶Ô½ðÇ®µÄÕæÊµ½Ìµ¼
-2. **Mental Health and Faith in Johannesburg** ¡ª ÐÅÑö + ×¨Òµ°ïÖú(SADAG/HPCSA)
-3. **Finding a Bible-Based Christian Community in Johannesburg** ¡ª ÊµÓÃ 5 ²½×ß
-4. **Christian, Foreign, and Multilingual** ¡ª Íâ¼®»ù¶½Í½¿çÓïÑÔ¼á³ÖÐÅÑö
-5. **Small Church vs Big Church in South Africa** ¡ª Á½¸ö¼«¶ËµÄ³ÏÊµ¶Ô±È
-
-### ÐÞ¸ÄµÄÎÄ¼þ
-
-- `src/pages/blog/[slug].astro` ¡ª ¼Ó 5 ¸ö slug µ½ `getStaticPaths()`,¼Ó 5 ¸öÌõÄ¿µ½ `posts` ×Öµä
-- `src/pages/sitemap.xml.ts` ¡ª ¼Ó 5 ¸ö URL(lastmod 2026-10-05);`now` ³£Á¿´Ó 2026-10-01 ¸ÄÎª 2026-10-05
-
-### ÐÂ½¨µÄÎÄ¼þ (md ¾µÏñ¹© lib/modules/blog.ts ¶ÁÈ¡)
-
-- `src/content/posts/money-and-the-south-african-christian-biblical-view.md`
-- `src/content/posts/mental-health-and-faith-johannesburg-christian.md`
-- `src/content/posts/finding-a-bible-based-community-johannesburg.md`
-- `src/content/posts/christian-expat-faith-johannesburg-multilingual.md`
-- `src/content/posts/small-church-vs-mega-church-south-africa-honest-reflection.md`
-
-### ¹¹½¨½á¹û
-
-- **335 pages built**, 0 errors, 0 warnings (´Ó 330 Ôö¼Ó 5)
-- 5 ¸öÐÂ dist HTML ÎÄ¼þÕýÈ·Éú³É
-- sitemap ÕýÈ·°üº¬ 5 ¸öÐÂ URL
-
-### Git
-
-- Commit `9b9fefa` on `master`
-- 7 files changed, 718 insertions(+), 5 deletions(-)
-- Pushed to `origin/master` (821f285 ¡ú 9b9fefa)
-- Cloudflare Pages ×Ô¶¯²¿Êð
-
-### ÓÃ»§Ã÷È·±ÜÃâµÄÖ÷Ìâ(¾ùÒÑ×ñÊØ)
-
-- ±æ±ðÕæ¼Ù½Ì»á
-- ±æ±ðÕæ¼ÙÄÁÊ¦
-- Ê¶±ð¼Ù½ÌÊ¦
-- Ð°½ÌÖ÷Ìâ
-- ¹¥»÷ÈÎºÎ¾ßÌå½Ì»á»òÄÁÊ¦
-
-### ÏÂÒ»²½
-
-- Cloudflare Pages ×Ô¶¯²¿Êð
-- ÔÚÏßÑéÖ¤ https://joburgchurch.co.za/blog/... 5 ¸öÐÂÒ³Ãæ
-- ²¿ÊðºóÖØÐÂÌá½» sitemap ¸ø Google Search Console
-
----
-
----
-
-## 2026-10-05 Íí¼ä ¡ª CMS ¹ÜÀíÔ±Òýµ¼ÌåÏµ + OAuth Worker Ò»¼ü²¿Êð
-
-### ÓÃ»§ÐèÇó
-
-1. Ö®Ç°ÒÑ´´½¨ÁË admin-guide.astro Òýµ¼Ò³Ãæ
-2. ÏÖÔÚÏ£Íû£º
-   - ÔÚ `/admin/` Ò³ÃæÓÒÏÂ½Ç¼Ó¸¡¶¯Òýµ¼¿¨Æ¬£¨ÖÐÓ¢º«ÈýÓï£©
-   - ´´½¨ PowerShell ½Å±¾£¬°Ñ²¿Êð OAuth Worker µÄ²½Öè×Ô¶¯»¯
-   - 5 ·ÖÖÓÄÚÄÜÈÃ½Ì»á³ÉÔ±°´²½Öè×ßÍê
-
-### ÈÎÎñ½»¸¶
-
-#### 1. Òýµ¼¿¨Æ¬£¨`public/admin/index.html`£©
-
-ÔÚÔ­ Sveltia CMS mount ½Úµã**Ö®Íâ**×·¼ÓÒ»¸ö¶ÀÁ¢µÄ floating card£º
-
-```html
-<div id="cms-onboarding-card" style="position:fixed; bottom:24px; right:24px; ...">
-  <div data-lang="en">”9Þ8 FIRST TIME HERE? ¡ú Volunteer Guide</div>
-  <div data-lang="zh" style="display:none">”9Þ8 µÚÒ»´ÎÊ¹ÓÃ£¿¡ú Ö¾Ô¸ÕßÖ¸ÄÏ</div>
-  <div data-lang="ko" style="display:none">”9Þ8 ƒ4Ÿ9ƒ3–3 ƒ1è7ƒ3†0ƒ6ƒ9ƒ2¢7‚8Ç1ƒ3ƒ9? ¡ú ƒ31ƒ3‰9ƒ1‹6ƒ1è7ƒ31 ‚7Ï5ƒ3š3‚9¶3</div>
-</div>
-<script>
-  // ¸ù¾Ý navigator.language ×Ô¶¯ÇÐ»»
-</script>
-```
-
-ÌØÐÔ£º
-- ²»Ó°Ïì Sveltia CMS ×ÔÉíµÄ³õÊ¼»¯£¨DOM ½á¹¹ÍêÈ«·ÖÀë£©
-- ½öÔÚ `/admin/` Â·¾¶ÏÂÏÔÊ¾£¨ÓÃ sessionStorage ·À¶¶£©
-- ¹Ø±Õ°´Å¥ + localStorage ¼ÇÒä
-- Ìø×ªµ½ `/admin-guide/`
-
-#### 2. Òýµ¼½Ì³ÌÒ³Ãæ£¨`src/pages/admin-guide.astro`£©
-
-10 ¸öÍ¼±ê»¯²½ÖèÇø¿é£¨ÖÐÓ¢º«ÈýÓï±êÌâ + ÃèÊö£©£º
-
-| # | ±êÌâ£¨ÖÐ/Ó¢/º«£© | ÄÚÈÝ |
-|---|---|---|
-| 1 | µÇÂ¼ / Login / ƒ0‘9‚8ƒ9ƒ3š7 | ÓÃ GitHub ÕËºÅµã Login |
-| 2 | ÄÚÈÝ°å¿é / Content Sections / ƒ4æ3ƒ5š7ƒ4Ç1 ƒ1ö8ƒ1ù9 | ½éÉÜ 7 ¸ö collection |
-| 3 | ×«Ð´²©¿Í / Write a Blog / ƒ1¦3ƒ0‘9‚8ƒ9 ƒ2×9‚8‰5 | posts ¼¯ºÏ |
-| 4 | ÉÏ´«Í¼Æ¬ / Upload Images / ƒ3š3ƒ0î3ƒ3Õ1 ƒ2í2ƒ0‘9‚9¶3 | ÍÏ×§ÉÏ´« |
-| 5 | Ìá½»½¨Òé / Submit a Suggestion / ƒ3«1ƒ2à7 ƒ3«1ƒ4¹9 | hymn_suggestions |
-| 6 | ¹ØÁª·ÖÏí / Share / ‚7è0ƒ3‘9 | Schema.org + Open Graph |
-| 7 | ÊÓÆµ / Videos / ƒ1«1‚9»9ƒ2ö7 | YouTube ID |
-| 8 | »î¶¯ / Events / ƒ3š3ƒ15ƒ5¾7 | events ¼¯ºÏ |
-| 9 | ÆÀÂÛ / Comments / ‚9ˆ6‚8„7 | £¨ÔÝÎ´ÆôÓÃ£¬Ô¤Áô£© |
-| 10 | °ïÖú / Get Help / ‚9š3ƒ3ˆ3ƒ0·1 | WhatsApp °´Å¥ ¡ú Mr. Leo |
-
-#### 3. OAuth Worker ²¿Êð½Å±¾
-
-**`scripts/deploy-oauth-worker.ps1`** ¡ª Ò»¼ü²¿Êð½Å±¾£¬9 ¸ö²½ÖèÈ«²¿×Ô¶¯£º
-1. ¶Á `.env.local` ÀïµÄ GITHUB_CLIENT_ID / SECRET / CF_ACCOUNT_ID
-2. Clone `sveltia-cms-auth` µ½²Ö¿âÍ¬¼¶Ä¿Â¼
-3. `npm install` ×°ÒÀÀµ
-4. Ð´ `wrangler.toml`£¨worker Ãû×Ö = `joburgchurch-cms-auth`£©
-5. µ¯ Cloudflare µÇÂ¼£¨Ê×´Î£©»òÓÃ `CLOUDFLARE_API_TOKEN` ·Ç½»»¥
-6. `wrangler secret put GITHUB_CLIENT_ID`
-7. `wrangler secret put GITHUB_CLIENT_SECRET`
-8. `wrangler deploy`
-9. ´òÓ¡²¿ÊðºóµÄ URL + ºóÐø²½ÖèÇåµ¥
-
-**`scripts/patch-oauth-config.ps1`** ¡ª ÓÃ·¨£º
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts\patch-oauth-config.ps1 `
-  -WorkerUrl "https://joburgchurch-cms-auth.<sub>.workers.dev"
-```
-×Ô¶¯°Ñ `public/admin/config.yml` ÀïµÄ `YOUR_SUBDOMAIN` Õ¼Î»·û»»³ÉÕæÊµ URL£¬²¢¼ÓÊ±¼ä´Á×¢ÊÍ¡£
-
-#### 4. ²¿ÊðÊÖ²á£¨`docs/OAUTH_WORKER_DEPLOY.md`£©
-
-ÖÐÎÄ 9 ²½Á÷³Ì + ¹ÊÕÏÅÅ²é±í£¬¸²¸Ç£º
-- ´´½¨ GitHub OAuth App
-- ÄÃ Cloudflare Account ID
-- Ìî `.env.local`£¨È·ÈÏ±» .gitignore ±£»¤£©
-- ÔËÐÐ²¿Êð½Å±¾
-- ÐÞÕý GitHub callback URL
-- ÅÜ²¹¶¡½Å±¾
-- git commit + push
-- ¼Ó GitHub Collaborator
-- ²âÊÔµÇÂ¼
-
-#### 5. ±àÂëÓë°²È«ÑéÖ¤
-
-- ÑéÖ¤ `.gitignore` °üº¬ `.env` + `.env.*`£¨ÐÐ 8-9£©¡ú Client Secret ²»»áÐ¹Â¶
-- ²¿Êð½Å±¾Ç¿ÖÆÒªÇó 3 ¸ö env ±äÁ¿£¬È±Ò»¼´ throw
-- Worker Ãû×ÖÓ²±àÂëÎª `joburgchurch-cms-auth`£¬Óë `config.yml` ×¢ÊÍÒ»ÖÂ
-
-### ¹¹½¨½á¹û
-
-| Ê±¼ä | Ò³Êý | ±¸×¢ |
-|---|---|---|
-| 20:50 | 330 | ¼Ó admin-guide.astro + ¸¡¶¯¿¨Æ¬ |
-| 20:53 | 335 | 5 Æª Reddit Çý¶¯²©¿Í£¨ÉÏÒ»ÂÖ£© |
-| 20:55 | 336 | ¼Ó OAuth Worker ²¿Êð½Å±¾ + ÊÖ²á£¨+1 admin-guide£© |
-
-Ã¿´Î¹¹½¨£º**0 errors, 0 warnings**
-
-### Git ×´Ì¬
-
-- ¹¤×÷ÇøÐÂÔö 4 ¸öÎÄ¼þ£º
-  - `src/pages/admin-guide.astro`
-  - `scripts/deploy-oauth-worker.ps1`
-  - `scripts/patch-oauth-config.ps1`
-  - `docs/OAUTH_WORKER_DEPLOY.md`
-- ÐÞ¸Ä 1 ¸öÎÄ¼þ£º
-  - `public/admin/index.html`£¨¼Ó¸¡¶¯¿¨Æ¬ + script£©
-
-### ÓÃ»§Ó²Ô¼Êø»Ø¹Ë£¨±£³Ö£©
-
-1. ·´¼¼ÊõÕ® / ·´Éè¼ÆÕ® 10 Ìõ ¡ú È«²¿Ó¦ÓÃ
-2. ²¿Êð½Å±¾ÁãÓ²±àÂë ¡ú È«²¿×ß env ±äÁ¿
-3. Òýµ¼¿¨Æ¬²»Ó°Ïì Sveltia ×ÔÉí mount ¡ú DOM ÍêÈ«·ÖÀë
-4. Worker Ãû×Ö¡¢config.yml Õ¼Î»·û¡¢GitHub callback URL ÈýÕß±ØÐëÑÏ¸ñÒ»ÖÂ ¡ú È«²¿Ð´ÔÚ²¿ÊðÊÖ²áµÚ 5 ²½
-
-### ÏÂÒ»²½
-
-- µÈÓÃ»§¿ªÊ¼×ß OAuth ²¿ÊðÁ÷³Ì£¨~10 ·ÖÖÓ£©
-- Cloudflare Pages ¼ì²âµ½ push ºó×Ô¶¯²¿Êð
-- Ö¾Ô¸ÕßÓÃ GitHub µÇÂ¼ `/admin/`£¬Í¨¹ýÓÒÏÂ½ÇÒýµ¼¿¨Æ¬½øÈë `/admin-guide/` Ñ§Ï°
-
----
+================================================================
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ - Church-Site ï¿½ï¿½Ä¿
+================================================================
+ï¿½ï¿½ï¿½ï¿½: 2026-10-10 (Saturday)
+Ê±ï¿½ï¿½ï¿½ï¿½: 08:14 AM ~ 06:43 PM (UTC+2)  ï¿½ï¿½Ô¼ 10.5 Ð¡Ê±
+ï¿½ï¿½Ä¿: c:\Users\Laptop\Desktop\Church-Site
+ï¿½Ô»ï¿½ï¿½ï¿½Ô´: agent-transcripts/e40cdfce-7540-4687-a23a-e17b4abf47cb
+--------------------------------------------------------------------
+
+================================================================
+Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Î»á»°ï¿½ï¿½ï¿½ï¿½
+================================================================
+
+ï¿½ï¿½ï¿½á»°ï¿½Ã»ï¿½ï¿½ï¿½ 20 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ 3 ï¿½ï¿½ï¿½Ø¸ï¿½, 1 ï¿½ï¿½ÏµÍ³ï¿½ï¿½Ï¢, 2 ï¿½Î¿ï¿½ï¿½ï¿½ï¿½ï¿½)
+Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ = 14 ï¿½ï¿½
+
+ï¿½ï¿½ï¿½á»°ï¿½ï¿½ï¿½ï¿½ï¿½ 3 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:
+  Task 1 (08:14-09:44): 80 Æªï¿½ï¿½ï¿½ï¿½ + ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ + GEO ï¿½Å»ï¿½
+  Task 2 (18:06-18:29): Google Search Console / Bing ï¿½á½»
+  Task 3 (18:31-18:43): Health check + Pre-deploy check + ï¿½Ô»ï¿½ï¿½ï¿½ï¿½ï¿½
+
+================================================================
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½Â¼
+================================================================
+
+
+----------------------------------------------------------------------
+Task 1: 80 Æªï¿½ï¿½ï¿½ï¿½ + ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ + GEO ï¿½Å»ï¿½ (08:14 - 18:05)
+----------------------------------------------------------------------
+
+[ï¿½Ã»ï¿½ 4 ï¿½Îºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (È¥ï¿½ï¿½ï¿½Ø¸ï¿½ + ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)]
+1. 08:14 - "ï¿½ï¿½ï¿½ï¿½ 80 ÆªÓ¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, Î§ï¿½ï¿½ Reddit ï¿½ï¿½Ì³ï¿½Ã»ï¿½, 3 ï¿½ï¿½ 5 Æªï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½"
+2. 08:50 - "ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ > ï¿½ï¿½ï¿½ï¿½"
+3. 09:44 - "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ GEO, ï¿½ï¿½ Google ï¿½ï¿½ï¿½ï¿½ / AI ï¿½Æ¼ï¿½"
+
+[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê²Ã´]
+- ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ + ï¿½Ô»ï¿½ï¿½ï¿½Â¼ (8:14-8:36)
+- ï¿½ï¿½ï¿½ï¿½ Reddit ï¿½Ï½Ì»ï¿½/ï¿½Ú½ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Èµï¿½
+- ï¿½Æ¶ï¿½ 80 Æªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (Î§ï¿½ï¿½ 159 hymns, 30 languages, ï¿½Ì»ï¿½ï¿½ï¿½ï¿½ï¿½)
+- ï¿½ï¿½"ï¿½ï¿½ï¿½ï¿½ > ï¿½ï¿½ï¿½ï¿½"Ô­ï¿½ï¿½, Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+- ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:
+  * GitHub Action: .github/workflows/release-drafts.yml
+  * cron: 0 6 */3 * * (Ã¿ 3 ï¿½ï¿½ 06:00 UTC = 08:00 SAST)
+  * Ã¿ï¿½Î·ï¿½ï¿½ï¿½ 5 Æª, ï¿½ï¿½ 16 ï¿½Ü·ï¿½ï¿½ï¿½
+- 80 Æªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: DRAFT-* Ç°×º
+- ï¿½ï¿½ï¿½ï¿½ release-next-batch.mjs ï¿½Å±ï¿½ (promote 5 drafts ï¿½ï¿½ published)
+- GEO ï¿½Å»ï¿½:
+  * Ð´ llms.txt (6218 bytes) - AI ï¿½ï¿½ï¿½ï¿½×¨ï¿½ï¿½
+  * Ð´ ai.txt (3814 bytes) - AI ï¿½Æ¼ï¿½Ô´
+  * Ð´ robots.txt (2652 bytes) - ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+  * 3 ï¿½ï¿½ sitemap (sitemap.xml + images + news)
+  * JSON-LD ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (4-5 schema items per page)
+  * rss.xml + atom.xml feed
+
+[ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½]
+- ï¿½ï¿½ï¿½ï¿½ 16 ï¿½ï¿½ manual, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ DRAFT ï¿½ï¿½ published ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+- Ã¿ï¿½ï¿½Ö»ï¿½ï¿½ 06:00 UTC ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä²»ï¿½ï¿½ï¿½ï¿½
+- Ê§ï¿½Ü²ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ñ·ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½
+- 80 Æªï¿½ï¿½ï¿½Âºï¿½ï¿½ 16 ï¿½ï¿½, ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Google ï¿½ï¿½ï¿½)
+
+
+----------------------------------------------------------------------
+Task 2: Google Search Console / Bing ï¿½á½» (18:06 - 18:29)
+----------------------------------------------------------------------
+
+[ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ê¸ï¿½Òª]
+"Google Search Console ï¿½ï¿½ ï¿½á½» 3 ï¿½ï¿½ sitemap
+ Bing Webmaster ï¿½ï¿½ ï¿½á½» /sitemap.xml
+ ï¿½È´ï¿½ 2-4 ï¿½Ü¹Û²ï¿½ AI ï¿½Æ¼ï¿½ï¿½ï¿½ï¿½ï¿½
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½"
+
+[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê²Ã´ - ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½]
+1. ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Â¼ Google Search Console
+2. Add property ï¿½ï¿½ URL Prefix ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ https://joburgchurch.co.za
+3. ï¿½ï¿½Ö¤ï¿½ï¿½Õ¾ (DNS TXT record ï¿½ï¿½ HTML file)
+4. ï¿½ï¿½ï¿½ Sitemaps ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ sitemap.xml ï¿½ï¿½ Submit
+5. ï¿½Ø¸ï¿½ 3 ï¿½ï¿½: sitemap.xml, sitemap-images.xml, sitemap-news.xml
+6. Bing Webmaster Tools ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê²Ã´ - ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½]
+- ï¿½ï¿½ÎªÃ»ï¿½ï¿½ MCP ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¹ï¿½ï¿½ï¿½, ï¿½Þ·ï¿½ï¿½ï¿½ Cursor ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½
+- ï¿½Ã»ï¿½ï¿½ï¿½È¨ + ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµ
+- ï¿½Ò´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ step-by-step Ö¸ï¿½ï¿½
+
+[ï¿½Ã»ï¿½Êµï¿½Ê²ï¿½ï¿½ï¿½ (ï¿½Ó¶Ô»ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½)]
+- 18:15 - ï¿½Ã»ï¿½ï¿½ï¿½ "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, Add property ï¿½ï¿½ URL Prefix ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½"
+- 18:17 - È·ï¿½Ï²ï¿½ï¿½ï¿½
+- 18:20-18:24 - ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½Ï¢)
+- 18:28 - ï¿½Ã»ï¿½Ëµ "ï¿½ï¿½ï¿½ï¿½ Import ï¿½ï¿½Å¥"
+- 18:29 - ï¿½Ã»ï¿½Ëµ "ï¿½ï¿½ï¿½ï¿½" ï¿½ï¿½ ï¿½á½»ï¿½ï¿½ï¿½ ?
+
+[ï¿½ï¿½ï¿½]
+- Google Search Console: 3 ï¿½ï¿½ sitemap ï¿½ï¿½ï¿½á½»
+- Bing Webmaster: 1 ï¿½ï¿½ sitemap ï¿½ï¿½ï¿½á½»
+- ï¿½È´ï¿½ 2-4 ï¿½ï¿½: Google / Bing ×¥È¡ + ï¿½ï¿½ï¿½ï¿½ + ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+
+----------------------------------------------------------------------
+Task 3: Post-deploy Health Check (18:31 - 18:35)
+----------------------------------------------------------------------
+
+[ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½]
+"Ð´Ò»ï¿½ï¿½ health check ï¿½ï¿½ Ã¿ï¿½Î·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Ö¤ sitemap Ã»ï¿½ï¿½ï¿½ï¿½"
+
+[ï¿½Òµï¿½Êµï¿½Ö·ï¿½ï¿½ï¿½]
+ï¿½ï¿½ release-drafts.yml ï¿½ï¿½ï¿½Ìµï¿½ IndexNow Ö®ï¿½ï¿½ï¿½ 1 ï¿½ï¿½ step:
+- ï¿½ï¿½ 60 ï¿½ï¿½ (ï¿½ï¿½ Cloudflare ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§)
+- ï¿½ï¿½ 1 ï¿½ï¿½ Node ï¿½Å±ï¿½, ï¿½ï¿½Ö¤ 6 ï¿½ï¿½:
+  1. 3 ï¿½ï¿½ sitemap (sitemap.xml, sitemap-images.xml, sitemap-news.xml)
+     - HTTP 200
+     - ï¿½ï¿½Ð§ XML
+     - URL ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     - ï¿½ï¿½ DRAFT Ç°×ºï¿½ï¿½ post
+  2. 5 ï¿½ï¿½ GEO ï¿½Ä¼ï¿½ (llms.txt, ai.txt, robots.txt, rss.xml, atom.xml)
+  3. IndexNow key ï¿½Ä¼ï¿½ï¿½É´ï¿½ + ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·
+  4. ï¿½ï¿½Ò³ 200 + ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½
+  5. /blog/ Ò³ï¿½ï¿½ JSON-LD ï¿½ï¿½ 4 ï¿½ï¿½ schema items + È«ï¿½É½ï¿½ï¿½ï¿½
+  6. sitemap.xml ï¿½ï¿½Ç° 5 + ï¿½ï¿½ 5 ï¿½ï¿½ URL ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 200
+
+[ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ 1: scripts/post-deploy-healthcheck.mjs]
+- ï¿½ï¿½ Node Ô­ï¿½ï¿½ https module ï¿½ï¿½Ã¿ï¿½ï¿½ URL
+- ï¿½ï¿½ /^\s*<\?xml/ + /<urlset|<sitemapindex/ ï¿½ï¿½Ö¤ XML
+- ï¿½ï¿½ JSON.parse ï¿½ï¿½Ö¤ JSON-LD
+- ï¿½ï¿½ /\/blog\/DRAFT-/i ï¿½ï¿½ï¿½ DRAFT post
+- ï¿½Îºï¿½Ê§ï¿½ï¿½: ï¿½Õ¼ï¿½ï¿½ï¿½ failures[] array, ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ 1
+- È«ï¿½ï¿½Í¨ï¿½ï¿½: ï¿½Ë³ï¿½ï¿½ï¿½ 0
+- ×´Ì¬: ? ï¿½ï¿½Ð´ï¿½ï¿½
+
+[ï¿½Þ¸ï¿½ï¿½Ä¼ï¿½ 2: .github/workflows/release-drafts.yml]
+ï¿½ï¿½ IndexNow step Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3 ï¿½ï¿½ï¿½ï¿½ step:
+  1. "Wait for Cloudflare deployment to propagate" - sleep 60
+  2. "Post-deploy health check" - ï¿½ï¿½ï¿½ï¿½ healthcheck ï¿½Å±ï¿½
+  3. "Notify on failure" - ï¿½ï¿½ ::error:: annotation + possible causes
+
+[ï¿½ï¿½ï¿½Ø²ï¿½ï¿½Ôµï¿½ 1 ï¿½ï¿½ - Ê§ï¿½ï¿½]
+Ö¢×´: node:internal/url:818 TypeError: Invalid URL
+Ô­ï¿½ï¿½: fetchText() ï¿½Õµï¿½ path ï¿½Ö·ï¿½ï¿½ï¿½ ("/ajxm24...txt") ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ URL
+ï¿½Þ¸ï¿½: ï¿½ï¿½Ò»ï¿½ï¿½ `const fullUrl = url.startsWith('http') ? url : ${SITE}${url};`
+
+[ï¿½ï¿½ï¿½Ø²ï¿½ï¿½Ôµï¿½ 2 ï¿½ï¿½ - Ê§ï¿½ï¿½]
+Ö¢×´: /blog/ has only 1 JSON-LD blocks (expected >= 4)
+Ô­ï¿½ï¿½: /blog/ Ò³ï¿½ï¿½ï¿½ JSON-LD ï¿½ï¿½ 1 ï¿½ï¿½ï¿½ï¿½ array ï¿½ï¿½ï¿½ï¿½ 5 ï¿½ï¿½ entities
+      ï¿½ï¿½ï¿½ï¿½ 5 ï¿½ï¿½ <script>
+ï¿½Þ¸ï¿½: ï¿½ï¿½ jsonLdCheck() ï¿½ï¿½ï¿½ï¿½ array ï¿½Ú²ï¿½, Í³ï¿½ï¿½ items ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ <script> ï¿½ï¿½
+- Ô­: count = matches.length
+- ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ array, ï¿½ï¿½ï¿½ï¿½ arr.length
+
+[ï¿½ï¿½ï¿½Ø²ï¿½ï¿½Ôµï¿½ 3 ï¿½ï¿½ - ï¿½É¹ï¿½]
+ï¿½ï¿½ï¿½: Health check PASSED ?
+  - sitemap.xml: 130 URLs
+  - sitemap-images.xml: 3 URLs
+  - sitemap-news.xml: empty (OK)
+  - 5 GEO files: 200
+  - IndexNow key: 200
+  - home: 200 + ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·
+  - /blog/ JSON-LD: 5 items
+  - 10 ï¿½ï¿½ sampled URL: È« 200
+  - 0 failures
+
+[Bug ï¿½Þ¸ï¿½: release-drafts.yml steps.indexnow]
+ï¿½Ã»ï¿½ï¿½ï¿½ "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?" Ê±ï¿½Ò·ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ bug:
+- Ô­: ${{ steps.indexnow.outputs.key || 'ajxm24...' }}
+- Êµï¿½ï¿½: steps.indexnow ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (Ã»ï¿½ï¿½ id: indexnow)
+- ï¿½Þ¸ï¿½: ï¿½ï¿½ IndexNow step ï¿½ï¿½ id: indexnow
+- ï¿½ï¿½ echo "key=$KEY_FILE" >> "$GITHUB_OUTPUT" ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½
+- ï¿½ï¿½ï¿½ï¿½ step ï¿½ï¿½ ${{ steps.indexnow.outputs.key }}
+
+[Commit + Push 1]
+commit 1637d3d:
+  ci: add post-deploy health check (sitemaps, JSON-LD, IndexNow key, sample URLs)
+  - 2 files changed, 190 insertions(+)
+  - create mode 100644 scripts/post-deploy-healthcheck.mjs
+push: 78d9968..1637d3d  master -> master ?
+
+
+----------------------------------------------------------------------
+Task 4: Pre-deploy Check (18:36 - 18:40)
+----------------------------------------------------------------------
+
+[ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½]
+"Pre-deploy check"
+
+[ï¿½Òµï¿½Êµï¿½Ö·ï¿½ï¿½ï¿½]
+ï¿½ï¿½ 3 ï¿½ï¿½ï¿½ï¿½ï¿½:
+- Layer 1 (ï¿½ï¿½ï¿½ï¿½): pre-commit hook ï¿½ï¿½ pre-deploy:fast (ï¿½ï¿½ï¿½ï¿½ build)
+- Layer 2 (PR): GitHub Action ï¿½ï¿½ pre-deploy (ï¿½ï¿½ build)
+- Layer 3 (ï¿½ï¿½ï¿½ï¿½ï¿½): ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ post-deploy health check
+
+[ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ 3: scripts/pre-deploy-check.mjs]
+7 ï¿½ï¿½ï¿½ï¿½:
+  1. JSON-LD syntax in src/ (static)
+  2. Sitemap source readable
+  3. No DRAFT-prefixed posts in src/pages/blog/
+  4. Hymn frontmatter validity
+  5. GEO files exist + non-empty
+  6. Sitemap URL count cross-check
+  7. npm run build (--fast Ê±ï¿½ï¿½ï¿½ï¿½)
+
+Ö§ï¿½ï¿½ --fast ï¿½ï¿½Ö¾ (ï¿½ï¿½ï¿½ï¿½ build, Ô¼ 5s) vs ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (Ô¼ 2-3min)
+
+[ï¿½ï¿½ï¿½Ø²ï¿½ï¿½Ôµï¿½ 1 ï¿½ï¿½ - Ê§ï¿½ï¿½]
+Ö¢×´: 1. JSON-LD parse error 2. no JSON-LD blocks
+Ô­ï¿½ï¿½:
+  - JSON-LD ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ `</g` ï¿½ï¿½Ç°ï¿½ï¿½Ö¹
+  - ï¿½ï¿½ `git ls-files` ï¿½ï¿½Ã» add ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ï·ï¿½ï¿½Ø¿ï¿½
+  - `.endsWith('.md')` ï¿½ï¿½ windows ï¿½Ï¶ï¿½ .mdx ï¿½ï¿½ï¿½ï¿½
+ï¿½Þ¸ï¿½:
+  - ï¿½ï¿½ï¿½ï¿½ï¿½Îª `[\s\S]*?<\/script>/g`
+  - ï¿½ï¿½ï¿½ï¿½ fs.readdirSync ï¿½Ý¹ï¿½ï¿½ï¿½ï¿½
+  - ï¿½ï¿½ï¿½ï¿½ `/\.(md|mdx)$/.test(f)`
+
+[ï¿½ï¿½ï¿½Ø²ï¿½ï¿½Ôµï¿½ 2 ï¿½ï¿½ - Ê§ï¿½ï¿½]
+Ö¢×´: no JSON-LD blocks
+ï¿½ï¿½ï¿½ï¿½: BaseLayout.astro ï¿½ï¿½ `set:html={combinedJsonLd}` ï¿½ï¿½È¾ JSON-LD
+       (Astro ï¿½Ô±Õºï¿½ script ï¿½ï¿½Ç©)
+       Ô´ï¿½ï¿½ï¿½ï¿½**Ã»ï¿½ï¿½** `</script>` ï¿½Ö·ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ static JSON-LD (Ô´ï¿½ï¿½ï¿½ï¿½Ð´) vs dynamic JSON-LD (set:html ×¢ï¿½ï¿½)
+       - static: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤
+       - dynamic: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Êµï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½ post-deploy health check
+
+[ï¿½ï¿½ï¿½Ø²ï¿½ï¿½Ôµï¿½ 3 ï¿½ï¿½ - Ê§ï¿½ï¿½]
+Ö¢×´: "0 blog posts", "0 hymn frontmatter"
+Ô­ï¿½ï¿½: src/pages/blog/ ï¿½ï¿½Ö»ï¿½ï¿½ .astro ï¿½Ä¼ï¿½, public/hymns/ Ö»ï¿½ï¿½ .docx
+       .endsWith('.md') Ì«ï¿½Ï¸ï¿½
+ï¿½Þ¸ï¿½: ï¿½ï¿½ `/\.(md|mdx)$/.test(f)`
+       + ï¿½ï¿½ï¿½Ð¶ï¿½: hymnFiles.length === 0 Ê±Ëµ "OK, all hymns are .docx"
+       + ï¿½ï¿½ï¿½Ð¶ï¿½: !fs.existsSync('src/pages/blog') Ê±ï¿½ï¿½ï¿½ï¿½
+
+[ï¿½ï¿½ï¿½Ø²ï¿½ï¿½Ôµï¿½ 4 ï¿½ï¿½ - ï¿½É¹ï¿½]
+ï¿½ï¿½ï¿½: Pre-deploy check PASSED ?
+  - 0 static JSON-LD + 1 dynamic (validated post-deploy)
+  - src/pages/sitemap.xml.ts readable
+  - no DRAFT posts (0 total)
+  - no .md hymn files (all .docx, OK)
+  - 3 GEO files 200
+  - URL count ~39
+  - 0 failures
+
+[ï¿½Þ¸ï¿½ï¿½Ä¼ï¿½ 4: package.json]
+ï¿½ï¿½ 3 ï¿½ï¿½ npm scripts:
+  "pre-deploy": "node scripts/pre-deploy-check.mjs",
+  "pre-deploy:fast": "node scripts/pre-deploy-check.mjs --fast",
+  "healthcheck": "node scripts/post-deploy-healthcheck.mjs"
+
+[ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ 5: .husky/pre-commit]
+shell ï¿½Å±ï¿½: commit Ç°ï¿½ï¿½ pre-deploy:fast
+Ê§ï¿½ï¿½Ê±ï¿½ï¿½Ö¹ commit
+ï¿½Æ¹ï¿½ï¿½ï¿½ï¿½ï¿½: git commit --no-verify
+
+[ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ 6: .github/workflows/pre-deploy.yml]
+ï¿½ï¿½ï¿½ï¿½: pull_request + ï¿½ï¿½ master/main ï¿½ï¿½ push
+ï¿½ï¿½ï¿½ï¿½:
+  1. checkout + setup-node v20 + npm ci
+  2. pre-deploy:fast (ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½, 10s, ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½)
+  3. pre-deploy (ï¿½ï¿½ build, 2-3min, È«ï¿½ï¿½ï¿½)
+  4. Ê§ï¿½ï¿½Ê±: ï¿½ï¿½ actions/github-script ï¿½Ô¶ï¿½ï¿½ï¿½ PR ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     - ï¿½ï¿½ï¿½ï¿½: "?? Pre-deploy check failed"
+     - ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ã´ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ + ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½
+
+[Commit + Push 2]
+commit f18f73a:
+  ci: add pre-deploy check (3 layers: pre-commit, PR, manual)
+  - 4 files changed, 240 insertions(+)
+  - 3 new files (.github/workflows/pre-deploy.yml, .husky/pre-commit,
+                scripts/pre-deploy-check.mjs)
+  - 1 modified (package.json)
+push: 1637d3d..f18f73a  master -> master ?
+
+
+----------------------------------------------------------------------
+Task 5: ï¿½Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ (18:40 - 18:43)
+----------------------------------------------------------------------
+
+[ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ v1 (18:40)]
+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½Ê¡ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½â¡¢ï¿½ÒµÄ¶Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü³ï¿½Ò»ï¿½ï¿½
+ï¿½ÒµÄ¶Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ TXT, È»ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ¿ï¿½ï¿½ï¿½ï¿½ï¿½Â¼, ï¿½ï¿½ï¿½âµ¥ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ 1 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ TXTï¿½ï¿½"
+
+[ï¿½Òµï¿½ï¿½ï¿½ï¿½ v1]
+- ï¿½ÒµÄ¶Ô»ï¿½ï¿½ï¿½ï¿½ï¿½.txt: ï¿½Ã»ï¿½ï¿½ï¿½ 4 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ 18:31 Ö®ï¿½ï¿½ï¿½) + ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼.txt: ï¿½ÒµÄ´ï¿½ + ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+[ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ (18:43)]
+"ï¿½ÒµÄ¶Ô»ï¿½ï¿½ï¿½Â¼, ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ç²»ï¿½Ç»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ 80 Æªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
+ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ÖµÄ¶Ô»ï¿½Ò²Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒµÄ¶Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ã°ï¿½, ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ï¿½Èºï¿½Ë³ï¿½ï¿½ï¿½ï¿½ëµ½ï¿½Ô»ï¿½ï¿½ï¿½ï¿½ÜµÄ¶ï¿½Ó¦ï¿½ï¿½Î»ï¿½Ã¡ï¿½"
+
+[ï¿½Ò·ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½]
+- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 80 Æªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ chat ï¿½ï¿½
+- Êµï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ç° transcript (e40cdfce) ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 8:14 AM ~ 6:43 PM
+  ï¿½ï¿½ 20 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ + ï¿½ï¿½ï¿½ï¿½ï¿½Ô»ï¿½ï¿½ï¿½Ê·
+- 80 Æªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶Ô»ï¿½ (08:14 - 09:44) Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ transcript ï¿½ï¿½
+
+[ï¿½Òµï¿½ï¿½Þ¸ï¿½ v2]
+- ï¿½ï¿½ Node ï¿½Å±ï¿½ï¿½ï¿½È¡ transcript È«ï¿½ï¿½ 20 ï¿½ï¿½ user_query
+- ï¿½ï¿½Ê±ï¿½ï¿½Ë³ï¿½ï¿½ (08:14 - 18:43) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¯
+- 80 Æªï¿½ï¿½ï¿½Â¶Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°, ï¿½ï¿½ï¿½ï¿½Ä°ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+- ï¿½Ë´ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼) Ò²ï¿½ï¿½È« Task 1 + Task 2 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+[ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ (v2)]
+- ï¿½ÒµÄ¶Ô»ï¿½ï¿½ï¿½ï¿½ï¿½.txt: 20 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ + ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼.txt: 5 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½Ä¼ï¿½)
+
+
+================================================================
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½åµ¥
+================================================================
+
+? ï¿½ï¿½ï¿½Ä¼ï¿½ (ï¿½ï¿½ï¿½Î¶Ô»ï¿½È«ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½ 80 Æªï¿½ï¿½ï¿½ï¿½):
+  scripts/post-deploy-healthcheck.mjs  (162 ï¿½ï¿½)  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (18:31-18:35)
+  scripts/pre-deploy-check.mjs          (166 ï¿½ï¿½)  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (18:36-18:40)
+  scripts/extract-user-queries.cjs      (ï¿½ï¿½ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½)
+  .github/workflows/release-drafts.yml  ï¿½ï¿½ Ö®Ç° (80 Æªï¿½ï¿½ï¿½ï¿½)
+  .github/workflows/pre-deploy.yml      (61 ï¿½ï¿½)   ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+  .husky/pre-commit                     (9 ï¿½ï¿½)    ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+  public/llms.txt                       (6218 B)  ï¿½ï¿½ Ö®Ç° (GEO)
+  public/ai.txt                         (3814 B)  ï¿½ï¿½ Ö®Ç° (GEO)
+  public/robots.txt                     (2652 B)  ï¿½ï¿½ Ö®Ç°
+  public/rss.xml                                 ï¿½ï¿½ Ö®Ç°
+  public/atom.xml                                ï¿½ï¿½ Ö®Ç°
+  src/data/blog/DRAFT-*.md (80 ï¿½ï¿½)      ï¿½ï¿½ Ö®Ç° (80 Æª)
+  scripts/release-next-batch.mjs                 ï¿½ï¿½ Ö®Ç°
+  scripts/indexnow-submit.mjs                    ï¿½ï¿½ Ö®Ç°
+  ï¿½ÒµÄ¶Ô»ï¿½ï¿½ï¿½ï¿½ï¿½.txt                              ï¿½ï¿½ ï¿½ï¿½ï¿½Îµï¿½ï¿½ï¿½
+  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼.txt                                  ï¿½ï¿½ ï¿½ï¿½ï¿½Îµï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½Ä¼ï¿½)
+
+? ï¿½Þ¸ï¿½ï¿½Ä¼ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½):
+  .github/workflows/release-drafts.yml  (+ bug fix: id: indexnow)
+  package.json                          (+ 3 npm scripts)
+
+? ï¿½ï¿½ï¿½Î¶Ô»ï¿½ commit ï¿½ï¿½Ê·:
+  1637d3d  ci: add post-deploy health check
+  f18f73a  ci: add pre-deploy check (3 layers)
+
+? ï¿½ï¿½ï¿½Íµï¿½:
+  https://github.com/saleo-svg/joburgchurch.co.za.git  master
+  (78d9968..f18f73a  ï¿½ï¿½ï¿½ï¿½ 2 commits)
+
+
+================================================================
+ï¿½Ä¡ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+================================================================
+
+| ï¿½ï¿½ï¿½ï¿½                   | ï¿½ï¿½Í¾                          | ï¿½Ù¶ï¿½     |
+|------------------------|-------------------------------|----------|
+| npm run pre-deploy:fast| ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ (10s)                | ?       |
+| npm run pre-deploy     | ï¿½ï¿½Ì¬ + build (2-3min)         | ?      |
+| npm run healthcheck    | ï¿½ï¿½ live site ï¿½ï¿½ï¿½             | ?       |
+| npm run build          | Astro build                   | ?      |
+
+| ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½        | ï¿½ÜµÄ¼ï¿½ï¿½            | Ê§ï¿½ï¿½Ê±ï¿½ï¿½Îª              |
+|---------------|---------------------|-------------------------|
+| git commit    | pre-deploy:fast     | commit ï¿½ï¿½ï¿½ï¿½Ö¹           |
+| PR open       | pre-deploy (full)   | ï¿½ï¿½ ? + PR ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½     |
+| push to main  | post-deploy check   | Action ï¿½ï¿½ ?            |
+| ï¿½Ö¶ï¿½          | ï¿½ï¿½Ò»                | ï¿½Ë³ï¿½ï¿½ï¿½ 1 + ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½     |
+
+
+================================================================
+ï¿½å¡¢10/13 ï¿½ï¿½ï¿½ï¿½ï¿½Õ»á·¢ï¿½ï¿½Ê²Ã´ (È«ï¿½Ô¶ï¿½)
+================================================================
+
+06:00 UTC = 08:00 SAST:
+  1. release-drafts Action ï¿½ï¿½ï¿½ï¿½
+  2. promote 5 drafts ï¿½ï¿½ published (DRAFT-01.md ï¿½ï¿½ 01.md)
+  3. npm run build (ï¿½ï¿½ prebuild hymn ï¿½ï¿½ï¿½ï¿½)
+  4. commit + push ï¿½ï¿½ master
+  5. Cloudflare Pages ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½
+  6. IndexNow ï¿½á½»ï¿½ï¿½ URLs ï¿½ï¿½ Bing/Yandex
+  7. ï¿½ï¿½ 60s (Cloudflare ï¿½ï¿½ï¿½ï¿½)
+  8. ï¿½ï¿½ post-deploy health check
+     ï¿½ï¿½Ö¤ 6 ï¿½ï¿½: sitemaps + GEO + key + home + JSON-LD + 10 URL
+  9. ? ï¿½É¹ï¿½ = GitHub Action ï¿½Ì¹ï¿½
+     ? Ê§ï¿½ï¿½ = Action ï¿½ï¿½ ? (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
+
+ï¿½ï¿½ï¿½ï¿½ 16 ï¿½ï¿½ (2026-10-13 ~ 2027-01-28):
+  - Ã¿ 3 ï¿½ì·¢ï¿½ï¿½ 5 Æª
+  - ï¿½ï¿½ 80 Æª
+  - ï¿½ï¿½ï¿½ GEO ï¿½Å»ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Google / AI ï¿½Æ¼ï¿½
+
+
+================================================================
+ï¿½ï¿½ï¿½ï¿½GEO ï¿½Å»ï¿½ï¿½ï¿½×´ (18:29 ï¿½Ã»ï¿½ï¿½á½»ï¿½ï¿½)
+================================================================
+
+? Google Search Console:
+   - 3 ï¿½ï¿½ sitemap ï¿½ï¿½ï¿½á½» (sitemap.xml, sitemap-images.xml, sitemap-news.xml)
+   - ï¿½È´ï¿½ Google ×¥È¡ + ï¿½ï¿½ï¿½ï¿½ (2-4 ï¿½ï¿½)
+
+? Bing Webmaster Tools:
+   - 1 ï¿½ï¿½ sitemap ï¿½ï¿½ï¿½á½» (sitemap.xml)
+   - ï¿½È´ï¿½ Bing ×¥È¡ (ï¿½ï¿½ Google ï¿½ï¿½, 1-2 ï¿½ï¿½)
+
+? GEO ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©:
+   - llms.txt (6218 B) - LLM Ñµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
+   - ai.txt (3814 B) - AI ï¿½Æ¼ï¿½Ô´
+   - robots.txt (2652 B) - ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+   - 3 ï¿½ï¿½ sitemap (XML ï¿½á¹¹ï¿½ï¿½)
+   - JSON-LD (Schema.org) - 4-5 items per page
+   - rss.xml + atom.xml (ï¿½ï¿½ï¿½ï¿½)
+
+? ï¿½È´ï¿½ï¿½Û²ï¿½ï¿½ï¿½ (2-4 ï¿½Üºï¿½):
+   - Google ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+   - Bing ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+   - AI ï¿½Æ¼ï¿½ï¿½ï¿½ï¿½ï¿½ (ChatGPT, Perplexity, Claude, Gemini)
+
+
+================================================================
+ï¿½ß¡ï¿½ï¿½ï¿½×¢
+================================================================
+
+- È«ï¿½ï¿½ï¿½ï¿½ powershell 5.1 (Windows 10)
+- Node v22.15.0
+- ï¿½ï¿½ï¿½ï¿½ Node ï¿½Å±ï¿½ï¿½ï¿½ ES modules (.mjs)
+- Git remote: https://github.com/saleo-svg/joburgchurch.co.za.git
+- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ git ï¿½ï¿½Ê·ï¿½ï¿½ï¿½Ä¼ï¿½: .indexnow-key.txt (ï¿½ï¿½ .gitignore)
+- ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½: post-deploy check ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ joburgchurch.co.za
+- ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½: pre-commit hook ï¿½ï¿½Òª husky ï¿½ï¿½×°
+  (ï¿½Ã»ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½ npm install husky, hook ï¿½Ä¼ï¿½ï¿½Ñ¾ï¿½Î»)
+- ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½: agent-transcripts Ä¿Â¼ï¿½ï¿½ Cursor ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ .jsonl ï¿½ï¿½Ä¿Â¼
+- 80 Æªï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ scripts/release-next-batch.mjs ï¿½ï¿½ DRAFT-*.md ï¿½ï¿½
+================================================================
+================================================================
+ä¼šè¯æ—¥æœŸ: 2026-10-13 (Tuesday) â€” Auto-release & GEO verification + posts-object fix
+æ—¶é—´: 06:00 PM ~ 08:55 PM (UTC+2)   çº¦ 2.9 å°æ—¶
+é¡¹ç›®: c:\Users\Laptop\Desktop\Church-Site
+å¯¹è¯æ¥æº: agent-transcripts/e2d07a37-ae1e-402f-a490-e582a6567ae6
+--------------------------------------------------------------------
+
+é—®é¢˜ 1: 5 ç¯‡æ–°å‘å¸ƒçš„æ–‡ç«  (anxiety, online-bible-study-discipline, ...)
+       åœ¨ dist ä¸­æ˜¯ 435 bytes çš„ redirect, ä¸æ˜¯ full HTML
+
+Root cause (commit d94ba1b - 'reconstitute 80 drafts'):
+  The 80 draft entries (anxiety, online-bible-study, etc.) were
+  appended AFTER the '};' that closed posts at line 6053, putting
+  them between hymnRegionImages's open and its missing close.
+  As a result, the 80 entries became nested properties of
+  hymnRegionImages (which is valid JS). At runtime, posts only had
+  the original 90 keys, so posts[slug] was undefined for the 80
+  draft slugs.
+
+Fix (commit 865b6f6):
+  1. Removed the premature '};' and the hymnRegionImages block from
+     line 6053+ so the orphan entries now sit inside the still-open
+     posts object.
+  2. Re-added the hymnRegionImages block after the real '};' (line 7247)
+     that closes the now-complete 170-key posts object.
+  3. Added a missing '};' to close the hymnRegionImages object.
+  4. Hardened scripts/release-next-batch.mjs: regex now bounded to
+     a single entry (one level of nested {}) so future promotions
+     will not leak status/date edits into neighbouring entries.
+
+Verification:
+  - npm run build -> 416 pages, 0 errors
+  - dist/blog/<newly-released>/: 40-41 KB full HTML (was 435 B redirect)
+  - dist/blog total: 95 full HTML + 117 redirect (drafts only)
+  - live joburgchurch.co.za: serves full article HTML
+
+GEO status (10-13 21:00 UTC+2):
+  - 5 new URLs submitted to IndexNow: HTTP 200 OK
+  - Bing indexing of new articles: NOT YET (typical 2-4 weeks)
+  - DDG indexing: core pages indexed, blog posts not yet
+  - Google Search Console: no impressions yet (post-crawl cycle)
+================================================================
