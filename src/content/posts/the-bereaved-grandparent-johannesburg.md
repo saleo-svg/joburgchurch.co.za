@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["grief", "bereavement", "grandparent", "grandchild", "Sandton", "Johannesburg", "South Africa", "loss", "psalm", "Bible study", "pastoral", "Christian living"]
 heroImage: "/images/posts/jozi-young-professional.jpg"
 excerpt: "The Christian grandparent in Johannesburg who has lost a grandchild carries a grief that does not have a name in polite company. The funeral was a small affair. The grief goes on for years."
-status: draft
+status: published
 ---
 
 # The Grandparent Who Has Lost the Grandchild: A South African Christian's Guide to the Unspoken Grief

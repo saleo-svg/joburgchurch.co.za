@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["workplace", "office", "corporate", "witness", "Sandton", "Johannesburg", "South Africa", "Colossians 3", "Bible study", "pastoral", "Christian living", "ethics"]
 heroImage: "/images/posts/load-shedding-candlelight.jpg"
 excerpt: "The Christian in the Sandton office does not have a separate Sunday faith and a separate weekday self. The Christian is one person. Here is what the Bible says about the Christian in the corporate workplace."
-status: draft
+status: published
 ---
 
 # Being a Christian in the Sandton Office: A Guide to the Faith in the Corporate Workplace

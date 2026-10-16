@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["retirement", "pension", "elderly", "Sandton", "Johannesburg", "South Africa", "old age", "stewardship", "Bible study", "pastoral", "Christian living", "older men"]
 heroImage: "/images/posts/multilingual-worship.jpg"
 excerpt: "Retiring in South Africa in 2026 is a particular challenge. The pension is smaller than expected. The medical aid goes up every year. The house is paid for, but the maintenance is not."
-status: draft
+status: published
 ---
 
 # Retiring Well in South Africa: A Christian's Guide to the Pension, the Property, and the Years That Remain

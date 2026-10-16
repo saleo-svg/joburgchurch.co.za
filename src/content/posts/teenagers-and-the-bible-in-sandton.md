@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["teenagers", "parents", "adolescents", "Sandton", "Johannesburg", "South Africa", "youth", "Bible reading", "Bible study", "pastoral", "Christian living", "family"]
 heroImage: "/images/posts/heritage-day-braai.jpg"
 excerpt: "The Christian parent of a teenager in Sandton has a particular problem. The teenager is at the age where everything is being questioned. The Bible is one of the things being questioned."
-status: draft
+status: published
 ---
 
 # Helping a Sandton Teenager Read the Bible: A Christian Parent's Guide to the Difficult Years of Faith

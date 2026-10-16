@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["father", "fatherhood", "work", "long hours", "Sandton", "Johannesburg", "South Africa", "Ephesians 6", "Bible study", "pastoral", "Christian living", "men"]
 heroImage: "/images/posts/ubuntu-south-africa.jpg"
 excerpt: "The Christian father in Johannesburg who works too much knows the Bible is true. The Bible is also true that the children will not remember the promotion. Here is what the Bible says about the father who works too much."
-status: draft
+status: published
 ---
 
 # The Christian Father Who Works Too Much: A South African's Honest Reflection on the Office That Has Stolen the Home

@@ -15,14 +15,15 @@
   {
     "batch": 2,
     "release_at": "2026-10-16T08:00:00+02:00",
-    "status": "pending",
+    "status": "released",
     "articles": [
       "the-christian-father-who-works-too-much",
       "teenagers-and-the-bible-in-sandton",
       "the-bereaved-grandparent-johannesburg",
       "south-african-christian-and-the-corporate-team",
       "the-christian-and-the-pension-fund"
-    ]
+    ],
+    "released_at": "2026-10-16T11:03:29.689Z"
   },
   {
     "batch": 3,
