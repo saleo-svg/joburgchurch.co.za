@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["grandparent", "load-shedding", "candlelight", "Sandton", "Johannesburg", "South Africa", "older", "Psalm 71", "Bible study", "pastoral", "Christian living", "stewardship"]
 heroImage: "/images/posts/load-shedding-candlelight.jpg"
 excerpt: "The Christian grandparent in Johannesburg during the load-shedding is the keeper of the candles, the keeper of the board games, the keeper of the stories. Here is what the Bible says about the grandparent who is doing the load-shedding."
-status: draft
+status: published
 ---
 
 # Grandparenting Through the Load-Shedding: A South African Christian's Guide to the Candlelight and the Grandchildren

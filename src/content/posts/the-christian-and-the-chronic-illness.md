@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["chronic illness", "long illness", "disability", "Sandton", "Johannesburg", "South Africa", "2 Corinthians 12", "Bible study", "pastoral", "Christian living", "suffering", "prayer"]
 heroImage: "/images/posts/heritage-day-braai.jpg"
 excerpt: "The Christian in Johannesburg with a long illness has a body that has stopped cooperating with the prayer. Here is what the Bible says about the Christian with the long illness."
-status: draft
+status: published
 ---
 
 # Living with the Long Illness: A South African Christian's Guide to the Body That Has Stopped Cooperating

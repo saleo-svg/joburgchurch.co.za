@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["divorce", "broken marriage", "remarriage", "Sandton", "Johannesburg", "South Africa", "grace", "Psalm 34", "Bible study", "pastoral", "Christian living", "redemption"]
 heroImage: "/images/posts/township-bible-study.jpg"
 excerpt: "The Christian in South Africa who has been through a divorce carries a particular burden. The Bible is clear that marriage is a covenant. The Bible is also clear that God is near to the broken heart."
-status: draft
+status: published
 ---
 
 # After the Divorce: A South African Christian's Honest Guide to the Years That Follow the Broken Vow

@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["school fees", "education", "parents", "Sandton", "Johannesburg", "South Africa", "sacrifice", "Bible study", "pastoral", "Christian living", "stewardship", "children"]
 heroImage: "/images/posts/jozi-young-professional.jpg"
 excerpt: "The school fees in 2026 in Johannesburg have gone up again. The Christian parent has to make the choice between the better school and the smaller school, between the uniform and the holiday."
-status: draft
+status: published
 ---
 
 # Paying the School Fees in 2026: A Christian Parent's Honest Reflection on the Sacrifice of the South African Education

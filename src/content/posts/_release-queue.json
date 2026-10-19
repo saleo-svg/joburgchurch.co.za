@@ -28,14 +28,15 @@
   {
     "batch": 3,
     "release_at": "2026-10-19T08:00:00+02:00",
-    "status": "pending",
+    "status": "released",
     "articles": [
       "the-south-african-christian-and-the-divorce",
       "christian-and-the-south-african-teen-pregnancy",
       "the-christian-and-the-chronic-illness",
       "south-african-christian-and-the-school-fees",
       "the-christian-grandparent-in-the-load-shedding"
-    ]
+    ],
+    "released_at": "2026-10-19T12:40:30.543Z"
   },
   {
     "batch": 4,

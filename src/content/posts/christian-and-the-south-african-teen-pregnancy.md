@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["teen pregnancy", "parent", "daughter", "Sandton", "Johannesburg", "South Africa", "compassion", "Psalm 103", "Bible study", "pastoral", "Christian living", "family"]
 heroImage: "/images/posts/ubuntu-south-africa.jpg"
 excerpt: "The Christian parent in Sandton who has just heard that the teenage daughter is pregnant has to do three things at once. The Bible. The family. The future."
-status: draft
+status: published
 ---
 
 # When the Daughter is Pregnant: A Christian Parent's Guide to the News That No Parent in Sandton Wants
