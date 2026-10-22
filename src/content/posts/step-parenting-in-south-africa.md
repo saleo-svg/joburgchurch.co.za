@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["step-parent", "blended family", "marriage", "Sandton", "Johannesburg", "South Africa", "Proverbs", "Bible study", "pastoral", "Christian living", "family"]
 heroImage: "/images/posts/heritage-day-braai.jpg"
 excerpt: "The step-parent in Johannesburg did not choose the family. The family chose them, or the family was given to them. The children were there first. The ex-spouse is still in the picture. The bond application has both names. The step-parent is doing holy work that rarely gets recognised as holy work."
-status: draft
+status: published
 ---
 
 # The Step-Parent in the South African Home: A Bible Study on the Family That God Did Not Plan but God Still Honours

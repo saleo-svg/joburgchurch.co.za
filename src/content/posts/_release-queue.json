@@ -41,14 +41,15 @@
   {
     "batch": 4,
     "release_at": "2026-10-22T08:00:00+02:00",
-    "status": "pending",
+    "status": "released",
     "articles": [
       "south-african-christian-and-the-driving-lesson",
       "the-single-christian-mother-in-sandton",
       "christian-and-the-addiction-in-south-africa",
       "step-parenting-in-south-africa",
       "boomerang-generation-children-returning-home"
-    ]
+    ],
+    "released_at": "2026-10-22T11:28:26.526Z"
   },
   {
     "batch": 5,

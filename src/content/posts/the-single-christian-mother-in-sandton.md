@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["single mother", "parenting alone", "Sandton", "Johannesburg", "South Africa", "widow", "Psalm 68", "Bible study", "pastoral", "Christian living", "women"]
 heroImage: "/images/posts/township-bible-study.jpg"
 excerpt: "The single Christian mother in Johannesburg carries two loads — the load of parenting alone and the load of faith in a God who sometimes feels far away. The school runs, the rent, the taxi fare, the homework, the bedtime — all of it falls on one pair of shoulders. Here is what the Bible says about the single mother, and how the Wednesday Bible study in Parkmore has learned to hold her."
-status: draft
+status: published
 ---
 
 # The Single Christian Mother in Sandton: A South African's Honest Guide to Raising Children Alone and Faithfully

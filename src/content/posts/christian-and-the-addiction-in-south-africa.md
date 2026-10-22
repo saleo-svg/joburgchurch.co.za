@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["addiction", "alcohol", "recovery", "AA", "Sandton", "Johannesburg", "South Africa", "1 Corinthians 10", "Bible study", "pastoral", "Christian living", "support"]
 heroImage: "/images/posts/ubuntu-south-africa.jpg"
 excerpt: "Addiction is one of the most painful struggles the South African Christian family faces. The uncle who cannot stop drinking. The colleague who disappears at lunch. The husband who is different after five drinks. The Bible has a remarkable amount to say about addiction, and it does not say what the church usually says."
-status: draft
+status: published
 ---
 
 # When the Drink Has Taken Over: A South African Christian's Honest Guide to Addiction and Recovery

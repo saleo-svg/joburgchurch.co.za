@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["boomerang", "adult children", "Sandton", "Johannesburg", "South Africa", "family", "housing", "Bible study", "pastoral", "Christian living", "generations"]
 heroImage: "/images/posts/jozi-young-professional.jpg"
 excerpt: "The adult child who moved out and then moved back in is one of the defining features of the South African family in 2026. The rental in Rosebank is too expensive. The job in Durban fell through. The marriage ended. The twenty-eight-year-old is back in the bedroom with the posters still on the wall. Here is what the Bible says about the family that has been re-formed."
-status: draft
+status: published
 ---
 
 # When the Adult Child Returns Home: A South African Christian Family's Guide to the Boomerang Generation

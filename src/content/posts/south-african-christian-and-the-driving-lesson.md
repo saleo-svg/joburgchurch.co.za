@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["driving", "license", "adult learning", "Sandton", "Johannesburg", "South Africa", "patience", "Bible study", "devotional", "Christian living", "transport", "new beginnings"]
 heroImage: "/images/posts/multilingual-worship.jpg"
 excerpt: "The South African Christian who is learning to drive at thirty-eight or forty-five has had a particular life. The bus, the taxi, the lift from a friend, the husband who did the driving."
-status: draft
+status: published
 ---
 
 # Learning to Drive at Thirty-Eight: A Christian's Honest Reflection on the License That Took Too Long
