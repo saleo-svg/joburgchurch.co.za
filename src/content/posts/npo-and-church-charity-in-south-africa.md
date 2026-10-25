@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["NPO", "charity", "Section 18A", "donations", "Sandton", "Johannesburg", "South Africa", "generosity", "Bible study", "pastoral", "Christian living", "tax"]
 heroImage: "/images/posts/load-shedding-candlelight.jpg"
 excerpt: "The church in Johannesburg that wants to do charity in South Africa needs to understand the legal framework for doing so. The NPO registration, the Section 18A tax certificate, the NPO Act — these are not bureaucratic obstacles. They are the tools that make Christian generosity possible at scale."
-status: draft
+status: published
 ---
 
 # Why Your Church Needs an NPO Number: A South African Christian's Practical Guide to Church Charity, Section 18A, and Doing Good Well

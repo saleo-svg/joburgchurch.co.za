@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["domestic worker", "employer", "employee", "Sandton", "Johannesburg", "South Africa", "James 5", "Bible study", "pastoral", "Christian living", "fair wage"]
 heroImage: "/images/posts/multilingual-worship.jpg"
 excerpt: "The relationship between the Christian employer and the domestic worker in Johannesburg is one of the most intimate employment relationships that exists. The employer lives in the house. The domestic worker knows the family's schedule, the children's habits, the husband's temper, the wife's tears. Here is what the Bible says about this relationship, and how it can be a witness in Sandton."
-status: draft
+status: published
 ---
 
 # The Christian Employer and the Domestic Worker: A South African's Honest Guide to the Most Intimate Employment Relationship

@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["first time visitor", "new to church", "Sandton", "Johannesburg", "South Africa", "evangelism", "Acts 2", "Bible study", "pastoral", "Christian living", "welcome"]
 heroImage: "/images/posts/ubuntu-south-africa.jpg"
 excerpt: "The person who walks into a South African church for the first time — especially an evangelical Bible study — faces a particular challenge. The vocabulary is unfamiliar. The customs are unexplained. The expectations are unclear. Here is what the Bible says about welcoming the stranger, and what every Johannesburg church should do better."
-status: draft
+status: published
 ---
 
 # First Time in a South African Church and Understanding Nothing: A Bible Study for the Person Who Walked Through the Wrong Door

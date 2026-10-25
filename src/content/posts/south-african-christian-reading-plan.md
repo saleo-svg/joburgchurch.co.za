@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["Bible reading", "reading plan", "devotional", "Sandton", "Johannesburg", "South Africa", "Psalm 119", "Bible study", "pastoral", "Christian living", "discipline"]
 heroImage: "/images/posts/heritage-day-braai.jpg"
 excerpt: "Most Christians in Johannesburg have a Bible they have read partially. The bookmarks are at Genesis 1, Psalm 23, Isaiah 40, John 1, and Romans 8. Everything in between is largely unfamiliar. Here is a practical one-year Bible reading plan designed for the busy South African Christian, and what to do when you fall behind."
-status: draft
+status: published
 ---
 
 # Reading the Bible All the Way Through: A South African Christian's One-Year Plan for the Book That Changes Everything

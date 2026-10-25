@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["foreigner", "immigrant", "Zimbabwe", "Malawi", "Mozambique", "Sandton", "Johannesburg", "South Africa", "Exodus 22", "Bible study", "pastoral", "Christian living"]
 heroImage: "/images/posts/township-bible-study.jpg"
 excerpt: "The Christian from Harare, Lilongwe, or Maputo who is working in Johannesburg is one of the most faithful members of South African church life. They tithe faithfully. They serve enthusiastically. They are also some of the most vulnerable people in the city. Here is what the Bible says about the stranger, and how the Johannesburg church is failing and can be rebuilt."
-status: draft
+status: published
 ---
 
 # The Christian From Zimbabwe, Malawi, and Mozambique in Johannesburg: A Bible Study on the Stranger in the City of Gold

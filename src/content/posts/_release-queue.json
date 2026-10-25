@@ -54,14 +54,15 @@
   {
     "batch": 5,
     "release_at": "2026-10-25T08:00:00+02:00",
-    "status": "pending",
+    "status": "released",
     "articles": [
       "npo-and-church-charity-in-south-africa",
       "the-christian-domestic-worker-and-the-employer",
       "the-foreign-christian-in-south-africa",
       "first-time-church-visitor-who-understands-nothing",
       "south-african-christian-reading-plan"
-    ]
+    ],
+    "released_at": "2026-10-25T11:01:32.907Z"
   },
   {
     "batch": 6,
