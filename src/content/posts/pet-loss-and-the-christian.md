@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["pet loss", "grief", "dogs", "cats", "Sandton", "Johannesburg", "South Africa", "Psalm 36", "Bible study", "pastoral", "Christian living", "animals"]
 heroImage: "/images/posts/load-shedding-candlelight.jpg"
 excerpt: "The Christian in Johannesburg whose dog or cat has died often faces an additional grief — the sense that the grief is not legitimate. The Bible does not minimise this grief. The Bible has a category for it. And the church in Sandton needs to learn how to minister to the grieving pet owner."
-status: draft
+status: published
 ---
 
 # When the Dog Dies: A South African Christian's Honest Guide to Losing a Pet and Grieving Something the World Says You Shouldn't

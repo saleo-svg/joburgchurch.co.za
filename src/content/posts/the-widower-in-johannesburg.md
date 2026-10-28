@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["widower", "loneliness", "widow", "Sandton", "Johannesburg", "South Africa", "1 Timothy 5", "Bible study", "pastoral", "Christian living", "death"]
 heroImage: "/images/posts/multilingual-worship.jpg"
 excerpt: "The widower in Johannesburg faces a particular loneliness that the church rarely addresses. The widower is not single. He was married for thirty years. He does not know how to cook. He does not know how to shop. He does not know how to be alone. Here is what the Bible says about the widower, and how the church can do better."
-status: draft
+status: published
 ---
 
 # The Widower in Johannesburg: A South African Christian's Honest Guide to Being a Man Alone After Your Wife Has Died

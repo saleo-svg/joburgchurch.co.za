@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["exam", "anxiety", "student", "education", "Sandton", "Johannesburg", "South Africa", "Matthew 6", "Bible study", "pastoral", "Christian living", "anxiety"]
 heroImage: "/images/posts/jozi-young-professional.jpg"
 excerpt: "The South African student in November — the Matric finals, the university exam timetable, the ns3 at the university of Johannesburg — faces a particular kind of anxiety that is physical, mental, and spiritual. Here is what the Bible says about performance, failure, and the God who loves the student who didn't get the marks."
-status: draft
+status: published
 ---
 
 # When the Exam Paper Is Blank: A South African Christian's Guide to Exam Anxiety, Performance, and the God Who Is Not Disappointed

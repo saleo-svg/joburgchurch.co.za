@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["family", "evangelism", "witness", "Sandton", "Johannesburg", "South Africa", "1 Peter 3", "Bible study", "pastoral", "Christian living", "interfaith"]
 heroImage: "/images/posts/township-bible-study.jpg"
 excerpt: "The Christian in Johannesburg whose family is not Christian faces a particular set of challenges. The Sunday lunch where grace is not said. The funeral that is conducted without Christian rites. The religious practices of the family that the Christian cannot participate in. Here is what the Bible says about being the witness, and how to navigate the family that does not share the faith."
-status: draft
+status: published
 ---
 
 # When You Are the Only Christian in the Family: A South African's Honest Guide to Faith, Family Dinners, and the God Who Witnesses Through You

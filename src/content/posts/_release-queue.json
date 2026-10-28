@@ -67,14 +67,15 @@
   {
     "batch": 6,
     "release_at": "2026-10-28T08:00:00+02:00",
-    "status": "pending",
+    "status": "released",
     "articles": [
       "exam-anxiety-and-the-south-african-christian-student",
       "pet-loss-and-the-christian",
       "the-widower-in-johannesburg",
       "being-the-only-christian-in-the-family",
       "the-neighbourhood-watch-and-the-christian"
-    ]
+    ],
+    "released_at": "2026-10-28T12:27:30.266Z"
   },
   {
     "batch": 7,

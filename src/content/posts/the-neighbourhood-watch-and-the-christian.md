@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["neighbourhood watch", "crime", "safety", "Sandton", "Johannesburg", "South Africa", "Romans 13", "Bible study", "pastoral", "Christian living", "justice"]
 heroImage: "/images/posts/ubuntu-south-africa.jpg"
 excerpt: "The Christian in the Johannesburg neighbourhood watch faces a specific moral challenge. The crime is real. The fear is legitimate. The response needs to be proportional. Here is what the Bible says about justice, community safety, and the difference between protecting your neighbours and becoming what you are protecting them from."
-status: draft
+status: published
 ---
 
 # The Neighbourhood Watch and the Christian: A South African's Guide to Community Safety, Vigilantism, and Doing Good Without Becoming What You Fear
