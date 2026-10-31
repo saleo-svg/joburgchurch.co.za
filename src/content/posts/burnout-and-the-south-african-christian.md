@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["burnout", "ministry", "exhaustion", "Sandton", "Johannesburg", "South Africa", "Elijah", "Bible study", "pastoral", "Christian living", "rest"]
 heroImage: "/images/posts/load-shedding-candlelight.jpg"
 excerpt: "The Christian who has been serving in church ministry in Johannesburg — the worship leader, the youth worker, the volunteer coordinator, the cell group leader — has often reached a point of total exhaustion. The burnout is not a moral failure. It is a warning sign. Here is what the Bible says about rest, boundaries, and what to do when you have nothing left."
-status: draft
+status: published
 ---
 
 # When the Ministry Worker Burns Out: A South African Christian's Honest Guide to Exhaustion, Collapse, and Starting Again

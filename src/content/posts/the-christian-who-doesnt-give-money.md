@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["giving", "money", "tithe", "Sandton", "Johannesburg", "South Africa", "2 Corinthians 9", "Bible study", "pastoral", "Christian living", "stewardship"]
 heroImage: "/images/posts/township-bible-study.jpg"
 excerpt: "The Christian in Johannesburg who does not give financially to the church faces a complicated reality. They may be genuinely unable to. They may be deliberately withholding. They may have been hurt by how the church handles money. Here is what the Bible says to each of these situations, and what the church should do."
-status: draft
+status: published
 ---
 
 # The Christian Who Doesn't Give: A South African's Honest Guide to the Person Who Sits in Church Every Sunday and Never Puts Anything in the Offering

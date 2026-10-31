@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["gossip", "speech", "integrity", "Sandton", "Johannesburg", "South Africa", "Proverbs 26", "Bible study", "pastoral", "Christian living", "community"]
 heroImage: "/images/posts/multilingual-worship.jpg"
 excerpt: "Gossip is one of the most destructive forces in the South African church. The WhatsApp group that discusses the pastor's preaching. The braai where the couple's marriage problems are analysed. The small group that has become an intelligence network. Here is what the Bible says about gossip, and how to stop it in your own speech."
-status: draft
+status: published
 ---
 
 # The Whisper Campaign: A South African Christian's Honest Guide to Gossip, Rumour, and the Destruction of Reputation in the Church

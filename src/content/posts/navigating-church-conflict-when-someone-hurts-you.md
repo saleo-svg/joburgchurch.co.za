@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["church hurt", "conflict", "forgiveness", "Sandton", "Johannesburg", "South Africa", "Matthew 18", "Bible study", "pastoral", "Christian living", "reconciliation"]
 heroImage: "/images/posts/jozi-young-professional.jpg"
 excerpt: "The Christian in Johannesburg who has been hurt by someone in the church — the pastor who said something wounding, the small group leader who gossiped, the friend who betrayed — faces a choice that the Bible addresses directly. Stay or leave. Forgive or confront. Here is what the Bible actually says about this painful situation."
-status: draft
+status: published
 ---
 
 # When the Church Hurts You: A South African Christian's Honest Guide to Conflict, Pain, and Staying in Community

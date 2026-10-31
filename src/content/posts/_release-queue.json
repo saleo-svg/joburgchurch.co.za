@@ -80,14 +80,15 @@
   {
     "batch": 7,
     "release_at": "2026-10-31T08:00:00+02:00",
-    "status": "pending",
+    "status": "released",
     "articles": [
       "hospitality-in-a-world-of-locked-doors",
       "navigating-church-conflict-when-someone-hurts-you",
       "burnout-and-the-south-african-christian",
       "gossip-and-the-christian-in-south-africa",
       "the-christian-who-doesnt-give-money"
-    ]
+    ],
+    "released_at": "2026-10-31T11:56:42.219Z"
   },
   {
     "batch": 8,

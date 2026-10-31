@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["hospitality", "home", "Sandton", "Johannesburg", "South Africa", "Romans 12", "Bible study", "pastoral", "Christian living", "community"]
 heroImage: "/images/posts/heritage-day-braai.jpg"
 excerpt: "The Christian in Johannesburg has a high wall, an electric fence, and a security gate. The invitation to dinner means driving to a restaurant. Hospitality in this context means something different than it did in the Bible's world. Here is what the Bible still says about opening your home, and how to do it in 2026."
-status: draft
+status: published
 ---
 
 # Opening Your Home in Johannesburg: A South African Christian's Practical Guide to Hospitality in the Age of the Electric Fence
