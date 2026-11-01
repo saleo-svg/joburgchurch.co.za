@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["adult children", "financial dependence", "Sandton", "Johannesburg", "South Africa", "Proverbs", "Bible study", "pastoral", "Christian living", "family", "boundaries"]
 heroImage: "/images/posts/ubuntu-south-africa.jpg"
 excerpt: "The South African parent in 2026 is funding an adult child well into their twenties. The rent, the car, the groceries, the data bundle. The parent is not sure anymore whether they are being generous or being used. Here is what the Bible says about the line between help and enablement."
-status: draft
+status: published
 ---
 
 # When the Twenty-Five-Year-Old Still Calls for Money: A South African Christian's Guide to the Adult Child Who Has Not Left and the Parents Who Cannot Say No

@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["medical crisis", "cancer", "diagnosis", "Sandton", "Johannesburg", "South Africa", "2 Corinthians 4", "Bible study", "pastoral", "Christian living", "suffering"]
 heroImage: "/images/posts/multilingual-worship.jpg"
 excerpt: "The Christian in Johannesburg who has received a serious medical diagnosis — the cancer, the heart condition, the neurological disease — enters a world that is suddenly different. Here is what the Bible says about suffering, medical crisis, and the God who is present in the most frightening places."
-status: draft
+status: published
 ---
 
 # The Diagnosis That Changes Everything: A South African Christian's Guide to Medical Crisis, Serious Illness, and the God Who Is Still God

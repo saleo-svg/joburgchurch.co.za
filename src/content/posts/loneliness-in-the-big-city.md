@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["loneliness", "single", "community", "Sandton", "Johannesburg", "South Africa", "1 Samuel", "Bible study", "pastoral", "Christian living", "isolation"]
 heroImage: "/images/posts/load-shedding-candlelight.jpg"
 excerpt: "The Christian who lives alone in Johannesburg — the single person, the widow, the young professional who has moved from KwaZulu-Natal — faces a specific kind of loneliness. The city is full of people. The church is full of people. But no one seems to know your name. Here is what the Bible says about loneliness and what to do about it."
-status: draft
+status: published
 ---
 
 # Alone in Johannesburg: A South African Christian's Honest Guide to Urban Loneliness and the Community That Should Exist but Often Doesn't

@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["blended family", "step-family", "remarriage", "Sandton", "Johannesburg", "South Africa", "marriage", "Bible study", "pastoral", "Christian living", "family"]
 heroImage: "/images/posts/heritage-day-braai.jpg"
 excerpt: "The blended family in Johannesburg — the remarried couple, the step-children, the ex-spouses still in the picture — is one of the most common family forms in South Africa in 2026. The Bible does not have a chapter on blended families. But it has everything needed to navigate one."
-status: draft
+status: published
 ---
 
 # The Blended Family in South Africa: A Christian's Guide to Step-Parenting, Bonus Children, and Making a New Family in God's Story

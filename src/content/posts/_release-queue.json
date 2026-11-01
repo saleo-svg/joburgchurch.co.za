@@ -93,14 +93,15 @@
   {
     "batch": 8,
     "release_at": "2026-11-03T08:00:00+02:00",
-    "status": "pending",
+    "status": "released",
     "articles": [
       "adult-child-still-depends-on-parents",
       "blended-family-south-africa",
       "the-christian-doctor-in-johannesburg",
       "loneliness-in-the-big-city",
       "medical-crisis-and-the-christian"
-    ]
+    ],
+    "released_at": "2026-11-01T12:56:39.788Z"
   },
   {
     "batch": 9,

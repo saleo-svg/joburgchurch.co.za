@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["doctor", "medicine", "healthcare", "Sandton", "Johannesburg", "South Africa", "James 5", "Bible study", "pastoral", "Christian living", " vocation"]
 heroImage: "/images/posts/jozi-young-professional.jpg"
 excerpt: "The Christian doctor in Johannesburg faces a specific professional challenge. They are trained to save lives through medicine. They also believe that God heals. They work in a public hospital where resources are scarce and the patients are desperate. Here is what the Bible says about the intersection of medicine and faith."
-status: draft
+status: published
 ---
 
 # The Christian Doctor in the Johannesburg Hospital: A South African's Guide to Faith, Medicine, and the God Who Works Through Both
