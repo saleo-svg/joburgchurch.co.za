@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["social media", "witness", "Facebook", "Instagram", "Sandton", "Johannesburg", "South Africa", "Matthew 7", "Bible study", "pastoral", "Christian living", "speech"]
 heroImage: "/images/posts/load-shedding-candlelight.jpg"
 excerpt: "The Christian in Johannesburg who posts Bible verses on Facebook, shares church events on Instagram, and debates politics on Twitter faces a specific challenge. The person on social media is often not the same person in real life. Here is what the Bible says about the gap between the online self and the real self."
-status: draft
+status: published
 ---
 
 # The Facebook Christian: A South African's Guide to Faith, Social Media, and the Person You Become When You Are Behind a Screen

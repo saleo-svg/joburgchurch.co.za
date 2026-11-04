@@ -106,14 +106,15 @@
   {
     "batch": 9,
     "release_at": "2026-11-06T08:00:00+02:00",
-    "status": "pending",
+    "status": "released",
     "articles": [
       "choosing-a-school-in-johannesburg",
       "household-help-boundaries",
       "traffic-and-the-christian-driver",
       "being-a-good-neighbour",
       "christian-witness-on-social-media"
-    ]
+    ],
+    "released_at": "2026-11-04T14:03:02.898Z"
   },
   {
     "batch": 10,

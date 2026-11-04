@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["traffic", "road rage", "patience", "Sandton", "Johannesburg", "South Africa", "Proverbs 15", "Bible study", "pastoral", "Christian living", "commute"]
 heroImage: "/images/posts/heritage-day-braai.jpg"
 excerpt: "The Christian driver in Johannesburg faces a daily test of character that the Bible addresses directly. The N1 traffic, the taxis that do not indicate, the driver who cut you off, the moment when the anger takes over and the words come out of the mouth. Here is what the Bible says about traffic and how to survive it faithfully."
-status: draft
+status: published
 ---
 
 # In Traffic on the N1: A South African Christian's Honest Guide to Road Rage, Patience, and the Theology of the Morning Commute

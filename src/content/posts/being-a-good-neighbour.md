@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["neighbour", "community", "Sandton", "Johannesburg", "South Africa", "Luke 10", "Bible study", "pastoral", "Christian living", "good samaritan"]
 heroImage: "/images/posts/jozi-young-professional.jpg"
 excerpt: "The Christian in Johannesburg lives behind an electric fence, a wall, and a security gate. The neighbour on the left has lived there for five years and you have never spoken to them. Here is what the Bible says about neighbourliness, and practical steps to build it in a suspicious city."
-status: draft
+status: published
 ---
 
 # The Neighbour You Don't Know: A South African Christian's Guide to Neighbourliness in a World of Electric Fences

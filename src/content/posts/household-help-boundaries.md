@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["domestic worker", "au pair", "employer", "Sandton", "Johannesburg", "South Africa", "Colossians 4", "Bible study", "pastoral", "Christian living", "boundaries"]
 heroImage: "/images/posts/ubuntu-south-africa.jpg"
 excerpt: "The South African household that employs a domestic worker or au pair faces a set of relationship challenges that are unique to the intimacy of the home. Here is what the Bible says about this employment relationship, and how to manage it with fairness and wisdom."
-status: draft
+status: published
 ---
 
 # Managing the Household Helper in Johannesburg: A South African Christian's Guide to Boundaries, Fairness, and the Employment Relationship in the Home

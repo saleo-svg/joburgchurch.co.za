@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["school", "education", "children", "Sandton", "Johannesburg", "South Africa", "Proverbs", "Bible study", "pastoral", "Christian living", "parenting"]
 heroImage: "/images/posts/township-bible-study.jpg"
 excerpt: "The parent in Johannesburg making a school decision faces one of the most consequential choices of their parenting life. Government or private? Single-sex or co-ed? Faith-based or secular? Here is what the Bible says about education, and how to make this decision with wisdom rather than anxiety."
-status: draft
+status: published
 ---
 
 # The School Decision: A South African Christian's Practical Guide to Choosing a School for Your Child in Johannesburg in 2026
