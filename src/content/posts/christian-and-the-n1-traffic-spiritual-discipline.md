@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["commute", "traffic", "spiritual discipline", "Sandton", "Johannesburg", "South Africa", "prayer", "Bible study", "pastoral", "Christian living", "time"]
 heroImage: "/images/posts/jozi-young-professional.jpg"
 excerpt: "The Johannesburg commuter spends an average of ninety minutes a day in the car. That is fifteen hours a month. That is a month of full-time work every year spent commuting. Here is what the Bible says about using that time for something other than rage."
-status: draft
+status: published
 ---
 
 # The N1 Traffic and the Soul: A South African Christian's Guide to the Commute as a Place of Spiritual Practice

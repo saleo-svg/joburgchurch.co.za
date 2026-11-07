@@ -119,14 +119,15 @@
   {
     "batch": 10,
     "release_at": "2026-11-09T08:00:00+02:00",
-    "status": "pending",
+    "status": "released",
     "articles": [
       "family-expectations-and-the-christian",
       "time-management-for-the-busy-christian",
       "faithful-wife-struggling-husband",
       "christian-husband-spiritual-leadership",
       "christian-and-the-n1-traffic-spiritual-discipline"
-    ]
+    ],
+    "released_at": "2026-11-07T12:43:24.782Z"
   },
   {
     "batch": 11,

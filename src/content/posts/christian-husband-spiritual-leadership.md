@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["marriage", "husband", "leadership", "father", "Sandton", "Johannesburg", "South Africa", "Ephesians 6", "Bible study", "pastoral", "Christian living", "men"]
 heroImage: "/images/posts/heritage-day-braai.jpg"
 excerpt: "The Christian husband in Johannesburg who wants to lead his family spiritually but does not know where to start faces a real problem. He has a job, a commute, and a life that is already full. Here is what the Bible says about male spiritual leadership and practical steps to start."
-status: draft
+status: published
 ---
 
 # The Husband Who Wants to Lead But Doesn't Know How: A South African Christian's Honest Guide to Spiritual Leadership in the Home

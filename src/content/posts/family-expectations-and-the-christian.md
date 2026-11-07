@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["family", "obligation", "culture", "Sandton", "Johannesburg", "South Africa", "Mark 3", "Bible study", "pastoral", "Christian living", "boundaries"]
 heroImage: "/images/posts/multilingual-worship.jpg"
 excerpt: "The Christian in Johannesburg carries family obligations that are significant — the money sent home to the rural area, the relatives who stay for months, the cultural events that cannot be missed. Here is what the Bible says about family duty, cultural obligation, and the freedom to say no."
-status: draft
+status: published
 ---
 
 # When Your Family Expects Too Much: A South African Christian's Guide to Family Obligation, Cultural Duty, and the Freedom of the Gospel

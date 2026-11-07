@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["marriage", "wife", "submission", "leadership", "Sandton", "Johannesburg", "South Africa", "Ephesians 5", "Bible study", "pastoral", "Christian living", "women"]
 heroImage: "/images/posts/ubuntu-south-africa.jpg"
 excerpt: "The Christian wife in Johannesburg whose husband does not lead spiritually — who does not pray, does not go to church, does not make decisions — faces a particular challenge that the Bible addresses with both directness and tenderness."
-status: draft
+status: published
 ---
 
 # When the Husband Won't Lead: A South African Christian Wife's Honest Guide to Submission, Leadership, and the God Who Sees Her

@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["time management", "Sabbath", "rest", "Sandton", "Johannesburg", "South Africa", "Exodus 20", "Bible study", "pastoral", "Christian living", "discipline"]
 heroImage: "/images/posts/township-bible-study.jpg"
 excerpt: "The Christian in Johannesburg in 2026 is busier than ever. The job, the children, the church, the community obligations, the WhatsApp groups, the traffic, the load-shedding. There is never enough time. Here is what the Bible says about time, rest, and the discipline of doing less."
-status: draft
+status: published
 ---
 
 # There Are Only Twenty-Four Hours: A South African Christian's Honest Guide to Time Management, Sabbath Rest, and the Discipline of Doing Less
