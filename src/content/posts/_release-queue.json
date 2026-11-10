@@ -132,14 +132,15 @@
   {
     "batch": 11,
     "release_at": "2026-11-12T08:00:00+02:00",
-    "status": "pending",
+    "status": "released",
     "articles": [
       "christian-and-the-load-shedding-evening",
       "christian-reading-the-daily-newspaper",
       "christian-and-the-pharmacist-shelf",
       "the-bible-translation-you-read",
       "when-the-language-changes-in-church"
-    ]
+    ],
+    "released_at": "2026-11-10T14:37:31.422Z"
   },
   {
     "batch": 12,

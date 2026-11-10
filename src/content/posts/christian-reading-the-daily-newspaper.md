@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["news", "media", "discernment", "Sandton", "Johannesburg", "South Africa", "Romans 12", "Bible study", "pastoral", "Christian living", "worldview"]
 heroImage: "/images/posts/multilingual-worship.jpg"
 excerpt: "The Christian in Johannesburg in 2026 is bombarded with news. Load-shedding schedules, crime statistics, political scandals, municipal failures, Eskom updates. Here is what the Bible says about staying informed and staying faithful."
-status: draft
+status: published
 ---
 
 # The News and the Christian: A South African's Guide to Staying Informed Without Losing Your Mind, Your Faith, or Your Hope

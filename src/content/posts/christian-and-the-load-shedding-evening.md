@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["load-shedding", "darkness", "spiritual discipline", "Sandton", "Johannesburg", "South Africa", "Genesis 1", "Bible study", "pastoral", "Christian living", "prayer"]
 heroImage: "/images/posts/load-shedding-candlelight.jpg"
 excerpt: "Load-shedding in South Africa has become an unwelcome constant. But for the Christian in Johannesburg, the darkness has something to teach. Here is what the Bible says about light, darkness, and what to do when the screen goes off."
-status: draft
+status: published
 ---
 
 # When the Lights Go Out and the Faith Comes On: A South African Christian's Guide to Load-Shedding as an Unexpected Spiritual Discipline

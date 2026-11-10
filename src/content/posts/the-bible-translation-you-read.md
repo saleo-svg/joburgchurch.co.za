@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["Bible translation", "reading", "English", "Zulu", "Afrikaans", "Sandton", "Johannesburg", "South Africa", "Psalm 119", "Bible study", "pastoral", "Christian living"]
 heroImage: "/images/posts/ubuntu-south-africa.jpg"
 excerpt: "The Christian in Johannesburg has access to more Bible translations than ever. English, Zulu, Xhosa, Sotho, Afrikaans, Tswana. The choice is not obvious. Here is a practical guide to choosing a translation that fits your reading level and your purpose."
-status: draft
+status: published
 ---
 
 # Which Bible Translation Should You Read? A South African Christian's Practical Guide to Choosing a Bible You Will Actually Read

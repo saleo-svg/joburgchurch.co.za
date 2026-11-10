@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["medicine", "healing", "health", "Sandton", "Johannesburg", "South Africa", "Proverbs", "Bible study", "pastoral", "Christian living", "medical"]
 heroImage: "/images/posts/township-bible-study.jpg"
 excerpt: "The Christian in Johannesburg who takes antidepressants, blood pressure medication, insulin, or anxiety medication often carries a quiet guilt. They believe God heals. They also take medicine. Here is what the Bible says about medicine, healing, and the God who uses both."
-status: draft
+status: published
 ---
 
 # Faith and Medicine: A South African Christian Pharmacist's Honest Guide to Prescription Drugs, Natural Remedies, and the God Who Heals Through Both

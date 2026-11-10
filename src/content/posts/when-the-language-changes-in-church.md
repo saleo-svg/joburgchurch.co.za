@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["language", "multilingual", "worship", "Sandton", "Johannesburg", "South Africa", "Acts 2", "Bible study", "pastoral", "Christian living", "culture"]
 heroImage: "/images/posts/heritage-day-braai.jpg"
 excerpt: "The church in Johannesburg that has shifted from one language to another — from English to Zulu, from Afrikaans to English, from Sotho to multilingual — creates both grief and opportunity. Here is what the Bible says about language in worship."
-status: draft
+status: published
 ---
 
 # When the Church Changes the Language: A South African Christian's Guide to Congregational Language Shift and the God Who Speaks Every Language
