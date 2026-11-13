@@ -145,14 +145,15 @@
   {
     "batch": 12,
     "release_at": "2026-11-15T08:00:00+02:00",
-    "status": "pending",
+    "status": "released",
     "articles": [
       "new-neighbour-who-doesnt-fit",
       "small-group-commitment",
       "christian-and-the-pet",
       "gardening-and-the-soul",
       "volunteering-burnout"
-    ]
+    ],
+    "released_at": "2026-11-13T14:19:08.064Z"
   },
   {
     "batch": 13,

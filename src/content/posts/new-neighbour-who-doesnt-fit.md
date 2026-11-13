@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["neighbour", "diversity", "community", "Sandton", "Johannesburg", "South Africa", "Revelation 7", "Bible study", "pastoral", "Christian living", "multicultural"]
 heroImage: "/images/posts/jozi-young-professional.jpg"
 excerpt: "The Christian in Johannesburg who moves into a neighbourhood and discovers that the neighbours are not like them faces an opportunity that the Bible calls a blessing. Here is what the Bible says about neighbourhood diversity and why the diverse neighbourhood is often the better one."
-status: draft
+status: published
 ---
 
 # The New Neighbour Who Doesn't Look Like You: A South African Christian's Guide to Diversity, Welcome, and What Happens When the Family Next Door Is Different

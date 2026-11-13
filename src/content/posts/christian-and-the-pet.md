@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["pets", "animals", "creation", "Sandton", "Johannesburg", "South Africa", "Genesis 1", "Bible study", "pastoral", "Christian living", "creation care"]
 heroImage: "/images/posts/multilingual-worship.jpg"
 excerpt: "The Christian in Johannesburg who has a dog, cat, or bird that is clearly a member of the family faces a theological question that the church rarely addresses. What is the Christian relationship to animals? Here is what the Bible says."
-status: draft
+status: published
 ---
 
 # Blessing the Animals: A South African Christian's Honest Guide to Pets, Creation Care, and What the Bible Says About the Dog That Is Part of the Family

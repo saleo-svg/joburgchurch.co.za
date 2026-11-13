@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["volunteering", "burnout", "service", "Sandton", "Johannesburg", "South Africa", "1 Peter 4", "Bible study", "pastoral", "Christian living", "boundaries"]
 heroImage: "/images/posts/ubuntu-south-africa.jpg"
 excerpt: "The Christian in Johannesburg who volunteers for everything — the braai setup, the worship team, the youth group, the welcoming committee, the pastoral care visits — is doing good things. They are also heading for a fall. Here is what the Bible says about volunteer burnout."
-status: draft
+status: published
 ---
 
 # The Volunteer Who Does Everything: A South African Christian's Honest Guide to Church Volunteering, Burnout, and Saying No to Good Things

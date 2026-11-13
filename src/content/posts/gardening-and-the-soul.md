@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["gardening", "creation", "spiritual discipline", "Sandton", "Johannesburg", "South Africa", "Genesis 2", "Bible study", "pastoral", "Christian living", "nature"]
 heroImage: "/images/posts/township-bible-study.jpg"
 excerpt: "The Christian in Johannesburg who has discovered gardening has found something that the Bible has always known. The garden is a spiritual teacher. Here is what the Bible says about cultivation, growth, and the slow wisdom of seeds."
-status: draft
+status: published
 ---
 
 # The Garden and the Soul: A South African Christian's Honest Guide to Growing Things, the Soil, and What the Bible Learns from the Garden

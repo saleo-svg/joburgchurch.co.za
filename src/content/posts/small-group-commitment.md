@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["small group", "community", "commitment", "Sandton", "Johannesburg", "South Africa", "Acts 2", "Bible study", "pastoral", "Christian living", "belonging"]
 heroImage: "/images/posts/load-shedding-candlelight.jpg"
 excerpt: "The Christian in Johannesburg who has tried three small groups in two years and left each one faces a pattern. Here is what the Bible says about community commitment and why the small group you almost left was probably the right one."
-status: draft
+status: published
 ---
 
 # The Small Group You Keep Quitting: A South African Christian's Honest Guide to Community, Commitment, and Why Showing Up Is Half the Battle
