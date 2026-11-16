@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["entrepreneur", "business", "success", "Sandton", "Johannesburg", "South Africa", "Proverbs", "Bible study", "pastoral", "Christian living", "vocation"]
 heroImage: "/images/posts/multilingual-worship.jpg"
 excerpt: "The Christian entrepreneur in Johannesburg is building something — a business, a social enterprise, a community project. They carry specific risks, hopes, and temptations. Here is what the Bible says about enterprise, success, and faithfulness."
-status: draft
+status: published
 ---
 
 # The Entrepreneur and the Gospel: A South African Christian's Guide to Business, Risk, Faith, and the God Who Blesses Enterprise

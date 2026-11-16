@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["law", "attorney", "justice", "Sandton", "Johannesburg", "South Africa", "Micah 6", "Bible study", "pastoral", "Christian living", "vocation"]
 heroImage: "/images/posts/heritage-day-braai.jpg"
 excerpt: "The Christian attorney in Johannesburg works in a system that is often unjust, frequently complicated, and sometimes corrupt. Here is what the Bible says about law, justice, and the Christian who has chosen to work within the system."
-status: draft
+status: published
 ---
 
 # The Christian Attorney in Johannesburg: A South African's Guide to Law, Justice, Faith, and Working in the System You Are Called to Reform

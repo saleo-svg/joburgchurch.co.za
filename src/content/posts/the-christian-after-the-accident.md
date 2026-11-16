@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["trauma", "accident", "PTSD", "Sandton", "Johannesburg", "South Africa", "Psalm 34", "Bible study", "pastoral", "Christian living", "suffering"]
 heroImage: "/images/posts/jozi-young-professional.jpg"
 excerpt: "The Christian in Johannesburg who has been in a serious car accident carries a particular kind of trauma. The sound of metal, the image of the other car, the moment before impact. Here is what the Bible says about trauma, PTSD, and the long road back."
-status: draft
+status: published
 ---
 
 # After the Car Accident: A South African Christian's Honest Guide to Trauma, Recovery, and the God Who Meets You in the Emergency Room

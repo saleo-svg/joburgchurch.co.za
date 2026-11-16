@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["police", "law enforcement", "justice", "Sandton", "Johannesburg", "South Africa", "Romans 13", "Bible study", "pastoral", "Christian living", "vocation"]
 heroImage: "/images/posts/load-shedding-candlelight.jpg"
 excerpt: "The Christian police officer in Johannesburg faces a unique moral challenge. They are sworn to protect and serve, but the system they work in is deeply flawed. Here is what the Bible says about justice, authority, and the officer who tries to do right in a broken system."
-status: draft
+status: published
 ---
 
 # The Christian in Blue: A South African Police Officer's Honest Guide to Justice, Use of Force, and Faith in One of the Hardest Jobs in the Country

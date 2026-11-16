@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["remarriage", "divorce", "second marriage", "Sandton", "Johannesburg", "South Africa", "1 Corinthians 7", "Bible study", "pastoral", "Christian living", "grace"]
 heroImage: "/images/posts/township-bible-study.jpg"
 excerpt: "The Christian in Johannesburg who is considering remarriage after divorce faces a genuinely complex theological and pastoral question. Here is what the Bible says, and how to navigate it with wisdom and grace."
-status: draft
+status: published
 ---
 
 # Remarrying After Divorce: A South African Christian's Honest Guide to Second Marriages, the Church's Judgment, and the God Who Gives Second Chances
