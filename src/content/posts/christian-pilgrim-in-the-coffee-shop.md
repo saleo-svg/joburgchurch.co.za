@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["coffee shop", "work", "witness", "Sandton", "Johannesburg", "South Africa", "presence", "Bible study", "devotional", "Christian living", "city"]
 heroImage: "/images/posts/load-shedding-candlelight.jpg"
 excerpt: "The Christian in Johannesburg who works in a coffee shop has become a defining image of the post-pandemic city. The laptop, the headphones, the long black coffee. Here is what the Bible says about working in public, solitude-in-crowds, and the witness of presence."
-status: draft
+status: published
 ---
 
 # The Christian in the Coffee Shop: A South African's Guide to Writing in Public, Working in Public, and the Quiet Witness of Showing Up

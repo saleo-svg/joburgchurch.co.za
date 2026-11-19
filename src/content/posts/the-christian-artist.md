@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["art", "beauty", "creativity", "Sandton", "Johannesburg", "South Africa", "Exodus 35", "Bible study", "pastoral", "Christian living", "vocation"]
 heroImage: "/images/posts/heritage-day-braai.jpg"
 excerpt: "The Christian artist in Johannesburg — the painter, the photographer, the musician, the poet — faces a specific question about faith and art. Is art that does not explicitly mention God still Christian art? Here is what the Bible says about beauty, creativity, and the artist's calling."
-status: draft
+status: published
 ---
 
 # Beauty, Art, and the Christian: A South African Christian's Guide to Creating Beauty in a World That Often Does Not Deserve It

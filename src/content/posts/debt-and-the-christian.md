@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["debt", "credit", "payday loans", "Sandton", "Johannesburg", "South Africa", "Proverbs 22", "Bible study", "pastoral", "Christian living", "stewardship"]
 heroImage: "/images/posts/ubuntu-south-africa.jpg"
 excerpt: "The Christian in Johannesburg who is in debt — the credit card, the personal loan, the store account, the payday lender — faces a specific kind of bondage. Here is what the Bible says about debt, and practical steps to get free."
-status: draft
+status: published
 ---
 
 # The Debt Trap: A South African Christian's Honest Guide to Reckless Lending, Payday Loans, and What the Bible Says About Money You Cannot Repay

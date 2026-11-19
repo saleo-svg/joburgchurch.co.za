@@ -171,14 +171,15 @@
   {
     "batch": 14,
     "release_at": "2026-11-21T08:00:00+02:00",
-    "status": "pending",
+    "status": "released",
     "articles": [
       "debt-and-the-christian",
       "the-christian-artist",
       "the-teacher-who-is-also-a-christian",
       "christian-pilgrim-in-the-coffee-shop",
       "the-christian-and-the-mental-load"
-    ]
+    ],
+    "released_at": "2026-11-19T15:29:56.457Z"
   },
   {
     "batch": 15,

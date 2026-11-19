@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["mental load", "household", "mother", "wife", "Sandton", "Johannesburg", "South Africa", "marriage", "Bible study", "pastoral", "Christian living", "women"]
 heroImage: "/images/posts/multilingual-worship.jpg"
 excerpt: "The mental load is the invisible labour of running a household — the appointments, the groceries, the school calendar, the maintenance. It falls disproportionately on the wife, the mother, the daughter. Here is what the Bible says about this hidden burden."
-status: draft
+status: published
 ---
 
 # The Mental Load: A South African Christian's Guide to the Invisible Labour That Is Killing Your Marriage, Your Motherhood, and Your Sundays

@@ -6,7 +6,7 @@ author: "Mr. Sim"
 tags: ["teacher", "education", "vocation", "Sandton", "Johannesburg", "South Africa", "Proverbs", "Bible study", "pastoral", "Christian living", "witness"]
 heroImage: "/images/posts/jozi-young-professional.jpg"
 excerpt: "The Christian teacher in Johannesburg — in the government school, the private school, or the independent school — carries a specific calling. Here is what the Bible says about teaching, influence, and the classroom as a place of witness."
-status: draft
+status: published
 ---
 
 # Teaching in Jesus' Name: A South African Christian Teacher's Honest Guide to Faith, Pedagogy, and the Classroom as a Mission Field
